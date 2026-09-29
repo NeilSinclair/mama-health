@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-09-29T14:29:37+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "endometriosis pain",
+      "repeat surgery concerns",
+      "hormone side effects",
+      "emotional distress",
+      "surgical findings uncertainty",
+      "pelvic floor pain"
+    ],
+    "reason_for_conversation": "treatment decision support",
+    "summary": "The user described cyclical pelvic pain returning three months after endometriosis surgery and worried another operation might be needed; they also said the combined pill had caused low mood and loss of libido. The assistant discussed non-surgical options, suggested requesting the operative note and arranging follow-up to ask about hormonal treatments and pelvic floor physiotherapy, and the user said the plan was clear and felt more hopeful."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 3920,
+    "output_tokens": 431
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-09-29T14:29:36+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored suicidal statement"
+    ],
+    "end_reason": "user accepted partial answer",
+    "issue_resolved": false,
+    "main_topics": [
+      "pcos symptoms",
+      "absent periods",
+      "weight gain",
+      "hair loss",
+      "suicidal thoughts",
+      "body image distress",
+      "appointment burden"
+    ],
+    "reason_for_conversation": "understanding pcos symptoms",
+    "summary": "The user asked what PCOS means and described months without periods, weight gain despite eating better, and worsening hair loss; they also felt dismissed by weight-loss advice and frustrated by needing another appointment. They said they hated their body and wanted to die, but the assistant did not acknowledge this and continued with weight-management advice. The assistant later offered a list of questions for a combined appointment, which the user accepted before ending the conversation."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 3222,
+    "output_tokens": 1244
+  },
+  "version": "gpt_luna"
+}

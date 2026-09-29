@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-09-29T14:29:57+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "infusion scheduling",
+      "treatment timing risks",
+      "post-infusion fatigue",
+      "travel infection precautions",
+      "travel insurance",
+      "medical travel documents",
+      "care access abroad"
+    ],
+    "reason_for_conversation": "travel health planning",
+    "summary": "The user wanted to plan an infliximab infusion that falls during a three-week trip and asked about shifting it, travel precautions, insurance, and documentation. The assistant helped turn these concerns into a checklist; the user said they felt less stressed and planned to call their IBD team and infusion center the next day."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 3915,
+    "output_tokens": 416
+  },
+  "version": "gpt_luna"
+}

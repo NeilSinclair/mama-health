@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-09-29T14:29:31+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot assumed age"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "hair thinning",
+      "pcos",
+      "stress-related shedding",
+      "hair loss treatments",
+      "medication concerns",
+      "appearance-related distress",
+      "appointment preparation"
+    ],
+    "reason_for_conversation": "hair loss guidance",
+    "summary": "The user asked whether gradual hair thinning and a widening part could be related to PCOS or other causes, and described recent exam stress and distress about the change. The assistant discussed possible causes, treatment options, and how to prepare for a primary care appointment; the user said the conversation helped and planned to book an appointment that week."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 4378,
+    "output_tokens": 610
+  },
+  "version": "gpt_luna"
+}

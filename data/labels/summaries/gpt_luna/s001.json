@@ -1,0 +1,28 @@
+{
+  "created_at": "2026-09-29T14:29:23+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "biologic treatment change",
+      "dismissive consultant",
+      "shared treatment decisions",
+      "anger and feeling unheard",
+      "second opinions"
+    ],
+    "reason_for_conversation": "treatment decision support",
+    "summary": "After infliximab stopped working, the user's consultant proposed switching to Humira without discussing alternatives, leaving the user angry and unheard. The assistant outlined other treatment classes, suggested questions about testing and treatment choices, and discussed requesting a second opinion; the user said they had a plan and would take their questions to an appointment."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "input_tokens": 3274,
+    "output_tokens": 430
+  },
+  "version": "gpt_luna"
+}

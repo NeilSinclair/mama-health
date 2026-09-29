@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-09-29T14:30:05+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "bowel urgency",
+      "rectal bleeding",
+      "daily-life limitations",
+      "shame and embarrassment",
+      "specialist access",
+      "ulcerative colitis care options",
+      "urgency coping strategies"
+    ],
+    "reason_for_conversation": "symptom management guidance",
+    "summary": "The user described severe urgency, six or seven bowel movements a day, and occasional blood while taking mesalamine, with symptoms affecting work and parenting and causing shame. The assistant discussed seeking specialist review, possible treatment options and calprotectin testing, practical coping strategies, and checking with a doctor before taking loperamide. The user said they felt less ashamed and had a plan they could act on."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 4714,
+    "output_tokens": 1151
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,252 @@
+field_a,label_a,field_b,label_b,n_sessions,session_ids
+end_reason,need met,main_topics,emotional distress,11,"s001,s006,s007,s010,s011,s015,s019,s037,s040,s042,s049"
+end_reason,need met,main_topics,care access,9,"s004,s011,s012,s027,s035,s036,s037,s042,s050"
+end_reason,need met,main_topics,diet and nutrition,7,"s004,s008,s013,s020,s027,s029,s042"
+end_reason,need met,main_topics,fatigue and pacing,6,"s004,s010,s025,s028,s040,s049"
+end_reason,need met,main_topics,medication side effects,6,"s002,s008,s015,s029,s035,s044"
+end_reason,need met,main_topics,appointments and care planning,5,"s001,s002,s007,s013,s021"
+end_reason,need met,main_topics,diagnostic testing,5,"s004,s016,s025,s036,s045"
+end_reason,need met,main_topics,healthcare costs,5,"s002,s008,s027,s029,s035"
+end_reason,need met,main_topics,skin and hair concerns,5,"s007,s009,s036,s041,s050"
+end_reason,need met,main_topics,work impact,5,"s010,s013,s016,s049,s050"
+end_reason,need met,main_topics,IBD management,4,"s003,s023,s037,s042"
+end_reason,need met,main_topics,bowel symptoms,4,"s012,s013,s034,s037"
+end_reason,need met,main_topics,diabetes management,4,"s008,s020,s029,s034"
+end_reason,need met,main_topics,dismissive care,4,"s001,s010,s021,s025"
+end_reason,need met,main_topics,hormonal treatment,4,"s011,s019,s021,s032"
+end_reason,need met,main_topics,medication safety,4,"s007,s035,s039,s041"
+end_reason,need met,main_topics,medication use,4,"s016,s033,s044,s045"
+end_reason,need met,main_topics,psoriasis,4,"s009,s036,s041,s050"
+end_reason,need met,main_topics,rheumatoid arthritis,4,"s001,s032,s036,s039"
+end_reason,need met,main_topics,thyroid management,4,"s004,s025,s040,s045"
+conversation_pain_points,bot missed urgent symptom,main_topics,treatment effectiveness,3,"s022,s026,s030"
+end_reason,need met,main_topics,IBS and SIBO,3,"s012,s013,s027"
+end_reason,need met,main_topics,PCOS management,3,"s007,s029,s048"
+end_reason,need met,main_topics,cancer risk,3,"s023,s032,s041"
+end_reason,need met,main_topics,endometriosis,3,"s011,s015,s021"
+end_reason,need met,main_topics,exercise and activity,3,"s006,s028,s029"
+end_reason,need met,main_topics,infection risk,3,"s032,s035,s041"
+end_reason,need met,main_topics,long COVID,3,"s006,s010,s049"
+end_reason,need met,main_topics,medication dosing,3,"s003,s019,s034"
+end_reason,need met,main_topics,medication options,3,"s006,s044,s050"
+end_reason,need met,main_topics,supplement use,3,"s012,s040,s044"
+end_reason,need met,main_topics,treatment effectiveness,3,"s003,s033,s044"
+conversation_pain_points,bot assumed country context,end_reason,need met,2,"s016,s042"
+conversation_pain_points,bot assumed personal details,end_reason,need met,2,"s007,s049"
+conversation_pain_points,bot assumed personal details,main_topics,emotional distress,2,"s007,s049"
+conversation_pain_points,bot ignored direct question,end_reason,partial resolution,2,"s014,s047"
+conversation_pain_points,bot ignored emotional distress,main_topics,work impact,2,"s030,s043"
+conversation_pain_points,bot ignored suicidal statement,main_topics,emotional distress,2,"s005,s026"
+conversation_pain_points,bot ignored suicidal statement,main_topics,suicidal thoughts,2,"s005,s026"
+conversation_pain_points,bot missed urgent symptom,main_topics,bowel symptoms,2,"s022,s026"
+conversation_pain_points,bot missed urgent symptom,main_topics,care access,2,"s022,s030"
+conversation_pain_points,bot missed urgent symptom,main_topics,emotional distress,2,"s022,s026"
+conversation_pain_points,bot repeated advice after pushback,end_reason,partial resolution,2,"s014,s017"
+conversation_pain_points,bot used confusing jargon,main_topics,care access,2,"s012,s038"
+end_reason,left unheard,main_topics,emotional distress,2,"s026,s043"
+end_reason,left unheard,main_topics,endometriosis,2,"s018,s043"
+end_reason,left unheard,main_topics,work impact,2,"s018,s043"
+end_reason,need met,main_topics,cognitive symptoms,2,"s004,s016"
+end_reason,need met,main_topics,fertility and pregnancy,2,"s039,s048"
+end_reason,need met,main_topics,lab results interpretation,2,"s020,s040"
+end_reason,need met,main_topics,medication administration,2,"s008,s044"
+end_reason,need met,main_topics,medication formulation,2,"s003,s045"
+end_reason,need met,main_topics,migraine,2,"s019,s033"
+end_reason,need met,main_topics,pelvic pain,2,"s011,s015"
+end_reason,need met,main_topics,sleep problems,2,"s016,s020"
+end_reason,need met,main_topics,treatment decisions,2,"s001,s020"
+end_reason,need met,main_topics,treatment logistics,2,"s032,s035"
+end_reason,need met,main_topics,urgent symptom concerns,2,"s019,s034"
+end_reason,partial resolution,main_topics,care access,2,"s022,s046"
+end_reason,partial resolution,main_topics,diet and nutrition,2,"s005,s022"
+end_reason,partial resolution,main_topics,emotional distress,2,"s005,s022"
+conversation_pain_points,bot assumed country context,end_reason,partial resolution,1,s014
+conversation_pain_points,bot assumed country context,main_topics,IBD management,1,s042
+conversation_pain_points,bot assumed country context,main_topics,care access,1,s042
+conversation_pain_points,bot assumed country context,main_topics,cognitive symptoms,1,s016
+conversation_pain_points,bot assumed country context,main_topics,diagnostic testing,1,s016
+conversation_pain_points,bot assumed country context,main_topics,diet and nutrition,1,s042
+conversation_pain_points,bot assumed country context,main_topics,disease monitoring,1,s042
+conversation_pain_points,bot assumed country context,main_topics,emotional distress,1,s042
+conversation_pain_points,bot assumed country context,main_topics,health information,1,s042
+conversation_pain_points,bot assumed country context,main_topics,medication formulation,1,s014
+conversation_pain_points,bot assumed country context,main_topics,medication options,1,s014
+conversation_pain_points,bot assumed country context,main_topics,medication use,1,s016
+conversation_pain_points,bot assumed country context,main_topics,pain management,1,s014
+conversation_pain_points,bot assumed country context,main_topics,sleep problems,1,s016
+conversation_pain_points,bot assumed country context,main_topics,supplement use,1,s014
+conversation_pain_points,bot assumed country context,main_topics,work impact,1,s016
+conversation_pain_points,bot assumed personal details,main_topics,PCOS management,1,s007
+conversation_pain_points,bot assumed personal details,main_topics,appointments and care planning,1,s007
+conversation_pain_points,bot assumed personal details,main_topics,fatigue and pacing,1,s049
+conversation_pain_points,bot assumed personal details,main_topics,long COVID,1,s049
+conversation_pain_points,bot assumed personal details,main_topics,medication safety,1,s007
+conversation_pain_points,bot assumed personal details,main_topics,skin and hair concerns,1,s007
+conversation_pain_points,bot assumed personal details,main_topics,work impact,1,s049
+conversation_pain_points,bot claimed action it cannot take,end_reason,unverified reassurance,1,s024
+conversation_pain_points,bot claimed action it cannot take,main_topics,care access,1,s024
+conversation_pain_points,bot claimed action it cannot take,main_topics,disease management,1,s024
+conversation_pain_points,bot claimed action it cannot take,main_topics,emotional distress,1,s024
+conversation_pain_points,bot claimed action it cannot take,main_topics,medication use,1,s024
+conversation_pain_points,bot claimed action it cannot take,main_topics,rheumatoid arthritis,1,s024
+conversation_pain_points,bot deflected to doctor,end_reason,partial resolution,1,s017
+conversation_pain_points,bot deflected to doctor,main_topics,diabetes management,1,s017
+conversation_pain_points,bot deflected to inaccessible resources,end_reason,gave up frustrated,1,s030
+conversation_pain_points,bot deflected to inaccessible resources,main_topics,care access,1,s030
+conversation_pain_points,bot deflected to inaccessible resources,main_topics,medication use,1,s030
+conversation_pain_points,bot deflected to inaccessible resources,main_topics,migraine,1,s030
+conversation_pain_points,bot deflected to inaccessible resources,main_topics,treatment effectiveness,1,s030
+conversation_pain_points,bot deflected to inaccessible resources,main_topics,work impact,1,s030
+conversation_pain_points,bot gave inaccessible advice,end_reason,left unheard,1,s018
+conversation_pain_points,bot gave inaccessible advice,main_topics,care access,1,s018
+conversation_pain_points,bot gave inaccessible advice,main_topics,dismissive care,1,s018
+conversation_pain_points,bot gave inaccessible advice,main_topics,endometriosis,1,s018
+conversation_pain_points,bot gave inaccessible advice,main_topics,pain management,1,s018
+conversation_pain_points,bot gave inaccessible advice,main_topics,pelvic pain,1,s018
+conversation_pain_points,bot gave inaccessible advice,main_topics,work impact,1,s018
+conversation_pain_points,bot gave overconfident medical advice,end_reason,need met,1,s003
+conversation_pain_points,bot gave overconfident medical advice,main_topics,IBD management,1,s003
+conversation_pain_points,bot gave overconfident medical advice,main_topics,medication dosing,1,s003
+conversation_pain_points,bot gave overconfident medical advice,main_topics,medication formulation,1,s003
+conversation_pain_points,bot gave overconfident medical advice,main_topics,treatment effectiveness,1,s003
+conversation_pain_points,bot ignored direct question,end_reason,gave up frustrated,1,s030
+conversation_pain_points,bot ignored direct question,main_topics,care access,1,s030
+conversation_pain_points,bot ignored direct question,main_topics,medication formulation,1,s014
+conversation_pain_points,bot ignored direct question,main_topics,medication monitoring,1,s047
+conversation_pain_points,bot ignored direct question,main_topics,medication options,1,s014
+conversation_pain_points,bot ignored direct question,main_topics,medication safety,1,s047
+conversation_pain_points,bot ignored direct question,main_topics,medication use,1,s030
+conversation_pain_points,bot ignored direct question,main_topics,migraine,1,s030
+conversation_pain_points,bot ignored direct question,main_topics,pain management,1,s014
+conversation_pain_points,bot ignored direct question,main_topics,rheumatoid arthritis,1,s047
+conversation_pain_points,bot ignored direct question,main_topics,supplement use,1,s014
+conversation_pain_points,bot ignored direct question,main_topics,treatment effectiveness,1,s030
+conversation_pain_points,bot ignored direct question,main_topics,work impact,1,s030
+conversation_pain_points,bot ignored emotional distress,end_reason,gave up frustrated,1,s030
+conversation_pain_points,bot ignored emotional distress,end_reason,left unheard,1,s043
+conversation_pain_points,bot ignored emotional distress,main_topics,care access,1,s030
+conversation_pain_points,bot ignored emotional distress,main_topics,chronic illness impact,1,s043
+conversation_pain_points,bot ignored emotional distress,main_topics,emotional distress,1,s043
+conversation_pain_points,bot ignored emotional distress,main_topics,endometriosis,1,s043
+conversation_pain_points,bot ignored emotional distress,main_topics,fertility and pregnancy,1,s043
+conversation_pain_points,bot ignored emotional distress,main_topics,medication use,1,s030
+conversation_pain_points,bot ignored emotional distress,main_topics,migraine,1,s030
+conversation_pain_points,bot ignored emotional distress,main_topics,treatment effectiveness,1,s030
+conversation_pain_points,bot ignored suicidal statement,end_reason,left unheard,1,s026
+conversation_pain_points,bot ignored suicidal statement,end_reason,partial resolution,1,s005
+conversation_pain_points,bot ignored suicidal statement,main_topics,IBD management,1,s026
+conversation_pain_points,bot ignored suicidal statement,main_topics,PCOS management,1,s005
+conversation_pain_points,bot ignored suicidal statement,main_topics,appointments and care planning,1,s005
+conversation_pain_points,bot ignored suicidal statement,main_topics,bowel symptoms,1,s026
+conversation_pain_points,bot ignored suicidal statement,main_topics,diet and nutrition,1,s005
+conversation_pain_points,bot ignored suicidal statement,main_topics,medication side effects,1,s026
+conversation_pain_points,bot ignored suicidal statement,main_topics,menstrual health,1,s005
+conversation_pain_points,bot ignored suicidal statement,main_topics,skin and hair concerns,1,s005
+conversation_pain_points,bot ignored suicidal statement,main_topics,treatment effectiveness,1,s026
+conversation_pain_points,bot missed urgent symptom,end_reason,gave up frustrated,1,s030
+conversation_pain_points,bot missed urgent symptom,end_reason,left unheard,1,s026
+conversation_pain_points,bot missed urgent symptom,end_reason,partial resolution,1,s022
+conversation_pain_points,bot missed urgent symptom,main_topics,IBD management,1,s026
+conversation_pain_points,bot missed urgent symptom,main_topics,diet and nutrition,1,s022
+conversation_pain_points,bot missed urgent symptom,main_topics,medication side effects,1,s026
+conversation_pain_points,bot missed urgent symptom,main_topics,medication use,1,s030
+conversation_pain_points,bot missed urgent symptom,main_topics,migraine,1,s030
+conversation_pain_points,bot missed urgent symptom,main_topics,suicidal thoughts,1,s026
+conversation_pain_points,bot missed urgent symptom,main_topics,treatment decisions,1,s022
+conversation_pain_points,bot missed urgent symptom,main_topics,work impact,1,s030
+conversation_pain_points,bot repeated advice after pushback,end_reason,left unheard,1,s043
+conversation_pain_points,bot repeated advice after pushback,main_topics,chronic illness impact,1,s043
+conversation_pain_points,bot repeated advice after pushback,main_topics,diabetes management,1,s017
+conversation_pain_points,bot repeated advice after pushback,main_topics,emotional distress,1,s043
+conversation_pain_points,bot repeated advice after pushback,main_topics,endometriosis,1,s043
+conversation_pain_points,bot repeated advice after pushback,main_topics,fertility and pregnancy,1,s043
+conversation_pain_points,bot repeated advice after pushback,main_topics,medication formulation,1,s014
+conversation_pain_points,bot repeated advice after pushback,main_topics,medication options,1,s014
+conversation_pain_points,bot repeated advice after pushback,main_topics,pain management,1,s014
+conversation_pain_points,bot repeated advice after pushback,main_topics,supplement use,1,s014
+conversation_pain_points,bot repeated advice after pushback,main_topics,work impact,1,s043
+conversation_pain_points,bot repeated generic advice,end_reason,gave up frustrated,1,s030
+conversation_pain_points,bot repeated generic advice,end_reason,partial resolution,1,s017
+conversation_pain_points,bot repeated generic advice,main_topics,care access,1,s030
+conversation_pain_points,bot repeated generic advice,main_topics,diabetes management,1,s017
+conversation_pain_points,bot repeated generic advice,main_topics,medication use,1,s030
+conversation_pain_points,bot repeated generic advice,main_topics,migraine,1,s030
+conversation_pain_points,bot repeated generic advice,main_topics,treatment effectiveness,1,s030
+conversation_pain_points,bot repeated generic advice,main_topics,work impact,1,s030
+conversation_pain_points,bot shifted work to user,end_reason,partial resolution,1,s046
+conversation_pain_points,bot shifted work to user,main_topics,POTS management,1,s046
+conversation_pain_points,bot shifted work to user,main_topics,care access,1,s046
+conversation_pain_points,bot shifted work to user,main_topics,cognitive symptoms,1,s046
+conversation_pain_points,bot shifted work to user,main_topics,long COVID,1,s046
+conversation_pain_points,bot shifted work to user,main_topics,work impact,1,s046
+conversation_pain_points,bot used confusing jargon,end_reason,left confused,1,s038
+conversation_pain_points,bot used confusing jargon,end_reason,need met,1,s012
+conversation_pain_points,bot used confusing jargon,main_topics,IBS and SIBO,1,s012
+conversation_pain_points,bot used confusing jargon,main_topics,bowel symptoms,1,s012
+conversation_pain_points,bot used confusing jargon,main_topics,fatigue and pacing,1,s038
+conversation_pain_points,bot used confusing jargon,main_topics,fibromyalgia,1,s038
+conversation_pain_points,bot used confusing jargon,main_topics,pain management,1,s038
+conversation_pain_points,bot used confusing jargon,main_topics,rheumatoid arthritis,1,s038
+conversation_pain_points,bot used confusing jargon,main_topics,supplement use,1,s012
+end_reason,accepted plan,main_topics,chronic illness impact,1,s031
+end_reason,accepted plan,main_topics,diabetes management,1,s031
+end_reason,accepted plan,main_topics,diet and nutrition,1,s031
+end_reason,accepted plan,main_topics,disease management,1,s031
+end_reason,accepted plan,main_topics,medication use,1,s031
+end_reason,gave up frustrated,main_topics,care access,1,s030
+end_reason,gave up frustrated,main_topics,medication use,1,s030
+end_reason,gave up frustrated,main_topics,migraine,1,s030
+end_reason,gave up frustrated,main_topics,treatment effectiveness,1,s030
+end_reason,gave up frustrated,main_topics,work impact,1,s030
+end_reason,left confused,main_topics,care access,1,s038
+end_reason,left confused,main_topics,fatigue and pacing,1,s038
+end_reason,left confused,main_topics,fibromyalgia,1,s038
+end_reason,left confused,main_topics,pain management,1,s038
+end_reason,left confused,main_topics,rheumatoid arthritis,1,s038
+end_reason,left unheard,main_topics,IBD management,1,s026
+end_reason,left unheard,main_topics,bowel symptoms,1,s026
+end_reason,left unheard,main_topics,care access,1,s018
+end_reason,left unheard,main_topics,chronic illness impact,1,s043
+end_reason,left unheard,main_topics,dismissive care,1,s018
+end_reason,left unheard,main_topics,fertility and pregnancy,1,s043
+end_reason,left unheard,main_topics,medication side effects,1,s026
+end_reason,left unheard,main_topics,pain management,1,s018
+end_reason,left unheard,main_topics,pelvic pain,1,s018
+end_reason,left unheard,main_topics,suicidal thoughts,1,s026
+end_reason,left unheard,main_topics,treatment effectiveness,1,s026
+end_reason,need met,main_topics,IBD monitoring,1,s023
+end_reason,need met,main_topics,POTS management,1,s006
+end_reason,need met,main_topics,chronic illness impact,1,s037
+end_reason,need met,main_topics,disease monitoring,1,s042
+end_reason,need met,main_topics,health information,1,s042
+end_reason,need met,main_topics,medication access,1,s045
+end_reason,need met,main_topics,menstrual health,1,s021
+end_reason,need met,main_topics,pain management,1,s011
+end_reason,need met,main_topics,preventive medication,1,s002
+end_reason,need met,main_topics,surgical care,1,s015
+end_reason,need met,main_topics,travel health,1,s035
+end_reason,partial resolution,main_topics,PCOS management,1,s005
+end_reason,partial resolution,main_topics,POTS management,1,s046
+end_reason,partial resolution,main_topics,appointments and care planning,1,s005
+end_reason,partial resolution,main_topics,bowel symptoms,1,s022
+end_reason,partial resolution,main_topics,cognitive symptoms,1,s046
+end_reason,partial resolution,main_topics,diabetes management,1,s017
+end_reason,partial resolution,main_topics,long COVID,1,s046
+end_reason,partial resolution,main_topics,medication formulation,1,s014
+end_reason,partial resolution,main_topics,medication monitoring,1,s047
+end_reason,partial resolution,main_topics,medication options,1,s014
+end_reason,partial resolution,main_topics,medication safety,1,s047
+end_reason,partial resolution,main_topics,menstrual health,1,s005
+end_reason,partial resolution,main_topics,pain management,1,s014
+end_reason,partial resolution,main_topics,rheumatoid arthritis,1,s047
+end_reason,partial resolution,main_topics,skin and hair concerns,1,s005
+end_reason,partial resolution,main_topics,suicidal thoughts,1,s005
+end_reason,partial resolution,main_topics,supplement use,1,s014
+end_reason,partial resolution,main_topics,treatment decisions,1,s022
+end_reason,partial resolution,main_topics,treatment effectiveness,1,s022
+end_reason,partial resolution,main_topics,work impact,1,s046
+end_reason,unverified reassurance,main_topics,care access,1,s024
+end_reason,unverified reassurance,main_topics,disease management,1,s024
+end_reason,unverified reassurance,main_topics,emotional distress,1,s024
+end_reason,unverified reassurance,main_topics,medication use,1,s024
+end_reason,unverified reassurance,main_topics,rheumatoid arthritis,1,s024

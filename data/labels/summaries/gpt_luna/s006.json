@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-09-29T14:29:29+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "POTS diagnosis",
+      "postural symptoms",
+      "heart damage fears",
+      "long COVID recovery",
+      "exercise intolerance",
+      "POTS self-management",
+      "medication options"
+    ],
+    "reason_for_conversation": "understanding diagnosis",
+    "summary": "The user wanted to understand a new POTS diagnosis after long COVID, including whether their heart was damaged, whether POTS might improve, and what they could do about symptoms. The assistant explained the condition and discussed self-management, medication questions, and the need to pace activity because exercise had caused crashes; the user said they felt much less panicked and understood the diagnosis better."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 4256,
+    "output_tokens": 470
+  },
+  "version": "gpt_luna"
+}

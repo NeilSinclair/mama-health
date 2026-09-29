@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-09-29T14:29:38+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot introduced confusing terminology"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "possible sibo diagnosis",
+      "post-meal bloating",
+      "constipation and mixed bowel habits",
+      "ibs diagnosis frustration",
+      "sibo testing uncertainty",
+      "specialist access delays",
+      "supplement marketing"
+    ],
+    "reason_for_conversation": "understanding possible diagnosis",
+    "summary": "The user questioned whether severe post-meal bloating and constipation or mixed bowel habits could reflect SIBO rather than IBS, and asked about testing and treatment options. The assistant explained the uncertainty around breath tests and introduced the term IMO, which confused the user at first; it then clarified the distinction. The user plans to request a gastroenterology referral despite a possible wait, keep symptom notes, and avoid buying supplements for now, and said the conversation was clarifying."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 4093,
+    "output_tokens": 696
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-09-29T14:29:54+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "active rheumatoid arthritis",
+      "biologic treatment choices",
+      "infection history",
+      "shingles vaccination",
+      "travel and injection logistics",
+      "cancer risk anxiety",
+      "hormone therapy"
+    ],
+    "reason_for_conversation": "treatment decision support",
+    "summary": "The user wanted to understand biologic options for active RA before a rheumatology appointment, including how recurrent sinus infections, prior shingles, frequent work travel, and cancer risks might affect the choice. The assistant compared treatment classes, discussed vaccination, logistics, risk trade-offs, and assessment timelines, and helped prepare questions for the appointment. The user said they felt ready for a more collaborative discussion and that the conversation genuinely lowered their anxiety."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 5381,
+    "output_tokens": 518
+  },
+  "version": "gpt_luna"
+}
