@@ -130,13 +130,19 @@ def test_timing_summary_detects_constant_pace(frames):
     assert s["n_distinct_seconds_per_turn"] == 2
 
 
-def test_ending_crosstab(frames):
+def test_cross_counts(frames):
     sessions, turns = frames
-    ct = eda.ending_crosstab(eda.session_features(sessions, turns))
+    ct = eda.cross_counts(eda.session_features(sessions, turns), "last_role", "session_ended_by")
     assert ct.to_dict("records") == [
         {"last_role": "assistant", "session_ended_by": "completed", "n_sessions": 1},
         {"last_role": "assistant", "session_ended_by": "user_closed", "n_sessions": 1},
     ]
+
+
+def test_numeric_summary(frames):
+    sessions, turns = frames
+    s = eda.numeric_summary(eda.session_features(sessions, turns), ["n_turns"])
+    assert s.to_dict("records") == [{"metric": "n_turns", "min": 2, "median": 2.5, "max": 3}]
 
 
 def test_medians_by(frames):

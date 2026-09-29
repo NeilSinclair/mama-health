@@ -1,0 +1,5 @@
+metric,min,median,max
+n_turns,20.0,24.0,30.0
+user_words,72.0,328.0,567.0
+assistant_words,371.0,1101.5,2089.0
+assistant_to_user_words,1.1317365269461077,3.300937737410847,8.283018867924529

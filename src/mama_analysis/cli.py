@@ -37,7 +37,9 @@ def run_eda(data_path: Path, out_dir: Path) -> dict[str, Path]:
     tables = {
         "session_features": features,
         "timing_summary": eda.timing_summary(features),
-        "ending_crosstab": eda.ending_crosstab(features),
+        "volume_summary": eda.numeric_summary(features, volume_cols),
+        "ending_crosstab": eda.cross_counts(features, "last_role", "session_ended_by"),
+        "country_by_end_state": eda.cross_counts(features, "country", "session_ended_by"),
         "medians_by_end_state": eda.medians_by(features, "session_ended_by", volume_cols),
         "non_ascii_turns": eda.non_ascii_turns(turns),
         "metadata_counts": eda.categorical_counts(sessions, META_COLUMNS),

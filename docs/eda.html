@@ -76,6 +76,7 @@
     <div class="stat"><div class="n">3.3×</div><div class="l">bot words per user word (median)</div></div>
     <div class="stat"><div class="n">40 / 10</div><div class="l">completed / user_closed</div></div>
   </div>
+  <p class="src">Sources: <code>volume_summary.csv</code>, <code>metadata_counts.csv</code></p>
 
   <h2>Shape of the data</h2>
   <ul>
@@ -93,6 +94,7 @@
     <tr><td>Italy</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
   </table>
   </div>
+  <p class="src">Source: <code>country_by_end_state.csv</code></p>
 
   <h2>What constrains what we can claim</h2>
 
@@ -132,7 +134,7 @@
 
   <div class="card signal">
     <h3>The bot out-talks the user ~3.3 to 1</h3>
-    <p>This is the median assistant/user word ratio; the range is 1.1–8.3. The widest-ratio sessions deserve a qualitative look: is the bot over-explaining to someone who writes briefly?</p>
+    <p>This is the median assistant/user word ratio; the range is 1.1–8.3 (<code>volume_summary.csv</code>). The widest-ratio sessions deserve a qualitative look: is the bot over-explaining to someone who writes briefly?</p>
   </div>
 
   <div class="card signal">
@@ -151,7 +153,7 @@
 
   <div class="card signal">
     <h3><code>user_closed</code> sessions are thinner</h3>
-    <p>Median 222 user words vs 336 for <code>completed</code>, and 667 vs 1,137 bot words. That's consistent with disengagement, but n = 10. <span class="src">Source: <code>medians_by_end_state.csv</code></span></p>
+    <p>Median 222.5 user words vs 335.5 for <code>completed</code>, and 667 vs 1,137 bot words. That's consistent with disengagement, but n = 10. <span class="src">Source: <code>medians_by_end_state.csv</code></span></p>
   </div>
 
   <div class="card signal">

@@ -104,22 +104,37 @@ def timing_summary(features: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows, columns=["metric", "value"], dtype=object)
 
 
-def ending_crosstab(features: pd.DataFrame) -> pd.DataFrame:
-    """Cross-tabulate who spoke last against the recorded end state.
+def cross_counts(features: pd.DataFrame, row: str, col: str) -> pd.DataFrame:
+    """Count sessions for each observed combination of two columns.
 
     Args:
         features: Output of ``session_features``.
+        row: First grouping column.
+        col: Second grouping column.
 
     Returns:
-        DataFrame with columns ``last_role``, ``session_ended_by`` and ``n_sessions``,
-        one row per observed combination.
+        DataFrame with columns ``row``, ``col`` and ``n_sessions``, sorted by both keys.
     """
     return (
-        features.groupby(["last_role", "session_ended_by"])
+        features.groupby([row, col])
         .size()
         .reset_index(name="n_sessions")
-        .sort_values(["last_role", "session_ended_by"], ignore_index=True)
+        .sort_values([row, col], ignore_index=True)
     )
+
+
+def numeric_summary(features: pd.DataFrame, columns: list[str]) -> pd.DataFrame:
+    """Summarise numeric columns with min, median and max.
+
+    Args:
+        features: Output of ``session_features``.
+        columns: Numeric columns to summarise.
+
+    Returns:
+        DataFrame with columns ``metric``, ``min``, ``median`` and ``max``.
+    """
+    stats = features[columns].agg(["min", "median", "max"]).T
+    return stats.rename_axis("metric").reset_index()
 
 
 def medians_by(features: pd.DataFrame, by: str, columns: list[str]) -> pd.DataFrame:

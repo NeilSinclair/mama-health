@@ -1,0 +1,15 @@
+country,session_ended_by,n_sessions
+Brazil,completed,3
+Brazil,user_closed,1
+Canada,completed,5
+France,completed,5
+Germany,completed,4
+Germany,user_closed,1
+India,completed,2
+India,user_closed,2
+Italy,completed,1
+Japan,completed,3
+Japan,user_closed,1
+UK,completed,6
+US,completed,11
+US,user_closed,5
