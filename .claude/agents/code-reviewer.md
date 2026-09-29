@@ -74,7 +74,7 @@ MAJOR: prefer counts and named sessions (`s024 turn 4`). Anything the memo asser
 without saying what it *can't* claim is a finding.
 
 **Default run makes zero API calls.** `uv run mama-pipeline` with no flags must read
-`data/labels/` and never construct a client. the `no_api` fixture in `tests/test_cli.py` (used by `test_main_runs_without_labels_or_api`) proves this;
+`data/labels/` and never construct a client. The `no_api` fixture in `tests/test_cli.py` (used by `test_main_runs_without_labels_or_api`) proves this;
 any change that bypasses `cli.make_labeller`, imports `anthropic`/`openai` at module
 top level in the default path, or reads `.env` outside `relabel`/`remap` is a
 **CRITICAL**. Tests that reach the network, or that construct a real

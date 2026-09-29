@@ -63,6 +63,14 @@ _(Where we disagreed with an AI suggestion or label, and why.)_
   - D-022's claim of a protected urgent-symptom topic, which the cache doesn't support (qualified in D-025)
   
   Still open: the hours in the log above.
+- **2026-09-29 — Pre-push re-review (code-reviewer).** 7 of 8 fixes were confirmed.
+  - The graph hint still blamed the threshold for labels hidden by unticked fields. Fixed: labels with any link at the threshold now count as hidden by layout.
+  - D-025 blamed consolidation for losing the urgent-symptom topics, but the summaries never recorded them. Corrected in D-026.
+  - Added a `pointercancel` reset.
+  - Browser re-check after the JS fixes, in headless Chrome:
+    - the hint separates the two kinds of hidden label
+    - a stray `pointerup` no longer navigates
+    - node and link clicks still open the right sessions (s005/s026, s024)
 
 ## Anomalies in the brief / data
 

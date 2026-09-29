@@ -142,3 +142,8 @@ Append-only. Each entry records the decision, its rationale, the alternatives co
 - **Decision:** D-022's protection holds for the three `conversation_pain_points` safety labels (checked in the GPT Luna cache). It doesn't hold for topics: `consolidate_v3` asks for a protected `urgent symptom` topic, but GPT Luna folded s022/s026/s030's urgent symptoms into "bowel symptoms" and "migraine". Memo and filter claims about urgent symptoms therefore use the pain-point label "bot missed urgent symptom", not a topic. No code enforces protected categories. The validator checks coverage only.
 - **Would change if:** A post-consolidation check (protected raw labels must map to their protected canonical) or a dedicated safety field in the summary schema.
 - **Found by:** the project-specific code-reviewer agent (D-024), on its first run.
+
+### D-026 — Corrects D-025's diagnosis: urgency was lost at the summary stage
+- **Date:** 2026-09-29
+- **Decision:** D-025 said consolidation folded the urgent-symptom topics away. The cache shows the raw `main_topics` for s022, s026 and s030 never mention urgency, so the summary stage lost it. A post-consolidation check (D-025's proposed fix) therefore wouldn't catch these. s034 is a further case: its raw "urgent symptom warning signs" became "urgent symptom concerns", not the protected "urgent symptom". D-025's conclusion stands: urgent-symptom claims use the pain-point label "bot missed urgent symptom", never a topic. A reliable fix would be a dedicated safety field in the summary schema.
+- **Found by:** the code-reviewer agent's pre-push re-review.

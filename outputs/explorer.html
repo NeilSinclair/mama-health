@@ -325,12 +325,14 @@ function graphData(graph) {
   });
   const edges = candidates.filter((e) => adjacent(e.source.split(":")[0], e.target.split(":")[0]));
   const linked = new Set(edges.flatMap((e) => [e.source, e.target]));
-  const linkedAny = new Set(candidates.flatMap((e) => [e.source, e.target]));
+  // Any edge at this threshold, whatever the field selection: tells "hidden by layout" from "too rare".
+  const linkedAny = new Set(graph.edges.filter((e) => e.n_sessions >= graphState.minEdge)
+    .flatMap((e) => [e.source, e.target]));
   const nodes = graph.nodes.filter((n) => linked.has(n.id)).map((n) => ({ ...n }));
   const unlinked = graph.nodes.filter((n) => graphState.fields.has(n.field) && !linked.has(n.id));
-  const hiddenByColumns = unlinked.filter((n) => linkedAny.has(n.id)).length;
-  const hiddenByThreshold = unlinked.length - hiddenByColumns;
-  return { nodes, edges, hiddenByColumns, hiddenByThreshold };
+  const hiddenByLayout = unlinked.filter((n) => linkedAny.has(n.id)).length;
+  const hiddenByThreshold = unlinked.length - hiddenByLayout;
+  return { nodes, edges, hiddenByLayout, hiddenByThreshold };
 }
 
 // Layered layout: one column per field, each column ordered to reduce crossings
@@ -416,7 +418,7 @@ function renderGraph() {
   const hint = document.getElementById("ghint");
   const v = current();
   if (!v) { svg.replaceChildren(); hint.textContent = "No cached labels yet."; return; }
-  const { nodes, edges, hiddenByColumns, hiddenByThreshold } = graphData(v.graph);
+  const { nodes, edges, hiddenByLayout, hiddenByThreshold } = graphData(v.graph);
   const perColumn = Math.max(1, ...GRAPH_FIELDS.map(([f]) => nodes.filter((n) => n.field === f).length));
   const W = 1000, H = Math.max(560, graphState.arrange ? perColumn * 24 + 48 : 0);
   (graphState.arrange ? layeredLayout : forceLayout)(nodes, edges, W, H);
@@ -425,8 +427,9 @@ function renderGraph() {
     `a link = sessions that share both labels. Hover to highlight, click a node or link to list its ` +
     `conversations, drag nodes to untangle.` +
     (graphState.arrange ? " Columns link only to their neighbours; untick a field to link the other two directly." : "") +
-    (hiddenByColumns ? ` ${hiddenByColumns} labels link only to a non-neighbouring column (e.g. topics of ` +
-      `conversations with no pain point) and are hidden; untick a field or "Arrange by field" to see them.` : "") +
+    (hiddenByLayout ? ` ${hiddenByLayout} labels link only to an unticked field or a non-neighbouring column ` +
+      `(e.g. topics of conversations with no pain point) and are hidden; change the field ticks or ` +
+      `"Arrange by field" to see them.` : "") +
     (hiddenByThreshold ? ` ${hiddenByThreshold} labels have no link at this threshold and are hidden.` : "");
 
   const byId = new Map(nodes.map((n) => [n.id, n]));
@@ -479,6 +482,7 @@ function renderGraph() {
         if (l.edge.target === n.id) { l.setAttribute("x2", n.x); l.setAttribute("y2", n.y); }
       }
     });
+    g.addEventListener("pointercancel", () => { start = null; focus(null); });
     g.addEventListener("pointerup", (ev) => {
       if (!start) return;
       const moved = start && Math.hypot(ev.clientX - start.x, ev.clientY - start.y) > 4;
