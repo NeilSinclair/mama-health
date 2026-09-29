@@ -49,7 +49,8 @@ def session_features(sessions: pd.DataFrame, turns: pd.DataFrame) -> pd.DataFram
     Returns:
         ``sessions`` with added columns ``n_turns``, ``n_user``, ``n_assistant``,
         ``first_role``, ``last_role``, ``user_words``, ``assistant_words``,
-        ``assistant_to_user_words`` and ``duration_min``.
+        ``assistant_to_user_words``, ``duration_min``, ``seconds_per_turn`` and
+        ``starts_on_hour``.
     """
     t = turns.assign(words=turns["text"].map(word_count))
     agg = (
@@ -75,15 +76,94 @@ def session_features(sessions: pd.DataFrame, turns: pd.DataFrame) -> pd.DataFram
         out["user_words"] > 0
     )
     out["duration_min"] = (out["ended_at"] - out["started_at"]).dt.total_seconds() / 60
+    out["seconds_per_turn"] = out["duration_min"] * 60 / out["n_turns"]
+    started = out["started_at"]
+    out["starts_on_hour"] = (started.dt.minute == 0) & (started.dt.second == 0)
     return out
+
+
+def timing_summary(features: pd.DataFrame) -> pd.DataFrame:
+    """Summarise whether session timestamps look generated rather than observed.
+
+    Args:
+        features: Output of ``session_features``.
+
+    Returns:
+        DataFrame with columns ``metric`` and ``value``: session count, sessions
+        starting exactly on the hour, the number of distinct seconds-per-turn values
+        (rounded to 0.01 s), and the min and max seconds per turn.
+    """
+    spt = features["seconds_per_turn"].round(2)
+    rows = [
+        ("n_sessions", len(features)),
+        ("n_starts_on_hour", int(features["starts_on_hour"].sum())),
+        ("n_distinct_seconds_per_turn", int(spt.nunique())),
+        ("min_seconds_per_turn", float(spt.min())),
+        ("max_seconds_per_turn", float(spt.max())),
+    ]
+    return pd.DataFrame(rows, columns=["metric", "value"], dtype=object)
+
+
+def ending_crosstab(features: pd.DataFrame) -> pd.DataFrame:
+    """Cross-tabulate who spoke last against the recorded end state.
+
+    Args:
+        features: Output of ``session_features``.
+
+    Returns:
+        DataFrame with columns ``last_role``, ``session_ended_by`` and ``n_sessions``,
+        one row per observed combination.
+    """
+    return (
+        features.groupby(["last_role", "session_ended_by"])
+        .size()
+        .reset_index(name="n_sessions")
+        .sort_values(["last_role", "session_ended_by"], ignore_index=True)
+    )
+
+
+def medians_by(features: pd.DataFrame, by: str, columns: list[str]) -> pd.DataFrame:
+    """Compute per-group medians and group sizes.
+
+    Args:
+        features: Output of ``session_features``.
+        by: Column to group by.
+        columns: Numeric columns to take medians of.
+
+    Returns:
+        DataFrame with ``by``, ``n_sessions`` and the median of each column.
+    """
+    grouped = features.groupby(by)
+    out = grouped[columns].median()
+    out.insert(0, "n_sessions", grouped.size())
+    return out.reset_index()
+
+
+def non_ascii_turns(turns: pd.DataFrame) -> pd.DataFrame:
+    """List turns containing any non-ASCII letters, a crude flag for non-English text.
+
+    Misses non-English text written without accents; every hit needs reading.
+
+    Args:
+        turns: One row per turn with a ``non_ascii_share`` column.
+
+    Returns:
+        The matching turns (``session_id``, ``turn``, ``role``, ``non_ascii_share``,
+        ``text``), highest share first.
+    """
+    hits = turns[turns["non_ascii_share"] > 0]
+    cols = ["session_id", "turn", "role", "non_ascii_share", "text"]
+    return hits.sort_values(
+        ["non_ascii_share", "session_id", "turn"], ascending=[False, True, True]
+    )[cols].reset_index(drop=True)
 
 
 def integrity_issues(sessions: pd.DataFrame, turns: pd.DataFrame) -> pd.DataFrame:
     """List structural oddities in the dataset.
 
-    Checks duplicate session IDs, turn numbering, unknown roles, non-alternating
-    roles, first turn not from the user, empty texts, repeated texts within a
-    session, and missing or inverted timestamps.
+    Checks duplicate session IDs, sessions with no turns, turn numbering, unknown
+    roles, non-alternating roles, first turn not from the user, empty or null texts,
+    repeated texts within a session, and missing or inverted timestamps.
 
     Args:
         sessions: One row per session, as returned by ``data.sessions_frame``.
@@ -101,6 +181,9 @@ def integrity_issues(sessions: pd.DataFrame, turns: pd.DataFrame) -> pd.DataFram
     for sid in dup_ids:
         add(sid, "duplicate_session_id", "")
 
+    for sid in sorted(set(sessions["session_id"]) - set(turns["session_id"])):
+        add(sid, "no_turns", "")
+
     for sid, g in turns.groupby("session_id", sort=True):
         g = g.sort_values("position")
         expected = list(range(1, len(g) + 1))
@@ -116,9 +199,10 @@ def integrity_issues(sessions: pd.DataFrame, turns: pd.DataFrame) -> pd.DataFram
         if roles and roles[0] != "user":
             add(sid, "first_turn_not_user", roles[0])
         for pos, text in zip(g["position"], g["text"], strict=True):
-            if not str(text).strip():
+            if pd.isna(text) or not str(text).strip():
                 add(sid, "empty_text", f"position {pos}")
-        dupes = [txt for txt, n in Counter(g["text"]).items() if n > 1 and str(txt).strip()]
+        texts = g["text"].dropna()
+        dupes = [txt for txt, n in Counter(texts).items() if n > 1 and str(txt).strip()]
         for txt in dupes:
             add(sid, "repeated_text_in_session", str(txt)[:80])
 

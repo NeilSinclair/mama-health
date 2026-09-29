@@ -98,7 +98,7 @@
 
   <div class="card warn">
     <h3>Timestamps carry no behavioural signal <span class="tag dec">D-009</span></h3>
-    <p>All 50 sessions start exactly on the hour, and <code>duration_min == 0.7 × n_turns</code> in every one of them (a fixed 42 s per turn). Session duration, time-to-reply and time-of-day therefore tell us nothing about engagement. Timestamps are UTC with no user timezone, so we can't infer "late-night use" either.</p>
+    <p>All 50 sessions start exactly on the hour, and every one of them runs at exactly 42 s per turn (<code>duration_min == 0.7 × n_turns</code>). <span class="src">Source: <code>timing_summary.csv</code></span> Session duration, time-to-reply and time-of-day therefore tell us nothing about engagement. Timestamps are UTC with no user timezone, so we can't infer "late-night use" either.</p>
   </div>
 
   <div class="card warn">
@@ -108,7 +108,7 @@
 
   <div class="card warn">
     <h3><code>session_ended_by</code> doesn't match how conversations actually end <span class="tag dec">D-010</span></h3>
-    <p>13 sessions end on a <em>user</em> turn (7 <code>completed</code>, 6 <code>user_closed</code>), and 4 <code>user_closed</code> sessions end on an assistant turn.</p>
+    <p>13 sessions end on a <em>user</em> turn (7 <code>completed</code>, 6 <code>user_closed</code>), and 4 <code>user_closed</code> sessions end on an assistant turn. <span class="src">Source: <code>ending_crosstab.csv</code></span></p>
     <div class="table-wrap">
     <table>
       <tr><th>Session</th><th>Label</th><th>Final user turn</th></tr>
@@ -121,8 +121,11 @@
   </div>
 
   <div class="card warn">
-    <h3>Everything is in English</h3>
-    <p>This includes the sessions from Japan, Brazil, France, Germany, Italy and India (zero non-ASCII letters; <code>turns.csv</code> → <code>non_ascii_share</code>). Either the product is English-only or the data was generated in English. We can't assess language fit, and can assess cultural fit only through content.</p>
+    <h3>Almost everything is in English, with one telling exception</h3>
+    <p>The conversations are in English, including those from Japan, Brazil, France, Germany, Italy and India. The exception is <strong>s018 (Brazil)</strong>: the user switches into Portuguese as they get frustrated with the bot.</p>
+    <blockquote>t9: "i dont have 'a plan'. porque você não entende? no plan. no network. i explain already"<br>t23: "insurance directory again... esquece. você não vai entender"</blockquote>
+    <p>In s008 (France) the user says "médecin traitant", and the bot mirrors the term back. Our detector only looks for non-ASCII letters, so it would miss non-English text written without accents; all 6 hits in <code>non_ascii_turns.csv</code> were read by hand. s018 is a strong candidate for the "interesting five": a cultural-fit failure (the bot keeps assuming a US-style insurance plan) that shows up as a language switch.</p>
+    <p class="src">Correction: the first version of this doc said "zero non-ASCII letters". That came from filtering at a 5% share, which hid these turns. The code-reviewer agent caught it.</p>
   </div>
 
   <h2>Early signals worth following up</h2>
@@ -148,7 +151,7 @@
 
   <div class="card signal">
     <h3><code>user_closed</code> sessions are thinner</h3>
-    <p>Median 222 user words vs 336 for <code>completed</code>, and 667 vs 1,137 bot words. That's consistent with disengagement, but n = 10.</p>
+    <p>Median 222 user words vs 336 for <code>completed</code>, and 667 vs 1,137 bot words. That's consistent with disengagement, but n = 10. <span class="src">Source: <code>medians_by_end_state.csv</code></span></p>
   </div>
 
   <div class="card signal">

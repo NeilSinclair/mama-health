@@ -29,10 +29,17 @@ def run_eda(data_path: Path, out_dir: Path) -> dict[str, Path]:
         non_ascii_share=turns["text"].map(eda.non_ascii_share),
     )
 
+    features = eda.session_features(sessions, turns)
+    volume_cols = ["n_turns", "user_words", "assistant_words", "assistant_to_user_words"]
+
     target = out_dir / "eda"
     target.mkdir(parents=True, exist_ok=True)
     tables = {
-        "session_features": eda.session_features(sessions, turns),
+        "session_features": features,
+        "timing_summary": eda.timing_summary(features),
+        "ending_crosstab": eda.ending_crosstab(features),
+        "medians_by_end_state": eda.medians_by(features, "session_ended_by", volume_cols),
+        "non_ascii_turns": eda.non_ascii_turns(turns),
         "metadata_counts": eda.categorical_counts(sessions, META_COLUMNS),
         "integrity_issues": eda.integrity_issues(sessions, turns),
         "assistant_repeats": eda.cross_session_repeats(turns, "assistant"),

@@ -1,0 +1,6 @@
+metric,value
+n_sessions,50
+n_starts_on_hour,50
+n_distinct_seconds_per_turn,1
+min_seconds_per_turn,42.0
+max_seconds_per_turn,42.0
