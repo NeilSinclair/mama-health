@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conversation Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfaf8; --surface: #ffffff; --text: #1d1d1f; --muted: #6b6b70;
+    --border: #e6e3de; --accent: #b4532a; --accent-soft: #fbeee7;
+    --ok: #1f7a4d; --ok-soft: #e7f5ed; --bad: #a8321e; --bad-soft: #fbe9e5;
+    --chip: #f3f1ed; --user-bubble: #fbeee7; --bot-bubble: #f3f1ed;
+    --topic: #3867b5; --pain: #c2412d; --end: #1f7a4d; --edge: #8a8680;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141414; --surface: #1c1c1e; --text: #ececec; --muted: #a0a0a6;
+      --border: #2e2e31; --accent: #ec8a5c; --accent-soft: #2e1f18;
+      --ok: #56c68a; --ok-soft: #16271e; --bad: #f08a78; --bad-soft: #2e1a16;
+      --chip: #26262a; --user-bubble: #2e1f18; --bot-bubble: #26262a;
+      --topic: #7aa2f7; --pain: #f08a78; --end: #56c68a; --edge: #7c7c84;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141414; --surface: #1c1c1e; --text: #ececec; --muted: #a0a0a6;
+    --border: #2e2e31; --accent: #ec8a5c; --accent-soft: #2e1f18;
+    --ok: #56c68a; --ok-soft: #16271e; --bad: #f08a78; --bad-soft: #2e1a16;
+    --chip: #26262a; --user-bubble: #2e1f18; --bot-bubble: #26262a;
+    --topic: #7aa2f7; --pain: #f08a78; --end: #56c68a; --edge: #7c7c84;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.55 Inter, system-ui, -apple-system, sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 32px 16px 80px; }
+  h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -.01em; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .switcher { display: inline-flex; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 16px; }
+  .switcher button { font: inherit; border: 0; background: var(--surface); color: var(--text); padding: 7px 14px; cursor: pointer; }
+  .switcher button + button { border-left: 1px solid var(--border); }
+  .switcher button.on { background: var(--accent); color: #fff; }
+  .switcher button:disabled { color: var(--muted); cursor: not-allowed; }
+  .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px; }
+  .filters label { display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 3px; }
+  .filters select { width: 100%; font: inherit; font-size: 14px; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--text); }
+  .filters select.set { border-color: var(--accent); }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 14px 2px; color: var(--muted); }
+  .bar button { white-space: nowrap; font: inherit; font-size: 14px; border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 8px; padding: 5px 12px; cursor: pointer; }
+  .row { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin: 12px 0; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font-size: 13px; color: var(--muted); }
+  .meta .sid { font-weight: 700; color: var(--text); font-size: 15px; }
+  .badge { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 99px; }
+  .badge.ok { background: var(--ok-soft); color: var(--ok); }
+  .badge.bad { background: var(--bad-soft); color: var(--bad); }
+  .summary { margin: 10px 0 12px; }
+  .fields { display: grid; grid-template-columns: 170px 1fr; gap: 6px 12px; font-size: 14px; }
+  .fields dt { color: var(--muted); font-weight: 600; font-size: 13px; padding-top: 3px; }
+  .fields dd { margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font: inherit; font-size: 13px; background: var(--chip); color: var(--text); border: 1px solid transparent; border-radius: 99px; padding: 2px 10px; cursor: pointer; text-align: left; }
+  .chip:hover { border-color: var(--accent); }
+  .chip.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+  .logged { font-size: 12px; color: var(--muted); align-self: center; }
+  details { margin-top: 12px; border-top: 1px solid var(--border); padding-top: 10px; }
+  summary { cursor: pointer; color: var(--accent); font-weight: 600; font-size: 14px; }
+  .convo { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+  .bubble { max-width: 82%; padding: 8px 12px; border-radius: 12px; white-space: pre-wrap; font-size: 14px; }
+  .bubble.user { align-self: flex-end; background: var(--user-bubble); border-bottom-right-radius: 4px; }
+  .bubble.assistant { align-self: flex-start; background: var(--bot-bubble); border-bottom-left-radius: 4px; }
+  .bubble .who { display: block; font-size: 11px; font-weight: 600; color: var(--muted); margin-bottom: 2px; }
+  .empty { color: var(--muted); padding: 24px 0; }
+  .tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin: 0 0 16px; }
+  .tabs button { font: inherit; font-weight: 600; border: 0; border-bottom: 2px solid transparent; background: none; color: var(--muted); padding: 8px 12px; cursor: pointer; }
+  .tabs button.on { color: var(--accent); border-bottom-color: var(--accent); }
+  .gcontrols { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; font-size: 14px; }
+  .gcontrols label { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+  .swatch { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+  .ghint { color: var(--muted); font-size: 13px; margin: 10px 2px; }
+  .gwrap { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  #graph { display: block; width: 100%; height: auto; }
+  #graph .edge { stroke: var(--edge); stroke-opacity: .35; cursor: pointer; }
+  #graph .node { cursor: grab; touch-action: none; }
+  #graph .node text { font-size: 11px; fill: var(--text); paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
+  #graph .node circle { stroke: var(--surface); stroke-width: 1.5px; }
+  #graph .topic circle { fill: var(--topic); }
+  #graph .pain circle { fill: var(--pain); }
+  #graph .end circle { fill: var(--end); }
+  #graph.focus .node:not(.hl) { opacity: .15; }
+  #graph.focus .edge:not(.hl) { stroke-opacity: .05; }
+  #graph .edge.hl { stroke-opacity: .8; stroke: var(--accent); }
+  @media (max-width: 600px) {
+    .gwrap { overflow-x: auto; }
+    #graph { min-width: 760px; }
+    .fields { grid-template-columns: 1fr; }
+    .fields dt { padding-top: 6px; }
+    .bubble { max-width: 94%; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Conversation Explorer</h1>
+  <p class="sub">LLM summaries of the 50 conversations. Click any label to see every conversation that shares it. Hover a label to see the raw label(s) it was consolidated from.</p>
+  <div class="switcher" id="switcher"></div>
+  <nav class="tabs" id="tabs">
+    <button type="button" data-tab="list">Conversations</button>
+    <button type="button" data-tab="graph">Relationships</button>
+  </nav>
+  <section id="tab-list">
+    <div class="filters" id="filters"></div>
+    <div class="bar"><span id="count"></span><button id="clear" type="button">Clear filters</button></div>
+    <div id="rows"></div>
+  </section>
+  <section id="tab-graph" hidden>
+    <div class="gcontrols" id="gcontrols"></div>
+    <p class="ghint" id="ghint"></p>
+    <div class="gwrap"><svg id="graph" role="img" aria-label="Network of labels that occur in the same conversations"></svg></div>
+  </section>
+</main>
+<script>
+const DATA = /*__PAYLOAD__*/null;
+
+const FILTERS = [
+  ["main_topics", "Topic"],
+  ["conversation_pain_points", "Conversation pain point"],
+  ["reason_for_conversation", "Reason for conversation"],
+  ["end_reason", "End reason (LLM)"],
+  ["session_ended_by", "Ended by (logged)"],
+  ["issue_resolved", "Resolved (LLM)"],
+  ["disease", "Disease"],
+];
+const LABEL_FIELDS = ["reason_for_conversation", "main_topics", "conversation_pain_points", "end_reason"];
+const FIELD_NAMES = Object.fromEntries(FILTERS);
+
+const GRAPH_FIELDS = [
+  ["main_topics", "Topics", "topic"],
+  ["conversation_pain_points", "Conversation pain points", "pain"],
+  ["end_reason", "End reasons (LLM)", "end"],
+];
+const GRAPH_CLASS = Object.fromEntries(GRAPH_FIELDS.map(([f, , c]) => [f, c]));
+
+const state = { version: null, filters: {}, tab: "list" };
+const graphState = { fields: new Set(GRAPH_FIELDS.map(([f]) => f)), minEdge: 1, arrange: true };
+
+function el(tag, attrs = {}, ...children) {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "class") node.className = v;
+    else if (k.startsWith("on")) node.addEventListener(k.slice(2), v);
+    else node.setAttribute(k, v);
+  }
+  for (const c of children) node.append(c);
+  return node;
+}
+
+function values(row, key) {
+  if (LABEL_FIELDS.includes(key)) return row[key].map((c) => c.label);
+  if (key === "issue_resolved") return [row.issue_resolved ? "resolved" : "not resolved"];
+  return [row[key]];
+}
+
+function current() {
+  return DATA.versions.find((v) => v.key === state.version);
+}
+
+function matches(row) {
+  return Object.entries(state.filters).every(([k, v]) => !v || values(row, k).includes(v));
+}
+
+function toggleFilter(key, value) {
+  state.filters[key] = state.filters[key] === value ? "" : value;
+  render();
+  document.getElementById("filters").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function showSessions(filters) {
+  state.filters = filters;
+  state.tab = "list";
+  render();
+  window.scrollTo({ top: 0 });
+}
+
+function renderSwitcher() {
+  const box = document.getElementById("switcher");
+  box.replaceChildren(...DATA.versions.map((v) => {
+    const b = el("button", {
+      type: "button",
+      class: v.key === state.version ? "on" : "",
+      title: v.available ? v.model_id : "No cached labels for this version yet",
+      onclick: () => { state.version = v.key; state.filters = {}; render(); },
+    }, v.available ? v.label : `${v.label} (no labels)`);
+    b.disabled = !v.available;
+    return b;
+  }));
+}
+
+function renderFilters(rows) {
+  const box = document.getElementById("filters");
+  box.replaceChildren(...FILTERS.map(([key, name]) => {
+    const counts = new Map();
+    for (const r of rows) for (const v of new Set(values(r, key))) counts.set(v, (counts.get(v) || 0) + 1);
+    const opts = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    const select = el("select", {
+      id: `f-${key}`,
+      class: state.filters[key] ? "set" : "",
+      onchange: (e) => { state.filters[key] = e.target.value; render(); },
+    }, el("option", { value: "" }, "All"), ...opts.map(([v, n]) => el("option", { value: v }, `${v} (${n})`)));
+    select.value = state.filters[key] || "";
+    return el("div", {}, el("label", { for: `f-${key}` }, name), select);
+  }));
+}
+
+function chip(key, label, raw) {
+  const on = state.filters[key] === label;
+  return el("button", {
+    type: "button",
+    class: on ? "chip on" : "chip",
+    title: raw ? `raw: ${raw.join(" | ")}` : label,
+    onclick: () => toggleFilter(key, label),
+  }, label);
+}
+
+function renderConversation(details, sid) {
+  if (details.dataset.loaded) return;
+  details.dataset.loaded = "1";
+  details.append(el("div", { class: "convo" }, ...DATA.conversations[sid].map((t) =>
+    el("div", { class: `bubble ${t.role}` }, el("span", { class: "who" }, `t${t.turn} · ${t.role}`), t.text)
+  )));
+}
+
+function renderRow(r) {
+  const resolved = el("button", {
+    type: "button",
+    class: `badge ${r.issue_resolved ? "ok" : "bad"} chip`,
+    onclick: () => toggleFilter("issue_resolved", r.issue_resolved ? "resolved" : "not resolved"),
+  }, r.issue_resolved ? "resolved" : "not resolved");
+  const meta = el("div", { class: "meta" },
+    el("span", { class: "sid" }, r.session_id),
+    chip("disease", r.disease),
+    el("span", {}, `${r.age_group} · ${r.gender} · ${r.country}`),
+    resolved,
+  );
+  const fields = el("dl", { class: "fields" });
+  for (const key of LABEL_FIELDS) {
+    const dd = el("dd", {}, ...r[key].map((c) => chip(key, c.label, c.raw)));
+    if (key === "end_reason") {
+      dd.append(el("span", { class: "logged" }, "logged:"), chip("session_ended_by", r.session_ended_by));
+    }
+    fields.append(el("dt", {}, FIELD_NAMES[key]), dd);
+  }
+  const details = el("details", {}, el("summary", {}, "Show full conversation"));
+  details.addEventListener("toggle", () => details.open && renderConversation(details, r.session_id));
+  return el("div", { class: "row" }, meta, el("p", { class: "summary" }, r.summary), fields, details);
+}
+
+function renderTabs() {
+  for (const b of document.querySelectorAll("#tabs button")) {
+    b.className = b.dataset.tab === state.tab ? "on" : "";
+  }
+  document.getElementById("tab-list").hidden = state.tab !== "list";
+  document.getElementById("tab-graph").hidden = state.tab !== "graph";
+}
+
+function render() {
+  renderSwitcher();
+  renderTabs();
+  if (state.tab === "graph") { renderGraph(); return; }
+  const v = current();
+  const rowsBox = document.getElementById("rows");
+  if (!v) {
+    document.getElementById("filters").replaceChildren();
+    document.getElementById("count").textContent = "";
+    rowsBox.replaceChildren(el("p", { class: "empty" },
+      "No cached labels yet. Run: uv run mama-pipeline --relabel haiku"));
+    return;
+  }
+  renderFilters(v.rows);
+  const shown = v.rows.filter(matches);
+  document.getElementById("count").textContent = `Showing ${shown.length} of ${v.rows.length} conversations · ${v.model_id}`;
+  rowsBox.replaceChildren(...(shown.length ? shown.map(renderRow) : [el("p", { class: "empty" }, "No conversations match these filters.")]));
+}
+
+const SVG_NS = "http://www.w3.org/2000/svg";
+
+function svgEl(tag, attrs = {}, ...children) {
+  const node = document.createElementNS(SVG_NS, tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k.startsWith("on")) node.addEventListener(k.slice(2), v);
+    else node.setAttribute(k, v);
+  }
+  for (const c of children) node.append(c);
+  return node;
+}
+
+function renderGraphControls() {
+  const box = document.getElementById("gcontrols");
+  const toggles = GRAPH_FIELDS.map(([field, name, cls]) => {
+    const cb = el("input", { type: "checkbox", onchange: (e) => {
+      if (e.target.checked) graphState.fields.add(field); else graphState.fields.delete(field);
+      renderGraph();
+    } });
+    cb.checked = graphState.fields.has(field);
+    return el("label", {}, cb, el("span", { class: "swatch", style: `background: var(--${cls})` }), name);
+  });
+  const slider = el("input", { type: "range", min: "1", max: "5", step: "1", onchange: (e) => {
+    graphState.minEdge = Number(e.target.value);
+    renderGraph();
+  } });
+  slider.value = String(graphState.minEdge);
+  const arrange = el("input", { type: "checkbox", onchange: (e) => { graphState.arrange = e.target.checked; renderGraph(); } });
+  arrange.checked = graphState.arrange;
+  box.replaceChildren(
+    ...toggles,
+    el("label", {}, "Links shared by ≥", slider, el("strong", {}, String(graphState.minEdge)), "sessions"),
+    el("label", {}, arrange, "Arrange by field"),
+  );
+}
+
+function graphData(graph) {
+  const shown = GRAPH_FIELDS.map(([f]) => f).filter((f) => graphState.fields.has(f));
+  // In columns, only link neighbouring columns (topic-pain, pain-end), so links don't cross a column.
+  const adjacent = (a, b) => !graphState.arrange || Math.abs(shown.indexOf(a) - shown.indexOf(b)) === 1;
+  const candidates = graph.edges.filter((e) => {
+    const a = e.source.split(":")[0], b = e.target.split(":")[0];
+    return e.n_sessions >= graphState.minEdge && shown.includes(a) && shown.includes(b);
+  });
+  const edges = candidates.filter((e) => adjacent(e.source.split(":")[0], e.target.split(":")[0]));
+  const linked = new Set(edges.flatMap((e) => [e.source, e.target]));
+  // Any edge at this threshold, whatever the field selection: tells "hidden by layout" from "too rare".
+  const linkedAny = new Set(graph.edges.filter((e) => e.n_sessions >= graphState.minEdge)
+    .flatMap((e) => [e.source, e.target]));
+  const nodes = graph.nodes.filter((n) => linked.has(n.id)).map((n) => ({ ...n }));
+  const unlinked = graph.nodes.filter((n) => graphState.fields.has(n.field) && !linked.has(n.id));
+  const hiddenByLayout = unlinked.filter((n) => linkedAny.has(n.id)).length;
+  const hiddenByThreshold = unlinked.length - hiddenByLayout;
+  return { nodes, edges, hiddenByLayout, hiddenByThreshold };
+}
+
+// Layered layout: one column per field, each column ordered to reduce crossings
+// (barycentre heuristic: repeatedly sort nodes by the mean position of their neighbours).
+function layeredLayout(nodes, edges, W, H) {
+  const columns = GRAPH_FIELDS.map(([f]) => f).filter((f) => nodes.some((n) => n.field === f));
+  const xs = columns.length === 1 ? [0.5] : columns.length === 2 ? [0.3, 0.7] : [0.3, 0.56, 0.82];
+  const byId = new Map(nodes.map((n) => [n.id, n]));
+  const nbrs = new Map(nodes.map((n) => [n.id, []]));
+  for (const e of edges) {
+    nbrs.get(e.source).push([e.target, e.n_sessions]);
+    nbrs.get(e.target).push([e.source, e.n_sessions]);
+  }
+  const cols = columns.map((f, i) => {
+    const col = nodes.filter((n) => n.field === f).sort((a, b) => b.n_sessions - a.n_sessions || a.label.localeCompare(b.label));
+    col.forEach((n) => { n.x = W * xs[i]; });
+    return col;
+  });
+  const place = (col) => {
+    const gap = (H - 48) / Math.max(col.length, 1);
+    col.forEach((n, j) => { n.y = 24 + gap * (j + 0.5); });
+  };
+  cols.forEach(place);
+  for (let sweep = 0; sweep < 12; sweep++) {
+    for (const col of sweep % 2 ? [...cols].reverse() : cols) {
+      const key = new Map(col.map((n) => {
+        const ns = nbrs.get(n.id);
+        const w = ns.reduce((t, [, k]) => t + k, 0);
+        return [n.id, w ? ns.reduce((t, [id, k]) => t + byId.get(id).y * k, 0) / w : n.y];
+      }));
+      col.sort((a, b) => key.get(a.id) - key.get(b.id) || a.label.localeCompare(b.label));
+      place(col);
+    }
+  }
+}
+
+// Free force layout (Fruchterman-Reingold), deterministic starting positions.
+function forceLayout(nodes, edges, W, H) {
+  const byId = new Map(nodes.map((n) => [n.id, n]));
+  nodes.forEach((n, i) => {
+    const a = i * 2.399963, r = 0.4 * Math.min(W, H) * Math.sqrt((i + 0.5) / nodes.length);
+    n.x = W / 2 + r * Math.cos(a);
+    n.y = H / 2 + r * Math.sin(a);
+  });
+  const k = 0.9 * Math.sqrt((W * H) / Math.max(nodes.length, 1));
+  const steps = 300;
+  for (let it = 0; it < steps; it++) {
+    const temp = 60 * (1 - it / steps) + 1;
+    for (const n of nodes) { n.dx = 0; n.dy = 0; }
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        const dx = a.x - b.x, dy = a.y - b.y, d = Math.hypot(dx, dy) || 0.01, f = (k * k) / d;
+        a.dx += (dx / d) * f; a.dy += (dy / d) * f; b.dx -= (dx / d) * f; b.dy -= (dy / d) * f;
+      }
+    }
+    for (const e of edges) {
+      const a = byId.get(e.source), b = byId.get(e.target);
+      const dx = a.x - b.x, dy = a.y - b.y, d = Math.hypot(dx, dy) || 0.01;
+      const f = ((d * d) / k) * Math.min(0.5 + e.n_sessions / 4, 2);
+      a.dx -= (dx / d) * f; a.dy -= (dy / d) * f; b.dx += (dx / d) * f; b.dy += (dy / d) * f;
+    }
+    for (const n of nodes) {
+      n.dx += (W / 2 - n.x) * 0.3;
+      n.dy += (H / 2 - n.y) * 0.3;
+      const disp = Math.hypot(n.dx, n.dy) || 0.01, step = Math.min(disp, temp);
+      n.x = Math.max(30, Math.min(W - 140, n.x + (n.dx / disp) * step));
+      n.y = Math.max(24, Math.min(H - 24, n.y + (n.dy / disp) * step));
+    }
+  }
+}
+
+function radius(n) { return 4 + 2.2 * Math.sqrt(n.n_sessions); }
+
+function leftLabel(n) {
+  const first = GRAPH_FIELDS.map(([f]) => f).find((f) => graphState.fields.has(f));
+  return graphState.arrange && n.field === first;
+}
+
+function renderGraph() {
+  renderGraphControls();
+  const svg = document.getElementById("graph");
+  const hint = document.getElementById("ghint");
+  const v = current();
+  if (!v) { svg.replaceChildren(); hint.textContent = "No cached labels yet."; return; }
+  const { nodes, edges, hiddenByLayout, hiddenByThreshold } = graphData(v.graph);
+  const perColumn = Math.max(1, ...GRAPH_FIELDS.map(([f]) => nodes.filter((n) => n.field === f).length));
+  const W = 1000, H = Math.max(560, graphState.arrange ? perColumn * 24 + 48 : 0);
+  (graphState.arrange ? layeredLayout : forceLayout)(nodes, edges, W, H);
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  hint.textContent = `${nodes.length} labels, ${edges.length} links. Node size = sessions with that label; ` +
+    `a link = sessions that share both labels. Hover to highlight, click a node or link to list its ` +
+    `conversations, drag nodes to untangle.` +
+    (graphState.arrange ? " Columns link only to their neighbours; untick a field to link the other two directly." : "") +
+    (hiddenByLayout ? ` ${hiddenByLayout} labels link only to an unticked field or a non-neighbouring column ` +
+      `(e.g. topics of conversations with no pain point) and are hidden; change the field ticks or ` +
+      `"Arrange by field" to see them.` : "") +
+    (hiddenByThreshold ? ` ${hiddenByThreshold} labels have no link at this threshold and are hidden.` : "");
+
+  const byId = new Map(nodes.map((n) => [n.id, n]));
+  const lines = edges.map((e) => {
+    const a = byId.get(e.source), b = byId.get(e.target);
+    const line = svgEl("line", {
+      class: "edge", x1: a.x, y1: a.y, x2: b.x, y2: b.y, "stroke-width": 1 + 1.6 * (e.n_sessions - 1),
+      onclick: () => showSessions({ [a.field]: a.label, [b.field]: b.label }),
+    }, svgEl("title", {}, `${a.label} + ${b.label}: ${e.n_sessions} sessions (${e.session_ids.join(", ")})`));
+    line.edge = e;
+    return line;
+  });
+  const groups = nodes.map((n) => {
+    const r = radius(n);
+    const g = svgEl("g", { class: `node ${GRAPH_CLASS[n.field]}`, transform: `translate(${n.x},${n.y})` },
+      svgEl("circle", { r }),
+      svgEl("text", leftLabel(n) ? { x: -r - 4, dy: "0.35em", "text-anchor": "end" } : { x: r + 4, dy: "0.35em" }, n.label),
+      svgEl("title", {}, `${FIELD_NAMES[n.field]}: ${n.label} — ${n.n_sessions} sessions`));
+    g.node = n;
+    return g;
+  });
+
+  const focus = (id) => {
+    svg.classList.toggle("focus", Boolean(id));
+    const near = new Set([id]);
+    for (const l of lines) {
+      const on = id && (l.edge.source === id || l.edge.target === id);
+      l.classList.toggle("hl", Boolean(on));
+      if (on) { near.add(l.edge.source); near.add(l.edge.target); }
+    }
+    for (const g of groups) g.classList.toggle("hl", Boolean(id) && near.has(g.node.id));
+  };
+
+  for (const g of groups) {
+    const n = g.node;
+    let start = null;
+    g.addEventListener("pointerenter", () => { if (!start) focus(n.id); });
+    g.addEventListener("pointerleave", () => { if (!start) focus(null); });
+    g.addEventListener("pointerdown", (ev) => {
+      start = { x: ev.clientX, y: ev.clientY };
+      g.setPointerCapture(ev.pointerId);
+    });
+    g.addEventListener("pointermove", (ev) => {
+      if (!start) return;
+      const pt = new DOMPoint(ev.clientX, ev.clientY).matrixTransform(svg.getScreenCTM().inverse());
+      n.x = pt.x; n.y = pt.y;
+      g.setAttribute("transform", `translate(${n.x},${n.y})`);
+      for (const l of lines) {
+        if (l.edge.source === n.id) { l.setAttribute("x1", n.x); l.setAttribute("y1", n.y); }
+        if (l.edge.target === n.id) { l.setAttribute("x2", n.x); l.setAttribute("y2", n.y); }
+      }
+    });
+    g.addEventListener("pointercancel", () => { start = null; focus(null); });
+    g.addEventListener("pointerup", (ev) => {
+      if (!start) return;
+      const moved = start && Math.hypot(ev.clientX - start.x, ev.clientY - start.y) > 4;
+      start = null;
+      if (!moved) showSessions({ [n.field]: n.label });
+    });
+  }
+  svg.replaceChildren(svgEl("g", {}, ...lines), svgEl("g", {}, ...groups));
+}
+
+for (const b of document.querySelectorAll("#tabs button")) {
+  b.addEventListener("click", () => { state.tab = b.dataset.tab; render(); });
+}
+document.getElementById("clear").addEventListener("click", () => { state.filters = {}; render(); });
+state.version = (DATA.versions.find((v) => v.available) || {}).key || null;
+render();
+</script>
+</body>
+</html>

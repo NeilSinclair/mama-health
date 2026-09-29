@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-09-29T14:29:52+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "migraine treatment response",
+      "migraine tracking",
+      "attack severity",
+      "treatment continuation worries"
+    ],
+    "reason_for_conversation": "understanding treatment effectiveness",
+    "summary": "The user asked whether a reduction from about 20 to 15 migraine days after three months on Emgality counted as treatment working, and shared that attacks had also become less severe. The assistant framed this as a partial improvement, suggested continuing to track symptoms and discussing reassessment with the neurologist; the user said they felt better and that the conversation had reframed their view."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 3151,
+    "output_tokens": 239
+  },
+  "version": "gpt_luna"
+}

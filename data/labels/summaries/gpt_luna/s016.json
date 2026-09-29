@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-09-29T14:29:40+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot assumed country context"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "fibromyalgia brain fog",
+      "work performance anxiety",
+      "workplace accommodations",
+      "sleep disruption",
+      "possible sleep apnea",
+      "antihistamine use"
+    ],
+    "reason_for_conversation": "managing cognitive symptoms",
+    "summary": "The user sought practical strategies for worsening fibromyalgia brain fog that was causing accounting mistakes and meeting difficulties, and feared losing their job. The assistant offered work strategies and options for discussing accommodations through HR, then highlighted the user's reported snoring and breathing pauses and nightly diphenhydramine as issues to raise with a clinician; it also gave Canada-specific accommodation information despite the user not stating a location. The user said the advice was useful and the priority plan was clear."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 5324,
+    "output_tokens": 708
+  },
+  "version": "gpt_luna"
+}

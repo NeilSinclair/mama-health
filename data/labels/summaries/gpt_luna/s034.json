@@ -1,0 +1,28 @@
+{
+  "created_at": "2026-09-29T14:29:55+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "daily nausea",
+      "medication dose concerns",
+      "food-related symptoms",
+      "blood sugar monitoring",
+      "urgent symptom warning signs"
+    ],
+    "reason_for_conversation": "medication side effect management",
+    "summary": "After starting Ozempic for diabetes, the user described daily nausea and early fullness that worsened with fried food and meat, and asked whether to stop or delay increasing the dose. The assistant suggested eating smaller, lighter meals, explained warning signs to seek care for, and recommended discussing the dose increase with the prescriber; the user accepted a plan to monitor morning blood sugar and talk to the doctor before increasing, and said they felt calmer."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 3804,
+    "output_tokens": 501
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-09-29T14:30:07+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot assumed wrong country context"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "new diagnosis overwhelm",
+      "budesonide treatment plan",
+      "disease monitoring",
+      "health information organization",
+      "reliable information sources",
+      "specialist care access",
+      "diet management"
+    ],
+    "reason_for_conversation": "understanding new diagnosis",
+    "summary": "Newly diagnosed with Crohn’s disease, the user felt overwhelmed and wanted a clear starting point. The assistant explained the disease, budesonide and follow-up planning, monitoring, organization, reliable information, specialist care in India, and diet; after the user noted that US-based advice might not fit, it adapted its guidance. The user felt the information made things manageable and planned to write down questions and clarify the plan after budesonide with the doctor."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 4519,
+    "output_tokens": 587
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-09-29T14:30:05+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored emotional distress",
+      "bot repeated advice after pushback"
+    ],
+    "end_reason": "user left unheard",
+    "issue_resolved": false,
+    "main_topics": [
+      "endometriosis surgery",
+      "marital strain",
+      "fertility loss",
+      "work impairment",
+      "grief and distress"
+    ],
+    "reason_for_conversation": "emotional support",
+    "summary": "After learning they need a fourth endometriosis surgery, the user described grief over fertility loss, a deteriorating marriage, and the effects of illness on work and life plans. They repeatedly asked to be heard, but the assistant continued offering surgery-preparation and recovery advice; the user ended the conversation saying there was nothing the assistant could help with."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 3401,
+    "output_tokens": 666
+  },
+  "version": "gpt_luna"
+}

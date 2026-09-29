@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-09-29T14:29:47+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot repeated inaccessible insurance advice"
+    ],
+    "end_reason": "user left unheard",
+    "issue_resolved": false,
+    "main_topics": [
+      "pelvic pain",
+      "suspected endometriosis",
+      "dismissive doctor",
+      "work limitations",
+      "public specialist access",
+      "pain treatment"
+    ],
+    "reason_for_conversation": "pain management",
+    "summary": "The user described severe pelvic pain affecting work, possible endometriosis, and a doctor who dismissed the symptoms. After the user explained they rely on Brazil’s public SUS system and face long waits, the assistant repeatedly suggested US-style insurance directories and specialist referrals; it also discussed pain-treatment options, which the user said might be useful. The user ended the conversation saying it was not helping."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 3568,
+    "output_tokens": 917
+  },
+  "version": "gpt_luna"
+}

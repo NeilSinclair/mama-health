@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-09-29T14:29:44+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "migraine visual symptoms",
+      "stroke concern",
+      "emergency care decision",
+      "symptom-related fear",
+      "sumatriptan timing",
+      "hormonal contraception"
+    ],
+    "reason_for_conversation": "checking symptom urgency",
+    "summary": "The user described a new episode of shimmering zigzag vision before a migraine and was worried it could signal a stroke or require an ER visit. The assistant said the episode sounded consistent with visual aura, suggested a non-urgent family doctor appointment, gave emergency warning signs, and discussed medication timing and future estrogen-containing contraception. The user felt much calmer and said they would book with their family doctor this week and rest."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 4268,
+    "output_tokens": 592
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-09-29T14:29:33+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "long covid prognosis",
+      "post-exertional malaise",
+      "pacing strategies",
+      "work adjustments",
+      "dismissive medical care",
+      "illness-related distress"
+    ],
+    "reason_for_conversation": "understanding prognosis",
+    "summary": "The user wanted an honest account of whether long covid might improve and described delayed crashes after ordinary activity, alongside work and household limits on resting. The assistant discussed uncertainty, pacing and tracking, possible work adjustments, and points to raise with the GP; the user said they felt heard and had concrete next steps."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 3750,
+    "output_tokens": 427
+  },
+  "version": "gpt_luna"
+}

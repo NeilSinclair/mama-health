@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-09-29T14:29:36+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "endometriosis pain",
+      "hormonal treatment options",
+      "treatment frustration",
+      "specialist follow-up",
+      "pelvic floor physiotherapy",
+      "non-hormonal pain management"
+    ],
+    "reason_for_conversation": "treatment planning",
+    "summary": "The user described returning endometriosis pain while taking the combined pill, especially during the break week, and wanted to understand alternatives before seeing the GP. The assistant discussed continuous pill use, other hormonal options, specialist re-referral, and pelvic floor physiotherapy; the user left with a list of next steps and said they felt less stuck."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 4670,
+    "output_tokens": 616
+  },
+  "version": "gpt_luna"
+}

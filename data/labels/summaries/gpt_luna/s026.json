@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-09-29T14:29:55+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored suicidal statement",
+      "bot missed urgent symptom"
+    ],
+    "end_reason": "user left unheard",
+    "issue_resolved": false,
+    "main_topics": [
+      "crohn's flare",
+      "bloody diarrhea",
+      "prednisone side effects",
+      "biologic treatment failure",
+      "emotional exhaustion",
+      "suicidal thoughts"
+    ],
+    "reason_for_conversation": "emotional support",
+    "summary": "The user described a three-week Crohn's flare with 10–12 bowel movements a day, blood most times, constant cramping, and prednisone side effects; Humira and Entyvio had not helped. The user said they sometimes wanted it all to be over, but the assistant shifted to symptom tracking and medication tips without addressing that statement, and only later suggested urgent care if symptoms worsened despite the reported symptoms already meeting its example threshold. The user said they had hoped talking would help but received the same logs and tips, then ended the conversation."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2129,
+    "cache_write_tokens": 0,
+    "input_tokens": 3288,
+    "output_tokens": 1107
+  },
+  "version": "gpt_luna"
+}
