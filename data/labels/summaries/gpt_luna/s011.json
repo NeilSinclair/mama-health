@@ -1,28 +1,68 @@
 {
-  "created_at": "2026-09-30T09:20:55+00:00",
+  "created_at": "2026-09-30T12:13:45+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "endometriosis pain",
-      "treatment options",
-      "specialist follow-up",
-      "pelvic floor physiotherapy",
-      "treatment-related frustration"
+      {
+        "reason": "The user opened by saying pain was returning despite two years on the combined pill and kept seeking ways to address it.",
+        "relevance": "strong",
+        "topic": "recurrent endometriosis pain"
+      },
+      {
+        "reason": "They asked for the full range of options, then explored progestins, the Mirena, GnRH medicines, and non-hormonal approaches across many turns.",
+        "relevance": "strong",
+        "topic": "endometriosis treatment options"
+      },
+      {
+        "reason": "They said the pain was worst during the pill break and included continuous pill use in the plan they accepted.",
+        "relevance": "medium",
+        "topic": "pill-free week pain"
+      },
+      {
+        "reason": "They asked whether endometriosis found on the ovary and near the bowel changed which treatments might work.",
+        "relevance": "medium",
+        "topic": "disease location"
+      },
+      {
+        "reason": "They said they had been discharged to the GP after surgery and engaged with the suggestion to request specialist re-referral.",
+        "relevance": "medium",
+        "topic": "specialist follow-up"
+      },
+      {
+        "reason": "They expressed frustration that the options seemed to be all hormonal and asked whether anything else existed.",
+        "relevance": "medium",
+        "topic": "hormonal treatment fatigue"
+      },
+      {
+        "reason": "They asked whether GnRH treatment was as frightening as the menopause-like effects they had heard about and said the explanation reassured them.",
+        "relevance": "medium",
+        "topic": "gnrh side effects"
+      },
+      {
+        "reason": "They asked about physiotherapy after learning it was an option and added it to their list for the GP.",
+        "relevance": "medium",
+        "topic": "pelvic floor physiotherapy"
+      },
+      {
+        "reason": "They asked whether pelvic floor physiotherapy would require private care, and the assistant discussed possible referral routes and availability.",
+        "relevance": "low",
+        "topic": "physiotherapy access"
+      }
     ],
-    "reason_for_conversation": "treatment planning",
-    "summary": "The user’s endometriosis pain was returning on the combined pill and was worst during the break week; they wanted to understand alternatives. The conversation covered continuous use, progestin options, Mirena, GnRH medicines, and non-hormonal support, alongside the user’s history of disease on the ovary and near the bowel and discharge back to the GP after surgery. The user left with a list of topics to raise with the GP and said they felt less stuck."
+    "reason_for_conversation": "endometriosis treatment choices",
+    "summary": "The user sought options for endometriosis pain returning on the combined pill, especially during the break week, and discussed hormonal and non-hormonal approaches. They shared that their laparoscopy found disease on the ovary and near the bowel, and that they had been discharged to the GP; the assistant suggested discussing treatment options, specialist re-referral, and physiotherapy. The user ended with a list of next steps and said they felt less stuck."
   },
-  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
-  "prompt_version": "summary_v4",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2382,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 4923,
-    "output_tokens": 380
+    "input_tokens": 5667,
+    "output_tokens": 1346
   },
   "version": "gpt_luna"
 }

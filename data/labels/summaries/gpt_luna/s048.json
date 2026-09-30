@@ -1,30 +1,78 @@
 {
-  "created_at": "2026-09-30T09:21:31+00:00",
+  "created_at": "2026-09-30T12:14:33+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "pcos fertility",
-      "irregular menstrual cycles",
-      "fertility treatment options",
-      "preconception planning",
-      "partner fertility testing",
-      "fertility specialist referral",
-      "fertility anxiety"
+      {
+        "reason": "The user wanted to know what to expect while trying to conceive with PCOS and ended by listing concrete steps for discussing with her doctor.",
+        "relevance": "strong",
+        "topic": "pcos fertility planning"
+      },
+      {
+        "reason": "The user described spiraling after reading online stories and later asked how to stop fertility concerns from taking over her life.",
+        "relevance": "strong",
+        "topic": "fertility anxiety"
+      },
+      {
+        "reason": "The user described cycles lasting 35 to over 50 days, questioned whether she ovulates, and asked how this affects conception.",
+        "relevance": "strong",
+        "topic": "irregular ovulation"
+      },
+      {
+        "reason": "The user asked about Clomid and letrozole and whether medication is usual or whether to try naturally first.",
+        "relevance": "medium",
+        "topic": "ovulation medication"
+      },
+      {
+        "reason": "The user asked how to time intercourse with unpredictable cycles and whether ovulation tests work with PCOS.",
+        "relevance": "medium",
+        "topic": "fertility tracking"
+      },
+      {
+        "reason": "The user asked whether to change her diet or take anything before returning to her doctor.",
+        "relevance": "medium",
+        "topic": "preconception preparation"
+      },
+      {
+        "reason": "The user mentioned a prior comment about high insulin and asked how metformin might relate to fertility.",
+        "relevance": "medium",
+        "topic": "insulin and metformin"
+      },
+      {
+        "reason": "The user asked whether conception typically takes months or years.",
+        "relevance": "medium",
+        "topic": "fertility timeline"
+      },
+      {
+        "reason": "The user asked whether her husband should be checked and added a semen analysis to their plan.",
+        "relevance": "medium",
+        "topic": "male fertility testing"
+      },
+      {
+        "reason": "The user asked when to move from her regular OB to a specialist.",
+        "relevance": "medium",
+        "topic": "fertility specialist referral"
+      },
+      {
+        "reason": "The user asked how to keep trying to conceive from taking over her life and said the assistant's response made her feel heard.",
+        "relevance": "medium",
+        "topic": "emotional coping"
+      }
     ],
     "reason_for_conversation": "fertility planning",
-    "summary": "The user was anxious about trying to conceive with PCOS and unpredictable cycles, and asked about treatment options, preparation, partner testing, and when to seek specialist care. The assistant gave a practical overview and coping suggestions; the user said they had concrete next steps and felt much better."
+    "summary": "The user, who has PCOS and irregular cycles, sought realistic expectations and guidance on preparing to try for a baby. The assistant discussed ovulation treatments, tracking, preconception steps, testing for both partners, referral timing, and ways to manage anxiety. The user said she felt much better and left with a concrete plan to discuss with her doctor."
   },
-  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
-  "prompt_version": "summary_v4",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2382,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 5428,
-    "output_tokens": 454
+    "input_tokens": 6172,
+    "output_tokens": 1156
   },
   "version": "gpt_luna"
 }

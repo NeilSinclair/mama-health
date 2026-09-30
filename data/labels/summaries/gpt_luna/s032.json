@@ -1,30 +1,83 @@
 {
-  "created_at": "2026-09-30T09:21:17+00:00",
+  "created_at": "2026-09-30T12:14:14+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "biologic treatment options",
-      "active rheumatoid arthritis",
-      "cancer risk fears",
-      "infection and shingles history",
-      "treatment logistics",
-      "shingles vaccination",
-      "hormone therapy interactions"
+      {
+        "reason": "The user came to understand the available options and spent much of the conversation comparing treatment classes and how a clinician might choose among them.",
+        "relevance": "strong",
+        "topic": "biologic treatment options"
+      },
+      {
+        "reason": "The user called long-term risk the question that scared them most, discussed it over several turns, and said the explanation changed how they viewed treatment.",
+        "relevance": "strong",
+        "topic": "cancer risk"
+      },
+      {
+        "reason": "The user described persistent hand and wrist synovitis, elevated CRP, and prolonged morning stiffness as the reason escalation was being considered.",
+        "relevance": "medium",
+        "topic": "active rheumatoid arthritis"
+      },
+      {
+        "reason": "The user raised frequent sinus infections as a factor that might affect the treatment choice.",
+        "relevance": "medium",
+        "topic": "infection history"
+      },
+      {
+        "reason": "The user discussed prior shingles and how it might affect the choice of treatment.",
+        "relevance": "medium",
+        "topic": "shingles history"
+      },
+      {
+        "reason": "The user asked whether Shingrix was appropriate at their age and while immunosuppressed, and said they were writing down the advice.",
+        "relevance": "medium",
+        "topic": "shingles vaccination"
+      },
+      {
+        "reason": "The user asked how injections and infusions differ because they travel often for work, and said self-injection sounded appealing.",
+        "relevance": "medium",
+        "topic": "travel treatment logistics"
+      },
+      {
+        "reason": "The user asked how long it takes to know whether a biologic is working and said they did not want to endure months of pain without a checkpoint.",
+        "relevance": "medium",
+        "topic": "treatment monitoring timeline"
+      },
+      {
+        "reason": "The user asked whether possible hormone therapy during perimenopause could interact with RA treatment and agreed to coordinate with their clinicians.",
+        "relevance": "medium",
+        "topic": "hormone therapy interactions"
+      },
+      {
+        "reason": "The user said learning that inflammation itself could cause damage reframed the treatment risk-benefit for them.",
+        "relevance": "medium",
+        "topic": "untreated disease risk"
+      },
+      {
+        "reason": "The user briefly mentioned being needle-shy despite already injecting methotrexate and responded positively to reassurance about auto-injector pens.",
+        "relevance": "low",
+        "topic": "injection anxiety"
+      },
+      {
+        "reason": "The user mentioned controlled mild hypertension once while asking whether their health history affected treatment choice.",
+        "relevance": "low",
+        "topic": "hypertension"
+      }
     ],
-    "reason_for_conversation": "treatment decision support",
-    "summary": "The user wanted to understand biologic options for active rheumatoid arthritis and prepare for a discussion with their rheumatologist, including how infection history, prior shingles, travel, cancer risk, and possible hormone therapy might affect the decision. The assistant explained treatment classes and practical considerations, suggested questions for the appointment, and the user said they felt prepared for a real discussion and that their anxiety had genuinely decreased."
+    "reason_for_conversation": "informed treatment decision",
+    "summary": "The user sought preparation for discussing a biologic for active RA despite methotrexate and sulfasalazine, asking about treatment options, risks, vaccination, travel logistics, and monitoring. The assistant helped build a question list, and the user said they felt equipped for a real discussion with their rheumatologist and that their anxiety had genuinely decreased."
   },
-  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
-  "prompt_version": "summary_v4",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2382,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 5634,
-    "output_tokens": 484
+    "input_tokens": 6378,
+    "output_tokens": 1479
   },
   "version": "gpt_luna"
 }

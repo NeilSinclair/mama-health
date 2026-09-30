@@ -76,7 +76,7 @@ def test_run_summaries_warns_on_stale_cache(data_file, tmp_path, capsys, fake_ap
         cli.MODELS, "gpt_luna", cli.MODELS["gpt_luna"].__class__("openai", "new", "G")
     )
     run_summaries(data_file, labels, tmp_path / "out")
-    assert "gpt_luna: 6 cached labels predate" in capsys.readouterr().out
+    assert "gpt_luna: 5 cached labels predate" in capsys.readouterr().out
 
 
 def test_committed_outputs_match_fresh_run(tmp_path):
@@ -94,7 +94,7 @@ def test_remap_rebuilds_mappings_from_cached_summaries(data_file, tmp_path, caps
     labels = tmp_path / "labels"
     cli.relabel("gpt_luna", data_file, labels)
     before = (labels / "summaries" / "gpt_luna" / "s1.json").read_text()
-    (labels / "mappings" / "gpt_luna" / "end_reason.json").unlink()
+    (labels / "mappings" / "gpt_luna" / "reason_for_conversation.json").unlink()
     main(
         [
             "--data",
@@ -108,7 +108,7 @@ def test_remap_rebuilds_mappings_from_cached_summaries(data_file, tmp_path, caps
         ]
     )
     assert "re-consolidating gpt_luna" in capsys.readouterr().out
-    assert (labels / "mappings" / "gpt_luna" / "end_reason.json").exists()
+    assert (labels / "mappings" / "gpt_luna" / "reason_for_conversation.json").exists()
     assert (labels / "summaries" / "gpt_luna" / "s1.json").read_text() == before
 
 
@@ -143,7 +143,9 @@ def test_mapping_that_misses_new_summary_labels_fails_clearly(data_file, tmp_pat
     cli.relabel("gpt_luna", data_file, labels)
     path = labels / "summaries" / "gpt_luna" / "s1.json"
     entry = json.loads(path.read_text())
-    entry["output"]["main_topics"] = ["a label no mapping has seen"]
+    entry["output"]["main_topics"] = [
+        {"topic": "a label no mapping has seen", "reason": "r", "relevance": "strong"}
+    ]
     path.write_text(json.dumps(entry))
     with pytest.raises(ValueError, match="run: uv run mama-pipeline --remap gpt_luna"):
         run_summaries(data_file, labels, tmp_path / "out")

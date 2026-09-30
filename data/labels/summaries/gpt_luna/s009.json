@@ -1,27 +1,43 @@
 {
-  "created_at": "2026-09-30T09:20:49+00:00",
+  "created_at": "2026-09-30T12:13:33+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
-    "end_reason": "user accepted plan",
+    "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "nighttime psoriasis itching",
-      "psoriasis plaques",
-      "sleep scratching",
-      "skin irritation"
+      {
+        "reason": "The user asked whether psoriasis patches itch more at night and why, then sought ways to reduce the itching.",
+        "relevance": "strong",
+        "topic": "nighttime psoriasis itch"
+      },
+      {
+        "reason": "The user said they wake up with skin raw from scratching and discussed ways to limit damage overnight.",
+        "relevance": "medium",
+        "topic": "sleep scratching"
+      },
+      {
+        "reason": "The user asked what helps and followed up on whether greasy ointment works better than regular cream.",
+        "relevance": "medium",
+        "topic": "overnight skin care"
+      },
+      {
+        "reason": "The user mentioned patches mainly on their elbows and one knee as context for the advice.",
+        "relevance": "low",
+        "topic": "plaque locations"
+      }
     ],
-    "reason_for_conversation": "managing nighttime symptoms",
-    "summary": "The user asked why psoriasis patches itch more at night and how to reduce itching on the elbows and knee, including scratching that sometimes leaves skin raw on waking. The assistant suggested a cooler bedroom, ointment, short nails, and a cotton layer; the user said this was what they needed and planned to try the suggestions."
+    "reason_for_conversation": "nighttime itch management",
+    "summary": "The user asked why their psoriasis patches itch more at night and what might help; they said the patches are mostly on their elbows and one knee and that scratching in their sleep sometimes leaves the skin raw. They accepted suggestions including a cooler room, ointment before bed, and a loose cotton layer over the knee, and said the answer was what they needed."
   },
-  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
-  "prompt_version": "summary_v4",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2382,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3020,
-    "output_tokens": 251
+    "input_tokens": 3764,
+    "output_tokens": 649
   },
   "version": "gpt_luna"
 }

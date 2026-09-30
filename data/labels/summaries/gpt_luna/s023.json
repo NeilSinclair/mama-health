@@ -1,27 +1,48 @@
 {
-  "created_at": "2026-09-30T09:21:07+00:00",
+  "created_at": "2026-09-30T12:13:59+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "ulcerative colitis cancer risk",
-      "surveillance colonoscopy",
-      "mesalamine maintenance",
-      "lifestyle risk reduction"
+      {
+        "reason": "The user wanted to understand how ulcerative colitis duration, extent, inflammation, and other factors affect their risk, returning to this question throughout the conversation.",
+        "relevance": "strong",
+        "topic": "colorectal cancer risk"
+      },
+      {
+        "reason": "The user asked when monitoring should start, what determines the interval, and how an IBD surveillance scope differs from prior colonoscopies.",
+        "relevance": "strong",
+        "topic": "surveillance colonoscopy"
+      },
+      {
+        "reason": "The user asked whether mesalamine affects cancer risk and disclosed sometimes wondering whether to continue it when feeling well.",
+        "relevance": "medium",
+        "topic": "mesalamine maintenance"
+      },
+      {
+        "reason": "The user asked whether lifestyle or other personal actions could affect risk and engaged with the answer.",
+        "relevance": "medium",
+        "topic": "lifestyle prevention"
+      },
+      {
+        "reason": "The user said they had been worrying vaguely after reading about cancer risk and later reported feeling better equipped to discuss it.",
+        "relevance": "medium",
+        "topic": "cancer-related worry"
+      }
     ],
     "reason_for_conversation": "understanding cancer risk",
-    "summary": "The user wanted to understand colorectal cancer risk with nine years of left-sided ulcerative colitis and what surveillance involves. The assistant explained risk factors, colonoscopy timing and intervals, mesalamine, and lifestyle measures; the user said they felt better equipped to discuss a plan with their gastroenterologist."
+    "summary": "The user, whose ulcerative colitis has been stable on mesalamine for about nine years, asked about colorectal cancer risk and surveillance, including how their left-sided disease and other factors affect monitoring. The assistant explained surveillance timing and intervals, scope techniques, mesalamine, and lifestyle; the user said they felt better equipped to discuss the plan with their gastroenterologist."
   },
-  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
-  "prompt_version": "summary_v4",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2382,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 4249,
-    "output_tokens": 320
+    "input_tokens": 4993,
+    "output_tokens": 1019
   },
   "version": "gpt_luna"
 }

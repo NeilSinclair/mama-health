@@ -1,28 +1,48 @@
 {
-  "created_at": "2026-09-30T09:21:27+00:00",
+  "created_at": "2026-09-30T12:14:23+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "thyroid medication switch",
-      "thyroid monitoring",
-      "symptom monitoring",
-      "pharmacy communication",
-      "brand consistency"
+      {
+        "reason": "The user came to ask whether a pharmacy switch to a different maker of the same dose was concerning and returned to what it meant for their care.",
+        "relevance": "strong",
+        "topic": "levothyroxine brand switch"
+      },
+      {
+        "reason": "The user asked when to retest, whether a previous TSH result counted, and what signs to watch for before a new test.",
+        "relevance": "strong",
+        "topic": "thyroid monitoring"
+      },
+      {
+        "reason": "The user said they would prefer to stay on one brand and discussed asking the doctor and pharmacy about consistency.",
+        "relevance": "medium",
+        "topic": "brand consistency preference"
+      },
+      {
+        "reason": "The user expressed annoyance that the pharmacy switched the product without explaining the implications.",
+        "relevance": "medium",
+        "topic": "pharmacy communication"
+      },
+      {
+        "reason": "The user asked whether to keep taking levothyroxine as before and received guidance to keep the routine consistent.",
+        "relevance": "low",
+        "topic": "medication routine"
+      }
     ],
     "reason_for_conversation": "medication change guidance",
-    "summary": "The user asked whether a pharmacy's switch to a different maker of levothyroxine required action. The assistant recommended keeping the same routine, watching for symptoms, and arranging a TSH test six to eight weeks after the switch; the user was also frustrated that the pharmacy had not explained the change and preferred staying on one brand. The user said the plan was clear and was exactly the kind of answer they wanted."
+    "summary": "The user was concerned after the pharmacy dispensed a different maker of their usual levothyroxine and asked what to do. The assistant explained that a new TSH test would be timed for six to eight weeks after the switch, advised keeping the same routine and watching for symptoms, and discussed asking about brand consistency. The user said the plan was clear and exactly the kind of answer they wanted."
   },
-  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
-  "prompt_version": "summary_v4",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2382,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3665,
-    "output_tokens": 317
+    "input_tokens": 4409,
+    "output_tokens": 640
   },
   "version": "gpt_luna"
 }

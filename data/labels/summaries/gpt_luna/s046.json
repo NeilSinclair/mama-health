@@ -1,33 +1,61 @@
 {
-  "created_at": "2026-09-30T09:21:36+00:00",
+  "created_at": "2026-09-30T12:14:33+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot left trial screening to user",
-      "bot repeated clinic waitlist advice despite stated access barrier",
-      "bot gave generic clinic-search advice instead of identifying specific clinics"
+      "bot left trial screening to user despite stated cognitive burden",
+      "bot did not name specific clinics"
     ],
-    "end_reason": "user accepted partial answer",
+    "end_reason": "partial resolution",
     "issue_resolved": false,
     "main_topics": [
-      "long COVID research",
-      "POTS treatment",
-      "clinical trial access",
-      "cognitive impairment",
-      "long COVID clinic waitlists",
-      "work limitations"
+      {
+        "reason": "The user repeatedly asked how to identify trials they could qualify for and find a practical route into one.",
+        "relevance": "strong",
+        "topic": "finding accessible trials"
+      },
+      {
+        "reason": "The user asked what new disease-focused research was underway and discussed autoantibody and antiviral approaches.",
+        "relevance": "strong",
+        "topic": "long covid research pipeline"
+      },
+      {
+        "reason": "The user described the waitlist barrier and asked which research-active clinics to pursue.",
+        "relevance": "medium",
+        "topic": "long covid clinic access"
+      },
+      {
+        "reason": "The user said trial screening was especially burdensome while cognitively impaired.",
+        "relevance": "medium",
+        "topic": "cognitive impairment"
+      },
+      {
+        "reason": "The user asked whether the larger Paxlovid trial had come back negative and discussed the assistant's answer.",
+        "relevance": "medium",
+        "topic": "antiviral trial evidence"
+      },
+      {
+        "reason": "The user said their POTS was relatively stable and listed standard treatments they had already tried.",
+        "relevance": "low",
+        "topic": "pots treatment"
+      },
+      {
+        "reason": "The user mentioned they still could not work, but did not return to this impact.",
+        "relevance": "low",
+        "topic": "work limitation"
+      }
     ],
-    "reason_for_conversation": "finding eligible clinical trials",
-    "summary": "The user, who has had long COVID for over two years and has tried standard POTS treatments, wanted information on newer disease-focused research and practical help finding trials they might qualify for. The assistant discussed BC 007, temelimab and antiviral research, then offered trial-search filters and clinic pathways; the user said this still left them doing the searching and noted the clinic waitlists and cognitive effort were barriers. The assistant did not identify specific nearby clinics or confirm current US recruitment for the named treatments, and the user ended with a general picture rather than a concrete route to a trial."
+    "reason_for_conversation": "finding accessible trials",
+    "summary": "The user, living with long COVID and relatively stable POTS, wanted new research and a practical way to access US trials after trying standard POTS treatments. The assistant explained research directions and general search, referral, and clinic routes, but did not identify specific matching trials or clinics; the user ended with a general picture but no concrete match."
   },
-  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
-  "prompt_version": "summary_v4",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2382,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 4441,
-    "output_tokens": 919
+    "input_tokens": 5185,
+    "output_tokens": 1251
   },
   "version": "gpt_luna"
 }

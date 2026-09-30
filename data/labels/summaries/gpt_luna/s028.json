@@ -1,28 +1,48 @@
 {
-  "created_at": "2026-09-30T09:21:11+00:00",
+  "created_at": "2026-09-30T12:14:02+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "exercise-related flares",
-      "exercise pacing",
-      "boom-and-bust cycle",
-      "low-impact exercise options",
-      "frustration with exercise advice"
+      {
+        "reason": "The user came in asking how exercise advice could fit their experience of crashing for days after walks or beginner yoga, and returned to how to find a tolerable starting level.",
+        "relevance": "strong",
+        "topic": "exercise-related flares"
+      },
+      {
+        "reason": "The user described repeatedly overdoing activity on good days and engaged with advice about capping activity and building up slowly.",
+        "relevance": "strong",
+        "topic": "activity pacing"
+      },
+      {
+        "reason": "The user asked whether walking or yoga was preferable and responded positively to the possibility of trying the community-center pool.",
+        "relevance": "medium",
+        "topic": "exercise options"
+      },
+      {
+        "reason": "The user asked how long it might take to notice a difference and acknowledged the expectation of gradual progress.",
+        "relevance": "medium",
+        "topic": "progress expectations"
+      },
+      {
+        "reason": "The user said they felt stuck between common advice and their body's response and described feeling punished after trying to exercise.",
+        "relevance": "low",
+        "topic": "exercise frustration"
+      }
     ],
-    "reason_for_conversation": "exercise pacing advice",
-    "summary": "The user described being flattened for days after 20–30-minute walks or beginner yoga, despite repeated advice to exercise. The assistant discussed starting with very small amounts, pacing on good days, and trying brief warm-water exercise; the user said the advice helped and felt more useful than many appointments."
+    "reason_for_conversation": "exercise pacing guidance",
+    "summary": "The user wanted advice on exercising with fibromyalgia after walks and beginner yoga led to delayed crashes that lasted for days. The assistant discussed starting at a very small, tolerated level, pacing activity on good days, and considering gentle warm-water movement; the user said the advice helped and appreciated its realistic expectations."
   },
-  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
-  "prompt_version": "summary_v4",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2382,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 4888,
-    "output_tokens": 386
+    "input_tokens": 5632,
+    "output_tokens": 794
   },
   "version": "gpt_luna"
 }

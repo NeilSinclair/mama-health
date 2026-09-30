@@ -1,29 +1,53 @@
 {
-  "created_at": "2026-09-30T09:20:50+00:00",
+  "created_at": "2026-09-30T12:13:37+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "gluten-free diet evidence",
-      "persistent fatigue",
-      "brain fog",
-      "celiac screening",
-      "thyroid medication review",
-      "symptom tracking"
+      {
+        "reason": "The user began by asking whether gluten-free diets have real evidence for Hashimoto's and returned to whether a trial would be worthwhile.",
+        "relevance": "strong",
+        "topic": "gluten-free diet evidence"
+      },
+      {
+        "reason": "The user explained that these symptoms continued despite a supposedly normal TSH and later said they were the reason the diet question mattered.",
+        "relevance": "strong",
+        "topic": "persistent fatigue and brain fog"
+      },
+      {
+        "reason": "The user asked whether to discuss the ongoing symptoms with a doctor and considered whether their levothyroxine dose might be off, then included a review in their plan.",
+        "relevance": "medium",
+        "topic": "fatigue evaluation"
+      },
+      {
+        "reason": "The user asked why testing mattered, recognized that testing should happen before stopping gluten, and included screening in their plan.",
+        "relevance": "medium",
+        "topic": "celiac screening"
+      },
+      {
+        "reason": "The user asked how to tell whether avoiding gluten was helping and endorsed a defined, tracked trial.",
+        "relevance": "medium",
+        "topic": "gluten-free trial planning"
+      },
+      {
+        "reason": "The user said the diet felt controllable compared with waiting on doctors, but did not discuss access further.",
+        "relevance": "low",
+        "topic": "care access delays"
+      }
     ],
-    "reason_for_conversation": "treatment decision support",
-    "summary": "The user asked whether going gluten-free could help with Hashimoto's and later explained they still feel tired and foggy on levothyroxine. The assistant discussed celiac testing before changing diet, suggested reviewing medication dose and nutrient levels with a doctor, and outlined a tracked gluten-free trial; the user accepted this sequence as a sensible plan."
+    "reason_for_conversation": "evidence-based diet decision",
+    "summary": "The user asked whether a gluten-free diet has evidence for Hashimoto's, explaining that they still felt tired and foggy on levothyroxine despite a supposedly normal TSH. The assistant discussed celiac screening before stopping gluten, suggested reviewing the ongoing symptoms with a doctor, and outlined a tracked, time-limited gluten-free trial; the user restated and appreciated a plan to pursue those steps in that order."
   },
-  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
-  "prompt_version": "summary_v4",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2382,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 4570,
-    "output_tokens": 390
+    "input_tokens": 5314,
+    "output_tokens": 1368
   },
   "version": "gpt_luna"
 }

@@ -12,7 +12,7 @@
     --border: #e6e3de; --accent: #b4532a; --accent-soft: #fbeee7;
     --ok: #1f7a4d; --ok-soft: #e7f5ed; --bad: #a8321e; --bad-soft: #fbe9e5;
     --chip: #f3f1ed; --user-bubble: #fbeee7; --bot-bubble: #f3f1ed;
-    --reason: #7a4fb3; --topic: #3867b5; --pain: #c2412d; --end: #1f7a4d; --edge: #8a8680;
+    --reason: #a8408f; --topic: #3867b5; --pain: #c2412d; --end: #1f7a4d; --edge: #8a8680; --neutral: #6b7a8c;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -20,7 +20,7 @@
       --border: #2e2e31; --accent: #ec8a5c; --accent-soft: #2e1f18;
       --ok: #56c68a; --ok-soft: #16271e; --bad: #f08a78; --bad-soft: #2e1a16;
       --chip: #26262a; --user-bubble: #2e1f18; --bot-bubble: #26262a;
-      --reason: #c4a1f5; --topic: #7aa2f7; --pain: #f08a78; --end: #56c68a; --edge: #7c7c84;
+      --reason: #c064bc; --topic: #5f8ce0; --pain: #dd6e58; --end: #34a595; --edge: #7c7c84; --neutral: #8b95a3;
     }
   }
   :root[data-theme="dark"] {
@@ -28,7 +28,7 @@
     --border: #2e2e31; --accent: #ec8a5c; --accent-soft: #2e1f18;
     --ok: #56c68a; --ok-soft: #16271e; --bad: #f08a78; --bad-soft: #2e1a16;
     --chip: #26262a; --user-bubble: #2e1f18; --bot-bubble: #26262a;
-    --reason: #c4a1f5; --topic: #7aa2f7; --pain: #f08a78; --end: #56c68a; --edge: #7c7c84;
+    --reason: #c064bc; --topic: #5f8ce0; --pain: #dd6e58; --end: #34a595; --edge: #7c7c84; --neutral: #8b95a3;
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.55 Inter, system-ui, -apple-system, sans-serif; }
@@ -61,6 +61,12 @@
   .chip:hover { border-color: var(--accent); }
   .chip.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
   .logged { font-size: 12px; color: var(--muted); align-self: center; }
+  .scores { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 4px; font-size: 13px; }
+  .scores .rel { display: inline-block; min-width: 58px; font-size: 11px; font-weight: 600; text-align: center; padding: 1px 6px; margin-right: 8px; border-radius: 99px; }
+  .scores .strong { background: var(--accent-soft); color: var(--accent); }
+  .scores .medium { background: var(--chip); color: var(--text); }
+  .scores .low { background: var(--chip); color: var(--muted); }
+  .scores .why { color: var(--muted); }
   details { margin-top: 12px; border-top: 1px solid var(--border); padding-top: 10px; }
   summary { cursor: pointer; color: var(--accent); font-weight: 600; font-size: 14px; }
   .convo { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
@@ -89,6 +95,28 @@
   #graph.focus .node:not(.hl) { opacity: .15; }
   #graph.focus .edge:not(.hl) { stroke-opacity: .05; }
   #graph .edge.hl { stroke-opacity: .8; stroke: var(--accent); }
+  .bcontrols { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; font-size: 14px; }
+  .bcontrols label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+  .bcontrols .bcount { font-weight: 600; }
+  .bcontrols .bsel { display: inline-flex; flex-wrap: wrap; gap: 6px; }
+  .bcontrols .bsel .chip { background: var(--accent-soft); }
+  .bcontrols .bclear { margin-left: auto; font: inherit; font-size: 14px; border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 8px; padding: 5px 12px; cursor: pointer; }
+  .bhint { color: var(--muted); font-size: 13px; margin: 10px 2px; }
+  .bgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 12px; align-items: start; }
+  .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 12px 8px; }
+  .panel h3 { margin: 0 0 6px 4px; font-size: 13px; color: var(--muted); font-weight: 600; display: flex; gap: 6px; align-items: center; }
+  .brow { display: grid; grid-template-columns: minmax(0, 1fr) 84px 26px; gap: 8px; align-items: center; width: 100%; font: inherit; font-size: 13px; text-align: left; color: var(--text); background: none; border: 0; border-radius: 6px; padding: 4px; cursor: pointer; }
+  .brow:hover, .brow:focus-visible { background: var(--chip); }
+  .brow.on { background: var(--accent-soft); font-weight: 600; }
+  .brow .lab { overflow-wrap: anywhere; }
+  .brow .fill { display: block; height: 10px; border-radius: 0 4px 4px 0; min-width: 2px; }
+  .brow .n { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+  .panel .more { font: inherit; font-size: 12px; color: var(--accent); background: none; border: 0; padding: 4px; cursor: pointer; }
+  .bhead { font-size: 15px; margin: 20px 2px 6px; }
+  .blist { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .blist li { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; font-size: 14px; }
+  .blist .sid { font-weight: 700; margin-right: 8px; }
+  .blist .tag { color: var(--muted); font-size: 12px; margin-right: 8px; }
   @media (max-width: 600px) {
     .gwrap { overflow-x: auto; }
     #graph { min-width: 760px; }
@@ -106,6 +134,7 @@
   <nav class="tabs" id="tabs">
     <button type="button" data-tab="list">Conversations</button>
     <button type="button" data-tab="graph">Relationships</button>
+    <button type="button" data-tab="breakdown">Breakdown</button>
   </nav>
   <section id="tab-list">
     <div class="filters" id="filters"></div>
@@ -117,12 +146,19 @@
     <p class="ghint" id="ghint"></p>
     <div class="gwrap"><svg id="graph" role="img" aria-label="Network of labels that occur in the same conversations"></svg></div>
   </section>
+  <section id="tab-breakdown" hidden>
+    <div class="bcontrols" id="bcontrols"></div>
+    <p class="bhint">Counts are conversations. Click a bar to keep only the conversations with that label; every list recounts. Click more bars to narrow further (all must match); click a selected bar again to remove it.</p>
+    <div class="bgrid" id="bgrid"></div>
+    <h2 class="bhead" id="bhead"></h2>
+    <ul class="blist" id="blist"></ul>
+  </section>
 </main>
 <script>
 const DATA = /*__PAYLOAD__*/null;
 
 const FILTERS = [
-  ["main_topics", "Topic"],
+  ["main_topics", "Topic (strong)"],
   ["conversation_pain_points", "Conversation pain point"],
   ["reason_for_conversation", "Reason for conversation"],
   ["end_reason", "End reason (LLM)"],
@@ -135,7 +171,7 @@ const FIELD_NAMES = Object.fromEntries(FILTERS);
 
 const GRAPH_FIELDS = [
   ["reason_for_conversation", "Reasons for conversation", "reason"],
-  ["main_topics", "Topics", "topic"],
+  ["main_topics", "Topics (strong)", "topic"],
   ["conversation_pain_points", "Conversation pain points", "pain"],
   ["end_reason", "End reasons (LLM)", "end"],
 ];
@@ -244,9 +280,15 @@ function renderRow(r) {
     }
     fields.append(el("dt", {}, FIELD_NAMES[key]), dd);
   }
+  // Every scored topic, by canonical label (raw label on hover), with its reason;
+  // only strong ones become chips above.
+  const scores = el("details", {}, el("summary", {}, `Topic scores (${r.topic_scores.length})`),
+    el("ul", { class: "scores" }, ...r.topic_scores.map((t) => el("li", {},
+      el("span", { class: `rel ${t.relevance}` }, t.relevance), el("strong", { title: `raw: ${t.topic}` }, t.label),
+      el("span", { class: "why" }, ` — ${t.reason}`)))));
   const details = el("details", {}, el("summary", {}, "Show full conversation"));
   details.addEventListener("toggle", () => details.open && renderConversation(details, r.session_id));
-  return el("div", { class: "row" }, meta, el("p", { class: "summary" }, r.summary), fields, details);
+  return el("div", { class: "row" }, meta, el("p", { class: "summary" }, r.summary), fields, scores, details);
 }
 
 function renderTabs() {
@@ -255,12 +297,14 @@ function renderTabs() {
   }
   document.getElementById("tab-list").hidden = state.tab !== "list";
   document.getElementById("tab-graph").hidden = state.tab !== "graph";
+  document.getElementById("tab-breakdown").hidden = state.tab !== "breakdown";
 }
 
 function render() {
   renderSwitcher();
   renderTabs();
   if (state.tab === "graph") { renderGraph(); return; }
+  if (state.tab === "breakdown") { renderBreakdown(); return; }
   const v = current();
   const rowsBox = document.getElementById("rows");
   if (!v) {
@@ -504,6 +548,99 @@ function renderGraph() {
     });
   }
   svg.replaceChildren(svgEl("g", {}, ...lines), svgEl("g", {}, ...groups));
+}
+
+// Breakdown tab: linked counts. Each panel counts conversations per label among the
+// conversations that match every selected (field, label) pair.
+const BREAK_FIELDS = [
+  ["reason_for_conversation", "Reason for conversation", "reason"],
+  ["main_topics", "Topic", "topic"],
+  ["conversation_pain_points", "Conversation pain point", "pain"],
+  ["end_reason", "End reason (LLM)", "end"],
+  ["issue_resolved", "Resolved (LLM)", "neutral"],
+  ["disease", "Disease", "neutral"],
+];
+const NONE = "(none)";
+const PANEL_ROWS = 12;
+const breakState = { selected: [], allTopics: false, expanded: new Set() };
+
+// A conversation's labels for one field; "(none)" when a list field is empty.
+function breakValues(row, key) {
+  const vals = key === "main_topics" && breakState.allTopics
+    ? [...new Set(row.topic_scores.map((t) => t.label))]
+    : values(row, key);
+  return vals.length ? vals : [NONE];
+}
+
+// Panel and chip name for a field; the topic name says which topics are counted.
+function breakFieldName(key) {
+  const name = BREAK_FIELDS.find(([k]) => k === key)[1];
+  return key === "main_topics" ? `${name} (${breakState.allTopics ? "all" : "strong"})` : name;
+}
+
+function isSelected(key, label) {
+  return breakState.selected.some(([k, l]) => k === key && l === label);
+}
+
+function toggleBreak(key, label) {
+  breakState.selected = isSelected(key, label)
+    ? breakState.selected.filter(([k, l]) => !(k === key && l === label))
+    : [...breakState.selected, [key, label]];
+  renderBreakdown();
+}
+
+function renderBreakdown() {
+  const v = current();
+  const grid = document.getElementById("bgrid");
+  const controls = document.getElementById("bcontrols");
+  if (!v) { controls.replaceChildren(); grid.replaceChildren(el("p", { class: "empty" }, "No cached labels yet.")); return; }
+  const rows = v.rows.filter((r) => breakState.selected.every(([k, l]) => breakValues(r, k).includes(l)));
+  const n = rows.length;
+
+  const toggle = el("input", { type: "checkbox", onchange: (e) => { breakState.allTopics = e.target.checked; renderBreakdown(); } });
+  toggle.checked = breakState.allTopics;
+  controls.replaceChildren(
+    el("span", { class: "bcount" }, `${n} of ${v.rows.length} conversations`),
+    el("span", { class: "bsel" }, ...breakState.selected.map(([k, l]) => el("button", {
+      type: "button", class: "chip", title: "Remove", onclick: () => toggleBreak(k, l),
+    }, `${breakFieldName(k)}: ${l} ×`))),
+    el("label", {}, toggle, "Include medium and low topics"),
+    el("button", { type: "button", class: "bclear", onclick: () => { breakState.selected = []; renderBreakdown(); } }, "Clear"),
+  );
+
+  grid.replaceChildren(...BREAK_FIELDS.map(([key, , cls]) => {
+    const counts = new Map();
+    for (const r of rows) for (const lab of new Set(breakValues(r, key))) counts.set(lab, (counts.get(lab) || 0) + 1);
+    const items = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    const open = breakState.expanded.has(key);
+    const shown = open ? items : items.slice(0, PANEL_ROWS);
+    const panel = el("div", { class: "panel" },
+      el("h3", {}, el("span", { class: "swatch", style: `background: var(--${cls})` }), breakFieldName(key)),
+      ...shown.map(([lab, c]) => {
+        const on = isSelected(key, lab);
+        return el("button", {
+          type: "button", class: `brow${on ? " on" : ""}`, "aria-pressed": String(on),
+          title: `${lab}: ${c} of ${n} conversations (${Math.round((100 * c) / n)}%)`,
+          onclick: () => toggleBreak(key, lab),
+        },
+          el("span", { class: "lab" }, `${on ? "✓ " : ""}${lab}`),
+          el("span", { class: "track" }, el("span", { class: "fill", style: `width: ${(100 * c) / n}%; background: var(--${cls})` })),
+          el("span", { class: "n" }, String(c)));
+      }));
+    if (items.length > PANEL_ROWS) {
+      panel.append(el("button", { type: "button", class: "more", onclick: () => {
+        if (open) breakState.expanded.delete(key); else breakState.expanded.add(key);
+        renderBreakdown();
+      } }, open ? "Show fewer" : `Show all ${items.length}`));
+    }
+    return panel;
+  }));
+
+  document.getElementById("bhead").textContent = `Matching conversations (${n})`;
+  document.getElementById("blist").replaceChildren(...rows.map((r) => el("li", { title: r.summary },
+    el("span", { class: "sid" }, r.session_id),
+    el("span", { class: "tag" }, `${r.disease} · ${r.end_reason.map((c) => c.label).join(", ")}`),
+    r.summary.split(/(?<=[.!?])\s/)[0])));
 }
 
 for (const b of document.querySelectorAll("#tabs button")) {

@@ -1,30 +1,63 @@
 {
-  "created_at": "2026-09-30T09:21:15+00:00",
+  "created_at": "2026-09-30T12:14:05+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
-    "end_reason": "user accepted plan",
+    "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "PCOS",
-      "insulin resistance",
-      "diagnosis-related distress",
-      "metformin",
-      "weight loss frustration",
-      "diet and exercise changes",
-      "glucose monitor coverage"
+      {
+        "reason": "The user asked how the two conditions relate and which came first, returning to the implications of having both.",
+        "relevance": "strong",
+        "topic": "pcos and insulin resistance"
+      },
+      {
+        "reason": "The user asked why metformin was suggested without diabetes and asked about side effects before choosing to start it as their doctor recommended.",
+        "relevance": "medium",
+        "topic": "metformin treatment"
+      },
+      {
+        "reason": "The user described repeated difficulty losing weight and frustration with weight-loss advice in the context of PCOS.",
+        "relevance": "medium",
+        "topic": "weight loss frustration"
+      },
+      {
+        "reason": "The user asked whether there was a specific PCOS diet and whether lower-glycemic eating meant avoiding all carbohydrates.",
+        "relevance": "medium",
+        "topic": "dietary choices"
+      },
+      {
+        "reason": "The user asked what exercise was best and said they disliked the gym, then chose to walk more after dinner.",
+        "relevance": "medium",
+        "topic": "exercise preferences"
+      },
+      {
+        "reason": "The user asked whether a continuous glucose monitor would be useful for them.",
+        "relevance": "low",
+        "topic": "glucose monitoring"
+      },
+      {
+        "reason": "The user briefly doubted their health insurer would cover a monitor for this purpose.",
+        "relevance": "low",
+        "topic": "healthcare coverage costs"
+      },
+      {
+        "reason": "The user said the new diagnosis felt overwhelming and later described it as scary, but did not return to this as a separate need.",
+        "relevance": "low",
+        "topic": "diagnosis-related overwhelm"
+      }
     ],
-    "reason_for_conversation": "understanding diagnosis and treatment",
-    "summary": "The user felt overwhelmed by a new insulin resistance diagnosis alongside PCOS and asked how the conditions relate, about metformin and its side effects, and about lifestyle options. The assistant discussed weight, diet, exercise, and an optional continuous glucose monitor; the user noted likely coverage concerns through their Krankenkasse. The user said the explanations helped and chose to start metformin as recommended by their doctor and walk more after dinner."
+    "reason_for_conversation": "understanding a new diagnosis",
+    "summary": "The user felt overwhelmed by a new insulin resistance diagnosis alongside PCOS and asked about their connection, metformin, and lifestyle options including diet and exercise. The assistant explained these topics and discussed optional glucose monitoring and possible coverage costs; the user said the conversation helped and chose to start metformin as their doctor suggested and walk more after dinner."
   },
-  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
-  "prompt_version": "summary_v4",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2382,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3883,
-    "output_tokens": 677
+    "input_tokens": 4627,
+    "output_tokens": 974
   },
   "version": "gpt_luna"
 }

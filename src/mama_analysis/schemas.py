@@ -2,16 +2,31 @@
 
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field
+
+
+class ScoredTopic(BaseModel):
+    """One topic the user raised, scored for how central it is to the conversation.
+
+    ``reason`` comes before ``relevance`` so the model justifies the score before giving it.
+    """
+
+    topic: str = Field(description="Something the user talks about; a short generic label.")
+    reason: str = Field(
+        description="One short sentence, grounded in the transcript, for the score."
+    )
+    relevance: Literal["strong", "medium", "low"] = Field(
+        description="How central the topic is to this conversation."
+    )
 
 
 class SummaryLLM(BaseModel):
     """Fields the model extracts from one conversation (structured output)."""
 
-    main_topics: list[str] = Field(
-        description="What the user talks about, incl. their health issues; short generic labels."
+    main_topics: list[ScoredTopic] = Field(
+        description="Every topic the user talks about, incl. their health issues, each scored."
     )
     summary: str = Field(description="Two or three short sentences summarising the conversation.")
     reason_for_conversation: str = Field(
@@ -21,8 +36,8 @@ class SummaryLLM(BaseModel):
         description="Problems the user had with this conversation itself; short labels."
     )
     issue_resolved: bool = Field(description="Whether the user's issue was resolved.")
-    end_reason: str = Field(
-        description="Interpretation of why the conversation ended; a short generic label."
+    end_reason: Literal["need met", "partial resolution", "unresolved need"] = Field(
+        description="How the user's need stood when the conversation ended."
     )
 
 

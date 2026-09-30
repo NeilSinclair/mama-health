@@ -1,6 +1,6 @@
 import json
 
-from fakes import fake_summary
+from fakes import fake_summary, topics
 
 from mama_analysis.explorer import (
     PAYLOAD_MARKER,
@@ -24,8 +24,10 @@ MAPPINGS = {
 
 def _rows(records):
     sums = [
-        merge_deterministic(records[1], fake_summary(main_topics=["trouble sleeping"])),
-        merge_deterministic(records[0], fake_summary(main_topics=["insomnia", "trouble sleeping"])),
+        merge_deterministic(records[1], fake_summary(main_topics=topics("trouble sleeping"))),
+        merge_deterministic(
+            records[0], fake_summary(main_topics=topics("insomnia", "trouble sleeping"))
+        ),
     ]
     return label_rows(sums, MAPPINGS)
 
@@ -45,6 +47,26 @@ def test_label_counts_links_labels_to_sessions(records):
     counts = label_counts(_rows(records))
     topic = counts[counts.field == "main_topics"].iloc[0]
     assert (topic.label, topic.n_sessions, topic.session_ids) == ("insomnia", 2, "s1,s2")
+
+
+def test_only_strong_topics_become_chips_but_all_scores_are_mapped(records):
+    scored = (
+        topics("insomnia")
+        + topics("trouble sleeping", relevance="medium")
+        + topics("diet", relevance="low")
+    )
+    rows = label_rows([merge_deterministic(records[0], fake_summary(main_topics=scored))], MAPPINGS)
+    assert rows[0]["main_topics"] == [{"label": "insomnia", "raw": ["insomnia"]}]
+    assert [(t["label"], t["topic"], t["relevance"]) for t in rows[0]["topic_scores"]] == [
+        ("insomnia", "insomnia", "strong"),
+        ("insomnia", "trouble sleeping", "medium"),
+        ("diet", "diet", "low"),
+    ]
+    t = summaries_table(rows).set_index("session_id")
+    assert t.loc["s1", "main_topics"] == "insomnia"
+    assert t.loc["s1", "topic_scores"].split(" | ")[1] == (
+        "insomnia (trouble sleeping) [medium]: user raised trouble sleeping"
+    )
 
 
 def test_summaries_table_keeps_raw_and_canonical(records):
@@ -171,3 +193,15 @@ def test_template_field_names_match_python():
     graph_block = template[start : template.index("];", start)]
     for field in GRAPH_FIELDS:
         assert f'["{field}", ' in graph_block, f"graph doesn't show {field}"
+
+
+def test_breakdown_fields_exist_in_rows(records):
+    import re
+    from importlib.resources import files
+
+    template = (files("mama_analysis") / "templates" / "explorer.html").read_text()
+    start = template.index("const BREAK_FIELDS = [")
+    keys = re.findall(r'\["(\w+)", "', template[start : template.index("];", start)])
+    row = _rows(records)[0]
+    assert keys and all(k in row for k in keys), keys
+    assert 'data-tab="breakdown"' in template

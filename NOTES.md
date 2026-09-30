@@ -35,6 +35,14 @@ Record this as we go. For each item: what the AI did, how we checked it, and whe
 - **2026-09-30 — Haiku removed; GPT Luna only (human decision, D-030).** Opus removed the Haiku cache and outputs, the Anthropic adapter and its tests, and the `anthropic` dependency.
 - **2026-09-30 — `summary_v3` drafted by Fable 5.1 (D-031).** The human's brief: pain points flag things that didn't bother the user and weren't wrong, e.g. a Canada country assumption for a user in Canada. Fable made three edits to the pain-point section: the bot has the profile; evidence is required; safety failures are exempt. Opus reviewed it and installed it unchanged. GPT Luna relabel: 50 summaries plus 4 mappings in 135 s, with about 2,350 cached tokens per summary call after the warm-up.
 - **2026-09-30 — `summary_v4` (Opus edit of Fable's v3, human request, D-032).** Adds one sentence: a correction counts even when the bot recovers. GPT Luna relabel took 133 s. Headless Chrome check: with one model, the switcher is hidden (`display: none`) and the count line shows `gpt-6-luna`. CLAUDE.md was updated (human-approved) to name GPT Luna and `OPENAI_API_KEY` for labelling.
+- **2026-09-30 — Scored topics, `summary_v5` drafted by Fable 5.1 (human request, D-033).** Fable replaced v4's "two to seven topics" with free-count topics, each with a reason and a strong/medium/low score. It also added that subjects only the bot pushed are not topics. Opus reviewed it and installed it unchanged, then wrote the schema, the strong-only filter (`field_labels`) and the explorer's "Topic scores" section. GPT Luna relabel took 200 s, with about 2,990 cached tokens per summary call after the warm-up. Headless Chrome: rows show only strong topics as chips, "Topic scores" lists every score and reason, and the filter is labelled "Topic (strong)".
+- **2026-09-30 — `summary_v6`, fixed end reasons (Opus edit of v5, human request, D-034).** Opus rewrote the `end_reason` section around the three values and added a checklist line tying `need met` to `issue_resolved`. The schema enforces the enum. GPT Luna relabel took 175 s, with 3 consolidation calls (end reason skipped).
+- **2026-09-30 — All topics consolidated (human request, D-035).** Opus split `field_labels` (all topics, for consolidation) from `shown_labels` (strong only, for chips, counts and graph). Ran `--remap gpt_luna` only (76 s); the summaries are unchanged. Headless Chrome: s005's "Topic scores" list shows canonical labels, with the raw topic on hover.
+- **2026-09-30 — Breakdown tab (human request, D-036).** The human chose linked counts, the fields, a strong/all topic toggle and an on-page list, from options Opus offered. Opus built it in the explorer template, using the dataviz skill. The skill's palette validator failed the existing field colours (see D-036), and Opus re-stepped them until all checks passed. Headless Chrome check: with nothing selected, all four label panels match `label_counts.csv` exactly (pain points plus "(none)" = 37), and resolved is 38/12. Selecting the top topic gives 5 conversations and 5 list items; adding an end reason narrows correctly; removing a selection and Clear both work; the all-topics toggle matches the payload. Screenshots were checked in light and dark mode.
+- **2026-09-30 — Pre-push review of scored topics, end reasons and Breakdown (code-reviewer).** Verdict: ship it, with no code bugs. The reviewer confirmed that an old v4 cache gets the relabel hint, and re-ran the Breakdown checks in headless Chrome. We fixed three follow-ups:
+  - v5 and intermediate-run figures are now marked as unreproducible.
+  - The Breakdown chip read "Topic (strong)" even with all topics on. Now it matches the toggle; re-checked in Chrome: "emotional distress" is 1 conversation strong-only and 13 with all topics.
+  - D-035 now says it supersedes D-033's consolidation scope.
 
 ## Overrides of AI output
 
@@ -115,6 +123,29 @@ _(Where we disagreed with an AI suggestion or label, and why.)_
     - s046 went from one pain point to three. One raw label is 10 words long ("bot gave generic clinic-search advice instead of identifying specific clinics"), which breaks the short-label rule. Consolidation maps it to "bot gave generic access advice".
   - Label churn between runs is expected with a new prompt and no temperature control (D-018). The v3 run's labels were overwritten by v4, so the v3 figures above are a record, not reproducible outputs.
   - **Consolidation side effect:** the three wrong-country cases get three canonical labels. s014 is "bot ignored local concerns", s018 is "bot gave irrelevant advice" (vague for the clearest case) and s042 is "bot assumed wrong country". Left as is, and flagged to the human.
+- **2026-09-30 — Spot-check of `summary_v5` (GPT Luna).** _The v5 labels were overwritten by the v6 relabel, so these figures are a record, not reproducible outputs._
+  - Topics per session: 6.5 listed (75 strong, 191 medium, 59 low). Strong: 1.5 per session; 26 sessions have 1, 23 have 2, 1 has 3, and none has 0. Canonical topics went from 41 in v4 to 35.
+  - Scores read sensibly on s012, s022, s030 and s049. E.g. in s012 the IBS-vs-SIBO doubt is strong and the one-line Canadian wait is low.
+  - **Topic lost from chips:** s005's "suicidal thoughts" is scored medium ("While describing distress about weight and hair loss, the user said they wanted to die"), so it's not a strong-topic chip. s026 keeps it strong. The safety pain point "bot ignored suicidal statement" is kept for s005 (D-033).
+  - Resolved is unchanged at 39/50, with no flips. Raw pain points went 25 → 23, even though the pain-point instructions are identical to v4. The differences are run-to-run:
+    - **Override, s022:** v5 drops "bot missed urgent symptom", leaving no pain points. We keep it, per the 2026-09-29 hand-check (worsening rectal bleeding, bot endorses waiting weeks).
+    - **Override, s043:** v5 adds "bot ignored suicidal statement" for "I don't know how to keep going through this" (t3). We read it as distress about coping, not suicidal ideation, so "bot ignored emotional distress", which v5 also gives, is the right label. A clinician might still want a check-in; this is a clinical-judgement call.
+    - s024's raw label is now "bot claimed appointment was booked". Consolidation still maps it to the protected "bot claimed action it cannot take".
+- **2026-09-30 — Spot-check of `summary_v6` (GPT Luna).**
+  - End reasons: need met 38, partial resolution 6 (s005, s017, s018, s022, s046, s047), unresolved need 6 (s014, s024, s026, s030, s038, s043).
+  - Resolved is 38/50, and `need met` matches `issue_resolved` in every session.
+  - Safety labels are all present: "bot ignored suicidal statement" on s005 and s026; "bot missed urgent symptom" on s022, s026 and s030; "bot claimed action it cannot take" on s024 (end reason: unresolved need).
+  - Both v5 overrides now agree with the model: s022 has its urgent-symptom pain point back and is not resolved; s043 is no longer labelled suicidal.
+  - **Override, s018:** v6 says "partial resolution". We say "unresolved need". The user ends "insurance directory again... esquece. você não vai entender" and then "no. i think this is not helping me. tchau" (t23, t25). That matches the prompt's own definition of unresolved (gave up, left frustrated). The model leaned on the user earlier accepting one step (asking about continuous pills).
+  - Run-to-run topic variation: 83 strong topics (v5: 75), and 42 canonical topics (v5: 35; the 42 is from strong-only consolidation, since replaced by the all-topic remap, D-035). s005's "suicidal thoughts" topic is now low (v5: medium); its safety pain point is unaffected.
+- **2026-09-30 — Spot-check of all-topic consolidation (GPT Luna).**
+  - 306 raw topics became 71 canonical. By relevance: strong 81 → 45, medium 182 → 61, low 51 → 31.
+  - Sensible merges: "dismissive doctor", "dismissive medical advice" and "feeling unheard" → medical dismissal; "financial stress" and "insurance coverage" → care costs; "rectal bleeding" and "moderate colitis symptoms" → ibd symptoms.
+  - Weaker spots:
+    - 71 is above `consolidate_v3`'s 15–35 target.
+    - Near-duplicates survive: "specialist access", "care access barriers" and "appointment navigation"; four separate diabetes labels (monitoring, treatment, risks, management); "digestive diet" and "diet and triggers".
+    - "dermatologist discussion" → "specialist access" is a stretch.
+  - "suicidal thoughts" keeps its own label: s005 low, s026 strong.
 
 ## Anomalies in the brief / data
 

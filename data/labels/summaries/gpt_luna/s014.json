@@ -1,32 +1,62 @@
 {
-  "created_at": "2026-09-30T09:21:04+00:00",
+  "created_at": "2026-09-30T12:13:49+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot kept pushing foreign brands after local concerns",
-      "bot ignored kampo question"
+      "bot repeated overseas shopping advice after correction",
+      "bot brushed off import concerns",
+      "bot ignored question about kampo"
     ],
-    "end_reason": "user chose pharmacist advice",
+    "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
-      "fibromyalgia pain",
-      "supplement use",
-      "supplement sourcing",
-      "local pharmacy options",
-      "kampo medicine",
-      "import restrictions"
+      {
+        "reason": "The user came seeking supplement options for fibromyalgia pain and returned repeatedly to what to try and where to get it.",
+        "relevance": "strong",
+        "topic": "fibromyalgia supplements"
+      },
+      {
+        "reason": "The user asked about Japanese pharmacy brands and raised concerns about importing supplements into Japan over several turns.",
+        "relevance": "medium",
+        "topic": "local supplement access"
+      },
+      {
+        "reason": "The user asked whether the assistant knew about kampo and noted that it is used locally, but did not return to the topic after the answer.",
+        "relevance": "medium",
+        "topic": "kampo medicine"
+      },
+      {
+        "reason": "The user asked how much magnesium to take and specifically wondered whether their small body size mattered.",
+        "relevance": "medium",
+        "topic": "magnesium dosing"
+      },
+      {
+        "reason": "The user asked which brands were good quality and later asked whether a Japanese pharmacy brand would be acceptable.",
+        "relevance": "medium",
+        "topic": "supplement quality"
+      },
+      {
+        "reason": "The user asked once how much CoQ10 to take and whether to buy it through iHerb.",
+        "relevance": "low",
+        "topic": "coq10 dosing"
+      },
+      {
+        "reason": "The user mentioned fibromyalgia pain as the reason for considering supplements, but focused on supplement choices afterward.",
+        "relevance": "low",
+        "topic": "fibromyalgia pain"
+      }
     ],
-    "reason_for_conversation": "supplement guidance",
-    "summary": "The user asked what supplements might help fibromyalgia pain, which brands to buy, and how much magnesium and CoQ10 to take. After learning the user lives in Japan, the assistant continued to promote US brands and iHerb despite questions about local pharmacy products and import concerns, and did not answer the question about kampo. The user said they might ask a local pharmacist and then ended the conversation."
+    "reason_for_conversation": "fibromyalgia supplement guidance",
+    "summary": "The user sought supplement guidance for fibromyalgia, including brand and dose questions, and asked about Japanese pharmacy options, import restrictions, and kampo. After the user clarified they lived in Japan, the assistant repeatedly promoted US brands and iHerb, brushed past the import concern, and did not answer the kampo question; the user ended by saying they might ask a local pharmacist."
   },
-  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
-  "prompt_version": "summary_v4",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2382,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3429,
-    "output_tokens": 986
+    "input_tokens": 4173,
+    "output_tokens": 1393
   },
   "version": "gpt_luna"
 }

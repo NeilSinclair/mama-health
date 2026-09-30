@@ -15,6 +15,14 @@ CONSOLIDATE_PROMPT = "consolidate_v3"
 
 FIELDS = ("main_topics", "conversation_pain_points", "reason_for_conversation", "end_reason")
 
+# Fields whose free-text labels the LLM consolidates. ``end_reason`` is a fixed vocabulary
+# (see ``schemas.SummaryLLM``), so its labels are already canonical.
+CONSOLIDATED_FIELDS = ("main_topics", "conversation_pain_points", "reason_for_conversation")
+
+# Every topic is consolidated, but only topics at this relevance become chips, counts and
+# graph nodes.
+KEPT_RELEVANCE = "strong"
+
 # Attempts per field when the model's mapping fails validation.
 MAX_ATTEMPTS = 3
 
@@ -44,6 +52,37 @@ def as_list(value: str | list[str]) -> list[str]:
     return [value] if isinstance(value, str) else list(value)
 
 
+def field_labels(summary: SummaryLLM, field: str) -> list[str]:
+    """All raw labels of one field; these are what consolidation must map.
+
+    Args:
+        summary: A model summary.
+        field: One of ``FIELDS``.
+
+    Returns:
+        The field's labels; for ``main_topics``, every scored topic, whatever its relevance.
+    """
+    value = getattr(summary, field)
+    if field == "main_topics":
+        return [t.topic for t in value]
+    return as_list(value)
+
+
+def shown_labels(summary: SummaryLLM, field: str) -> list[str]:
+    """The raw labels of one field that become chips, counts and graph nodes.
+
+    Args:
+        summary: A model summary.
+        field: One of ``FIELDS``.
+
+    Returns:
+        As ``field_labels``, but for ``main_topics`` only topics scored ``KEPT_RELEVANCE``.
+    """
+    if field == "main_topics":
+        return [t.topic for t in summary.main_topics if t.relevance == KEPT_RELEVANCE]
+    return field_labels(summary, field)
+
+
 def raw_labels(summaries: Iterable[SummaryLLM], field: str) -> list[str]:
     """Collect the unique raw labels for a field across summaries.
 
@@ -52,9 +91,9 @@ def raw_labels(summaries: Iterable[SummaryLLM], field: str) -> list[str]:
         field: One of ``FIELDS``.
 
     Returns:
-        Sorted unique labels, verbatim.
+        Sorted unique labels, verbatim (see ``field_labels``).
     """
-    return sorted({label for s in summaries for label in as_list(getattr(s, field))})
+    return sorted({label for s in summaries for label in field_labels(s, field)})
 
 
 def render_labels(field: str, labels: list[str]) -> str:
@@ -127,7 +166,7 @@ async def consolidate_all(
     out_dir: Path,
     concurrency: int = CONCURRENCY,
 ) -> dict[str, CacheEntry]:
-    """Ask the model for a raw-to-canonical mapping for each field and cache it.
+    """Ask the model for a raw-to-canonical mapping for each consolidated field and cache it.
 
     Args:
         summaries: Model summaries whose labels to consolidate.
@@ -137,7 +176,8 @@ async def consolidate_all(
         concurrency: Maximum calls in flight after the warm-up.
 
     Returns:
-        Cache entries keyed by field; each ``output`` is ``{"mapping": {raw: canonical}}``.
+        Cache entries keyed by field in ``CONSOLIDATED_FIELDS``; each ``output`` is
+        ``{"mapping": {raw: canonical}}``.
 
     Raises:
         ValueError: If a field's mapping still fails validation after ``MAX_ATTEMPTS``.
@@ -164,4 +204,4 @@ async def consolidate_all(
         write_entry(entry, out_dir / f"{field}.json")
         return field, entry
 
-    return dict(await warm_then_parallel(list(FIELDS), one, concurrency))
+    return dict(await warm_then_parallel(list(CONSOLIDATED_FIELDS), one, concurrency))

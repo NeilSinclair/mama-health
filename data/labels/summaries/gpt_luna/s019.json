@@ -1,29 +1,53 @@
 {
-  "created_at": "2026-09-30T09:21:03+00:00",
+  "created_at": "2026-09-30T12:13:54+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "new visual symptoms",
-      "stroke concern",
-      "migraine care",
-      "sumatriptan timing",
-      "hormonal contraception",
-      "fear after new symptoms"
+      {
+        "reason": "The user came in frightened by a new shimmering zigzag visual episode before a migraine and described its timing and pattern.",
+        "relevance": "strong",
+        "topic": "new visual symptoms"
+      },
+      {
+        "reason": "The user repeatedly asked whether the visual symptoms could signal a stroke and whether emergency care was needed that night.",
+        "relevance": "strong",
+        "topic": "stroke concern"
+      },
+      {
+        "reason": "The user said the episode scared them, later described shaking hands, and reported feeling calmer after the discussion.",
+        "relevance": "medium",
+        "topic": "emotional distress"
+      },
+      {
+        "reason": "The user asked whether aura might keep happening or become a permanent change.",
+        "relevance": "medium",
+        "topic": "aura recurrence"
+      },
+      {
+        "reason": "The user asked whether aura could be a cue to take their usual sumatriptan earlier.",
+        "relevance": "medium",
+        "topic": "sumatriptan timing"
+      },
+      {
+        "reason": "The user asked about aura and birth control and said they might consider hormonal contraception in the future.",
+        "relevance": "medium",
+        "topic": "contraception considerations"
+      }
     ],
-    "reason_for_conversation": "urgent symptom reassurance",
-    "summary": "The user described a new shimmering visual disturbance before a typical migraine and worried it could signal a stroke or require emergency care. The assistant said it sounded more like migraine aura, advised a non-urgent doctor visit, outlined emergency warning signs, and discussed sumatriptan timing and future estrogen-containing contraception; the user felt calmer and planned to book with their family doctor that week."
+    "reason_for_conversation": "symptom urgency assessment",
+    "summary": "The user described a new, gradually spreading visual disturbance before a familiar migraine and was worried it could be a stroke or require an ER visit. The assistant discussed the episode as fitting migraine aura, gave emergency warning signs, and suggested a non-urgent doctor visit; it also addressed checking whether symptoms affect one or both eyes, aura recurrence, sumatriptan timing, and future contraception. The user felt calmer, planned to book with their family doctor that week, and intended to rest."
   },
-  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
-  "prompt_version": "summary_v4",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2382,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 4521,
-    "output_tokens": 570
+    "input_tokens": 5265,
+    "output_tokens": 949
   },
   "version": "gpt_luna"
 }

@@ -15,6 +15,7 @@ from mama_analysis.cache import read_entries, stale_keys
 from mama_analysis.config import DEFAULT_LABELS_DIR, MODELS
 from mama_analysis.consolidate import (
     CONSOLIDATE_PROMPT,
+    CONSOLIDATED_FIELDS,
     FIELDS,
     consolidate_all,
     mapping_dir,
@@ -111,7 +112,7 @@ def load_version(
     mappings = read_entries(mapping_dir(labels_dir, version))
     model_ids = ", ".join(sorted({e.model_id for e in summaries.values()})) or spec.model_id
     ids = {r["session_id"] for r in records}
-    if not ids <= summaries.keys() or not set(FIELDS) <= mappings.keys():
+    if not ids <= summaries.keys() or not set(CONSOLIDATED_FIELDS) <= mappings.keys():
         return None, model_ids
     stale = stale_keys(summaries, spec, load_prompt(SUMMARY_PROMPT))
     stale += stale_keys(mappings, spec, load_prompt(CONSOLIDATE_PROMPT))
@@ -127,7 +128,11 @@ def load_version(
             f"{version}: cached summaries don't match the current schema; "
             f"run: uv run mama-pipeline --relabel {version}"
         ) from err
-    field_maps = {f: mappings[f].output["mapping"] for f in FIELDS}
+    field_maps = {f: mappings[f].output["mapping"] for f in CONSOLIDATED_FIELDS}
+    # Fixed-vocabulary fields map to themselves.
+    field_maps |= {
+        f: {x: x for x in raw_labels(merged, f)} for f in FIELDS if f not in CONSOLIDATED_FIELDS
+    }
     for field, mapping in field_maps.items():
         unmapped = set(raw_labels(merged, field)) - mapping.keys()
         if unmapped:

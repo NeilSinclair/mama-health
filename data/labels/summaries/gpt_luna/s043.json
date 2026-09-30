@@ -1,32 +1,56 @@
 {
-  "created_at": "2026-09-30T09:21:24+00:00",
+  "created_at": "2026-09-30T12:14:28+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
       "bot ignored emotional distress",
       "bot repeated advice after pushback"
     ],
-    "end_reason": "user left unheard",
+    "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
-      "endometriosis",
-      "repeat surgery",
-      "fertility grief",
-      "marital strain",
-      "work impact",
-      "emotional distress"
+      {
+        "reason": "The user repeatedly described feeling devastated and grieving the life, identity, and future they had lost, and explicitly asked to be heard.",
+        "relevance": "strong",
+        "topic": "emotional grief"
+      },
+      {
+        "reason": "The user returned several times to their marriage barely holding on and feeling that they and their husband were no longer a couple.",
+        "relevance": "medium",
+        "topic": "marital strain"
+      },
+      {
+        "reason": "The user repeatedly described grieving the children they had hoped to have and giving up on that dream.",
+        "relevance": "medium",
+        "topic": "fertility loss"
+      },
+      {
+        "reason": "The user framed a fourth endometriosis surgery, after three previous surgeries and twelve years with the disease, as part of a long-running burden.",
+        "relevance": "medium",
+        "topic": "repeat surgery"
+      },
+      {
+        "reason": "The user said their job was gone and later asked whether the bot registered that they could not work.",
+        "relevance": "low",
+        "topic": "work disruption"
+      },
+      {
+        "reason": "The user said they had no one else who understood, but did not explore this separately.",
+        "relevance": "low",
+        "topic": "social isolation"
+      }
     ],
     "reason_for_conversation": "emotional support",
-    "summary": "After being told a fourth endometriosis surgery was needed, the user described grieving the loss of hoped-for children, strain in their marriage, and the impact of illness on work and life plans. Despite repeated requests to be heard and clear objections to surgery advice, the assistant continued offering preparation and recovery tips; the user ended the conversation feeling unheard."
+    "summary": "After being told they need a fourth endometriosis surgery, the user described grief over their marriage, lost hopes of having children, work, and their former life, and asked to be heard. The assistant repeatedly gave surgery-preparation advice despite the user's corrections and direct requests for acknowledgment; the user left feeling unheard and frustrated."
   },
-  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
-  "prompt_version": "summary_v4",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2382,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3654,
-    "output_tokens": 410
+    "input_tokens": 4398,
+    "output_tokens": 1231
   },
   "version": "gpt_luna"
 }

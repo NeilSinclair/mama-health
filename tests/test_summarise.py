@@ -53,4 +53,4 @@ def test_merge_deterministic_ignores_llm_for_metadata(records):
         "female",
     )
     assert s.session_ended_by == "user_closed"
-    assert s.main_topics == ["gut pain"]
+    assert [t.topic for t in s.main_topics] == ["gut pain"]

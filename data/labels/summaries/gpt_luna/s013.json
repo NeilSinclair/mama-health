@@ -1,28 +1,58 @@
 {
-  "created_at": "2026-09-30T09:20:56+00:00",
+  "created_at": "2026-09-30T12:13:44+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
-    "end_reason": "user accepted plan",
+    "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "stress-triggered IBS flares",
-      "diarrhea and cramping",
-      "work disruption",
-      "IBS treatment options",
-      "doctor fiber advice"
+      {
+        "reason": "The user opened by asking how to address flares that repeatedly coincide with stressful work weeks and returned to that pattern throughout.",
+        "relevance": "strong",
+        "topic": "stress-related ibs flares"
+      },
+      {
+        "reason": "The user asked for a practical plan, including what to do during an acute episode before back-to-back meetings, and engaged with both immediate and longer-term options.",
+        "relevance": "strong",
+        "topic": "flare management"
+      },
+      {
+        "reason": "The user described diarrhea, cramping, and repeated urgent trips as disruptive during meetings, which shaped the discussion of acute strategies.",
+        "relevance": "medium",
+        "topic": "diarrhea and urgency"
+      },
+      {
+        "reason": "The user asked where to find hypnotherapy after learning it had research support and considered it as a longer-term option.",
+        "relevance": "medium",
+        "topic": "gut-directed therapies"
+      },
+      {
+        "reason": "The user asked whether loperamide could be taken before symptoms and discussed medication options for high-risk mornings.",
+        "relevance": "medium",
+        "topic": "acute medication use"
+      },
+      {
+        "reason": "The user disclosed drinking about four coffees on stressful days and acknowledged this might worsen the cycle.",
+        "relevance": "medium",
+        "topic": "caffeine use"
+      },
+      {
+        "reason": "The user briefly contrasted the conversation with a doctor's advice to eat more fiber but did not return to that experience.",
+        "relevance": "low",
+        "topic": "doctor's fiber advice"
+      }
     ],
-    "reason_for_conversation": "stress-triggered symptom management",
-    "summary": "The user described stress-related IBS flares with diarrhea, urgency, and cramping that disrupt meetings, and said their doctor had mainly advised more fiber. The assistant discussed longer-term gut-directed hypnotherapy or CBT, options for acute symptoms, reducing caffeine on stressful days, and how to involve the doctor; the user said the advice was helpful and accepted the plan."
+    "reason_for_conversation": "stress flare management",
+    "summary": "The user asked for practical ways to manage IBS flares linked to stressful work weeks, describing diarrhea, cramping, and urgency that disrupt meetings. The assistant discussed gut-directed therapies, acute options including loperamide, and reducing caffeine; the user said the advice was helpful, accepted a plan to try, and asked how to involve their doctor."
   },
-  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
-  "prompt_version": "summary_v4",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2382,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 4473,
-    "output_tokens": 416
+    "input_tokens": 5217,
+    "output_tokens": 963
   },
   "version": "gpt_luna"
 }
