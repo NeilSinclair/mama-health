@@ -118,12 +118,13 @@ def test_label_graph_counts_sessions_per_node_and_cross_field_edge():
     nodes = {n["id"]: n for n in g["nodes"]}
     assert nodes["main_topics:sleep"]["n_sessions"] == 3
     assert nodes["end_reason:gave up"]["session_ids"] == ["s1", "s3"]
-    assert not any(n["field"] == "reason_for_conversation" for n in g["nodes"])
+    assert nodes["reason_for_conversation:r"]["n_sessions"] == 3
     edges = {(e["source"], e["target"]): e for e in g["edges"]}
     assert (
         edges[("conversation_pain_points:repeated advice", "end_reason:gave up")]["n_sessions"] == 2
     )
     assert edges[("end_reason:gave up", "main_topics:sleep")]["session_ids"] == ["s1", "s3"]
+    assert edges[("main_topics:sleep", "reason_for_conversation:r")]["n_sessions"] == 3
     # Labels from the same field are never joined.
     assert ("main_topics:diet", "main_topics:sleep") not in edges
     assert [e["source"] < e["target"] for e in g["edges"]] == [True] * len(g["edges"])
@@ -131,7 +132,7 @@ def test_label_graph_counts_sessions_per_node_and_cross_field_edge():
 
 def test_cooccurrence_table_sorted_by_count():
     t = cooccurrence_table(label_graph(_graph_rows()))
-    assert t.iloc[0]["n_sessions"] == 2
+    assert t.iloc[0]["n_sessions"] == 3
     assert list(t.columns) == [
         "field_a",
         "label_a",
@@ -154,7 +155,7 @@ def test_payload_includes_graph_only_for_available_versions(records):
     )
     graphs = {v["key"]: v["graph"] for v in payload["versions"]}
     assert graphs["b"] is None
-    assert len(graphs["a"]["nodes"]) == 5
+    assert len(graphs["a"]["nodes"]) == 6
 
 
 def test_template_field_names_match_python():
@@ -166,3 +167,7 @@ def test_template_field_names_match_python():
     template = (files("mama_analysis") / "templates" / "explorer.html").read_text()
     for field in (*FIELDS, *GRAPH_FIELDS):
         assert f'"{field}"' in template, f"template doesn't reference {field}"
+    start = template.index("const GRAPH_FIELDS = [")
+    graph_block = template[start : template.index("];", start)]
+    for field in GRAPH_FIELDS:
+        assert f'["{field}", ' in graph_block, f"graph doesn't show {field}"

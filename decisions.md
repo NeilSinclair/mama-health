@@ -147,3 +147,25 @@ Append-only. Each entry records the decision, its rationale, the alternatives co
 - **Date:** 2026-09-29
 - **Decision:** D-025 said consolidation folded the urgent-symptom topics away. The cache shows the raw `main_topics` for s022, s026 and s030 never mention urgency, so the summary stage lost it. A post-consolidation check (D-025's proposed fix) therefore wouldn't catch these. s034 is a further case: its raw "urgent symptom warning signs" became "urgent symptom concerns", not the protected "urgent symptom". D-025's conclusion stands: urgent-symptom claims use the pain-point label "bot missed urgent symptom", never a topic. A reliable fix would be a dedicated safety field in the summary schema.
 - **Found by:** the code-reviewer agent's pre-push re-review.
+
+### D-027 — Reason for conversation added to the Relationships graph (extends D-023)
+- **Date:** 2026-09-30
+- **Decision:** The graph now has four fields: `reason_for_conversation`, `main_topics`, `conversation_pain_points` and `end_reason`, in that column order. `label_graph`, and so `label_cooccurrence.csv`, now include reason links too.
+- **Rationale:** The human asked for it. Reason goes first because it is why the user came, and it reads left to right into what they talked about, what went wrong and how it ended. With neighbour-only links, reasons link to topics. Unticking Topics links reasons to pain points directly.
+- **Alternatives considered:** Putting reason next to end reason, to show reason → outcome directly. You can still get that view by unticking Topics and Pain points.
+- **What would change it:** If the reason → end-reason view proves more useful than reason → topics, reorder the columns.
+
+### D-028 — Clicking a graph label follows its conversations, not graph paths
+- **Date:** 2026-09-30
+- **Decision:** Clicking a label highlights every shown label and link used by at least one conversation that has the clicked label. Hover still highlights direct neighbours only. Clicking a link highlights just that link and its two ends.
+- **Rationale:** The human wanted a reason to "link all the way" to end reasons. Following links outward column by column would highlight nearly everything, because shared topics link to many conversations. Following session IDs shows only what those conversations did. It also reaches end reasons when there is no pain point in between (32 of 50 GPT Luna sessions).
+- **Caveat:** A highlighted link keeps its full width, which counts every session sharing both labels, not only the traced ones. The link tooltip lists its session IDs.
+- **What would change it:** If users read highlighted link widths as traced counts, recompute widths for the traced subset.
+
+### D-029 — Supersedes D-028: clicking a graph label pins its neighbour highlight again
+- **Date:** 2026-09-30
+- **Decision:** Clicking a label pins the same direct-neighbour highlight that hovering shows. The conversation-tracing highlight from D-028 is removed.
+- **Rationale:** The human found the traced view very confusing to look at. Too much of the graph lights up to read.
+- **Alternatives considered:** Keeping tracing but thinning the unrelated links. It would still highlight too much.
+- **What would change it:** A clearer way to show one reason's path to its end reasons, e.g. a filtered view that hides the other labels instead of highlighting within the full graph.
+
