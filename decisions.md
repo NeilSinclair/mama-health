@@ -244,3 +244,20 @@ Append-only. Each entry records the decision, its rationale, the alternatives co
 - **Alternatives considered:** A pivot table (only two fields at a time) and a single-label drill-down card (one label at a time). The human chose linked counts.
 - **What would change it:** If the memo cites a cross-count from this tab, add it as a tested pipeline table first (CLAUDE.md traceability rule).
 
+### D-038 — Reason for conversation is one of four need types (summary_v7)
+- **Date:** 2026-09-30
+- **Numbering:** D-037 is used on the unmerged `feat/conversation-dynamics` branch, so this entry is D-038.
+- **Decision:**
+  - `reason_for_conversation` must be one of four values, enforced by the schema and defined in `summary_v7`:
+    - `informational`: understand a diagnosis, symptoms, results, a medication, prognosis or day-to-day management.
+    - `decisional`: choose whether or which treatment, a procedure, or whether to act now or wait.
+    - `emotional`: be supported or heard.
+    - `access`: get care (appointments, referrals, waits, costs, insurance, the health system).
+  - When a conversation touches several needs, pick the one the user keeps returning to. Information sought for a choice counts as decisional; information sought to reach care counts as access.
+  - The reason is no longer sent for LLM consolidation, and its cached mapping was deleted.
+  - **Display names** (human's choice): the model returns the short value, and the pipeline maps it deterministically (`consolidate.DISPLAY_NAMES`): informational → "understand my condition", decisional → "decide on treatment", emotional → "emotional support", access → "get access to care". Outputs and the explorer show the name, with the short value kept as the raw label. Renaming needs no relabel, so no label churn. The names are shorthand; the definitions above decide the label. So "decide on treatment" also covers whether to act now or wait (e.g. s019, go to the ER tonight?) and which supplements to take (s014).
+- **Rationale:** The human wanted fewer, analysable reasons. v6 had 14 canonical reasons, many overlapping ("managing symptoms", "lifestyle management", "understanding symptoms and results"). Four need types make outcomes comparable by need.
+- **Alternatives considered:** Mapping the 14 existing canonical reasons to four groups with a fixed dictionary. That would mean no relabel and no label churn, but several v6 reasons span two groups ("deciding on treatment" went 10 decisional / 3 informational under v7), so a per-conversation judgement fits better.
+- **Caveat:** Relabelling changed other labels too (see NOTES). The committed outputs are the model's labels, so s022 now counts as "need met" with no "bot missed urgent symptom" pain point, against our hand check (NOTES, overrides). Until an override reaches `outputs/`, any memo figure touching s022 must say it comes from the hand check. Emotional (3) and access (5) are small groups, so report counts, not rates.
+- **What would change it:** Many conversations fitting two types equally, or a need type that fits none. "Managing symptoms day to day" is folded into informational and could be its own type.
+

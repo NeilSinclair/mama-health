@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T12:13:36+00:00",
+  "created_at": "2026-09-30T14:31:06+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,57 +7,62 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user began by asking what POTS means and returned to questions about its cause, outlook, and management.",
+        "reason": "The user opened by asking what POTS means and continued asking how it relates to symptoms, long COVID, and management.",
         "relevance": "strong",
-        "topic": "pots diagnosis"
+        "topic": "POTS understanding"
       },
       {
-        "reason": "The user asked what to do, requested more strategies, and wrote down practical steps for managing symptoms.",
-        "relevance": "strong",
-        "topic": "pots self-management"
-      },
-      {
-        "reason": "The user described pounding heart, dizziness, lightheadedness, and spotty vision on standing, which framed the discussion.",
+        "reason": "The user described a pounding heart, dizziness, lightheadedness, and spotty vision when standing.",
         "relevance": "medium",
         "topic": "orthostatic symptoms"
       },
       {
-        "reason": "The user asked whether their heart was damaged and later said the explanation helped and reduced their panic.",
+        "reason": "The user directly asked whether POTS meant their heart was damaged and later said the explanation eased that fear.",
         "relevance": "medium",
-        "topic": "fear of heart damage"
+        "topic": "heart damage fear"
       },
       {
-        "reason": "The user asked why POTS followed long COVID and whether it would be permanent.",
+        "reason": "The user asked why POTS followed long COVID after previously being healthy and active.",
         "relevance": "medium",
-        "topic": "post-covid prognosis"
+        "topic": "post-COVID POTS cause"
       },
       {
-        "reason": "The user explained that exertion causes crashes lasting days and said exercise advice had backfired and made them feel like they were failing.",
+        "reason": "The user asked whether POTS could be permanent or whether people improve.",
         "relevance": "medium",
-        "topic": "post-exertional malaise"
+        "topic": "POTS prognosis"
       },
       {
-        "reason": "The user asked whether they should be on medication after their doctor had not prescribed any.",
-        "relevance": "medium",
-        "topic": "pots medication"
+        "reason": "The user asked what they could do, asked about salt, and wrote down several practical strategies.",
+        "relevance": "strong",
+        "topic": "POTS self-management"
       },
       {
-        "reason": "The user said the diagnosis was explained too quickly at the appointment and later compared the chat favorably with that visit.",
-        "relevance": "low",
-        "topic": "limited appointment time"
+        "reason": "The user worried exercise could worsen symptoms and described crashing for days after exertion; they also shared feeling they had failed when exercise advice backfired.",
+        "relevance": "medium",
+        "topic": "exercise intolerance"
+      },
+      {
+        "reason": "The user asked whether they should be taking medication after their doctor had not prescribed any.",
+        "relevance": "medium",
+        "topic": "POTS medications"
+      },
+      {
+        "reason": "The user asked what they could do during an episode of heart racing because it felt scary.",
+        "relevance": "medium",
+        "topic": "acute racing heart coping"
       }
     ],
-    "reason_for_conversation": "understanding new diagnosis",
-    "summary": "The user wanted to understand a new POTS diagnosis after long COVID, including whether it meant heart damage, whether it might improve, and what they could do. The assistant explained the condition and discussed self-management, taking care to address the user's exertion-related crashes; the user said the advice was useful and that they felt much less panicked and understood what the diagnosis meant."
+    "reason_for_conversation": "informational",
+    "summary": "The user wanted to understand a POTS diagnosis following long COVID, including whether it meant heart damage, whether it might improve, and what management options were available. The assistant explained the condition, discussed self-management and medication questions, and addressed the user's concern that exercise triggers prolonged crashes. The user said they felt less panicked, understood that the explanation described a signalling problem rather than heart damage, and found the practical advice useful."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 5253,
-    "output_tokens": 1150
+    "input_tokens": 5459,
+    "output_tokens": 947
   },
   "version": "gpt_luna"
 }

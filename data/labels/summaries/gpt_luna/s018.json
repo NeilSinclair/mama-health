@@ -1,55 +1,55 @@
 {
-  "created_at": "2026-09-30T12:13:56+00:00",
+  "created_at": "2026-09-30T14:31:31+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot repeated insurance advice after correction"
+      "bot repeated wrong-country access advice after correction"
     ],
-    "end_reason": "partial resolution",
+    "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user opened with six months of severe pain and described it across several turns as happening during periods and on other days.",
+        "reason": "The user described severe pain lasting six months, occurring during and outside periods and sometimes with bathroom use.",
         "relevance": "strong",
-        "topic": "pelvic pain"
+        "topic": "chronic pelvic pain"
       },
       {
-        "reason": "The user repeatedly explained that getting a gynecologist through SUS is difficult and can involve waiting months.",
+        "reason": "The user repeatedly explained that access through SUS involves long waits and that the suggested insurance-directory and telehealth routes did not fit.",
         "relevance": "strong",
-        "topic": "specialist access"
+        "topic": "specialist access barriers"
       },
       {
-        "reason": "The user said they needed pain treated now and discussed asking their doctor about continuous birth control pills.",
-        "relevance": "medium",
-        "topic": "current pain treatment"
-      },
-      {
-        "reason": "The user said their doctor called the pain normal cramps and emphasized wanting someone to believe them.",
-        "relevance": "medium",
+        "reason": "The user said their doctor called the pain normal cramps and emphasized that they needed someone to believe them.",
+        "relevance": "strong",
         "topic": "medical dismissal"
       },
       {
-        "reason": "The user said endometriosis had been suggested and discussed seeking evaluation for it.",
+        "reason": "The user said endometriosis had been raised as a possibility and discussed getting evaluated for it.",
         "relevance": "medium",
         "topic": "suspected endometriosis"
       },
       {
-        "reason": "The user said the pain sometimes prevents them from working, but did not return to this impact.",
+        "reason": "The user wanted treatment now and said they might ask their doctor about taking a continuous pill.",
+        "relevance": "medium",
+        "topic": "pain treatment"
+      },
+      {
+        "reason": "The user said the pain sometimes prevents them from working, but did not return to this impact separately.",
         "relevance": "low",
         "topic": "work impairment"
       }
     ],
-    "reason_for_conversation": "pain care access",
-    "summary": "The user described severe pelvic pain for six months, affecting work, with suspected endometriosis dismissed by their doctor as normal cramps; they wanted to be believed and get pain relief. After the user explained they rely on Brazil’s SUS, the assistant repeatedly returned to US-style insurance directories, though the user accepted asking about continuous pills as a possible step; they ended saying the conversation was not helping and specialist access remained unresolved."
+    "reason_for_conversation": "access",
+    "summary": "The user described severe pelvic pain for six months, possible endometriosis, and a doctor who dismissed it as normal cramps; they wanted to be believed and get pain treatment despite difficulty accessing a specialist through SUS. The assistant repeatedly suggested US-style insurance directories and coverage checks after the user corrected it, then offered symptom tracking and pain-treatment topics; the user said the conversation was not helping and left."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 4565,
-    "output_tokens": 1404
+    "input_tokens": 4771,
+    "output_tokens": 927
   },
   "version": "gpt_luna"
 }

@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T12:13:47+00:00",
+  "created_at": "2026-09-30T14:31:15+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,52 +7,52 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user described similar cyclical pelvic pain returning three months after surgery and asked whether that timing was normal.",
+        "reason": "The user described similar deep pelvic pain returning three months after surgery and asked whether that meant another operation was needed.",
         "relevance": "strong",
-        "topic": "recurrent pelvic pain"
+        "topic": "post-surgical pelvic pain"
       },
       {
-        "reason": "The user opened by asking whether another operation was needed, then asked when surgery might be considered and what to do next.",
+        "reason": "The user repeatedly asked whether and when another surgery might be considered, and sought a concrete next step.",
         "relevance": "strong",
         "topic": "repeat surgery decision"
       },
       {
-        "reason": "The user discussed having no treatment after surgery and asked specifically whether Mirena might cause fewer mood effects.",
+        "reason": "The user discussed not having started treatment after surgery and explored alternatives to the combined pill, including a hormonal IUD.",
         "relevance": "medium",
-        "topic": "hormonal treatment options"
+        "topic": "post-surgical treatment options"
       },
       {
-        "reason": "The user explained that the combined pill caused low mood and loss of libido, which shaped the options discussed.",
+        "reason": "The user explained that the pill caused low mood and loss of libido and said they did not want to return to it.",
         "relevance": "medium",
-        "topic": "medication side effects"
+        "topic": "hormonal medication side effects"
       },
       {
-        "reason": "The user engaged with the possibility that muscle tension could contribute to pain and said they had not heard of it before.",
+        "reason": "After hearing that pain could have a muscular component, the user engaged with the possibility that not all the pain came from endometriosis.",
         "relevance": "medium",
         "topic": "pelvic floor pain"
       },
       {
-        "reason": "The user was unsure what the surgery found and welcomed the suggestion to request the operative note.",
-        "relevance": "low",
-        "topic": "surgical records"
+        "reason": "The user was unsure what the operation found, then learned they could request the operative note.",
+        "relevance": "medium",
+        "topic": "uncertainty about surgery findings"
       },
       {
-        "reason": "The user said they felt defeated when the pain returned, then later expressed feeling more hopeful.",
-        "relevance": "low",
-        "topic": "emotional discouragement"
+        "reason": "The user said they felt defeated by the pain returning and later expressed relief that surgery might not be the only path.",
+        "relevance": "medium",
+        "topic": "discouragement about pain"
       }
     ],
-    "reason_for_conversation": "treatment decision",
-    "summary": "The user was worried that cyclical pelvic pain returning three months after endometriosis surgery meant another operation was needed, and felt defeated that surgery had not fixed it. The assistant discussed non-surgical options, the user's past pill side effects, possible pelvic-floor contributions, and requesting the operative note; the user said the next-step plan was clear and felt less resigned to repeated surgery."
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether similar cyclical pelvic pain returning three months after endometriosis surgery meant they needed another operation, and shared that the combined pill had caused unwanted effects. The assistant discussed non-surgical options, the possible role of pelvic floor pain, requesting the operative note, and questions for a follow-up; the user said the plan was clear and felt less worried that surgery was inevitable."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 4917,
-    "output_tokens": 1063
+    "input_tokens": 5123,
+    "output_tokens": 908
   },
   "version": "gpt_luna"
 }

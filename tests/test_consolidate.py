@@ -5,6 +5,7 @@ from fakes import FakeLabeller, fake_respond, fake_summary, topics
 
 from mama_analysis.consolidate import (
     CONSOLIDATED_FIELDS,
+    DISPLAY_NAMES,
     apply_mapping,
     consolidate_all,
     field_labels,
@@ -126,3 +127,14 @@ def test_consolidate_all_records_usage_of_failed_attempts(tmp_path):
     # FakeLabeller reports 10 input tokens per call; the warm-up field took two attempts.
     assert entries[CONSOLIDATED_FIELDS[0]].usage.input_tokens == 20
     assert entries[CONSOLIDATED_FIELDS[1]].usage.input_tokens == 10
+
+
+def test_display_names_cover_every_fixed_value():
+    from typing import get_args
+
+    from mama_analysis.schemas import SummaryLLM
+
+    for field, names in DISPLAY_NAMES.items():
+        values = get_args(SummaryLLM.model_fields[field].annotation)
+        assert set(names) == set(values), field
+        assert len(set(names.values())) == len(names)  # no two values share a name

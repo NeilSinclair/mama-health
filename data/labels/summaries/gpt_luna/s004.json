@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T12:13:37+00:00",
+  "created_at": "2026-09-30T14:31:05+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,47 +7,42 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user began by asking whether gluten-free diets have real evidence for Hashimoto's and returned to whether a trial would be worthwhile.",
-        "relevance": "strong",
-        "topic": "gluten-free diet evidence"
-      },
-      {
-        "reason": "The user explained that these symptoms continued despite a supposedly normal TSH and later said they were the reason the diet question mattered.",
+        "reason": "The user explains that ongoing tiredness and fog despite a reportedly normal TSH are why they are considering dietary changes and asks whether their dose could be off.",
         "relevance": "strong",
         "topic": "persistent fatigue and brain fog"
       },
       {
-        "reason": "The user asked whether to discuss the ongoing symptoms with a doctor and considered whether their levothyroxine dose might be off, then included a review in their plan.",
-        "relevance": "medium",
-        "topic": "fatigue evaluation"
+        "reason": "The user asks whether going gluten-free has evidence behind it and later discusses how to test whether it helps their symptoms.",
+        "relevance": "strong",
+        "topic": "gluten-free diet trial"
       },
       {
-        "reason": "The user asked why testing mattered, recognized that testing should happen before stopping gluten, and included screening in their plan.",
+        "reason": "The user learns testing should happen while still eating gluten and includes asking about screening in their plan.",
         "relevance": "medium",
         "topic": "celiac screening"
       },
       {
-        "reason": "The user asked how to tell whether avoiding gluten was helping and endorsed a defined, tracked trial.",
+        "reason": "The user asks whether their levothyroxine dose may explain the fatigue and agrees to have it reviewed.",
         "relevance": "medium",
-        "topic": "gluten-free trial planning"
+        "topic": "thyroid dose review"
       },
       {
-        "reason": "The user said the diet felt controllable compared with waiting on doctors, but did not discuss access further.",
+        "reason": "The user says the gluten idea appealed because it was something they could control themselves while waiting on doctors.",
         "relevance": "low",
-        "topic": "care access delays"
+        "topic": "health care delays"
       }
     ],
-    "reason_for_conversation": "evidence-based diet decision",
-    "summary": "The user asked whether a gluten-free diet has evidence for Hashimoto's, explaining that they still felt tired and foggy on levothyroxine despite a supposedly normal TSH. The assistant discussed celiac screening before stopping gluten, suggested reviewing the ongoing symptoms with a doctor, and outlined a tracked, time-limited gluten-free trial; the user restated and appreciated a plan to pursue those steps in that order."
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether a gluten-free diet might help Hashimoto's and explained they still feel tired and foggy while taking levothyroxine. The assistant discussed celiac screening before changing diet, a tracked gluten-free trial if appropriate, and reviewing the dose and other possible causes with a doctor; the user endorsed a plan to do those steps in that order."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 5314,
-    "output_tokens": 1368
+    "input_tokens": 5520,
+    "output_tokens": 756
   },
   "version": "gpt_luna"
 }

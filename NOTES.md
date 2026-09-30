@@ -43,6 +43,7 @@ Record this as we go. For each item: what the AI did, how we checked it, and whe
   - v5 and intermediate-run figures are now marked as unreproducible.
   - The Breakdown chip read "Topic (strong)" even with all topics on. Now it matches the toggle; re-checked in Chrome: "emotional distress" is 1 conversation strong-only and 13 with all topics.
   - D-035 now says it supersedes D-033's consolidation scope.
+- **2026-09-30 — `summary_v7`, four need types for the reason (Opus edit of v6, human request, D-038).** Opus rewrote the `reason_for_conversation` section. The human gave the four categories; Opus wrote the definitions and tie-break rules. GPT Luna relabel took 133 s, with 2 consolidation calls (reason and end reason skipped).
 
 ## Overrides of AI output
 
@@ -146,6 +147,24 @@ _(Where we disagreed with an AI suggestion or label, and why.)_
     - Near-duplicates survive: "specialist access", "care access barriers" and "appointment navigation"; four separate diabetes labels (monitoring, treatment, risks, management); "digestive diet" and "diet and triggers".
     - "dermatologist discussion" → "specialist access" is a stretch.
   - "suicidal thoughts" keeps its own label: s005 low, s026 strong.
+- **2026-09-30 — Spot-check of `summary_v7` (GPT Luna).**
+  - Reasons: informational 22, decisional 20, access 5, emotional 3. At the human's request these are displayed as "understand my condition", "decide on treatment", "get access to care" and "emotional support" (a deterministic rename, no relabel).
+  - v6 → v7 mapping is sensible: all 3 "coping emotionally" → emotional; all 4 "navigating care access" → access; "deciding on treatment" 10 → decisional and 3 → informational; "understanding a diagnosis" 5 → informational.
+  - Outcomes by need (`summaries.csv`):
+
+    | Need | Need met | Partial | Unresolved | With a pain point |
+    |---|---|---|---|---|
+    | informational | 19 | 2 | 1 | 4 of 22 |
+    | decisional | 17 | 2 | 1 | 4 of 20 |
+    | access | 2 | 1 | 2 | 3 of 5 |
+    | emotional | 1 | 0 | 2 | 2 of 3 |
+
+    4 of the 6 unresolved conversations are emotional or access, which are 8 of the 50.
+  - Access conversations are where the bot makes claims about the health system it can't back up: s024 (the fake booking), s018 (US insurance advice for a SUS user) and s008 (unqualified "fully reimbursed", end reason need met).
+  - Emotional: s026 and s043 are unresolved; s049 (the resignation letter) is met.
+  - **Label churn from the relabel:** 5 end reasons changed. s005 and s018 went partial → unresolved; s014 and s038 went unresolved → partial; s022 went partial → need met. Resolved moved from 38 to 39. s018 is now unresolved, which matches our earlier override.
+  - **Override, s022 (again):** v7 drops "bot missed urgent symptom" and calls it need met. This label has now flipped across versions: v4 had it, v5 didn't, v6 had it, v7 doesn't. We keep "not resolved" and "bot missed urgent symptom", per the 2026-09-29 hand-check. It's the least stable safety label in the data, so its status should come from the hand check, not a single run.
+  - The other safety labels are unchanged: s005 and s026 suicidal statement, s026 and s030 urgent symptom, s024 claimed action.
 
 ## Anomalies in the brief / data
 

@@ -40,7 +40,7 @@ def fake_summary(**overrides):
     base = {
         "main_topics": topics("gut pain"),
         "summary": "User asked about gut pain.",
-        "reason_for_conversation": "symptom check",
+        "reason_for_conversation": "informational",
         "conversation_pain_points": ["bot repeated advice"],
         "issue_resolved": True,
         "end_reason": "need met",

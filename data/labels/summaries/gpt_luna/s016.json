@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T12:13:51+00:00",
+  "created_at": "2026-09-30T14:31:20+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,62 +7,62 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened with worsening brain fog and returned to practical ways to manage its effects throughout the conversation.",
+        "reason": "The user opened by describing worsening fog and asked for practical strategies, returning to ways to manage it throughout the conversation.",
         "relevance": "strong",
         "topic": "fibromyalgia brain fog"
       },
       {
-        "reason": "The user explicitly asked for practical strategies to avoid mistakes at work and engaged with advice for tasks and meetings.",
+        "reason": "The user described accounting mistakes, losing their train of thought at work, and fear of losing their job, making work impact a central concern.",
         "relevance": "strong",
-        "topic": "workplace coping strategies"
+        "topic": "work performance and job security"
       },
       {
-        "reason": "The user said they feared losing their job and later weighed whether disclosing their condition could harm their career.",
-        "relevance": "medium",
-        "topic": "job security"
-      },
-      {
-        "reason": "The user spent several turns exploring disclosure, confidentiality, and a possible middle path through HR.",
+        "reason": "The user spent several turns weighing disclosure, trust in their manager, and whether HR could provide a middle path.",
         "relevance": "medium",
         "topic": "workplace accommodations"
       },
       {
-        "reason": "The user described repeatedly waking and feeling unrefreshed, and later asked about improving sleep as a foundation for addressing the fog.",
+        "reason": "The user reported repeated waking and unrefreshing sleep, then asked about addressing the underlying contributors to fog.",
         "relevance": "medium",
-        "topic": "sleep disruption"
+        "topic": "poor sleep"
       },
       {
-        "reason": "The user reported that their husband notices snoring and pauses in breathing, then said they would book an evaluation.",
+        "reason": "The user reported that their husband had noticed snoring and pauses in breathing, and agreed to book an evaluation after the assistant urged follow-up.",
         "relevance": "medium",
-        "topic": "possible sleep apnea"
+        "topic": "sleep breathing pauses"
       },
       {
-        "reason": "The user asked whether medication or supplements could treat the fog and engaged with advice to review them with a clinician or pharmacist.",
+        "reason": "The user asked about medication for fog and then disclosed regular diphenhydramine use after the assistant raised possible medication-related fog.",
         "relevance": "medium",
-        "topic": "medication and supplements"
+        "topic": "medication cognitive effects"
       },
       {
-        "reason": "The user identified nightly diphenhydramine use and responded to the discussion of its possible contribution to fog.",
+        "reason": "The user specifically asked for in-the-moment strategies for losing their train of thought mid-sentence in meetings and said they would try meeting notes.",
         "relevance": "medium",
-        "topic": "antihistamine use"
+        "topic": "meeting speech disruption"
       },
       {
-        "reason": "The user mentioned higher stress because their workplace was short-staffed but did not return to it in detail.",
+        "reason": "The user asked whether supplements might help after mentioning online claims, but did not return to the topic.",
+        "relevance": "low",
+        "topic": "supplement questions"
+      },
+      {
+        "reason": "The user briefly noted that staffing shortages had increased work stress while discussing worsening sleep and fog.",
         "relevance": "low",
         "topic": "work stress"
       }
     ],
-    "reason_for_conversation": "managing cognitive symptoms",
-    "summary": "The user sought practical help for worsening fibromyalgia brain fog affecting accounting work and feared losing their job. The assistant offered workplace strategies, discussed confidential HR accommodations, and highlighted the user's reported breathing pauses during sleep and nightly diphenhydramine use as issues to raise with a clinician; the user said the plan was clear and useful and intended to book an evaluation."
+    "reason_for_conversation": "informational",
+    "summary": "The user sought practical help for worsening fibromyalgia brain fog that was affecting accounting work and threatening their confidence about keeping their job. The assistant offered work and meeting strategies, discussed confidential HR accommodations, and urged prompt medical follow-up after the user reported snoring and breathing pauses and regular diphenhydramine use. The user said the priorities were clear, planned to book an evaluation, and appreciated the practical support."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 6321,
-    "output_tokens": 1305
+    "input_tokens": 6527,
+    "output_tokens": 1262
   },
   "version": "gpt_luna"
 }

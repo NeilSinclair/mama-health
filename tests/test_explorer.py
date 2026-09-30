@@ -17,7 +17,7 @@ from mama_analysis.summarise import merge_deterministic
 MAPPINGS = {
     "main_topics": {"insomnia": "insomnia", "trouble sleeping": "insomnia", "diet": "diet"},
     "conversation_pain_points": {"bot repeated advice": "bot repeated advice"},
-    "reason_for_conversation": {"symptom check": "checking a symptom"},
+    "reason_for_conversation": {"informational": "informational"},
     "end_reason": {"need met": "need met"},
 }
 
@@ -39,7 +39,7 @@ def test_label_rows_groups_raw_labels_under_canonical(records):
         {"label": "insomnia", "raw": ["insomnia", "trouble sleeping"]}
     ]
     assert rows[0]["reason_for_conversation"] == [
-        {"label": "checking a symptom", "raw": ["symptom check"]}
+        {"label": "informational", "raw": ["informational"]}
     ]
 
 
