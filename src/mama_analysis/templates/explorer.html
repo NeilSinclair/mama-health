@@ -12,7 +12,7 @@
     --border: #e6e3de; --accent: #b4532a; --accent-soft: #fbeee7;
     --ok: #1f7a4d; --ok-soft: #e7f5ed; --bad: #a8321e; --bad-soft: #fbe9e5;
     --chip: #f3f1ed; --user-bubble: #fbeee7; --bot-bubble: #f3f1ed;
-    --topic: #3867b5; --pain: #c2412d; --end: #1f7a4d; --edge: #8a8680;
+    --reason: #7a4fb3; --topic: #3867b5; --pain: #c2412d; --end: #1f7a4d; --edge: #8a8680;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -20,7 +20,7 @@
       --border: #2e2e31; --accent: #ec8a5c; --accent-soft: #2e1f18;
       --ok: #56c68a; --ok-soft: #16271e; --bad: #f08a78; --bad-soft: #2e1a16;
       --chip: #26262a; --user-bubble: #2e1f18; --bot-bubble: #26262a;
-      --topic: #7aa2f7; --pain: #f08a78; --end: #56c68a; --edge: #7c7c84;
+      --reason: #c4a1f5; --topic: #7aa2f7; --pain: #f08a78; --end: #56c68a; --edge: #7c7c84;
     }
   }
   :root[data-theme="dark"] {
@@ -28,7 +28,7 @@
     --border: #2e2e31; --accent: #ec8a5c; --accent-soft: #2e1f18;
     --ok: #56c68a; --ok-soft: #16271e; --bad: #f08a78; --bad-soft: #2e1a16;
     --chip: #26262a; --user-bubble: #2e1f18; --bot-bubble: #26262a;
-    --topic: #7aa2f7; --pain: #f08a78; --end: #56c68a; --edge: #7c7c84;
+    --reason: #c4a1f5; --topic: #7aa2f7; --pain: #f08a78; --end: #56c68a; --edge: #7c7c84;
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.55 Inter, system-ui, -apple-system, sans-serif; }
@@ -79,8 +79,9 @@
   #graph { display: block; width: 100%; height: auto; }
   #graph .edge { stroke: var(--edge); stroke-opacity: .35; cursor: pointer; }
   #graph .node { cursor: grab; touch-action: none; }
-  #graph .node text { font-size: 11px; fill: var(--text); paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
+  #graph .node text { font-size: 11px; fill: var(--text); paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; }
   #graph .node circle { stroke: var(--surface); stroke-width: 1.5px; }
+  #graph .reason circle { fill: var(--reason); }
   #graph .topic circle { fill: var(--topic); }
   #graph .pain circle { fill: var(--pain); }
   #graph .end circle { fill: var(--end); }
@@ -132,6 +133,7 @@ const LABEL_FIELDS = ["reason_for_conversation", "main_topics", "conversation_pa
 const FIELD_NAMES = Object.fromEntries(FILTERS);
 
 const GRAPH_FIELDS = [
+  ["reason_for_conversation", "Reasons for conversation", "reason"],
   ["main_topics", "Topics", "topic"],
   ["conversation_pain_points", "Conversation pain points", "pain"],
   ["end_reason", "End reasons (LLM)", "end"],
@@ -170,13 +172,6 @@ function toggleFilter(key, value) {
   state.filters[key] = state.filters[key] === value ? "" : value;
   render();
   document.getElementById("filters").scrollIntoView({ behavior: "smooth", block: "start" });
-}
-
-function showSessions(filters) {
-  state.filters = filters;
-  state.tab = "list";
-  render();
-  window.scrollTo({ top: 0 });
 }
 
 function renderSwitcher() {
@@ -317,7 +312,7 @@ function renderGraphControls() {
 
 function graphData(graph) {
   const shown = GRAPH_FIELDS.map(([f]) => f).filter((f) => graphState.fields.has(f));
-  // In columns, only link neighbouring columns (topic-pain, pain-end), so links don't cross a column.
+  // In columns, only link neighbouring columns (e.g. reason-topic, topic-pain), so links don't cross a column.
   const adjacent = (a, b) => !graphState.arrange || Math.abs(shown.indexOf(a) - shown.indexOf(b)) === 1;
   const candidates = graph.edges.filter((e) => {
     const a = e.source.split(":")[0], b = e.target.split(":")[0];
@@ -335,11 +330,18 @@ function graphData(graph) {
   return { nodes, edges, hiddenByLayout, hiddenByThreshold };
 }
 
+// Column x positions for 1-4 columns: labels sit left of the first column and right of the others,
+// so columns keep a fixed gap and four columns need a wider canvas (see graphWidth).
+const COLUMN_X = { 1: [500], 2: [300, 700], 3: [300, 560, 820], 4: [300, 560, 820, 1080] };
+
+function graphWidth(nodes) {
+  return graphState.arrange && new Set(nodes.map((n) => n.field)).size === 4 ? 1260 : 1000;
+}
+
 // Layered layout: one column per field, each column ordered to reduce crossings
 // (barycentre heuristic: repeatedly sort nodes by the mean position of their neighbours).
 function layeredLayout(nodes, edges, W, H) {
   const columns = GRAPH_FIELDS.map(([f]) => f).filter((f) => nodes.some((n) => n.field === f));
-  const xs = columns.length === 1 ? [0.5] : columns.length === 2 ? [0.3, 0.7] : [0.3, 0.56, 0.82];
   const byId = new Map(nodes.map((n) => [n.id, n]));
   const nbrs = new Map(nodes.map((n) => [n.id, []]));
   for (const e of edges) {
@@ -348,7 +350,7 @@ function layeredLayout(nodes, edges, W, H) {
   }
   const cols = columns.map((f, i) => {
     const col = nodes.filter((n) => n.field === f).sort((a, b) => b.n_sessions - a.n_sessions || a.label.localeCompare(b.label));
-    col.forEach((n) => { n.x = W * xs[i]; });
+    col.forEach((n) => { n.x = COLUMN_X[columns.length][i]; });
     return col;
   });
   const place = (col) => {
@@ -415,18 +417,19 @@ function leftLabel(n) {
 function renderGraph() {
   renderGraphControls();
   const svg = document.getElementById("graph");
+  svg.classList.remove("focus");  // a re-render drops any pinned highlight, so undim the new graph
   const hint = document.getElementById("ghint");
   const v = current();
   if (!v) { svg.replaceChildren(); hint.textContent = "No cached labels yet."; return; }
   const { nodes, edges, hiddenByLayout, hiddenByThreshold } = graphData(v.graph);
   const perColumn = Math.max(1, ...GRAPH_FIELDS.map(([f]) => nodes.filter((n) => n.field === f).length));
-  const W = 1000, H = Math.max(560, graphState.arrange ? perColumn * 24 + 48 : 0);
+  const W = graphWidth(nodes), H = Math.max(560, graphState.arrange ? perColumn * 24 + 48 : 0);
   (graphState.arrange ? layeredLayout : forceLayout)(nodes, edges, W, H);
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
   hint.textContent = `${nodes.length} labels, ${edges.length} links. Node size = sessions with that label; ` +
-    `a link = sessions that share both labels. Hover to highlight, click a node or link to list its ` +
-    `conversations, drag nodes to untangle.` +
-    (graphState.arrange ? " Columns link only to their neighbours; untick a field to link the other two directly." : "") +
+    `a link = sessions that share both labels. Hover to highlight, click a node or link to keep ` +
+    `its highlight, click the background to clear it, drag nodes to untangle.` +
+    (graphState.arrange ? " Columns link only to their neighbours; untick a field to link the columns either side of it directly." : "") +
     (hiddenByLayout ? ` ${hiddenByLayout} labels link only to an unticked field or a non-neighbouring column ` +
       `(e.g. topics of conversations with no pain point) and are hidden; change the field ticks or ` +
       `"Arrange by field" to see them.` : "") +
@@ -437,7 +440,7 @@ function renderGraph() {
     const a = byId.get(e.source), b = byId.get(e.target);
     const line = svgEl("line", {
       class: "edge", x1: a.x, y1: a.y, x2: b.x, y2: b.y, "stroke-width": 1 + 1.6 * (e.n_sessions - 1),
-      onclick: () => showSessions({ [a.field]: a.label, [b.field]: b.label }),
+      onclick: (ev) => pin(null, ev.currentTarget),
     }, svgEl("title", {}, `${a.label} + ${b.label}: ${e.n_sessions} sessions (${e.session_ids.join(", ")})`));
     line.edge = e;
     return line;
@@ -452,22 +455,30 @@ function renderGraph() {
     return g;
   });
 
-  const focus = (id) => {
-    svg.classList.toggle("focus", Boolean(id));
-    const near = new Set([id]);
+  // Highlight node `id` with its links and neighbours, or the single link `line` with its two ends.
+  const focus = (id, line = null) => {
+    const on = (l) => (line ? l === line : Boolean(id) && (l.edge.source === id || l.edge.target === id));
+    svg.classList.toggle("focus", Boolean(id || line));
+    const near = new Set(id ? [id] : []);
     for (const l of lines) {
-      const on = id && (l.edge.source === id || l.edge.target === id);
-      l.classList.toggle("hl", Boolean(on));
-      if (on) { near.add(l.edge.source); near.add(l.edge.target); }
+      l.classList.toggle("hl", on(l));
+      if (on(l)) { near.add(l.edge.source); near.add(l.edge.target); }
     }
-    for (const g of groups) g.classList.toggle("hl", Boolean(id) && near.has(g.node.id));
+    for (const g of groups) g.classList.toggle("hl", near.has(g.node.id));
+  };
+  // A click pins its highlight; hovering then leaves it alone until the background is clicked.
+  let pinned = null;
+  const pin = (id, line) => { pinned = [id, line]; focus(id, line); };
+  const unhover = () => (pinned ? focus(...pinned) : focus(null));
+  svg.onclick = (ev) => {
+    if (!ev.target.closest(".node, .edge")) { pinned = null; focus(null); }
   };
 
   for (const g of groups) {
     const n = g.node;
     let start = null;
-    g.addEventListener("pointerenter", () => { if (!start) focus(n.id); });
-    g.addEventListener("pointerleave", () => { if (!start) focus(null); });
+    g.addEventListener("pointerenter", () => { if (!start && !pinned) focus(n.id); });
+    g.addEventListener("pointerleave", () => { if (!start) unhover(); });
     g.addEventListener("pointerdown", (ev) => {
       start = { x: ev.clientX, y: ev.clientY };
       g.setPointerCapture(ev.pointerId);
@@ -482,12 +493,12 @@ function renderGraph() {
         if (l.edge.target === n.id) { l.setAttribute("x2", n.x); l.setAttribute("y2", n.y); }
       }
     });
-    g.addEventListener("pointercancel", () => { start = null; focus(null); });
+    g.addEventListener("pointercancel", () => { start = null; unhover(); });
     g.addEventListener("pointerup", (ev) => {
       if (!start) return;
       const moved = start && Math.hypot(ev.clientX - start.x, ev.clientY - start.y) > 4;
       start = null;
-      if (!moved) showSessions({ [n.field]: n.label });
+      if (!moved) pin(n.id, null);
     });
   }
   svg.replaceChildren(svgEl("g", {}, ...lines), svgEl("g", {}, ...groups));

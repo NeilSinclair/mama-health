@@ -15,7 +15,7 @@ from mama_analysis.schemas import SessionSummary
 PAYLOAD_MARKER = "/*__PAYLOAD__*/null"
 
 # Fields shown as nodes in the explorer's relationship graph.
-GRAPH_FIELDS = ("main_topics", "conversation_pain_points", "end_reason")
+GRAPH_FIELDS = ("reason_for_conversation", "main_topics", "conversation_pain_points", "end_reason")
 
 
 def label_rows(

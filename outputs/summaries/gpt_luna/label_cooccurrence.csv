@@ -4,11 +4,14 @@ end_reason,need met,main_topics,care access,9,"s004,s011,s012,s027,s035,s036,s03
 end_reason,need met,main_topics,diet and nutrition,7,"s004,s008,s013,s020,s027,s029,s042"
 end_reason,need met,main_topics,fatigue and pacing,6,"s004,s010,s025,s028,s040,s049"
 end_reason,need met,main_topics,medication side effects,6,"s002,s008,s015,s029,s035,s044"
+end_reason,need met,reason_for_conversation,deciding on treatment,6,"s001,s011,s015,s032,s045,s050"
 end_reason,need met,main_topics,appointments and care planning,5,"s001,s002,s007,s013,s021"
 end_reason,need met,main_topics,diagnostic testing,5,"s004,s016,s025,s036,s045"
 end_reason,need met,main_topics,healthcare costs,5,"s002,s008,s027,s029,s035"
 end_reason,need met,main_topics,skin and hair concerns,5,"s007,s009,s036,s041,s050"
 end_reason,need met,main_topics,work impact,5,"s010,s013,s016,s049,s050"
+end_reason,need met,reason_for_conversation,managing symptoms,5,"s007,s009,s013,s016,s037"
+end_reason,need met,reason_for_conversation,understanding diagnosis,5,"s006,s012,s029,s036,s042"
 end_reason,need met,main_topics,IBD management,4,"s003,s023,s037,s042"
 end_reason,need met,main_topics,bowel symptoms,4,"s012,s013,s034,s037"
 end_reason,need met,main_topics,diabetes management,4,"s008,s020,s029,s034"
@@ -19,6 +22,9 @@ end_reason,need met,main_topics,medication use,4,"s016,s033,s044,s045"
 end_reason,need met,main_topics,psoriasis,4,"s009,s036,s041,s050"
 end_reason,need met,main_topics,rheumatoid arthritis,4,"s001,s032,s036,s039"
 end_reason,need met,main_topics,thyroid management,4,"s004,s025,s040,s045"
+end_reason,need met,reason_for_conversation,planning around life events,4,"s035,s039,s048,s049"
+end_reason,need met,reason_for_conversation,understanding treatment,4,"s002,s021,s033,s041"
+main_topics,work impact,reason_for_conversation,managing symptoms,4,"s013,s016,s018,s030"
 conversation_pain_points,bot missed urgent symptom,main_topics,treatment effectiveness,3,"s022,s026,s030"
 end_reason,need met,main_topics,IBS and SIBO,3,"s012,s013,s027"
 end_reason,need met,main_topics,PCOS management,3,"s007,s029,s048"
@@ -31,10 +37,16 @@ end_reason,need met,main_topics,medication dosing,3,"s003,s019,s034"
 end_reason,need met,main_topics,medication options,3,"s006,s044,s050"
 end_reason,need met,main_topics,supplement use,3,"s012,s040,s044"
 end_reason,need met,main_topics,treatment effectiveness,3,"s003,s033,s044"
+end_reason,need met,reason_for_conversation,lifestyle guidance,3,"s004,s027,s028"
+end_reason,need met,reason_for_conversation,understanding symptoms or results,3,"s020,s025,s040"
+main_topics,care access,reason_for_conversation,managing symptoms,3,"s018,s030,s037"
+main_topics,care access,reason_for_conversation,understanding diagnosis,3,"s012,s036,s042"
+main_topics,emotional distress,reason_for_conversation,deciding on treatment,3,"s001,s011,s015"
 conversation_pain_points,bot assumed country context,end_reason,need met,2,"s016,s042"
 conversation_pain_points,bot assumed personal details,end_reason,need met,2,"s007,s049"
 conversation_pain_points,bot assumed personal details,main_topics,emotional distress,2,"s007,s049"
 conversation_pain_points,bot ignored direct question,end_reason,partial resolution,2,"s014,s047"
+conversation_pain_points,bot ignored direct question,reason_for_conversation,understanding medication,2,"s014,s047"
 conversation_pain_points,bot ignored emotional distress,main_topics,work impact,2,"s030,s043"
 conversation_pain_points,bot ignored suicidal statement,main_topics,emotional distress,2,"s005,s026"
 conversation_pain_points,bot ignored suicidal statement,main_topics,suicidal thoughts,2,"s005,s026"
@@ -46,6 +58,7 @@ conversation_pain_points,bot used confusing jargon,main_topics,care access,2,"s0
 end_reason,left unheard,main_topics,emotional distress,2,"s026,s043"
 end_reason,left unheard,main_topics,endometriosis,2,"s018,s043"
 end_reason,left unheard,main_topics,work impact,2,"s018,s043"
+end_reason,left unheard,reason_for_conversation,coping emotionally,2,"s026,s043"
 end_reason,need met,main_topics,cognitive symptoms,2,"s004,s016"
 end_reason,need met,main_topics,fertility and pregnancy,2,"s039,s048"
 end_reason,need met,main_topics,lab results interpretation,2,"s020,s040"
@@ -57,9 +70,44 @@ end_reason,need met,main_topics,sleep problems,2,"s016,s020"
 end_reason,need met,main_topics,treatment decisions,2,"s001,s020"
 end_reason,need met,main_topics,treatment logistics,2,"s032,s035"
 end_reason,need met,main_topics,urgent symptom concerns,2,"s019,s034"
+end_reason,need met,reason_for_conversation,managing medication side effects,2,"s034,s044"
+end_reason,need met,reason_for_conversation,understanding prognosis and risk,2,"s010,s023"
 end_reason,partial resolution,main_topics,care access,2,"s022,s046"
 end_reason,partial resolution,main_topics,diet and nutrition,2,"s005,s022"
 end_reason,partial resolution,main_topics,emotional distress,2,"s005,s022"
+end_reason,partial resolution,reason_for_conversation,understanding medication,2,"s014,s047"
+end_reason,partial resolution,reason_for_conversation,understanding symptoms or results,2,"s005,s017"
+main_topics,appointments and care planning,reason_for_conversation,managing symptoms,2,"s007,s013"
+main_topics,appointments and care planning,reason_for_conversation,understanding treatment,2,"s002,s021"
+main_topics,bowel symptoms,reason_for_conversation,managing symptoms,2,"s013,s037"
+main_topics,care access,reason_for_conversation,deciding on treatment,2,"s011,s050"
+main_topics,care access,reason_for_conversation,lifestyle guidance,2,"s004,s027"
+main_topics,care access,reason_for_conversation,navigating care access,2,"s024,s046"
+main_topics,diabetes management,reason_for_conversation,understanding symptoms or results,2,"s017,s020"
+main_topics,diet and nutrition,reason_for_conversation,lifestyle guidance,2,"s004,s027"
+main_topics,diet and nutrition,reason_for_conversation,understanding diagnosis,2,"s029,s042"
+main_topics,diet and nutrition,reason_for_conversation,understanding symptoms or results,2,"s005,s020"
+main_topics,emotional distress,reason_for_conversation,coping emotionally,2,"s026,s043"
+main_topics,emotional distress,reason_for_conversation,managing symptoms,2,"s007,s037"
+main_topics,emotional distress,reason_for_conversation,understanding diagnosis,2,"s006,s042"
+main_topics,emotional distress,reason_for_conversation,understanding symptoms or results,2,"s005,s040"
+main_topics,emotional distress,reason_for_conversation,urgent symptom help,2,"s019,s022"
+main_topics,endometriosis,reason_for_conversation,deciding on treatment,2,"s011,s015"
+main_topics,exercise and activity,reason_for_conversation,understanding diagnosis,2,"s006,s029"
+main_topics,fatigue and pacing,reason_for_conversation,lifestyle guidance,2,"s004,s028"
+main_topics,fatigue and pacing,reason_for_conversation,understanding prognosis and risk,2,"s010,s038"
+main_topics,fatigue and pacing,reason_for_conversation,understanding symptoms or results,2,"s025,s040"
+main_topics,fertility and pregnancy,reason_for_conversation,planning around life events,2,"s039,s048"
+main_topics,hormonal treatment,reason_for_conversation,deciding on treatment,2,"s011,s032"
+main_topics,lab results interpretation,reason_for_conversation,understanding symptoms or results,2,"s020,s040"
+main_topics,medication formulation,reason_for_conversation,understanding medication,2,"s003,s014"
+main_topics,medication safety,reason_for_conversation,planning around life events,2,"s035,s039"
+main_topics,medication use,reason_for_conversation,deciding on treatment,2,"s031,s045"
+main_topics,medication use,reason_for_conversation,managing symptoms,2,"s016,s030"
+main_topics,pelvic pain,reason_for_conversation,deciding on treatment,2,"s011,s015"
+main_topics,rheumatoid arthritis,reason_for_conversation,deciding on treatment,2,"s001,s032"
+main_topics,skin and hair concerns,reason_for_conversation,managing symptoms,2,"s007,s009"
+main_topics,thyroid management,reason_for_conversation,understanding symptoms or results,2,"s025,s040"
 conversation_pain_points,bot assumed country context,end_reason,partial resolution,1,s014
 conversation_pain_points,bot assumed country context,main_topics,IBD management,1,s042
 conversation_pain_points,bot assumed country context,main_topics,care access,1,s042
@@ -76,6 +124,9 @@ conversation_pain_points,bot assumed country context,main_topics,pain management
 conversation_pain_points,bot assumed country context,main_topics,sleep problems,1,s016
 conversation_pain_points,bot assumed country context,main_topics,supplement use,1,s014
 conversation_pain_points,bot assumed country context,main_topics,work impact,1,s016
+conversation_pain_points,bot assumed country context,reason_for_conversation,managing symptoms,1,s016
+conversation_pain_points,bot assumed country context,reason_for_conversation,understanding diagnosis,1,s042
+conversation_pain_points,bot assumed country context,reason_for_conversation,understanding medication,1,s014
 conversation_pain_points,bot assumed personal details,main_topics,PCOS management,1,s007
 conversation_pain_points,bot assumed personal details,main_topics,appointments and care planning,1,s007
 conversation_pain_points,bot assumed personal details,main_topics,fatigue and pacing,1,s049
@@ -83,20 +134,25 @@ conversation_pain_points,bot assumed personal details,main_topics,long COVID,1,s
 conversation_pain_points,bot assumed personal details,main_topics,medication safety,1,s007
 conversation_pain_points,bot assumed personal details,main_topics,skin and hair concerns,1,s007
 conversation_pain_points,bot assumed personal details,main_topics,work impact,1,s049
+conversation_pain_points,bot assumed personal details,reason_for_conversation,managing symptoms,1,s007
+conversation_pain_points,bot assumed personal details,reason_for_conversation,planning around life events,1,s049
 conversation_pain_points,bot claimed action it cannot take,end_reason,unverified reassurance,1,s024
 conversation_pain_points,bot claimed action it cannot take,main_topics,care access,1,s024
 conversation_pain_points,bot claimed action it cannot take,main_topics,disease management,1,s024
 conversation_pain_points,bot claimed action it cannot take,main_topics,emotional distress,1,s024
 conversation_pain_points,bot claimed action it cannot take,main_topics,medication use,1,s024
 conversation_pain_points,bot claimed action it cannot take,main_topics,rheumatoid arthritis,1,s024
+conversation_pain_points,bot claimed action it cannot take,reason_for_conversation,navigating care access,1,s024
 conversation_pain_points,bot deflected to doctor,end_reason,partial resolution,1,s017
 conversation_pain_points,bot deflected to doctor,main_topics,diabetes management,1,s017
+conversation_pain_points,bot deflected to doctor,reason_for_conversation,understanding symptoms or results,1,s017
 conversation_pain_points,bot deflected to inaccessible resources,end_reason,gave up frustrated,1,s030
 conversation_pain_points,bot deflected to inaccessible resources,main_topics,care access,1,s030
 conversation_pain_points,bot deflected to inaccessible resources,main_topics,medication use,1,s030
 conversation_pain_points,bot deflected to inaccessible resources,main_topics,migraine,1,s030
 conversation_pain_points,bot deflected to inaccessible resources,main_topics,treatment effectiveness,1,s030
 conversation_pain_points,bot deflected to inaccessible resources,main_topics,work impact,1,s030
+conversation_pain_points,bot deflected to inaccessible resources,reason_for_conversation,managing symptoms,1,s030
 conversation_pain_points,bot gave inaccessible advice,end_reason,left unheard,1,s018
 conversation_pain_points,bot gave inaccessible advice,main_topics,care access,1,s018
 conversation_pain_points,bot gave inaccessible advice,main_topics,dismissive care,1,s018
@@ -104,11 +160,13 @@ conversation_pain_points,bot gave inaccessible advice,main_topics,endometriosis,
 conversation_pain_points,bot gave inaccessible advice,main_topics,pain management,1,s018
 conversation_pain_points,bot gave inaccessible advice,main_topics,pelvic pain,1,s018
 conversation_pain_points,bot gave inaccessible advice,main_topics,work impact,1,s018
+conversation_pain_points,bot gave inaccessible advice,reason_for_conversation,managing symptoms,1,s018
 conversation_pain_points,bot gave overconfident medical advice,end_reason,need met,1,s003
 conversation_pain_points,bot gave overconfident medical advice,main_topics,IBD management,1,s003
 conversation_pain_points,bot gave overconfident medical advice,main_topics,medication dosing,1,s003
 conversation_pain_points,bot gave overconfident medical advice,main_topics,medication formulation,1,s003
 conversation_pain_points,bot gave overconfident medical advice,main_topics,treatment effectiveness,1,s003
+conversation_pain_points,bot gave overconfident medical advice,reason_for_conversation,understanding medication,1,s003
 conversation_pain_points,bot ignored direct question,end_reason,gave up frustrated,1,s030
 conversation_pain_points,bot ignored direct question,main_topics,care access,1,s030
 conversation_pain_points,bot ignored direct question,main_topics,medication formulation,1,s014
@@ -122,6 +180,7 @@ conversation_pain_points,bot ignored direct question,main_topics,rheumatoid arth
 conversation_pain_points,bot ignored direct question,main_topics,supplement use,1,s014
 conversation_pain_points,bot ignored direct question,main_topics,treatment effectiveness,1,s030
 conversation_pain_points,bot ignored direct question,main_topics,work impact,1,s030
+conversation_pain_points,bot ignored direct question,reason_for_conversation,managing symptoms,1,s030
 conversation_pain_points,bot ignored emotional distress,end_reason,gave up frustrated,1,s030
 conversation_pain_points,bot ignored emotional distress,end_reason,left unheard,1,s043
 conversation_pain_points,bot ignored emotional distress,main_topics,care access,1,s030
@@ -132,6 +191,8 @@ conversation_pain_points,bot ignored emotional distress,main_topics,fertility an
 conversation_pain_points,bot ignored emotional distress,main_topics,medication use,1,s030
 conversation_pain_points,bot ignored emotional distress,main_topics,migraine,1,s030
 conversation_pain_points,bot ignored emotional distress,main_topics,treatment effectiveness,1,s030
+conversation_pain_points,bot ignored emotional distress,reason_for_conversation,coping emotionally,1,s043
+conversation_pain_points,bot ignored emotional distress,reason_for_conversation,managing symptoms,1,s030
 conversation_pain_points,bot ignored suicidal statement,end_reason,left unheard,1,s026
 conversation_pain_points,bot ignored suicidal statement,end_reason,partial resolution,1,s005
 conversation_pain_points,bot ignored suicidal statement,main_topics,IBD management,1,s026
@@ -143,6 +204,8 @@ conversation_pain_points,bot ignored suicidal statement,main_topics,medication s
 conversation_pain_points,bot ignored suicidal statement,main_topics,menstrual health,1,s005
 conversation_pain_points,bot ignored suicidal statement,main_topics,skin and hair concerns,1,s005
 conversation_pain_points,bot ignored suicidal statement,main_topics,treatment effectiveness,1,s026
+conversation_pain_points,bot ignored suicidal statement,reason_for_conversation,coping emotionally,1,s026
+conversation_pain_points,bot ignored suicidal statement,reason_for_conversation,understanding symptoms or results,1,s005
 conversation_pain_points,bot missed urgent symptom,end_reason,gave up frustrated,1,s030
 conversation_pain_points,bot missed urgent symptom,end_reason,left unheard,1,s026
 conversation_pain_points,bot missed urgent symptom,end_reason,partial resolution,1,s022
@@ -154,6 +217,9 @@ conversation_pain_points,bot missed urgent symptom,main_topics,migraine,1,s030
 conversation_pain_points,bot missed urgent symptom,main_topics,suicidal thoughts,1,s026
 conversation_pain_points,bot missed urgent symptom,main_topics,treatment decisions,1,s022
 conversation_pain_points,bot missed urgent symptom,main_topics,work impact,1,s030
+conversation_pain_points,bot missed urgent symptom,reason_for_conversation,coping emotionally,1,s026
+conversation_pain_points,bot missed urgent symptom,reason_for_conversation,managing symptoms,1,s030
+conversation_pain_points,bot missed urgent symptom,reason_for_conversation,urgent symptom help,1,s022
 conversation_pain_points,bot repeated advice after pushback,end_reason,left unheard,1,s043
 conversation_pain_points,bot repeated advice after pushback,main_topics,chronic illness impact,1,s043
 conversation_pain_points,bot repeated advice after pushback,main_topics,diabetes management,1,s017
@@ -165,6 +231,9 @@ conversation_pain_points,bot repeated advice after pushback,main_topics,medicati
 conversation_pain_points,bot repeated advice after pushback,main_topics,pain management,1,s014
 conversation_pain_points,bot repeated advice after pushback,main_topics,supplement use,1,s014
 conversation_pain_points,bot repeated advice after pushback,main_topics,work impact,1,s043
+conversation_pain_points,bot repeated advice after pushback,reason_for_conversation,coping emotionally,1,s043
+conversation_pain_points,bot repeated advice after pushback,reason_for_conversation,understanding medication,1,s014
+conversation_pain_points,bot repeated advice after pushback,reason_for_conversation,understanding symptoms or results,1,s017
 conversation_pain_points,bot repeated generic advice,end_reason,gave up frustrated,1,s030
 conversation_pain_points,bot repeated generic advice,end_reason,partial resolution,1,s017
 conversation_pain_points,bot repeated generic advice,main_topics,care access,1,s030
@@ -173,12 +242,15 @@ conversation_pain_points,bot repeated generic advice,main_topics,medication use,
 conversation_pain_points,bot repeated generic advice,main_topics,migraine,1,s030
 conversation_pain_points,bot repeated generic advice,main_topics,treatment effectiveness,1,s030
 conversation_pain_points,bot repeated generic advice,main_topics,work impact,1,s030
+conversation_pain_points,bot repeated generic advice,reason_for_conversation,managing symptoms,1,s030
+conversation_pain_points,bot repeated generic advice,reason_for_conversation,understanding symptoms or results,1,s017
 conversation_pain_points,bot shifted work to user,end_reason,partial resolution,1,s046
 conversation_pain_points,bot shifted work to user,main_topics,POTS management,1,s046
 conversation_pain_points,bot shifted work to user,main_topics,care access,1,s046
 conversation_pain_points,bot shifted work to user,main_topics,cognitive symptoms,1,s046
 conversation_pain_points,bot shifted work to user,main_topics,long COVID,1,s046
 conversation_pain_points,bot shifted work to user,main_topics,work impact,1,s046
+conversation_pain_points,bot shifted work to user,reason_for_conversation,navigating care access,1,s046
 conversation_pain_points,bot used confusing jargon,end_reason,left confused,1,s038
 conversation_pain_points,bot used confusing jargon,end_reason,need met,1,s012
 conversation_pain_points,bot used confusing jargon,main_topics,IBS and SIBO,1,s012
@@ -188,21 +260,26 @@ conversation_pain_points,bot used confusing jargon,main_topics,fibromyalgia,1,s0
 conversation_pain_points,bot used confusing jargon,main_topics,pain management,1,s038
 conversation_pain_points,bot used confusing jargon,main_topics,rheumatoid arthritis,1,s038
 conversation_pain_points,bot used confusing jargon,main_topics,supplement use,1,s012
+conversation_pain_points,bot used confusing jargon,reason_for_conversation,understanding diagnosis,1,s012
+conversation_pain_points,bot used confusing jargon,reason_for_conversation,understanding prognosis and risk,1,s038
 end_reason,accepted plan,main_topics,chronic illness impact,1,s031
 end_reason,accepted plan,main_topics,diabetes management,1,s031
 end_reason,accepted plan,main_topics,diet and nutrition,1,s031
 end_reason,accepted plan,main_topics,disease management,1,s031
 end_reason,accepted plan,main_topics,medication use,1,s031
+end_reason,accepted plan,reason_for_conversation,deciding on treatment,1,s031
 end_reason,gave up frustrated,main_topics,care access,1,s030
 end_reason,gave up frustrated,main_topics,medication use,1,s030
 end_reason,gave up frustrated,main_topics,migraine,1,s030
 end_reason,gave up frustrated,main_topics,treatment effectiveness,1,s030
 end_reason,gave up frustrated,main_topics,work impact,1,s030
+end_reason,gave up frustrated,reason_for_conversation,managing symptoms,1,s030
 end_reason,left confused,main_topics,care access,1,s038
 end_reason,left confused,main_topics,fatigue and pacing,1,s038
 end_reason,left confused,main_topics,fibromyalgia,1,s038
 end_reason,left confused,main_topics,pain management,1,s038
 end_reason,left confused,main_topics,rheumatoid arthritis,1,s038
+end_reason,left confused,reason_for_conversation,understanding prognosis and risk,1,s038
 end_reason,left unheard,main_topics,IBD management,1,s026
 end_reason,left unheard,main_topics,bowel symptoms,1,s026
 end_reason,left unheard,main_topics,care access,1,s018
@@ -214,6 +291,7 @@ end_reason,left unheard,main_topics,pain management,1,s018
 end_reason,left unheard,main_topics,pelvic pain,1,s018
 end_reason,left unheard,main_topics,suicidal thoughts,1,s026
 end_reason,left unheard,main_topics,treatment effectiveness,1,s026
+end_reason,left unheard,reason_for_conversation,managing symptoms,1,s018
 end_reason,need met,main_topics,IBD monitoring,1,s023
 end_reason,need met,main_topics,POTS management,1,s006
 end_reason,need met,main_topics,chronic illness impact,1,s037
@@ -225,6 +303,9 @@ end_reason,need met,main_topics,pain management,1,s011
 end_reason,need met,main_topics,preventive medication,1,s002
 end_reason,need met,main_topics,surgical care,1,s015
 end_reason,need met,main_topics,travel health,1,s035
+end_reason,need met,reason_for_conversation,navigating care access,1,s008
+end_reason,need met,reason_for_conversation,understanding medication,1,s003
+end_reason,need met,reason_for_conversation,urgent symptom help,1,s019
 end_reason,partial resolution,main_topics,PCOS management,1,s005
 end_reason,partial resolution,main_topics,POTS management,1,s046
 end_reason,partial resolution,main_topics,appointments and care planning,1,s005
@@ -245,8 +326,169 @@ end_reason,partial resolution,main_topics,supplement use,1,s014
 end_reason,partial resolution,main_topics,treatment decisions,1,s022
 end_reason,partial resolution,main_topics,treatment effectiveness,1,s022
 end_reason,partial resolution,main_topics,work impact,1,s046
+end_reason,partial resolution,reason_for_conversation,navigating care access,1,s046
+end_reason,partial resolution,reason_for_conversation,urgent symptom help,1,s022
 end_reason,unverified reassurance,main_topics,care access,1,s024
 end_reason,unverified reassurance,main_topics,disease management,1,s024
 end_reason,unverified reassurance,main_topics,emotional distress,1,s024
 end_reason,unverified reassurance,main_topics,medication use,1,s024
 end_reason,unverified reassurance,main_topics,rheumatoid arthritis,1,s024
+end_reason,unverified reassurance,reason_for_conversation,navigating care access,1,s024
+main_topics,IBD management,reason_for_conversation,coping emotionally,1,s026
+main_topics,IBD management,reason_for_conversation,managing symptoms,1,s037
+main_topics,IBD management,reason_for_conversation,understanding diagnosis,1,s042
+main_topics,IBD management,reason_for_conversation,understanding medication,1,s003
+main_topics,IBD management,reason_for_conversation,understanding prognosis and risk,1,s023
+main_topics,IBD monitoring,reason_for_conversation,understanding prognosis and risk,1,s023
+main_topics,IBS and SIBO,reason_for_conversation,lifestyle guidance,1,s027
+main_topics,IBS and SIBO,reason_for_conversation,managing symptoms,1,s013
+main_topics,IBS and SIBO,reason_for_conversation,understanding diagnosis,1,s012
+main_topics,PCOS management,reason_for_conversation,managing symptoms,1,s007
+main_topics,PCOS management,reason_for_conversation,planning around life events,1,s048
+main_topics,PCOS management,reason_for_conversation,understanding diagnosis,1,s029
+main_topics,PCOS management,reason_for_conversation,understanding symptoms or results,1,s005
+main_topics,POTS management,reason_for_conversation,navigating care access,1,s046
+main_topics,POTS management,reason_for_conversation,understanding diagnosis,1,s006
+main_topics,appointments and care planning,reason_for_conversation,deciding on treatment,1,s001
+main_topics,appointments and care planning,reason_for_conversation,understanding symptoms or results,1,s005
+main_topics,bowel symptoms,reason_for_conversation,coping emotionally,1,s026
+main_topics,bowel symptoms,reason_for_conversation,managing medication side effects,1,s034
+main_topics,bowel symptoms,reason_for_conversation,understanding diagnosis,1,s012
+main_topics,bowel symptoms,reason_for_conversation,urgent symptom help,1,s022
+main_topics,cancer risk,reason_for_conversation,deciding on treatment,1,s032
+main_topics,cancer risk,reason_for_conversation,understanding prognosis and risk,1,s023
+main_topics,cancer risk,reason_for_conversation,understanding treatment,1,s041
+main_topics,care access,reason_for_conversation,planning around life events,1,s035
+main_topics,care access,reason_for_conversation,understanding prognosis and risk,1,s038
+main_topics,care access,reason_for_conversation,urgent symptom help,1,s022
+main_topics,chronic illness impact,reason_for_conversation,coping emotionally,1,s043
+main_topics,chronic illness impact,reason_for_conversation,deciding on treatment,1,s031
+main_topics,chronic illness impact,reason_for_conversation,managing symptoms,1,s037
+main_topics,cognitive symptoms,reason_for_conversation,lifestyle guidance,1,s004
+main_topics,cognitive symptoms,reason_for_conversation,managing symptoms,1,s016
+main_topics,cognitive symptoms,reason_for_conversation,navigating care access,1,s046
+main_topics,diabetes management,reason_for_conversation,deciding on treatment,1,s031
+main_topics,diabetes management,reason_for_conversation,managing medication side effects,1,s034
+main_topics,diabetes management,reason_for_conversation,navigating care access,1,s008
+main_topics,diabetes management,reason_for_conversation,understanding diagnosis,1,s029
+main_topics,diagnostic testing,reason_for_conversation,deciding on treatment,1,s045
+main_topics,diagnostic testing,reason_for_conversation,lifestyle guidance,1,s004
+main_topics,diagnostic testing,reason_for_conversation,managing symptoms,1,s016
+main_topics,diagnostic testing,reason_for_conversation,understanding diagnosis,1,s036
+main_topics,diagnostic testing,reason_for_conversation,understanding symptoms or results,1,s025
+main_topics,diet and nutrition,reason_for_conversation,deciding on treatment,1,s031
+main_topics,diet and nutrition,reason_for_conversation,managing symptoms,1,s013
+main_topics,diet and nutrition,reason_for_conversation,navigating care access,1,s008
+main_topics,diet and nutrition,reason_for_conversation,urgent symptom help,1,s022
+main_topics,disease management,reason_for_conversation,deciding on treatment,1,s031
+main_topics,disease management,reason_for_conversation,navigating care access,1,s024
+main_topics,disease monitoring,reason_for_conversation,understanding diagnosis,1,s042
+main_topics,dismissive care,reason_for_conversation,deciding on treatment,1,s001
+main_topics,dismissive care,reason_for_conversation,managing symptoms,1,s018
+main_topics,dismissive care,reason_for_conversation,understanding prognosis and risk,1,s010
+main_topics,dismissive care,reason_for_conversation,understanding symptoms or results,1,s025
+main_topics,dismissive care,reason_for_conversation,understanding treatment,1,s021
+main_topics,emotional distress,reason_for_conversation,navigating care access,1,s024
+main_topics,emotional distress,reason_for_conversation,planning around life events,1,s049
+main_topics,emotional distress,reason_for_conversation,understanding prognosis and risk,1,s010
+main_topics,endometriosis,reason_for_conversation,coping emotionally,1,s043
+main_topics,endometriosis,reason_for_conversation,managing symptoms,1,s018
+main_topics,endometriosis,reason_for_conversation,understanding treatment,1,s021
+main_topics,exercise and activity,reason_for_conversation,lifestyle guidance,1,s028
+main_topics,fatigue and pacing,reason_for_conversation,planning around life events,1,s049
+main_topics,fertility and pregnancy,reason_for_conversation,coping emotionally,1,s043
+main_topics,fibromyalgia,reason_for_conversation,understanding prognosis and risk,1,s038
+main_topics,health information,reason_for_conversation,understanding diagnosis,1,s042
+main_topics,healthcare costs,reason_for_conversation,lifestyle guidance,1,s027
+main_topics,healthcare costs,reason_for_conversation,navigating care access,1,s008
+main_topics,healthcare costs,reason_for_conversation,planning around life events,1,s035
+main_topics,healthcare costs,reason_for_conversation,understanding diagnosis,1,s029
+main_topics,healthcare costs,reason_for_conversation,understanding treatment,1,s002
+main_topics,hormonal treatment,reason_for_conversation,understanding treatment,1,s021
+main_topics,hormonal treatment,reason_for_conversation,urgent symptom help,1,s019
+main_topics,infection risk,reason_for_conversation,deciding on treatment,1,s032
+main_topics,infection risk,reason_for_conversation,planning around life events,1,s035
+main_topics,infection risk,reason_for_conversation,understanding treatment,1,s041
+main_topics,long COVID,reason_for_conversation,navigating care access,1,s046
+main_topics,long COVID,reason_for_conversation,planning around life events,1,s049
+main_topics,long COVID,reason_for_conversation,understanding diagnosis,1,s006
+main_topics,long COVID,reason_for_conversation,understanding prognosis and risk,1,s010
+main_topics,medication access,reason_for_conversation,deciding on treatment,1,s045
+main_topics,medication administration,reason_for_conversation,managing medication side effects,1,s044
+main_topics,medication administration,reason_for_conversation,navigating care access,1,s008
+main_topics,medication dosing,reason_for_conversation,managing medication side effects,1,s034
+main_topics,medication dosing,reason_for_conversation,understanding medication,1,s003
+main_topics,medication dosing,reason_for_conversation,urgent symptom help,1,s019
+main_topics,medication formulation,reason_for_conversation,deciding on treatment,1,s045
+main_topics,medication monitoring,reason_for_conversation,understanding medication,1,s047
+main_topics,medication options,reason_for_conversation,deciding on treatment,1,s050
+main_topics,medication options,reason_for_conversation,managing medication side effects,1,s044
+main_topics,medication options,reason_for_conversation,understanding diagnosis,1,s006
+main_topics,medication options,reason_for_conversation,understanding medication,1,s014
+main_topics,medication safety,reason_for_conversation,managing symptoms,1,s007
+main_topics,medication safety,reason_for_conversation,understanding medication,1,s047
+main_topics,medication safety,reason_for_conversation,understanding treatment,1,s041
+main_topics,medication side effects,reason_for_conversation,coping emotionally,1,s026
+main_topics,medication side effects,reason_for_conversation,deciding on treatment,1,s015
+main_topics,medication side effects,reason_for_conversation,managing medication side effects,1,s044
+main_topics,medication side effects,reason_for_conversation,navigating care access,1,s008
+main_topics,medication side effects,reason_for_conversation,planning around life events,1,s035
+main_topics,medication side effects,reason_for_conversation,understanding diagnosis,1,s029
+main_topics,medication side effects,reason_for_conversation,understanding treatment,1,s002
+main_topics,medication use,reason_for_conversation,managing medication side effects,1,s044
+main_topics,medication use,reason_for_conversation,navigating care access,1,s024
+main_topics,medication use,reason_for_conversation,understanding treatment,1,s033
+main_topics,menstrual health,reason_for_conversation,understanding symptoms or results,1,s005
+main_topics,menstrual health,reason_for_conversation,understanding treatment,1,s021
+main_topics,migraine,reason_for_conversation,managing symptoms,1,s030
+main_topics,migraine,reason_for_conversation,understanding treatment,1,s033
+main_topics,migraine,reason_for_conversation,urgent symptom help,1,s019
+main_topics,pain management,reason_for_conversation,deciding on treatment,1,s011
+main_topics,pain management,reason_for_conversation,managing symptoms,1,s018
+main_topics,pain management,reason_for_conversation,understanding medication,1,s014
+main_topics,pain management,reason_for_conversation,understanding prognosis and risk,1,s038
+main_topics,pelvic pain,reason_for_conversation,managing symptoms,1,s018
+main_topics,preventive medication,reason_for_conversation,understanding treatment,1,s002
+main_topics,psoriasis,reason_for_conversation,deciding on treatment,1,s050
+main_topics,psoriasis,reason_for_conversation,managing symptoms,1,s009
+main_topics,psoriasis,reason_for_conversation,understanding diagnosis,1,s036
+main_topics,psoriasis,reason_for_conversation,understanding treatment,1,s041
+main_topics,rheumatoid arthritis,reason_for_conversation,navigating care access,1,s024
+main_topics,rheumatoid arthritis,reason_for_conversation,planning around life events,1,s039
+main_topics,rheumatoid arthritis,reason_for_conversation,understanding diagnosis,1,s036
+main_topics,rheumatoid arthritis,reason_for_conversation,understanding medication,1,s047
+main_topics,rheumatoid arthritis,reason_for_conversation,understanding prognosis and risk,1,s038
+main_topics,skin and hair concerns,reason_for_conversation,deciding on treatment,1,s050
+main_topics,skin and hair concerns,reason_for_conversation,understanding diagnosis,1,s036
+main_topics,skin and hair concerns,reason_for_conversation,understanding symptoms or results,1,s005
+main_topics,skin and hair concerns,reason_for_conversation,understanding treatment,1,s041
+main_topics,sleep problems,reason_for_conversation,managing symptoms,1,s016
+main_topics,sleep problems,reason_for_conversation,understanding symptoms or results,1,s020
+main_topics,suicidal thoughts,reason_for_conversation,coping emotionally,1,s026
+main_topics,suicidal thoughts,reason_for_conversation,understanding symptoms or results,1,s005
+main_topics,supplement use,reason_for_conversation,managing medication side effects,1,s044
+main_topics,supplement use,reason_for_conversation,understanding diagnosis,1,s012
+main_topics,supplement use,reason_for_conversation,understanding medication,1,s014
+main_topics,supplement use,reason_for_conversation,understanding symptoms or results,1,s040
+main_topics,surgical care,reason_for_conversation,deciding on treatment,1,s015
+main_topics,thyroid management,reason_for_conversation,deciding on treatment,1,s045
+main_topics,thyroid management,reason_for_conversation,lifestyle guidance,1,s004
+main_topics,travel health,reason_for_conversation,planning around life events,1,s035
+main_topics,treatment decisions,reason_for_conversation,deciding on treatment,1,s001
+main_topics,treatment decisions,reason_for_conversation,understanding symptoms or results,1,s020
+main_topics,treatment decisions,reason_for_conversation,urgent symptom help,1,s022
+main_topics,treatment effectiveness,reason_for_conversation,coping emotionally,1,s026
+main_topics,treatment effectiveness,reason_for_conversation,managing medication side effects,1,s044
+main_topics,treatment effectiveness,reason_for_conversation,managing symptoms,1,s030
+main_topics,treatment effectiveness,reason_for_conversation,understanding medication,1,s003
+main_topics,treatment effectiveness,reason_for_conversation,understanding treatment,1,s033
+main_topics,treatment effectiveness,reason_for_conversation,urgent symptom help,1,s022
+main_topics,treatment logistics,reason_for_conversation,deciding on treatment,1,s032
+main_topics,treatment logistics,reason_for_conversation,planning around life events,1,s035
+main_topics,urgent symptom concerns,reason_for_conversation,managing medication side effects,1,s034
+main_topics,urgent symptom concerns,reason_for_conversation,urgent symptom help,1,s019
+main_topics,work impact,reason_for_conversation,coping emotionally,1,s043
+main_topics,work impact,reason_for_conversation,deciding on treatment,1,s050
+main_topics,work impact,reason_for_conversation,navigating care access,1,s046
+main_topics,work impact,reason_for_conversation,planning around life events,1,s049
+main_topics,work impact,reason_for_conversation,understanding prognosis and risk,1,s010

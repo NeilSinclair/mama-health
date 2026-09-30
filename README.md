@@ -16,7 +16,7 @@ Outputs are written to `outputs/`. Tests: `uv run pytest`.
 
 ## LLM labels
 
-Each conversation is summarised by an LLM (topics, summary, reason, conversation pain points, resolved, end reason), and the free-text labels are then consolidated into a smaller vocabulary. This runs twice, with Claude Haiku 4.5 (`haiku`) and OpenAI GPT Luna (`gpt_luna`). Open `outputs/explorer.html` in a browser to explore the results. The Conversations tab lists every summary with filters, and the Relationships tab graphs which topics, conversation pain points and end reasons occur together. The counts behind the graph are in `outputs/summaries/<version>/label_cooccurrence.csv`.
+Each conversation is summarised by an LLM (topics, summary, reason, conversation pain points, resolved, end reason), and the free-text labels are then consolidated into a smaller vocabulary. This runs twice, with Claude Haiku 4.5 (`haiku`) and OpenAI GPT Luna (`gpt_luna`). Open `outputs/explorer.html` in a browser to explore the results. The Conversations tab lists every summary with filters, and the Relationships tab graphs which reasons for conversation, topics, conversation pain points and end reasons occur together. The counts behind the graph are in `outputs/summaries/<version>/label_cooccurrence.csv`.
 
 Labels are cached in `data/labels/`, and the pipeline uses the cache by default, so no API key is needed. To regenerate them with your own keys, copy `.env.example` to `.env`, set `ANTHROPIC_API_KEY` and/or `OPENAI_API_KEY`, then run:
 
