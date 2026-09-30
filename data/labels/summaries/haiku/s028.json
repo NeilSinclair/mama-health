@@ -1,0 +1,28 @@
+{
+  "created_at": "2026-09-30T07:17:36+00:00",
+  "model_id": "claude-haiku-4-5-20251001",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "fibromyalgia exercise crash cycle",
+      "delayed flares from overexertion",
+      "boom-and-bust activity pattern",
+      "graded exercise approach",
+      "pool-based exercise as option"
+    ],
+    "reason_for_conversation": "understanding why exercise triggers crashes and learning a workable approach",
+    "summary": "User described years of being stuck between medical advice that exercise helps fibromyalgia and their lived experience of crashes lasting days after modest activity. The assistant reframed crashes as evidence of overdosing rather than exercise being impossible, explained the physiology of delayed flares, and taught the user about graded exercise starting at very low thresholds (2–5 minutes), capping activity on good days to break the boom-bust cycle, and progressing only when current levels are tolerated. The user understood the reframe, recognized their own all-or-nothing pattern, and identified the community pool as a next step. No safety-critical moments."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "input_tokens": 5398,
+    "output_tokens": 235
+  },
+  "version": "haiku"
+}

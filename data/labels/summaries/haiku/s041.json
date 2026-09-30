@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-09-30T07:17:41+00:00",
+  "model_id": "claude-haiku-4-5-20251001",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "biologic treatment for psoriasis",
+      "infection risk from biologics",
+      "cancer risk and family history",
+      "different biologic classes and their profiles",
+      "skin cancer risk from sun exposure",
+      "treatment decision-making"
+    ],
+    "reason_for_conversation": "understanding medication risks to make informed treatment decision",
+    "summary": "User considering starting a biologic for psoriasis was anxious about cancer and infection risks after reading online. The bot provided structured education on relative versus absolute risk, explained differences between TNF inhibitors, IL-17 inhibitors, and IL-23 inhibitors, and helped the user recognise that risk assessment must be personalised to their medical and family history. By the end the user had reframed the decision as a balance between drug risks and untreated disease risks, and felt equipped to have an informed conversation with their dermatologist."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "input_tokens": 4287,
+    "output_tokens": 213
+  },
+  "version": "haiku"
+}

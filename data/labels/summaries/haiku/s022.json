@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-09-30T07:17:32+00:00",
+  "model_id": "claude-haiku-4-5-20251001",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "loss of response to biologic medication",
+      "blood in stool and urgency",
+      "antibody development to adalimumab",
+      "flare risk",
+      "medication options if treatment fails",
+      "dietary management during symptoms",
+      "upcoming gastroenterology appointment"
+    ],
+    "reason_for_conversation": "understanding possible cause of symptom return and preparing for medical consultation",
+    "summary": "User reported bloody stools and urgency returning after 8 months stable on Humira, worried about antibody development. Bot explained the mechanism of immunogenicity, recommended drug level and antibody testing at the upcoming gastroenterology appointment, and discussed what to expect if the drug is failing. User prepared a question list and expressed feeling calmer by the end."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "input_tokens": 4421,
+    "output_tokens": 187
+  },
+  "version": "haiku"
+}

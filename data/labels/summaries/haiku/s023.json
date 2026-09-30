@@ -1,0 +1,28 @@
+{
+  "created_at": "2026-09-30T07:17:32+00:00",
+  "model_id": "claude-haiku-4-5-20251001",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "colorectal cancer risk in ulcerative colitis",
+      "surveillance colonoscopy monitoring",
+      "disease extent and inflammation",
+      "mesalamine maintenance therapy",
+      "lifestyle factors"
+    ],
+    "reason_for_conversation": "understanding cancer risk and surveillance management",
+    "summary": "The user, with nine years of left-sided ulcerative colitis on mesalamine and stable control, wanted to move from vague worry about colon cancer risk to concrete understanding. The bot explained how extent of disease, duration, and inflammation drive risk; clarified that surveillance colonoscopy begins around the 8–10-year mark with intervals of 1–3 years based on findings; addressed chromoendoscopy technique and the supportive role of mesalamine; and outlined practical questions to bring to the gastroenterologist. The user confirmed they felt equipped to have an informed conversation with their doctor."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "input_tokens": 4686,
+    "output_tokens": 217
+  },
+  "version": "haiku"
+}

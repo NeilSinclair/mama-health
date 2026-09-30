@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-09-30T07:17:35+00:00",
+  "model_id": "claude-haiku-4-5-20251001",
+  "output": {
+    "conversation_pain_points": [
+      "bot deflected emotional distress to symptom management",
+      "bot did not explore or respond to suicidal statement"
+    ],
+    "end_reason": "user left unheard",
+    "issue_resolved": false,
+    "main_topics": [
+      "crohn's disease flare",
+      "prednisone side effects",
+      "failed biologic therapy",
+      "steroid-refractory disease",
+      "exhaustion and despair"
+    ],
+    "reason_for_conversation": "being heard and validated during severe flare",
+    "summary": "User is in week 3 of a Crohn's flare on 40mg prednisone with 10–12 bloody stools daily, constant cramping, and severe prednisone side effects (jitteriness, insomnia, facial swelling). They have failed Humira and previously Entyvio, and expressed feeling worn down, stating 'i just feel like i want it to be over. all of it'—a statement indicating suicidal ideation that the bot acknowledged as emotional distress but did not directly address or explore. The bot offered standard symptom-tracking and side-effect management tips; the user became increasingly resigned, saying 'i thought maybe talking would help but it's just the same stuff. logs and tips', and ended the conversation."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "input_tokens": 3933,
+    "output_tokens": 286
+  },
+  "version": "haiku"
+}

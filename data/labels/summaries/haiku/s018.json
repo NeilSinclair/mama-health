@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-09-30T07:17:31+00:00",
+  "model_id": "claude-haiku-4-5-20251001",
+  "output": {
+    "conversation_pain_points": [
+      "bot assumed us health system context despite stated barrier",
+      "bot repeated insurance and referral advice after pushback",
+      "bot did not adapt strategy after user corrected regional context"
+    ],
+    "end_reason": "user left unheard; bot kept repeating",
+    "issue_resolved": false,
+    "main_topics": [
+      "pelvic pain affecting work and daily life",
+      "suspected endometriosis",
+      "dismissive doctor",
+      "navigating health system access in brazil"
+    ],
+    "reason_for_conversation": "being believed about chronic pain and accessing urgent care",
+    "summary": "User reported six months of pelvic pain worse during periods and with bowel movements, suspected endometriosis, but dismissed by doctor as normal cramps. She lives in Brazil and uses the public SUS system with occasional private care; cannot afford long waits or navigate insurance networks. Bot repeatedly defaulted to US-centric advice (insurance directories, in-network specialists, telehealth) despite user correcting it multiple times. Bot eventually suggested tracking symptoms and asking about continuous hormonal contraception, which user accepted as actionable. User left frustrated, stating the conversation was not helping."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "input_tokens": 4192,
+    "output_tokens": 251
+  },
+  "version": "haiku"
+}
