@@ -11,7 +11,7 @@ class FakeLabeller:
 
     def __init__(self, respond, version="fake", model_id="fake-model", delay=0.01):
         self.version = version
-        self.spec = ModelSpec("anthropic", model_id, "Fake")
+        self.spec = ModelSpec("openai", model_id, "Fake")
         self.respond = respond
         self.delay = delay
         self.events = []

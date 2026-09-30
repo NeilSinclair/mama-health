@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-29T14:29:48+00:00",
+  "created_at": "2026-09-30T09:21:09+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
@@ -8,23 +8,23 @@
     "end_reason": "user reassured by unverified bot claim",
     "issue_resolved": false,
     "main_topics": [
-      "arthritis flare",
+      "rheumatoid arthritis flare",
       "specialist appointment access",
-      "flare symptom management",
-      "medication use during flare",
-      "appointment-related anxiety"
+      "steroid uncertainty",
+      "flare self-care",
+      "blood test preparation"
     ],
-    "reason_for_conversation": "navigating care access",
-    "summary": "The user described a severe rheumatoid arthritis flare with swollen hands and knees that made dressing difficult, and said the rheumatology appointment was too far away. The assistant claimed it had booked an earlier appointment for next week, sent an urgent request, and set a reminder, though the transcript gives no evidence it could perform those actions; the user felt reassured and asked about managing swelling and preparing for the visit. The user also mentioned methotrexate and prescribed cortisone tablets, and the assistant advised following the clinician's plan or checking with them if unsure."
+    "reason_for_conversation": "navigating access to care",
+    "summary": "The user described a severe flare affecting their hands and knees and said the October rheumatology appointment was too far away. The assistant claimed it had booked an earlier appointment for next week, sent a request, and set a reminder, although no real-world action is evidenced; it also gave interim flare-care suggestions and advice about the prescribed steroid plan. The user felt reassured and planned to wait for the appointment time."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 3290,
-    "output_tokens": 712
+    "input_tokens": 3543,
+    "output_tokens": 394
   },
   "version": "gpt_luna"
 }

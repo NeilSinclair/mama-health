@@ -1,31 +1,30 @@
 {
-  "created_at": "2026-09-29T14:29:40+00:00",
+  "created_at": "2026-09-30T09:21:02+00:00",
   "model_id": "gpt-6-luna",
   "output": {
-    "conversation_pain_points": [
-      "bot assumed country context"
-    ],
+    "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "fibromyalgia brain fog",
-      "work performance anxiety",
+      "fibromyalgia brain fog at work",
+      "job security fears",
       "workplace accommodations",
-      "sleep disruption",
+      "poor sleep",
       "possible sleep apnea",
-      "antihistamine use"
+      "antihistamine use",
+      "work stress"
     ],
-    "reason_for_conversation": "managing cognitive symptoms",
-    "summary": "The user sought practical strategies for worsening fibromyalgia brain fog that was causing accounting mistakes and meeting difficulties, and feared losing their job. The assistant offered work strategies and options for discussing accommodations through HR, then highlighted the user's reported snoring and breathing pauses and nightly diphenhydramine as issues to raise with a clinician; it also gave Canada-specific accommodation information despite the user not stating a location. The user said the advice was useful and the priority plan was clear."
+    "reason_for_conversation": "workplace coping strategies",
+    "summary": "The user described worsening fibromyalgia-related brain fog affecting accounting work and feared losing their job. The assistant offered work strategies and options for requesting accommodations through HR, then highlighted the user's unrefreshing sleep, reported breathing pauses during sleep, and nightly diphenhydramine use as issues to raise with a doctor or pharmacist. The user said the plan was clear and found the conversation useful."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 5324,
-    "output_tokens": 708
+    "input_tokens": 5577,
+    "output_tokens": 670
   },
   "version": "gpt_luna"
 }

@@ -1,29 +1,28 @@
 {
-  "created_at": "2026-09-29T14:30:06+00:00",
+  "created_at": "2026-09-30T09:21:27+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "levothyroxine brand switch",
-      "thyroid blood test timing",
-      "thyroid symptom monitoring",
-      "medication routine",
+      "thyroid medication switch",
+      "thyroid monitoring",
+      "symptom monitoring",
       "pharmacy communication",
-      "brand consistency preference"
+      "brand consistency"
     ],
     "reason_for_conversation": "medication change guidance",
-    "summary": "The user asked whether switching to a different maker of levothyroxine at the same dose required any action. The assistant explained follow-up TSH testing 6–8 weeks after the switch, symptoms to watch for, and keeping the medication routine consistent; the user also expressed annoyance that the pharmacy had not explained the substitution and preferred staying on one brand. The user said the plan was clear and was exactly the kind of straight answer they wanted."
+    "summary": "The user asked whether a pharmacy's switch to a different maker of levothyroxine required action. The assistant recommended keeping the same routine, watching for symptoms, and arranging a TSH test six to eight weeks after the switch; the user was also frustrated that the pharmacy had not explained the change and preferred staying on one brand. The user said the plan was clear and was exactly the kind of answer they wanted."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 3412,
-    "output_tokens": 273
+    "input_tokens": 3665,
+    "output_tokens": 317
   },
   "version": "gpt_luna"
 }

@@ -1,31 +1,31 @@
 {
-  "created_at": "2026-09-29T14:29:41+00:00",
+  "created_at": "2026-09-30T09:21:06+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
       "bot repeated insulin advice after correction",
-      "bot kept deflecting to doctor",
-      "bot repeated lifestyle advice"
+      "bot repeated lifestyle advice after pushback",
+      "bot kept deflecting to doctor"
     ],
-    "end_reason": "user accepted partial answer",
+    "end_reason": "natural close",
     "issue_resolved": false,
     "main_topics": [
-      "morning high glucose",
+      "morning glucose readings",
       "metformin use",
-      "dawn phenomenon",
-      "diabetes self-management"
+      "lifestyle management",
+      "glucose monitoring"
     ],
-    "reason_for_conversation": "understanding morning glucose",
-    "summary": "The user asked why morning glucose readings were around 160–180 despite taking metformin at night, walking after dinner, and reducing rice; daytime readings were lower. The assistant repeatedly raised insulin as an option after the user clarified they did not take it, and the user pushed back on repeated doctor referrals and repeated lifestyle advice. The assistant suggested a 3 a.m. glucose check and ended by recommending the user discuss the results and metformin formulation with a doctor; the user said they understood and thanked the assistant."
+    "reason_for_conversation": "managing morning glucose",
+    "summary": "The user asked why morning glucose was 160–180 despite taking metformin 1000 mg at night, walking after dinner, and reducing rice; daytime readings after meals were 140–150. The assistant suggested a 3 a.m. check and a medication review, but repeated insulin and light-dinner advice after correction or pushback; the user wanted steps they could take themselves and ended with thanks without confirming their need was met."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 3486,
-    "output_tokens": 516
+    "input_tokens": 3739,
+    "output_tokens": 864
   },
   "version": "gpt_luna"
 }

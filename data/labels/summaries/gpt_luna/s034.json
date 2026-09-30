@@ -1,28 +1,26 @@
 {
-  "created_at": "2026-09-29T14:29:55+00:00",
+  "created_at": "2026-09-30T09:21:19+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
-    "end_reason": "need met",
+    "end_reason": "user accepted plan",
     "issue_resolved": true,
     "main_topics": [
-      "daily nausea",
-      "medication dose concerns",
-      "food-related symptoms",
-      "blood sugar monitoring",
-      "urgent symptom warning signs"
+      "medication side effects",
+      "dose escalation concerns",
+      "blood sugar monitoring"
     ],
-    "reason_for_conversation": "medication side effect management",
-    "summary": "After starting Ozempic for diabetes, the user described daily nausea and early fullness that worsened with fried food and meat, and asked whether to stop or delay increasing the dose. The assistant suggested eating smaller, lighter meals, explained warning signs to seek care for, and recommended discussing the dose increase with the prescriber; the user accepted a plan to monitor morning blood sugar and talk to the doctor before increasing, and said they felt calmer."
+    "reason_for_conversation": "managing medication side effects",
+    "summary": "The user reported daily nausea and early fullness after starting Ozempic, worse after fried food or meat, and worried about stopping or increasing from 0.25 mg. The assistant suggested meal adjustments, contacting the prescriber about delaying the increase, described warning signs, and discussed glucose checks; the user accepted a plan to monitor morning sugars and talk to the doctor before increasing, and said they felt calmer."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 3804,
-    "output_tokens": 501
+    "input_tokens": 4057,
+    "output_tokens": 532
   },
   "version": "gpt_luna"
 }

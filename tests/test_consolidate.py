@@ -95,7 +95,7 @@ def test_consolidate_all_recovers_on_retry(tmp_path):
 
 
 def test_mapping_dir(tmp_path):
-    assert mapping_dir(tmp_path, "haiku") == tmp_path / "mappings" / "haiku"
+    assert mapping_dir(tmp_path, "gpt_luna") == tmp_path / "mappings" / "gpt_luna"
 
 
 def test_consolidate_all_records_usage_of_failed_attempts(tmp_path):

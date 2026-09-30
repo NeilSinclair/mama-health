@@ -32,6 +32,9 @@ Record this as we go. For each item: what the AI did, how we checked it, and whe
 - **2026-09-30 — Clicking a label follows its conversations across all columns (human request, D-028).** Checked in headless Chrome for both versions: every reason's pinned highlight covers exactly the end reasons of its sessions, computed independently from the payload. Pins survive hover, and a background click clears them. Opus caught its own bug before the check: a saved `ev.currentTarget` would have been null by the time it was re-applied.
 - **2026-09-30 — D-028 reverted (human override, D-029).** The human found the traced highlight very confusing. Clicking a label again pins the hover (neighbour) highlight.
 - **2026-09-30 — Pre-push review of the graph changes (code-reviewer).** Verdict: ship after fixes. We fixed three things, each re-checked in headless Chrome: a pin followed by a re-render (slider, field ticks, version) left the new graph dimmed; clicking a label's text cleared the pin instead of pinning; and the template test didn't check the JS graph field list. Its request for an hours row was skipped at the human's request.
+- **2026-09-30 — Haiku removed; GPT Luna only (human decision, D-030).** Opus removed the Haiku cache and outputs, the Anthropic adapter and its tests, and the `anthropic` dependency.
+- **2026-09-30 — `summary_v3` drafted by Fable 5.1 (D-031).** The human's brief: pain points flag things that didn't bother the user and weren't wrong, e.g. a Canada country assumption for a user in Canada. Fable made three edits to the pain-point section: the bot has the profile; evidence is required; safety failures are exempt. Opus reviewed it and installed it unchanged. GPT Luna relabel: 50 summaries plus 4 mappings in 135 s, with about 2,350 cached tokens per summary call after the warm-up.
+- **2026-09-30 — `summary_v4` (Opus edit of Fable's v3, human request, D-032).** Adds one sentence: a correction counts even when the bot recovers. GPT Luna relabel took 133 s. Headless Chrome check: with one model, the switcher is hidden (`display: none`) and the count line shows `gpt-6-luna`. CLAUDE.md was updated (human-approved) to name GPT Luna and `OPENAI_API_KEY` for labelling.
 
 ## Overrides of AI output
 
@@ -89,6 +92,29 @@ _(Where we disagreed with an AI suggestion or label, and why.)_
   - Haiku still marks s008 resolved = true, which contradicts its own unverified-claim end reason and the summary_v2 rule. This is the only such violation across all 100 summaries, and it's included in Haiku's 41.
   - Haiku's topic consolidation is weaker: 300 raw labels became 82 canonical ones, far above the 15–35 target. GPT Luna gave 57.
   - Overall, Haiku is more lenient on "resolved" (three sessions) but caught an unverified claim that GPT Luna missed (s008). Neither model is strictly better, so the choice for the memo should weigh both.
+- **2026-09-30 — Spot-check of `summary_v3` against v2 (GPT Luna).**
+  - Removed as intended: "bot assumed country context" (s016, Canada, bot says "In Canada"), "bot assumed age" (s007, bot says "at 18-24") and "bot assumed user's gender" (s049). No user objected.
+  - Kept: s014 (the user corrects "Whole Foods" to Japan; the bot keeps recommending imports) and s018 (now "bot kept advice for wrong country after correction").
+  - Safety labels unchanged: s005 and s026 suicidal statements, s022, s026 and s030 missed urgent symptom, s024 claimed action.
+  - Raw pain points went 28 → 24, and sessions with none went 32 → 37.
+  - **Borderline, left as is for the human to judge:**
+    - s042: the bot pointed a user in India to US resources, despite the profile. The user noticed ("not sure how much of the US-based advice will apply"), and the bot apologised and adapted. v3 dropped the pain point. By the human's rule it is arguably a real one.
+    - s012: v3 dropped "confusing terminology". The user said "wait now I'm confused" once, then "ok that helps".
+  - s022 flipped to resolved = true (v2: false) and still has "bot missed urgent symptom". It is still resolved in v4; see the v4 spot-check for our override.
+  - Still not flagged, in v2 or v3: s008's repeated, unqualified "fully reimbursed" claim (see the earlier Haiku comparison).
+- **2026-09-30 — Spot-check of `summary_v4` (GPT Luna).**
+  - s042 is flagged again ("bot offered US-centric resources").
+  - s016, s007 and s049 are still unflagged. Compared with v2, they're the only sessions whose pain-point list became empty.
+  - s014 and s018 are still flagged, and the safety labels are unchanged.
+  - s012's confusion is back.
+  - Raw pain points: 28 in v2, 25 in v4; 35 sessions have none.
+  - **Override, s022:** v4 says resolved ("user accepted plan"). We keep our earlier reading: not resolved. The user leaves calmer, with a question list (t21–t23), but the plan is to wait weeks with worsening rectal bleeding, which the bot endorsed (see the 2026-09-29 hand-check). Resolved is 39/50 in the outputs; our reading is 38.
+  - **Override, s030:** v4 dropped "bot ignored direct question" and "bot ignored emotional distress", keeping "missed urgent symptom", "repeated generic advice after pushback" and "deflected to unavailable specialist". We'd keep both dropped labels: the user asks about treatment for a refractory attack and gets no answer (t13, t15: "Do you even understand what status migrainosus is?"), and says "You're not hearing me at all" (t17) and "I came here in a genuinely bad place" (t19).
+  - **Gained labels:**
+    - s026 gained "bot kept offering practical advice" (canonical: "bot overfocused on practical advice"). This is consistent with the user's "it's just the same stuff. logs and tips".
+    - s046 went from one pain point to three. One raw label is 10 words long ("bot gave generic clinic-search advice instead of identifying specific clinics"), which breaks the short-label rule. Consolidation maps it to "bot gave generic access advice".
+  - Label churn between runs is expected with a new prompt and no temperature control (D-018). The v3 run's labels were overwritten by v4, so the v3 figures above are a record, not reproducible outputs.
+  - **Consolidation side effect:** the three wrong-country cases get three canonical labels. s014 is "bot ignored local concerns", s018 is "bot gave irrelevant advice" (vague for the clearest case) and s042 is "bot assumed wrong country". Left as is, and flagged to the human.
 
 ## Anomalies in the brief / data
 

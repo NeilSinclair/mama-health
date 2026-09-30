@@ -169,3 +169,29 @@ Append-only. Each entry records the decision, its rationale, the alternatives co
 - **Alternatives considered:** Keeping tracing but thinning the unrelated links. It would still highlight too much.
 - **What would change it:** A clearer way to show one reason's path to its end reasons, e.g. a filtered view that hides the other labels instead of highlighting within the full graph.
 
+### D-030 — GPT Luna is the labelling model; Haiku removed (supersedes D-014)
+- **Date:** 2026-09-30
+- **Decision:** The human chose GPT Luna (`gpt-6-luna`). The Haiku cache, the Haiku outputs, the Anthropic adapter and the `anthropic` dependency are removed. The explorer hides its model switcher when only one model is configured. The pipeline keeps its version-keyed layout (`data/labels/*/gpt_luna/`, `outputs/summaries/gpt_luna/`).
+- **Rationale:** The bake-off in D-014 was done. Neither model was strictly better (see NOTES, 2026-09-30), and the human preferred GPT Luna. Code for a model nobody runs would be dead code.
+- **Alternatives considered:** Keeping the Anthropic adapter for a future Claude run. It's recoverable from git history if needed.
+- **What would change it:** A need for a second labeller, for example to measure labeller agreement.
+
+### D-031 — Conversation pain points need evidence in the transcript; profile use is not a pain point (summary_v3)
+- **Date:** 2026-09-30
+- **Decision:** `summary_v3` (drafted by Fable, per D-020) tells the model:
+  - The bot is given the user's profile (country, age group, gender, condition), so using those details is not a pain point.
+  - A pain point needs transcript evidence that something went wrong: the user corrects, objects, pushes back, repeats or is frustrated; or there is an objective failure, such as a contradiction, an unanswered direct question, or a statement that conflicts with what the user said.
+  - Safety-critical failures are still flagged whether or not the user complains.
+- **Rationale:** The human reviewed v2's pain points. It flagged "bot assumed country context" for a user who does live in Canada and didn't object (s016), and similarly age (s007) and gender (s049). Meanwhile, the Brazil user frustrated by US insurance talk (s018) is a clear pain point.
+- **Assumption:** The bot sees the user's profile. Evidence: in s007 the bot says "at 18-24", the profile's exact age bucket, which the user never states. The labelling model itself still doesn't see the metadata (D-015).
+- **Counter-evidence:** In s014 (Japan), s018 (Brazil) and s042 (India), the bot gives US-centred advice despite the profile country. So either the bot doesn't always use the profile, or it ignores it. Either way, those sessions are pain points under this rule, because the user corrects the bot. The rule doesn't depend on the assumption being always true: it only stops flagging profile use the user accepts.
+- **Alternatives considered:** Passing the user's metadata to the labelling model so it can check the bot's assumptions. Rejected for now: it reverses D-015, and the transcript rule handles the observed cases.
+- **What would change it:** Spot-checks finding real pain points that v3 misses because the user didn't react.
+
+### D-032 — A corrected mistake is still a pain point (summary_v4, refines D-031)
+- **Date:** 2026-09-30
+- **Decision:** `summary_v4` adds one rule to v3's pain-point section: a user's correction counts even when the bot then apologises and adapts, because the user still had to catch the mistake.
+- **Rationale:** v3 dropped s042. There the bot pointed a user in India to US resources, the user noticed, and the bot adapted. The human wants that kept as a pain point.
+- **Alternatives considered:** Editing v3 in place. Rejected, because NOTES' v2→v3 spot-check describes v3's output, and a new version keeps that traceable. The v3 labels themselves were overwritten by the v4 run, so they're a record in NOTES, not reproducible outputs.
+- **What would change it:** Nothing pending.
+

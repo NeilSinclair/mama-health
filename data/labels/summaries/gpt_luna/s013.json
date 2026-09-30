@@ -1,29 +1,28 @@
 {
-  "created_at": "2026-09-29T14:29:36+00:00",
+  "created_at": "2026-09-30T09:20:56+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
-    "end_reason": "need met",
+    "end_reason": "user accepted plan",
     "issue_resolved": true,
     "main_topics": [
-      "stress-triggered ibs",
-      "diarrhea and urgency",
+      "stress-triggered IBS flares",
+      "diarrhea and cramping",
       "work disruption",
-      "ibs treatments",
-      "caffeine use",
-      "doctor advice"
+      "IBS treatment options",
+      "doctor fiber advice"
     ],
-    "reason_for_conversation": "flare management",
-    "summary": "The user described stress-related IBS flares with diarrhea, urgency, and cramping that disrupt meetings, and asked for practical short- and long-term strategies. The assistant discussed gut-directed hypnotherapy or IBS-focused CBT, options for acute symptoms, and reducing caffeine on stressful days; the user said the advice was helpful and left with a plan to try it and discuss some options with their doctor."
+    "reason_for_conversation": "stress-triggered symptom management",
+    "summary": "The user described stress-related IBS flares with diarrhea, urgency, and cramping that disrupt meetings, and said their doctor had mainly advised more fiber. The assistant discussed longer-term gut-directed hypnotherapy or CBT, options for acute symptoms, reducing caffeine on stressful days, and how to involve the doctor; the user said the advice was helpful and accepted the plan."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 4220,
-    "output_tokens": 644
+    "input_tokens": 4473,
+    "output_tokens": 416
   },
   "version": "gpt_luna"
 }

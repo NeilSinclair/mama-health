@@ -1,30 +1,30 @@
 {
-  "created_at": "2026-09-29T14:29:52+00:00",
+  "created_at": "2026-09-30T09:21:15+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
-    "end_reason": "need met",
+    "end_reason": "user accepted plan",
     "issue_resolved": true,
     "main_topics": [
-      "pcos and insulin resistance",
-      "metformin treatment",
-      "medication side effects",
+      "PCOS",
+      "insulin resistance",
+      "diagnosis-related distress",
+      "metformin",
       "weight loss frustration",
-      "dietary choices",
-      "exercise preferences",
-      "glucose monitoring costs"
+      "diet and exercise changes",
+      "glucose monitor coverage"
     ],
     "reason_for_conversation": "understanding diagnosis and treatment",
-    "summary": "The user felt overwhelmed after learning they had insulin resistance alongside PCOS and asked how the conditions relate, whether metformin is appropriate without diabetes, and how to manage insulin resistance through lifestyle changes. The assistant explained medication, diet, exercise, and optional glucose monitoring; the user said the discussion helped and that they planned to start metformin as their doctor suggested and walk more after dinner."
+    "summary": "The user felt overwhelmed by a new insulin resistance diagnosis alongside PCOS and asked how the conditions relate, about metformin and its side effects, and about lifestyle options. The assistant discussed weight, diet, exercise, and an optional continuous glucose monitor; the user noted likely coverage concerns through their Krankenkasse. The user said the explanations helped and chose to start metformin as recommended by their doctor and walk more after dinner."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 3630,
-    "output_tokens": 434
+    "input_tokens": 3883,
+    "output_tokens": 677
   },
   "version": "gpt_luna"
 }

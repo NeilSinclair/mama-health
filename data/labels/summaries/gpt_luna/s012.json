@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-29T14:29:38+00:00",
+  "created_at": "2026-09-30T09:20:58+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
@@ -8,25 +8,25 @@
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "possible sibo diagnosis",
+      "ibs and sibo uncertainty",
       "post-meal bloating",
-      "constipation and mixed bowel habits",
-      "ibs diagnosis frustration",
-      "sibo testing uncertainty",
-      "specialist access delays",
+      "constipation and mixed bowel pattern",
+      "sibo testing",
+      "frustration with ibs diagnosis",
+      "specialist referral wait",
       "supplement marketing"
     ],
-    "reason_for_conversation": "understanding possible diagnosis",
-    "summary": "The user questioned whether severe post-meal bloating and constipation or mixed bowel habits could reflect SIBO rather than IBS, and asked about testing and treatment options. The assistant explained the uncertainty around breath tests and introduced the term IMO, which confused the user at first; it then clarified the distinction. The user plans to request a gastroenterology referral despite a possible wait, keep symptom notes, and avoid buying supplements for now, and said the conversation was clarifying."
+    "reason_for_conversation": "diagnostic clarification",
+    "summary": "The user questioned whether long-standing IBS and severe post-meal bloating could involve SIBO, and asked about testing and treatment options. The assistant explained test limitations and the SIBO/IMO distinction, which briefly confused the user before it clarified; the user plans to seek a gastroenterology referral, keep notes, and avoid buying supplements while waiting in Canada. The user said the conversation was clarifying and restated the plan."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 4093,
-    "output_tokens": 696
+    "input_tokens": 4346,
+    "output_tokens": 522
   },
   "version": "gpt_luna"
 }

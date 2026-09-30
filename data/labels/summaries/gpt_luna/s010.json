@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-29T14:29:33+00:00",
+  "created_at": "2026-09-30T09:20:55+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -9,21 +9,21 @@
       "long covid prognosis",
       "post-exertional malaise",
       "pacing strategies",
-      "work adjustments",
+      "workplace support",
       "dismissive medical care",
       "illness-related distress"
     ],
-    "reason_for_conversation": "understanding prognosis",
-    "summary": "The user wanted an honest account of whether long covid might improve and described delayed crashes after ordinary activity, alongside work and household limits on resting. The assistant discussed uncertainty, pacing and tracking, possible work adjustments, and points to raise with the GP; the user said they felt heard and had concrete next steps."
+    "reason_for_conversation": "understanding long-term outlook",
+    "summary": "The user wanted an honest outlook on long covid and described unpredictable crashes after ordinary activity, difficulty resting around work and household demands, and feeling dismissed by a GP. The assistant discussed uncertainty and pacing, suggested tracking activity and symptoms, raised possible workplace adjustments, and offered points to take to the GP; the user said they had something concrete to bring and felt heard rather than worse."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 3750,
-    "output_tokens": 427
+    "input_tokens": 4003,
+    "output_tokens": 460
   },
   "version": "gpt_luna"
 }

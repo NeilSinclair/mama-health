@@ -39,7 +39,7 @@ def test_main_runs_without_labels_or_api(data_file, tmp_path, capsys, no_api):
     main(["--data", str(data_file), "--out", str(tmp_path / "out"), "--labels", str(tmp_path)])
     out = capsys.readouterr().out
     assert "wrote session_features" in out
-    assert "no complete cached labels for haiku" in out
+    assert "no complete cached labels for gpt_luna" in out
     assert (tmp_path / "out" / "explorer.html").exists()
     assert not (tmp_path / "out" / "summaries").exists()
 
@@ -47,26 +47,36 @@ def test_main_runs_without_labels_or_api(data_file, tmp_path, capsys, no_api):
 def test_relabel_then_build_from_cache(data_file, tmp_path, capsys, fake_api):
     labels, out = tmp_path / "labels", tmp_path / "out"
     main(
-        ["--data", str(data_file), "--out", str(out), "--labels", str(labels), "--relabel", "haiku"]
+        [
+            "--data",
+            str(data_file),
+            "--out",
+            str(out),
+            "--labels",
+            str(labels),
+            "--relabel",
+            "gpt_luna",
+        ]
     )
-    assert "relabelling haiku" in capsys.readouterr().out
-    assert sorted(p.name for p in (labels / "summaries" / "haiku").iterdir()) == [
+    assert "relabelling gpt_luna" in capsys.readouterr().out
+    assert sorted(p.name for p in (labels / "summaries" / "gpt_luna").iterdir()) == [
         "s1.json",
         "s2.json",
     ]
-    summaries = pd.read_csv(out / "summaries" / "haiku" / "summaries.csv")
+    summaries = pd.read_csv(out / "summaries" / "gpt_luna" / "summaries.csv")
     assert summaries["session_id"].tolist() == ["s1", "s2"]
-    assert (out / "summaries" / "haiku" / "label_counts.csv").exists()
-    assert not (out / "summaries" / "gpt_luna").exists()
+    assert (out / "summaries" / "gpt_luna" / "label_counts.csv").exists()
 
 
 def test_run_summaries_warns_on_stale_cache(data_file, tmp_path, capsys, fake_api, monkeypatch):
     labels = tmp_path / "labels"
-    cli.relabel("haiku", data_file, labels)
+    cli.relabel("gpt_luna", data_file, labels)
     capsys.readouterr()
-    monkeypatch.setitem(cli.MODELS, "haiku", cli.MODELS["haiku"].__class__("anthropic", "new", "H"))
+    monkeypatch.setitem(
+        cli.MODELS, "gpt_luna", cli.MODELS["gpt_luna"].__class__("openai", "new", "G")
+    )
     run_summaries(data_file, labels, tmp_path / "out")
-    assert "haiku: 6 cached labels predate" in capsys.readouterr().out
+    assert "gpt_luna: 6 cached labels predate" in capsys.readouterr().out
 
 
 def test_committed_outputs_match_fresh_run(tmp_path):
@@ -82,9 +92,9 @@ def test_committed_outputs_match_fresh_run(tmp_path):
 
 def test_remap_rebuilds_mappings_from_cached_summaries(data_file, tmp_path, capsys, fake_api):
     labels = tmp_path / "labels"
-    cli.relabel("haiku", data_file, labels)
-    before = (labels / "summaries" / "haiku" / "s1.json").read_text()
-    (labels / "mappings" / "haiku" / "end_reason.json").unlink()
+    cli.relabel("gpt_luna", data_file, labels)
+    before = (labels / "summaries" / "gpt_luna" / "s1.json").read_text()
+    (labels / "mappings" / "gpt_luna" / "end_reason.json").unlink()
     main(
         [
             "--data",
@@ -94,17 +104,17 @@ def test_remap_rebuilds_mappings_from_cached_summaries(data_file, tmp_path, caps
             "--labels",
             str(labels),
             "--remap",
-            "haiku",
+            "gpt_luna",
         ]
     )
-    assert "re-consolidating haiku" in capsys.readouterr().out
-    assert (labels / "mappings" / "haiku" / "end_reason.json").exists()
-    assert (labels / "summaries" / "haiku" / "s1.json").read_text() == before
+    assert "re-consolidating gpt_luna" in capsys.readouterr().out
+    assert (labels / "mappings" / "gpt_luna" / "end_reason.json").exists()
+    assert (labels / "summaries" / "gpt_luna" / "s1.json").read_text() == before
 
 
 def test_remap_without_summaries_exits(tmp_path, fake_api):
-    with pytest.raises(SystemExit, match="run --relabel haiku first"):
-        cli.remap("haiku", tmp_path)
+    with pytest.raises(SystemExit, match="run --relabel gpt_luna first"):
+        cli.remap("gpt_luna", tmp_path)
 
 
 def test_relabel_closes_client_even_on_failure(data_file, tmp_path, monkeypatch):
@@ -121,7 +131,7 @@ def test_relabel_closes_client_even_on_failure(data_file, tmp_path, monkeypatch)
     monkeypatch.setattr(cli, "load_dotenv", lambda: None)
     monkeypatch.setattr(cli, "make_labeller", broken)
     with pytest.raises(RuntimeError, match="api down"):
-        cli.relabel("haiku", data_file, tmp_path)
+        cli.relabel("gpt_luna", data_file, tmp_path)
     assert made[0].closed
 
 
@@ -130,12 +140,12 @@ def test_mapping_that_misses_new_summary_labels_fails_clearly(data_file, tmp_pat
     import json
 
     labels = tmp_path / "labels"
-    cli.relabel("haiku", data_file, labels)
-    path = labels / "summaries" / "haiku" / "s1.json"
+    cli.relabel("gpt_luna", data_file, labels)
+    path = labels / "summaries" / "gpt_luna" / "s1.json"
     entry = json.loads(path.read_text())
     entry["output"]["main_topics"] = ["a label no mapping has seen"]
     path.write_text(json.dumps(entry))
-    with pytest.raises(ValueError, match="run: uv run mama-pipeline --remap haiku"):
+    with pytest.raises(ValueError, match="run: uv run mama-pipeline --remap gpt_luna"):
         run_summaries(data_file, labels, tmp_path / "out")
 
 
@@ -143,10 +153,10 @@ def test_old_schema_cache_fails_with_relabel_hint(data_file, tmp_path, fake_api)
     import json
 
     labels = tmp_path / "labels"
-    cli.relabel("haiku", data_file, labels)
-    path = labels / "summaries" / "haiku" / "s1.json"
+    cli.relabel("gpt_luna", data_file, labels)
+    path = labels / "summaries" / "gpt_luna" / "s1.json"
     entry = json.loads(path.read_text())
     entry["output"]["pain_points"] = entry["output"].pop("conversation_pain_points")
     path.write_text(json.dumps(entry))
-    with pytest.raises(ValueError, match="run: uv run mama-pipeline --relabel haiku"):
+    with pytest.raises(ValueError, match="run: uv run mama-pipeline --relabel gpt_luna"):
         run_summaries(data_file, labels, tmp_path / "out")

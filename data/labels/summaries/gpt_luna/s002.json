@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-29T14:29:29+00:00",
+  "created_at": "2026-09-30T09:20:50+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -8,21 +8,21 @@
     "main_topics": [
       "migraine prevention options",
       "CGRP medications",
-      "preventive medication side effects",
-      "insurance coverage",
-      "neurologist appointment preparation"
+      "traditional preventatives",
+      "medication side effects",
+      "insurance step therapy"
     ],
-    "reason_for_conversation": "understanding treatment options",
-    "summary": "The user wanted to compare migraine preventatives before a neurologist visit, including newer CGRP options, traditional medications, side effects, and insurance requirements. The assistant provided comparisons and a list of questions to bring; the user said the information was exactly what they needed and planned to ask about migraxone."
+    "reason_for_conversation": "preparing for treatment decisions",
+    "summary": "The user wanted to compare migraine preventatives before a neurology visit, including newer CGRP options, traditional medications, side effects, and insurance requirements. The assistant provided a list of questions for the neurologist, and the user said it was exactly what they needed and planned to ask about migraxone."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 3518,
-    "output_tokens": 423
+    "input_tokens": 3771,
+    "output_tokens": 411
   },
   "version": "gpt_luna"
 }

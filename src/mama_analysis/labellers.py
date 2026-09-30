@@ -58,62 +58,6 @@ class Labeller(Protocol):
         ...
 
 
-class AnthropicLabeller:
-    """Claude via the Messages API, with the system prompt marked for prompt caching."""
-
-    def __init__(self, version: str, spec: ModelSpec, client: Any = None) -> None:
-        """Create the adapter.
-
-        Args:
-            version: Key into ``config.MODELS``.
-            spec: Model spec for this version.
-            client: An ``anthropic.AsyncAnthropic`` client; created from the environment if omitted.
-        """
-        if client is None:
-            from anthropic import AsyncAnthropic
-
-            client = AsyncAnthropic(max_retries=MAX_RETRIES)
-        self.version = version
-        self.spec = spec
-        self.client = client
-
-    async def complete(self, system: str, user: str, schema: type[T]) -> tuple[T, Usage]:
-        """Run one structured-output call.
-
-        Args:
-            system: System prompt; cached across calls.
-            user: User message.
-            schema: Pydantic model the output must satisfy.
-
-        Returns:
-            The parsed output and token usage.
-
-        Raises:
-            ValueError: If the response has no parsed output.
-        """
-        msg = await self.client.messages.parse(
-            model=self.spec.model_id,
-            max_tokens=MAX_OUTPUT_TOKENS,
-            system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
-            messages=[{"role": "user", "content": user}],
-            output_format=schema,
-        )
-        parsed = msg.parsed_output
-        if parsed is None:
-            raise ValueError(f"no parsed output (stop_reason={msg.stop_reason})")
-        u = msg.usage
-        return parsed, Usage(
-            input_tokens=u.input_tokens,
-            output_tokens=u.output_tokens,
-            cache_read_tokens=u.cache_read_input_tokens or 0,
-            cache_write_tokens=u.cache_creation_input_tokens or 0,
-        )
-
-    async def aclose(self) -> None:
-        """Close the underlying HTTP client inside the running event loop."""
-        await self.client.close()
-
-
 class OpenAILabeller:
     """An OpenAI model via the Responses API; prompt caching is automatic on shared prefixes."""
 
@@ -180,6 +124,4 @@ def make_labeller(version: str) -> Labeller:
     Returns:
         A labeller for that model, using API keys from the environment.
     """
-    spec = MODELS[version]
-    cls = AnthropicLabeller if spec.provider == "anthropic" else OpenAILabeller
-    return cls(version, spec)
+    return OpenAILabeller(version, MODELS[version])

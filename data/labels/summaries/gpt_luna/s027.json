@@ -1,29 +1,28 @@
 {
-  "created_at": "2026-09-29T14:29:48+00:00",
+  "created_at": "2026-09-30T09:21:10+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "low fodmap information overload",
-      "dietary restriction worries",
-      "food trigger identification",
+      "low fodmap food lists",
+      "dietary restriction fears",
+      "food reintroduction",
       "dietitian referral access",
-      "food adequacy worries",
-      "diet app cost"
+      "adequate food intake"
     ],
-    "reason_for_conversation": "low fodmap diet guidance",
-    "summary": "The user felt overwhelmed by conflicting low-FODMAP food lists and feared having to avoid foods such as onion and garlic permanently. The assistant explained the temporary elimination and reintroduction phases, recommended the Monash app and asking the GP about a dietitian referral, and addressed worries about hunger during elimination. The user said they felt less panicked, restated a plan they accepted, and said the conversation was more helpful than searching online."
+    "reason_for_conversation": "dietary guidance",
+    "summary": "The user felt overwhelmed by conflicting low-FODMAP food lists and feared they would need to avoid foods such as onion and garlic permanently. The assistant explained the elimination, reintroduction, and personalization phases, recommended the Monash app and asking the GP about an NHS dietitian referral, and addressed concerns about eating enough; the user restated an accepted plan and said they felt less panicked and reassured."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 4128,
-    "output_tokens": 445
+    "input_tokens": 4381,
+    "output_tokens": 458
   },
   "version": "gpt_luna"
 }

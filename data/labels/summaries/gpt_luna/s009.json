@@ -1,26 +1,27 @@
 {
-  "created_at": "2026-09-29T14:29:27+00:00",
+  "created_at": "2026-09-30T09:20:49+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
-    "end_reason": "need met",
+    "end_reason": "user accepted plan",
     "issue_resolved": true,
     "main_topics": [
       "nighttime psoriasis itching",
+      "psoriasis plaques",
       "sleep scratching",
-      "skin care strategies"
+      "skin irritation"
     ],
-    "reason_for_conversation": "itch management",
-    "summary": "The user asked why psoriasis patches itch more at night and how to manage itching on their elbows and knee, including waking with the skin raw from scratching. The assistant suggested a cooler bedroom, bedtime ointment, short nails, and a loose cotton layer; the user said this was what they needed and planned to try it."
+    "reason_for_conversation": "managing nighttime symptoms",
+    "summary": "The user asked why psoriasis patches itch more at night and how to reduce itching on the elbows and knee, including scratching that sometimes leaves skin raw on waking. The assistant suggested a cooler bedroom, ointment, short nails, and a cotton layer; the user said this was what they needed and planned to try the suggestions."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 2767,
-    "output_tokens": 285
+    "input_tokens": 3020,
+    "output_tokens": 251
   },
   "version": "gpt_luna"
 }

@@ -36,6 +36,7 @@
   h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -.01em; }
   .sub { color: var(--muted); margin: 0 0 20px; }
   .switcher { display: inline-flex; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 16px; }
+  .switcher[hidden] { display: none; }
   .switcher button { font: inherit; border: 0; background: var(--surface); color: var(--text); padding: 7px 14px; cursor: pointer; }
   .switcher button + button { border-left: 1px solid var(--border); }
   .switcher button.on { background: var(--accent); color: #fff; }
@@ -176,6 +177,7 @@ function toggleFilter(key, value) {
 
 function renderSwitcher() {
   const box = document.getElementById("switcher");
+  box.hidden = DATA.versions.length < 2;
   box.replaceChildren(...DATA.versions.map((v) => {
     const b = el("button", {
       type: "button",
@@ -265,7 +267,7 @@ function render() {
     document.getElementById("filters").replaceChildren();
     document.getElementById("count").textContent = "";
     rowsBox.replaceChildren(el("p", { class: "empty" },
-      "No cached labels yet. Run: uv run mama-pipeline --relabel haiku"));
+      "No cached labels yet. Run: uv run mama-pipeline --relabel gpt_luna"));
     return;
   }
   renderFilters(v.rows);
