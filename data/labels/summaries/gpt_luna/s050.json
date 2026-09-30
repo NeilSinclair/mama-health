@@ -1,29 +1,58 @@
 {
-  "created_at": "2026-09-29T14:30:13+00:00",
+  "created_at": "2026-09-30T12:14:38+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "scalp psoriasis flare",
-      "ineffective medicated shampoos",
-      "workplace embarrassment",
-      "nighttime itching",
-      "topical treatment options",
-      "primary care access"
+      {
+        "reason": "The user described a three-week flare with thick scale, itching, and shampoos that no longer help.",
+        "relevance": "strong",
+        "topic": "scalp psoriasis flare"
+      },
+      {
+        "reason": "The user asked what treatment comes after shampoo, whether scalp steroids are safe, and whether calcipotriol requires a prescription.",
+        "relevance": "strong",
+        "topic": "psoriasis treatment options"
+      },
+      {
+        "reason": "The user asked for help with nighttime itch and followed up about avoiding scratching.",
+        "relevance": "medium",
+        "topic": "scalp itching"
+      },
+      {
+        "reason": "The user specifically asked whether scalp steroids could thin the skin and said the response was reassuring.",
+        "relevance": "medium",
+        "topic": "steroid safety"
+      },
+      {
+        "reason": "The user asked whether to return to a GP or see a dermatologist and noted long waits for appointments.",
+        "relevance": "medium",
+        "topic": "healthcare access"
+      },
+      {
+        "reason": "The user said they were at the end of their rope and later expressed that the situation felt like a lot.",
+        "relevance": "low",
+        "topic": "emotional overwhelm"
+      },
+      {
+        "reason": "The user said visible flakes falling on their shoulders were embarrassing at work.",
+        "relevance": "low",
+        "topic": "work embarrassment"
+      }
     ],
     "reason_for_conversation": "flare treatment guidance",
-    "summary": "The user described a three-week scalp psoriasis flare that was not responding to tar and ketoconazole shampoos, with visible flakes at work and severe nighttime itching. The assistant discussed softening thick scale, possible prescription treatments, itch measures, and seeing a GP while waiting for dermatology access. The user said they had a plan to book the GP and felt they had more direction than before."
+    "summary": "The user described a worsening scalp psoriasis flare despite tar and ketoconazole shampoos, with thick scale, nighttime itch, and flakes embarrassing them at work. The assistant discussed descaling, topical treatment options, itch measures, and seeing a GP while waiting for dermatology; the user summarized an accepted plan to ask the GP about treatments, use oil on the thick patch, and avoid scratching."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3932,
-    "output_tokens": 352
+    "input_tokens": 4929,
+    "output_tokens": 1327
   },
   "version": "gpt_luna"
 }

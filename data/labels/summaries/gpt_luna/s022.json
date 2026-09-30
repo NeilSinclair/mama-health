@@ -1,32 +1,55 @@
 {
-  "created_at": "2026-09-29T14:29:50+00:00",
+  "created_at": "2026-09-30T12:14:01+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
       "bot missed urgent symptom"
     ],
-    "end_reason": "user accepted partial answer",
+    "end_reason": "partial resolution",
     "issue_resolved": false,
     "main_topics": [
-      "recurrent bowel symptoms",
-      "visible rectal bleeding",
-      "biologic treatment response",
-      "flare anxiety",
-      "treatment switching",
-      "diet and appetite",
-      "specialist appointment wait"
+      {
+        "reason": "The user described renewed urgency and repeated visible blood that had been worsening over several days, and later asked whether it was safe to wait.",
+        "relevance": "strong",
+        "topic": "returning bowel symptoms"
+      },
+      {
+        "reason": "The user asked whether antibodies could explain Humira's apparent loss of effect and followed up about how they develop.",
+        "relevance": "strong",
+        "topic": "anti-drug antibodies"
+      },
+      {
+        "reason": "The user said they were scared the symptoms marked the start of a flare and later said they had been spiralling.",
+        "relevance": "medium",
+        "topic": "flare anxiety"
+      },
+      {
+        "reason": "The user had a gastro appointment several weeks away and directly asked whether waiting for it was reasonable.",
+        "relevance": "medium",
+        "topic": "appointment timing"
+      },
+      {
+        "reason": "The user asked whether Humira might be adjusted or replaced and whether alternatives existed.",
+        "relevance": "medium",
+        "topic": "treatment options"
+      },
+      {
+        "reason": "The user asked what foods might help and said urgency made them reluctant to eat.",
+        "relevance": "medium",
+        "topic": "diet during symptoms"
+      }
     ],
-    "reason_for_conversation": "symptom safety guidance",
-    "summary": "After about eight stable months on Humira, the user described five or six days of urgency and small amounts of blood that were gradually worsening, and asked whether antibodies or a flare could explain it. The assistant explained antibody testing and possible treatment changes, suggested symptom tracking and gentler foods, and broadly supported discussing it at an appointment several weeks away, advising care if symptoms changed dramatically. The user organized questions for the appointment and said they felt calmer, but the worsening bleeding was not clearly directed to prompt medical review."
+    "reason_for_conversation": "understanding symptom recurrence",
+    "summary": "The user reported renewed urgency and small amounts of blood while on Humira, worsening over five or six days, and asked about antibodies, testing, and possible treatment changes. The assistant explained these topics and helped the user prepare questions, but when asked whether to wait several weeks despite worsening symptoms, it called the appointment the natural place to address them and did not suggest contacting the care team sooner. The user said the discussion made them feel calmer and summarized their appointment list."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3746,
-    "output_tokens": 1053
+    "input_tokens": 4743,
+    "output_tokens": 1416
   },
   "version": "gpt_luna"
 }

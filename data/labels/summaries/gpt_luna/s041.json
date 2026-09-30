@@ -1,29 +1,58 @@
 {
-  "created_at": "2026-09-29T14:30:01+00:00",
+  "created_at": "2026-09-30T12:14:26+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "psoriasis treatment",
-      "biologic medication risks",
-      "infection risk",
-      "cancer risk",
-      "family cancer history",
-      "sun exposure"
+      {
+        "reason": "The user asked to talk through whether to start a biologic and returned to how its risks compare with untreated psoriasis.",
+        "relevance": "strong",
+        "topic": "biologic treatment decision"
+      },
+      {
+        "reason": "The user called this their main worry and discussed family history of lymphoma and how to interpret the evidence.",
+        "relevance": "strong",
+        "topic": "cancer risk"
+      },
+      {
+        "reason": "The user asked how large the risk is and followed up about serious infections, including tuberculosis.",
+        "relevance": "medium",
+        "topic": "infection risk"
+      },
+      {
+        "reason": "The user asked about skin cancer and mentioned burning easily and substantial sun exposure.",
+        "relevance": "medium",
+        "topic": "skin cancer risk"
+      },
+      {
+        "reason": "The user said online worst-case stories were frightening and that the risks were weighing on them.",
+        "relevance": "medium",
+        "topic": "treatment-related anxiety"
+      },
+      {
+        "reason": "The user asked what to bring to the dermatologist and welcomed a list of questions and personal history to share.",
+        "relevance": "medium",
+        "topic": "dermatologist discussion"
+      },
+      {
+        "reason": "The user adopted the comparison between medication risks and the risks of doing nothing near the end.",
+        "relevance": "low",
+        "topic": "untreated psoriasis risks"
+      }
     ],
     "reason_for_conversation": "understanding treatment risks",
-    "summary": "The user wanted to understand infection and cancer risks before deciding about a biologic for psoriasis, mentioning a grandfather with lymphoma and substantial sun exposure. The assistant discussed differences between biologic classes, screening and monitoring, and suggested questions for the dermatologist. The user found the absolute-risk framing helpful and recognized that the decision should be personalized."
+    "summary": "The user wanted to understand infection and cancer risks before deciding about a psoriasis biologic, with particular concern about a family history of lymphoma and their sun exposure. The assistant discussed risk differences and suggested questions for the dermatologist; the user said the absolute-risk framing and comparison with untreated psoriasis were helpful."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3618,
-    "output_tokens": 383
+    "input_tokens": 4615,
+    "output_tokens": 1150
   },
   "version": "gpt_luna"
 }

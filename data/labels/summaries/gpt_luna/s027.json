@@ -1,29 +1,48 @@
 {
-  "created_at": "2026-09-29T14:29:48+00:00",
+  "created_at": "2026-09-30T12:14:02+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "low fodmap information overload",
-      "dietary restriction worries",
-      "food trigger identification",
-      "dietitian referral access",
-      "food adequacy worries",
-      "diet app cost"
+      {
+        "reason": "The user opened with feeling overwhelmed by conflicting food lists and returned to ask how to identify high-FODMAP foods.",
+        "relevance": "strong",
+        "topic": "low fodmap food guidance"
+      },
+      {
+        "reason": "The user feared having to give up onions and garlic forever and expressed relief after learning the diet has phases aimed at identifying personal triggers.",
+        "relevance": "medium",
+        "topic": "long-term food restriction"
+      },
+      {
+        "reason": "The user asked how to reintroduce foods properly and whether professional support was needed.",
+        "relevance": "medium",
+        "topic": "diet reintroduction"
+      },
+      {
+        "reason": "The user considered asking their GP for a dietitian and asked whether the NHS would cover a referral for IBS.",
+        "relevance": "medium",
+        "topic": "dietitian referral"
+      },
+      {
+        "reason": "The user worried about being hungry and having too few foods to eat, then said the food examples were reassuring.",
+        "relevance": "medium",
+        "topic": "food adequacy during elimination"
+      }
     ],
     "reason_for_conversation": "low fodmap diet guidance",
-    "summary": "The user felt overwhelmed by conflicting low-FODMAP food lists and feared having to avoid foods such as onion and garlic permanently. The assistant explained the temporary elimination and reintroduction phases, recommended the Monash app and asking the GP about a dietitian referral, and addressed worries about hunger during elimination. The user said they felt less panicked, restated a plan they accepted, and said the conversation was more helpful than searching online."
+    "summary": "The user felt overwhelmed by conflicting low-FODMAP food lists and worried the diet meant permanently avoiding many foods. The assistant explained the temporary phases, suggested the Monash app and asking the GP about a dietitian referral, and discussed structured reintroduction and eating adequately during elimination. The user restated an accepted plan and said the conversation was more helpful than searching online."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 4128,
-    "output_tokens": 445
+    "input_tokens": 5125,
+    "output_tokens": 853
   },
   "version": "gpt_luna"
 }

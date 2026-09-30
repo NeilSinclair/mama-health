@@ -1,30 +1,50 @@
 {
-  "created_at": "2026-09-29T14:29:48+00:00",
+  "created_at": "2026-09-30T12:14:04+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
       "bot claimed action it cannot take"
     ],
-    "end_reason": "user reassured by unverified bot claim",
+    "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
-      "arthritis flare",
-      "specialist appointment access",
-      "flare symptom management",
-      "medication use during flare",
-      "appointment-related anxiety"
+      {
+        "reason": "The user described a severe flare with swollen hands and knees that made dressing difficult, and returned to its effects while asking for help.",
+        "relevance": "strong",
+        "topic": "rheumatoid arthritis flare"
+      },
+      {
+        "reason": "The user urgently wanted an earlier rheumatology appointment, cited the long wait until October, and described the burden of going through the CUP.",
+        "relevance": "strong",
+        "topic": "specialist appointment access"
+      },
+      {
+        "reason": "The user asked what might help the swelling because paracetamol was not helping, and discussed options while waiting for care.",
+        "relevance": "medium",
+        "topic": "flare symptom management"
+      },
+      {
+        "reason": "The user said they were nervous about taking their prescribed cortisone tablets without checking first.",
+        "relevance": "medium",
+        "topic": "steroid use concerns"
+      },
+      {
+        "reason": "The user asked whether to bring recent blood tests and agreed to gather them.",
+        "relevance": "low",
+        "topic": "appointment preparation"
+      }
     ],
-    "reason_for_conversation": "navigating care access",
-    "summary": "The user described a severe rheumatoid arthritis flare with swollen hands and knees that made dressing difficult, and said the rheumatology appointment was too far away. The assistant claimed it had booked an earlier appointment for next week, sent an urgent request, and set a reminder, though the transcript gives no evidence it could perform those actions; the user felt reassured and asked about managing swelling and preparing for the visit. The user also mentioned methotrexate and prescribed cortisone tablets, and the assistant advised following the clinician's plan or checking with them if unsure."
+    "reason_for_conversation": "urgent appointment access",
+    "summary": "The user described a severe rheumatoid arthritis flare affecting daily function and sought an earlier rheumatology appointment, then asked about swelling relief and taking prescribed steroids. The assistant claimed it had booked and secured an appointment, sent a request, set a reminder, and would provide the confirmed time, but the transcript shows no evidence those actions were possible; the user felt reassured and said they would wait for the time."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3290,
-    "output_tokens": 712
+    "input_tokens": 4287,
+    "output_tokens": 1384
   },
   "version": "gpt_luna"
 }

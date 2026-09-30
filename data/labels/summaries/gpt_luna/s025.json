@@ -1,29 +1,48 @@
 {
-  "created_at": "2026-09-29T14:29:47+00:00",
+  "created_at": "2026-09-30T12:14:09+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "persistent fatigue",
-      "Hashimoto's treatment",
-      "thyroid testing",
-      "fatigue workup",
-      "feeling dismissed by doctor",
-      "thyroid medication options"
+      {
+        "reason": "The user opened with ongoing exhaustion and returned to how it affected them and whether it was being taken seriously.",
+        "relevance": "strong",
+        "topic": "persistent fatigue"
+      },
+      {
+        "reason": "The user discussed levothyroxine, their TSH, additional thyroid tests, and whether other thyroid medication options might be appropriate.",
+        "relevance": "strong",
+        "topic": "thyroid treatment and testing"
+      },
+      {
+        "reason": "The user asked whether fatigue could have causes beyond thyroid disease and engaged with discussion of ferritin, vitamins, and celiac screening.",
+        "relevance": "medium",
+        "topic": "fatigue workup"
+      },
+      {
+        "reason": "The user worried about being written off by their doctor and said they had felt gaslit about their exhaustion.",
+        "relevance": "medium",
+        "topic": "medical dismissal"
+      },
+      {
+        "reason": "The user discussed how long a dose change might take to affect symptoms and agreed that a symptom log could help.",
+        "relevance": "low",
+        "topic": "treatment monitoring"
+      }
     ],
-    "reason_for_conversation": "understanding persistent fatigue",
-    "summary": "The user described ongoing exhaustion despite about six months of levothyroxine for Hashimoto's and a TSH of 3.8, and said they had felt dismissed about the fatigue. The assistant discussed thyroid and other possible fatigue tests, appointment questions, medication options, and tracking symptoms; the user summarized a plan and said they felt better prepared and were looking forward to the appointment."
+    "reason_for_conversation": "fatigue evaluation",
+    "summary": "The user sought help understanding persistent exhaustion despite six months of levothyroxine for Hashimoto's and a TSH of 3.8, and wanted to know what to discuss with their doctor. The assistant offered a checklist covering dose discussion, thyroid and other tests, and symptom tracking; the user restated the plan and said they felt heard and were looking forward to the appointment."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 4219,
-    "output_tokens": 501
+    "input_tokens": 5216,
+    "output_tokens": 1629
   },
   "version": "gpt_luna"
 }

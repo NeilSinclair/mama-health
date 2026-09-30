@@ -11,7 +11,7 @@ class FakeLabeller:
 
     def __init__(self, respond, version="fake", model_id="fake-model", delay=0.01):
         self.version = version
-        self.spec = ModelSpec("anthropic", model_id, "Fake")
+        self.spec = ModelSpec("openai", model_id, "Fake")
         self.respond = respond
         self.delay = delay
         self.events = []
@@ -31,9 +31,14 @@ class FakeLabeller:
         self.closed = True
 
 
+def topics(*names, relevance="strong"):
+    """Scored topics as the model returns them, all with the same relevance."""
+    return [{"topic": n, "reason": f"user raised {n}", "relevance": relevance} for n in names]
+
+
 def fake_summary(**overrides):
     base = {
-        "main_topics": ["gut pain"],
+        "main_topics": topics("gut pain"),
         "summary": "User asked about gut pain.",
         "reason_for_conversation": "symptom check",
         "conversation_pain_points": ["bot repeated advice"],

@@ -1,28 +1,43 @@
 {
-  "created_at": "2026-09-29T14:29:55+00:00",
+  "created_at": "2026-09-30T12:14:14+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "daily nausea",
-      "medication dose concerns",
-      "food-related symptoms",
-      "blood sugar monitoring",
-      "urgent symptom warning signs"
+      {
+        "reason": "The user described daily nausea, early fullness, and food triggers, and returned to the discomfort throughout the conversation.",
+        "relevance": "strong",
+        "topic": "medication-related nausea"
+      },
+      {
+        "reason": "The user asked whether to stop for a few days, worried about the planned increase, and ended by agreeing to discuss the dose with the doctor.",
+        "relevance": "strong",
+        "topic": "medication dose decisions"
+      },
+      {
+        "reason": "The user asked whether the medication was working and shared occasional morning readings that seemed lower than before.",
+        "relevance": "medium",
+        "topic": "blood sugar response"
+      },
+      {
+        "reason": "The user asked when the nausea would warrant urgent care and confirmed they did not have the listed warning signs.",
+        "relevance": "low",
+        "topic": "urgent nausea symptoms"
+      }
     ],
-    "reason_for_conversation": "medication side effect management",
-    "summary": "After starting Ozempic for diabetes, the user described daily nausea and early fullness that worsened with fried food and meat, and asked whether to stop or delay increasing the dose. The assistant suggested eating smaller, lighter meals, explained warning signs to seek care for, and recommended discussing the dose increase with the prescriber; the user accepted a plan to monitor morning blood sugar and talk to the doctor before increasing, and said they felt calmer."
+    "reason_for_conversation": "managing medication side effects",
+    "summary": "The user sought help with daily nausea and fullness after starting Ozempic, including whether to stop and concern about a planned dose increase. The assistant suggested food adjustments, advised discussing dose changes with the prescriber, described warning signs, and answered questions about blood sugar; the user reported no warning signs and lower but irregular morning readings. The user agreed to wait and talk with the doctor before increasing, try the suggested strategies, and said they felt calmer."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3804,
-    "output_tokens": 501
+    "input_tokens": 4801,
+    "output_tokens": 987
   },
   "version": "gpt_luna"
 }

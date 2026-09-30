@@ -1,32 +1,73 @@
 {
-  "created_at": "2026-09-29T14:30:07+00:00",
+  "created_at": "2026-09-30T12:14:27+00:00",
   "model_id": "gpt-6-luna",
   "output": {
-    "conversation_pain_points": [
-      "bot assumed wrong country context"
-    ],
+    "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "new diagnosis overwhelm",
-      "budesonide treatment plan",
-      "disease monitoring",
-      "health information organization",
-      "reliable information sources",
-      "specialist care access",
-      "diet management"
+      {
+        "reason": "The user asked where to start after a Crohn's diagnosis and engaged with explanations of the disease, treatment, and monitoring throughout the conversation.",
+        "relevance": "strong",
+        "topic": "new diagnosis education"
+      },
+      {
+        "reason": "The user described feeling overwhelmed and later said the conversation made the situation feel more manageable.",
+        "relevance": "medium",
+        "topic": "diagnosis-related overwhelm"
+      },
+      {
+        "reason": "The user identified budesonide as their medication and adopted clarifying the plan after the course as a next step.",
+        "relevance": "medium",
+        "topic": "budesonide treatment plan"
+      },
+      {
+        "reason": "The user asked whether care at a larger specialist center in India might be preferable and discussed their current gastroenterologist.",
+        "relevance": "medium",
+        "topic": "specialist care access"
+      },
+      {
+        "reason": "The user said they did not know how to organize what they were learning and agreed to start with one page of notes.",
+        "relevance": "medium",
+        "topic": "information organization"
+      },
+      {
+        "reason": "The user asked where to find trustworthy information because online material felt frightening and hard to evaluate.",
+        "relevance": "medium",
+        "topic": "reliable health information"
+      },
+      {
+        "reason": "The user asked what monitoring to expect and included clarifying the schedule among questions for their doctor.",
+        "relevance": "medium",
+        "topic": "disease monitoring"
+      },
+      {
+        "reason": "The user asked whether there is a diet to follow but did not return to the subject.",
+        "relevance": "low",
+        "topic": "Crohn's diet"
+      },
+      {
+        "reason": "The user recalled that the disease might be near the end of the small intestine but mentioned this only briefly.",
+        "relevance": "low",
+        "topic": "disease location"
+      },
+      {
+        "reason": "The user asked whether Crohn's would be constantly bad and briefly discussed the possibility of remission.",
+        "relevance": "low",
+        "topic": "flare and remission"
+      }
     ],
-    "reason_for_conversation": "understanding new diagnosis",
-    "summary": "Newly diagnosed with Crohn’s disease, the user felt overwhelmed and wanted a clear starting point. The assistant explained the disease, budesonide and follow-up planning, monitoring, organization, reliable information, specialist care in India, and diet; after the user noted that US-based advice might not fit, it adapted its guidance. The user felt the information made things manageable and planned to write down questions and clarify the plan after budesonide with the doctor."
+    "reason_for_conversation": "understanding a new diagnosis",
+    "summary": "The user sought orientation after a recent Crohn's diagnosis and discussed disease patterns, a possible terminal ileum location, budesonide, monitoring, reliable information, specialist care in India, and diet. The conversation helped make the diagnosis feel more manageable; the user left with a plan to write down questions and clarify the treatment plan after budesonide with their doctor."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 4519,
-    "output_tokens": 587
+    "input_tokens": 5516,
+    "output_tokens": 1409
   },
   "version": "gpt_luna"
 }

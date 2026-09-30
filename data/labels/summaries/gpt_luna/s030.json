@@ -1,34 +1,52 @@
 {
-  "created_at": "2026-09-29T14:29:52+00:00",
+  "created_at": "2026-09-30T12:14:08+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
       "bot missed urgent symptom",
-      "bot ignored direct question",
-      "bot repeated generic advice",
-      "bot deflected despite access barrier",
-      "bot ignored emotional distress"
+      "bot repeated advice after pushback",
+      "bot deflected to unavailable doctor"
     ],
-    "end_reason": "user gave up frustrated",
+    "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
-      "prolonged migraine attack",
-      "ineffective rescue medication",
-      "missed work",
-      "specialist access delays",
-      "medication overuse concerns"
+      {
+        "reason": "The user repeatedly asked what to do about a four-day attack that was not responding to rescue medication and said they could not function.",
+        "relevance": "strong",
+        "topic": "prolonged migraine attack"
+      },
+      {
+        "reason": "The user said they had been taking over-the-counter medication along with triptans for days and worried about rebound headache.",
+        "relevance": "medium",
+        "topic": "medication overuse concern"
+      },
+      {
+        "reason": "The user explained their neurologist was booked out six weeks and asked about options before then.",
+        "relevance": "medium",
+        "topic": "specialist access delay"
+      },
+      {
+        "reason": "The user said the attack had already caused them to miss three days of work, but did not return to this impact.",
+        "relevance": "low",
+        "topic": "work disruption"
+      },
+      {
+        "reason": "The user said they came in a genuinely bad place and repeatedly expressed frustration at not being heard.",
+        "relevance": "medium",
+        "topic": "emotional distress"
+      }
     ],
-    "reason_for_conversation": "managing prolonged migraine attack",
-    "summary": "The user described a four-day migraine that was not responding to triptans or over-the-counter medication, was preventing them from functioning, and had caused missed work; they also worried about rebound headache and could not see their neurologist for six weeks. The assistant repeatedly offered generic prevention and self-care tips or advised contacting the neurologist, without answering the user's questions about urgent or acute treatment options. The user said they felt unheard and ended the conversation; the prolonged, unresponsive attack was not addressed as an urgent concern."
+    "reason_for_conversation": "acute migraine treatment",
+    "summary": "The user sought treatment options for a four-day continuous migraine that triptans and other medication were not breaking, worried about rebound headache, and said they could not function and had missed three workdays. The assistant repeatedly offered diary, lifestyle, and basic self-care suggestions and advised contacting a neurologist despite the six-week wait; it did not address the potentially urgent refractory attack, and the user ended the conversation feeling unheard."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3049,
-    "output_tokens": 413
+    "input_tokens": 4046,
+    "output_tokens": 924
   },
   "version": "gpt_luna"
 }

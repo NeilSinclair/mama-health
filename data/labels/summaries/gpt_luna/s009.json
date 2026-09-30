@@ -1,26 +1,43 @@
 {
-  "created_at": "2026-09-29T14:29:27+00:00",
+  "created_at": "2026-09-30T12:13:33+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "nighttime psoriasis itching",
-      "sleep scratching",
-      "skin care strategies"
+      {
+        "reason": "The user asked whether psoriasis patches itch more at night and why, then sought ways to reduce the itching.",
+        "relevance": "strong",
+        "topic": "nighttime psoriasis itch"
+      },
+      {
+        "reason": "The user said they wake up with skin raw from scratching and discussed ways to limit damage overnight.",
+        "relevance": "medium",
+        "topic": "sleep scratching"
+      },
+      {
+        "reason": "The user asked what helps and followed up on whether greasy ointment works better than regular cream.",
+        "relevance": "medium",
+        "topic": "overnight skin care"
+      },
+      {
+        "reason": "The user mentioned patches mainly on their elbows and one knee as context for the advice.",
+        "relevance": "low",
+        "topic": "plaque locations"
+      }
     ],
-    "reason_for_conversation": "itch management",
-    "summary": "The user asked why psoriasis patches itch more at night and how to manage itching on their elbows and knee, including waking with the skin raw from scratching. The assistant suggested a cooler bedroom, bedtime ointment, short nails, and a loose cotton layer; the user said this was what they needed and planned to try it."
+    "reason_for_conversation": "nighttime itch management",
+    "summary": "The user asked why their psoriasis patches itch more at night and what might help; they said the patches are mostly on their elbows and one knee and that scratching in their sleep sometimes leaves the skin raw. They accepted suggestions including a cooler room, ointment before bed, and a loose cotton layer over the knee, and said the answer was what they needed."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 2767,
-    "output_tokens": 285
+    "input_tokens": 3764,
+    "output_tokens": 649
   },
   "version": "gpt_luna"
 }

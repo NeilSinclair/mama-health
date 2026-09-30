@@ -23,7 +23,7 @@ def _entry(model_id="fake-model", prompt=PROMPT):
 
 def test_make_entry_records_provenance():
     e = _entry()
-    assert (e.version, e.provider, e.model_id) == ("fake", "anthropic", "fake-model")
+    assert (e.version, e.provider, e.model_id) == ("fake", "openai", "fake-model")
     assert (e.prompt_version, e.prompt_sha256) == ("summary_v1", "abc")
     assert e.created_at.endswith("+00:00")
     assert e.usage.input_tokens == 3
@@ -43,7 +43,7 @@ def test_read_entries_missing_dir(tmp_path):
 
 
 def test_stale_keys_flags_model_or_prompt_change():
-    spec = ModelSpec("anthropic", "fake-model", "F")
+    spec = ModelSpec("openai", "fake-model", "F")
     entries = {
         "ok": _entry(),
         "old_model": _entry(model_id="older"),

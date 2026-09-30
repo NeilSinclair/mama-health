@@ -1,29 +1,63 @@
 {
-  "created_at": "2026-09-29T14:30:06+00:00",
+  "created_at": "2026-09-30T12:14:32+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "methotrexate nausea",
-      "medication discontinuation",
-      "folic acid timing",
-      "injectable treatment fear",
-      "anti-nausea medication",
-      "joint improvement"
+      {
+        "reason": "The user described severe nausea after each weekly dose and repeatedly sought ways to manage it without stopping treatment.",
+        "relevance": "strong",
+        "topic": "methotrexate nausea"
+      },
+      {
+        "reason": "The user first asked whether to quit and later checked whether to keep taking methotrexate until the appointment.",
+        "relevance": "strong",
+        "topic": "treatment continuation"
+      },
+      {
+        "reason": "The user asked whether taking folic acid on methotrexate day was a problem and decided to move it to Sunday.",
+        "relevance": "medium",
+        "topic": "folic acid timing"
+      },
+      {
+        "reason": "The user asked whether injections could reduce nausea and said they were scared of self-injecting, then considered trying other options first.",
+        "relevance": "medium",
+        "topic": "injectable treatment"
+      },
+      {
+        "reason": "The user asked whether an anti-nausea medicine could be taken with methotrexate after learning it might be an option.",
+        "relevance": "medium",
+        "topic": "anti-nausea medication"
+      },
+      {
+        "reason": "The user said methotrexate was helping their joints and hands, which informed their wish to avoid stopping it.",
+        "relevance": "low",
+        "topic": "treatment benefit"
+      },
+      {
+        "reason": "The user said they had thought the only options were to suffer or quit, and later reported feeling much better after hearing alternatives.",
+        "relevance": "medium",
+        "topic": "treatment choice distress"
+      },
+      {
+        "reason": "The user asked what to say at the appointment and agreed to write down the suggested questions.",
+        "relevance": "low",
+        "topic": "doctor visit preparation"
+      }
     ],
     "reason_for_conversation": "managing medication side effects",
-    "summary": "The user said methotrexate was helping their rheumatoid arthritis but causing severe nausea after the weekly dose, and asked whether they could stop. The assistant discussed possible adjustments and helped prepare questions for the rheumatologist; the user said they felt much better, planned to move folic acid to Sunday and take methotrexate with food, and would discuss further options at the appointment."
+    "summary": "The user described severe weekend nausea after weekly methotrexate and wondered whether to stop, despite the medicine helping their hands. The assistant outlined options to discuss with the rheumatologist, including folic acid timing, dose-splitting, anti-nausea medicine, and injections; the user felt reassured, planned to move folic acid to Sunday, and agreed to keep taking methotrexate as prescribed until the appointment in about two weeks. The user said the conversation helped and planned to bring the assistant's suggested questions to the doctor."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 4475,
-    "output_tokens": 549
+    "input_tokens": 5472,
+    "output_tokens": 1722
   },
   "version": "gpt_luna"
 }

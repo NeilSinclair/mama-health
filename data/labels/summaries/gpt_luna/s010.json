@@ -1,29 +1,53 @@
 {
-  "created_at": "2026-09-29T14:29:33+00:00",
+  "created_at": "2026-09-30T12:13:40+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "long covid prognosis",
-      "post-exertional malaise",
-      "pacing strategies",
-      "work adjustments",
-      "dismissive medical care",
-      "illness-related distress"
+      {
+        "reason": "The user opened by asking whether long covid would improve and returned to the timeline and longer-term outcomes later.",
+        "relevance": "strong",
+        "topic": "long covid prognosis"
+      },
+      {
+        "reason": "The user described multi-day crashes after ordinary activity, questioned whether they could prolong illness, and discussed pacing and tracking as a starting plan.",
+        "relevance": "strong",
+        "topic": "post-exertional crashes"
+      },
+      {
+        "reason": "The user described the timeline as feeling endless and said false reassurance made them feel more alone, then valued being heard honestly.",
+        "relevance": "medium",
+        "topic": "emotional distress"
+      },
+      {
+        "reason": "The user described a prior GP appointment as dismissive and asked what to raise to make a future appointment more useful.",
+        "relevance": "medium",
+        "topic": "dismissive doctor"
+      },
+      {
+        "reason": "The user said their manager knew they were unwell but did not understand it was ongoing, and considered looking into work adjustments.",
+        "relevance": "medium",
+        "topic": "workplace understanding"
+      },
+      {
+        "reason": "The user said pacing was difficult because work and household responsibilities limited opportunities to rest.",
+        "relevance": "medium",
+        "topic": "daily life constraints"
+      }
     ],
     "reason_for_conversation": "understanding prognosis",
-    "summary": "The user wanted an honest account of whether long covid might improve and described delayed crashes after ordinary activity, alongside work and household limits on resting. The assistant discussed uncertainty, pacing and tracking, possible work adjustments, and points to raise with the GP; the user said they felt heard and had concrete next steps."
+    "summary": "The user wanted an honest outlook on six months of long covid and described unpredictable, multi-day crashes after activity; the assistant discussed uncertainty, pacing, and tracking. The user also shared feeling dismissed by a GP and constrained at work, and the assistant offered ideas for discussing PEM, support services, and workplace adjustments. The user said the conversation helped, felt genuinely heard, and planned to start pacing and tracking."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3750,
-    "output_tokens": 427
+    "input_tokens": 4747,
+    "output_tokens": 902
   },
   "version": "gpt_luna"
 }

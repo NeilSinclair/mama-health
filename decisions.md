@@ -169,3 +169,78 @@ Append-only. Each entry records the decision, its rationale, the alternatives co
 - **Alternatives considered:** Keeping tracing but thinning the unrelated links. It would still highlight too much.
 - **What would change it:** A clearer way to show one reason's path to its end reasons, e.g. a filtered view that hides the other labels instead of highlighting within the full graph.
 
+### D-030 — GPT Luna is the labelling model; Haiku removed (supersedes D-014)
+- **Date:** 2026-09-30
+- **Decision:** The human chose GPT Luna (`gpt-6-luna`). The Haiku cache, the Haiku outputs, the Anthropic adapter and the `anthropic` dependency are removed. The explorer hides its model switcher when only one model is configured. The pipeline keeps its version-keyed layout (`data/labels/*/gpt_luna/`, `outputs/summaries/gpt_luna/`).
+- **Rationale:** The bake-off in D-014 was done. Neither model was strictly better (see NOTES, 2026-09-30), and the human preferred GPT Luna. Code for a model nobody runs would be dead code.
+- **Alternatives considered:** Keeping the Anthropic adapter for a future Claude run. It's recoverable from git history if needed.
+- **What would change it:** A need for a second labeller, for example to measure labeller agreement.
+
+### D-031 — Conversation pain points need evidence in the transcript; profile use is not a pain point (summary_v3)
+- **Date:** 2026-09-30
+- **Decision:** `summary_v3` (drafted by Fable, per D-020) tells the model:
+  - The bot is given the user's profile (country, age group, gender, condition), so using those details is not a pain point.
+  - A pain point needs transcript evidence that something went wrong: the user corrects, objects, pushes back, repeats or is frustrated; or there is an objective failure, such as a contradiction, an unanswered direct question, or a statement that conflicts with what the user said.
+  - Safety-critical failures are still flagged whether or not the user complains.
+- **Rationale:** The human reviewed v2's pain points. It flagged "bot assumed country context" for a user who does live in Canada and didn't object (s016), and similarly age (s007) and gender (s049). Meanwhile, the Brazil user frustrated by US insurance talk (s018) is a clear pain point.
+- **Assumption:** The bot sees the user's profile. Evidence: in s007 the bot says "at 18-24", the profile's exact age bucket, which the user never states. The labelling model itself still doesn't see the metadata (D-015).
+- **Counter-evidence:** In s014 (Japan), s018 (Brazil) and s042 (India), the bot gives US-centred advice despite the profile country. So either the bot doesn't always use the profile, or it ignores it. Either way, those sessions are pain points under this rule, because the user corrects the bot. The rule doesn't depend on the assumption being always true: it only stops flagging profile use the user accepts.
+- **Alternatives considered:** Passing the user's metadata to the labelling model so it can check the bot's assumptions. Rejected for now: it reverses D-015, and the transcript rule handles the observed cases.
+- **What would change it:** Spot-checks finding real pain points that v3 misses because the user didn't react.
+
+### D-032 — A corrected mistake is still a pain point (summary_v4, refines D-031)
+- **Date:** 2026-09-30
+- **Decision:** `summary_v4` adds one rule to v3's pain-point section: a user's correction counts even when the bot then apologises and adapts, because the user still had to catch the mistake.
+- **Rationale:** v3 dropped s042. There the bot pointed a user in India to US resources, the user noticed, and the bot adapted. The human wants that kept as a pain point.
+- **Alternatives considered:** Editing v3 in place. Rejected, because NOTES' v2→v3 spot-check describes v3's output, and a new version keeps that traceable. The v3 labels themselves were overwritten by the v4 run, so they're a record in NOTES, not reproducible outputs.
+- **What would change it:** Nothing pending.
+
+### D-033 — Topics are scored for relevance; only strong topics are used (summary_v5)
+- **Date:** 2026-09-30
+- **Decision:**
+  - `main_topics` is now a list of `{topic, reason, relevance}`, with relevance one of strong, medium or low. The model writes the reason before the score.
+  - There is no target number of topics. `summary_v5` (drafted by Fable, per D-020) defines the levels and asks for at least one strong topic, usually one to three.
+  - Only strong topics go on to consolidation, the explorer chips and filters, the graph, `label_counts.csv` and `label_cooccurrence.csv`. `consolidate.field_labels` is the single place this filter is applied. (Superseded by D-035: all topics are now consolidated and `shown_labels` applies the filter.)
+  - Medium and low topics stay in the cache, in `summaries.csv` (`topic_scores`) and in the explorer's "Topic scores" section.
+- **Rationale:** The human found the topics too noisy. v4 averaged 5.9 topics per session and 41 canonical topics, many of them passing mentions. With v5 it was 1.5 strong topics per session and 35 canonical topics. Those figures come from the v5 run, which the v6 relabel overwrote, so they aren't reproducible from the committed cache.
+- **Consequence:** A safety-critical topic can be scored below strong and drop out of the topic chips. In the v5 run, s005's "suicidal thoughts" was medium; in the committed v6 cache it is low. Safety is still carried by `summary` and `conversation_pain_points` (D-022, D-026). s005 keeps "bot ignored suicidal statement".
+- **Alternatives considered:** A hard cap on the number of topics. Rejected, because the human wanted the model free to choose how many. Always keeping safety-critical topics regardless of score was not done; it's for the human to decide.
+- **What would change it:** Strong-only topics hiding things the analysis needs. The fix would be to lower the threshold (`KEPT_RELEVANCE`) or add a safety exception.
+
+### D-034 — End reason is a fixed three-value vocabulary (summary_v6)
+- **Date:** 2026-09-30
+- **Decision:**
+  - `end_reason` must be one of `need met`, `partial resolution` or `unresolved need`. It's enforced by the schema, as a `Literal` in the structured output, and defined in `summary_v6`.
+  - `need met` pairs with `issue_resolved = true`; the other two pair with `false`.
+  - End reason is no longer sent for LLM consolidation (`consolidate.CONSOLIDATED_FIELDS`). Its labels map to themselves, and the cached `end_reason.json` mapping was deleted.
+- **Rationale:** The human asked for exactly these three. The open vocabulary gave seven overlapping labels ("left unheard", "gave up frustrated", "natural close", …). How a conversation went wrong is already recorded in `summary` and `conversation_pain_points`.
+- **Alternatives considered:** Keeping the open vocabulary and consolidating it to three categories. Rejected: a schema-enforced enum can't drift, and it saves a consolidation call.
+- **What would change it:** A need to tell apart kinds of unresolved endings (e.g. gave up vs. unverified reassurance) in the outputs rather than in pain points.
+
+### D-035 — All topics are consolidated; the strong filter is applied after mapping (supersedes D-033's consolidation scope)
+- **Date:** 2026-09-30
+- **Decision:**
+  - Every scored topic (strong, medium and low) goes into one `main_topics` consolidation (`consolidate.field_labels`).
+  - Only strong topics become chips, counts, graph nodes and co-occurrence rows (`consolidate.shown_labels`).
+  - The explorer's "Topic scores" list and the `topic_scores` column now show each topic's canonical label, with the raw topic kept alongside.
+- **Rationale:** The human wanted the non-strong topics simplified to generic topics too. A single shared vocabulary means a topic gets the same canonical label whatever its score in a given session. Separate vocabularies per relevance level would not.
+- **Effect:** 306 raw topics became 71 canonical ones (strong: 81 → 45). The strong-topic vocabulary shifted from 42 labels (strong-only consolidation of the v6 summaries, overwritten by this remap) to 45, because the model now groups them alongside the medium and low topics.
+- **Alternatives considered:** A second mapping just for medium and low topics. Rejected for the inconsistency above.
+- **What would change it:** If 71 canonical topics is still too many (the `consolidate_v3` target is 15–35), tighten the topic consolidation prompt.
+
+### D-036 — Breakdown tab: linked counts; field colours re-validated
+- **Date:** 2026-09-30
+- **Decision:**
+  - The explorer gets a third tab, Breakdown. It has one bar list of conversation counts per field: reason for conversation, topic, conversation pain point, end reason, resolved and disease.
+  - Clicking a bar keeps only conversations with that label, and every list recounts. Selections combine with AND, and clicking again removes one.
+  - A toggle switches the topic counts from strong only (the default) to all scored topics, by canonical label. Empty pain-point lists count as "(none)".
+  - The matching conversations are listed below, with the first sentence of each summary.
+  - These choices come from the human's answers.
+  - Separately, the field colours were changed after the dataviz palette validator failed the existing set:
+    - The reason purple (added in D-027) was hard to tell from the topic blue, even with normal vision.
+    - The dark-mode salmon and green (pain point vs end reason) were not colour-blind-safe.
+  - New colours: light reason `#a8408f`; dark `#c064bc` / `#5f8ce0` / `#dd6e58` / `#34a595`. They pass every check across all pairs in both modes. The remaining CVD warning is in the 6–8 band, which is allowed because every panel and graph column is text-labelled.
+- **Rationale:** The human wanted to click a topic and see counts of reasons, topics and end reasons for it. Linked counts answer that for any field, and for combinations. The counts are computed in the page from the same payload as `label_counts.csv`. They are for exploration; memo numbers still come from pipeline CSVs.
+- **Alternatives considered:** A pivot table (only two fields at a time) and a single-label drill-down card (one label at a time). The human chose linked counts.
+- **What would change it:** If the memo cites a cross-count from this tab, add it as a tested pipeline table first (CLAUDE.md traceability rule).
+

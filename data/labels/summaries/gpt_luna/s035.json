@@ -1,30 +1,53 @@
 {
-  "created_at": "2026-09-29T14:29:57+00:00",
+  "created_at": "2026-09-30T12:14:16+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "infusion scheduling",
-      "treatment timing risks",
-      "post-infusion fatigue",
-      "travel infection precautions",
-      "travel insurance",
-      "medical travel documents",
-      "care access abroad"
+      {
+        "reason": "The user came to understand how to arrange an eight-week infliximab infusion that falls during a three-week trip and returned to the timing plan several times.",
+        "relevance": "strong",
+        "topic": "infusion scheduling"
+      },
+      {
+        "reason": "The user asked whether shifting the infusion was harmful, then asked about delay limits and the risk of antibodies.",
+        "relevance": "medium",
+        "topic": "infusion delay risks"
+      },
+      {
+        "reason": "The user asked what to do about travelling while immunosuppressed and later included checking vaccines in their plan.",
+        "relevance": "medium",
+        "topic": "travel infection precautions"
+      },
+      {
+        "reason": "The user raised coverage for a pre-existing condition and included declaring it when summarising their next steps.",
+        "relevance": "medium",
+        "topic": "travel insurance"
+      },
+      {
+        "reason": "The user asked what paperwork to carry and engaged with the suggestions for a treatment letter and generic-name medication list.",
+        "relevance": "medium",
+        "topic": "travel medical documentation"
+      },
+      {
+        "reason": "The user raised knowing where to seek care during a flare, and the assistant discussed identifying suitable care at the destination.",
+        "relevance": "medium",
+        "topic": "flare care abroad"
+      }
     ],
-    "reason_for_conversation": "travel health planning",
-    "summary": "The user wanted to plan an infliximab infusion that falls during a three-week trip and asked about shifting it, travel precautions, insurance, and documentation. The assistant helped turn these concerns into a checklist; the user said they felt less stressed and planned to call their IBD team and infusion center the next day."
+    "reason_for_conversation": "travel treatment planning",
+    "summary": "The user wanted to plan an infliximab infusion that would fall during a three-week trip and discussed shifting it earlier, including concerns about delay and post-infusion fatigue. They also made a travel-preparation list covering insurance, infection precautions and vaccines, medical documentation, and finding care abroad; they said the conversation turned their worry into actionable steps and planned to call their IBD team the next day."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3915,
-    "output_tokens": 416
+    "input_tokens": 4912,
+    "output_tokens": 1160
   },
   "version": "gpt_luna"
 }

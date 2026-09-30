@@ -1,28 +1,43 @@
 {
-  "created_at": "2026-09-29T14:29:23+00:00",
+  "created_at": "2026-09-30T12:13:25+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "biologic treatment change",
-      "dismissive consultant",
-      "shared treatment decisions",
-      "anger and feeling unheard",
-      "second opinions"
+      {
+        "reason": "The user repeatedly said they wanted to be part of the decision to switch from infliximab and asked about alternatives to Humira.",
+        "relevance": "strong",
+        "topic": "shared treatment decisions"
+      },
+      {
+        "reason": "The user asked what other treatment classes exist and questioned why another anti-TNF was recommended after infliximab stopped working.",
+        "relevance": "strong",
+        "topic": "biologic treatment options"
+      },
+      {
+        "reason": "The user said the consultant brushed them off and that others treated them as awkward for asking questions.",
+        "relevance": "medium",
+        "topic": "feeling unheard"
+      },
+      {
+        "reason": "The user asked whether requesting a second opinion could cause problems on the NHS and worried it might seem like going behind the consultant's back.",
+        "relevance": "medium",
+        "topic": "second opinions"
+      }
     ],
-    "reason_for_conversation": "treatment decision support",
-    "summary": "After infliximab stopped working, the user's consultant proposed switching to Humira without discussing alternatives, leaving the user angry and unheard. The assistant outlined other treatment classes, suggested questions about testing and treatment choices, and discussed requesting a second opinion; the user said they had a plan and would take their questions to an appointment."
+    "reason_for_conversation": "shared treatment decision support",
+    "summary": "The user was furious that their consultant presented switching from infliximab to Humira as settled and had brushed off questions about alternatives. The assistant discussed other biologic classes, suggested asking about drug levels and antibodies, helped prepare appointment questions, and reassured the user about requesting a second opinion. The user said they felt they had a plan and intended to book an appointment and take the list."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
     "cache_read_tokens": 0,
     "cache_write_tokens": 0,
-    "input_tokens": 3274,
-    "output_tokens": 430
+    "input_tokens": 4271,
+    "output_tokens": 690
   },
   "version": "gpt_luna"
 }

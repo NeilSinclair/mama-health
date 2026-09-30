@@ -1,31 +1,68 @@
 {
-  "created_at": "2026-09-29T14:29:40+00:00",
+  "created_at": "2026-09-30T12:13:51+00:00",
   "model_id": "gpt-6-luna",
   "output": {
-    "conversation_pain_points": [
-      "bot assumed country context"
-    ],
+    "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "fibromyalgia brain fog",
-      "work performance anxiety",
-      "workplace accommodations",
-      "sleep disruption",
-      "possible sleep apnea",
-      "antihistamine use"
+      {
+        "reason": "The user opened with worsening brain fog and returned to practical ways to manage its effects throughout the conversation.",
+        "relevance": "strong",
+        "topic": "fibromyalgia brain fog"
+      },
+      {
+        "reason": "The user explicitly asked for practical strategies to avoid mistakes at work and engaged with advice for tasks and meetings.",
+        "relevance": "strong",
+        "topic": "workplace coping strategies"
+      },
+      {
+        "reason": "The user said they feared losing their job and later weighed whether disclosing their condition could harm their career.",
+        "relevance": "medium",
+        "topic": "job security"
+      },
+      {
+        "reason": "The user spent several turns exploring disclosure, confidentiality, and a possible middle path through HR.",
+        "relevance": "medium",
+        "topic": "workplace accommodations"
+      },
+      {
+        "reason": "The user described repeatedly waking and feeling unrefreshed, and later asked about improving sleep as a foundation for addressing the fog.",
+        "relevance": "medium",
+        "topic": "sleep disruption"
+      },
+      {
+        "reason": "The user reported that their husband notices snoring and pauses in breathing, then said they would book an evaluation.",
+        "relevance": "medium",
+        "topic": "possible sleep apnea"
+      },
+      {
+        "reason": "The user asked whether medication or supplements could treat the fog and engaged with advice to review them with a clinician or pharmacist.",
+        "relevance": "medium",
+        "topic": "medication and supplements"
+      },
+      {
+        "reason": "The user identified nightly diphenhydramine use and responded to the discussion of its possible contribution to fog.",
+        "relevance": "medium",
+        "topic": "antihistamine use"
+      },
+      {
+        "reason": "The user mentioned higher stress because their workplace was short-staffed but did not return to it in detail.",
+        "relevance": "low",
+        "topic": "work stress"
+      }
     ],
     "reason_for_conversation": "managing cognitive symptoms",
-    "summary": "The user sought practical strategies for worsening fibromyalgia brain fog that was causing accounting mistakes and meeting difficulties, and feared losing their job. The assistant offered work strategies and options for discussing accommodations through HR, then highlighted the user's reported snoring and breathing pauses and nightly diphenhydramine as issues to raise with a clinician; it also gave Canada-specific accommodation information despite the user not stating a location. The user said the advice was useful and the priority plan was clear."
+    "summary": "The user sought practical help for worsening fibromyalgia brain fog affecting accounting work and feared losing their job. The assistant offered workplace strategies, discussed confidential HR accommodations, and highlighted the user's reported breathing pauses during sleep and nightly diphenhydramine use as issues to raise with a clinician; the user said the plan was clear and useful and intended to book an evaluation."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 5324,
-    "output_tokens": 708
+    "input_tokens": 6321,
+    "output_tokens": 1305
   },
   "version": "gpt_luna"
 }

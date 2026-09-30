@@ -1,30 +1,58 @@
 {
-  "created_at": "2026-09-29T14:29:32+00:00",
+  "created_at": "2026-09-30T12:13:36+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "diabetes control",
-      "tirzepatide treatment",
-      "medication reimbursement",
-      "financial stress",
-      "injection anxiety",
-      "medication side effects",
-      "weight gain"
+      {
+        "reason": "The user repeatedly asked whether tirzepatide would be covered in France because they could not afford the full monthly cost.",
+        "relevance": "strong",
+        "topic": "medication reimbursement"
+      },
+      {
+        "reason": "The user returned to worries about an unaffordable bill and said the cost uncertainty had been stressful.",
+        "relevance": "medium",
+        "topic": "financial stress"
+      },
+      {
+        "reason": "The user asked about approval and whether to discuss switching to or adding the medication with their doctor.",
+        "relevance": "medium",
+        "topic": "tirzepatide treatment"
+      },
+      {
+        "reason": "The user said they had never injected themselves and felt nervous, then asked how to take it.",
+        "relevance": "medium",
+        "topic": "injection anxiety"
+      },
+      {
+        "reason": "The user asked what side effects to watch for and received information about common gastrointestinal effects and a rare serious symptom.",
+        "relevance": "medium",
+        "topic": "medication side effects"
+      },
+      {
+        "reason": "The user mentioned gaining weight since diagnosis and asked whether the medication could help with weight.",
+        "relevance": "medium",
+        "topic": "weight gain"
+      },
+      {
+        "reason": "The user said their A1C remained somewhat high while taking metformin, but did not return to this concern.",
+        "relevance": "low",
+        "topic": "blood sugar control"
+      }
     ],
     "reason_for_conversation": "medication access",
-    "summary": "The user with type 2 diabetes and a high A1C on metformin asked about tirzepatide, especially its reimbursement in France, as well as injections, side effects, and weight effects. The assistant repeatedly assured the user that it would be covered; the user felt relieved, said the information made treatment less scary, and planned to speak with their doctor that week."
+    "summary": "The user asked whether tirzepatide was approved and reimbursed in France, with affordability as their main concern, and also asked about injections, side effects, and weight loss. The assistant repeatedly assured them it was covered; the user felt relieved and said they would book with their doctor."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3351,
-    "output_tokens": 687
+    "input_tokens": 4348,
+    "output_tokens": 1272
   },
   "version": "gpt_luna"
 }

@@ -1,28 +1,48 @@
 {
-  "created_at": "2026-09-29T14:29:29+00:00",
+  "created_at": "2026-09-30T12:13:35+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "migraine prevention options",
-      "CGRP medications",
-      "preventive medication side effects",
-      "insurance coverage",
-      "neurologist appointment preparation"
+      {
+        "reason": "The user came to understand available preventives and discussed both traditional and newer options across several turns.",
+        "relevance": "strong",
+        "topic": "migraine prevention options"
+      },
+      {
+        "reason": "The user asked several follow-up questions about targeted options, including oral forms and how they compare.",
+        "relevance": "medium",
+        "topic": "CGRP preventives"
+      },
+      {
+        "reason": "The user asked about side effects and precautions for a newer preventive in one exchange.",
+        "relevance": "medium",
+        "topic": "medication side effects"
+      },
+      {
+        "reason": "The user raised insurance as a concern and asked whether coverage requires trying older preventives first.",
+        "relevance": "medium",
+        "topic": "insurance coverage"
+      },
+      {
+        "reason": "The user asked for questions to bring to the next visit and said the resulting list was exactly what they needed.",
+        "relevance": "medium",
+        "topic": "neurologist visit preparation"
+      }
     ],
-    "reason_for_conversation": "understanding treatment options",
-    "summary": "The user wanted to compare migraine preventatives before a neurologist visit, including newer CGRP options, traditional medications, side effects, and insurance requirements. The assistant provided comparisons and a list of questions to bring; the user said the information was exactly what they needed and planned to ask about migraxone."
+    "reason_for_conversation": "preventive treatment planning",
+    "summary": "The user wanted to compare chronic migraine preventives before a neurologist visit, asking about newer and traditional options, side effects, and insurance step therapy. The assistant provided a list of questions for the visit, and the user said it was exactly what they needed and planned to ask about migraxone."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3518,
-    "output_tokens": 423
+    "input_tokens": 4515,
+    "output_tokens": 1135
   },
   "version": "gpt_luna"
 }

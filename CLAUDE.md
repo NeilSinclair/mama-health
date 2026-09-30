@@ -69,11 +69,11 @@ Use `uv` for everything: `uv add <pkg>` / `uv add --dev <pkg>`. Don't use pip, a
 
 ## LLM labelling
 
-- Qualitative measures (e.g. safety handling, emotional register) may be labelled by an LLM (Claude) against an explicit, versioned rubric kept in the repo.
+- Qualitative measures (e.g. safety handling, emotional register) may be labelled by an LLM against an explicit, versioned rubric kept in the repo.
 - **Labels are cached in `data/labels/` and committed.** By default the pipeline reads the cache and makes **no API calls**, so reviewers can reproduce every number without a key.
-- A reviewer can regenerate labels with their own key: copy `.env.example` to `.env`, set `ANTHROPIC_API_KEY`, and run the pipeline with the relabel flag (document the exact flag in `README.md` once it exists). Never commit `.env` or any key.
+- A reviewer can regenerate labels with their own key: copy `.env.example` to `.env`, set `OPENAI_API_KEY`, and run the pipeline with the relabel flag (exact commands in `README.md`). Never commit `.env` or any key.
 - Cache entries must record the model ID, prompt/rubric version (or hash) and a timestamp, so stale labels can be detected.
-- Use the latest capable Claude model and pin the exact model ID in config.
+- The labelling model is OpenAI GPT Luna (`gpt-6-luna`), chosen over Claude Haiku 4.5 after a bake-off (D-014, D-030). Pin the exact model ID in `src/mama_analysis/config.py`.
 - **Tests must never call the API.** Mock the client or use fixture labels.
 - Spot-check LLM labels by hand. Where we disagree with the model, record it in NOTES.md (this counts as "where we overrode AI").
 

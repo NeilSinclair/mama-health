@@ -1,15 +1,17 @@
 import asyncio
 
 import pytest
-from fakes import FakeLabeller, fake_respond, fake_summary
+from fakes import FakeLabeller, fake_respond, fake_summary, topics
 
 from mama_analysis.consolidate import (
-    FIELDS,
+    CONSOLIDATED_FIELDS,
     apply_mapping,
     consolidate_all,
+    field_labels,
     mapping_dir,
     raw_labels,
     render_labels,
+    shown_labels,
     validate_mapping,
 )
 from mama_analysis.labellers import Prompt
@@ -22,8 +24,18 @@ def _mapping(**pairs):
     return LabelMapping(mappings=[LabelPair(raw=r, canonical=c) for r, c in pairs.items()])
 
 
+def test_all_topics_are_consolidated_but_only_strong_ones_shown():
+    s = fake_summary(
+        main_topics=topics("a") + topics("b", relevance="medium") + topics("c", relevance="low")
+    )
+    assert field_labels(s, "main_topics") == ["a", "b", "c"]
+    assert raw_labels([s], "main_topics") == ["a", "b", "c"]
+    assert shown_labels(s, "main_topics") == ["a"]
+    assert field_labels(s, "end_reason") == shown_labels(s, "end_reason") == ["need met"]
+
+
 def test_raw_labels_handles_list_and_scalar_fields():
-    sums = [fake_summary(main_topics=["b", "a"]), fake_summary(main_topics=["a"])]
+    sums = [fake_summary(main_topics=topics("b", "a")), fake_summary(main_topics=topics("a"))]
     assert raw_labels(sums, "main_topics") == ["a", "b"]
     assert raw_labels(sums, "end_reason") == ["need met"]
 
@@ -67,11 +79,16 @@ def test_apply_mapping_keeps_unique_labels_and_dedupes():
 
 def test_consolidate_all_caches_one_mapping_per_field(tmp_path):
     lab = FakeLabeller(fake_respond)
-    sums = [fake_summary(main_topics=["Sleep", "gut pain"]), fake_summary()]
+    sums = [fake_summary(main_topics=topics("Sleep", "gut pain")), fake_summary()]
     entries = asyncio.run(consolidate_all(sums, lab, PROMPT, tmp_path))
-    assert set(entries) == set(FIELDS)
+    # end_reason is a fixed vocabulary, so it is never sent for consolidation.
+    assert set(entries) == set(CONSOLIDATED_FIELDS)
+    assert "end_reason" not in CONSOLIDATED_FIELDS
+    assert not any(e[1].startswith("field: end_reason") for e in lab.events)
     assert entries["main_topics"].output == {"mapping": {"Sleep": "sleep", "gut pain": "gut pain"}}
-    assert sorted(p.name for p in tmp_path.iterdir()) == sorted(f"{f}.json" for f in FIELDS)
+    assert sorted(p.name for p in tmp_path.iterdir()) == sorted(
+        f"{f}.json" for f in CONSOLIDATED_FIELDS
+    )
 
 
 def test_consolidate_all_retries_then_fails(tmp_path):
@@ -91,11 +108,11 @@ def test_consolidate_all_recovers_on_retry(tmp_path):
         return LabelMapping(mappings=[]) if calls["n"] == 1 else fake_respond(schema, user)
 
     entries = asyncio.run(consolidate_all([fake_summary()], FakeLabeller(flaky), PROMPT, tmp_path))
-    assert set(entries) == set(FIELDS)
+    assert set(entries) == set(CONSOLIDATED_FIELDS)
 
 
 def test_mapping_dir(tmp_path):
-    assert mapping_dir(tmp_path, "haiku") == tmp_path / "mappings" / "haiku"
+    assert mapping_dir(tmp_path, "gpt_luna") == tmp_path / "mappings" / "gpt_luna"
 
 
 def test_consolidate_all_records_usage_of_failed_attempts(tmp_path):
@@ -107,5 +124,5 @@ def test_consolidate_all_records_usage_of_failed_attempts(tmp_path):
 
     entries = asyncio.run(consolidate_all([fake_summary()], FakeLabeller(flaky), PROMPT, tmp_path))
     # FakeLabeller reports 10 input tokens per call; the warm-up field took two attempts.
-    assert entries[FIELDS[0]].usage.input_tokens == 20
-    assert entries[FIELDS[1]].usage.input_tokens == 10
+    assert entries[CONSOLIDATED_FIELDS[0]].usage.input_tokens == 20
+    assert entries[CONSOLIDATED_FIELDS[1]].usage.input_tokens == 10

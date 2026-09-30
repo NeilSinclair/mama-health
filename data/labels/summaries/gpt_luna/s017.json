@@ -1,31 +1,52 @@
 {
-  "created_at": "2026-09-29T14:29:41+00:00",
+  "created_at": "2026-09-30T12:13:54+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot repeated insulin advice after correction",
-      "bot kept deflecting to doctor",
-      "bot repeated lifestyle advice"
+      "bot repeated insulin suggestions after correction",
+      "bot repeated advice the user already follows",
+      "bot kept redirecting to doctor"
     ],
-    "end_reason": "user accepted partial answer",
+    "end_reason": "partial resolution",
     "issue_resolved": false,
     "main_topics": [
-      "morning high glucose",
-      "metformin use",
-      "dawn phenomenon",
-      "diabetes self-management"
+      {
+        "reason": "The user opened by asking why their morning readings were high and returned to the morning-only pattern throughout the conversation.",
+        "relevance": "strong",
+        "topic": "morning high glucose"
+      },
+      {
+        "reason": "The user specifically asked what they could do themselves and objected when the answer returned to seeing a doctor.",
+        "relevance": "strong",
+        "topic": "self-management preference"
+      },
+      {
+        "reason": "The user clarified they take metformin at night and discussed its dose and uncertain formulation over several turns.",
+        "relevance": "medium",
+        "topic": "metformin use"
+      },
+      {
+        "reason": "The user described walking after dinner and reducing rice, and discussed whether these steps might help.",
+        "relevance": "medium",
+        "topic": "lifestyle changes"
+      },
+      {
+        "reason": "The user briefly shared that post-meal readings were lower than the morning readings to distinguish the pattern.",
+        "relevance": "low",
+        "topic": "daytime glucose readings"
+      }
     ],
-    "reason_for_conversation": "understanding morning glucose",
-    "summary": "The user asked why morning glucose readings were around 160–180 despite taking metformin at night, walking after dinner, and reducing rice; daytime readings were lower. The assistant repeatedly raised insulin as an option after the user clarified they did not take it, and the user pushed back on repeated doctor referrals and repeated lifestyle advice. The assistant suggested a 3 a.m. glucose check and ended by recommending the user discuss the results and metformin formulation with a doctor; the user said they understood and thanked the assistant."
+    "reason_for_conversation": "self-management guidance",
+    "summary": "The user asked why morning glucose readings were around 160–180 despite taking metformin at night, walking after dinner, reducing rice, and having lower post-meal readings. The assistant repeatedly suggested insulin after the user said they did not use it, and returned to doctor-directed medication changes despite the user's request for things to try themselves; it also repeated lifestyle advice the user was already following. The user understood the suggestion to check glucose once at 3 a.m. and bring the result and metformin packaging to their doctor, but did not indicate that their request for self-directed next steps was fully met."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3486,
-    "output_tokens": 516
+    "input_tokens": 4483,
+    "output_tokens": 1003
   },
   "version": "gpt_luna"
 }

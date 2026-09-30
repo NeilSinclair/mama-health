@@ -16,13 +16,13 @@ Outputs are written to `outputs/`. Tests: `uv run pytest`.
 
 ## LLM labels
 
-Each conversation is summarised by an LLM (topics, summary, reason, conversation pain points, resolved, end reason), and the free-text labels are then consolidated into a smaller vocabulary. This runs twice, with Claude Haiku 4.5 (`haiku`) and OpenAI GPT Luna (`gpt_luna`). Open `outputs/explorer.html` in a browser to explore the results. The Conversations tab lists every summary with filters, and the Relationships tab graphs which reasons for conversation, topics, conversation pain points and end reasons occur together. The counts behind the graph are in `outputs/summaries/<version>/label_cooccurrence.csv`.
+Each conversation is summarised by an LLM (topics, summary, reason, conversation pain points, resolved, end reason), and the free-text labels are then consolidated into a smaller vocabulary. The model scores each topic's relevance (strong, medium or low) with a one-line reason. End reasons are one of three fixed values (need met, partial resolution, unresolved need), so they need no consolidation. All topics are consolidated into one shared vocabulary, but only strong topics are shown as chips, counted and graphed; every score and reason is kept in the cache, in the `topic_scores` column of `summaries.csv` and under "Topic scores" in the explorer. The model is OpenAI GPT Luna (`gpt-6-luna`, version key `gpt_luna`). Open `outputs/explorer.html` in a browser to explore the results. The Conversations tab lists every summary with filters, the Relationships tab graphs which reasons for conversation, topics, conversation pain points and end reasons occur together, and the Breakdown tab shows linked counts: click any label (e.g. a topic) and every other field recounts for just those conversations. The counts behind the graph are in `outputs/summaries/<version>/label_cooccurrence.csv`.
 
-Labels are cached in `data/labels/`, and the pipeline uses the cache by default, so no API key is needed. To regenerate them with your own keys, copy `.env.example` to `.env`, set `ANTHROPIC_API_KEY` and/or `OPENAI_API_KEY`, then run:
+Labels are cached in `data/labels/`, and the pipeline uses the cache by default, so no API key is needed. To regenerate them with your own keys, copy `.env.example` to `.env`, set `OPENAI_API_KEY`, then run:
 
 ```bash
-uv run mama-pipeline --relabel haiku     # or gpt_luna, or all: re-summarise and re-consolidate
-uv run mama-pipeline --remap haiku       # re-consolidate only, from the cached summaries
+uv run mama-pipeline --relabel gpt_luna   # re-summarise and re-consolidate
+uv run mama-pipeline --remap gpt_luna     # re-consolidate only, from the cached summaries
 ```
 
 Models are pinned in `src/mama_analysis/config.py`, and prompts are versioned in `src/mama_analysis/prompts/`. Each cache entry records its model ID, prompt SHA-256, timestamp and token usage.

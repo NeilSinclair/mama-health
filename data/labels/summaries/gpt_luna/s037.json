@@ -1,30 +1,63 @@
 {
-  "created_at": "2026-09-29T14:30:05+00:00",
+  "created_at": "2026-09-30T12:14:20+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "bowel urgency",
-      "rectal bleeding",
-      "daily-life limitations",
-      "shame and embarrassment",
-      "specialist access",
-      "ulcerative colitis care options",
-      "urgency coping strategies"
+      {
+        "reason": "The user said urgency with almost no warning was the worst part and repeatedly asked about treatment and ways to cope.",
+        "relevance": "strong",
+        "topic": "bowel urgency"
+      },
+      {
+        "reason": "The user described urgency interfering with work and caring for their children, especially fear of an accident in a meeting.",
+        "relevance": "medium",
+        "topic": "daily life disruption"
+      },
+      {
+        "reason": "The user initially felt embarrassed and ashamed, and later said they had felt they were complaining too much.",
+        "relevance": "medium",
+        "topic": "embarrassment and shame"
+      },
+      {
+        "reason": "The user discussed taking mesalamine and asked about rectal treatment and other options to raise with a doctor.",
+        "relevance": "medium",
+        "topic": "ulcerative colitis treatment"
+      },
+      {
+        "reason": "The user said appointments were hard to get and waits were long, then asked how to get a gastroenterology appointment faster.",
+        "relevance": "medium",
+        "topic": "specialist access"
+      },
+      {
+        "reason": "The user asked whether a calprotectin test could show inflammation without a colonoscopy and engaged with the explanation.",
+        "relevance": "medium",
+        "topic": "inflammation testing"
+      },
+      {
+        "reason": "The user reported occasional blood alongside the urgency but did not return to the symptom separately.",
+        "relevance": "low",
+        "topic": "rectal bleeding"
+      },
+      {
+        "reason": "The user said they had loperamide at home and were considering taking it, then agreed to check with their doctor first.",
+        "relevance": "medium",
+        "topic": "loperamide use"
+      }
     ],
-    "reason_for_conversation": "symptom management guidance",
-    "summary": "The user described severe urgency, six or seven bowel movements a day, and occasional blood while taking mesalamine, with symptoms affecting work and parenting and causing shame. The assistant discussed seeking specialist review, possible treatment options and calprotectin testing, practical coping strategies, and checking with a doctor before taking loperamide. The user said they felt less ashamed and had a plan they could act on."
+    "reason_for_conversation": "coping with bowel urgency",
+    "summary": "The user described ulcerative-colitis-related urgency, six or seven bowel movements a day, and occasional blood disrupting work and parenting; they had assumed this was normal and felt ashamed. The assistant discussed seeking specialist review, asking about tests and treatment options, practical coping strategies, and checking before taking loperamide; the user ended feeling less ashamed and able to act."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 4714,
-    "output_tokens": 1151
+    "input_tokens": 5711,
+    "output_tokens": 1294
   },
   "version": "gpt_luna"
 }

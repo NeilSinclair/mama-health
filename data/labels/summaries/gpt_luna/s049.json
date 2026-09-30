@@ -1,31 +1,48 @@
 {
-  "created_at": "2026-09-29T14:30:19+00:00",
+  "created_at": "2026-09-30T12:14:40+00:00",
   "model_id": "gpt-6-luna",
   "output": {
-    "conversation_pain_points": [
-      "bot assumed user's gender"
-    ],
+    "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "long covid symptoms",
-      "work capacity",
-      "resignation decision",
-      "workplace adjustments",
-      "pacing strategies",
-      "emotional exhaustion"
+      {
+        "reason": "The user described fatigue, brain fog, mistakes at work, and crashes that were driving their sense that they could not continue working.",
+        "relevance": "strong",
+        "topic": "long covid work impairment"
+      },
+      {
+        "reason": "The user said they had decided to resign, asked for a letter, and requested a warmer revision.",
+        "relevance": "strong",
+        "topic": "resignation planning"
+      },
+      {
+        "reason": "The user said they were tired of fighting for support and initially needed a nonjudgmental place to talk.",
+        "relevance": "medium",
+        "topic": "emotional exhaustion"
+      },
+      {
+        "reason": "The user described HR's vague response and engaged with information about occupational health and possible adjustments.",
+        "relevance": "medium",
+        "topic": "workplace adjustments"
+      },
+      {
+        "reason": "The user asked for a clear explanation of pacing and said it finally made sense.",
+        "relevance": "medium",
+        "topic": "pacing strategies"
+      }
     ],
-    "reason_for_conversation": "work transition support",
-    "summary": "Long COVID fatigue and brain fog were making office work difficult, and the user had decided to resign. The assistant drafted and warmed a resignation letter, then explained pacing; the user said the explanation clicked, felt calmer, and planned to send the letter Monday."
+    "reason_for_conversation": "resignation support",
+    "summary": "The user described long COVID-related fatigue and brain fog affecting work, then said they had decided to resign; HR had offered no concrete adjustments, though the user's manager had tried to be supportive. The assistant drafted and warmed a resignation letter, then explained pacing after the user asked about managing long COVID; the user said the letter was lovely, planned to send it Monday, and felt calmer with pacing finally explained."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 3933,
-    "output_tokens": 1100
+    "input_tokens": 4930,
+    "output_tokens": 1887
   },
   "version": "gpt_luna"
 }

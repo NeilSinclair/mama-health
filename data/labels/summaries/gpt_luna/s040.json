@@ -1,29 +1,58 @@
 {
-  "created_at": "2026-09-29T14:30:02+00:00",
+  "created_at": "2026-09-30T12:14:23+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "thyroid lab changes",
-      "levothyroxine treatment",
-      "calcium supplement timing",
-      "hashimoto's progression",
-      "fatigue",
-      "fear of deterioration"
+      {
+        "reason": "The user opened by asking why TSH had climbed across three checks despite taking the same levothyroxine dose and returned to what the trend might mean.",
+        "relevance": "strong",
+        "topic": "rising tsh"
+      },
+      {
+        "reason": "The user identified a calcium supplement started around the time of the rise, asked whether to take it later, and explored how it might affect absorption.",
+        "relevance": "strong",
+        "topic": "calcium supplement timing"
+      },
+      {
+        "reason": "The user related to the possibility of gradual gland function loss and reconsidered the assumption that a thyroid dose stays fixed forever.",
+        "relevance": "medium",
+        "topic": "hashimoto's progression"
+      },
+      {
+        "reason": "The user mentioned feeling somewhat more tired and discussed uncertainty about whether it was thyroid-related.",
+        "relevance": "medium",
+        "topic": "fatigue"
+      },
+      {
+        "reason": "The user said the rising number had worried them, then said the explanation was reassuring.",
+        "relevance": "medium",
+        "topic": "worry about deterioration"
+      },
+      {
+        "reason": "The user asked whether to wait for routine testing or contact the doctor sooner and asked about the suggested recheck interval.",
+        "relevance": "medium",
+        "topic": "follow-up testing"
+      },
+      {
+        "reason": "The user briefly mentioned age and poorer sleep as possible explanations for tiredness.",
+        "relevance": "low",
+        "topic": "sleep and aging"
+      }
     ],
-    "reason_for_conversation": "understanding thyroid changes",
-    "summary": "The user asked why TSH was rising despite an unchanged levothyroxine dose and shared that they had recently started taking calcium with breakfast. The assistant explained possible contributors, including calcium timing and gradual Hashimoto's progression, and suggested discussing the trend and fatigue with a doctor or pharmacist and asking about a recheck after any change. The user said the explanation was reassuring and that they had a useful action plan."
+    "reason_for_conversation": "understanding rising tsh",
+    "summary": "The user asked why TSH had risen over three checks while taking the same levothyroxine dose and identified a calcium supplement begun around the time the trend started. The assistant discussed calcium timing and gradual Hashimoto's changes, and suggested contacting the doctor or pharmacist about the trend, fatigue, and a possible recheck after a change; the user said the explanation was reassuring and left with an action plan."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
+  "prompt_version": "summary_v6",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 3126,
     "cache_write_tokens": 0,
-    "input_tokens": 4146,
-    "output_tokens": 529
+    "input_tokens": 5143,
+    "output_tokens": 1001
   },
   "version": "gpt_luna"
 }

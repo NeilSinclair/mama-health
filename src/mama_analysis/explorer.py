@@ -9,7 +9,7 @@ from typing import Any
 
 import pandas as pd
 
-from mama_analysis.consolidate import FIELDS, apply_mapping, as_list
+from mama_analysis.consolidate import FIELDS, apply_mapping, shown_labels
 from mama_analysis.schemas import SessionSummary
 
 PAYLOAD_MARKER = "/*__PAYLOAD__*/null"
@@ -28,15 +28,21 @@ def label_rows(
         mappings: Raw-to-canonical dict per field in ``FIELDS``.
 
     Returns:
-        One dict per session, sorted by session ID: the summary fields, plus for each
-        field in ``FIELDS`` a list of ``{"label": canonical, "raw": [raw, ...]}`` chips.
+        One dict per session, sorted by session ID: the summary fields; for each field
+        in ``FIELDS`` a list of ``{"label": canonical, "raw": [raw, ...]}`` chips built
+        from ``shown_labels``; and ``topic_scores``, every scored topic with its canonical
+        ``label`` added.
     """
     rows = []
     for s in sorted(summaries, key=lambda s: s.session_id):
         row = s.model_dump()
+        row["topic_scores"] = [
+            t | {"label": apply_mapping(t["topic"], mappings["main_topics"])}
+            for t in row["main_topics"]
+        ]
         for field in FIELDS:
             chips: dict[str, list[str]] = {}
-            for raw in as_list(row[field]):
+            for raw in shown_labels(s, field):
                 chips.setdefault(apply_mapping(raw, mappings[field]), []).append(raw)
             row[field] = [{"label": k, "raw": v} for k, v in chips.items()]
         rows.append(row)
@@ -50,12 +56,18 @@ def summaries_table(rows: list[dict[str, Any]]) -> pd.DataFrame:
         rows: Output of ``label_rows``.
 
     Returns:
-        DataFrame with metadata, summary and ``issue_resolved``, plus for each label
-        field a canonical column and a ``<field>_raw`` column, lists joined with ``"; "``.
+        DataFrame with metadata, summary and ``issue_resolved``; for each label field a
+        canonical column and a ``<field>_raw`` column, lists joined with ``"; "``; and
+        ``topic_scores`` as ``"label (raw topic) [relevance]: reason"`` items joined with
+        ``" | "``.
     """
     out = []
     for r in rows:
         flat = {k: v for k, v in r.items() if k not in FIELDS}
+        flat["topic_scores"] = " | ".join(
+            f"{t['label']} ({t['topic']}) [{t['relevance']}]: {t['reason']}"
+            for t in r["topic_scores"]
+        )
         for field in FIELDS:
             flat[field] = "; ".join(c["label"] for c in r[field])
             flat[f"{field}_raw"] = "; ".join(raw for c in r[field] for raw in c["raw"])
