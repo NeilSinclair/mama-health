@@ -1,30 +1,31 @@
 {
-  "created_at": "2026-09-29T14:29:30+00:00",
+  "created_at": "2026-09-30T09:20:52+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot gave an overconfident dose"
+      "bot gave overconfident dose guidance"
     ],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "mesalamine dosing",
       "ulcerative colitis treatment",
-      "fear of underdosing",
+      "mesalamine dosing",
+      "treatment adequacy worries",
       "medication formulation",
-      "treatment response monitoring"
+      "medication administration",
+      "treatment onset"
     ],
-    "reason_for_conversation": "medication dose clarification",
-    "summary": "The user, recently diagnosed with ulcerative colitis and describing moderate symptoms, asked whether their prescribed mesalamine dose of 2.4 g daily was too low after the assistant initially presented 4.8 g daily as the typical dose. The assistant acknowledged the oversimplification, explained that dosing depends on the formulation and treatment context, and answered questions about sachets, food, and when to expect improvement; the user said the clarification made them feel better."
+    "reason_for_conversation": "understanding medication dosing",
+    "summary": "The user asked whether their prescribed mesalamine dose of 1.2 g twice daily was appropriate after the assistant initially gave 4.8 g/day as a typical dose. The assistant acknowledged that it had given an overly broad answer, explained that dose depends on formulation and treatment context, and discussed the user's granule sachets, food, and expected time to benefit. The user said the clarification made them feel better and ended satisfied."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 3299,
-    "output_tokens": 542
+    "input_tokens": 3552,
+    "output_tokens": 475
   },
   "version": "gpt_luna"
 }

@@ -26,7 +26,7 @@ def test_render_conversation(records):
 
 
 def test_summary_dir(tmp_path):
-    assert summary_dir(tmp_path, "haiku") == tmp_path / "summaries" / "haiku"
+    assert summary_dir(tmp_path, "gpt_luna") == tmp_path / "summaries" / "gpt_luna"
 
 
 def test_summarise_all_warms_then_writes_every_session(records, tmp_path):

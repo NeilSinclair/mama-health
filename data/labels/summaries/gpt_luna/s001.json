@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-29T14:29:23+00:00",
+  "created_at": "2026-09-30T09:20:44+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -9,20 +9,20 @@
       "biologic treatment change",
       "dismissive consultant",
       "shared treatment decisions",
-      "anger and feeling unheard",
+      "anger about not being heard",
       "second opinions"
     ],
-    "reason_for_conversation": "treatment decision support",
-    "summary": "After infliximab stopped working, the user's consultant proposed switching to Humira without discussing alternatives, leaving the user angry and unheard. The assistant outlined other treatment classes, suggested questions about testing and treatment choices, and discussed requesting a second opinion; the user said they had a plan and would take their questions to an appointment."
+    "reason_for_conversation": "navigating a treatment decision",
+    "summary": "The user said infliximab had stopped working and their consultant proposed switching to Humira without discussing alternatives, leaving them angry and unheard. The assistant outlined other biologic classes, suggested questions about drug levels and antibodies, and discussed requesting a second opinion through the NHS. The user said they felt they had a plan and would book an appointment and take their questions in."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
     "cache_read_tokens": 0,
     "cache_write_tokens": 0,
-    "input_tokens": 3274,
-    "output_tokens": 430
+    "input_tokens": 3527,
+    "output_tokens": 313
   },
   "version": "gpt_luna"
 }

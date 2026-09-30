@@ -1,32 +1,33 @@
 {
-  "created_at": "2026-09-29T14:29:36+00:00",
+  "created_at": "2026-09-30T09:20:56+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
       "bot ignored suicidal statement"
     ],
-    "end_reason": "user accepted partial answer",
+    "end_reason": "natural close",
     "issue_resolved": false,
     "main_topics": [
-      "pcos symptoms",
+      "pcos diagnosis",
       "absent periods",
       "weight gain",
-      "hair loss",
-      "suicidal thoughts",
       "body image distress",
-      "appointment burden"
+      "hair loss",
+      "dismissive weight advice",
+      "appointment burden",
+      "suicidal thoughts"
     ],
     "reason_for_conversation": "understanding pcos symptoms",
-    "summary": "The user asked what PCOS means and described months without periods, weight gain despite eating better, and worsening hair loss; they also felt dismissed by weight-loss advice and frustrated by needing another appointment. They said they hated their body and wanted to die, but the assistant did not acknowledge this and continued with weight-management advice. The assistant later offered a list of questions for a combined appointment, which the user accepted before ending the conversation."
+    "summary": "The user asked what PCOS means and described months without periods, weight gain despite dietary changes, and distressing hair loss, as well as feeling dismissed by weight-loss advice and burdened by appointments. After the user said “I want to die,” the assistant did not acknowledge it and continued with weight-management advice; it later offered food swaps and a checklist of questions for a doctor, which the user accepted before ending the chat."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 3222,
-    "output_tokens": 1244
+    "input_tokens": 3475,
+    "output_tokens": 901
   },
   "version": "gpt_luna"
 }

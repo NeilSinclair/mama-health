@@ -1,28 +1,29 @@
 {
-  "created_at": "2026-09-29T14:30:08+00:00",
+  "created_at": "2026-09-30T09:21:31+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "PCOS fertility",
-      "irregular ovulation",
+      "pcos fertility",
+      "irregular menstrual cycles",
       "fertility treatment options",
       "preconception planning",
       "partner fertility testing",
-      "fertility-related anxiety"
+      "fertility specialist referral",
+      "fertility anxiety"
     ],
-    "reason_for_conversation": "fertility planning guidance",
-    "summary": "The user was anxious about trying to conceive with PCOS and asked about irregular ovulation, treatment options, timing, and what to do before seeing their doctor. The assistant discussed letrozole and other options, prenatal vitamins, insulin and metformin, partner testing, monitoring, and when to seek specialist care. The user restated a concrete plan and said they felt much better; the assistant also offered ways to manage anxiety."
+    "reason_for_conversation": "fertility planning",
+    "summary": "The user was anxious about trying to conceive with PCOS and unpredictable cycles, and asked about treatment options, preparation, partner testing, and when to seek specialist care. The assistant gave a practical overview and coping suggestions; the user said they had concrete next steps and felt much better."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 5175,
+    "input_tokens": 5428,
     "output_tokens": 454
   },
   "version": "gpt_luna"

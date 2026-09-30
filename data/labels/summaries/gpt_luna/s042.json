@@ -1,32 +1,32 @@
 {
-  "created_at": "2026-09-29T14:30:07+00:00",
+  "created_at": "2026-09-30T09:21:31+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot assumed wrong country context"
+      "bot offered US-centric resources"
     ],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "new diagnosis overwhelm",
-      "budesonide treatment plan",
+      "new diagnosis education",
+      "diagnosis-related overwhelm",
+      "medication planning",
       "disease monitoring",
-      "health information organization",
-      "reliable information sources",
+      "reliable health information",
       "specialist care access",
-      "diet management"
+      "dietary guidance"
     ],
-    "reason_for_conversation": "understanding new diagnosis",
-    "summary": "Newly diagnosed with Crohn’s disease, the user felt overwhelmed and wanted a clear starting point. The assistant explained the disease, budesonide and follow-up planning, monitoring, organization, reliable information, specialist care in India, and diet; after the user noted that US-based advice might not fit, it adapted its guidance. The user felt the information made things manageable and planned to write down questions and clarify the plan after budesonide with the doctor."
+    "reason_for_conversation": "understanding a new diagnosis",
+    "summary": "The user felt overwhelmed after a Crohn’s diagnosis and asked for help understanding the disease, budesonide, monitoring, diet, and how to organize next steps. After the assistant suggested a US-based patient resource, the user questioned how applicable it was in India; the assistant then discussed specialist care options there. The user said the conversation made things feel manageable and planned to write questions and clarify the plan after budesonide with their doctor."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 4519,
-    "output_tokens": 587
+    "input_tokens": 4772,
+    "output_tokens": 1055
   },
   "version": "gpt_luna"
 }

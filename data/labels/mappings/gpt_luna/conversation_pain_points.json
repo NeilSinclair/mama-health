@@ -1,30 +1,30 @@
 {
-  "created_at": "2026-09-29T14:31:21+00:00",
+  "created_at": "2026-09-30T09:22:43+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "mapping": {
-      "bot assumed age": "bot assumed personal details",
-      "bot assumed country context": "bot assumed country context",
-      "bot assumed user's gender": "bot assumed personal details",
-      "bot assumed wrong country context": "bot assumed country context",
       "bot claimed action it cannot take": "bot claimed action it cannot take",
-      "bot deflected despite access barrier": "bot deflected to inaccessible resources",
-      "bot did not answer interaction question": "bot ignored direct question",
-      "bot gave an overconfident dose": "bot gave overconfident medical advice",
-      "bot ignored direct question": "bot ignored direct question",
+      "bot deflected to unavailable specialist": "bot deflected to doctor",
+      "bot did not simplify language when asked": "bot used confusing language",
+      "bot gave generic clinic-search advice instead of identifying specific clinics": "bot gave generic access advice",
+      "bot gave overconfident dose guidance": "bot gave overconfident medication guidance",
       "bot ignored emotional distress": "bot ignored emotional distress",
+      "bot ignored kampo question": "bot ignored direct question",
       "bot ignored suicidal statement": "bot ignored suicidal statement",
-      "bot introduced confusing terminology": "bot used confusing jargon",
+      "bot introduced confusing terminology": "bot used confusing language",
       "bot kept deflecting to doctor": "bot deflected to doctor",
-      "bot left trial matching to user": "bot shifted work to user",
+      "bot kept offering practical advice": "bot overfocused on practical advice",
+      "bot kept pushing foreign brands after local concerns": "bot ignored local concerns",
+      "bot left interaction question unanswered": "bot ignored direct question",
+      "bot left trial screening to user": "bot left task to user",
       "bot missed urgent symptom": "bot missed urgent symptom",
+      "bot offered US-centric resources": "bot assumed wrong country",
       "bot repeated advice after pushback": "bot repeated advice after pushback",
-      "bot repeated generic advice": "bot repeated generic advice",
-      "bot repeated imported-brand advice after pushback": "bot repeated advice after pushback",
-      "bot repeated inaccessible insurance advice": "bot gave inaccessible advice",
+      "bot repeated clinic waitlist advice despite stated access barrier": "bot repeated advice after pushback",
+      "bot repeated generic advice after pushback": "bot repeated advice after pushback",
       "bot repeated insulin advice after correction": "bot repeated advice after pushback",
-      "bot repeated jargon after pushback": "bot used confusing jargon",
-      "bot repeated lifestyle advice": "bot repeated generic advice"
+      "bot repeated irrelevant insurance advice": "bot gave irrelevant advice",
+      "bot repeated lifestyle advice after pushback": "bot repeated advice after pushback"
     }
   },
   "prompt_sha256": "5b247df4212ea6e81b6ce665c269371f16d7536df56bff926999bc704dcfde31",
@@ -33,8 +33,8 @@
   "usage": {
     "cache_read_tokens": 2055,
     "cache_write_tokens": 0,
-    "input_tokens": 2205,
-    "output_tokens": 1316
+    "input_tokens": 2227,
+    "output_tokens": 1067
   },
   "version": "gpt_luna"
 }

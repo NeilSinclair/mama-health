@@ -28,12 +28,11 @@ class ModelSpec:
         label: Human-readable name for the explorer UI.
     """
 
-    provider: Literal["anthropic", "openai"]
+    provider: Literal["openai"]
     model_id: str
     label: str
 
 
 MODELS: dict[str, ModelSpec] = {
-    "haiku": ModelSpec("anthropic", "claude-haiku-4-5-20251001", "Haiku 4.5"),
     "gpt_luna": ModelSpec("openai", "gpt-6-luna", "GPT Luna"),
 }

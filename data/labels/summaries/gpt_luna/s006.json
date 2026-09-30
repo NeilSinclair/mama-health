@@ -1,30 +1,30 @@
 {
-  "created_at": "2026-09-29T14:29:29+00:00",
+  "created_at": "2026-09-30T09:20:51+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
-      "POTS diagnosis",
-      "postural symptoms",
-      "heart damage fears",
-      "long COVID recovery",
-      "exercise intolerance",
-      "POTS self-management",
-      "medication options"
+      "pots diagnosis",
+      "orthostatic symptoms",
+      "fear of heart damage",
+      "long covid prognosis",
+      "post-exertional symptom worsening",
+      "pots self-management",
+      "episodic symptom relief"
     ],
-    "reason_for_conversation": "understanding diagnosis",
-    "summary": "The user wanted to understand a new POTS diagnosis after long COVID, including whether their heart was damaged, whether POTS might improve, and what they could do about symptoms. The assistant explained the condition and discussed self-management, medication questions, and the need to pace activity because exercise had caused crashes; the user said they felt much less panicked and understood the diagnosis better."
+    "reason_for_conversation": "understanding new diagnosis",
+    "summary": "After being told they had POTS at an appointment, the user asked what it meant, whether long COVID caused it, and whether it could improve or damage their heart. They described pounding heart, dizziness, and spotty vision when standing, as well as crashes after exertion; the assistant explained POTS and discussed self-management, pacing, and ways to respond when symptoms occur. The user said they felt less panicked and understood that POTS did not mean their heart was broken."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 4256,
-    "output_tokens": 470
+    "input_tokens": 4509,
+    "output_tokens": 500
   },
   "version": "gpt_luna"
 }

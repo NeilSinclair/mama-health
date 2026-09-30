@@ -1,30 +1,30 @@
 {
-  "created_at": "2026-09-29T14:29:54+00:00",
+  "created_at": "2026-09-30T09:21:17+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
+      "biologic treatment options",
       "active rheumatoid arthritis",
-      "biologic treatment choices",
-      "infection history",
+      "cancer risk fears",
+      "infection and shingles history",
+      "treatment logistics",
       "shingles vaccination",
-      "travel and injection logistics",
-      "cancer risk anxiety",
-      "hormone therapy"
+      "hormone therapy interactions"
     ],
     "reason_for_conversation": "treatment decision support",
-    "summary": "The user wanted to understand biologic options for active RA before a rheumatology appointment, including how recurrent sinus infections, prior shingles, frequent work travel, and cancer risks might affect the choice. The assistant compared treatment classes, discussed vaccination, logistics, risk trade-offs, and assessment timelines, and helped prepare questions for the appointment. The user said they felt ready for a more collaborative discussion and that the conversation genuinely lowered their anxiety."
+    "summary": "The user wanted to understand biologic options for active rheumatoid arthritis and prepare for a discussion with their rheumatologist, including how infection history, prior shingles, travel, cancer risk, and possible hormone therapy might affect the decision. The assistant explained treatment classes and practical considerations, suggested questions for the appointment, and the user said they felt prepared for a real discussion and that their anxiety had genuinely decreased."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 5381,
-    "output_tokens": 518
+    "input_tokens": 5634,
+    "output_tokens": 484
   },
   "version": "gpt_luna"
 }

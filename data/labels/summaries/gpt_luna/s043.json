@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-29T14:30:05+00:00",
+  "created_at": "2026-09-30T09:21:24+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
@@ -9,23 +9,24 @@
     "end_reason": "user left unheard",
     "issue_resolved": false,
     "main_topics": [
-      "endometriosis surgery",
+      "endometriosis",
+      "repeat surgery",
+      "fertility grief",
       "marital strain",
-      "fertility loss",
-      "work impairment",
-      "grief and distress"
+      "work impact",
+      "emotional distress"
     ],
     "reason_for_conversation": "emotional support",
-    "summary": "After learning they need a fourth endometriosis surgery, the user described grief over fertility loss, a deteriorating marriage, and the effects of illness on work and life plans. They repeatedly asked to be heard, but the assistant continued offering surgery-preparation and recovery advice; the user ended the conversation saying there was nothing the assistant could help with."
+    "summary": "After being told a fourth endometriosis surgery was needed, the user described grieving the loss of hoped-for children, strain in their marriage, and the impact of illness on work and life plans. Despite repeated requests to be heard and clear objections to surgery advice, the assistant continued offering preparation and recovery tips; the user ended the conversation feeling unheard."
   },
-  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
-  "prompt_version": "summary_v2",
+  "prompt_sha256": "07850f1950aa7109431171d399baf8641ab70974b218adf060aa3721726b5d79",
+  "prompt_version": "summary_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2129,
+    "cache_read_tokens": 2382,
     "cache_write_tokens": 0,
-    "input_tokens": 3401,
-    "output_tokens": 666
+    "input_tokens": 3654,
+    "output_tokens": 410
   },
   "version": "gpt_luna"
 }
