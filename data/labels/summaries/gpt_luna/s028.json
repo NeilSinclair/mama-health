@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T12:14:02+00:00",
+  "created_at": "2026-09-30T14:31:36+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,42 +7,47 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came in asking how exercise advice could fit their experience of crashing for days after walks or beginner yoga, and returned to how to find a tolerable starting level.",
+        "reason": "The user opened with the conflict between exercise advice and being unable to function for days after walking or yoga, and returned to how to avoid another crash.",
         "relevance": "strong",
         "topic": "exercise-related flares"
       },
       {
-        "reason": "The user described repeatedly overdoing activity on good days and engaged with advice about capping activity and building up slowly.",
+        "reason": "The user explored starting at a very small level, holding back on good days, and gradually building activity across several turns.",
         "relevance": "strong",
         "topic": "activity pacing"
       },
       {
-        "reason": "The user asked whether walking or yoga was preferable and responded positively to the possibility of trying the community-center pool.",
+        "reason": "The user described overdoing activity on good days to make up for bad ones and then crashing, and said the framing of capping activity was useful.",
+        "relevance": "medium",
+        "topic": "boom-bust activity cycle"
+      },
+      {
+        "reason": "The user asked whether walking or yoga was better and responded that a community-center pool might be doable.",
         "relevance": "medium",
         "topic": "exercise options"
       },
       {
-        "reason": "The user asked how long it might take to notice a difference and acknowledged the expectation of gradual progress.",
+        "reason": "The user said they felt stuck between general advice and their body's response, and described feeling punished for trying.",
         "relevance": "medium",
-        "topic": "progress expectations"
+        "topic": "exercise frustration"
       },
       {
-        "reason": "The user said they felt stuck between common advice and their body's response and described feeling punished after trying to exercise.",
-        "relevance": "low",
-        "topic": "exercise frustration"
+        "reason": "The user asked how long it might take to notice a difference and accepted that progress could take weeks to months.",
+        "relevance": "medium",
+        "topic": "exercise progress expectations"
       }
     ],
-    "reason_for_conversation": "exercise pacing guidance",
-    "summary": "The user wanted advice on exercising with fibromyalgia after walks and beginner yoga led to delayed crashes that lasted for days. The assistant discussed starting at a very small, tolerated level, pacing activity on good days, and considering gentle warm-water movement; the user said the advice helped and appreciated its realistic expectations."
+    "reason_for_conversation": "informational",
+    "summary": "The user described delayed flares after walking or beginner yoga despite repeated advice to exercise, and asked how to find a tolerable approach. The assistant discussed very small starting amounts, pacing on good days, warm-water movement, and gradual progress; the user said the advice was genuinely useful and that a pool might be doable. The user ended appreciative and described the conversation as more helpful than many appointments."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 5632,
-    "output_tokens": 794
+    "input_tokens": 5838,
+    "output_tokens": 897
   },
   "version": "gpt_luna"
 }

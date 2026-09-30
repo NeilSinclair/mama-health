@@ -1,52 +1,52 @@
 {
-  "created_at": "2026-09-30T12:13:54+00:00",
+  "created_at": "2026-09-30T14:31:24+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot repeated insulin suggestions after correction",
-      "bot repeated advice the user already follows",
-      "bot kept redirecting to doctor"
+      "bot repeated insulin suggestion after correction",
+      "bot repeated lifestyle advice",
+      "bot kept returning to doctor referral after self-care request"
     ],
     "end_reason": "partial resolution",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user opened by asking why their morning readings were high and returned to the morning-only pattern throughout the conversation.",
+        "reason": "The user opened by asking why their morning readings are high and returned to the morning-only pattern throughout the conversation.",
         "relevance": "strong",
-        "topic": "morning high glucose"
+        "topic": "high morning glucose"
       },
       {
-        "reason": "The user specifically asked what they could do themselves and objected when the answer returned to seeing a doctor.",
-        "relevance": "strong",
-        "topic": "self-management preference"
-      },
-      {
-        "reason": "The user clarified they take metformin at night and discussed its dose and uncertain formulation over several turns.",
+        "reason": "The user clarified they take metformin at night and shared the dose, while the assistant discussed its formulation and regimen.",
         "relevance": "medium",
         "topic": "metformin use"
       },
       {
-        "reason": "The user described walking after dinner and reducing rice, and discussed whether these steps might help.",
+        "reason": "The user asked what they could do themselves and described walking after dinner and reducing rice.",
         "relevance": "medium",
-        "topic": "lifestyle changes"
+        "topic": "self-management habits"
       },
       {
-        "reason": "The user briefly shared that post-meal readings were lower than the morning readings to distinguish the pattern.",
+        "reason": "The user noted that after-meal readings are lower, as context for the morning highs.",
         "relevance": "low",
         "topic": "daytime glucose readings"
+      },
+      {
+        "reason": "The user asked whether the proposed 3am check meant waking up and later questioned what it would lead to.",
+        "relevance": "medium",
+        "topic": "overnight glucose testing"
       }
     ],
-    "reason_for_conversation": "self-management guidance",
-    "summary": "The user asked why morning glucose readings were around 160–180 despite taking metformin at night, walking after dinner, reducing rice, and having lower post-meal readings. The assistant repeatedly suggested insulin after the user said they did not use it, and returned to doctor-directed medication changes despite the user's request for things to try themselves; it also repeated lifestyle advice the user was already following. The user understood the suggestion to check glucose once at 3 a.m. and bring the result and metformin packaging to their doctor, but did not indicate that their request for self-directed next steps was fully met."
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why morning glucose readings are around 160–180 despite taking metformin at night, walking after dinner, and reducing rice; daytime readings are lower. The assistant suggested a 3am check and repeatedly returned to doctor-directed medication changes, including mentioning insulin after the user had clarified they do not take it. The user objected to repeated advice and referrals, then said they understood and thanked the assistant, but did not confirm that their main need was met."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 4483,
-    "output_tokens": 1003
+    "input_tokens": 4689,
+    "output_tokens": 847
   },
   "version": "gpt_luna"
 }

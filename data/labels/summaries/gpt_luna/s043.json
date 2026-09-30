@@ -1,56 +1,50 @@
 {
-  "created_at": "2026-09-30T12:14:28+00:00",
+  "created_at": "2026-09-30T14:32:05+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot ignored emotional distress",
-      "bot repeated advice after pushback"
+      "bot ignored emotional distress"
     ],
     "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user repeatedly described feeling devastated and grieving the life, identity, and future they had lost, and explicitly asked to be heard.",
+        "reason": "The user repeatedly described devastation over how illness had changed their life and explicitly said they wanted to be heard.",
         "relevance": "strong",
         "topic": "emotional grief"
       },
       {
-        "reason": "The user returned several times to their marriage barely holding on and feeling that they and their husband were no longer a couple.",
+        "reason": "The user returned several times to grieving the loss of the dream of having children.",
+        "relevance": "medium",
+        "topic": "fertility grief"
+      },
+      {
+        "reason": "The user repeatedly said the marriage was barely holding on and might not survive the illness and surgery.",
         "relevance": "medium",
         "topic": "marital strain"
       },
       {
-        "reason": "The user repeatedly described grieving the children they had hoped to have and giving up on that dream.",
-        "relevance": "medium",
-        "topic": "fertility loss"
-      },
-      {
-        "reason": "The user framed a fourth endometriosis surgery, after three previous surgeries and twelve years with the disease, as part of a long-running burden.",
-        "relevance": "medium",
-        "topic": "repeat surgery"
-      },
-      {
-        "reason": "The user said their job was gone and later asked whether the bot registered that they could not work.",
+        "reason": "The user said they could not work, as part of describing the losses caused by the illness.",
         "relevance": "low",
-        "topic": "work disruption"
+        "topic": "work impact"
       },
       {
-        "reason": "The user said they had no one else who understood, but did not explore this separately.",
-        "relevance": "low",
-        "topic": "social isolation"
+        "reason": "The user said they had endometriosis for twelve years and had just been told they needed a fourth surgery.",
+        "relevance": "medium",
+        "topic": "endometriosis surgery"
       }
     ],
-    "reason_for_conversation": "emotional support",
-    "summary": "After being told they need a fourth endometriosis surgery, the user described grief over their marriage, lost hopes of having children, work, and their former life, and asked to be heard. The assistant repeatedly gave surgery-preparation advice despite the user's corrections and direct requests for acknowledgment; the user left feeling unheard and frustrated."
+    "reason_for_conversation": "emotional",
+    "summary": "After being told they need a fourth surgery for endometriosis, the user described grief over fertility, a failing marriage, work, and lost life plans, and said they wanted to be heard. The assistant repeatedly responded with surgery-preparation and recovery tips despite the user's direct corrections and requests for acknowledgment. The user ended the conversation feeling unheard and said goodbye."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 4398,
-    "output_tokens": 1231
+    "input_tokens": 4604,
+    "output_tokens": 1675
   },
   "version": "gpt_luna"
 }

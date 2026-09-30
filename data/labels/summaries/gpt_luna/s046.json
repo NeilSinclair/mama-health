@@ -1,61 +1,60 @@
 {
-  "created_at": "2026-09-30T12:14:33+00:00",
+  "created_at": "2026-09-30T14:32:10+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot left trial screening to user despite stated cognitive burden",
-      "bot did not name specific clinics"
+      "bot gave generic search advice after the user explained the burden of searching"
     ],
     "end_reason": "partial resolution",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user repeatedly asked how to identify trials they could qualify for and find a practical route into one.",
+        "reason": "The user repeatedly asked how to identify eligible trials, find matching support, locate research-active clinics, and check US recruitment.",
         "relevance": "strong",
-        "topic": "finding accessible trials"
+        "topic": "clinical trial access"
       },
       {
-        "reason": "The user asked what new disease-focused research was underway and discussed autoantibody and antiviral approaches.",
-        "relevance": "strong",
-        "topic": "long covid research pipeline"
-      },
-      {
-        "reason": "The user described the waitlist barrier and asked which research-active clinics to pursue.",
+        "reason": "The user asked what new, disease-directed research exists and discussed BC 007, temelimab, and the Paxlovid trial.",
         "relevance": "medium",
-        "topic": "long covid clinic access"
+        "topic": "long covid research"
       },
       {
-        "reason": "The user said trial screening was especially burdensome while cognitively impaired.",
+        "reason": "The user said getting into a dedicated clinic involved a difficult waitlist and returned to the lack of a practical route into care.",
         "relevance": "medium",
+        "topic": "long covid clinic waitlists"
+      },
+      {
+        "reason": "The user described having tried standard POTS measures to explain that symptom management was not the information they wanted.",
+        "relevance": "medium",
+        "topic": "POTS treatment"
+      },
+      {
+        "reason": "The user said they were tired of trying ineffective approaches and later expressed frustration that trial access still required extensive self-searching.",
+        "relevance": "medium",
+        "topic": "treatment frustration"
+      },
+      {
+        "reason": "The user said cognitive impairment made it hard to read and compare trial listings, but raised this in one part of the discussion.",
+        "relevance": "low",
         "topic": "cognitive impairment"
       },
       {
-        "reason": "The user asked whether the larger Paxlovid trial had come back negative and discussed the assistant's answer.",
-        "relevance": "medium",
-        "topic": "antiviral trial evidence"
-      },
-      {
-        "reason": "The user said their POTS was relatively stable and listed standard treatments they had already tried.",
+        "reason": "The user mentioned still being unable to work, but did not return to its effects during the conversation.",
         "relevance": "low",
-        "topic": "pots treatment"
-      },
-      {
-        "reason": "The user mentioned they still could not work, but did not return to this impact.",
-        "relevance": "low",
-        "topic": "work limitation"
+        "topic": "work disability"
       }
     ],
-    "reason_for_conversation": "finding accessible trials",
-    "summary": "The user, living with long COVID and relatively stable POTS, wanted new research and a practical way to access US trials after trying standard POTS treatments. The assistant explained research directions and general search, referral, and clinic routes, but did not identify specific matching trials or clinics; the user ended with a general picture but no concrete match."
+    "reason_for_conversation": "access",
+    "summary": "The user wanted evidence-based new research for long COVID beyond POTS management, then focused on how to find trials they might qualify for in the US without doing extensive searching while cognitively impaired. The assistant explained search filters and suggested research-active clinics, but did not provide specific matches; the user ended with a general picture while the practical access burden remained."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 5185,
-    "output_tokens": 1251
+    "input_tokens": 5391,
+    "output_tokens": 1468
   },
   "version": "gpt_luna"
 }

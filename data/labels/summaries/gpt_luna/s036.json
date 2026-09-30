@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T12:14:16+00:00",
+  "created_at": "2026-09-30T14:31:50+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,52 +7,62 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user described nail changes, finger pain, morning stiffness, and swelling, and repeatedly asked what these signs could mean.",
+        "reason": "The user asked whether their symptoms could mean psoriatic arthritis and returned to what it could mean for their health.",
         "relevance": "strong",
-        "topic": "possible psoriatic arthritis"
+        "topic": "psoriatic arthritis"
       },
       {
-        "reason": "The user said the possibility scared them and asked whether waiting could cause permanent damage.",
+        "reason": "The user described pain in both hands, morning stiffness, and episodes of whole-finger swelling that prompted the conversation.",
+        "relevance": "strong",
+        "topic": "finger joint symptoms"
+      },
+      {
+        "reason": "The user raised nail pitting and lifting at the start and later asked whether treatment could improve the nails.",
         "relevance": "medium",
-        "topic": "joint damage concerns"
+        "topic": "nail changes"
       },
       {
-        "reason": "The user asked which doctor to see and explained they thought their health plan required a referral.",
+        "reason": "The user asked whether waiting could lead to permanent damage after hearing about protecting the joints.",
+        "relevance": "medium",
+        "topic": "joint damage risk"
+      },
+      {
+        "reason": "The user asked which doctor to see and explained that their health plan may require a referral.",
         "relevance": "medium",
         "topic": "rheumatology referral"
       },
       {
-        "reason": "The user asked what would happen at the rheumatology appointment because they dislike not knowing what to expect.",
-        "relevance": "medium",
-        "topic": "appointment expectations"
+        "reason": "The user asked what would happen during the appointment because they dislike not knowing what to expect.",
+        "relevance": "low",
+        "topic": "rheumatology appointment"
       },
       {
-        "reason": "The user asked whether a blood test could confirm psoriatic arthritis and compared it with rheumatoid arthritis testing.",
-        "relevance": "medium",
+        "reason": "The user asked whether a blood test could confirm the suspected condition.",
+        "relevance": "low",
         "topic": "diagnostic blood tests"
       },
       {
-        "reason": "The user asked whether they could take something for the pain and mentioned sometimes taking dipirona.",
+        "reason": "The user asked what they could take for pain and mentioned sometimes taking dipyrone.",
         "relevance": "medium",
-        "topic": "joint pain relief"
+        "topic": "pain relief"
       },
       {
-        "reason": "The user asked whether anything could help a nail that looked bad and then checked whether arthritis treatment could also improve the nails.",
-        "relevance": "medium",
-        "topic": "nail psoriasis treatment"
+        "reason": "The user mentioned having psoriasis for several years as background to the nail and joint symptoms.",
+        "relevance": "low",
+        "topic": "psoriasis"
       }
     ],
-    "reason_for_conversation": "understanding possible diagnosis",
-    "summary": "The user was worried that nail changes and painful, stiff, sometimes swollen fingers might indicate psoriatic arthritis. The assistant explained that this was possible, discussed specialist assessment, testing, and symptom and nail treatment; the user said they felt better with a plan and would ask for a referral that week."
+    "reason_for_conversation": "informational",
+    "summary": "The user described psoriasis, new nail changes, and finger pain with morning stiffness and swelling, and asked whether this could be psoriatic arthritis and whether joint damage could be permanent. The assistant explained that evaluation by a rheumatologist was advisable soon, discussed referral options through the user's Brazilian health plan, and answered questions about the appointment, tests, pain relief, and nails. The user said they felt better and planned to ask for a referral that week."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 4490,
-    "output_tokens": 844
+    "input_tokens": 4696,
+    "output_tokens": 1245
   },
   "version": "gpt_luna"
 }

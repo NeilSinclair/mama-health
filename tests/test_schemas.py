@@ -15,7 +15,7 @@ def test_summary_rejects_wrong_types():
             {
                 "main_topics": "not a list",
                 "summary": "x",
-                "reason_for_conversation": "x",
+                "reason_for_conversation": "informational",
                 "conversation_pain_points": [],
                 "issue_resolved": True,
                 "end_reason": "x",
@@ -26,7 +26,7 @@ def test_summary_rejects_wrong_types():
 def test_topic_relevance_must_be_strong_medium_or_low():
     base = {
         "summary": "x",
-        "reason_for_conversation": "x",
+        "reason_for_conversation": "informational",
         "conversation_pain_points": [],
         "issue_resolved": True,
         "end_reason": "need met",
@@ -44,7 +44,7 @@ def test_end_reason_is_one_of_three_values():
     base = {
         "main_topics": [],
         "summary": "x",
-        "reason_for_conversation": "x",
+        "reason_for_conversation": "informational",
         "conversation_pain_points": [],
         "issue_resolved": False,
     }
@@ -59,3 +59,18 @@ def test_summary_schema_has_no_open_dicts():
     for model in (SummaryLLM, LabelMapping):
         text = str(model.model_json_schema())
         assert "additionalProperties': True" not in text
+
+
+def test_reason_is_one_of_four_categories():
+    base = {
+        "main_topics": [],
+        "summary": "x",
+        "conversation_pain_points": [],
+        "issue_resolved": True,
+        "end_reason": "need met",
+    }
+    for value in ("informational", "decisional", "emotional", "access"):
+        s = SummaryLLM.model_validate(base | {"reason_for_conversation": value})
+        assert s.reason_for_conversation == value
+    with pytest.raises(ValidationError):
+        SummaryLLM.model_validate(base | {"reason_for_conversation": "checking a symptom"})

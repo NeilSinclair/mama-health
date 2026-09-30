@@ -15,9 +15,21 @@ CONSOLIDATE_PROMPT = "consolidate_v3"
 
 FIELDS = ("main_topics", "conversation_pain_points", "reason_for_conversation", "end_reason")
 
-# Fields whose free-text labels the LLM consolidates. ``end_reason`` is a fixed vocabulary
-# (see ``schemas.SummaryLLM``), so its labels are already canonical.
-CONSOLIDATED_FIELDS = ("main_topics", "conversation_pain_points", "reason_for_conversation")
+# Fields whose free-text labels the LLM consolidates. ``reason_for_conversation`` and
+# ``end_reason`` are fixed vocabularies (see ``schemas.SummaryLLM``), so their labels are
+# already canonical.
+CONSOLIDATED_FIELDS = ("main_topics", "conversation_pain_points")
+
+# Display names for fixed-vocabulary values. The model returns the short value; outputs and
+# the explorer show the name, keeping the short value as the raw label.
+DISPLAY_NAMES = {
+    "reason_for_conversation": {
+        "informational": "understand my condition",
+        "decisional": "decide on treatment",
+        "emotional": "emotional support",
+        "access": "get access to care",
+    },
+}
 
 # Every topic is consolidated, but only topics at this relevance become chips, counts and
 # graph nodes.
