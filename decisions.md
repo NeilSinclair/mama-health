@@ -244,3 +244,28 @@ Append-only. Each entry records the decision, its rationale, the alternatives co
 - **Alternatives considered:** A pivot table (only two fields at a time) and a single-label drill-down card (one label at a time). The human chose linked counts.
 - **What would change it:** If the memo cites a cross-count from this tab, add it as a tested pipeline table first (CLAUDE.md traceability rule).
 
+### D-037 — Conversation-dynamics pass and analysis tables; definitions fixed before the run
+- **Date:** 2026-09-30
+- **Decision:**
+  - There's a separate LLM pass, `dynamics_v1`, drafted by Fable per D-020, with its own cache in `data/labels/dynamics/`. It labels each session's `final_sentiment` (satisfied, neutral or dissatisfied; how the user *sounded*, not whether the need was met) with a verbatim quote, plus every `pushback`: a user turn resisting the bot's previous reply, with its kind, quote, and whether the bot's **next** reply adapted.
+  - Every quote is checked against its transcript turn (`dynamics.check_dynamics`). Failures are reported, not dropped.
+  - `analysis.py` builds `outputs/analysis/<version>/`: `ending_vs_outcome`, `ending_mismatches`, `sentiment_vs_outcome`, `silent_failures`, `pushbacks`, `recovery_by_outcome` and `friction`.
+  - The silent-failure rule was fixed before the run: `final_sentiment == satisfied` and (end reason ≠ need met, or a safety pain point).
+  - `--dynamics <version>` re-runs only this pass. `--relabel` includes it.
+- **Rationale:** The human asked for three analyses:
+  - whether the product's logged "completed" hides failures
+  - failures the user didn't notice
+  - what happens after users push back
+
+  A separate pass keeps the checked summary labels unchanged; adding fields to the summary would have meant relabelling everything, and we've seen that shift labels.
+- **Alternatives considered:**
+  - Adding fields to the summary schema; rejected for the label churn above.
+  - A regex-based pushback detector; too brittle for "you keep saying that" vs a new question.
+  - A broader silent-failure rule, counting any pain point; not chosen, to keep it to outcome and safety.
+- **Caveats:**
+  - The same model judges "adapted" (this pass) and the outcome (summary pass). They're separate calls, but a model may judge adaptation less generously in conversations that end badly, so the two are not fully independent.
+  - n = 50, synthetic.
+- **What would change it:**
+  - A hand-labelled check disagreeing with `bot_adapted` on the key sessions.
+  - Pushback labels proving unstable across re-runs.
+

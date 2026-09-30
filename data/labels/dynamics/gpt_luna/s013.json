@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-09-30T13:52:21+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "final_sentiment": "satisfied",
+    "final_sentiment_quote": "Great. Thanks, this was actually helpful and not the usual runaround.",
+    "pushbacks": [
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "Though I'll be honest I'm a bit skeptical of anything that sounds like 'just relax.'",
+        "reason": "The reply directly distinguishes the suggested therapies from generic relaxation advice and explains their targeted approach.",
+        "turn": 5
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2173,
+    "cache_write_tokens": 0,
+    "input_tokens": 4264,
+    "output_tokens": 553
+  },
+  "version": "gpt_luna"
+}

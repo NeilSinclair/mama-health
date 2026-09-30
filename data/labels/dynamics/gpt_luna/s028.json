@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-09-30T13:52:30+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "final_sentiment": "satisfied",
+    "final_sentiment_quote": "Thank you. Genuinely. This helped more than a lot of appointments have.",
+    "pushbacks": [
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "Two minutes? Come on. That can't possibly do anything.",
+        "reason": "The reply explains that two minutes is meant to find a tolerable baseline and offers a gradual progression rather than repeating the recommendation without explanation.",
+        "turn": 5
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2173,
+    "cache_write_tokens": 0,
+    "input_tokens": 4679,
+    "output_tokens": 263
+  },
+  "version": "gpt_luna"
+}

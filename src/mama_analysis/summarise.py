@@ -5,6 +5,8 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
+from pydantic import BaseModel
+
 from mama_analysis.cache import make_entry, warm_then_parallel, write_entry
 from mama_analysis.config import CONCURRENCY
 from mama_analysis.labellers import Labeller, Prompt
@@ -42,6 +44,39 @@ def render_conversation(record: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+async def label_sessions(
+    records: list[dict[str, Any]],
+    labeller: Labeller,
+    prompt: Prompt,
+    schema: type[BaseModel],
+    out_dir: Path,
+    concurrency: int = CONCURRENCY,
+) -> dict[str, CacheEntry]:
+    """Run one structured-output call per session, writing each cache entry as it arrives.
+
+    The first call runs alone to warm the prompt cache; the rest run concurrently.
+
+    Args:
+        records: Raw session records.
+        labeller: Model to call.
+        prompt: System prompt.
+        schema: Pydantic model each output must satisfy.
+        out_dir: Directory for ``<session_id>.json`` cache files.
+        concurrency: Maximum calls in flight after the warm-up.
+
+    Returns:
+        Cache entries keyed by session ID.
+    """
+
+    async def one(record: dict[str, Any]) -> tuple[str, CacheEntry]:
+        output, usage = await labeller.complete(prompt.text, render_conversation(record), schema)
+        entry = make_entry(labeller, prompt, usage, output)
+        write_entry(entry, out_dir / f"{record['session_id']}.json")
+        return record["session_id"], entry
+
+    return dict(await warm_then_parallel(records, one, concurrency))
+
+
 async def summarise_all(
     records: list[dict[str, Any]],
     labeller: Labeller,
@@ -49,9 +84,7 @@ async def summarise_all(
     out_dir: Path,
     concurrency: int = CONCURRENCY,
 ) -> dict[str, CacheEntry]:
-    """Summarise every session, writing each cache entry as soon as it arrives.
-
-    The first call runs alone to warm the prompt cache; the rest run concurrently.
+    """Summarise every session (``label_sessions`` with the ``SummaryLLM`` schema).
 
     Args:
         records: Raw session records.
@@ -63,16 +96,7 @@ async def summarise_all(
     Returns:
         Cache entries keyed by session ID.
     """
-
-    async def one(record: dict[str, Any]) -> tuple[str, CacheEntry]:
-        output, usage = await labeller.complete(
-            prompt.text, render_conversation(record), SummaryLLM
-        )
-        entry = make_entry(labeller, prompt, usage, output)
-        write_entry(entry, out_dir / f"{record['session_id']}.json")
-        return record["session_id"], entry
-
-    return dict(await warm_then_parallel(records, one, concurrency))
+    return await label_sessions(records, labeller, prompt, SummaryLLM, out_dir, concurrency)
 
 
 def merge_deterministic(record: dict[str, Any], llm: SummaryLLM) -> SessionSummary:

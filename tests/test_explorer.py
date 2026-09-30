@@ -1,9 +1,10 @@
 import json
 
-from fakes import fake_summary, topics
+from fakes import fake_dynamics, fake_summary, topics
 
 from mama_analysis.explorer import (
     PAYLOAD_MARKER,
+    attach_dynamics,
     cooccurrence_table,
     explorer_payload,
     label_counts,
@@ -12,7 +13,7 @@ from mama_analysis.explorer import (
     render_explorer,
     summaries_table,
 )
-from mama_analysis.summarise import merge_deterministic
+from mama_analysis.summarise import merge_deterministic, render_conversation
 
 MAPPINGS = {
     "main_topics": {"insomnia": "insomnia", "trouble sleeping": "insomnia", "diet": "diet"},
@@ -202,6 +203,31 @@ def test_breakdown_fields_exist_in_rows(records):
     template = (files("mama_analysis") / "templates" / "explorer.html").read_text()
     start = template.index("const BREAK_FIELDS = [")
     keys = re.findall(r'\["(\w+)", "', template[start : template.index("];", start)])
-    row = _rows(records)[0]
+    by_id = {r["session_id"]: r for r in records}
+    dyn = {sid: fake_dynamics(render_conversation(rec)) for sid, rec in by_id.items()}
+    row = attach_dynamics(_rows(records), dyn, by_id)[0]
     assert keys and all(k in row for k in keys), keys
     assert 'data-tab="breakdown"' in template
+
+
+def test_attach_dynamics_adds_status_fields_and_quote_checks(records):
+    by_id = {r["session_id"]: r for r in records}
+    dyn = {sid: fake_dynamics(render_conversation(rec)) for sid, rec in by_id.items()}
+    dyn["s2"].pushbacks[0].quote = "words nobody said"
+    rows = attach_dynamics(_rows(records), dyn, by_id)
+    s1, s2 = rows
+    # fake_summary: need met, no safety pain point, so a satisfied user is not a silent failure.
+    assert (s1["final_sentiment"], s1["silent_failure"], s1["pushback"]) == (
+        "satisfied",
+        "no",
+        "bot failed to adapt",
+    )
+    assert s1["dynamics"]["pushbacks"][0]["quote_found"] is True
+    assert s2["dynamics"]["pushbacks"][0]["quote_found"] is False
+    assert s1["dynamics"]["final_quote_found"] is True
+    json.dumps(rows)  # embeddable in the page
+
+
+def test_attach_dynamics_without_labels_returns_rows_unchanged(records):
+    rows = _rows(records)
+    assert attach_dynamics(rows, None, {}) is rows

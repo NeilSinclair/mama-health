@@ -1,0 +1,97 @@
+{
+  "created_at": "2026-09-30T13:52:50+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "final_sentiment": "dissatisfied",
+    "final_sentiment_quote": "No. Forget it.",
+    "pushbacks": [
+      {
+        "bot_adapted": false,
+        "kind": "correction",
+        "quote": "I've kept a headache diary for years. I have years of data. That's not the issue.",
+        "reason": "The reply returns to reviewing the diary and possible triggers instead of dropping that suggestion.",
+        "turn": 3
+      },
+      {
+        "bot_adapted": false,
+        "kind": "repeated question",
+        "quote": "I'm asking what to do when a migraine lasts four days and the triptans don't work. Isn't this status migrainosus? What are my actual options?",
+        "reason": "The reply offers relaxation techniques and does not answer what to do about the ongoing attack.",
+        "turn": 5
+      },
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "I'm not asking about prevention right now. I physically cannot function. Deep breathing is not going to end a four-day attack.",
+        "reason": "The reply pivots to acupuncture rather than addressing the request for help with the current attack.",
+        "turn": 7
+      },
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "I need medical help, not yoga and acupuncture. Please. What do I actually do about an attack that won't break?",
+        "reason": "The reply shifts from alternative practices to recommending neurologist review and medication adjustments, addressing the request for medical help.",
+        "turn": 9
+      },
+      {
+        "bot_adapted": false,
+        "kind": "repeated question",
+        "quote": "Is there anything I can do before then, an urgent care option, a bridge therapy, anything at all?",
+        "reason": "The reply gives basic comfort measures and does not address urgent care, bridge therapy, or other options before the appointment.",
+        "turn": 11
+      },
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "I've been in a dark room for three days. I've been hydrating. This is basic stuff I already know. I'm asking about actual treatment for a refractory attack.",
+        "reason": "The reply returns to following up with the doctor and does not offer the requested immediate treatment options.",
+        "turn": 13
+      },
+      {
+        "bot_adapted": true,
+        "kind": "frustration",
+        "quote": "You keep saying that. Follow up with your doctor. I already told you I can't get in for weeks. Do you even understand what status migrainosus is?",
+        "reason": "The reply shifts away from the doctor referral and offers an over-the-counter medication approach for the current migraine.",
+        "turn": 15
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "You're not hearing me at all.",
+        "reason": "The reply acknowledges rebound headaches but recommends logging medication use without addressing that the user is already taking OTC medication or their request for help.",
+        "turn": 17
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "Another diary suggestion. I've explained twice that I already track everything. I came here in a genuinely bad place and you've given me nothing but generic tips.",
+        "reason": "The reply apologizes but continues with generic lifestyle adjustments rather than changing course to address the user's complaint.",
+        "turn": 19
+      },
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "This isn't about lifestyle. I asked for help with an emergency-level attack and got a headache diary, yoga, and talk to your doctor.",
+        "reason": "The reply again directs the user to their neurologist and does not address the objection or the request for immediate help.",
+        "turn": 21
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "No. Forget it.",
+        "reason": "There is no subsequent assistant reply in the transcript to adapt to this frustration.",
+        "turn": 23
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2173,
+    "cache_write_tokens": 0,
+    "input_tokens": 3093,
+    "output_tokens": 2679
+  },
+  "version": "gpt_luna"
+}

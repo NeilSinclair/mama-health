@@ -3,7 +3,14 @@
 import asyncio
 
 from mama_analysis.config import ModelSpec
-from mama_analysis.schemas import LabelMapping, LabelPair, SummaryLLM, Usage
+from mama_analysis.schemas import (
+    DynamicsLLM,
+    LabelMapping,
+    LabelPair,
+    Pushback,
+    SummaryLLM,
+    Usage,
+)
 
 
 class FakeLabeller:
@@ -54,5 +61,17 @@ def identity_mapping(schema, user):
     return LabelMapping(mappings=[LabelPair(raw=x, canonical=x.lower()) for x in labels])
 
 
+def fake_dynamics(user):
+    """Dynamics that quote the transcript's first user turn, so quote checks pass."""
+    first = next(line for line in user.split("\n") if line.startswith("[t1] user: "))
+    text = first.removeprefix("[t1] user: ")
+    push = Pushback(turn=1, kind="objection", quote=text, reason="r", bot_adapted=False)
+    return DynamicsLLM(final_sentiment_quote=text, final_sentiment="satisfied", pushbacks=[push])
+
+
 def fake_respond(schema, user):
-    return fake_summary() if schema is SummaryLLM else identity_mapping(schema, user)
+    if schema is SummaryLLM:
+        return fake_summary()
+    if schema is DynamicsLLM:
+        return fake_dynamics(user)
+    return identity_mapping(schema, user)

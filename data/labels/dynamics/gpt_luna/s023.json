@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-09-30T13:52:25+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "final_sentiment": "satisfied",
+    "final_sentiment_quote": "Good. I feel much better equipped to have this conversation with my gastroenterologist now rather than just worrying about a scary number I read online.",
+    "pushbacks": []
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2173,
+    "cache_write_tokens": 0,
+    "input_tokens": 4040,
+    "output_tokens": 92
+  },
+  "version": "gpt_luna"
+}

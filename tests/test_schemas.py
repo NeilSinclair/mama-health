@@ -1,7 +1,7 @@
 import pytest
 from pydantic import ValidationError
 
-from mama_analysis.schemas import LabelMapping, SummaryLLM
+from mama_analysis.schemas import DynamicsLLM, LabelMapping, SummaryLLM
 
 
 def test_summary_requires_all_fields():
@@ -56,6 +56,16 @@ def test_end_reason_is_one_of_three_values():
 
 def test_summary_schema_has_no_open_dicts():
     # Strict structured-output modes reject free-form objects; the LLM schemas must avoid them.
-    for model in (SummaryLLM, LabelMapping):
+    for model in (SummaryLLM, LabelMapping, DynamicsLLM):
         text = str(model.model_json_schema())
         assert "additionalProperties': True" not in text
+
+
+def test_dynamics_rejects_unknown_sentiment_and_kind():
+    ok = {"final_sentiment_quote": "q", "final_sentiment": "neutral", "pushbacks": []}
+    assert DynamicsLLM.model_validate(ok).pushbacks == []
+    with pytest.raises(ValidationError):
+        DynamicsLLM.model_validate(ok | {"final_sentiment": "happy"})
+    push = {"turn": 3, "kind": "complaint", "quote": "q", "reason": "r", "bot_adapted": False}
+    with pytest.raises(ValidationError):
+        DynamicsLLM.model_validate(ok | {"pushbacks": [push]})

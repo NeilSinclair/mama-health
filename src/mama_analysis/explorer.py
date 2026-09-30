@@ -9,8 +9,10 @@ from typing import Any
 
 import pandas as pd
 
+from mama_analysis.analysis import is_silent_failure, pushback_status
 from mama_analysis.consolidate import FIELDS, apply_mapping, shown_labels
-from mama_analysis.schemas import SessionSummary
+from mama_analysis.dynamics import check_dynamics
+from mama_analysis.schemas import DynamicsLLM, SessionSummary
 
 PAYLOAD_MARKER = "/*__PAYLOAD__*/null"
 
@@ -47,6 +49,48 @@ def label_rows(
             row[field] = [{"label": k, "raw": v} for k, v in chips.items()]
         rows.append(row)
     return rows
+
+
+def attach_dynamics(
+    rows: list[dict[str, Any]],
+    dynamics: dict[str, DynamicsLLM] | None,
+    records: dict[str, dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Add each session's conversation dynamics to its row, for the explorer.
+
+    Args:
+        rows: Output of ``label_rows``.
+        dynamics: Dynamics labels keyed by session ID, or ``None`` if not cached.
+        records: Raw session records keyed by session ID.
+
+    Returns:
+        New rows with ``final_sentiment``, ``silent_failure`` (``"yes"``/``"no"``),
+        ``pushback`` (a ``PUSHBACK_STATUSES`` value) and ``dynamics`` (the final quote and
+        every pushback, each with ``quote_found``); the input rows if ``dynamics`` is None.
+    """
+    if dynamics is None:
+        return rows
+    out = []
+    for r in rows:
+        dyn = dynamics[r["session_id"]]
+        check = check_dynamics(records[r["session_id"]], dyn)
+        out.append(
+            r
+            | {
+                "final_sentiment": dyn.final_sentiment,
+                "silent_failure": "yes" if is_silent_failure(r, dyn) else "no",
+                "pushback": pushback_status(dyn),
+                "dynamics": {
+                    "final_sentiment_quote": dyn.final_sentiment_quote,
+                    "final_quote_found": check["final_quote_found"],
+                    "pushbacks": [
+                        p.model_dump() | {"quote_found": ok}
+                        for p, ok in zip(dyn.pushbacks, check["pushback_ok"], strict=True)
+                    ],
+                },
+            }
+        )
+    return out
 
 
 def summaries_table(rows: list[dict[str, Any]]) -> pd.DataFrame:

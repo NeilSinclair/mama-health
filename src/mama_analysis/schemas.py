@@ -41,6 +41,33 @@ class SummaryLLM(BaseModel):
     )
 
 
+class Pushback(BaseModel):
+    """One user turn that resists the bot's previous reply, and whether the bot adapted."""
+
+    turn: int = Field(description="The user turn number [t<n>] where the pushback happens.")
+    kind: Literal["correction", "objection", "repeated question", "frustration"] = Field(
+        description="The dominant kind of pushback in that turn."
+    )
+    quote: str = Field(description="Words copied verbatim from that user turn.")
+    reason: str = Field(description="One sentence: why the bot's next reply did or did not adapt.")
+    bot_adapted: bool = Field(description="Whether the bot's next reply changed approach.")
+
+
+class DynamicsLLM(BaseModel):
+    """How a conversation moved: pushback and the user's final stance (structured output).
+
+    Evidence fields come before the judgements they support.
+    """
+
+    final_sentiment_quote: str = Field(
+        description="The user's last substantive words, copied verbatim."
+    )
+    final_sentiment: Literal["satisfied", "neutral", "dissatisfied"] = Field(
+        description="How the user sounded at the end; not whether their need was met."
+    )
+    pushbacks: list[Pushback] = Field(description="Every user turn that pushes back on the bot.")
+
+
 class SessionSummary(SummaryLLM):
     """A conversation summary with metadata copied deterministically from the dataset."""
 

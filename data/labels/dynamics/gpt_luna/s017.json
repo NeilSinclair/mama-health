@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-09-30T13:52:34+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "final_sentiment": "neutral",
+    "final_sentiment_quote": "no. i understand",
+    "pushbacks": [
+      {
+        "bot_adapted": true,
+        "kind": "correction",
+        "quote": "no insulin. only metformin",
+        "reason": "The reply acknowledges the mistaken assumption and switches to discussing metformin, though it suggests a timing change.",
+        "turn": 5
+      },
+      {
+        "bot_adapted": true,
+        "kind": "correction",
+        "quote": "i take at night already. after dinner",
+        "reason": "The reply drops the timing suggestion and asks about dose and formulation instead.",
+        "turn": 7
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "you said insulin again. i told you i dont take insulin",
+        "reason": "The reply apologizes and clarifies the user is not taking insulin, but still repeats insulin as a possible future option.",
+        "turn": 11
+      },
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "what i can do myself. not doctor things",
+        "reason": "The reply shifts to actions the user can take on their own rather than focusing on a doctor visit.",
+        "turn": 13
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "ok. and then what. same thing you say, go to doctor",
+        "reason": "The reply acknowledges the frustration but still says a doctor must decide on adjustments and repeats the same self-care steps.",
+        "turn": 21
+      },
+      {
+        "bot_adapted": true,
+        "kind": "correction",
+        "quote": "you told me light dinner already before",
+        "reason": "The reply accepts that it repeated the advice and stops repeating it, focusing instead on the 3am check.",
+        "turn": 23
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2173,
+    "cache_write_tokens": 0,
+    "input_tokens": 3530,
+    "output_tokens": 1671
+  },
+  "version": "gpt_luna"
+}

@@ -43,6 +43,15 @@ Record this as we go. For each item: what the AI did, how we checked it, and whe
   - v5 and intermediate-run figures are now marked as unreproducible.
   - The Breakdown chip read "Topic (strong)" even with all topics on. Now it matches the toggle; re-checked in Chrome: "emotional distress" is 1 conversation strong-only and 13 with all topics.
   - D-035 now says it supersedes D-033's consolidation scope.
+- **2026-09-30 — Conversation-dynamics pass (human request, D-037).** Fable 5.1 drafted `dynamics_v1`. It added three rules after reading six transcripts: swapping one non-answer for another is not adapting; a narrower re-ask counts as a repeated question; reassurance-seeking is not pushback. Opus replaced Fable's two examples, which were full transcript lines (s014 t5, s030 t15), and three category phrases (from s018 t13, s046 t21 and a sentiment line) with invented text. **Correction after review:** the replacements are still close paraphrases of s030 t15 and s046 t21. Several stock phrases that appear verbatim in the transcripts also remain in the category definitions: "you keep saying that" (s030 t15), "you're not hearing me" (s030 t17), "that's not what I'm asking" (s043 t3) and "forget it" (s030 t23). So the s030 and s043 labels may be primed. Both are clear-cut (repeated, explicit frustration), but a `dynamics_v2` with fully invented phrases would remove the doubt. Opus wrote `dynamics.py`, `analysis.py`, the CLI wiring and the tests. The live run took 58 s, with about 2,170 cached tokens per call after the warm-up.
+- **2026-09-30 — Dynamics in the explorer (human request).** Opus added three things. Final sentiment, silent failure and pushback status now appear as Conversations filters, row badges and Breakdown panels. Each expanded conversation marks every pushback turn: its kind, the quoted words highlighted, whether the bot's next reply adapted, the model's reason, and a warning if the quote was not found. The final-sentiment quote is also highlighted. Headless Chrome check: the panels match the CSVs (final sentiment 40/6/4; silent failure 3; pushback 27 none / 14 always adapted / 9 failed to adapt). Selecting "bot failed to adapt" leaves unresolved 5 and partial 4, with no need met. s043 shows 9 marked turns, all "did not adapt"; s024 shows the "silent failure" badge.
+- **2026-09-30 — Pre-push review of the dynamics branch (code-reviewer).** Verdict: ship after fixes. It confirmed every quoted number, the cache provenance and the DOM safety of the explorer, and checked the page with the dynamics keys removed. We fixed four things:
+  - The NOTES claim that transcript phrases had been removed from the prompt was overstated; it's corrected above.
+  - The friction conclusion is now caveated.
+  - New tests for the dynamics stale warning and for `cli.dynamics` closing its client on failure.
+  - A guard (`missing_safety_labels`) that notes when a remap drops a safety label the silent-failure rule depends on.
+
+  Not done: a `dynamics_v2` with fully invented phrases. That's for the human to decide.
 
 ## Overrides of AI output
 
@@ -146,6 +155,14 @@ _(Where we disagreed with an AI suggestion or label, and why.)_
     - Near-duplicates survive: "specialist access", "care access barriers" and "appointment navigation"; four separate diabetes labels (monitoring, treatment, risks, management); "digestive diet" and "diet and triggers".
     - "dermatologist discussion" → "specialist access" is a stretch.
   - "suicidal thoughts" keeps its own label: s005 low, s026 strong.
+- **2026-09-30 — Spot-check of the dynamics labels (GPT Luna, `dynamics_v1`).**
+  - **Quote check:** 1 of 129 quotes (50 final quotes + 79 pushbacks) was not found. It's s041's final quote, which starts with words from the bot's turn ("That's exactly the right frame, and…") before the user's sentence. The check flagged it; s041 is need met, so no table result depends on it.
+  - **Silent failures:** s022, s024 and s047. All three match earlier hand checks (the user is calmer despite worsening bleeding; relieved by a booking the bot can't make; "I feel much better" despite the warfarin question being dodged). s008, the unqualified "fully reimbursed" claim, is not caught, because the summary pass gives it need met and no safety pain point.
+  - **s043:** 9 pushbacks, none adapted. That's accurate: the user asks to be heard at t3, t5, t7, t9, t11, t13, t15, t17 and t19, and every reply returns to surgery prep.
+  - **Override, s001 t9:** labelled objection, but the user is questioning their consultant's choice of drug ("why would he jump straight to another anti-TNF"), not the bot. The prompt says to exclude that. So some of the 17 pushbacks in need-met sessions are third-party or mild. s012 t19 ("I've tried food diaries before") and s013 t5 (skeptical of "just relax") are genuine mild objections.
+  - **`bot_adapted` looks generous in places (s018, seen in the explorer).** t13 ("i think you only know US things") is marked adapted, but the next reply still says "confirm they take your coverage before booking". t11 is marked adapted, but its own reason notes the reply "also returns to insurance-based search options". We'd mark both not adapted. That would strengthen, not weaken, the recovery pattern, but it shows the label needs a hand check before any memo claim rests on it.
+  - **Friction hypothesis not supported:** the user's share of words does not rise after the first pushback. Median share by end reason, before → from the first pushback: need met 0.233 → 0.228; partial 0.291 → 0.233; unresolved 0.357 → 0.268 (the unresolved median is s038). Unresolved sessions show a higher share *before* the first pushback, but that isn't evidence of distress at the outset. For s030, s038 and s043 the first pushback is at t3, so the "before" window is just the opening exchange, and a long opening message alone would produce it.
+  - **The safety clause of the silent-failure rule adds nothing on this data.** All three silent failures (s022, s024, s047) are already caught by "need not met". No need-met session has a safety pain point.
 
 ## Anomalies in the brief / data
 
