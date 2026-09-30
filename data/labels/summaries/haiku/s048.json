@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-09-30T07:17:46+00:00",
+  "model_id": "claude-haiku-4-5-20251001",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "PCOS and fertility concerns",
+      "irregular cycles and ovulation",
+      "ovulation induction medications",
+      "insulin resistance",
+      "preconception planning",
+      "partner health screening",
+      "anxiety about conception timeline",
+      "emotional burden of fertility journey"
+    ],
+    "reason_for_conversation": "reassurance and practical fertility roadmap",
+    "summary": "User with PCOS sought reassurance and practical guidance about conception. She reported highly irregular cycles (35–50+ days, possible anovulation) and anxiety from reading online horror stories. The bot explained the ovulation induction pathway, compared letrozole and clomiphene (naming letrozole as first-line for PCOS), addressed ovulation prediction challenges in PCOS, discussed preconception steps (folic acid, lifestyle, metformin for insulin resistance), realistic timelines, and the importance of partner screening. The user moved from anxiety to a clear action plan: return to her doctor, discuss letrozole and metformin, arrange baseline workups for both partners including semen analysis, start prenatal vitamins, and clarify monitoring and escalation criteria. The user also raised emotional concerns about obsessing over cycles; the bot validated this and suggested boundaries and support-seeking. User confirmed feeling reassured and equipped with a concrete plan."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "input_tokens": 6020,
+    "output_tokens": 302
+  },
+  "version": "haiku"
+}

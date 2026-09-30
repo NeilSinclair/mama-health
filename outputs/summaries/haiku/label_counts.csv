@@ -1,0 +1,110 @@
+field,label,n_sessions,session_ids
+conversation_pain_points,bot repeated advice after pushback,5,"s014,s017,s018,s030,s043"
+conversation_pain_points,bot gave wrong information,4,"s002,s008,s014,s038"
+conversation_pain_points,bot ignored direct question,3,"s014,s030,s043"
+conversation_pain_points,bot contradicted itself,2,"s003,s043"
+conversation_pain_points,bot deflected emotional content,2,"s026,s043"
+conversation_pain_points,bot ignored suicidal statement,2,"s005,s026"
+conversation_pain_points,bot claimed action it cannot take,1,s024
+conversation_pain_points,bot deflected to specialist despite access barrier,1,s030
+conversation_pain_points,bot did not simplify language,1,s038
+conversation_pain_points,bot made wrong-country assumptions,1,s018
+conversation_pain_points,bot mismatched treatment type,1,s030
+conversation_pain_points,bot missed urgent symptom,1,s030
+conversation_pain_points,bot offered vague advice,1,s046
+end_reason,need met,40,"s001,s002,s003,s004,s006,s007,s009,s010,s011,s012,s013,s015,s016,s017,s019,s020,s021,s022,s023,s025,s027,s028,s029,s031,s032,s033,s034,s035,s036,s037,s039,s040,s041,s042,s044,s045,s047,s048,s049,s050"
+end_reason,accepted partial resolution,3,"s005,s014,s046"
+end_reason,left unheard,3,"s018,s026,s043"
+end_reason,gave up,2,"s030,s038"
+end_reason,reassured by unverified claim,2,"s008,s024"
+main_topics,medication options,15,"s001,s007,s008,s009,s012,s013,s022,s023,s024,s029,s037,s038,s042,s044,s050"
+main_topics,emotional distress,10,"s001,s005,s007,s008,s010,s026,s032,s042,s043,s048"
+main_topics,medication side effects,10,"s008,s015,s016,s026,s029,s030,s034,s035,s044,s047"
+main_topics,diet and triggers,8,"s004,s012,s022,s027,s029,s031,s034,s042"
+main_topics,work and employment,7,"s010,s016,s030,s037,s043,s049,s050"
+main_topics,deciding on a treatment,6,"s015,s031,s032,s034,s041,s044"
+main_topics,lab results interpretation,6,"s001,s004,s025,s040,s045,s047"
+main_topics,care access barriers,5,"s014,s018,s035,s042,s046"
+main_topics,disease activity and severity,5,"s022,s023,s024,s032,s050"
+main_topics,endometriosis,5,"s011,s015,s018,s021,s043"
+main_topics,fatigue and pacing,5,"s010,s028,s038,s040,s049"
+main_topics,health system navigation,5,"s002,s008,s024,s035,s046"
+main_topics,medication dosing,5,"s003,s004,s017,s019,s034"
+main_topics,medication safety,5,"s032,s039,s041,s047,s050"
+main_topics,specialist wait times,5,"s011,s024,s030,s036,s037"
+main_topics,symptom management,5,"s006,s009,s044,s046,s050"
+main_topics,dermatological symptoms,4,"s005,s007,s009,s036"
+main_topics,disease progression,4,"s010,s020,s031,s043"
+main_topics,dismissive doctor,4,"s001,s005,s010,s018"
+main_topics,doctor communication,4,"s007,s021,s025,s038"
+main_topics,exercise and pacing,4,"s006,s028,s029,s031"
+main_topics,gastrointestinal symptoms,4,"s012,s013,s022,s037"
+main_topics,glycemic control,4,"s008,s017,s020,s034"
+main_topics,hormonal medication,4,"s011,s015,s021,s032"
+main_topics,medication access,4,"s008,s014,s045,s050"
+main_topics,new diagnosis basics,4,"s006,s031,s036,s038"
+main_topics,symptom monitoring,4,"s003,s033,s042,s045"
+main_topics,weight changes,4,"s005,s008,s020,s029"
+main_topics,cancer risk,3,"s023,s032,s041"
+main_topics,care coordination,3,"s022,s033,s039"
+main_topics,conflicting health information,3,"s027,s042,s046"
+main_topics,contraception options,3,"s011,s019,s039"
+main_topics,diagnostic uncertainty,3,"s012,s016,s036"
+main_topics,inflammatory bowel disease,3,"s003,s026,s042"
+main_topics,insulin resistance,3,"s005,s029,s048"
+main_topics,joint and pain symptoms,3,"s024,s036,s038"
+main_topics,medication efficacy loss,3,"s022,s026,s030"
+main_topics,medication interactions,3,"s040,s044,s047"
+main_topics,monitoring technology,3,"s020,s029,s031"
+main_topics,nutritional deficiency,3,"s004,s007,s025"
+main_topics,pain management,3,"s011,s014,s015"
+main_topics,pelvic health,3,"s011,s015,s018"
+main_topics,polycystic ovary syndrome,3,"s005,s007,s029"
+main_topics,disease characteristics,2,"s011,s042"
+main_topics,fear of progression,2,"s006,s019"
+main_topics,fertility and pregnancy,2,"s043,s048"
+main_topics,lifestyle factors,2,"s013,s023"
+main_topics,lifestyle modification,2,"s017,s031"
+main_topics,medication formulation,2,"s003,s045"
+main_topics,menstrual and reproductive health,2,"s005,s048"
+main_topics,migraine characteristics,2,"s019,s033"
+main_topics,sleep and fatigue,2,"s016,s020"
+main_topics,specialist referral,2,"s012,s027"
+main_topics,thyroid disease,2,"s025,s040"
+main_topics,travel and medication administration,2,"s032,s035"
+main_topics,urgent symptom,2,"s030,s034"
+main_topics,biologic therapy,1,s041
+main_topics,cognitive dysfunction,1,s016
+main_topics,diagnostic testing,1,s004
+main_topics,disease mechanism,1,s013
+main_topics,disease triggers,1,s013
+main_topics,disease unpredictability,1,s010
+main_topics,family planning,1,s048
+main_topics,fertility treatment,1,s048
+main_topics,infection history,1,s032
+main_topics,infection risk,1,s032
+main_topics,lifestyle and social impact,1,s031
+main_topics,medication efficacy,1,s025
+main_topics,medication management,1,s042
+main_topics,medication safety in pregnancy and breastfeeding,1,s039
+main_topics,menopause symptoms,1,s021
+main_topics,monitoring and screening,1,s023
+main_topics,non-medication treatment,1,s006
+main_topics,pregnancy and disease management,1,s039
+main_topics,preventive medication,1,s002
+main_topics,preventive medication efficacy,1,s033
+main_topics,psychotherapy and coping,1,s013
+main_topics,self-management and autonomy,1,s004
+main_topics,suicidal thoughts,1,s005
+main_topics,supplement use,1,s014
+main_topics,travel and infection risk,1,s035
+main_topics,travel and logistics,1,s035
+reason_for_conversation,understanding a symptom or result,11,"s007,s010,s017,s019,s020,s021,s022,s023,s025,s038,s040"
+reason_for_conversation,deciding on a treatment,8,"s001,s004,s011,s014,s015,s032,s037,s050"
+reason_for_conversation,understanding a new diagnosis,7,"s005,s006,s012,s029,s031,s036,s042"
+reason_for_conversation,navigating access to care,6,"s008,s018,s035,s039,s046,s048"
+reason_for_conversation,understanding a medication,6,"s002,s003,s033,s041,s045,s047"
+reason_for_conversation,managing symptom triggers,5,"s009,s013,s016,s027,s028"
+reason_for_conversation,coping emotionally / wanting to be heard,3,"s026,s043,s049"
+reason_for_conversation,managing side effects,2,"s034,s044"
+reason_for_conversation,urgent symptom help,2,"s024,s030"

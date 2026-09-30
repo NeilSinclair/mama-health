@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-09-30T07:17:28+00:00",
+  "model_id": "claude-haiku-4-5-20251001",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "IBS vs SIBO differential",
+      "bloating and digestive symptoms",
+      "diagnostic testing uncertainty",
+      "treatment options",
+      "food diary attempts",
+      "specialist referral"
+    ],
+    "reason_for_conversation": "reassurance and diagnostic clarification",
+    "summary": "User questioned whether their long-standing IBS diagnosis might actually be SIBO after online reading. The bot explained SIBO is real but overlaps heavily with IBS, discussed the imperfect breath test used to detect it, outlined a potential treatment-trial approach, and clarified the distinction between SIBO and methane-predominant overgrowth (IMO). User noted their symptoms lean toward constipation rather than diarrhea. The bot encouraged a gastroenterologist referral in Canada, suggested keeping symptom notes, and warned against supplement marketing. User ended satisfied with a clear next step."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "input_tokens": 4815,
+    "output_tokens": 216
+  },
+  "version": "haiku"
+}

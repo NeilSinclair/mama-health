@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-09-30T07:17:29+00:00",
+  "model_id": "claude-haiku-4-5-20251001",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not engage with kampo question",
+      "bot kept pushing iHerb despite user raising customs concerns",
+      "bot did not acknowledge local pharmacy as valid alternative"
+    ],
+    "end_reason": "user accepted partial guidance but deferred to local pharmacist",
+    "issue_resolved": false,
+    "main_topics": [
+      "fibromyalgia pain management",
+      "supplement options",
+      "magnesium dosing",
+      "CoQ10 dosing",
+      "access to supplements in Japan",
+      "customs concerns",
+      "local pharmacy options",
+      "kampo herbal medicine"
+    ],
+    "reason_for_conversation": "guidance on choosing supplements for fibromyalgia",
+    "summary": "User with fibromyalgia asked for supplement advice on their doctor's suggestion. The bot recommended magnesium, vitamin D, CoQ10, and SAM-e with dosing guidance (magnesium 300–400mg, CoQ10 300mg) and suggested purchasing from international brands via iHerb. User raised practical barriers: no Whole Foods in Japan, customs import concerns, and availability of local alternatives including Japanese supplements and kampo. The bot deflected the kampo question and repeatedly steered toward iHerb despite the user signalling they would check local options. User accepted the magnesium and vitamin D suggestions but closed by deciding to ask their local pharmacist, without confirming they would order internationally."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "input_tokens": 3799,
+    "output_tokens": 303
+  },
+  "version": "haiku"
+}

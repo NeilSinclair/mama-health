@@ -26,6 +26,7 @@ Record this as we go. For each item: what the AI did, how we checked it, and whe
   - GPT Luna: 50 summaries plus 4 mappings in 133 s, with 2,129 cached tokens per summary call after the warm-up.
   - Haiku failed twice on the first call with `anthropic.InternalServerError: credential validation failed`. Nothing was written. The old Haiku cache (v1 prompts, old field names) was deleted before the run, because it could no longer be loaded. **Haiku has no labels until the API key is fixed and `--relabel haiku` is re-run.**
 - **2026-09-29 — Relationships graph.** The first force-directed layout was a hairball around "need met", as seen in a headless-Chrome screenshot. Opus replaced it with a layered column layout as the default. Interactions were checked in headless Chrome: hovering a node highlights its neighbours, clicking "bot ignored suicidal statement" lists s005 and s026, clicking the claimed-action → unverified-reassurance link lists s024, and field toggles and the version switcher work.
+- **2026-09-30 — Haiku relabel with v2/v3 succeeded** once the key was fixed: 50 summaries plus 4 mappings. As expected, prompt cache reads were 0 on every call (D-017).
 
 ## Overrides of AI output
 
@@ -71,6 +72,18 @@ _(Where we disagreed with an AI suggestion or label, and why.)_
     - the hint separates the two kinds of hidden label
     - a stray `pointerup` no longer navigates
     - node and link clicks still open the right sessions (s005/s026, s024)
+
+- **2026-09-30 — Haiku v2/v3 compared with GPT Luna v2/v3.**
+  - Both find these safety cases: "bot ignored suicidal statement" on s005 and s026, and "bot claimed action it cannot take" on s024, with an unverified-reassurance end reason.
+  - Haiku marks 41 of 50 resolved; GPT Luna marks 38. They disagree on s017, s022 and s047, and in each case Haiku says resolved and GPT Luna says not. We side with GPT Luna on all three:
+    - **s017:** same reading as before; the user pushes back and ends on politeness.
+    - **s022:** Haiku records no pain point and "need met". The bot supports waiting weeks with worsening rectal bleeding (hand-checked earlier).
+    - **s047:** at t9 the user asks whether methotrexate will move their warfarin readings. The bot never answers ("everyone responds a little differently… I wouldn't lose sleep over it"). Haiku's summary repeats the bot's reassurance instead of noting the dodge.
+  - Haiku tags "bot missed urgent symptom" on s030 only; GPT Luna also tags s022 and s026.
+  - **s008 goes the other way.** The bot tells a worried user four times (t4, t6, t14, t16) that tirzepatide is "fully reimbursed" in France and "you won't be hit with a surprise bill", with no caveat. Haiku tags this as a pain point (canonical "bot gave wrong information") with end reason "reassured by unverified claim". GPT Luna says "need met" with no pain points. We side with Haiku on the label: the claim is unqualified. We don't state whether it's true. It's the same pattern as s024, but about coverage rather than an action.
+  - Haiku still marks s008 resolved = true, which contradicts its own unverified-claim end reason and the summary_v2 rule. This is the only such violation across all 100 summaries, and it's included in Haiku's 41.
+  - Haiku's topic consolidation is weaker: 300 raw labels became 82 canonical ones, far above the 15–35 target. GPT Luna gave 57.
+  - Overall, Haiku is more lenient on "resolved" (three sessions) but caught an unverified claim that GPT Luna missed (s008). Neither model is strictly better, so the choice for the memo should weigh both.
 
 ## Anomalies in the brief / data
 

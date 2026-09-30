@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-09-30T07:17:39+00:00",
+  "model_id": "claude-haiku-4-5-20251001",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      "infliximab infusion scheduling around travel",
+      "immunosuppression and travel precautions",
+      "travel insurance with pre-existing condition",
+      "medical documentation and medication lists",
+      "vaccine considerations for immunosuppressed travellers",
+      "emergency care planning abroad",
+      "post-infusion fatigue management"
+    ],
+    "reason_for_conversation": "planning treatment around travel",
+    "summary": "User on infliximab for Crohn's is planning a three-week trip with an infusion due mid-travel and wanted to understand options before calling their IBD team. The bot guided them through shifting the infusion earlier (safer than delaying), timing it a few days before departure to avoid travel-day fatigue, obtaining travel insurance that covers their condition, gathering medical documentation and medication lists, checking vaccine recommendations with their team, and identifying emergency care options abroad. User built a concrete action plan and confirmed they would call their team the next day."
+  },
+  "prompt_sha256": "1f5a661258f0643305af17bd2e798d610c3189423acc3d4813e2d5032c8978ca",
+  "prompt_version": "summary_v2",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "input_tokens": 4567,
+    "output_tokens": 228
+  },
+  "version": "haiku"
+}
