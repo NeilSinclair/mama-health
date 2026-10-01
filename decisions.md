@@ -399,3 +399,9 @@ Append-only. Each entry records the decision, its rationale, the alternatives co
   - Consolidation left two near-duplicate categories: "bot ignored emotional distress" (s043) and "bot deflected emotional distress" (s026).
 - **Alternatives considered:** Keeping "repeated advice" as a persistence marker. It duplicates the dynamics pass's "bot failed to adapt", which is measured per turn. Two wordings of the corrected-mistake definition were tested and dropped (NOTES).
 - **What would change it:** A rerun in which the three fixed labels are applied inconsistently, or a decision to write the s022 pattern (worsening bleeding, bot endorses waiting) into the prompt. That was not done, to avoid fitting the prompt to one conversation.
+- **Addendum (2026-10-01, from the pre-push review):**
+  - "Need met stays at 39/50" is a swap, not no change: s022 went partial → need met and s047 went need met → partial. s005 went unresolved → partial.
+  - The 6 reason changes are s013, s033, s039 and s045 (understand → decide) and s022 and s028 (decide → understand).
+  - `silent_failures.csv` moved from s022, s024 to s024, s047. By our hand check all three are silent failures.
+  - "Understand my condition" is 21 of 24 need met in `outcome_by_reason.csv`, with s022 counted as met. By the hand check it is 20 of 24, and 38 of 50 overall.
+  - Known weakness: `bot did not answer the user's request` is 7 words, while `consolidate_v4` caps categories at 5 words and `summary_v9` caps labels at 6. Both prompts also say to keep it verbatim, and the committed mapping does. Nothing in code pins the three names, so a later `--remap` could shorten it. The prompts are not edited in place; fix the caps in the next version.

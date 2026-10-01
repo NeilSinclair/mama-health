@@ -99,6 +99,7 @@ Record this as we go. For each item: what the AI did, how we checked it, and whe
   - Regression to note: s022 lost "missed urgent symptom" in 3/3 runs (v8 flagged it; v7 flagged it in 1 of 4).
   - Wording tried and dropped: listing "something they have already tried" under the corrected-mistake label mislabelled s030 (3/3). An explicit exclusion sentence destabilised s017 (1/3).
 - **2026-10-01 — Full relabel with `summary_v9` and `consolidate_v4` (human go-ahead, D-048).** Opus wired in `summary_v9`, wrote `consolidate_v4` (three fixed pain-point labels kept verbatim) and removed the D-039 merge rule and its tests. The stability script was pinned to `consolidate_v3`, and its results stayed identical. The commands were the same as for v8: the `summarise_all` one-off with `load_prompt("summary_v9")`, then `uv run mama-pipeline --remap gpt_luna`. Dynamics were not rerun. Changes against v8 are in D-048. The draft memo's "decide on treatment" figure was updated from 82% to 84%; the other quoted figures still match. **The s022 override is live again:** v9 labels s022 as need met with no pain point, while our hand check says the bot missed an urgent symptom. The D-047 note saying the override no longer differed from `outputs/` held only for the v8 labels.
+- **2026-10-01 — Code review before pushing the v9 relabel.** The `code-reviewer` agent reviewed commit `5b9b71f`: ship it, 0 critical, 0 major, 6 minor, 2 nits. It confirmed that a fresh offline run reproduces all 29 `outputs/` files byte for byte, and that all 52 summary and mapping cache entries carry the v9 / v4 prompt hashes. Opus fixed the documentation findings: a D-048 addendum (which sessions changed; the 7-word fixed label against the prompts' word caps), a v9 entry under overrides, a stale `consolidate_v3` comment and the stability doc's version note. Left for the human, because it is memo wording: the 88% counts s022 as met, "25%" and "33%" are 1 of 4 and 1 of 3, and "ignoring emotional distress" is split across two 1-conversation rows.
 
 ## Overrides of AI output
 
@@ -235,6 +236,13 @@ _(Where we disagreed with an AI suggestion or label, and why.)_
   - Sentiment vs outcome: dissatisfied users are now all unresolved (4 of 4); neutral is 1 met / 4 partial / 1 unresolved.
   - Friction medians, before → from the first pushback: need met 0.233 → 0.228; partial 0.291 → 0.237; unresolved 0.316 → 0.233. The conclusion stands: the share doesn't rise after pushback. s038 is now partial, so the unresolved median is no longer s038.
 - **2026-10-01 — Repeated-advice pain points merged (human override, D-039).** GPT Luna's mapping split one failure mode into three categories: "bot repeated advice", "… after pushback" and "bot repeated medication advice after pushback". The human judged them the same. A code rule now shows them all as "bot repeated advice", in 4 sessions (s014, s017, s030, s038). No other output changed: the analysis tables don't read this label.
+- **2026-10-01 — `summary_v9` labels against our hand checks (D-048).** No new transcripts were read; this compares the v9 labels with the hand checks above.
+  - **Override, s022 (again):** v9 calls it need met with no pain point. We keep "not resolved" and "bot missed urgent symptom", per the 2026-09-29 hand check. So "understand my condition" is 21 of 24 need met in `outcome_by_reason.csv` but 20 of 24 by hand check, and need met overall is 39 in the outputs but 38 by hand check.
+  - **s047 now agrees with us:** v9 calls it partial resolution with "bot did not answer the user's request" (v8: need met). That matches the 2026-09-30 hand check (the warfarin question is never answered).
+  - **Silent failures:** `silent_failures.csv` lists s024 and s047. By hand check the count is 3, with s022.
+  - s005 moved from unresolved to partial. Either way it is not resolved, and its suicidal-statement label is unchanged.
+  - **Weak label, not overridden:** s030's "bot repeated a corrected mistake" is the bot re-suggesting a diary the user already keeps, not a wrong fact about the user. Its secondary labels varied across test runs.
+  - **Split category, not overridden:** `consolidate_v4` kept "bot ignored emotional distress" (s043) and "bot deflected emotional distress" (s026) apart, so each shows 1 conversation in `pain_points.csv`.
 
 ## Anomalies in the brief / data
 
