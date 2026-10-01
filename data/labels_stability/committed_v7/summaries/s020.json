@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-09-30T14:31:27+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking why their A1C rose from 6.8 to 7.4 despite no routine changes, and returned to understanding what might explain it.",
+        "relevance": "strong",
+        "topic": "a1c increase"
+      },
+      {
+        "reason": "The user described months of waking repeatedly, loud snoring, and unrefreshing sleep, then identified sleep as a likely major factor and included it in their appointment plan.",
+        "relevance": "strong",
+        "topic": "poor sleep and snoring"
+      },
+      {
+        "reason": "The user wondered whether the change was due to age and later said they feared diabetes was suddenly getting much worse.",
+        "relevance": "medium",
+        "topic": "diabetes progression worries"
+      },
+      {
+        "reason": "The user mentioned gaining a few pounds over winter and asked whether it could affect blood sugar.",
+        "relevance": "medium",
+        "topic": "weight gain"
+      },
+      {
+        "reason": "The user asked what an individualized target meant after their doctor had only told them to stay under 7.",
+        "relevance": "medium",
+        "topic": "individual a1c target"
+      },
+      {
+        "reason": "The user said they did not have a meter, asked whether to get one, and asked why morning and after-meal readings differ.",
+        "relevance": "medium",
+        "topic": "home glucose monitoring"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why their A1C rose from 6.8 to 7.4 despite unchanged habits and whether age explained it; they also described months of broken sleep and loud snoring, plus modest winter weight gain. The assistant discussed possible contributors, targets, and monitoring, and the user restated an appointment agenda covering a diary, their target, snoring, and whether a meter is useful; they said the conversation was more useful than they expected."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5074,
+    "output_tokens": 989
+  },
+  "version": "gpt_luna"
+}

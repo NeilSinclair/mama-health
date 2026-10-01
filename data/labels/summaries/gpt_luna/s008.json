@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:07+00:00",
+  "created_at": "2026-10-01T15:06:30+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,47 +7,47 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user repeatedly asked whether tirzepatide would be covered in France because they could not afford the full price, and said the answer relieved their concern.",
+        "reason": "The user repeatedly asked whether tirzepatide would be covered in France and said they could not afford the full monthly cost.",
         "relevance": "strong",
-        "topic": "medication affordability"
+        "topic": "medication reimbursement",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user asked about adding or switching to tirzepatide and sought practical information about taking it and its effects.",
+        "reason": "The user opened by saying their A1C remained high on metformin and asking about tirzepatide as a possible option.",
         "relevance": "medium",
-        "topic": "tirzepatide treatment"
+        "topic": "blood sugar control on metformin",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user said their A1C remained high while taking metformin, which framed their interest in another treatment.",
+        "reason": "The user asked how to inject it, said self-injection made them nervous, and then asked what side effects to watch for.",
         "relevance": "medium",
-        "topic": "high blood sugar"
+        "topic": "injection use and side effects",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user mentioned gaining weight since diagnosis, said they disliked it, and asked whether tirzepatide could help.",
+        "reason": "The user asked whether tirzepatide could help with weight after mentioning weight gain since diagnosis.",
         "relevance": "medium",
-        "topic": "weight gain"
+        "topic": "weight effects",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user said self-injection made them nervous, then said the explanation made it sound less daunting.",
+        "reason": "The user said they hated the weight gain but did not return to that feeling separately.",
         "relevance": "low",
-        "topic": "injection anxiety"
-      },
-      {
-        "reason": "The user asked what side effects to watch for and received information about common effects and a rare serious symptom.",
-        "relevance": "low",
-        "topic": "medication side effects"
+        "topic": "distress about weight",
+        "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "access",
-    "summary": "The user with type 2 diabetes and a high A1C on metformin asked whether tirzepatide was approved and reimbursed in France, emphasizing that they could not afford full-price treatment. The assistant repeatedly assured them it was covered and also explained injection use, side effects, and possible weight effects; the user felt reassured and planned to book with their doctor."
+    "summary": "The user asked about tirzepatide because their A1C remained high on metformin, with affordability and reimbursement in France as their main concern. The assistant repeatedly assured them it was covered and discussed injection use, side effects, and weight effects; the user felt reassured and said they would book with their doctor that week."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 4554,
-    "output_tokens": 1045
+    "input_tokens": 5103,
+    "output_tokens": 1477
   },
   "version": "gpt_luna"
 }

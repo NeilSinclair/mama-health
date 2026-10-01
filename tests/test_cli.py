@@ -78,10 +78,14 @@ def test_relabel_then_build_from_cache(data_file, tmp_path, capsys, fake_api):
         "ending_mismatches",
         "ending_vs_outcome",
         "friction",
+        "outcome_by_disease",
+        "outcome_by_reason",
+        "pain_points",
         "pushbacks",
         "recovery_by_outcome",
         "sentiment_vs_outcome",
         "silent_failures",
+        "topic_groups",
     ]
 
 
@@ -100,7 +104,9 @@ def test_committed_outputs_match_fresh_run(tmp_path):
     """Guard against committed outputs drifting from what the pipeline produces."""
     data = REPO_ROOT / "data" / "conversations.json"
     written = {f"eda/{k}": v for k, v in run_eda(data, tmp_path).items()}
-    written |= run_summaries(data, REPO_ROOT / "data" / "labels", tmp_path)
+    written |= run_summaries(
+        data, REPO_ROOT / "data" / "labels", tmp_path, REPO_ROOT / "docs/memo.md"
+    )
     for name, path in written.items():
         committed_file = REPO_ROOT / "outputs" / path.relative_to(tmp_path)
         assert committed_file.exists(), f"{committed_file} not committed; rerun the pipeline"
@@ -161,11 +167,43 @@ def test_mapping_that_misses_new_summary_labels_fails_clearly(data_file, tmp_pat
     path = labels / "summaries" / "gpt_luna" / "s1.json"
     entry = json.loads(path.read_text())
     entry["output"]["main_topics"] = [
-        {"topic": "a label no mapping has seen", "reason": "r", "relevance": "strong"}
+        {
+            "topic": "a label no mapping has seen",
+            "topic_group": "Physical symptoms",
+            "reason": "r",
+            "relevance": "strong",
+        }
     ]
     path.write_text(json.dumps(entry))
     with pytest.raises(ValueError, match="run: uv run mama-pipeline --remap gpt_luna"):
         run_summaries(data_file, labels, tmp_path / "out")
+
+
+def test_pain_point_merges_reach_outputs(data_file, tmp_path, fake_api):
+    """The human merge rule is applied on top of the cached model mapping."""
+    import json
+
+    labels, out = tmp_path / "labels", tmp_path / "out"
+    cli.relabel("gpt_luna", data_file, labels)
+    path = labels / "mappings" / "gpt_luna" / "conversation_pain_points.json"
+    entry = json.loads(path.read_text())
+    entry["output"]["mapping"] = {"bot repeated advice": "bot repeated advice after pushback"}
+    path.write_text(json.dumps(entry))
+    run_summaries(data_file, labels, out)
+    summaries = pd.read_csv(out / "summaries" / "gpt_luna" / "summaries.csv")
+    assert set(summaries["conversation_pain_points"]) == {"bot repeated advice"}
+
+
+def test_memo_page_written_only_when_draft_exists(data_file, tmp_path, fake_api):
+    labels, out = tmp_path / "labels", tmp_path / "out"
+    cli.relabel("gpt_luna", data_file, labels)
+    assert "memo" not in run_summaries(data_file, labels, out, tmp_path / "missing.md")
+    draft = tmp_path / "memo.md"
+    draft.write_text("# Draft\n\n<!-- memo:outcome_by_reason -->\n\n<!-- memo:breakdown -->\n")
+    written = run_summaries(data_file, labels, out, draft)
+    page = written["memo"].read_text()
+    assert "outputs/analysis/gpt_luna/outcome_by_reason.csv" in page
+    assert 'id="bgrid"' in page
 
 
 def test_old_schema_cache_fails_with_relabel_hint(data_file, tmp_path, fake_api):
@@ -193,6 +231,10 @@ def test_missing_dynamics_skips_only_those_tables(data_file, tmp_path, capsys, f
     assert sorted(p.stem for p in (out / "analysis" / "gpt_luna").iterdir()) == [
         "ending_mismatches",
         "ending_vs_outcome",
+        "outcome_by_disease",
+        "outcome_by_reason",
+        "pain_points",
+        "topic_groups",
     ]
 
 

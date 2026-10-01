@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-09-30T14:31:35+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described recurring urgency and visible blood that was becoming more frequent and slowly worsening, and returned to whether it was safe to wait.",
+        "relevance": "strong",
+        "topic": "blood and bowel urgency"
+      },
+      {
+        "reason": "The user asked whether Humira might be losing effectiveness, then asked how antibodies develop and what treatment changes might follow.",
+        "relevance": "strong",
+        "topic": "biologic loss of response"
+      },
+      {
+        "reason": "The user had a gastro appointment several weeks away and directly asked whether to wait until then.",
+        "relevance": "medium",
+        "topic": "appointment timing"
+      },
+      {
+        "reason": "The user said they were scared the symptoms marked the start of a flare and later said they had been spiralling.",
+        "relevance": "medium",
+        "topic": "fear of a flare"
+      },
+      {
+        "reason": "The user asked whether Humira might be dose-adjusted or replaced and whether alternatives existed.",
+        "relevance": "medium",
+        "topic": "treatment options"
+      },
+      {
+        "reason": "The user asked what foods might help when urgency made them reluctant to eat and said the response was helpful.",
+        "relevance": "medium",
+        "topic": "diet during symptoms"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "After about eight stable months on Humira, the user reported returning urgency and small amounts of blood that were gradually worsening, and asked about antibodies, treatment alternatives, diet, and waiting for an appointment several weeks away. The assistant suggested discussing drug-level and antibody testing, keeping a symptom diary, and using gentler foods, and said the appointment was a reasonable place to address it unless things changed dramatically. The user summarized questions to bring and said they felt calmer."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4949,
+    "output_tokens": 1798
+  },
+  "version": "gpt_luna"
+}

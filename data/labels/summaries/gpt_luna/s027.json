@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:31+00:00",
+  "created_at": "2026-10-01T15:07:06+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,47 +7,47 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened by saying the conflicting lists were overwhelming and returned to this as their main problem.",
+        "reason": "The user came overwhelmed by conflicting food lists and asked how to follow the diet, including whether it means permanent restriction.",
         "relevance": "strong",
-        "topic": "low fodmap food lists"
+        "topic": "low-fodmap food guidance",
+        "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user asked whether they would have to avoid onions and garlic forever and welcomed the explanation that the aim is to identify individual triggers.",
+        "reason": "The user asked how to test foods and whether reintroduction should be done with professional support, then included it in their plan.",
         "relevance": "medium",
-        "topic": "food restriction and triggers"
+        "topic": "food reintroduction",
+        "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user asked how to conduct reintroduction and whether to do it with professional support.",
+        "reason": "The user asked whether an NHS dietitian referral for IBS would be covered and decided to ask their GP.",
         "relevance": "medium",
-        "topic": "food reintroduction"
+        "topic": "dietitian referral",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user asked whether the NHS would cover an IBS dietitian referral and accepted asking their GP about one.",
+        "reason": "The user worried that elimination would leave them starving or eating only plain rice and sought reassurance about eating varied meals.",
         "relevance": "medium",
-        "topic": "dietitian referral"
+        "topic": "food adequacy during elimination",
+        "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user worried that elimination would leave them with too few foods and said the answer reassured them.",
-        "relevance": "medium",
-        "topic": "hunger during elimination"
-      },
-      {
-        "reason": "The user questioned whether the Monash app was worth paying for but did not return to the cost after the answer.",
+        "reason": "The user described feeling overwhelmed and later panicked by the food lists, then said they felt less panicked and reassured.",
         "relevance": "low",
-        "topic": "health app cost"
+        "topic": "diet-related overwhelm",
+        "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user felt overwhelmed by conflicting low FODMAP food lists and feared the diet meant giving up foods such as onions and garlic permanently. The assistant explained the temporary elimination and reintroduction phases, suggested the Monash app and asking a GP about a dietitian referral, and addressed concerns about hunger; the user said they felt less panicked and summarized a plan they found helpful."
+    "summary": "The user was overwhelmed by conflicting low-FODMAP food lists and worried the diet meant giving up foods permanently or eating very little. The assistant explained the phases, suggested the Monash app and asking a GP about a dietitian referral, and described reintroduction and meal options; the user summarized an accepted plan and said the conversation was genuinely helpful."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5331,
-    "output_tokens": 712
+    "input_tokens": 5880,
+    "output_tokens": 1382
   },
   "version": "gpt_luna"
 }

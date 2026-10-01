@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-09-30T14:31:20+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by describing worsening fog and asked for practical strategies, returning to ways to manage it throughout the conversation.",
+        "relevance": "strong",
+        "topic": "fibromyalgia brain fog"
+      },
+      {
+        "reason": "The user described accounting mistakes, losing their train of thought at work, and fear of losing their job, making work impact a central concern.",
+        "relevance": "strong",
+        "topic": "work performance and job security"
+      },
+      {
+        "reason": "The user spent several turns weighing disclosure, trust in their manager, and whether HR could provide a middle path.",
+        "relevance": "medium",
+        "topic": "workplace accommodations"
+      },
+      {
+        "reason": "The user reported repeated waking and unrefreshing sleep, then asked about addressing the underlying contributors to fog.",
+        "relevance": "medium",
+        "topic": "poor sleep"
+      },
+      {
+        "reason": "The user reported that their husband had noticed snoring and pauses in breathing, and agreed to book an evaluation after the assistant urged follow-up.",
+        "relevance": "medium",
+        "topic": "sleep breathing pauses"
+      },
+      {
+        "reason": "The user asked about medication for fog and then disclosed regular diphenhydramine use after the assistant raised possible medication-related fog.",
+        "relevance": "medium",
+        "topic": "medication cognitive effects"
+      },
+      {
+        "reason": "The user specifically asked for in-the-moment strategies for losing their train of thought mid-sentence in meetings and said they would try meeting notes.",
+        "relevance": "medium",
+        "topic": "meeting speech disruption"
+      },
+      {
+        "reason": "The user asked whether supplements might help after mentioning online claims, but did not return to the topic.",
+        "relevance": "low",
+        "topic": "supplement questions"
+      },
+      {
+        "reason": "The user briefly noted that staffing shortages had increased work stress while discussing worsening sleep and fog.",
+        "relevance": "low",
+        "topic": "work stress"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user sought practical help for worsening fibromyalgia brain fog that was affecting accounting work and threatening their confidence about keeping their job. The assistant offered work and meeting strategies, discussed confidential HR accommodations, and urged prompt medical follow-up after the user reported snoring and breathing pauses and regular diphenhydramine use. The user said the priorities were clear, planned to book an evaluation, and appreciated the practical support."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 6527,
+    "output_tokens": 1262
+  },
+  "version": "gpt_luna"
+}

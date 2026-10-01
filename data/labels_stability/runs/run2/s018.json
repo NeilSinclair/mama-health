@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-10-01T09:09:12+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot repeated insurance advice after correction",
+      "bot ignored stated access barriers"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user opened with six months of severe pelvic pain and described pain during periods, on other days, and sometimes when using the bathroom.",
+        "relevance": "strong",
+        "topic": "chronic pelvic pain"
+      },
+      {
+        "reason": "The user repeatedly explained that specialist waits through SUS are long and that insurance directories and telehealth advice did not fit their situation.",
+        "relevance": "strong",
+        "topic": "specialist access barriers"
+      },
+      {
+        "reason": "The user said their doctor called the pain normal cramps and did not believe them, then asked how to get imaging when the doctor dismisses them.",
+        "relevance": "medium",
+        "topic": "dismissive clinician"
+      },
+      {
+        "reason": "The user reported that endometriosis had been suggested and discussed how to pursue evaluation, but did not state a diagnosis.",
+        "relevance": "medium",
+        "topic": "suspected endometriosis"
+      },
+      {
+        "reason": "The user engaged with the suggestion of continuous birth-control pills and said they might ask their doctor about it.",
+        "relevance": "medium",
+        "topic": "pain treatment options"
+      },
+      {
+        "reason": "The user said the pain sometimes prevents them from working, but did not return to this impact later.",
+        "relevance": "low",
+        "topic": "work impairment"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "The user described severe pelvic pain, possible endometriosis, and a doctor who dismissed the pain; they wanted to be believed and get treatment while facing long waits for gynecology through SUS in Brazil. The assistant repeatedly suggested US-style insurance directories and specialist-finding advice despite corrections, though the user found the continuous-pill suggestion potentially useful. The user ended by saying the conversation was not helping."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4768,
+    "cache_write_tokens": 0,
+    "input_tokens": 4771,
+    "output_tokens": 1363
+  },
+  "version": "gpt_luna"
+}

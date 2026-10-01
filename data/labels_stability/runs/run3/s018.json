@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-10-01T09:11:39+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot repeated irrelevant insurance advice after correction"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user described severe pain lasting six months, occurring during periods and on other days, and sometimes with bathroom use.",
+        "relevance": "strong",
+        "topic": "pelvic pain"
+      },
+      {
+        "reason": "The user repeatedly explained that gynecology waits through SUS are long and that the suggested insurance-directory and telehealth routes did not fit their situation.",
+        "relevance": "strong",
+        "topic": "specialist access barriers"
+      },
+      {
+        "reason": "The user said their doctor called the pain normal cramps and stressed that they needed someone to believe them and treat the pain.",
+        "relevance": "strong",
+        "topic": "dismissive clinician"
+      },
+      {
+        "reason": "The user said endometriosis had been raised as a possibility and discussed getting evaluation for it across several turns.",
+        "relevance": "medium",
+        "topic": "suspected endometriosis"
+      },
+      {
+        "reason": "The user wanted pain treated now and said they might ask their doctor about taking a continuous pill after the assistant suggested it.",
+        "relevance": "medium",
+        "topic": "pain management options"
+      },
+      {
+        "reason": "The user said the pain sometimes prevents them from working, but did not return to this impact separately.",
+        "relevance": "low",
+        "topic": "work impact"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "The user described severe pelvic pain for six months, possible endometriosis, and a doctor who dismissed it as normal cramps; the pain sometimes prevents them from working. They explained that insurance directories and telehealth advice did not fit their SUS situation, but the assistant repeatedly returned to those suggestions despite the corrections. The user said they might ask about a continuous pill, but ended by saying the conversation was not helping and left."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4768,
+    "cache_write_tokens": 0,
+    "input_tokens": 4771,
+    "output_tokens": 1129
+  },
+  "version": "gpt_luna"
+}

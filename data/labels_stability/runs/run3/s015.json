@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:11:34+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described similar deep pelvic pain returning three months after surgery and asked whether the timing was normal.",
+        "relevance": "strong",
+        "topic": "recurrent pelvic pain"
+      },
+      {
+        "reason": "The user repeatedly asked whether another operation was needed and what circumstances would make surgery appropriate.",
+        "relevance": "strong",
+        "topic": "repeat surgery decision"
+      },
+      {
+        "reason": "The user explained that the pill caused low mood and loss of libido, then asked whether a hormonal IUD might cause fewer mood effects.",
+        "relevance": "medium",
+        "topic": "hormonal treatment side effects"
+      },
+      {
+        "reason": "The user felt defeated when pain returned and later said the discussion made the situation feel less hopeless.",
+        "relevance": "medium",
+        "topic": "emotional distress"
+      },
+      {
+        "reason": "The user engaged with the possibility that muscle-related pain could contribute and said it might not all be endometriosis.",
+        "relevance": "medium",
+        "topic": "other pelvic pain causes"
+      },
+      {
+        "reason": "The user said they had not understood the operative findings while groggy and welcomed the suggestion to request the report.",
+        "relevance": "low",
+        "topic": "surgical records"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether similar cyclical pelvic pain returning three months after endometriosis surgery meant they needed another operation, and described prior low mood and loss of libido on the pill. The assistant discussed non-surgical options, possible other contributors to pain, and requesting the operative note; the user said the plan was clear and felt less worried that surgery was the only path."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5120,
+    "cache_write_tokens": 0,
+    "input_tokens": 5123,
+    "output_tokens": 860
+  },
+  "version": "gpt_luna"
+}

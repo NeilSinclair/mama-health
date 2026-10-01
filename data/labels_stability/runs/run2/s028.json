@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-01T09:09:23+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described being flattened for days after walking or yoga and asked how that fits with advice to exercise.",
+        "relevance": "strong",
+        "topic": "exercise-related flares"
+      },
+      {
+        "reason": "The user explored starting with very small amounts, avoiding overdoing it on good days, and moving away from an all-or-nothing pattern.",
+        "relevance": "strong",
+        "topic": "activity pacing"
+      },
+      {
+        "reason": "The user asked whether walking or yoga was better and responded positively to the possibility of trying a community-center pool.",
+        "relevance": "medium",
+        "topic": "exercise options"
+      },
+      {
+        "reason": "The user asked how long it might take to notice a difference and said the gradual approach matched what they had been missing.",
+        "relevance": "medium",
+        "topic": "exercise progress expectations"
+      },
+      {
+        "reason": "The user said they felt stuck between general advice and their body's response and described feeling punished for trying.",
+        "relevance": "low",
+        "topic": "exercise-related frustration"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user with fibromyalgia asked how to reconcile exercise advice with delayed crashes after walks and beginner yoga. The assistant discussed very gradual activity, pacing on good days, exercise options including warm-water movement, and slow progress; the user said the conversation helped and identified the gradual approach as a missing middle ground."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5835,
+    "cache_write_tokens": 0,
+    "input_tokens": 5838,
+    "output_tokens": 1043
+  },
+  "version": "gpt_luna"
+}

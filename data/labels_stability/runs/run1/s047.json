@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-10-01T09:08:26+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not answer direct question"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether methotrexate was safe with warfarin and whether it might change their readings.",
+        "relevance": "strong",
+        "topic": "methotrexate-warfarin interaction"
+      },
+      {
+        "reason": "The user asked whether methotrexate blood tests would detect warfarin-related problems and whether tests help guide the dose.",
+        "relevance": "medium",
+        "topic": "methotrexate monitoring"
+      },
+      {
+        "reason": "The user asked what to watch for at home, and the assistant listed bleeding and methotrexate-related symptoms.",
+        "relevance": "medium",
+        "topic": "medication warning signs"
+      },
+      {
+        "reason": "The user acknowledged the weekly schedule and the danger of daily dosing after the assistant explained it.",
+        "relevance": "low",
+        "topic": "weekly methotrexate dosing"
+      },
+      {
+        "reason": "The user asked what to confirm with the GP before starting and received a checklist.",
+        "relevance": "low",
+        "topic": "pre-start gp discussion"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether starting methotrexate for rheumatoid arthritis was safe while taking long-term warfarin, and whether it could affect their warfarin readings. The assistant emphasized monitoring, warning signs, and weekly dosing, but did not clearly answer how the medicines compare or whether readings might change; the user said they felt much better and planned to check a few points with the GP."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4482,
+    "output_tokens": 1024
+  },
+  "version": "gpt_luna"
+}

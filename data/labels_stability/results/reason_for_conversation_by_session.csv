@@ -1,0 +1,51 @@
+session_id,run1,run2,run3,committed,n_distinct,majority,committed_matches_majority
+s001,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s002,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s003,understand my condition,understand my condition,understand my condition,decide on treatment,1,understand my condition,False
+s004,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s005,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s006,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s007,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s008,get access to care,get access to care,get access to care,get access to care,1,get access to care,True
+s009,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s010,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s011,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s012,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s013,understand my condition,understand my condition,decide on treatment,understand my condition,2,understand my condition,True
+s014,decide on treatment,decide on treatment,get access to care,decide on treatment,2,decide on treatment,True
+s015,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s016,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s017,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s018,get access to care,get access to care,get access to care,get access to care,1,get access to care,True
+s019,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s020,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s021,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s022,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s023,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s024,get access to care,get access to care,get access to care,get access to care,1,get access to care,True
+s025,understand my condition,understand my condition,understand my condition,decide on treatment,1,understand my condition,False
+s026,emotional support,emotional support,emotional support,emotional support,1,emotional support,True
+s027,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s028,decide on treatment,understand my condition,understand my condition,understand my condition,2,understand my condition,True
+s029,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s030,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s031,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s032,decide on treatment,understand my condition,decide on treatment,decide on treatment,2,decide on treatment,True
+s033,understand my condition,decide on treatment,decide on treatment,understand my condition,2,decide on treatment,False
+s034,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s035,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s036,decide on treatment,decide on treatment,understand my condition,understand my condition,2,decide on treatment,False
+s037,get access to care,get access to care,understand my condition,get access to care,2,get access to care,True
+s038,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s039,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s040,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s041,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s042,understand my condition,understand my condition,understand my condition,understand my condition,1,understand my condition,True
+s043,emotional support,emotional support,emotional support,emotional support,1,emotional support,True
+s044,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s045,decide on treatment,decide on treatment,decide on treatment,understand my condition,1,decide on treatment,False
+s046,get access to care,get access to care,get access to care,get access to care,1,get access to care,True
+s047,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s048,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True
+s049,emotional support,emotional support,emotional support,emotional support,1,emotional support,True
+s050,decide on treatment,decide on treatment,decide on treatment,decide on treatment,1,decide on treatment,True

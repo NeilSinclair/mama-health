@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:08:57+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether long covid would improve and returned later to ask what persistent symptoms could mean.",
+        "relevance": "strong",
+        "topic": "long covid prognosis"
+      },
+      {
+        "reason": "The user described being wiped out for days after a food shop and asked whether these crashes could affect recovery.",
+        "relevance": "strong",
+        "topic": "post-exertional symptoms"
+      },
+      {
+        "reason": "The user asked how to find their energy limit, raised the difficulty of resting, and ended by planning to try pacing and tracking.",
+        "relevance": "strong",
+        "topic": "pacing and activity tracking"
+      },
+      {
+        "reason": "The user said their manager knew they had been unwell but did not understand it was ongoing, and considered looking into workplace adjustments.",
+        "relevance": "medium",
+        "topic": "workplace support"
+      },
+      {
+        "reason": "The user described a previous GP appointment as offering little more than reassurance and later asked what to raise at another appointment.",
+        "relevance": "medium",
+        "topic": "dismissive gp appointment"
+      },
+      {
+        "reason": "The user said the long timeline felt like forever and that false reassurance made them feel more alone.",
+        "relevance": "medium",
+        "topic": "emotional distress"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user sought an honest outlook on long covid after six months, then discussed crashes after activity, pacing, and the difficulty of resting while managing work and a household. The assistant acknowledged uncertainty, offered pacing and tracking suggestions, and gave ideas for raising PEM and support options with a GP. The user planned to try pacing and tracking and said the conversation had not made them feel worse."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4950,
+    "cache_write_tokens": 0,
+    "input_tokens": 4953,
+    "output_tokens": 822
+  },
+  "version": "gpt_luna"
+}

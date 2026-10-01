@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:15+00:00",
+  "created_at": "2026-10-01T15:06:45+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,52 +7,65 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user described similar deep pelvic pain returning three months after surgery and asked whether that meant another operation was needed.",
+        "reason": "The user described the return of similar deep pelvic pain that worsens around their period and asked about its early recurrence.",
         "relevance": "strong",
-        "topic": "post-surgical pelvic pain"
+        "topic": "recurrent pelvic pain",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user repeatedly asked whether and when another surgery might be considered, and sought a concrete next step.",
+        "reason": "The user opened by asking whether pain three months after surgery meant they needed another operation and later asked when repeat surgery would be considered.",
         "relevance": "strong",
-        "topic": "repeat surgery decision"
+        "topic": "repeat surgery",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user discussed not having started treatment after surgery and explored alternatives to the combined pill, including a hormonal IUD.",
-        "relevance": "medium",
-        "topic": "post-surgical treatment options"
+        "reason": "The user discussed not taking hormones after surgery, their poor experience with the pill, and asked whether Mirena might cause fewer mood effects.",
+        "relevance": "strong",
+        "topic": "hormonal treatment options",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user explained that the pill caused low mood and loss of libido and said they did not want to return to it.",
+        "reason": "The user said the pill caused low mood and loss of libido and that they did not want to return to it.",
         "relevance": "medium",
-        "topic": "hormonal medication side effects"
+        "topic": "hormonal medication side effects",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "After hearing that pain could have a muscular component, the user engaged with the possibility that not all the pain came from endometriosis.",
+        "reason": "The user was unsure what the surgery had found, welcomed the suggestion to request the operative note, and included this in their next steps.",
         "relevance": "medium",
-        "topic": "pelvic floor pain"
+        "topic": "surgical records",
+        "topic_group": "Working with clinicians"
       },
       {
-        "reason": "The user was unsure what the operation found, then learned they could request the operative note.",
+        "reason": "The user engaged with the possibility that pelvic floor muscles could contribute to pain and that it might not all come from endometriosis.",
         "relevance": "medium",
-        "topic": "uncertainty about surgery findings"
+        "topic": "pain causes beyond endometriosis",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user said they felt defeated by the pain returning and later expressed relief that surgery might not be the only path.",
+        "reason": "The user said they felt defeated after expecting surgery to fix the pain, but this was not the main focus of the conversation.",
+        "relevance": "low",
+        "topic": "feeling defeated",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked for a concrete next step and accepted a plan to follow up with their surgeon or gynecologist with specific questions.",
         "relevance": "medium",
-        "topic": "discouragement about pain"
+        "topic": "follow-up planning",
+        "topic_group": "Working with clinicians"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user asked whether similar cyclical pelvic pain returning three months after endometriosis surgery meant they needed another operation, and shared that the combined pill had caused unwanted effects. The assistant discussed non-surgical options, the possible role of pelvic floor pain, requesting the operative note, and questions for a follow-up; the user said the plan was clear and felt less worried that surgery was inevitable."
+    "summary": "The user described cyclical pelvic pain returning three months after endometriosis surgery and asked whether another operation was needed. The assistant discussed hormonal options despite the user's past pill side effects, other possible contributors to pain, and requesting the operative note; it suggested follow-up with a gynecologist or surgeon and asking about physiotherapy. The user said the plan was clear, felt less worried that surgery was their only path, and accepted the next steps."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5123,
-    "output_tokens": 908
+    "input_tokens": 5672,
+    "output_tokens": 1490
   },
   "version": "gpt_luna"
 }

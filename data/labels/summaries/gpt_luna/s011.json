@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:16+00:00",
+  "created_at": "2026-10-01T15:06:37+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,62 +7,59 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user asked for the full range of alternatives to the combined pill and later asked what to try first.",
+        "reason": "The user opened with pain returning and said it is worst during the pill break, which prompted the discussion.",
         "relevance": "strong",
-        "topic": "endometriosis treatment options"
+        "topic": "returning endometriosis pain",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user said pain was returning and especially severe during the pill-free week, prompting discussion of continuous pill use.",
+        "reason": "The user asked for the full range of alternatives, explored their drawbacks, and asked what to try first.",
+        "relevance": "strong",
+        "topic": "endometriosis treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether disease found on the ovary and near the bowel changes which treatments may work.",
         "relevance": "medium",
-        "topic": "returning cyclical pain"
+        "topic": "lesion location and treatment",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked whether disease found on the ovary and near the bowel changed which treatments might work.",
+        "reason": "The user described being discharged to the GP after surgery and discussed asking for specialist re-referral.",
         "relevance": "medium",
-        "topic": "endometriosis lesion locations"
+        "topic": "specialist follow-up",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user said they had been discharged to the GP and discussed seeking a specialist re-referral as part of the next steps.",
+        "reason": "The user asked whether there were alternatives to hormones and then asked specifically about pelvic floor physiotherapy.",
         "relevance": "medium",
-        "topic": "specialist follow-up"
+        "topic": "nonhormonal pain options",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user said they were tired of treatments being about hormones and asked what else was available.",
+        "reason": "The user asked whether physiotherapy would require private care, and the assistant discussed NHS referral and availability.",
         "relevance": "medium",
-        "topic": "hormonal treatment fatigue"
+        "topic": "pelvic floor physiotherapy access",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user asked about physiotherapy after it was raised as a non-hormonal option and included it in their planned list.",
-        "relevance": "medium",
-        "topic": "pelvic floor physiotherapy"
-      },
-      {
-        "reason": "The user asked whether pelvic floor physiotherapy would require private care.",
+        "reason": "The user said they were tired of treatments always being about hormones, though they did not return to this feeling later.",
         "relevance": "low",
-        "topic": "physiotherapy access"
-      },
-      {
-        "reason": "The user reacted negatively to the possibility of irregular bleeding with progestin options but did not return to that concern.",
-        "relevance": "low",
-        "topic": "irregular bleeding"
-      },
-      {
-        "reason": "The user asked whether GnRH treatment was as difficult as its chemical-menopause reputation suggested and said the explanation was reassuring.",
-        "relevance": "low",
-        "topic": "menopause-like treatment effects"
+        "topic": "hormone treatment fatigue",
+        "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user sought alternatives because endometriosis pain was returning on the combined pill, especially during the break week, and asked how lesion locations might affect treatment choices. The assistant discussed hormonal and non-hormonal options, specialist follow-up and pelvic floor physiotherapy; the user ended with a list of steps and said they felt less stuck."
+    "summary": "The user described endometriosis pain returning on the combined pill, especially during the break week, and asked about hormonal and nonhormonal options, including whether disease near the bowel and on the ovary affects treatment choices. They also discussed seeking specialist follow-up and access to pelvic floor physiotherapy; by the end, they had a list of options to raise with the GP and said they felt less stuck."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5873,
-    "output_tokens": 1204
+    "input_tokens": 6422,
+    "output_tokens": 1422
   },
   "version": "gpt_luna"
 }

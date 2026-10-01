@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-10-01T09:12:05+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not simplify language when asked"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user asked whether anything could help and whether they would feel this way forever, returning to the need for a clear answer.",
+        "relevance": "strong",
+        "topic": "fibromyalgia treatment and prognosis"
+      },
+      {
+        "reason": "The user described pain in several areas and persistent tiredness, and asked whether these could be part of fibromyalgia.",
+        "relevance": "medium",
+        "topic": "morning pain and fatigue"
+      },
+      {
+        "reason": "The user said their doctor had not offered treatment and asked how to get the medications the assistant mentioned.",
+        "relevance": "medium",
+        "topic": "medication access"
+      },
+      {
+        "reason": "The user checked whether the suggested activity meant walking but did not return to the subject.",
+        "relevance": "low",
+        "topic": "exercise for fibromyalgia"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether fibromyalgia can be treated and whether their widespread pain would last forever, and also asked about morning pain and fatigue. The assistant offered treatment options and a doctor-visit suggestion, but repeatedly used technical terms after the user asked several times for plain language; the user said they were more confused and ended the conversation to rest."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4653,
+    "cache_write_tokens": 0,
+    "input_tokens": 4656,
+    "output_tokens": 839
+  },
+  "version": "gpt_luna"
+}

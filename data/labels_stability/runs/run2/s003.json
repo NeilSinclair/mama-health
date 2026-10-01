@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-10-01T09:08:51+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave dose without context"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether their prescribed 2.4 g daily dose was correct or too low, and ended by accepting the explanation.",
+        "relevance": "strong",
+        "topic": "mesalamine dosing"
+      },
+      {
+        "reason": "The user asked why formulation mattered and identified their medicine as granules in sachets.",
+        "relevance": "medium",
+        "topic": "drug formulation"
+      },
+      {
+        "reason": "The user asked whether to take the sachets with food.",
+        "relevance": "medium",
+        "topic": "medication administration"
+      },
+      {
+        "reason": "The user asked how long it would take to know whether mesalamine was working.",
+        "relevance": "medium",
+        "topic": "treatment response timeline"
+      },
+      {
+        "reason": "The user mentioned a recent diagnosis and moderate symptoms as context for the dose question.",
+        "relevance": "low",
+        "topic": "ulcerative colitis severity"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether their prescribed mesalamine dose of 1.2 g twice daily was too low after the assistant initially gave 4.8 g as a typical dose. The assistant acknowledged that it had oversimplified, explained that dosing depends on the situation and formulation, and answered follow-up questions about sachets, food, and when to expect improvement; the user said the explanation made them feel better and thanked the assistant."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4499,
+    "cache_write_tokens": 0,
+    "input_tokens": 4502,
+    "output_tokens": 953
+  },
+  "version": "gpt_luna"
+}

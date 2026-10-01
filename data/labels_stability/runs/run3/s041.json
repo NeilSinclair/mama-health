@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:12:09+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user wanted to weigh starting a psoriasis biologic against the risks and later asked how to prepare for the dermatologist conversation.",
+        "relevance": "strong",
+        "topic": "biologic treatment decision"
+      },
+      {
+        "reason": "The user returned to cancer risk over several turns and said it was the concern that most stayed with them.",
+        "relevance": "strong",
+        "topic": "cancer risk"
+      },
+      {
+        "reason": "The user asked how large the infection risk was and followed up specifically about tuberculosis and biologic classes.",
+        "relevance": "medium",
+        "topic": "infection risk"
+      },
+      {
+        "reason": "The user mentioned a grandfather with lymphoma as relevant context for assessing their personal risk.",
+        "relevance": "medium",
+        "topic": "family cancer history"
+      },
+      {
+        "reason": "The user asked about skin cancer after mentioning that they burn easily and have had substantial sun exposure.",
+        "relevance": "medium",
+        "topic": "skin cancer risk"
+      },
+      {
+        "reason": "The user mentioned a history of substantial sun exposure while discussing cancer concerns, but did not return to it separately.",
+        "relevance": "low",
+        "topic": "sun exposure"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user discussed whether to start a psoriasis biologic, focusing on infection and cancer risks, including family lymphoma history and sun exposure. The assistant explained risk differences between drug classes and helped prepare questions for the dermatologist; the user found the absolute-risk framing helpful and recognized the risks of untreated psoriasis, but a personalized treatment choice remained open."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4818,
+    "cache_write_tokens": 0,
+    "input_tokens": 4821,
+    "output_tokens": 1189
+  },
+  "version": "gpt_luna"
+}

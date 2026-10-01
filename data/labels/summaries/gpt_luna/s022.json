@@ -1,53 +1,73 @@
 {
-  "created_at": "2026-09-30T14:31:35+00:00",
+  "created_at": "2026-10-01T15:07:05+00:00",
   "model_id": "gpt-6-luna",
   "output": {
-    "conversation_pain_points": [],
-    "end_reason": "need met",
-    "issue_resolved": true,
+    "conversation_pain_points": [
+      "bot overlooked worsening symptoms when advising whether to wait"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user described recurring urgency and visible blood that was becoming more frequent and slowly worsening, and returned to whether it was safe to wait.",
+        "reason": "The user described urgency and recurring visible blood after months of stability, then said symptoms were worsening day by day.",
         "relevance": "strong",
-        "topic": "blood and bowel urgency"
+        "topic": "urgency and rectal bleeding",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked whether Humira might be losing effectiveness, then asked how antibodies develop and what treatment changes might follow.",
+        "reason": "The user asked whether antibodies could explain the change and how the body might start reacting to Humira after months of use.",
         "relevance": "strong",
-        "topic": "biologic loss of response"
+        "topic": "anti-drug antibodies",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user had a gastro appointment several weeks away and directly asked whether to wait until then.",
+        "reason": "The user asked whether it was okay to wait several weeks for an already scheduled gastro appointment despite worsening symptoms.",
         "relevance": "medium",
-        "topic": "appointment timing"
+        "topic": "waiting for an appointment",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user said they were scared the symptoms marked the start of a flare and later said they had been spiralling.",
+        "reason": "The user asked whether these tests would be checked and included them in the list of questions for the appointment.",
         "relevance": "medium",
-        "topic": "fear of a flare"
+        "topic": "drug level and antibody testing",
+        "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user asked whether Humira might be dose-adjusted or replaced and whether alternatives existed.",
+        "reason": "The user asked whether Humira might be adjusted or replaced and what other options might exist.",
         "relevance": "medium",
-        "topic": "treatment options"
+        "topic": "treatment options after loss of response",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked what foods might help when urgency made them reluctant to eat and said the response was helpful.",
+        "reason": "The user said the blood was making them nervous, feared a proper flare, and later described spiralling before feeling calmer.",
         "relevance": "medium",
-        "topic": "diet during symptoms"
+        "topic": "fear of a flare",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked what foods might help and said urgency sometimes made them not want to eat.",
+        "relevance": "low",
+        "topic": "food during symptoms",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user checked a list of topics and questions to raise with the gastro team.",
+        "relevance": "low",
+        "topic": "appointment preparation",
+        "topic_group": "Working with clinicians"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "After about eight stable months on Humira, the user reported returning urgency and small amounts of blood that were gradually worsening, and asked about antibodies, treatment alternatives, diet, and waiting for an appointment several weeks away. The assistant suggested discussing drug-level and antibody testing, keeping a symptom diary, and using gentler foods, and said the appointment was a reasonable place to address it unless things changed dramatically. The user summarized questions to bring and said they felt calmer."
+    "summary": "The user reported several days of renewed urgency and visible blood while stable on Humira, and asked about antibodies, testing, and possible treatment changes. They also described worsening symptoms and asked whether they could wait several weeks for their appointment; the assistant endorsed using that visit unless things changed dramatically, while suggesting symptom tracking and appointment questions. The user said the discussion made them feel calmer, but the timing question remained only partly addressed."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 4949,
-    "output_tokens": 1798
+    "input_tokens": 5498,
+    "output_tokens": 1984
   },
   "version": "gpt_luna"
 }

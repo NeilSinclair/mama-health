@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-10-01T09:08:07+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user asked whether delaying metformin to try lifestyle changes was wrong and returned to how to decide after three months.",
+        "relevance": "strong",
+        "topic": "diabetes medication decision"
+      },
+      {
+        "reason": "The user explored a practical plan involving food choices, walking, and a follow-up A1c over several turns.",
+        "relevance": "strong",
+        "topic": "diabetes lifestyle changes"
+      },
+      {
+        "reason": "The user discussed being mostly vegetarian, eating rice and chapati, and finding it hard to refuse sweets during festivals.",
+        "relevance": "medium",
+        "topic": "dietary changes"
+      },
+      {
+        "reason": "The user explained that knee problems prevent running or gym exercise and asked about manageable walking after meals.",
+        "relevance": "medium",
+        "topic": "exercise limitations"
+      },
+      {
+        "reason": "The user asked whether delaying medication could lead to eye or kidney damage after hearing this concern from her husband.",
+        "relevance": "medium",
+        "topic": "diabetes complications"
+      },
+      {
+        "reason": "The user asked whether to check glucose at home during the lifestyle trial and how to time walks after eating.",
+        "relevance": "medium",
+        "topic": "blood sugar monitoring"
+      },
+      {
+        "reason": "The user raised her husband's concern, her sister's experience without medication, and plans to discuss the approach with family.",
+        "relevance": "medium",
+        "topic": "family influence on treatment"
+      },
+      {
+        "reason": "The user mentioned that her mother had diabetes as context for the doctor's concern, but did not return to it.",
+        "relevance": "low",
+        "topic": "family history of diabetes"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user was hesitant to start metformin and wanted to try diet and exercise first, while worrying about complications and asking how to judge progress. The assistant discussed a monitored three-month lifestyle trial, practical food and walking changes, and optional home checks; the user found the plan balanced, said she would tell her doctor and discuss it with family, and planned to consider it further."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5272,
+    "output_tokens": 1194
+  },
+  "version": "gpt_luna"
+}

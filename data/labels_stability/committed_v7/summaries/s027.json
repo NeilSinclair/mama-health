@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-09-30T14:31:31+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by saying the conflicting lists were overwhelming and returned to this as their main problem.",
+        "relevance": "strong",
+        "topic": "low fodmap food lists"
+      },
+      {
+        "reason": "The user asked whether they would have to avoid onions and garlic forever and welcomed the explanation that the aim is to identify individual triggers.",
+        "relevance": "medium",
+        "topic": "food restriction and triggers"
+      },
+      {
+        "reason": "The user asked how to conduct reintroduction and whether to do it with professional support.",
+        "relevance": "medium",
+        "topic": "food reintroduction"
+      },
+      {
+        "reason": "The user asked whether the NHS would cover an IBS dietitian referral and accepted asking their GP about one.",
+        "relevance": "medium",
+        "topic": "dietitian referral"
+      },
+      {
+        "reason": "The user worried that elimination would leave them with too few foods and said the answer reassured them.",
+        "relevance": "medium",
+        "topic": "hunger during elimination"
+      },
+      {
+        "reason": "The user questioned whether the Monash app was worth paying for but did not return to the cost after the answer.",
+        "relevance": "low",
+        "topic": "health app cost"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user felt overwhelmed by conflicting low FODMAP food lists and feared the diet meant giving up foods such as onions and garlic permanently. The assistant explained the temporary elimination and reintroduction phases, suggested the Monash app and asking a GP about a dietitian referral, and addressed concerns about hunger; the user said they felt less panicked and summarized a plan they found helpful."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5331,
+    "output_tokens": 712
+  },
+  "version": "gpt_luna"
+}

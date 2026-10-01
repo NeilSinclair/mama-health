@@ -1,55 +1,55 @@
 {
-  "created_at": "2026-09-30T14:32:09+00:00",
+  "created_at": "2026-10-01T15:07:49+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
       "bot left interaction question unanswered"
     ],
-    "end_reason": "partial resolution",
-    "issue_resolved": false,
+    "end_reason": "need met",
+    "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user repeatedly asked whether the medicines were safe together and whether starting methotrexate could affect warfarin readings.",
+        "reason": "The user repeatedly asked whether methotrexate could affect their long-term warfarin use and readings before starting it.",
         "relevance": "strong",
-        "topic": "methotrexate and warfarin safety"
+        "topic": "methotrexate and warfarin safety",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked whether methotrexate blood tests would also detect warfarin-related changes and whether tests help guide the dose.",
+        "reason": "The user asked whether methotrexate monitoring would detect warfarin-related changes and discussed their usual warfarin tests.",
         "relevance": "medium",
-        "topic": "medication monitoring"
+        "topic": "warfarin blood monitoring",
+        "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user asked what to watch for at home and received examples of bleeding and methotrexate-related symptoms.",
+        "reason": "The user asked what to watch for at home, and the conversation covered possible bleeding and methotrexate warning signs.",
         "relevance": "medium",
-        "topic": "medication warning signs"
+        "topic": "medication warning signs",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user confirmed their GP had stressed that methotrexate is taken weekly, not daily.",
-        "relevance": "low",
-        "topic": "weekly medication dosing"
+        "reason": "The user asked whether tests help set the dose and confirmed their GP had stressed that methotrexate is taken weekly.",
+        "relevance": "medium",
+        "topic": "weekly methotrexate dosing",
+        "topic_group": "Taking medication safely"
       },
       {
         "reason": "The user asked what to raise with the GP before starting and received a short checklist.",
         "relevance": "low",
-        "topic": "pre-start gp questions"
-      },
-      {
-        "reason": "The user said they were worried about starting and later said they felt much better.",
-        "relevance": "low",
-        "topic": "treatment-related worry"
+        "topic": "pre-start GP discussion",
+        "topic_group": "Working with clinicians"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user wanted to know whether starting methotrexate for rheumatoid arthritis was safe while taking warfarin, including whether warfarin readings might change. The assistant emphasized monitoring and warning signs but did not clearly answer the specific interaction question; the user felt reassured and got a checklist of points to confirm with the GP."
+    "summary": "The user wanted to know whether starting methotrexate for rheumatoid arthritis was safe while taking warfarin for a heart valve issue, particularly whether warfarin readings might change. The bot emphasized routine monitoring and warning signs but did not clearly answer whether the combination could affect the readings; it suggested reminding the GP about warfarin. The user said they felt much better and asked what else to discuss with the GP before starting."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 4482,
-    "output_tokens": 1342
+    "input_tokens": 5031,
+    "output_tokens": 1869
   },
   "version": "gpt_luna"
 }

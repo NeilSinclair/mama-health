@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-09-30T14:31:16+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether long covid would improve and returned to the timeline and what persistent symptoms could mean.",
+        "relevance": "strong",
+        "topic": "long covid prognosis"
+      },
+      {
+        "reason": "The user described being wiped out for days after ordinary activity and asked whether those crashes could affect recovery.",
+        "relevance": "strong",
+        "topic": "post-exertional crashes"
+      },
+      {
+        "reason": "The user asked how to find an energy limit, discussed tracking and practical constraints, and said they planned to try pacing.",
+        "relevance": "medium",
+        "topic": "activity pacing"
+      },
+      {
+        "reason": "The user said the long timeline felt like forever and described feeling more alone when others offered overly cheerful reassurance.",
+        "relevance": "medium",
+        "topic": "illness-related uncertainty"
+      },
+      {
+        "reason": "The user explained that work and household responsibilities make resting difficult.",
+        "relevance": "medium",
+        "topic": "pacing constraints"
+      },
+      {
+        "reason": "The user said their manager knew they were unwell but did not understand that it was ongoing, and considered exploring adjustments.",
+        "relevance": "medium",
+        "topic": "workplace understanding"
+      },
+      {
+        "reason": "The user described a prior GP appointment as dismissive and said others’ reassurance made them feel alone.",
+        "relevance": "low",
+        "topic": "dismissive care"
+      },
+      {
+        "reason": "The user asked what to raise with their GP and said the suggestions gave them something concrete to bring.",
+        "relevance": "low",
+        "topic": "primary care communication"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked for an honest view of whether long covid might improve, then discussed post-exertional crashes, pacing, and the difficulty of resting while working and managing a household. The assistant acknowledged uncertainty, offered practical pacing and GP discussion suggestions, and the user said they felt heard and planned to try tracking and pacing."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4953,
+    "output_tokens": 1097
+  },
+  "version": "gpt_luna"
+}

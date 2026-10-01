@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:05+00:00",
+  "created_at": "2026-10-01T15:06:23+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,42 +7,53 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user explains that ongoing tiredness and fog despite a reportedly normal TSH are why they are considering dietary changes and asks whether their dose could be off.",
+        "reason": "The user asks whether going gluten-free is evidence-based and wants a structured trial to judge whether it helps.",
         "relevance": "strong",
-        "topic": "persistent fatigue and brain fog"
+        "topic": "gluten-free diet trial",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asks whether going gluten-free has evidence behind it and later discusses how to test whether it helps their symptoms.",
+        "reason": "Persistent tiredness and fog despite a reportedly normal TSH are the reason the user is considering diet and recur throughout the conversation.",
         "relevance": "strong",
-        "topic": "gluten-free diet trial"
+        "topic": "fatigue and brain fog",
+        "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user learns testing should happen while still eating gluten and includes asking about screening in their plan.",
+        "reason": "The user wonders whether their dose may be off and includes reviewing it in their plan.",
         "relevance": "medium",
-        "topic": "celiac screening"
+        "topic": "levothyroxine dose review",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asks whether their levothyroxine dose may explain the fatigue and agrees to have it reviewed.",
+        "reason": "The user asks why testing matters, recognizes it must happen before stopping gluten, and plans to ask about testing.",
         "relevance": "medium",
-        "topic": "thyroid dose review"
+        "topic": "celiac screening",
+        "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user says the gluten idea appealed because it was something they could control themselves while waiting on doctors.",
+        "reason": "The user includes iron, B12, and vitamin D testing in the plan they restate near the end.",
+        "relevance": "medium",
+        "topic": "fatigue-related blood tests",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user says the gluten idea appealed partly because it was controllable compared with waiting on doctors.",
         "relevance": "low",
-        "topic": "health care delays"
+        "topic": "waiting for medical care",
+        "topic_group": "Access to care"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user asked whether a gluten-free diet might help Hashimoto's and explained they still feel tired and foggy while taking levothyroxine. The assistant discussed celiac screening before changing diet, a tracked gluten-free trial if appropriate, and reviewing the dose and other possible causes with a doctor; the user endorsed a plan to do those steps in that order."
+    "summary": "The user asked whether a gluten-free diet has evidence for Hashimoto's and explained they still feel tired and foggy despite a reportedly normal TSH while taking levothyroxine. The assistant suggested discussing celiac screening while still eating gluten and reviewing the dose and fatigue-related blood tests before considering a tracked, time-limited gluten-free trial; the user endorsed that plan and appreciated the balanced answer."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5520,
-    "output_tokens": 756
+    "input_tokens": 6069,
+    "output_tokens": 1013
   },
   "version": "gpt_luna"
 }

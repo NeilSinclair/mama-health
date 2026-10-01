@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-01T09:07:21+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to learn about preventatives for chronic migraine before discussing them with their neurologist and returned to comparing options throughout the chat.",
+        "relevance": "strong",
+        "topic": "migraine prevention options"
+      },
+      {
+        "reason": "The user asked whether the newer class included pills, then asked several follow-up questions about migraxone, Qulipta, side effects, and precautions.",
+        "relevance": "medium",
+        "topic": "oral CGRP preventatives"
+      },
+      {
+        "reason": "The user asked what older options are and whether neurologists usually try them before newer treatments.",
+        "relevance": "medium",
+        "topic": "traditional migraine preventatives"
+      },
+      {
+        "reason": "The user raised insurance as a concern and asked whether coverage requires trying older treatments first.",
+        "relevance": "medium",
+        "topic": "insurance coverage"
+      },
+      {
+        "reason": "The user asked for questions to bring to the neurologist and said the resulting list was exactly what they needed.",
+        "relevance": "medium",
+        "topic": "neurology visit preparation"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user wanted to understand chronic migraine prevention options before a neurologist visit, including newer CGRP treatments, oral options, older preventatives, side effects, and insurance requirements. The assistant provided comparisons and questions for the visit; the user said the information was exactly what they needed and planned to ask about migraxone."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4721,
+    "output_tokens": 730
+  },
+  "version": "gpt_luna"
+}

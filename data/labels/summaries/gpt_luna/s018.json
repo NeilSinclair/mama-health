@@ -1,55 +1,74 @@
 {
-  "created_at": "2026-09-30T14:31:31+00:00",
+  "created_at": "2026-10-01T15:06:51+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot repeated wrong-country access advice after correction"
+      "bot repeated wrong-country insurance advice after correction",
+      "bot repeated advice after stated access barriers"
     ],
     "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user described severe pain lasting six months, occurring during and outside periods and sometimes with bathroom use.",
+        "reason": "The user described severe pain for six months, including outside periods and sometimes with bowel movements, and said it sometimes prevents work.",
         "relevance": "strong",
-        "topic": "chronic pelvic pain"
+        "topic": "pelvic pain",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user repeatedly explained that access through SUS involves long waits and that the suggested insurance-directory and telehealth routes did not fit.",
+        "reason": "The user repeatedly explained that getting a gynecologist through SUS involves long waits and that the bot's insurance-based suggestions did not fit.",
         "relevance": "strong",
-        "topic": "specialist access barriers"
+        "topic": "specialist access",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user said their doctor called the pain normal cramps and emphasized that they needed someone to believe them.",
+        "reason": "The user repeatedly said their doctor calls the pain normal and asked how to get evaluation when the doctor does not believe them.",
         "relevance": "strong",
-        "topic": "medical dismissal"
+        "topic": "dismissive clinician",
+        "topic_group": "Working with clinicians"
       },
       {
-        "reason": "The user said endometriosis had been raised as a possibility and discussed getting evaluated for it.",
+        "reason": "The user said endometriosis had been suggested and discussed seeking evaluation for it, but did not ask for an explanation of the condition itself.",
         "relevance": "medium",
-        "topic": "suspected endometriosis"
+        "topic": "suspected endometriosis",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user wanted treatment now and said they might ask their doctor about taking a continuous pill.",
+        "reason": "The user said they needed pain treated now and considered asking their doctor about continuous pills, but this was secondary to the access problem.",
         "relevance": "medium",
-        "topic": "pain treatment"
+        "topic": "pain treatment options",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user said the pain sometimes prevents them from working, but did not return to this impact separately.",
+        "reason": "The user asked how to get an ultrasound when their doctor did not believe them.",
+        "relevance": "medium",
+        "topic": "pelvic imaging",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user said the pain sometimes prevents them from working, but did not return to its work impact separately.",
         "relevance": "low",
-        "topic": "work impairment"
+        "topic": "work disruption",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user said they needed someone to believe them and expressed frustration at not being understood, though the conversation centered on getting care and pain relief.",
+        "relevance": "medium",
+        "topic": "feeling dismissed",
+        "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "access",
-    "summary": "The user described severe pelvic pain for six months, possible endometriosis, and a doctor who dismissed it as normal cramps; they wanted to be believed and get pain treatment despite difficulty accessing a specialist through SUS. The assistant repeatedly suggested US-style insurance directories and coverage checks after the user corrected it, then offered symptom tracking and pain-treatment topics; the user said the conversation was not helping and left."
+    "summary": "The user described severe pelvic pain for six months, possible endometriosis, and a doctor who dismisses it as normal cramps; the pain sometimes prevents work. Despite the user explaining that they rely on Brazil’s SUS and do not have an insurance network, the assistant repeatedly suggested US-style insurance directories and specialist searches. The user considered asking about continuous pills but ended by saying the conversation was not helping and left."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 4771,
-    "output_tokens": 927
+    "input_tokens": 5320,
+    "output_tokens": 1673
   },
   "version": "gpt_luna"
 }

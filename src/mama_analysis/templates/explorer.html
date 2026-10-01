@@ -604,7 +604,7 @@ function renderGraph() {
 // conversations that match every selected (field, label) pair.
 const BREAK_FIELDS = [
   ["reason_for_conversation", "Reason for conversation", "reason"],
-  ["main_topics", "Topic", "topic"],
+  ["topic_group", "Topic group", "topic"],
   ["conversation_pain_points", "Conversation pain point", "pain"],
   ["end_reason", "End reason (LLM)", "end"],
   ["issue_resolved", "Resolved (LLM)", "neutral"],
@@ -617,18 +617,21 @@ const NONE = "(none)";
 const PANEL_ROWS = 12;
 const breakState = { selected: [], allTopics: false, expanded: new Set() };
 
-// A conversation's labels for one field; "(none)" when a list field is empty.
+// A conversation's labels for one field; "(none)" when a list field is empty. Topic groups
+// are the model's topic_group (D-047) of the strong topics, or of every topic when the toggle is on.
 function breakValues(row, key) {
-  const vals = key === "main_topics" && breakState.allTopics
-    ? [...new Set(row.topic_scores.map((t) => t.label))]
-    : values(row, key);
+  let vals = values(row, key);
+  if (key === "topic_group") {
+    const scores = row.topic_scores.filter((t) => breakState.allTopics || t.relevance === "strong");
+    vals = [...new Set(scores.map((t) => t.topic_group))];
+  }
   return vals.length ? vals : [NONE];
 }
 
-// Panel and chip name for a field; the topic name says which topics are counted.
+// Panel and chip name for a field; the topic-group name says which topics are counted.
 function breakFieldName(key) {
   const name = BREAK_FIELDS.find(([k]) => k === key)[1];
-  return key === "main_topics" ? `${name} (${breakState.allTopics ? "all" : "strong"})` : name;
+  return key === "topic_group" ? `${name} (${breakState.allTopics ? "all topics" : "strong topics"})` : name;
 }
 
 function isSelected(key, label) {
@@ -662,7 +665,7 @@ function renderBreakdown() {
   );
 
   // Dynamics panels appear only when the version has dynamics labels.
-  const fields = BREAK_FIELDS.filter(([key]) => LABEL_FIELDS.includes(key) || v.rows.some((r) => key in r));
+  const fields = BREAK_FIELDS.filter(([key]) => LABEL_FIELDS.includes(key) || key === "topic_group" || v.rows.some((r) => key in r));
   grid.replaceChildren(...fields.map(([key, , cls]) => {
     const counts = new Map();
     for (const r of rows) for (const lab of new Set(breakValues(r, key))) counts.set(lab, (counts.get(lab) || 0) + 1);

@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-10-01T09:09:48+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored emotional distress",
+      "bot repeatedly gave irrelevant surgery preparation advice"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly described mourning their former self and lost life plans, and explicitly asked the assistant to hear that they were grieving.",
+        "relevance": "strong",
+        "topic": "grief"
+      },
+      {
+        "reason": "The user returned several times to having given up the dream of having children and said this was a major source of grief.",
+        "relevance": "strong",
+        "topic": "fertility loss"
+      },
+      {
+        "reason": "The user repeatedly said their marriage was barely holding on and that they feared losing the relationship.",
+        "relevance": "medium",
+        "topic": "marital strain"
+      },
+      {
+        "reason": "The user said their job was affected by the disease and later said they could not work.",
+        "relevance": "medium",
+        "topic": "work disruption"
+      },
+      {
+        "reason": "The user described living with endometriosis for twelve years and how pain, surgeries, and recovery shaped their life.",
+        "relevance": "medium",
+        "topic": "endometriosis burden"
+      },
+      {
+        "reason": "The appointment revealed that the user needs a fourth surgery, which prompted the conversation.",
+        "relevance": "medium",
+        "topic": "repeat surgery"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "After learning they need a fourth endometriosis surgery, the user sought acknowledgment of grief over fertility loss, marital strain, work disruption, and changes to their life. The assistant repeatedly offered surgery-preparation and recovery advice despite the user's corrections and direct requests to be heard; the user ended feeling unheard and said goodbye."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4601,
+    "cache_write_tokens": 0,
+    "input_tokens": 4604,
+    "output_tokens": 1454
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-09-30T14:31:52+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user’s main request was to plan ahead for trying for a baby in one to two years while managing RA.",
+        "relevance": "strong",
+        "topic": "rheumatoid arthritis pregnancy planning"
+      },
+      {
+        "reason": "The user asked whether being on methotrexate now was concerning and discussed contraception, stopping it, and the transition timeline.",
+        "relevance": "medium",
+        "topic": "methotrexate pregnancy safety"
+      },
+      {
+        "reason": "The user described fearing a choice between health and having a baby, then said the conversation left them feeling they had a handle on the situation.",
+        "relevance": "medium",
+        "topic": "pregnancy-related anxiety"
+      },
+      {
+        "reason": "The user said they wanted to be prepared for a possible postpartum flare rather than surprised by it.",
+        "relevance": "medium",
+        "topic": "postpartum flare risk"
+      },
+      {
+        "reason": "The user asked whether pregnancy-compatible medications could also be used while breastfeeding.",
+        "relevance": "medium",
+        "topic": "medication and breastfeeding"
+      },
+      {
+        "reason": "The user asked who to coordinate with and whether to raise pregnancy plans with the rheumatologist now, and agreed to bring it up at the next visit.",
+        "relevance": "medium",
+        "topic": "preconception care coordination"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user, recently diagnosed with RA and taking methotrexate, wanted to understand medication choices while planning for pregnancy in one to two years. The assistant discussed pregnancy-compatible options, methotrexate precautions and timing, possible postpartum flares, breastfeeding, and coordinating with a rheumatologist and obstetrician. The user said the recap matched their understanding, felt they had a handle on the issue, and planned to raise it at the next visit."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5916,
+    "output_tokens": 1012
+  },
+  "version": "gpt_luna"
+}

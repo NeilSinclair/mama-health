@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-09-30T14:31:39+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether ongoing exhaustion was normal and returned to the fact that it had not resolved.",
+        "relevance": "strong",
+        "topic": "persistent fatigue"
+      },
+      {
+        "reason": "The user discussed levothyroxine, a TSH of 3.8, additional thyroid tests, dose adjustment, and how long changes might take.",
+        "relevance": "strong",
+        "topic": "thyroid treatment and testing"
+      },
+      {
+        "reason": "The user worried that fatigue might have another cause and asked how ferritin differs from hemoglobin.",
+        "relevance": "medium",
+        "topic": "non-thyroid fatigue causes"
+      },
+      {
+        "reason": "The user said they felt gaslit about the fatigue and worried their doctor might write them off.",
+        "relevance": "medium",
+        "topic": "medical dismissal"
+      },
+      {
+        "reason": "The user asked whether to pursue desiccated thyroid or added T3 and accepted the suggestion to discuss these later.",
+        "relevance": "medium",
+        "topic": "alternative thyroid treatments"
+      },
+      {
+        "reason": "The user said they tend to forget how they felt week to week and agreed that a log could help.",
+        "relevance": "low",
+        "topic": "symptom tracking"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user described persistent exhaustion despite six months on levothyroxine for Hashimoto's and a TSH they were told was normal. The assistant discussed thyroid and other fatigue-related tests, a possible dose conversation, and preparing for the appointment; it also validated the user's feeling of being dismissed, and the user ended with a plan and said they were looking forward to the appointment."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5422,
+    "output_tokens": 1610
+  },
+  "version": "gpt_luna"
+}

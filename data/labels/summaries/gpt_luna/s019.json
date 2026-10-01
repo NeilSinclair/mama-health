@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:31+00:00",
+  "created_at": "2026-10-01T15:06:50+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,62 +7,53 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened with a new shimmering zigzag visual symptom before a familiar migraine and returned to understanding what it might mean.",
+        "reason": "The user described a first episode of shimmering zigzag vision before a usual migraine and sought help understanding it.",
         "relevance": "strong",
-        "topic": "new visual aura"
+        "topic": "new visual symptoms",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user repeatedly asked whether to go to the ER or arrange non-urgent care and accepted the suggested next step.",
+        "reason": "The user asked whether to go to the ER that night or arrange non-urgent care, and agreed to book with a family doctor.",
         "relevance": "strong",
-        "topic": "urgent care decision"
+        "topic": "urgent care decision",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user directly asked whether the visual symptoms could signal a stroke or something serious.",
+        "reason": "The user said the new symptom scared them and asked whether it could signal a stroke, later reporting they felt calmer.",
         "relevance": "medium",
-        "topic": "stroke concern"
+        "topic": "fear of serious cause",
+        "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user said the episode scared them and later shared that their hands had been shaking.",
+        "reason": "The user asked whether aura would become a permanent or recurring feature after this first episode.",
         "relevance": "medium",
-        "topic": "fear after new symptoms"
+        "topic": "aura recurrence",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked how to tell whether future symptoms affect one eye or both and said the suggested check was useful.",
+        "reason": "The user asked whether aura could signal when to take their usual sumatriptan and appreciated the caution about changing its timing.",
         "relevance": "medium",
-        "topic": "checking visual symptoms"
+        "topic": "sumatriptan timing",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked whether aura would become a permanent or recurring feature.",
+        "reason": "The user asked about aura and birth control and said they had considered hormonal contraception, though they are not using it now.",
         "relevance": "medium",
-        "topic": "aura recurrence"
-      },
-      {
-        "reason": "The user asked whether aura could be a cue to take their usual medication earlier and appreciated the caution about timing.",
-        "relevance": "medium",
-        "topic": "sumatriptan timing"
-      },
-      {
-        "reason": "The user said they were considering hormonal contraception and wanted to know about its connection with aura.",
-        "relevance": "medium",
-        "topic": "hormonal contraception"
-      },
-      {
-        "reason": "The user agreed to book with their family doctor that week, though they did not ask for help accessing care.",
-        "relevance": "low",
-        "topic": "doctor follow-up"
+        "topic": "contraception with aura",
+        "topic_group": "Treatment choice"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user described a first episode of shimmering zigzag vision before a familiar migraine and worried it could indicate a stroke; the assistant said the resolved, gradual symptoms sounded like aura, advised non-urgent medical follow-up rather than an ER visit that night, and gave emergency warning signs. The user also asked about checking whether symptoms affect one or both eyes, recurrence, sumatriptan timing, and future hormonal contraception, and ended feeling calmer and planning to see their family doctor."
+    "summary": "The user described a new, shimmering visual disturbance before a familiar migraine and worried it might indicate a stroke or require an ER visit. The assistant said the description sounded consistent with migraine aura, gave warning signs and suggested a non-urgent doctor appointment; it also discussed aura recurrence, sumatriptan timing and hormonal contraception. The user said they felt calmer and planned to book with their family doctor that week and rest."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5471,
-    "output_tokens": 1605
+    "input_tokens": 6020,
+    "output_tokens": 1240
   },
   "version": "gpt_luna"
 }

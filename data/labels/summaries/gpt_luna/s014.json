@@ -1,51 +1,56 @@
 {
-  "created_at": "2026-09-30T14:31:16+00:00",
+  "created_at": "2026-10-01T15:06:44+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot kept pushing imported brands",
-      "bot ignored direct kampo question"
+      "bot ignored kampo question",
+      "bot repeated import advice after concerns"
     ],
     "end_reason": "partial resolution",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user began by asking what supplements might help their fibromyalgia pain and returned to choosing supplements throughout the chat.",
+        "reason": "The user asked what supplements to try for fibromyalgia pain and repeatedly asked which products to choose.",
         "relevance": "strong",
-        "topic": "fibromyalgia supplements"
+        "topic": "supplements for fibromyalgia",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user explained that they live in Japan, asked about local pharmacy products, and raised concerns about customs when importing supplements.",
-        "relevance": "strong",
-        "topic": "supplement availability in japan"
-      },
-      {
-        "reason": "The user asked which brands were good quality and whether a Japanese brand such as DHC was acceptable.",
+        "reason": "The user asked how much magnesium to take given their small body size and later asked about a CoQ10 dose.",
         "relevance": "medium",
-        "topic": "supplement quality"
+        "topic": "supplement dosing",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked how much magnesium to take and later asked about the CoQ10 dose.",
+        "reason": "The user asked about local brands, raised concerns about customs, and ended by considering asking a local pharmacist.",
         "relevance": "medium",
-        "topic": "supplement dosing"
+        "topic": "supplement access in Japan",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user asked whether the assistant knew about kampo, noting that their mother uses it and doctors in Japan sometimes prescribe it.",
-        "relevance": "medium",
-        "topic": "kampo medicine"
+        "reason": "The user asked whether the assistant knew about kampo, noting that doctors in Japan sometimes prescribe it, but did not return to the topic after it went unanswered.",
+        "relevance": "low",
+        "topic": "kampo medicine",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user mentioned pain as the reason for considering supplements but did not discuss the pain itself.",
+        "relevance": "low",
+        "topic": "fibromyalgia pain",
+        "topic_group": "Physical symptoms"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user asked what supplements might help fibromyalgia pain, which brands to buy, and how much magnesium and CoQ10 to take. After learning the user was in Japan and raising local product and customs concerns, the assistant continued recommending imported brands through iHerb and did not answer the question about kampo. The user ended by saying they might ask a local pharmacist."
+    "summary": "The user asked what supplements might help fibromyalgia pain, which brands to buy, and how much magnesium and CoQ10 to take. After the user raised Japanese pharmacy options, customs concerns, and kampo, the assistant continued recommending imported brands and iHerb without answering the kampo question; the user ended by saying they might ask a local pharmacist."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 4379,
-    "output_tokens": 1058
+    "input_tokens": 4928,
+    "output_tokens": 1480
   },
   "version": "gpt_luna"
 }

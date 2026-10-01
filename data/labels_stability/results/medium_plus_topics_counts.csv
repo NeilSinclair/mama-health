@@ -1,0 +1,83 @@
+label,run1,run2,run3,committed,majority,run_range
+healthcare access,14,16,16,14,15,2
+emotional distress,13,13,11,16,11,2
+medication side effects,9,9,6,6,8,3
+fatigue and pacing,7,6,7,5,7,1
+treatment decisions,8,6,6,4,6,2
+dismissive care,5,6,5,4,5,1
+treatment effectiveness,5,5,5,4,5,0
+medication dosing,4,5,5,3,5,1
+hormone therapy,4,5,3,2,5,2
+work impact,5,6,3,4,5,3
+IBD treatment,5,5,5,5,5,0
+diet and food triggers,4,3,6,4,4,3
+diabetes treatment,4,3,4,5,4,1
+weight management,4,2,4,4,4,2
+thyroid treatment,1,4,4,3,4,3
+medication safety,5,6,4,7,4,2
+digestive symptoms,4,4,4,5,4,0
+IBD diet,3,4,2,4,4,2
+arthritis symptoms,3,3,3,3,3,0
+fertility planning,3,3,3,3,3,0
+exercise and activity,4,3,2,4,3,2
+disease progression,4,3,2,2,3,2
+migraine symptoms,3,3,3,3,3,0
+pelvic pain,3,3,3,3,3,0
+appointment preparation,4,3,3,1,3,1
+skin conditions,3,3,3,3,3,0
+diabetes management,3,3,2,0,3,1
+thyroid testing,3,3,2,3,3,1
+cancer risk,3,2,3,3,3,1
+IBD symptoms,4,3,2,3,3,2
+blood sugar monitoring,4,3,1,4,3,3
+sleep problems,2,2,2,2,2,0
+suicidal thoughts,2,1,2,0,2,1
+surgery,2,1,1,1,2,1
+menstrual health,2,2,2,1,2,0
+PCOS,2,2,2,2,2,0
+medical testing,2,2,5,3,2,3
+urgent symptoms,2,2,2,2,2,0
+infection risk,2,2,2,2,2,0
+healthcare costs,2,2,1,2,2,1
+long COVID,1,2,2,1,2,1
+health information,4,2,2,3,2,2
+endometriosis,3,3,2,3,2,1
+blood sugar results,2,2,3,3,2,1
+cognitive symptoms,1,2,2,1,2,1
+diabetes risk,2,2,2,2,2,0
+hair loss,2,3,2,2,2,1
+IBD diagnosis and monitoring,1,3,2,2,2,2
+flare management,2,1,2,1,2,1
+medication access,1,1,2,1,1,1
+arthritis treatment,1,2,1,1,1,1
+POTS management,1,1,1,1,1,0
+treatment options,1,1,1,1,1,0
+IBD education,1,1,1,1,1,0
+blood sugar targets,1,1,2,1,1,1
+travel health,2,1,1,2,1,1
+body image,1,1,1,2,1,0
+care coordination,2,1,1,1,1,1
+thyroid results,1,2,1,1,1,1
+thyroid disease,1,1,0,0,1,1
+chronic illness impact,1,0,1,1,1,1
+supplements,1,1,1,1,1,0
+clinician communication,0,2,2,0,1,2
+medication administration,1,3,1,0,1,2
+infection prevention,1,1,1,1,1,0
+self-management,2,1,1,1,1,1
+relationship impact,1,1,1,1,1,0
+endometriosis treatment,1,2,0,2,1,2
+medication monitoring,2,1,1,2,1,1
+medication options,1,2,1,1,1,1
+POTS prognosis,0,1,1,1,1,1
+POTS symptoms,1,1,1,1,1,0
+medication use,0,1,2,2,1,2
+POTS treatment,1,1,1,2,1,0
+migraine prevention,1,1,1,1,1,0
+digestive treatment,1,1,1,1,1,0
+migraine treatment,1,1,0,1,1,1
+pain management,1,1,1,3,1,0
+fibromyalgia treatment,1,1,1,1,1,0
+digestive diagnosis,1,1,1,1,1,0
+symptom management,0,0,0,1,0,0
+visual symptoms,0,0,1,0,0,1

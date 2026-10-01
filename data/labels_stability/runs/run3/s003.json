@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-10-01T09:11:25+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave unqualified dosing advice"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether their prescribed 2.4 g daily dose was right or too low after the assistant first gave 4.8 g as a standard dose.",
+        "relevance": "strong",
+        "topic": "mesalamine dosing"
+      },
+      {
+        "reason": "The user asked why formulation mattered and identified their medication as twice-daily granule sachets.",
+        "relevance": "medium",
+        "topic": "mesalamine formulation"
+      },
+      {
+        "reason": "The user said they were recently diagnosed and described their symptoms as moderate to give context for the dose question.",
+        "relevance": "low",
+        "topic": "colitis activity"
+      },
+      {
+        "reason": "The user asked whether to take the sachets with food.",
+        "relevance": "low",
+        "topic": "medication administration"
+      },
+      {
+        "reason": "The user asked how long it would take to know whether mesalamine was working.",
+        "relevance": "low",
+        "topic": "treatment response timeline"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether their prescribed mesalamine dose of 1.2 g twice daily was too low; the assistant initially gave 4.8 g daily as a standard dose, then acknowledged it had been too specific and explained that the appropriate dose depends on the situation and formulation. It also answered questions about sachet formulation, taking the medication with food, and when to expect a response. The user said the explanation made them feel better and ended by saying the dose was fine and they would ask their gastroenterologist if symptoms did not improve."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4499,
+    "cache_write_tokens": 0,
+    "input_tokens": 4502,
+    "output_tokens": 1395
+  },
+  "version": "gpt_luna"
+}

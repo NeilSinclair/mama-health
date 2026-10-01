@@ -1,70 +1,85 @@
 {
-  "created_at": "2026-09-30T14:32:01+00:00",
+  "created_at": "2026-10-01T15:07:34+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot gave US-focused resources"
+      "bot assumed care setting"
     ],
     "end_reason": "need met",
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came asking where to start and engaged with explanations of the disease, flares, remission, and how it affects the digestive tract.",
+        "reason": "The user opened by asking where to start after a Crohn's diagnosis and engaged throughout with explanations of the condition.",
         "relevance": "strong",
-        "topic": "Crohn's disease education"
+        "topic": "new diagnosis understanding",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user described feeling overwhelmed and later said the conversation made the diagnosis feel more manageable.",
-        "relevance": "strong",
-        "topic": "diagnosis-related overwhelm"
-      },
-      {
-        "reason": "The user asked what category their medication belonged to and adopted clarifying the plan after budesonide as a main next step.",
+        "reason": "The user described feeling overwhelmed and later said the conversation made the situation feel more manageable.",
         "relevance": "medium",
-        "topic": "budesonide treatment plan"
+        "topic": "diagnosis-related overwhelm",
+        "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user asked whether care at a larger specialist center might be preferable and said the answer reassured them.",
+        "reason": "The user asked whether Crohn's would be constantly bad and discussed flares, remission, and how predictable the course is.",
         "relevance": "medium",
-        "topic": "specialist care options"
+        "topic": "disease course and remission",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user directly asked whether they should follow a specific diet.",
+        "reason": "The user asked where Crohn's can affect the digestive tract and shared their uncertain recollection that it was near the end of the small intestine.",
         "relevance": "medium",
-        "topic": "Crohn's diet"
+        "topic": "disease location",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked where to learn more and then raised whether US-focused advice applied to care in India.",
+        "reason": "The user asked what category their medication belonged to and identified clarifying the plan after budesonide as their main next step.",
         "relevance": "medium",
-        "topic": "reliable health information"
+        "topic": "budesonide treatment plan",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked what monitoring to expect going forward.",
+        "reason": "The user asked what monitoring to expect and received an overview of blood, stool, and other tests.",
         "relevance": "medium",
-        "topic": "Crohn's monitoring"
+        "topic": "disease monitoring",
+        "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user said they did not know how to organize what they were learning and accepted starting with one page of notes.",
+        "reason": "The user asked where to find reliable information because online material felt scary and difficult to trust.",
         "relevance": "medium",
-        "topic": "health information organization"
+        "topic": "health information sources",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user recalled that Crohn's might be near the end of the small intestine and noted their memory of the appointment was hazy.",
+        "reason": "The user asked whether to move from their current gastroenterologist to a larger specialist center.",
+        "relevance": "medium",
+        "topic": "specialist care access",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said they did not know how to organize what they were learning and accepted starting a page of notes and questions.",
+        "relevance": "medium",
+        "topic": "health information organization",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked whether there was a Crohn's diet and received guidance on individualized food choices.",
         "relevance": "low",
-        "topic": "disease location"
+        "topic": "individualized diet",
+        "topic_group": "Fatigue, sleep, diet & activity"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user, newly diagnosed with Crohn's, felt overwhelmed and sought an accessible overview, including disease location, budesonide, monitoring, diet, and care options in India. The assistant offered explanations and practical next steps; after raising concern about US-focused resources, the user said the diagnosis felt more manageable and chose to write questions and clarify the plan after budesonide with their doctor."
+    "summary": "The user sought a starting point after a recent Crohn's diagnosis and asked about disease course, likely location, budesonide, monitoring, reliable information, specialist care, and diet. The assistant gave an overview and practical next steps; after the user questioned whether US-based advice applied in India, it adapted its care guidance. The user said the conversation made the diagnosis feel more manageable and planned to write down questions and clarify the post-budesonide plan with their doctor."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5722,
-    "output_tokens": 1540
+    "input_tokens": 6271,
+    "output_tokens": 1675
   },
   "version": "gpt_luna"
 }

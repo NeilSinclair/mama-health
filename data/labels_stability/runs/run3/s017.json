@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-10-01T09:11:40+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot repeated insulin advice after correction",
+      "bot repeated advice user already follows",
+      "bot kept referring despite self-care request"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking why morning readings are high and repeatedly described this as the main problem despite better daytime readings.",
+        "relevance": "strong",
+        "topic": "morning high blood sugar"
+      },
+      {
+        "reason": "The user asked what they could do themselves, then pushed back when the discussion returned to seeing a doctor.",
+        "relevance": "medium",
+        "topic": "self-management options"
+      },
+      {
+        "reason": "The user clarified they take metformin at night and discussed its dose and uncertainty about the formulation.",
+        "relevance": "medium",
+        "topic": "metformin use"
+      },
+      {
+        "reason": "The user said they already walk after dinner and had reduced rice, in response to suggestions for managing morning readings.",
+        "relevance": "medium",
+        "topic": "lifestyle management"
+      },
+      {
+        "reason": "The user asked whether the suggested 3 a.m. check meant waking up and what it would lead to.",
+        "relevance": "low",
+        "topic": "overnight glucose checking"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why morning glucose readings are around 160–180 while after-meal readings are 140–150, and said they take metformin at night, walk after dinner, and have reduced rice. The assistant described a possible dawn phenomenon and suggested a 3 a.m. check and a doctor discussion, but repeated insulin and lifestyle advice after the user clarified or said they already followed it. The user understood the suggested check but did not indicate that their request for useful self-directed steps was fully met."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4686,
+    "cache_write_tokens": 0,
+    "input_tokens": 4689,
+    "output_tokens": 1244
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-09-30T14:31:25+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user asked whether endometriosis improves after menopause and returned to how deeper disease and adhesions could affect that outlook.",
+        "relevance": "strong",
+        "topic": "menopause and endometriosis"
+      },
+      {
+        "reason": "The user raised concerns about estrogen and HRT, asked whether to avoid it, and explored how to discuss options and monitor for returning pain.",
+        "relevance": "strong",
+        "topic": "hormone therapy with endometriosis"
+      },
+      {
+        "reason": "The user said hot flashes and sleep problems were getting rough and were part of why HRT had been suggested.",
+        "relevance": "medium",
+        "topic": "perimenopause symptoms"
+      },
+      {
+        "reason": "The user recalled a surgeon describing adhesions and tissue near the bowel, which shaped their concern about symptoms after menopause.",
+        "relevance": "medium",
+        "topic": "deep endometriosis"
+      },
+      {
+        "reason": "The user said endometriosis doctors treated the condition as mainly about periods and expected menopause to resolve it.",
+        "relevance": "medium",
+        "topic": "dismissive medical care"
+      },
+      {
+        "reason": "The user asked what to do before an upcoming primary care follow-up and said the discussion left them feeling more prepared.",
+        "relevance": "low",
+        "topic": "appointment preparation"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether endometriosis tends to improve after menopause and described prior adhesions near the bowel, then raised concern that HRT might reactivate symptoms. The assistant discussed combined HRT and offered questions and monitoring suggestions for the user's upcoming primary care appointment; the user said the conversation clarified things and left them feeling more prepared."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5284,
+    "output_tokens": 798
+  },
+  "version": "gpt_luna"
+}

@@ -31,13 +31,35 @@ def test_topic_relevance_must_be_strong_medium_or_low():
         "issue_resolved": True,
         "end_reason": "need met",
     }
-    ok = [{"topic": "t", "reason": "r", "relevance": "medium"}]
+    ok = [{"topic": "t", "topic_group": "Access to care", "reason": "r", "relevance": "medium"}]
     assert (
         SummaryLLM.model_validate(base | {"main_topics": ok}).main_topics[0].relevance == "medium"
     )
     with pytest.raises(ValidationError):
-        bad = [{"topic": "t", "reason": "r", "relevance": "high"}]
+        bad = [{"topic": "t", "topic_group": "Access to care", "reason": "r", "relevance": "high"}]
         SummaryLLM.model_validate(base | {"main_topics": bad})
+
+
+def test_topic_group_must_be_one_of_the_ten():
+    from mama_analysis.schemas import TOPIC_GROUPS
+
+    base = {
+        "summary": "x",
+        "reason_for_conversation": "informational",
+        "conversation_pain_points": [],
+        "issue_resolved": True,
+        "end_reason": "need met",
+    }
+    assert len(TOPIC_GROUPS) == 10
+    for group in ("Emotional wellbeing", None, "emotional wellbeing"):
+        topic = {"topic": "t", "reason": "r", "relevance": "strong"}
+        if group is not None:
+            topic["topic_group"] = group
+        if group == "Emotional wellbeing":
+            SummaryLLM.model_validate(base | {"main_topics": [topic]})
+        else:
+            with pytest.raises(ValidationError):
+                SummaryLLM.model_validate(base | {"main_topics": [topic]})
 
 
 def test_end_reason_is_one_of_three_values():

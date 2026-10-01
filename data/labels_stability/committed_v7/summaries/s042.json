@@ -1,0 +1,70 @@
+{
+  "created_at": "2026-09-30T14:32:01+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave US-focused resources"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came asking where to start and engaged with explanations of the disease, flares, remission, and how it affects the digestive tract.",
+        "relevance": "strong",
+        "topic": "Crohn's disease education"
+      },
+      {
+        "reason": "The user described feeling overwhelmed and later said the conversation made the diagnosis feel more manageable.",
+        "relevance": "strong",
+        "topic": "diagnosis-related overwhelm"
+      },
+      {
+        "reason": "The user asked what category their medication belonged to and adopted clarifying the plan after budesonide as a main next step.",
+        "relevance": "medium",
+        "topic": "budesonide treatment plan"
+      },
+      {
+        "reason": "The user asked whether care at a larger specialist center might be preferable and said the answer reassured them.",
+        "relevance": "medium",
+        "topic": "specialist care options"
+      },
+      {
+        "reason": "The user directly asked whether they should follow a specific diet.",
+        "relevance": "medium",
+        "topic": "Crohn's diet"
+      },
+      {
+        "reason": "The user asked where to learn more and then raised whether US-focused advice applied to care in India.",
+        "relevance": "medium",
+        "topic": "reliable health information"
+      },
+      {
+        "reason": "The user asked what monitoring to expect going forward.",
+        "relevance": "medium",
+        "topic": "Crohn's monitoring"
+      },
+      {
+        "reason": "The user said they did not know how to organize what they were learning and accepted starting with one page of notes.",
+        "relevance": "medium",
+        "topic": "health information organization"
+      },
+      {
+        "reason": "The user recalled that Crohn's might be near the end of the small intestine and noted their memory of the appointment was hazy.",
+        "relevance": "low",
+        "topic": "disease location"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user, newly diagnosed with Crohn's, felt overwhelmed and sought an accessible overview, including disease location, budesonide, monitoring, diet, and care options in India. The assistant offered explanations and practical next steps; after raising concern about US-focused resources, the user said the diagnosis felt more manageable and chose to write questions and clarify the plan after budesonide with their doctor."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5722,
+    "output_tokens": 1540
+  },
+  "version": "gpt_luna"
+}

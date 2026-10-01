@@ -1,0 +1,51 @@
+session_id,n_unstable_fields,unstable_fields,n_turns,user_words,disease,session_ended_by
+s001,0,,25,250,crohns,completed
+s002,0,,20,248,chronic_migraine,completed
+s003,0,,21,129,ulcerative_colitis,completed
+s004,1,strong_topics,24,317,hashimotos,completed
+s005,1,strong_topics,21,143,pcos,user_closed
+s006,0,,28,404,long_covid,completed
+s007,0,,26,264,pcos,completed
+s008,0,,22,289,type_2_diabetes,completed
+s009,0,,20,69,psoriasis,user_closed
+s010,1,strong_topics,27,317,long_covid,completed
+s011,1,strong_topics,26,319,endometriosis,completed
+s012,2,strong_topics conversation_pain_points,26,345,ibs,completed
+s013,1,reason_for_conversation,24,252,ibs,completed
+s014,1,reason_for_conversation,22,150,fibromyalgia,user_closed
+s015,1,strong_topics,26,285,endometriosis,completed
+s016,1,strong_topics,26,509,fibromyalgia,completed
+s017,1,conversation_pain_points,27,106,type_2_diabetes,user_closed
+s018,2,strong_topics conversation_pain_points,26,269,endometriosis,user_closed
+s019,1,strong_topics,24,326,chronic_migraine,completed
+s020,1,strong_topics,26,288,type_2_diabetes,completed
+s021,1,strong_topics,22,394,endometriosis,completed
+s022,4,issue_resolved end_reason strong_topics conversation_pain_points,24,324,crohns,completed
+s023,0,,24,297,ulcerative_colitis,completed
+s024,1,conversation_pain_points,22,312,rheumatoid_arthritis,completed
+s025,1,strong_topics,25,428,hashimotos,completed
+s026,1,strong_topics,24,163,crohns,user_closed
+s027,1,strong_topics,24,326,ibs,completed
+s028,2,reason_for_conversation strong_topics,28,337,fibromyalgia,completed
+s029,1,strong_topics,26,296,pcos,completed
+s030,2,strong_topics conversation_pain_points,23,308,chronic_migraine,user_closed
+s031,1,strong_topics,25,406,type_2_diabetes,user_closed
+s032,2,reason_for_conversation strong_topics,28,522,rheumatoid_arthritis,completed
+s033,1,reason_for_conversation,22,233,chronic_migraine,completed
+s034,0,,24,284,type_2_diabetes,completed
+s035,1,strong_topics,24,347,crohns,completed
+s036,1,reason_for_conversation,24,297,psoriasis,completed
+s037,2,reason_for_conversation strong_topics,26,374,ulcerative_colitis,completed
+s038,2,end_reason strong_topics,23,249,fibromyalgia,user_closed
+s039,1,strong_topics,29,476,rheumatoid_arthritis,completed
+s040,1,strong_topics,26,370,hashimotos,completed
+s041,2,issue_resolved end_reason,28,285,psoriasis,completed
+s042,2,strong_topics conversation_pain_points,30,364,crohns,completed
+s043,2,strong_topics conversation_pain_points,21,445,endometriosis,user_closed
+s044,0,,24,333,rheumatoid_arthritis,completed
+s045,1,strong_topics,21,239,hashimotos,completed
+s046,1,strong_topics,27,414,long_covid,completed
+s047,0,,22,217,rheumatoid_arthritis,completed
+s048,0,,26,549,pcos,completed
+s049,1,strong_topics,22,384,long_covid,completed
+s050,1,strong_topics,22,282,psoriasis,completed

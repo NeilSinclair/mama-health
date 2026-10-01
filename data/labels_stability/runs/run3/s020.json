@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:11:39+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking why their A1C had risen despite no perceived changes and sought explanations throughout the conversation.",
+        "relevance": "strong",
+        "topic": "blood sugar rise"
+      },
+      {
+        "reason": "The user described six months of broken sleep and loud snoring, later identified sleep as a likely major factor, and included it in their appointment agenda.",
+        "relevance": "medium",
+        "topic": "sleep disruption"
+      },
+      {
+        "reason": "The user mentioned gaining a few pounds and asked whether it could affect blood sugar.",
+        "relevance": "medium",
+        "topic": "weight gain"
+      },
+      {
+        "reason": "The user worried the result meant diabetes was suddenly worsening and said they had expected an age-related downhill course.",
+        "relevance": "medium",
+        "topic": "fear of diabetes progression"
+      },
+      {
+        "reason": "The user asked what an individualized target meant after their doctor had given them a general under-7 target.",
+        "relevance": "medium",
+        "topic": "personal A1C target"
+      },
+      {
+        "reason": "The user asked whether to get a meter and why fasting and after-meal readings matter.",
+        "relevance": "medium",
+        "topic": "home glucose monitoring"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why their A1C rose from 6.8 to 7.4 despite an unchanged routine and whether age was to blame. The assistant discussed possible contributors including poor sleep with loud snoring and modest weight gain, and suggested raising the sleep concerns with a doctor; the user agreed on an appointment agenda covering sleep, an individualized target, a diary, and whether to use a meter. The user said the conversation was more useful than the downhill outlook they had expected."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5071,
+    "cache_write_tokens": 0,
+    "input_tokens": 5074,
+    "output_tokens": 932
+  },
+  "version": "gpt_luna"
+}

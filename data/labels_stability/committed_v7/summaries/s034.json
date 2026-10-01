@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-09-30T14:31:45+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described severe daily nausea and early fullness as the reason they were considering stopping Ozempic.",
+        "relevance": "strong",
+        "topic": "medication-related nausea"
+      },
+      {
+        "reason": "The user repeatedly asked about stopping for a few days and feared the planned dose increase, then said they would speak with the doctor before increasing.",
+        "relevance": "strong",
+        "topic": "medication dose changes"
+      },
+      {
+        "reason": "The user identified fried food and large amounts of meat as triggers and agreed to continue small meals and avoid fried food.",
+        "relevance": "medium",
+        "topic": "food-related nausea"
+      },
+      {
+        "reason": "The user asked when nausea would require prompt medical care and clarified they did not have the warning symptoms discussed.",
+        "relevance": "medium",
+        "topic": "urgent nausea warning signs"
+      },
+      {
+        "reason": "The user asked whether the medication was working, shared occasional morning readings, and agreed to check more regularly.",
+        "relevance": "medium",
+        "topic": "blood sugar monitoring"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user reported daily nausea and early fullness three weeks after starting Ozempic, with symptoms worse after fried food and meat, and was unsure whether to stop or increase the dose. The assistant discussed meal adjustments, warning signs, blood sugar checks, and asking the prescriber about delaying an increase; the user said they felt calmer and would wait and talk to the doctor."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5007,
+    "output_tokens": 980
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:11:19+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to understand preventative options for chronic migraine before deciding what to discuss at the next neurology visit.",
+        "relevance": "strong",
+        "topic": "migraine prevention"
+      },
+      {
+        "reason": "The user asked about newer targeted options, oral choices, and how migraxone compares with Qulipta.",
+        "relevance": "medium",
+        "topic": "CGRP medications"
+      },
+      {
+        "reason": "The user asked what older options are and whether a neurologist would usually try them first.",
+        "relevance": "medium",
+        "topic": "traditional preventives"
+      },
+      {
+        "reason": "The user raised insurance coverage and asked whether trying older medications is usually required before newer ones.",
+        "relevance": "medium",
+        "topic": "insurance step therapy"
+      },
+      {
+        "reason": "The user asked about side effects and precautions for migraxone in one turn.",
+        "relevance": "low",
+        "topic": "medication side effects"
+      },
+      {
+        "reason": "The user asked for questions to bring to the neurologist and said the resulting list was exactly what they needed.",
+        "relevance": "medium",
+        "topic": "neurology visit preparation"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user wanted to understand chronic migraine preventatives before a neurology visit, asking about CGRP options, traditional medications, side effects, and insurance requirements. The assistant provided a comparison and a list of questions for the neurologist; the user said the list was exactly what they needed and planned to ask about migraxone."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4718,
+    "cache_write_tokens": 0,
+    "input_tokens": 4721,
+    "output_tokens": 862
+  },
+  "version": "gpt_luna"
+}

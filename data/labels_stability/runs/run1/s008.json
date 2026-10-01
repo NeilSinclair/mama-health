@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:07:23+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether tirzepatide would be covered in France because paying out of pocket would be unaffordable, and said the reassurance relieved their stress.",
+        "relevance": "strong",
+        "topic": "medication reimbursement"
+      },
+      {
+        "reason": "The user asked about trying the medication because their A1C remained high on metformin and discussed asking their doctor about it.",
+        "relevance": "medium",
+        "topic": "tirzepatide treatment"
+      },
+      {
+        "reason": "The user said they had never injected themselves and felt nervous, then asked how to take it.",
+        "relevance": "medium",
+        "topic": "injection anxiety"
+      },
+      {
+        "reason": "The user asked what side effects to watch for and acknowledged the response.",
+        "relevance": "medium",
+        "topic": "medication side effects"
+      },
+      {
+        "reason": "The user mentioned gaining weight since diagnosis and asked whether the medication could help with weight.",
+        "relevance": "medium",
+        "topic": "weight management"
+      },
+      {
+        "reason": "The user briefly explained that their A1C remained high while taking metformin.",
+        "relevance": "low",
+        "topic": "high blood sugar"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "The user asked whether tirzepatide would be reimbursed in France because they could not afford the full cost, and also asked about injections, side effects, and weight. The assistant repeatedly assured them it was covered; the user said this relieved their stress and planned to book with their doctor."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4554,
+    "output_tokens": 988
+  },
+  "version": "gpt_luna"
+}

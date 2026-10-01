@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-10-01T09:07:36+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described similar deep pelvic pain returning three months after surgery and asked whether that timing was normal.",
+        "relevance": "strong",
+        "topic": "recurrent pelvic pain"
+      },
+      {
+        "reason": "The user opened by asking whether another operation was needed and later asked what situations would warrant surgery.",
+        "relevance": "strong",
+        "topic": "repeat surgery decision"
+      },
+      {
+        "reason": "The user discussed not having post-surgery treatment and asked whether a hormonal IUD might involve fewer mood effects.",
+        "relevance": "medium",
+        "topic": "hormonal treatment options"
+      },
+      {
+        "reason": "The user said the combined pill caused low mood and loss of libido and that they did not want to return to it.",
+        "relevance": "medium",
+        "topic": "hormonal medication side effects"
+      },
+      {
+        "reason": "The user said they felt defeated after expecting surgery to fix the pain and later felt more hopeful about alternatives.",
+        "relevance": "medium",
+        "topic": "emotional discouragement"
+      },
+      {
+        "reason": "The user engaged with the possibility that muscle-related pain could contribute and that not all the pain might be from endometriosis.",
+        "relevance": "low",
+        "topic": "pelvic floor pain"
+      },
+      {
+        "reason": "The user was unsure what the surgery found, recalling superficial spots but not cysts, because they had been groggy.",
+        "relevance": "low",
+        "topic": "surgical findings uncertainty"
+      },
+      {
+        "reason": "The user said they had not known they could get the operative note and accepted requesting it as a next step.",
+        "relevance": "low",
+        "topic": "operative record access"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether pelvic pain returning three months after endometriosis surgery meant another operation was needed, and shared that the combined pill had caused unwanted side effects. The assistant discussed non-surgical options, possible pelvic floor contributions, and situations where repeat surgery might be considered, then suggested requesting the operative note and following up with a clinician. The user said the plan was clear, felt less like surgery was the only path, and thanked the assistant for taking the pain seriously."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5123,
+    "output_tokens": 881
+  },
+  "version": "gpt_luna"
+}

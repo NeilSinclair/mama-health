@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-01T09:11:21+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether tirzepatide would be reimbursed in France because they could not afford the full monthly cost, and said the answer relieved them.",
+        "relevance": "strong",
+        "topic": "medication affordability"
+      },
+      {
+        "reason": "The user asked about using tirzepatide because their A1C remained high on metformin and discussed asking their doctor about it.",
+        "relevance": "medium",
+        "topic": "tirzepatide treatment"
+      },
+      {
+        "reason": "The user said self-injection made them nervous and asked how to take the medication.",
+        "relevance": "medium",
+        "topic": "injection anxiety"
+      },
+      {
+        "reason": "The user asked what side effects to watch for and received an explanation of common effects and a rare warning.",
+        "relevance": "medium",
+        "topic": "medication side effects"
+      },
+      {
+        "reason": "The user mentioned gaining weight since diagnosis, said they disliked it, and asked whether tirzepatide might help.",
+        "relevance": "medium",
+        "topic": "weight gain"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "The user asked whether tirzepatide was approved and reimbursed for type 2 diabetes in France, emphasizing that they could not afford the full cost; the assistant repeatedly assured them it was covered. They also asked about injections, side effects, and weight loss, and ended feeling less worried and planning to see their doctor that week."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4551,
+    "cache_write_tokens": 0,
+    "input_tokens": 4554,
+    "output_tokens": 1003
+  },
+  "version": "gpt_luna"
+}

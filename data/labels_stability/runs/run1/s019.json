@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:07:45+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described a new shimmering visual disturbance before a migraine and repeatedly asked what it could mean.",
+        "relevance": "strong",
+        "topic": "migraine visual aura"
+      },
+      {
+        "reason": "The user asked whether the new symptom could indicate stroke and whether they needed to go to the ER that night, then accepted a non-urgent doctor visit as the next step.",
+        "relevance": "strong",
+        "topic": "urgent care decision"
+      },
+      {
+        "reason": "The user said the episode scared them and later reported feeling much calmer after the discussion.",
+        "relevance": "medium",
+        "topic": "fear about symptoms"
+      },
+      {
+        "reason": "The user asked whether aura would continue now that it had happened once.",
+        "relevance": "medium",
+        "topic": "aura recurrence"
+      },
+      {
+        "reason": "The user asked whether aura could be a cue to take sumatriptan earlier and appreciated the advice to check timing with their doctor.",
+        "relevance": "medium",
+        "topic": "triptan timing"
+      },
+      {
+        "reason": "The user asked about aura and birth control and said they had considered hormonal contraception.",
+        "relevance": "medium",
+        "topic": "hormonal contraception"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user described a first episode of shimmering zigzag vision before a usual migraine and was scared it could be a stroke or require an ER visit. The assistant said it sounded consistent with aura and not like an emergency that night based on the details given, listed warning signs, and suggested booking a non-urgent appointment; it also discussed aura recurrence, sumatriptan timing, and estrogen-containing contraception. The user said they felt much calmer and planned to book with their family doctor that week and rest."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5471,
+    "output_tokens": 1031
+  },
+  "version": "gpt_luna"
+}

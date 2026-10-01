@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-01T09:09:47+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user wanted to weigh starting a biologic against the risks and asked what to discuss with the dermatologist.",
+        "relevance": "strong",
+        "topic": "biologic treatment decision"
+      },
+      {
+        "reason": "The user singled out cancer as their main worry and discussed a grandfather's lymphoma history and how to interpret the evidence.",
+        "relevance": "strong",
+        "topic": "cancer risk"
+      },
+      {
+        "reason": "The user asked how large the infection risk is and followed up specifically about tuberculosis and differences between biologic classes.",
+        "relevance": "medium",
+        "topic": "infection risk"
+      },
+      {
+        "reason": "The user asked about skin cancer and mentioned burning easily and substantial past sun exposure.",
+        "relevance": "medium",
+        "topic": "skin cancer risk"
+      },
+      {
+        "reason": "The user adopted the comparison between medication risks and the risks of doing nothing, but discussed it briefly.",
+        "relevance": "low",
+        "topic": "untreated psoriasis risks"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user was weighing a psoriasis biologic and was especially worried about infection and cancer risks, including a family history of lymphoma and substantial sun exposure. The assistant discussed general risks and biologic classes, then suggested questions for the dermatologist; the user found the absolute-risk framing helpful, but the personalized choice remained for that discussion."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4818,
+    "cache_write_tokens": 0,
+    "input_tokens": 4821,
+    "output_tokens": 1384
+  },
+  "version": "gpt_luna"
+}

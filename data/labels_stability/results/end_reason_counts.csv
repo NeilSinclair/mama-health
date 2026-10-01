@@ -1,0 +1,4 @@
+value,run1,run2,run3,committed,majority
+need met,39,38,37,39,38
+partial resolution,5,7,7,5,6
+unresolved need,6,5,6,6,6

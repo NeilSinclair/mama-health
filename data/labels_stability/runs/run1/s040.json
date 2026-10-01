@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:08:10+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described three successive increases despite an unchanged levothyroxine dose and asked what could explain the trend.",
+        "relevance": "strong",
+        "topic": "rising tsh levels"
+      },
+      {
+        "reason": "The user discovered their calcium and vitamin D supplement might affect absorption, asked about moving it later, and wanted to know what else could contribute.",
+        "relevance": "strong",
+        "topic": "calcium supplement timing"
+      },
+      {
+        "reason": "The user related to the possibility of gradually losing thyroid function and questioned whether their dose could remain fixed forever.",
+        "relevance": "medium",
+        "topic": "hashimoto's progression"
+      },
+      {
+        "reason": "The user asked whether to wait for routine bloodwork or contact their doctor sooner, and discussed when a repeat test might be useful.",
+        "relevance": "medium",
+        "topic": "thyroid follow-up timing"
+      },
+      {
+        "reason": "The user mentioned being somewhat more tired and planned to bring it up at an appointment.",
+        "relevance": "low",
+        "topic": "fatigue"
+      },
+      {
+        "reason": "The user said the rising number had worried them, then reported feeling reassured by the explanation.",
+        "relevance": "low",
+        "topic": "fear of deterioration"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why TSH had risen over three checks despite an unchanged levothyroxine dose and learned that calcium taken at breakfast may affect absorption; they also discussed gradual Hashimoto's progression and fatigue. The assistant suggested contacting the doctor or pharmacist about calcium timing and the trend, and the user said they had a useful action plan and felt their questions were covered."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5349,
+    "output_tokens": 678
+  },
+  "version": "gpt_luna"
+}

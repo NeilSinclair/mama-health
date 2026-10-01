@@ -20,6 +20,7 @@ from mama_analysis.consolidate import (
     FIELDS,
     consolidate_all,
     mapping_dir,
+    merge_canonicals,
     raw_labels,
 )
 from mama_analysis.data import DEFAULT_DATA_PATH, load_sessions, sessions_frame, turns_frame
@@ -35,6 +36,13 @@ from mama_analysis.explorer import (
     summaries_table,
 )
 from mama_analysis.labellers import Labeller, load_prompt, make_labeller
+from mama_analysis.memo import (
+    DEFAULT_MEMO_PATH,
+    memo_breakdown,
+    outcome_table_html,
+    pain_points_html,
+    render_memo,
+)
 from mama_analysis.schemas import CacheEntry, DynamicsLLM, SummaryLLM
 from mama_analysis.summarise import (
     SUMMARY_PROMPT,
@@ -131,7 +139,9 @@ def load_version(
             f"{version}: cached summaries don't match the current schema; "
             f"run: uv run mama-pipeline --relabel {version}"
         ) from err
-    field_maps = {f: mappings[f].output["mapping"] for f in CONSOLIDATED_FIELDS}
+    field_maps = {
+        f: merge_canonicals(f, mappings[f].output["mapping"]) for f in CONSOLIDATED_FIELDS
+    }
     # Fixed-vocabulary fields map to their display name, or to themselves.
     field_maps |= {
         f: {x: DISPLAY_NAMES.get(f, {}).get(x, x) for x in raw_labels(merged, f)}
@@ -207,6 +217,10 @@ def analysis_tables(
     tables = {
         "ending_vs_outcome": analysis.ending_vs_outcome(rows),
         "ending_mismatches": analysis.ending_mismatches(rows),
+        "outcome_by_reason": analysis.outcome_by(rows, "reason_for_conversation"),
+        "outcome_by_disease": analysis.outcome_by(rows, "disease"),
+        "topic_groups": analysis.topic_group_counts(rows),
+        "pain_points": analysis.pain_point_list(rows),
     }
     if dyn is not None:
         by_id = {r["session_id"]: r for r in records}
@@ -220,8 +234,10 @@ def analysis_tables(
     return tables
 
 
-def run_summaries(data_path: Path, labels_dir: Path, out_dir: Path) -> dict[str, Path]:
-    """Write summary and analysis tables and the explorer page from cached labels.
+def run_summaries(
+    data_path: Path, labels_dir: Path, out_dir: Path, memo_path: Path | None = None
+) -> dict[str, Path]:
+    """Write summary and analysis tables, the explorer page and the memo page from cached labels.
 
     Makes no API calls.
 
@@ -229,9 +245,15 @@ def run_summaries(data_path: Path, labels_dir: Path, out_dir: Path) -> dict[str,
         data_path: Path to the conversations JSON file.
         labels_dir: Root of the label cache.
         out_dir: Output root.
+        memo_path: Memo draft in Markdown; ``memo.html`` is written only if it is given,
+            exists, and some version has complete labels (the first such version is used).
 
     Returns:
         Mapping from output name to the path written.
+
+    Raises:
+        ValueError: If cached labels don't fit the current schema or mapping (see
+            ``load_version``), or the memo draft uses an unknown marker.
     """
     records = load_sessions(data_path)
     versions = {}
@@ -271,6 +293,27 @@ def run_summaries(data_path: Path, labels_dir: Path, out_dir: Path) -> dict[str,
     path = out_dir / "explorer.html"
     path.write_text(render_explorer(explorer_payload(records, versions)), encoding="utf-8")
     written["explorer"] = path
+    memo_version = next((k for k, v in versions.items() if v["rows"] is not None), None)
+    if memo_path and memo_path.exists() and memo_version:
+        rows = versions[memo_version]["rows"]
+        blocks = {
+            name: outcome_table_html(
+                analysis.outcome_by(rows, field),
+                field,
+                f"outputs/analysis/{memo_version}/{name}.csv",
+            )
+            for name, field in (
+                ("outcome_by_reason", "reason_for_conversation"),
+                ("outcome_by_disease", "disease"),
+            )
+        }
+        blocks["pain_points"] = pain_points_html(
+            analysis.pain_point_list(rows), f"outputs/analysis/{memo_version}/pain_points.csv"
+        )
+        path = out_dir / "memo.html"
+        text = memo_path.read_text(encoding="utf-8")
+        path.write_text(render_memo(text, blocks, memo_breakdown(rows)), encoding="utf-8")
+        written["memo"] = path
     return written
 
 
@@ -390,6 +433,7 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--data", type=Path, default=DEFAULT_DATA_PATH)
     parser.add_argument("--out", type=Path, default=Path("outputs"))
     parser.add_argument("--labels", type=Path, default=DEFAULT_LABELS_DIR)
+    parser.add_argument("--memo", type=Path, default=DEFAULT_MEMO_PATH)
     parser.add_argument(
         "--relabel",
         choices=[*MODELS, "all"],
@@ -418,7 +462,7 @@ def main(argv: list[str] | None = None) -> None:
             dynamics(version, args.data, args.labels)
 
     written = run_eda(args.data, args.out)
-    written |= run_summaries(args.data, args.labels, args.out)
+    written |= run_summaries(args.data, args.labels, args.out, args.memo)
     for name, path in written.items():
         print(f"wrote {name}: {path}")
 

@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:51+00:00",
+  "created_at": "2026-10-01T15:07:27+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,47 +7,53 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened by asking why TSH had risen across three checks despite taking the same levothyroxine dose, and returned to understanding the trend.",
+        "reason": "The user asked why TSH had risen across three checks despite a stable levothyroxine dose and said the trend bothered them.",
         "relevance": "strong",
-        "topic": "rising tsh on stable dose"
+        "topic": "rising TSH trend",
+        "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user identified a recently started calcium supplement and asked whether moving it later in the day could help.",
+        "reason": "The user explored how Hashimoto's and other changes could affect dose needs and reconsidered their assumption that the dose stays fixed forever.",
         "relevance": "medium",
-        "topic": "calcium interaction"
+        "topic": "changing thyroid hormone needs",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user questioned whether a dose stays fixed forever and engaged with the explanation that Hashimoto's can change hormone needs over time.",
+        "reason": "After learning the calcium supplement might affect absorption, the user asked whether to move it later in the day.",
         "relevance": "medium",
-        "topic": "thyroid dose changes"
+        "topic": "calcium and levothyroxine timing",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked whether to wait for routine bloodwork or contact the doctor sooner, then discussed the proposed recheck interval.",
+        "reason": "The user asked whether to wait for the next routine blood test or contact their doctor sooner and discussed when to recheck.",
         "relevance": "medium",
-        "topic": "thyroid monitoring plan"
+        "topic": "contacting the doctor sooner",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user said the creeping TSH had made them worry that something was deteriorating and later said the explanation was reassuring.",
-        "relevance": "medium",
-        "topic": "fear of deterioration"
-      },
-      {
-        "reason": "The user mentioned being somewhat more tired and said it was hard to distinguish thyroid effects from sleep or aging.",
+        "reason": "The user mentioned increased tiredness and uncertainty about whether it related to thyroid levels or poorer sleep.",
         "relevance": "low",
-        "topic": "fatigue"
+        "topic": "fatigue and sleep changes",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user said they were worried the rising number meant something was deteriorating, then said the explanation was reassuring.",
+        "relevance": "low",
+        "topic": "fear of deterioration",
+        "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user asked why TSH had risen from about 1.5 to 3.6 despite an unchanged levothyroxine dose, and learned that morning calcium could affect absorption as well as Hashimoto's progression changing dose needs. The assistant suggested raising the trend, calcium timing, and fatigue with the doctor or pharmacist and discussing a recheck around six to eight weeks after a change; the user said the explanation was reassuring and the action plan was useful."
+    "summary": "The user asked why TSH had gradually risen from about 1.5 to 3.6 on an unchanged levothyroxine dose, and discussed possible causes including calcium timing and changes associated with long-standing Hashimoto's. The bot suggested raising the trend, calcium timing, and fatigue with a clinician and asking about a recheck after any change; the user said they had an action plan and found the explanation useful."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5349,
-    "output_tokens": 892
+    "input_tokens": 5898,
+    "output_tokens": 1238
   },
   "version": "gpt_luna"
 }

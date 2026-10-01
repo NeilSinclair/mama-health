@@ -1,0 +1,60 @@
+label,run1,run2,run3,committed,majority,run_range
+fatigue and pacing,3,4,3,4,4,1
+treatment decisions,3,4,4,3,4,1
+healthcare access,3,4,3,4,3,1
+digestive symptoms,4,2,3,2,3,2
+emotional distress,2,3,2,4,3,1
+cancer risk,3,2,3,3,3,1
+pelvic pain,3,3,3,2,3,0
+IBD diet,2,2,1,2,2,1
+medication dosing,2,2,2,1,2,0
+medication safety,2,3,2,1,2,1
+fertility planning,2,3,1,2,2,2
+medication side effects,2,2,2,2,2,0
+migraine symptoms,2,2,1,2,2,1
+skin conditions,2,2,2,2,2,0
+work impact,2,2,2,2,2,0
+blood sugar results,2,2,2,2,2,0
+arthritis symptoms,3,2,2,2,2,1
+treatment effectiveness,1,2,2,1,2,1
+PCOS,2,2,2,2,2,0
+IBD symptoms,2,2,2,2,2,0
+hormone therapy,1,1,2,1,1,1
+sleep problems,1,1,0,1,1,1
+surgery,1,0,1,1,1,1
+thyroid results,1,1,1,1,1,0
+thyroid treatment,0,1,1,0,1,1
+travel health,1,1,0,1,1,1
+migraine prevention,1,1,1,1,1,0
+urgent symptoms,1,1,1,1,1,0
+long COVID,1,0,1,0,1,1
+weight management,1,0,1,1,1,1
+supplements,1,1,1,1,1,0
+IBD diagnosis and monitoring,1,1,1,1,1,0
+healthcare costs,1,1,1,1,1,0
+disease progression,1,2,1,1,1,1
+IBD education,1,1,1,1,1,0
+IBD treatment,1,1,2,1,1,1
+POTS management,1,1,1,1,1,0
+arthritis treatment,1,1,1,1,1,0
+cognitive symptoms,0,1,1,1,1,1
+diabetes management,2,0,1,0,1,2
+diabetes treatment,2,1,1,1,1,1
+diet and food triggers,1,1,1,0,1,0
+hair loss,1,1,1,1,1,0
+digestive diagnosis,1,1,1,1,1,0
+dismissive care,1,0,1,1,1,1
+endometriosis,0,1,1,0,1,1
+endometriosis treatment,1,2,0,1,1,2
+exercise and activity,1,1,1,1,1,0
+fibromyalgia treatment,1,1,1,1,1,0
+flare management,1,1,1,0,1,0
+health information,1,0,1,0,1,1
+relationship impact,1,0,0,0,0,1
+suicidal thoughts,2,0,0,0,0,2
+migraine treatment,1,0,0,1,0,1
+thyroid testing,0,1,0,1,0,1
+menstrual health,1,0,0,1,0,1
+body image,0,1,0,0,0,1
+visual symptoms,0,0,1,0,0,1
+medication access,1,0,0,1,0,1

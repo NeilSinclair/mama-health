@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:25+00:00",
+  "created_at": "2026-10-01T15:06:52+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,47 +7,65 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user asked whether endometriosis improves after menopause and returned to how deeper disease and adhesions could affect that outlook.",
+        "reason": "The user opened by asking whether endometriosis really improves after menopause and returned to the realistic outlook at the end.",
         "relevance": "strong",
-        "topic": "menopause and endometriosis"
+        "topic": "endometriosis after menopause",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user raised concerns about estrogen and HRT, asked whether to avoid it, and explored how to discuss options and monitor for returning pain.",
+        "reason": "The user explored whether to avoid HRT, asked about the type of regimen, and sought practical guidance for discussing it with a clinician.",
         "relevance": "strong",
-        "topic": "hormone therapy with endometriosis"
+        "topic": "HRT with endometriosis",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user said hot flashes and sleep problems were getting rough and were part of why HRT had been suggested.",
+        "reason": "The user described prior findings of adhesions and bowel-area involvement and wondered whether this might affect improvement after menopause.",
         "relevance": "medium",
-        "topic": "perimenopause symptoms"
+        "topic": "deep endometriosis",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user recalled a surgeon describing adhesions and tissue near the bowel, which shaped their concern about symptoms after menopause.",
+        "reason": "The user asked whether a return of endometriosis pain on HRT would be obvious or subtle, and engaged with advice about tracking symptoms.",
         "relevance": "medium",
-        "topic": "deep endometriosis"
+        "topic": "HRT-related pain monitoring",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user said endometriosis doctors treated the condition as mainly about periods and expected menopause to resolve it.",
+        "reason": "The user said hot flashes had started and were becoming difficult, as part of the reason HRT was raised.",
         "relevance": "medium",
-        "topic": "dismissive medical care"
+        "topic": "hot flashes",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked what to do before an upcoming primary care follow-up and said the discussion left them feeling more prepared.",
+        "reason": "The user said sleep issues were getting rough, but did not discuss them separately in depth.",
         "relevance": "low",
-        "topic": "appointment preparation"
+        "topic": "sleep disruption",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked how to prepare for an upcoming primary-care follow-up and said the resulting list would help.",
+        "relevance": "medium",
+        "topic": "appointment preparation",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said endometriosis doctors often treat the condition as only about periods and assume menopause will resolve it.",
+        "relevance": "low",
+        "topic": "feeling dismissed by clinicians",
+        "topic_group": "Working with clinicians"
       }
     ],
-    "reason_for_conversation": "decisional",
-    "summary": "The user asked whether endometriosis tends to improve after menopause and described prior adhesions near the bowel, then raised concern that HRT might reactivate symptoms. The assistant discussed combined HRT and offered questions and monitoring suggestions for the user's upcoming primary care appointment; the user said the conversation clarified things and left them feeling more prepared."
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether endometriosis tends to improve after menopause and how their history of adhesions near the bowel might affect that outlook. They also explored HRT choices given endometriosis, symptoms to monitor, and how to prepare for a primary-care appointment; the user said the conversation clarified the issue and left them feeling more prepared."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5284,
-    "output_tokens": 798
+    "input_tokens": 5833,
+    "output_tokens": 1346
   },
   "version": "gpt_luna"
 }

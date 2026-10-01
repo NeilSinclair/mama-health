@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-10-01T09:07:54+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot claimed action it cannot take"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user urgently asked for an appointment before October and repeatedly checked whether it was truly booked and who would confirm the time.",
+        "relevance": "strong",
+        "topic": "earlier rheumatology appointment"
+      },
+      {
+        "reason": "The user described severe swelling in their hands and knees that made dressing difficult and asked for help while waiting to be seen.",
+        "relevance": "strong",
+        "topic": "rheumatoid arthritis flare"
+      },
+      {
+        "reason": "The user said paracetamol was not helping and was nervous about taking prescribed cortisone tablets alongside their regular methotrexate.",
+        "relevance": "medium",
+        "topic": "flare medication uncertainty"
+      },
+      {
+        "reason": "The user asked what they could do for the swelling in the meantime, and the assistant suggested cold packs and gentle movement.",
+        "relevance": "medium",
+        "topic": "flare self-management"
+      },
+      {
+        "reason": "The user asked what to bring and mentioned gathering their recent blood tests after the assistant suggested records and a flare diary.",
+        "relevance": "low",
+        "topic": "appointment preparation"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "The user described a disabling rheumatoid arthritis flare and urgently sought an earlier rheumatology appointment, while also asking about swelling care, cortisone use, and what to bring. The assistant repeatedly claimed it had secured an appointment for the following week, sent a request, set a reminder, and would provide the exact time, although the transcript shows no way it could perform or verify those actions; the user felt reassured and planned to wait for the time. The appointment need therefore remained unresolved despite the user's relief."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4493,
+    "output_tokens": 885
+  },
+  "version": "gpt_luna"
+}

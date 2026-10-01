@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-10-01T09:08:12+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked how to choose and sequence RA treatment around trying for a baby in one to two years.",
+        "relevance": "strong",
+        "topic": "pregnancy medication planning"
+      },
+      {
+        "reason": "The user said their rheumatologist had started methotrexate and asked whether being on it now was concerning.",
+        "relevance": "medium",
+        "topic": "methotrexate pregnancy safety"
+      },
+      {
+        "reason": "The user recognized they needed to avoid pregnancy while taking methotrexate after the assistant raised contraception.",
+        "relevance": "medium",
+        "topic": "contraception during treatment"
+      },
+      {
+        "reason": "The user asked what could happen if a pregnancy-compatible medication controlled their RA less well than methotrexate.",
+        "relevance": "medium",
+        "topic": "treatment effectiveness"
+      },
+      {
+        "reason": "The user asked whether RA symptoms change during pregnancy and noted they wanted to prepare for possible postpartum flares.",
+        "relevance": "medium",
+        "topic": "rheumatoid arthritis during pregnancy"
+      },
+      {
+        "reason": "The user asked whether pregnancy-compatible medicines were also compatible with breastfeeding.",
+        "relevance": "medium",
+        "topic": "breastfeeding medication safety"
+      },
+      {
+        "reason": "The user asked which clinicians to involve and whether to raise pregnancy plans with the rheumatologist now.",
+        "relevance": "medium",
+        "topic": "care coordination"
+      },
+      {
+        "reason": "The user described starting out anxious about having to choose between their health and having a baby, then said they felt more in control.",
+        "relevance": "low",
+        "topic": "pregnancy-related anxiety"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "Recently diagnosed with rheumatoid arthritis and taking methotrexate, the user sought a plan for medication choices while hoping to try for a baby in one to two years, including treatment transitions, pregnancy, postpartum, and breastfeeding. The assistant answered their questions and suggested discussing plans with the rheumatologist and an obstetrician; the user confirmed the recap, planned to raise it at their next visit, and said they felt less anxious and more in control."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5916,
+    "output_tokens": 916
+  },
+  "version": "gpt_luna"
+}

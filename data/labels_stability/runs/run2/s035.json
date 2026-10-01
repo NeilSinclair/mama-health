@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:09:33+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to work out how to move an infliximab infusion that falls during the trip and asked about early timing, delays, and downsides.",
+        "relevance": "strong",
+        "topic": "infusion schedule changes"
+      },
+      {
+        "reason": "The user asked what precautions to take while travelling on infliximab and included this in their final checklist.",
+        "relevance": "strong",
+        "topic": "travel on immunosuppressants"
+      },
+      {
+        "reason": "The user noted they needed to declare a pre-existing condition and engaged with advice about coverage.",
+        "relevance": "medium",
+        "topic": "travel insurance"
+      },
+      {
+        "reason": "The user asked what paperwork to carry and responded positively to suggestions for a letter and medication list.",
+        "relevance": "medium",
+        "topic": "travel medical documentation"
+      },
+      {
+        "reason": "The user said they should know where to go if they had a flare abroad, and the assistant discussed identifying care in advance.",
+        "relevance": "medium",
+        "topic": "overseas flare care"
+      },
+      {
+        "reason": "Vaccines came up as part of the travel precautions, and the user included checking them in their recap.",
+        "relevance": "low",
+        "topic": "travel vaccines"
+      },
+      {
+        "reason": "The user said they usually feel tired the day after an infusion and used that to rule out scheduling it right before the flight.",
+        "relevance": "low",
+        "topic": "post-infusion fatigue"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user wanted to plan an infliximab infusion that would fall during a three-week trip and asked about shifting it, then raised travel precautions, insurance, documentation, vaccines, and care if a flare occurred abroad. The assistant suggested coordinating an earlier infusion with the IBD team and provided a travel-preparation list; the user said this turned their worry into actionable steps and planned to call the team the next day."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5115,
+    "cache_write_tokens": 0,
+    "input_tokens": 5118,
+    "output_tokens": 921
+  },
+  "version": "gpt_luna"
+}

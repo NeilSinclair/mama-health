@@ -1,0 +1,11 @@
+topic_group,n_sessions,session_ids,topics
+Treatment choice,21,"s001,s002,s004,s006,s011,s013,s014,s015,s021,s030,s031,s032,s033,s034,s035,s038,s039,s041,s044,s048,s050",diet and nutrition; endometriosis; fertility and pregnancy; fibromyalgia; hormone therapy; medication dosing; migraine care; psoriasis; supplements and complementary care; treatment decisions; treatment logistics; treatment response
+Physical symptoms,17,"s007,s009,s011,s013,s015,s018,s019,s022,s024,s026,s028,s030,s034,s036,s037,s044,s050",activity pacing; bowel symptoms; endometriosis; hair loss; inflammatory arthritis; medication side effects; migraine care; psoriasis
+Understanding the condition & outlook,15,"s005,s006,s007,s010,s012,s021,s022,s023,s029,s032,s036,s038,s042,s046,s048",POTS management; cancer risk; condition education; diabetes management; disease monitoring; endometriosis; fertility and pregnancy; fibromyalgia; gut diagnosis; hair loss; inflammatory arthritis; long covid; weight concerns
+"Fatigue, sleep, diet & activity",7,"s004,s010,s016,s025,s027,s028,s049",activity pacing; cognitive symptoms; diet and nutrition; fatigue; sleep problems
+Access to care,6,"s008,s018,s019,s024,s037,s046",care access; care planning
+Tests & monitoring,5,"s017,s020,s023,s025,s040",diabetes management; disease monitoring; lab results interpretation
+Emotional wellbeing,3,"s026,s043,s049",emotional distress; suicidal thoughts
+Taking medication safely,3,"s003,s045,s047",medication dosing; medication safety; thyroid care
+Work & life plans,3,"s016,s039,s049",fertility and pregnancy; work impact
+Working with clinicians,2,"s018,s032",care planning; clinician communication

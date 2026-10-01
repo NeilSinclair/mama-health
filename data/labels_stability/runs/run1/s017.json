@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-10-01T09:07:45+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot repeated insulin advice",
+      "bot repeated lifestyle advice",
+      "bot deflected to doctor"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking why morning readings were often 160–180 and returned to the morning-only pattern throughout the chat.",
+        "relevance": "strong",
+        "topic": "high morning glucose"
+      },
+      {
+        "reason": "The user asked what they could do themselves and described already walking after dinner and reducing rice.",
+        "relevance": "medium",
+        "topic": "self-management options"
+      },
+      {
+        "reason": "The user clarified they take 1000 mg of metformin at night and did not know whether it was extended release.",
+        "relevance": "medium",
+        "topic": "metformin use"
+      },
+      {
+        "reason": "The user added that after-meal readings were 140–150 and daytime glucose was otherwise okay.",
+        "relevance": "medium",
+        "topic": "daytime glucose readings"
+      },
+      {
+        "reason": "The user questioned whether they would need to wake up for a 3 a.m. check and accepted the explanation.",
+        "relevance": "low",
+        "topic": "overnight glucose testing"
+      },
+      {
+        "reason": "The user pushed back on repeated advice to consult a doctor and asked for actions they could take themselves.",
+        "relevance": "medium",
+        "topic": "doctor-directed treatment"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked about morning glucose readings around 160–180 despite taking metformin at night, walking after dinner, and reducing rice; they said daytime readings were lower. The assistant suggested dawn phenomenon and a one-time 3 a.m. check, but repeated insulin suggestions after the user clarified they did not take insulin and returned to doctor-directed changes when the user wanted self-management steps. The user said they understood and thanked the assistant, but the next steps beyond the check remained unresolved."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4689,
+    "output_tokens": 1635
+  },
+  "version": "gpt_luna"
+}

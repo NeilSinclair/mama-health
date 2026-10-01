@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:11:39+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether endometriosis improves after menopause and returned to the limits of that expectation.",
+        "relevance": "strong",
+        "topic": "endometriosis after menopause"
+      },
+      {
+        "reason": "The user repeatedly asked whether HRT could reactivate endometriosis, whether to avoid it, and how to discuss the choice with a prescriber.",
+        "relevance": "strong",
+        "topic": "hormone therapy with endometriosis"
+      },
+      {
+        "reason": "The user described a prior laparoscopy with adhesions and involvement near the bowel as relevant to their outlook.",
+        "relevance": "medium",
+        "topic": "deep endometriosis"
+      },
+      {
+        "reason": "The user said hot flashes and sleep problems were getting rough and were part of why HRT had been raised.",
+        "relevance": "medium",
+        "topic": "perimenopause symptoms"
+      },
+      {
+        "reason": "The user said doctors had treated endometriosis as only about periods and assumed they would be fine once periods stopped.",
+        "relevance": "medium",
+        "topic": "dismissive endometriosis care"
+      },
+      {
+        "reason": "The user asked what to do before a follow-up and said the suggested list left them feeling more prepared.",
+        "relevance": "medium",
+        "topic": "appointment preparation"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether endometriosis tends to improve after menopause, then explored how prior adhesions and disease near the bowel might affect that outlook and whether HRT could bring symptoms back. The assistant discussed possible benefits and caveats, suggested questions for the upcoming primary-care appointment and tracking pain, and the user said the conversation clarified the issue and left them feeling prepared."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5281,
+    "cache_write_tokens": 0,
+    "input_tokens": 5284,
+    "output_tokens": 857
+  },
+  "version": "gpt_luna"
+}

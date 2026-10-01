@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:36+00:00",
+  "created_at": "2026-10-01T15:07:00+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,47 +7,41 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened with the conflict between exercise advice and being unable to function for days after walking or yoga, and returned to how to avoid another crash.",
+        "reason": "The user repeatedly asked how to exercise without crashing, discussed pacing on good days, and appreciated a practical slow-build plan.",
         "relevance": "strong",
-        "topic": "exercise-related flares"
+        "topic": "exercise pacing and progression",
+        "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user explored starting at a very small level, holding back on good days, and gradually building activity across several turns.",
+        "reason": "The user described being unable to function for days after walks or beginner yoga and asked how to avoid another crash.",
         "relevance": "strong",
-        "topic": "activity pacing"
+        "topic": "delayed post-exercise flares",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user described overdoing activity on good days to make up for bad ones and then crashing, and said the framing of capping activity was useful.",
+        "reason": "The user asked whether walking or yoga was preferable and responded positively to the idea of trying warm-water exercise.",
         "relevance": "medium",
-        "topic": "boom-bust activity cycle"
+        "topic": "exercise type",
+        "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user asked whether walking or yoga was better and responded that a community-center pool might be doable.",
+        "reason": "The user said they felt stuck between standard advice and their body's response and described exercise crashes as feeling punishing.",
         "relevance": "medium",
-        "topic": "exercise options"
-      },
-      {
-        "reason": "The user said they felt stuck between general advice and their body's response, and described feeling punished for trying.",
-        "relevance": "medium",
-        "topic": "exercise frustration"
-      },
-      {
-        "reason": "The user asked how long it might take to notice a difference and accepted that progress could take weeks to months.",
-        "relevance": "medium",
-        "topic": "exercise progress expectations"
+        "topic": "frustration with exercise advice",
+        "topic_group": "Emotional wellbeing"
       }
     ],
-    "reason_for_conversation": "informational",
-    "summary": "The user described delayed flares after walking or beginner yoga despite repeated advice to exercise, and asked how to find a tolerable approach. The assistant discussed very small starting amounts, pacing on good days, warm-water movement, and gradual progress; the user said the advice was genuinely useful and that a pool might be doable. The user ended appreciative and described the conversation as more helpful than many appointments."
+    "reason_for_conversation": "decisional",
+    "summary": "The user felt stuck because exercise advice for fibromyalgia conflicted with their experience of delayed crashes after walks and beginner yoga. The assistant discussed starting with very small amounts, pacing on good days, possible exercise types, and gradual progress; the user said the advice was genuinely useful and thanked the assistant."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5838,
-    "output_tokens": 897
+    "input_tokens": 6387,
+    "output_tokens": 886
   },
   "version": "gpt_luna"
 }

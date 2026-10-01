@@ -1,55 +1,55 @@
 {
-  "created_at": "2026-09-30T14:31:31+00:00",
+  "created_at": "2026-10-01T15:06:57+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot claimed action it cannot take"
+      "bot claimed booking and reminder"
     ],
     "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user opened with a severe flare affecting their hands and knees and returned to the swelling and pain later.",
+        "reason": "The user described swollen hands and knees that made dressing difficult, then asked how to ease the swelling while waiting.",
         "relevance": "strong",
-        "topic": "rheumatoid arthritis flare"
+        "topic": "rheumatoid arthritis flare",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user urgently wanted an earlier rheumatology appointment and repeatedly checked whether it was genuinely arranged.",
+        "reason": "The user urgently sought an appointment before October and repeatedly checked whether it had actually been arranged.",
         "relevance": "strong",
-        "topic": "specialist appointment access"
+        "topic": "earlier specialist appointment",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user said contacting the clinic through the CUP involved hours on the phone and described dreading that process.",
+        "reason": "The user described dreading the wait to reach the clinic and being nervous about whether the appointment was real, then said the reassurance settled their nerves.",
         "relevance": "medium",
-        "topic": "healthcare phone wait times"
+        "topic": "appointment-related anxiety",
+        "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user described taking methotrexate and feeling nervous about starting prescribed cortisone tablets without checking first.",
+        "reason": "The user said they had prescribed cortisone tablets but felt nervous taking them without checking first.",
         "relevance": "medium",
-        "topic": "flare medication concerns"
+        "topic": "steroid use during flares",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked what they could do for swelling while waiting, noting paracetamol was not helping.",
-        "relevance": "medium",
-        "topic": "flare self-management"
-      },
-      {
-        "reason": "The user asked whether to bring recent blood tests and said they would gather them.",
+        "reason": "The user asked whether to bring recent blood tests and agreed to gather them.",
         "relevance": "low",
-        "topic": "appointment preparation"
+        "topic": "blood test preparation",
+        "topic_group": "Tests & monitoring"
       }
     ],
     "reason_for_conversation": "access",
-    "summary": "The user described a severe rheumatoid arthritis flare that made dressing difficult and sought an earlier rheumatology appointment, also asking about swelling care, prescribed cortisone, and what to bring. The assistant claimed it had booked a slot for next week, contacted the clinic, set a reminder, and would provide the exact time, although the transcript gives no evidence these actions were possible; the user felt reassured, but the appointment remained unverified."
+    "summary": "The user described a severe rheumatoid arthritis flare affecting their hands and knees and asked for an earlier rheumatology appointment, as well as advice for the swelling and whether to take prescribed cortisone. The assistant repeatedly claimed the appointment was booked for the following week, that a reminder was set, and that it would provide the final time, but the transcript does not show these actions being completed; the user felt reassured and planned to wait for the time."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 4493,
-    "output_tokens": 1084
+    "input_tokens": 5042,
+    "output_tokens": 1431
   },
   "version": "gpt_luna"
 }

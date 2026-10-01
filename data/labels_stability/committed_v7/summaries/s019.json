@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-09-30T14:31:31+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with a new shimmering zigzag visual symptom before a familiar migraine and returned to understanding what it might mean.",
+        "relevance": "strong",
+        "topic": "new visual aura"
+      },
+      {
+        "reason": "The user repeatedly asked whether to go to the ER or arrange non-urgent care and accepted the suggested next step.",
+        "relevance": "strong",
+        "topic": "urgent care decision"
+      },
+      {
+        "reason": "The user directly asked whether the visual symptoms could signal a stroke or something serious.",
+        "relevance": "medium",
+        "topic": "stroke concern"
+      },
+      {
+        "reason": "The user said the episode scared them and later shared that their hands had been shaking.",
+        "relevance": "medium",
+        "topic": "fear after new symptoms"
+      },
+      {
+        "reason": "The user asked how to tell whether future symptoms affect one eye or both and said the suggested check was useful.",
+        "relevance": "medium",
+        "topic": "checking visual symptoms"
+      },
+      {
+        "reason": "The user asked whether aura would become a permanent or recurring feature.",
+        "relevance": "medium",
+        "topic": "aura recurrence"
+      },
+      {
+        "reason": "The user asked whether aura could be a cue to take their usual medication earlier and appreciated the caution about timing.",
+        "relevance": "medium",
+        "topic": "sumatriptan timing"
+      },
+      {
+        "reason": "The user said they were considering hormonal contraception and wanted to know about its connection with aura.",
+        "relevance": "medium",
+        "topic": "hormonal contraception"
+      },
+      {
+        "reason": "The user agreed to book with their family doctor that week, though they did not ask for help accessing care.",
+        "relevance": "low",
+        "topic": "doctor follow-up"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user described a first episode of shimmering zigzag vision before a familiar migraine and worried it could indicate a stroke; the assistant said the resolved, gradual symptoms sounded like aura, advised non-urgent medical follow-up rather than an ER visit that night, and gave emergency warning signs. The user also asked about checking whether symptoms affect one or both eyes, recurrence, sumatriptan timing, and future hormonal contraception, and ended feeling calmer and planning to see their family doctor."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5471,
+    "output_tokens": 1605
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:11:31+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether gluten-free diets help Hashimoto's and returned to whether a trial would be worthwhile and how to evaluate it.",
+        "relevance": "strong",
+        "topic": "gluten-free diet evidence"
+      },
+      {
+        "reason": "The user explained these ongoing symptoms were driving the diet question and later asked whether they warranted a medical review.",
+        "relevance": "strong",
+        "topic": "fatigue and brain fog"
+      },
+      {
+        "reason": "The user asked why testing matters, recognized the need to keep eating gluten before testing, and included screening in their plan.",
+        "relevance": "medium",
+        "topic": "celiac disease screening"
+      },
+      {
+        "reason": "The user wondered whether their dose might be contributing to the tiredness and agreed to ask for it to be reviewed.",
+        "relevance": "medium",
+        "topic": "levothyroxine dose review"
+      },
+      {
+        "reason": "The user included iron, B12, and vitamin D checks in the plan they restated at the end.",
+        "relevance": "medium",
+        "topic": "nutrient testing"
+      },
+      {
+        "reason": "The user said the gluten approach appealed partly because it felt within their control compared with waiting on doctors.",
+        "relevance": "low",
+        "topic": "waiting for medical care"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether a gluten-free diet has evidence for Hashimoto's, explaining that persistent tiredness and brain fog despite a reportedly normal TSH were prompting the question. The assistant described a time-limited, tracked trial as a possible later experiment, recommended celiac screening while still eating gluten and a review of thyroid dose and nutrient levels first; the user adopted that plan and said the discussion felt balanced."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5517,
+    "cache_write_tokens": 0,
+    "input_tokens": 5520,
+    "output_tokens": 1061
+  },
+  "version": "gpt_luna"
+}

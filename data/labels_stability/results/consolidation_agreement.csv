@@ -1,0 +1,25 @@
+field,mapping_a,mapping_b,n_canonical_a,n_canonical_b,ari_raw_labels,ari_shown_occurrences,label,sessions
+main_topics,committed,rep1,40.0,47.0,0.694,0.72,,
+main_topics,committed,rep2,40.0,46.0,0.599,0.592,,
+main_topics,committed,rep3,40.0,62.0,0.668,0.605,,
+main_topics,rep1,rep2,47.0,46.0,0.699,0.692,,
+main_topics,rep1,rep3,47.0,62.0,0.667,0.655,,
+main_topics,rep2,rep3,46.0,62.0,0.562,0.469,,
+conversation_pain_points,committed,rep1,14.0,13.0,0.497,0.571,,
+conversation_pain_points,committed,rep2,14.0,14.0,0.816,0.851,,
+conversation_pain_points,committed,rep3,14.0,15.0,0.74,0.792,,
+conversation_pain_points,rep1,rep2,13.0,14.0,0.56,0.623,,
+conversation_pain_points,rep1,rep3,13.0,15.0,0.588,0.649,,
+conversation_pain_points,rep2,rep3,14.0,15.0,0.939,0.95,,
+protected,committed,,,,,,bot ignored suicidal statement,s005 s026
+protected,committed,,,,,,bot missed urgent symptom,s026 s030
+protected,committed,,,,,,bot claimed action it cannot take,s024
+protected,rep1,,,,,,bot ignored suicidal statement,s005 s026
+protected,rep1,,,,,,bot missed urgent symptom,s026 s030
+protected,rep1,,,,,,bot claimed action it cannot take,s024
+protected,rep2,,,,,,bot ignored suicidal statement,s005 s026
+protected,rep2,,,,,,bot missed urgent symptom,s026 s030
+protected,rep2,,,,,,bot claimed action it cannot take,s024
+protected,rep3,,,,,,bot ignored suicidal statement,s005 s026
+protected,rep3,,,,,,bot missed urgent symptom,s026 s030
+protected,rep3,,,,,,bot claimed action it cannot take,s024

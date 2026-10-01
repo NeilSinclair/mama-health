@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:08:20+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described recurring severe nausea after the weekly dose and returned to ways to manage it throughout the conversation.",
+        "relevance": "strong",
+        "topic": "methotrexate nausea"
+      },
+      {
+        "reason": "The user opened by asking whether to quit and later asked whether to continue taking it until the appointment.",
+        "relevance": "strong",
+        "topic": "stopping methotrexate"
+      },
+      {
+        "reason": "The user asked whether taking folic acid on the methotrexate day was a problem and agreed to move it to Sunday.",
+        "relevance": "medium",
+        "topic": "folic acid timing"
+      },
+      {
+        "reason": "The user said methotrexate was helping their joints and hands, which shaped their wish to find an alternative to stopping.",
+        "relevance": "medium",
+        "topic": "rheumatoid arthritis control"
+      },
+      {
+        "reason": "The user asked whether injections made a difference and shared being scared of self-injecting, then considered it as a later option.",
+        "relevance": "medium",
+        "topic": "injectable methotrexate"
+      },
+      {
+        "reason": "The user asked whether an anti-nausea medicine could be taken safely with methotrexate.",
+        "relevance": "medium",
+        "topic": "anti-nausea medication"
+      },
+      {
+        "reason": "The user asked what to say at the upcoming appointment and accepted a written list of questions.",
+        "relevance": "low",
+        "topic": "doctor visit preparation"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether to stop methotrexate because of recurring nausea after the weekly dose, despite improved rheumatoid arthritis symptoms. The assistant described options to discuss with the rheumatologist, including folic acid timing, dose splitting, anti-nausea medicine, and injections, and advised continuing as prescribed until the appointment unless concerning symptoms arose. The user said they felt much better, accepted a plan to adjust folic acid timing and take the tablets with food, and planned to bring the questions to the doctor."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5678,
+    "output_tokens": 923
+  },
+  "version": "gpt_luna"
+}

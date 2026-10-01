@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-10-01T09:11:10+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user questioned switching from infliximab to Humira and asked about other options and what could guide the choice.",
+        "relevance": "strong",
+        "topic": "biologic treatment choice"
+      },
+      {
+        "reason": "The user described being brushed off by the consultant and treated as awkward for asking questions, then returned to wanting a role in the decision.",
+        "relevance": "medium",
+        "topic": "feeling unheard"
+      },
+      {
+        "reason": "The user asked whether requesting a second opinion through the NHS would cause problems and shared worry about seeming to go behind the consultant’s back.",
+        "relevance": "medium",
+        "topic": "second opinion"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user said infliximab had stopped working and their consultant presented a switch to Humira without discussing alternatives, leaving them angry and unheard. The assistant suggested questions about drug levels, antibodies, other biologic classes and a second opinion; the user said they felt more in control and planned to book an appointment and bring the list."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4474,
+    "cache_write_tokens": 0,
+    "input_tokens": 4477,
+    "output_tokens": 693
+  },
+  "version": "gpt_luna"
+}

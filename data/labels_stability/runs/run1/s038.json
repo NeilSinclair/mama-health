@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-10-01T09:08:13+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not simplify language when asked"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether anything could help and how to pursue treatment after being told little could be done.",
+        "relevance": "strong",
+        "topic": "fibromyalgia treatment"
+      },
+      {
+        "reason": "The user repeatedly asked for simpler explanations and said the medical terms left them more confused.",
+        "relevance": "medium",
+        "topic": "plain-language health information"
+      },
+      {
+        "reason": "The user asked whether they would feel this way forever and received an answer that symptoms can improve.",
+        "relevance": "medium",
+        "topic": "fibromyalgia prognosis"
+      },
+      {
+        "reason": "The user described morning pain in several areas and persistent tiredness, then asked if these could be part of fibromyalgia.",
+        "relevance": "medium",
+        "topic": "widespread pain and fatigue"
+      },
+      {
+        "reason": "The user said their doctor offered no treatment and asked how to obtain the options the assistant described.",
+        "relevance": "medium",
+        "topic": "fibromyalgia care access"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether fibromyalgia can be treated, whether their morning pain and fatigue fit the condition, and whether they would feel this way indefinitely. Despite repeated requests for plain language, the assistant continued using medical terms and listing medication options; the user said they were more confused and ended the conversation to rest."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4656,
+    "output_tokens": 1120
+  },
+  "version": "gpt_luna"
+}

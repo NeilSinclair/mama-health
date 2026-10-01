@@ -1,0 +1,15 @@
+label,run1,run2,run3,committed,majority,run_range
+bot ignored direct question,4,4,4,3,4,0
+bot deflected to clinician,2,0,2,1,2,2
+bot ignored emotional distress,2,2,2,3,2,0
+bot ignored suicidal statement,2,2,2,2,2,0
+bot missed urgent symptom,2,3,3,2,2,1
+bot repeated unwanted advice,3,3,2,3,2,1
+bot assumed wrong-country context,0,1,1,2,1,1
+bot claimed action it cannot take,1,1,1,1,1,0
+bot failed to simplify language,2,1,1,1,1,1
+bot gave irrelevant advice,1,1,1,0,1,0
+bot gave unsafe dosing guidance,1,1,1,1,1,0
+bot pushed inaccessible options,1,1,1,1,1,0
+bot shifted work to user,1,1,1,1,1,0
+bot ignored access constraints,0,2,0,1,0,2

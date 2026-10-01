@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:39+00:00",
+  "created_at": "2026-10-01T15:07:06+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,47 +7,65 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened by asking whether ongoing exhaustion was normal and returned to the fact that it had not resolved.",
+        "reason": "The user opened by asking why they remain exhausted despite treatment and returned to the impact and persistence of the fatigue.",
         "relevance": "strong",
-        "topic": "persistent fatigue"
+        "topic": "persistent fatigue",
+        "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user discussed levothyroxine, a TSH of 3.8, additional thyroid tests, dose adjustment, and how long changes might take.",
+        "reason": "The user asked what a TSH of 3.8 means and whether Free T3 and Free T4 could give a fuller picture, then included those tests in their appointment plan.",
         "relevance": "strong",
-        "topic": "thyroid treatment and testing"
+        "topic": "thyroid test results",
+        "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user worried that fatigue might have another cause and asked how ferritin differs from hemoglobin.",
+        "reason": "The user asked whether fatigue could have other causes and discussed ferritin, B12, vitamin D, and celiac screening over several turns.",
         "relevance": "medium",
-        "topic": "non-thyroid fatigue causes"
+        "topic": "fatigue workup",
+        "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user said they felt gaslit about the fatigue and worried their doctor might write them off.",
+        "reason": "The user considered a levothyroxine dose adjustment and asked whether adding T3 or switching to desiccated thyroid was worth pursuing.",
         "relevance": "medium",
-        "topic": "medical dismissal"
+        "topic": "thyroid treatment options",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked whether to pursue desiccated thyroid or added T3 and accepted the suggestion to discuss these later.",
+        "reason": "The user asked for a list of questions to bring to the doctor and later restated the plan they intended to discuss.",
         "relevance": "medium",
-        "topic": "alternative thyroid treatments"
+        "topic": "appointment preparation",
+        "topic_group": "Working with clinicians"
       },
       {
-        "reason": "The user said they tend to forget how they felt week to week and agreed that a log could help.",
+        "reason": "The user worried about being written off for raising online treatment ideas and said they had felt gaslit about their fatigue.",
+        "relevance": "medium",
+        "topic": "fear of being dismissed",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user agreed a log could help because they forget how they felt week to week and may underreport symptoms.",
         "relevance": "low",
-        "topic": "symptom tracking"
+        "topic": "symptom tracking",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user said knowing a dose change may take six weeks would prevent them from panicking if they felt no difference at week two.",
+        "relevance": "low",
+        "topic": "treatment response timeline",
+        "topic_group": "Tests & monitoring"
       }
     ],
-    "reason_for_conversation": "decisional",
-    "summary": "The user described persistent exhaustion despite six months on levothyroxine for Hashimoto's and a TSH they were told was normal. The assistant discussed thyroid and other fatigue-related tests, a possible dose conversation, and preparing for the appointment; it also validated the user's feeling of being dismissed, and the user ended with a plan and said they were looking forward to the appointment."
+    "reason_for_conversation": "informational",
+    "summary": "The user with Hashimoto's asked why persistent exhaustion continued on levothyroxine despite a TSH they were told was normal, and explored thyroid and other possible fatigue-related tests and treatment options. The assistant helped assemble questions for the doctor and a tracking plan; the user said they felt prepared and were looking forward to the appointment."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5422,
-    "output_tokens": 1610
+    "input_tokens": 5971,
+    "output_tokens": 2023
   },
   "version": "gpt_luna"
 }

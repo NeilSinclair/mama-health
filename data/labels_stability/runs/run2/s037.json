@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-01T09:09:37+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described urgency with almost no warning as the main disruption to daily life and asked how to cope with it.",
+        "relevance": "strong",
+        "topic": "bowel urgency"
+      },
+      {
+        "reason": "The user said appointments were hard to get and asked how to get a gastroenterology appointment faster.",
+        "relevance": "strong",
+        "topic": "specialist access"
+      },
+      {
+        "reason": "The user described taking mesalamine tablets and asked about rectal treatment and options when symptoms are not controlled.",
+        "relevance": "medium",
+        "topic": "ulcerative colitis treatment"
+      },
+      {
+        "reason": "The user reported occasional small amounts of blood, which became part of the discussion about disease control and seeking specialist care.",
+        "relevance": "medium",
+        "topic": "rectal bleeding"
+      },
+      {
+        "reason": "The user asked whether the test could show inflammation without a colonoscopy and engaged with the explanation.",
+        "relevance": "medium",
+        "topic": "fecal calprotectin testing"
+      },
+      {
+        "reason": "The user said urgency affected work and specifically asked about fear of an accident during a meeting.",
+        "relevance": "medium",
+        "topic": "work impact"
+      },
+      {
+        "reason": "The user said the symptoms were embarrassing to discuss and later described arriving feeling ashamed.",
+        "relevance": "medium",
+        "topic": "embarrassment and shame"
+      },
+      {
+        "reason": "The user said they had loperamide at home and had considered taking it, then agreed to ask a doctor first.",
+        "relevance": "medium",
+        "topic": "loperamide use"
+      },
+      {
+        "reason": "The user reported going six or seven times a day, sometimes more, but did not return to frequency as a separate concern.",
+        "relevance": "low",
+        "topic": "bowel frequency"
+      },
+      {
+        "reason": "The user expressed anger about suffering for two years while believing the symptoms were normal, then accepted reassurance that it was not their fault.",
+        "relevance": "medium",
+        "topic": "anger about past care"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "The user described ulcerative colitis symptoms including sudden urgency, frequent bowel movements, and occasional blood that disrupted work and family life, and said they had believed this was normal while taking mesalamine. The assistant discussed specialist follow-up, possible treatment questions, calprotectin testing, coping strategies, and checking with a doctor before using loperamide. The user ended feeling less ashamed and said they had a plan and could take action."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5914,
+    "cache_write_tokens": 0,
+    "input_tokens": 5917,
+    "output_tokens": 1337
+  },
+  "version": "gpt_luna"
+}

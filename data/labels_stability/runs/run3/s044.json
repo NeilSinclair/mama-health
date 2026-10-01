@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:12:13+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described severe nausea after the weekly dose and repeatedly explored ways to relieve it.",
+        "relevance": "strong",
+        "topic": "methotrexate nausea"
+      },
+      {
+        "reason": "The user opened by asking whether to quit, said they preferred not to stop, and later asked whether to continue until the appointment.",
+        "relevance": "strong",
+        "topic": "methotrexate continuation"
+      },
+      {
+        "reason": "The user asked whether taking folic acid on the methotrexate day was a problem and agreed to move it to another day.",
+        "relevance": "medium",
+        "topic": "folic acid timing"
+      },
+      {
+        "reason": "The user asked whether injections could make a difference and said they were scared of injecting themselves.",
+        "relevance": "medium",
+        "topic": "injectable methotrexate"
+      },
+      {
+        "reason": "The user asked whether such medication was safe to take with methotrexate after learning it might be an option.",
+        "relevance": "medium",
+        "topic": "anti-nausea medication"
+      },
+      {
+        "reason": "The user said methotrexate had improved their hands, explaining why they wanted to avoid stopping if possible.",
+        "relevance": "low",
+        "topic": "joint improvement"
+      },
+      {
+        "reason": "The user asked what to tell the doctor and accepted a suggested list to write down.",
+        "relevance": "low",
+        "topic": "appointment preparation"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user with rheumatoid arthritis described severe nausea after weekly methotrexate and wondered whether to stop, although it was helping their hands. The assistant discussed options to raise with the rheumatologist, and the user said they felt much better, planned to adjust folic acid timing and take the tablets with food, and would continue as prescribed until the appointment in about two weeks."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5675,
+    "cache_write_tokens": 0,
+    "input_tokens": 5678,
+    "output_tokens": 1179
+  },
+  "version": "gpt_luna"
+}

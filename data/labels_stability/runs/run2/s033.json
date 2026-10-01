@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-10-01T09:09:28+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asks whether the change in migraine days means Emgality is working and responds to the discussion of partial improvement.",
+        "relevance": "strong",
+        "topic": "preventive treatment response"
+      },
+      {
+        "reason": "The user explains that they log migraine days in an app and discusses what to track while continuing treatment.",
+        "relevance": "medium",
+        "topic": "migraine tracking"
+      },
+      {
+        "reason": "The user asks what to raise with their neurologist and worries the treatment may be stopped for not reaching the 50% reduction.",
+        "relevance": "medium",
+        "topic": "treatment continuation"
+      },
+      {
+        "reason": "The user notes that their migraines have become less severe and recognizes this as possible improvement.",
+        "relevance": "medium",
+        "topic": "migraine severity"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "After three months on Emgality, the user reported migraine days decreasing from about 20 to 15 and asked whether that counted as treatment working. The assistant discussed partial improvement, tracking severity and other changes, and what to ask the neurologist; the user said they felt better and that the reframing helped."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4351,
+    "cache_write_tokens": 0,
+    "input_tokens": 4354,
+    "output_tokens": 571
+  },
+  "version": "gpt_luna"
+}

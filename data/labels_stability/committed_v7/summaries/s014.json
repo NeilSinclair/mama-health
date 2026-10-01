@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-09-30T14:31:16+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot kept pushing imported brands",
+      "bot ignored direct kampo question"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user began by asking what supplements might help their fibromyalgia pain and returned to choosing supplements throughout the chat.",
+        "relevance": "strong",
+        "topic": "fibromyalgia supplements"
+      },
+      {
+        "reason": "The user explained that they live in Japan, asked about local pharmacy products, and raised concerns about customs when importing supplements.",
+        "relevance": "strong",
+        "topic": "supplement availability in japan"
+      },
+      {
+        "reason": "The user asked which brands were good quality and whether a Japanese brand such as DHC was acceptable.",
+        "relevance": "medium",
+        "topic": "supplement quality"
+      },
+      {
+        "reason": "The user asked how much magnesium to take and later asked about the CoQ10 dose.",
+        "relevance": "medium",
+        "topic": "supplement dosing"
+      },
+      {
+        "reason": "The user asked whether the assistant knew about kampo, noting that their mother uses it and doctors in Japan sometimes prescribe it.",
+        "relevance": "medium",
+        "topic": "kampo medicine"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked what supplements might help fibromyalgia pain, which brands to buy, and how much magnesium and CoQ10 to take. After learning the user was in Japan and raising local product and customs concerns, the assistant continued recommending imported brands through iHerb and did not answer the question about kampo. The user ended by saying they might ask a local pharmacist."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4379,
+    "output_tokens": 1058
+  },
+  "version": "gpt_luna"
+}

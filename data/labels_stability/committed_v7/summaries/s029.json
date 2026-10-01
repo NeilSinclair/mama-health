@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-09-30T14:31:38+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user asked how the two conditions relate and which might have come first, making this the central question.",
+        "relevance": "strong",
+        "topic": "pcos and insulin resistance"
+      },
+      {
+        "reason": "The user asked why it was suggested without diabetes and then asked about side effects and other options.",
+        "relevance": "medium",
+        "topic": "metformin"
+      },
+      {
+        "reason": "The user said the new diagnosis felt overwhelming and later said the explanation helped make it less scary.",
+        "relevance": "medium",
+        "topic": "diagnosis-related overwhelm"
+      },
+      {
+        "reason": "The user described repeated difficulty losing weight and frustration with hearing weight loss advice in the context of PCOS.",
+        "relevance": "medium",
+        "topic": "weight loss frustration"
+      },
+      {
+        "reason": "The user asked what diet to follow and whether low-glycemic eating meant avoiding all carbohydrates.",
+        "relevance": "medium",
+        "topic": "diet for pcos"
+      },
+      {
+        "reason": "The user asked which exercise helps and said they do not like going to the gym.",
+        "relevance": "medium",
+        "topic": "exercise preferences"
+      },
+      {
+        "reason": "The user asked whether a glucose monitor would be useful and briefly raised concerns about coverage.",
+        "relevance": "low",
+        "topic": "continuous glucose monitor"
+      },
+      {
+        "reason": "The user doubted their insurer would cover a glucose monitor for this purpose but did not return to the concern.",
+        "relevance": "low",
+        "topic": "device coverage"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user felt overwhelmed after being told they had insulin resistance alongside PCOS and asked about how the conditions relate, metformin, and lifestyle options. The assistant explained medication side effects and discussed weight, diet, exercise, and an optional glucose monitor; the user said the explanation helped and chose to start metformin as their doctor suggested and walk more after dinner."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4833,
+    "output_tokens": 708
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:11:52+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly described ongoing exhaustion despite treatment and asked whether it was normal and whether thyroid was the cause.",
+        "relevance": "strong",
+        "topic": "persistent fatigue"
+      },
+      {
+        "reason": "The user asked what Free T3 and Free T4 show and whether to request them, then included them in their appointment plan.",
+        "relevance": "medium",
+        "topic": "thyroid lab testing"
+      },
+      {
+        "reason": "The user worried the fatigue might have another cause and asked about ferritin after mentioning a normal blood count.",
+        "relevance": "medium",
+        "topic": "other fatigue causes"
+      },
+      {
+        "reason": "The user asked whether to discuss a dose adjustment and whether to pursue T3 or desiccated thyroid.",
+        "relevance": "medium",
+        "topic": "thyroid treatment options"
+      },
+      {
+        "reason": "The user said they had felt gaslit about their fatigue and worried their doctor might write them off.",
+        "relevance": "medium",
+        "topic": "feeling dismissed"
+      },
+      {
+        "reason": "The user said a log could help because they forget how they felt from week to week.",
+        "relevance": "low",
+        "topic": "symptom tracking"
+      },
+      {
+        "reason": "The user said knowing the six-week timeline would prevent them from worrying if they did not feel better after two weeks.",
+        "relevance": "low",
+        "topic": "dose adjustment timeline"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user described persistent exhaustion despite six months of levothyroxine for Hashimoto's and a TSH of 3.8, and asked about possible causes and next steps. The assistant suggested discussing dose adjustment and additional thyroid and nutrient testing, and helped the user prepare an appointment list; the user said they had a plan and were looking forward to the appointment."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5419,
+    "cache_write_tokens": 0,
+    "input_tokens": 5422,
+    "output_tokens": 1255
+  },
+  "version": "gpt_luna"
+}

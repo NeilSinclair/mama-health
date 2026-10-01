@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-10-01T09:09:06+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to understand whether their longstanding IBS diagnosis might instead involve SIBO and returned to the uncertainty at the end.",
+        "relevance": "strong",
+        "topic": "ibs and sibo uncertainty"
+      },
+      {
+        "reason": "The user described pronounced bloating after eating as the main reason SIBO seemed to fit better than IBS.",
+        "relevance": "medium",
+        "topic": "post-meal bloating"
+      },
+      {
+        "reason": "The user asked whether there was a proper test and questioned its value after hearing about its limitations.",
+        "relevance": "medium",
+        "topic": "sibo testing uncertainty"
+      },
+      {
+        "reason": "The user clarified that their symptoms lean toward constipation or swing between patterns, prompting discussion of methane and testing.",
+        "relevance": "medium",
+        "topic": "constipation and mixed bowel habits"
+      },
+      {
+        "reason": "The user said IBS felt like a catch-all label and expressed annoyance that these distinctions had not been explained over the years.",
+        "relevance": "medium",
+        "topic": "ibs diagnosis frustration"
+      },
+      {
+        "reason": "The user said prior food diaries were hard to interpret because foods could trigger symptoms on some days but not others.",
+        "relevance": "medium",
+        "topic": "food diary variability"
+      },
+      {
+        "reason": "The user planned to ask for a referral and noted that the wait in Canada might be long.",
+        "relevance": "low",
+        "topic": "specialist referral wait"
+      },
+      {
+        "reason": "The user mentioned that online SIBO material was trying to sell supplements and agreed not to buy them yet.",
+        "relevance": "low",
+        "topic": "supplement marketing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user questioned whether longstanding IBS and pronounced post-meal bloating could involve SIBO, and asked about testing, constipation-related methane, and why this had not been discussed before. The assistant explained the overlap and uncertainty; the user decided to request a gastroenterology referral, keep notes even if patterns remained unclear, and hold off on supplements, saying the conversation was clarifying."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5293,
+    "cache_write_tokens": 0,
+    "input_tokens": 5296,
+    "output_tokens": 1434
+  },
+  "version": "gpt_luna"
+}

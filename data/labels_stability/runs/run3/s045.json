@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-01T09:12:13+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether receiving a different maker's version of their medication was something to worry about.",
+        "relevance": "strong",
+        "topic": "levothyroxine brand switch"
+      },
+      {
+        "reason": "The user asked what to do, when to repeat TSH testing, whether a recent result counted, and what to watch for before the new test.",
+        "relevance": "medium",
+        "topic": "thyroid test monitoring"
+      },
+      {
+        "reason": "The user said they were annoyed that the pharmacy switched the product without explaining the implications.",
+        "relevance": "medium",
+        "topic": "pharmacy communication"
+      },
+      {
+        "reason": "The user said they would prefer to stay on one brand to avoid uncertainty and discussed raising this with the pharmacy and doctor.",
+        "relevance": "medium",
+        "topic": "brand consistency"
+      },
+      {
+        "reason": "The user asked whether to keep taking levothyroxine exactly as before.",
+        "relevance": "low",
+        "topic": "medication routine"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether a pharmacy switch to a different maker of levothyroxine required action, and asked about TSH testing, symptoms to watch for, and keeping the same routine. The assistant outlined a monitoring plan and ways to ask about brand consistency; the user said the plan was clear and exactly the kind of answer they wanted."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4612,
+    "cache_write_tokens": 0,
+    "input_tokens": 4615,
+    "output_tokens": 908
+  },
+  "version": "gpt_luna"
+}

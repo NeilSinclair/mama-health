@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-09-30T14:31:42+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored suicidal statement",
+      "bot missed urgent symptoms",
+      "bot deflected emotional support request"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user described 10–12 bowel movements a day with blood most times during a three-week flare, making this a central concern.",
+        "relevance": "strong",
+        "topic": "bloody diarrhea"
+      },
+      {
+        "reason": "The user repeatedly expressed exhaustion and ended by saying they had hoped talking would help.",
+        "relevance": "strong",
+        "topic": "emotional distress"
+      },
+      {
+        "reason": "The user said they sometimes wanted it all to be over, but did not return to this disclosure.",
+        "relevance": "low",
+        "topic": "suicidal thoughts"
+      },
+      {
+        "reason": "The user said the cramping was constant while describing the flare.",
+        "relevance": "medium",
+        "topic": "abdominal cramping"
+      },
+      {
+        "reason": "The user described jitteriness, insomnia, and facial puffiness and later asked for tips.",
+        "relevance": "medium",
+        "topic": "prednisone side effects"
+      },
+      {
+        "reason": "The user said Humira was not helping and later reported that Entyvio had also done nothing.",
+        "relevance": "medium",
+        "topic": "biologic treatment failure"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "The user described a three-week Crohn's flare with 10–12 bloody bowel movements daily and constant cramping, while prednisone caused jitteriness, insomnia, and facial puffiness and Humira and Entyvio had not helped. They said they sometimes wanted it all to be over; the assistant did not acknowledge this and continued with symptom tracking and medication tips, only later giving conditional urgent-care advice despite the symptoms already described. The user said they had hoped talking would help but got “logs and tips,” and ended the conversation without relief."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4491,
+    "output_tokens": 1932
+  },
+  "version": "gpt_luna"
+}

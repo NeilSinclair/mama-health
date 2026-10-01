@@ -10,9 +10,11 @@ from mama_analysis.consolidate import (
     consolidate_all,
     field_labels,
     mapping_dir,
+    merge_canonicals,
     raw_labels,
     render_labels,
     shown_labels,
+    topic_groups,
     validate_mapping,
 )
 from mama_analysis.labellers import Prompt
@@ -138,3 +140,41 @@ def test_display_names_cover_every_fixed_value():
         values = get_args(SummaryLLM.model_fields[field].annotation)
         assert set(names) == set(values), field
         assert len(set(names.values())) == len(names)  # no two values share a name
+
+
+def test_merge_canonicals_collapses_repeated_advice_variants():
+    mapping = {
+        "r1": "bot repeated advice after pushback",
+        "r2": "bot repeated medication advice after pushback",
+        "r3": "bot repeated advice",
+        "r4": "bot repeatedly ignored a question",
+        "r5": "bot ignored a direct question",
+    }
+    assert merge_canonicals("conversation_pain_points", mapping) == {
+        "r1": "bot repeated advice",
+        "r2": "bot repeated advice",
+        "r3": "bot repeated advice",
+        "r4": "bot repeatedly ignored a question",
+        "r5": "bot ignored a direct question",
+    }
+
+
+def test_merge_canonicals_leaves_other_fields_alone():
+    mapping = {"r": "bot repeated advice after pushback"}
+    assert merge_canonicals("main_topics", mapping) == mapping
+
+
+def test_topic_groups_reads_model_groups_of_strong_topics_by_default():
+    scores = [
+        {"topic_group": "Physical symptoms", "relevance": "strong"},
+        {"topic_group": "Access to care", "relevance": "medium"},
+        {"topic_group": "Physical symptoms", "relevance": "strong"},
+        {"topic_group": "Emotional wellbeing", "relevance": "strong"},
+    ]
+    assert topic_groups(scores) == ["Physical symptoms", "Emotional wellbeing"]
+    assert topic_groups(scores, relevance=None) == [
+        "Physical symptoms",
+        "Access to care",
+        "Emotional wellbeing",
+    ]
+    assert topic_groups([]) == []

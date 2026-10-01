@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-10-01T09:11:36+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described worsening memory and concentration problems and repeatedly sought ways to manage them.",
+        "relevance": "strong",
+        "topic": "fibromyalgia brain fog"
+      },
+      {
+        "reason": "The user asked for practical ways to prevent mistakes and handle losing their train of thought in meetings, and engaged with several suggestions.",
+        "relevance": "strong",
+        "topic": "workplace coping strategies"
+      },
+      {
+        "reason": "The user weighed whether to disclose a chronic illness and asked about options between silence and full disclosure.",
+        "relevance": "medium",
+        "topic": "workplace accommodations"
+      },
+      {
+        "reason": "The user feared that their mistakes could cost them their job and said they needed to address the problem quickly.",
+        "relevance": "medium",
+        "topic": "job security"
+      },
+      {
+        "reason": "The user reported waking repeatedly and feeling unrefreshed, then discussed sleep as a possible contributor to the fog.",
+        "relevance": "medium",
+        "topic": "sleep disruption"
+      },
+      {
+        "reason": "The user reported snoring and observed pauses in breathing, and said they would book an appointment after discussing it.",
+        "relevance": "medium",
+        "topic": "sleep breathing pauses"
+      },
+      {
+        "reason": "The user said they take it most nights and asked whether it could contribute to the fog.",
+        "relevance": "medium",
+        "topic": "diphenhydramine use"
+      },
+      {
+        "reason": "The user asked whether medication or supplements could treat the fog and mentioned seeing claims about supplements online.",
+        "relevance": "low",
+        "topic": "medication and supplements"
+      },
+      {
+        "reason": "The user mentioned higher stress because their workplace was short-staffed but did not return to it as a main subject.",
+        "relevance": "low",
+        "topic": "work stress"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user sought practical help for worsening fibromyalgia-related brain fog affecting their accounting work, and discussed workplace strategies and confidential accommodation options. They also reported poor sleep, snoring with breathing pauses, and nightly diphenhydramine use; the assistant suggested raising the breathing pauses and medication with a clinician, and the user ended with a plan they called clear and useful."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 6524,
+    "cache_write_tokens": 0,
+    "input_tokens": 6527,
+    "output_tokens": 1027
+  },
+  "version": "gpt_luna"
+}

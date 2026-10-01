@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-09-30T14:30:56+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user questioned switching from infliximab to Humira and asked about alternative treatment classes and the reasons for choosing another anti-TNF.",
+        "relevance": "strong",
+        "topic": "biologic treatment switch"
+      },
+      {
+        "reason": "The user described being brushed off by the consultant and said others treated them as awkward for asking questions.",
+        "relevance": "medium",
+        "topic": "feeling unheard"
+      },
+      {
+        "reason": "The user said they had not heard about blood tests for infliximab levels or antibodies, and the assistant helped them formulate this question for the consultant.",
+        "relevance": "medium",
+        "topic": "drug level testing"
+      },
+      {
+        "reason": "The user asked whether seeking a second opinion would cause problems on the NHS and voiced worry about appearing to go behind the consultant's back.",
+        "relevance": "medium",
+        "topic": "second opinion access"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user was angry that a switch from infliximab to Humira had been presented as decided, and wanted to understand alternatives and take part in the decision. The assistant validated their frustration, outlined other biologic classes and questions to raise, and discussed asking for a second opinion; the user said they felt they had a plan and would book an appointment with their list."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "input_tokens": 4477,
+    "output_tokens": 677
+  },
+  "version": "gpt_luna"
+}

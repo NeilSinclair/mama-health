@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-10-01T09:09:08+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot repeated insulin advice after correction",
+      "bot repeated lifestyle advice"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking why their morning readings are high and returned to the problem throughout the conversation.",
+        "relevance": "strong",
+        "topic": "morning high glucose"
+      },
+      {
+        "reason": "The user clarified they take metformin at night and discussed their dose and uncertainty about its formulation.",
+        "relevance": "medium",
+        "topic": "metformin regimen"
+      },
+      {
+        "reason": "The user asked what they could do themselves and described walking after dinner and reducing rice.",
+        "relevance": "medium",
+        "topic": "self-management habits"
+      },
+      {
+        "reason": "The user noted that post-meal readings are usually lower than the morning readings.",
+        "relevance": "low",
+        "topic": "daytime glucose readings"
+      },
+      {
+        "reason": "The user questioned whether they needed to wake at 3 a.m. to check glucose and what the check would lead to.",
+        "relevance": "medium",
+        "topic": "overnight glucose testing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why morning glucose readings remain high despite taking metformin at night, walking after dinner, and reducing rice; they said daytime readings are okay. The assistant repeatedly mentioned insulin after the user clarified they do not take it, repeated light-dinner advice after the user said it had already been given, and suggested a 3 a.m. check to discuss with a doctor; the user ended by saying they understood and thanking the assistant."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4686,
+    "cache_write_tokens": 0,
+    "input_tokens": 4689,
+    "output_tokens": 1088
+  },
+  "version": "gpt_luna"
+}

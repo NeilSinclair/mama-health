@@ -5,6 +5,7 @@ from __future__ import annotations
 import warnings
 from collections.abc import Iterable
 from pathlib import Path
+from typing import Any
 
 from mama_analysis.cache import make_entry, warm_then_parallel, write_entry
 from mama_analysis.config import CONCURRENCY
@@ -29,6 +30,13 @@ DISPLAY_NAMES = {
         "emotional": "emotional support",
         "access": "get access to care",
     },
+}
+
+# Human merges applied on top of the model's mapping (D-039): any canonical label starting
+# with a prefix becomes that prefix's target. The model keeps splitting one failure mode by
+# subject or by whether pushback is mentioned, despite the prompt.
+CANONICAL_MERGES = {
+    "conversation_pain_points": {"bot repeated ": "bot repeated advice"},
 }
 
 # Every topic is consolidated, but only topics at this relevance become chips, counts and
@@ -154,6 +162,42 @@ def validate_mapping(raws: list[str], mapping: LabelMapping) -> dict[str, str]:
     if extras:
         warnings.warn(f"dropped {len(extras)} labels not in the input", stacklevel=2)
     return dict(sorted(result.items()))
+
+
+def topic_groups(scores: list[dict[str, Any]], relevance: str | None = KEPT_RELEVANCE) -> list[str]:
+    """The topic groups the model filed a conversation's topics in (D-047).
+
+    Args:
+        scores: A row's ``topic_scores`` (see ``explorer.label_rows``), each with
+            ``topic_group`` and ``relevance``.
+        relevance: Keep only topics at this relevance; ``None`` keeps every topic.
+
+    Returns:
+        The groups, in first-seen order without duplicates.
+    """
+    return list(
+        dict.fromkeys(
+            t["topic_group"] for t in scores if relevance is None or t["relevance"] == relevance
+        )
+    )
+
+
+def merge_canonicals(field: str, mapping: dict[str, str]) -> dict[str, str]:
+    """Apply the human merges in ``CANONICAL_MERGES`` to one field's mapping.
+
+    Args:
+        field: Field the mapping belongs to.
+        mapping: Raw-to-canonical dict from the model.
+
+    Returns:
+        The mapping with every canonical label that starts with a merge prefix replaced by
+        that prefix's target.
+    """
+    merges = CANONICAL_MERGES.get(field, {})
+    return {
+        raw: next((t for p, t in merges.items() if canon.startswith(p)), canon)
+        for raw, canon in mapping.items()
+    }
 
 
 def apply_mapping(value: str | list[str], mapping: dict[str, str]) -> str | list[str]:

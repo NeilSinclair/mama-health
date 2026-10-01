@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:09:40+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking why TSH had risen across three checks despite an unchanged dose and returned to what the trend might mean.",
+        "relevance": "strong",
+        "topic": "rising tsh levels"
+      },
+      {
+        "reason": "The user identified a recently started calcium supplement, asked whether to move it later in the day, and discussed its possible effect on levothyroxine absorption.",
+        "relevance": "medium",
+        "topic": "calcium supplement timing"
+      },
+      {
+        "reason": "The user said they had long-standing Hashimoto's and considered whether gradual loss of thyroid function could explain a changing dose requirement.",
+        "relevance": "medium",
+        "topic": "hashimoto's progression"
+      },
+      {
+        "reason": "The user questioned whether a dose stays fixed forever and asked what to do about the trend, leading to discussion of possible adjustments.",
+        "relevance": "medium",
+        "topic": "levothyroxine dose management"
+      },
+      {
+        "reason": "The user asked whether to wait for a routine test or contact the doctor sooner, then asked about the proposed six-to-eight-week recheck interval.",
+        "relevance": "medium",
+        "topic": "thyroid test timing"
+      },
+      {
+        "reason": "The user mentioned being somewhat more tired and said it was hard to distinguish thyroid-related fatigue from age and poor sleep.",
+        "relevance": "low",
+        "topic": "fatigue"
+      },
+      {
+        "reason": "The user said the rising number made them worry something was deteriorating, and later reported feeling reassured.",
+        "relevance": "medium",
+        "topic": "worry about deterioration"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why TSH was rising despite an unchanged levothyroxine dose and described a recent calcium supplement taken with breakfast as a possible factor. The assistant discussed supplement timing and Hashimoto's progression, suggested contacting the doctor about the trend and fatigue, and explained a six-to-eight-week recheck interval after a change. The user said the explanation and action plan were useful and that the conversation reassured them."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5346,
+    "cache_write_tokens": 0,
+    "input_tokens": 5349,
+    "output_tokens": 773
+  },
+  "version": "gpt_luna"
+}

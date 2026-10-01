@@ -102,14 +102,14 @@ def summaries_table(rows: list[dict[str, Any]]) -> pd.DataFrame:
     Returns:
         DataFrame with metadata, summary and ``issue_resolved``; for each label field a
         canonical column and a ``<field>_raw`` column, lists joined with ``"; "``; and
-        ``topic_scores`` as ``"label (raw topic) [relevance]: reason"`` items joined with
-        ``" | "``.
+        ``topic_scores`` as ``"label (raw topic) [relevance; topic group]: reason"`` items
+        joined with ``" | "``.
     """
     out = []
     for r in rows:
         flat = {k: v for k, v in r.items() if k not in FIELDS}
         flat["topic_scores"] = " | ".join(
-            f"{t['label']} ({t['topic']}) [{t['relevance']}]: {t['reason']}"
+            f"{t['label']} ({t['topic']}) [{t['relevance']}; {t['topic_group']}]: {t['reason']}"
             for t in r["topic_scores"]
         )
         for field in FIELDS:

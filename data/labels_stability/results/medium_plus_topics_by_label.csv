@@ -1,0 +1,285 @@
+session_id,label,n_runs,run1,run2,run3,committed,majority
+s001,dismissive care,3,True,True,True,True,True
+s001,healthcare access,3,True,True,True,True,True
+s001,medication monitoring,0,False,False,False,True,False
+s001,treatment decisions,3,True,True,True,True,True
+s001,treatment effectiveness,1,True,False,False,False,False
+s002,appointment preparation,3,True,True,True,True,True
+s002,healthcare access,1,False,False,True,False,False
+s002,healthcare costs,2,True,True,False,True,True
+s002,medication side effects,1,False,True,False,False,False
+s002,migraine prevention,3,True,True,True,True,True
+s003,IBD symptoms,1,True,False,False,False,False
+s003,IBD treatment,3,True,True,True,True,True
+s003,medication administration,1,False,True,False,False,False
+s003,medication options,1,False,True,False,False,False
+s003,treatment effectiveness,1,False,True,False,True,False
+s004,IBD diet,2,True,True,False,True,True
+s004,diet and food triggers,1,False,False,True,False,False
+s004,fatigue and pacing,3,True,True,True,True,True
+s004,medical testing,3,True,True,True,True,True
+s004,thyroid results,1,False,True,False,False,False
+s004,thyroid treatment,2,False,True,True,True,True
+s005,PCOS,3,True,True,True,True,True
+s005,body image,3,True,True,True,True,True
+s005,dismissive care,1,False,True,False,False,False
+s005,hair loss,3,True,True,True,True,True
+s005,healthcare access,3,True,True,True,True,True
+s005,menstrual health,3,True,True,True,False,True
+s005,suicidal thoughts,3,True,True,True,False,True
+s005,weight management,2,True,False,True,True,True
+s006,POTS management,3,True,True,True,True,True
+s006,POTS prognosis,2,False,True,True,True,True
+s006,POTS symptoms,3,True,True,True,True,True
+s006,POTS treatment,3,True,True,True,True,True
+s006,disease progression,1,True,False,False,False,False
+s006,emotional distress,3,True,True,True,True,True
+s006,exercise and activity,1,True,False,False,True,False
+s006,fatigue and pacing,3,True,True,True,False,True
+s006,long COVID,2,False,True,True,False,True
+s007,appointment preparation,2,True,False,True,False,True
+s007,body image,0,False,False,False,True,False
+s007,hair loss,3,True,True,True,True,True
+s007,healthcare access,2,False,True,True,False,True
+s007,medication safety,3,True,True,True,True,True
+s008,blood sugar results,0,False,False,False,True,False
+s008,diabetes treatment,3,True,True,True,True,True
+s008,healthcare costs,3,True,True,True,True,True
+s008,medication administration,3,True,True,True,False,True
+s008,medication side effects,3,True,True,True,False,True
+s008,weight management,3,True,True,True,True,True
+s009,skin conditions,3,True,True,True,True,True
+s010,disease progression,3,True,True,True,True,True
+s010,dismissive care,3,True,True,True,False,True
+s010,emotional distress,3,True,True,True,True,True
+s010,fatigue and pacing,3,True,True,True,True,True
+s010,work impact,3,True,True,True,True,True
+s011,care coordination,3,True,True,True,True,True
+s011,endometriosis,1,True,False,False,True,False
+s011,endometriosis treatment,2,True,True,False,True,True
+s011,healthcare access,1,False,True,False,False,False
+s011,hormone therapy,2,False,True,True,False,True
+s011,medication side effects,3,True,True,True,True,True
+s011,pelvic pain,3,True,True,True,True,True
+s012,clinician communication,1,False,False,True,False,False
+s012,diet and food triggers,3,True,True,True,True,True
+s012,digestive diagnosis,3,True,True,True,True,True
+s012,digestive symptoms,3,True,True,True,True,True
+s012,emotional distress,0,False,False,False,True,False
+s012,healthcare access,1,False,False,True,True,False
+s012,medical testing,1,False,False,True,True,False
+s013,clinician communication,1,False,True,False,False,False
+s013,diet and food triggers,3,True,True,True,True,True
+s013,digestive symptoms,3,True,True,True,True,True
+s013,digestive treatment,3,True,True,True,True,True
+s013,flare management,3,True,True,True,False,True
+s013,symptom management,0,False,False,False,True,False
+s013,work impact,1,False,True,False,False,False
+s014,supplements,3,True,True,True,True,True
+s014,treatment options,3,True,True,True,True,True
+s015,emotional distress,3,True,True,True,True,True
+s015,endometriosis treatment,1,False,True,False,False,False
+s015,hormone therapy,2,True,True,False,False,True
+s015,medication side effects,3,True,True,True,True,True
+s015,pelvic pain,3,True,True,True,True,True
+s015,surgery,2,True,False,True,True,True
+s016,cognitive symptoms,2,False,True,True,True,True
+s016,medication side effects,2,True,True,False,True,True
+s016,medication use,1,False,False,True,False,False
+s016,sleep problems,3,True,True,True,True,True
+s016,work impact,3,True,True,True,True,True
+s017,blood sugar monitoring,2,True,True,False,True,True
+s017,blood sugar results,3,True,True,True,True,True
+s017,diabetes management,1,False,False,True,False,False
+s017,diabetes treatment,3,True,True,True,True,True
+s017,self-management,3,True,True,True,True,True
+s017,treatment decisions,1,True,False,False,False,False
+s018,dismissive care,3,True,True,True,True,True
+s018,endometriosis,3,True,True,True,True,True
+s018,healthcare access,3,True,True,True,True,True
+s018,pain management,3,True,True,True,True,True
+s018,pelvic pain,3,True,True,True,True,True
+s019,emotional distress,3,True,True,True,True,True
+s019,hormone therapy,3,True,True,True,True,True
+s019,medication dosing,3,True,True,True,True,True
+s019,migraine symptoms,3,True,True,True,True,True
+s019,urgent symptoms,3,True,True,True,True,True
+s019,visual symptoms,1,False,False,True,False,False
+s020,blood sugar monitoring,3,True,True,True,True,True
+s020,blood sugar results,3,True,True,True,True,True
+s020,blood sugar targets,3,True,True,True,True,True
+s020,diabetes risk,3,True,True,True,True,True
+s020,sleep problems,3,True,True,True,True,True
+s020,weight management,2,True,False,True,True,True
+s021,appointment preparation,3,True,True,True,False,True
+s021,dismissive care,2,False,True,True,True,True
+s021,endometriosis,3,True,True,True,True,True
+s021,hormone therapy,3,True,True,True,True,True
+s021,menstrual health,3,True,True,True,True,True
+s022,IBD diet,2,True,True,False,True,True
+s022,IBD symptoms,3,True,True,True,True,True
+s022,diet and food triggers,1,False,False,True,False,False
+s022,digestive symptoms,1,True,False,False,False,False
+s022,emotional distress,3,True,True,True,True,True
+s022,healthcare access,3,True,True,True,True,True
+s022,medication monitoring,1,True,False,False,False,False
+s022,treatment decisions,3,True,True,True,True,True
+s022,treatment effectiveness,2,False,True,True,True,True
+s023,IBD diagnosis and monitoring,3,True,True,True,True,True
+s023,IBD treatment,3,True,True,True,True,True
+s023,cancer risk,3,True,True,True,True,True
+s024,IBD treatment,3,True,True,True,True,True
+s024,arthritis symptoms,3,True,True,True,True,True
+s024,emotional distress,1,False,True,False,False,False
+s024,flare management,2,True,False,True,True,True
+s024,healthcare access,3,True,True,True,True,True
+s025,appointment preparation,1,False,True,False,False,False
+s025,dismissive care,3,True,True,True,True,True
+s025,fatigue and pacing,3,True,True,True,True,True
+s025,thyroid testing,3,True,True,True,True,True
+s025,thyroid treatment,3,True,True,True,True,True
+s026,IBD symptoms,3,True,True,True,True,True
+s026,digestive symptoms,0,False,False,False,True,False
+s026,emotional distress,3,True,True,True,True,True
+s026,medication side effects,3,True,True,True,True,True
+s026,suicidal thoughts,2,True,False,True,False,True
+s026,treatment effectiveness,3,True,True,True,True,True
+s027,IBD diet,3,True,True,True,True,True
+s027,diet and food triggers,3,True,True,True,True,True
+s027,healthcare access,3,True,True,True,True,True
+s028,exercise and activity,3,True,True,True,True,True
+s028,fatigue and pacing,3,True,True,True,True,True
+s028,health information,1,True,False,False,False,False
+s029,PCOS,3,True,True,True,True,True
+s029,diabetes management,2,True,True,False,False,True
+s029,diabetes treatment,2,True,False,True,True,True
+s029,emotional distress,3,True,True,True,True,True
+s029,exercise and activity,3,True,True,True,True,True
+s029,medication side effects,2,True,True,False,False,True
+s029,weight management,3,True,True,True,True,True
+s030,emotional distress,1,True,False,False,True,False
+s030,healthcare access,3,True,True,True,True,True
+s030,medication safety,3,True,True,True,True,True
+s030,migraine symptoms,3,True,True,True,True,True
+s030,migraine treatment,2,True,True,False,False,True
+s031,blood sugar monitoring,1,True,False,False,True,False
+s031,blood sugar targets,1,False,False,True,False,False
+s031,diabetes management,3,True,True,True,False,True
+s031,diabetes risk,3,True,True,True,True,True
+s031,diabetes treatment,3,True,True,True,True,True
+s031,diet and food triggers,2,True,False,True,True,True
+s031,exercise and activity,2,True,True,False,True,True
+s031,treatment decisions,1,True,False,False,False,False
+s032,arthritis symptoms,3,True,True,True,True,True
+s032,cancer risk,2,True,False,True,True,True
+s032,emotional distress,0,False,False,False,True,False
+s032,hormone therapy,2,True,True,False,False,True
+s032,infection prevention,3,True,True,True,True,True
+s032,infection risk,3,True,True,True,True,True
+s032,medication safety,1,False,True,False,True,False
+s032,travel health,1,True,False,False,True,False
+s032,treatment decisions,3,True,True,True,True,True
+s032,treatment effectiveness,3,True,True,True,True,True
+s033,medication use,0,False,False,False,True,False
+s033,migraine symptoms,3,True,True,True,True,True
+s033,migraine treatment,0,False,False,False,True,False
+s033,treatment decisions,3,True,True,True,False,True
+s033,treatment effectiveness,3,True,True,True,False,True
+s034,blood sugar monitoring,2,True,True,False,True,True
+s034,blood sugar results,1,False,False,True,False,False
+s034,digestive symptoms,2,False,True,True,True,True
+s034,medication dosing,3,True,True,True,True,True
+s034,medication side effects,3,True,True,True,True,True
+s034,urgent symptoms,3,True,True,True,True,True
+s035,medication dosing,2,False,True,True,False,True
+s035,travel health,3,True,True,True,True,True
+s036,arthritis symptoms,3,True,True,True,True,True
+s036,emotional distress,1,False,True,False,False,False
+s036,healthcare access,3,True,True,True,True,True
+s036,medical testing,3,True,True,True,False,True
+s036,pain management,0,False,False,False,True,False
+s036,skin conditions,3,True,True,True,True,True
+s037,IBD diagnosis and monitoring,1,False,True,False,False,False
+s037,IBD symptoms,2,True,True,False,True,True
+s037,IBD treatment,3,True,True,True,True,True
+s037,chronic illness impact,2,True,False,True,True,True
+s037,digestive symptoms,3,True,True,True,True,True
+s037,dismissive care,1,True,False,False,False,False
+s037,emotional distress,3,True,True,True,True,True
+s037,healthcare access,3,True,True,True,True,True
+s037,medical testing,1,False,False,True,True,False
+s037,medication safety,1,True,False,False,False,False
+s037,medication use,2,False,True,True,True,True
+s037,treatment decisions,1,True,False,False,False,False
+s037,work impact,2,True,True,False,True,True
+s038,disease progression,2,True,True,False,False,True
+s038,fatigue and pacing,3,True,True,True,True,True
+s038,fibromyalgia treatment,3,True,True,True,True,True
+s038,health information,1,True,False,False,True,False
+s038,healthcare access,2,True,True,False,False,True
+s038,medication access,1,False,False,True,False,False
+s038,pain management,0,False,False,False,True,False
+s039,arthritis treatment,1,False,True,False,False,False
+s039,care coordination,1,True,False,False,False,False
+s039,fertility planning,3,True,True,True,True,True
+s039,medication safety,3,True,True,True,True,True
+s039,treatment effectiveness,2,True,False,True,False,True
+s040,disease progression,2,False,True,True,True,True
+s040,medical testing,1,False,False,True,False,False
+s040,medication dosing,3,True,True,True,False,True
+s040,medication safety,0,False,False,False,True,False
+s040,thyroid disease,2,True,True,False,False,True
+s040,thyroid results,3,True,True,True,True,True
+s040,thyroid testing,2,True,True,False,True,True
+s040,thyroid treatment,2,False,True,True,True,True
+s041,appointment preparation,1,True,False,False,False,False
+s041,cancer risk,3,True,True,True,True,True
+s041,infection risk,3,True,True,True,True,True
+s041,treatment decisions,3,True,True,True,True,True
+s042,IBD diagnosis and monitoring,2,False,True,True,True,True
+s042,IBD diet,2,False,True,True,True,True
+s042,IBD education,3,True,True,True,True,True
+s042,IBD treatment,3,True,True,True,True,True
+s042,disease progression,1,True,False,False,False,False
+s042,emotional distress,3,True,True,True,True,True
+s042,health information,3,True,True,True,True,True
+s042,healthcare access,3,True,True,True,True,True
+s043,emotional distress,3,True,True,True,True,True
+s043,endometriosis,1,False,True,False,False,False
+s043,endometriosis treatment,0,False,False,False,True,False
+s043,fertility planning,3,True,True,True,True,True
+s043,relationship impact,3,True,True,True,True,True
+s043,surgery,2,True,True,False,False,True
+s043,work impact,2,True,True,False,False,True
+s044,arthritis treatment,3,True,True,True,True,True
+s044,medication administration,1,False,True,False,False,False
+s044,medication dosing,3,True,True,True,True,True
+s044,medication options,3,True,True,True,True,True
+s044,medication side effects,3,True,True,True,True,True
+s045,clinician communication,2,False,True,True,False,True
+s045,medication access,3,True,True,True,True,True
+s045,self-management,1,True,False,False,False,False
+s045,thyroid testing,3,True,True,True,True,True
+s045,thyroid treatment,2,False,True,True,False,True
+s046,POTS treatment,0,False,False,False,True,False
+s046,cognitive symptoms,3,True,True,True,False,True
+s046,emotional distress,0,False,False,False,True,False
+s046,health information,3,True,True,True,True,True
+s046,healthcare access,3,True,True,True,True,True
+s047,medication monitoring,3,True,True,True,True,True
+s047,medication safety,3,True,True,True,True,True
+s048,diabetes management,2,True,True,False,False,True
+s048,diabetes treatment,0,False,False,False,True,False
+s048,fertility planning,3,True,True,True,True,True
+s048,healthcare access,3,True,True,True,True,True
+s049,emotional distress,3,True,True,True,True,True
+s049,fatigue and pacing,2,True,False,True,False,True
+s049,long COVID,3,True,True,True,True,True
+s049,work impact,3,True,True,True,True,True
+s050,emotional distress,1,True,False,False,True,False
+s050,hair loss,1,False,True,False,False,False
+s050,healthcare access,3,True,True,True,True,True
+s050,medication safety,1,False,True,False,True,False
+s050,medication side effects,1,True,False,False,False,False
+s050,skin conditions,3,True,True,True,True,True
+s050,treatment decisions,2,False,True,True,False,True

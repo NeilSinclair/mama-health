@@ -1,0 +1,13 @@
+disease,need met,partial resolution,unresolved need,resolved,unresolved,total,need_met_pct
+crohns,3,1,1,3,2,5,60
+endometriosis,3,0,2,3,2,5,60
+rheumatoid_arthritis,4,0,1,4,1,5,80
+type_2_diabetes,4,1,0,4,1,5,80
+chronic_migraine,3,0,1,3,1,4,75
+fibromyalgia,2,1,1,2,2,4,50
+hashimotos,4,0,0,4,0,4,100
+long_covid,3,1,0,3,1,4,75
+pcos,3,0,1,3,1,4,75
+psoriasis,4,0,0,4,0,4,100
+ibs,3,0,0,3,0,3,100
+ulcerative_colitis,3,0,0,3,0,3,100

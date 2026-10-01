@@ -1,0 +1,10 @@
+calls,n_calls,input_tokens,cached_tokens,output_tokens,usd
+summary committed,50,255711,163268,55381,0.0386
+summary run1,50,255711,163268,55301,0.0385
+summary run2,50,255711,255561,53736,0.0294
+summary run3,50,255711,255561,53042,0.0291
+mapping committed,2,5774,2055,6646,0.0037
+mapping joint (4 runs),2,8143,2055,12645,0.007
+mapping rep1,2,5774,4110,10482,0.0054
+mapping rep2,2,5774,5768,7127,0.0036
+mapping rep3,2,5774,5768,5973,0.003

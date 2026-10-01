@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:15+00:00",
+  "created_at": "2026-10-01T15:06:37+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,57 +7,71 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user questioned whether their longstanding IBS diagnosis might instead involve SIBO and returned to the uncertainty several times.",
+        "reason": "The user came to understand whether their longstanding IBS diagnosis might instead involve SIBO and returned to the uncertainty throughout the conversation.",
         "relevance": "strong",
-        "topic": "ibs and sibo uncertainty"
+        "topic": "IBS and SIBO uncertainty",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user described severe bloating after eating as the symptom that made SIBO seem possible.",
+        "reason": "The user described severe bloating after eating as the main symptom prompting their concern about SIBO.",
         "relevance": "medium",
-        "topic": "post-meal bloating"
+        "topic": "post-meal bloating",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked whether a proper test exists and discussed whether an unreliable result would be useful.",
+        "reason": "The user asked how SIBO is tested and questioned whether an unreliable breath test would give a clear answer.",
         "relevance": "medium",
-        "topic": "sibo breath testing"
+        "topic": "SIBO testing",
+        "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user clarified that they tend toward constipation or alternate between constipation and other bowel patterns.",
+        "reason": "The user clarified that their bowel pattern is mostly constipated or mixed, and the assistant discussed its relevance to testing and treatment.",
         "relevance": "medium",
-        "topic": "constipation and mixed bowel habits"
+        "topic": "constipation and mixed bowel habits",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user said the IBS label had felt like a catch-all and wondered why their GP had not explained these issues.",
+        "reason": "The user decided to request a gastroenterology referral and noted that the wait in Canada might be long.",
         "relevance": "medium",
-        "topic": "frustration with diagnosis"
+        "topic": "specialist referral wait",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user planned to seek a referral and noted that the wait in Canada might be long.",
+        "reason": "The user said previous food diaries had not revealed a consistent pattern, and the conversation addressed how to interpret that variability.",
         "relevance": "medium",
-        "topic": "gastroenterology access"
+        "topic": "food diary patterns",
+        "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user said prior food diaries had not revealed consistent patterns, and discussed this for one exchange.",
-        "relevance": "medium",
-        "topic": "food diary variability"
-      },
-      {
-        "reason": "The user mentioned that online SIBO content seemed to be selling supplements and accepted the suggestion not to buy them yet.",
+        "reason": "The user wondered whether their GP had not explained SIBO because of limited knowledge or lack of effort.",
         "relevance": "low",
-        "topic": "supplement marketing"
+        "topic": "doctor communication",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they were annoyed that nobody had explained these possibilities during the years they had an IBS label.",
+        "relevance": "low",
+        "topic": "diagnosis frustration",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned online supplement marketing and ended by agreeing not to buy supplements before specialist assessment.",
+        "relevance": "low",
+        "topic": "supplement decisions",
+        "topic_group": "Treatment choice"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user asked whether their longstanding IBS diagnosis could involve SIBO, describing severe post-meal bloating and asking about testing, bowel-pattern differences, and diagnostic uncertainty. The assistant explained the overlap and limits of testing, and the user decided to seek a gastroenterology referral, keep notes despite inconsistent diary patterns, and hold off on supplements. The user said the conversation was clarifying and that they had what they needed."
+    "summary": "The user asked whether their longstanding IBS diagnosis could involve SIBO, describing severe post-meal bloating and mostly constipated or mixed bowel habits; the assistant explained the overlap and limits of breath testing without claiming to diagnose them. The user decided to request a gastroenterology referral, keep notes despite unclear food patterns, and hold off on supplements, and said the conversation was clarifying."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5296,
-    "output_tokens": 1080
+    "input_tokens": 5845,
+    "output_tokens": 1316
   },
   "version": "gpt_luna"
 }
