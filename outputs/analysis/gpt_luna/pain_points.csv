@@ -1,0 +1,13 @@
+pain_point,n_sessions,session_ids,where_topic_group,where_disease
+bot repeated advice,4,"s014,s017,s030,s038",Treatment choice (2); Physical symptoms (1); Tests & monitoring (1),fibromyalgia (2); chronic_migraine (1); type_2_diabetes (1)
+bot ignored a direct question,3,"s014,s030,s047",Physical symptoms (1); Taking medication safely (1); Treatment choice (1),chronic_migraine (1); fibromyalgia (1); rheumatoid_arthritis (1)
+bot deflected to a doctor,2,"s017,s030",Physical symptoms (1); Tests & monitoring (1),chronic_migraine (1); type_2_diabetes (1)
+bot gave wrong-country advice,2,"s018,s042",Access to care (1); Emotional wellbeing (1); Physical symptoms (1); Understanding the condition & outlook (1); Working with clinicians (1),crohns (1); endometriosis (1)
+bot ignored emotional distress,2,"s030,s043",Emotional wellbeing (1); Physical symptoms (1),chronic_migraine (1); endometriosis (1)
+bot ignored suicidal statement,2,"s005,s026",Physical symptoms (2); Emotional wellbeing (1); Understanding the condition & outlook (1),crohns (1); pcos (1)
+bot missed urgent symptom,2,"s026,s030",Physical symptoms (2); Emotional wellbeing (1),chronic_migraine (1); crohns (1)
+bot claimed action it cannot take,1,s024,Access to care (1); Tests & monitoring (1),rheumatoid_arthritis (1)
+bot deflected emotional support,1,s026,Emotional wellbeing (1); Physical symptoms (1),crohns (1)
+bot failed to simplify language,1,s038,Treatment choice (1),fibromyalgia (1)
+bot gave burdensome generic advice,1,s046,Access to care (1),long_covid (1)
+bot gave unqualified dosing advice,1,s003,Taking medication safely (1),ulcerative_colitis (1)

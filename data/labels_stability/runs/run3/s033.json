@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-10-01T09:11:55+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user asked whether a drop from about 20 to 15 migraine days on Emgality meant it was working and returned to this question throughout the conversation.",
+        "relevance": "strong",
+        "topic": "preventive treatment response"
+      },
+      {
+        "reason": "The user asked what to do before the six-month point and worried their neurologist might stop treatment for not reaching a 50% reduction.",
+        "relevance": "medium",
+        "topic": "treatment continuation"
+      },
+      {
+        "reason": "The user later noted that their remaining migraines had become less severe and said they had not counted that as improvement.",
+        "relevance": "medium",
+        "topic": "migraine severity"
+      },
+      {
+        "reason": "The user said they consistently logged migraine days in an app and discussed continuing to track symptoms before reassessment.",
+        "relevance": "medium",
+        "topic": "migraine tracking"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether reducing migraine days from about 20 to 15 after three months on Emgality counted as a response, and later mentioned that attacks were also less severe. The assistant discussed assessing the response over six months, suggested what to track and raise with the neurologist, and the user said they felt better and now viewed the treatment as helping."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4351,
+    "cache_write_tokens": 0,
+    "input_tokens": 4354,
+    "output_tokens": 615
+  },
+  "version": "gpt_luna"
+}

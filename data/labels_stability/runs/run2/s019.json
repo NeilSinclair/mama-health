@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:09:09+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described a new episode of shimmering zigzag vision before a familiar migraine and asked what it could mean.",
+        "relevance": "strong",
+        "topic": "migraine visual aura"
+      },
+      {
+        "reason": "The user repeatedly asked whether the visual symptoms could indicate something serious and whether they needed emergency care that night.",
+        "relevance": "strong",
+        "topic": "stroke and emergency concerns"
+      },
+      {
+        "reason": "The user said the episode scared them and later reported feeling calmer after the discussion.",
+        "relevance": "medium",
+        "topic": "fear about new symptoms"
+      },
+      {
+        "reason": "The user asked whether having aura once meant it would become a permanent or recurring feature.",
+        "relevance": "medium",
+        "topic": "aura recurrence"
+      },
+      {
+        "reason": "The user asked whether aura could be a cue to take their usual sumatriptan earlier.",
+        "relevance": "medium",
+        "topic": "sumatriptan timing"
+      },
+      {
+        "reason": "The user asked about aura and birth control and said they had considered hormonal contraception.",
+        "relevance": "medium",
+        "topic": "hormonal contraception"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user described a new, 20-minute shimmering visual disturbance before a familiar migraine and worried it could be a stroke or require emergency care. The assistant said it sounded like migraine aura, advised a non-urgent family doctor appointment rather than emergency care that night based on the described symptoms, and listed warning signs that would warrant urgent care. The user said they felt calmer, planned to book with their doctor that week, and appreciated the information about sumatriptan timing and future contraception decisions."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5468,
+    "cache_write_tokens": 0,
+    "input_tokens": 5471,
+    "output_tokens": 903
+  },
+  "version": "gpt_luna"
+}

@@ -10,7 +10,7 @@ from typing import Any
 import pandas as pd
 
 from mama_analysis.analysis import is_silent_failure, pushback_status
-from mama_analysis.consolidate import FIELDS, apply_mapping, shown_labels
+from mama_analysis.consolidate import FIELDS, TOPIC_GROUPS, apply_mapping, shown_labels
 from mama_analysis.dynamics import check_dynamics
 from mama_analysis.schemas import DynamicsLLM, SessionSummary
 
@@ -230,10 +230,12 @@ def explorer_payload(
             of ``label_rows``, or ``None`` if the version has no complete cached labels.
 
     Returns:
-        ``{"versions": [...], "conversations": {session_id: [{turn, role, text}]}}``; each
-        available version also carries its ``label_graph``.
+        ``{"versions": [...], "conversations": {session_id: [{turn, role, text}]},
+        "topic_groups": {canonical topic: group}}`` (``consolidate.TOPIC_GROUPS``, for the
+        Breakdown tab); each available version also carries its ``label_graph``.
     """
     return {
+        "topic_groups": {t: g for g, topics in TOPIC_GROUPS.items() for t in topics},
         "versions": [
             {
                 "key": key,

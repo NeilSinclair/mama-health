@@ -4,11 +4,14 @@ from mama_analysis.analysis import (
     friction,
     is_silent_failure,
     missing_safety_labels,
+    outcome_by,
+    pain_point_list,
     pushback_status,
     pushbacks_table,
     recovery_by_outcome,
     sentiment_vs_outcome,
     silent_failures,
+    topic_group_counts,
 )
 from mama_analysis.schemas import DynamicsLLM, Pushback
 
@@ -164,3 +167,72 @@ def test_end_reasons_match_schema_and_are_never_renamed():
     # analysis compares displayed labels against these raw values, so a rename would break it.
     assert set(END_REASONS) == set(get_args(SummaryLLM.model_fields["end_reason"].annotation))
     assert "end_reason" not in DISPLAY_NAMES
+
+
+def test_outcome_by_counts_end_reasons_per_value():
+    rows = [r | {"disease": d} for r, d in zip(ROWS, ["ibs", "ibs", "pcos", "ibs"], strict=True)]
+    df = outcome_by(rows, "disease")
+    assert df["disease"].tolist() == ["ibs", "pcos"]
+    ibs = df.iloc[0]
+    assert (ibs["need met"], ibs["partial resolution"], ibs["unresolved need"]) == (1, 1, 1)
+    assert (ibs["resolved"], ibs["unresolved"]) == (1, 2)
+    assert (ibs["total"], ibs["need_met_pct"]) == (3, 33)
+    reasons = [r | {"reason_for_conversation": [{"label": "x", "raw": ["x"]}]} for r in ROWS]
+    assert outcome_by(reasons, "reason_for_conversation")["total"].tolist() == [4]
+
+
+def test_topic_group_counts_per_session_with_member_topics():
+    def chips(*xs):
+        return [{"label": x, "raw": [x]} for x in xs]
+
+    rows = [
+        {"session_id": "a", "main_topics": chips("pain management", "skin conditions")},
+        {"session_id": "b", "main_topics": chips("pain management", "new thing")},
+        {"session_id": "c", "main_topics": []},
+    ]
+    df = topic_group_counts(rows)
+    assert df["topic_group"].tolist() == ["Physical symptoms", "(ungrouped)"]
+    first = df.iloc[0]
+    assert (first["n_sessions"], first["session_ids"]) == (2, "a,b")
+    assert first["topics"] == "pain management; skin conditions"
+
+
+def test_pain_point_list_ranks_pain_points_with_where():
+    def chips(*xs):
+        return [{"label": x, "raw": [x]} for x in xs]
+
+    def row(sid, topics, disease, pains):
+        return {
+            "session_id": sid,
+            "main_topics": chips(*topics),
+            "disease": disease,
+            "conversation_pain_points": chips(*pains),
+        }
+
+    rows = [
+        row("a", ["pain management", "cancer risk"], "ibs", ["p1", "p2"]),
+        row("b", ["skin conditions"], "type_2_diabetes", ["p1"]),
+        row("c", [], "pcos", []),
+    ]
+    df = pain_point_list(rows).set_index("pain_point")
+    assert df.index.tolist() == ["p1", "p2"]
+    p1 = df.loc["p1"]
+    assert (p1["n_sessions"], p1["session_ids"]) == (2, "a,b")
+    assert p1["where_topic_group"] == (
+        "Physical symptoms (2); Understanding the condition & outlook (1)"
+    )
+    assert p1["where_disease"] == "ibs (1); type_2_diabetes (1)"
+
+
+def test_pain_point_list_keeps_columns_when_no_pain_points():
+    rows = [
+        {"session_id": "a", "main_topics": [], "disease": "ibs", "conversation_pain_points": []}
+    ]
+    df = pain_point_list(rows)
+    assert df.empty and list(df.columns) == [
+        "pain_point",
+        "n_sessions",
+        "session_ids",
+        "where_topic_group",
+        "where_disease",
+    ]

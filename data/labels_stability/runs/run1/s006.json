@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-10-01T09:07:26+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user asked what POTS means and followed up with questions about its relationship to long COVID, prognosis, and management across the conversation.",
+        "relevance": "strong",
+        "topic": "POTS education"
+      },
+      {
+        "reason": "The user described a pounding heart, dizziness, lightheadedness, and spotty vision when standing, then asked how to manage episodes.",
+        "relevance": "medium",
+        "topic": "standing-related symptoms"
+      },
+      {
+        "reason": "The user explicitly worried that POTS meant their heart was damaged and returned to feeling reassured about this at the end.",
+        "relevance": "medium",
+        "topic": "heart damage fear"
+      },
+      {
+        "reason": "The user asked whether POTS after long COVID would be permanent and whether people recover.",
+        "relevance": "medium",
+        "topic": "post-viral prognosis"
+      },
+      {
+        "reason": "The user asked why salt was recommended and took notes on the explanation and other management steps.",
+        "relevance": "medium",
+        "topic": "salt and fluid management"
+      },
+      {
+        "reason": "The user said exertion with long COVID caused crashes lasting days and expressed fear about exercise advice.",
+        "relevance": "medium",
+        "topic": "post-exertional malaise"
+      },
+      {
+        "reason": "The user said repeated advice to exercise had backfired and made them feel they were failing, and responded positively to validation.",
+        "relevance": "medium",
+        "topic": "exercise-related self-blame"
+      },
+      {
+        "reason": "The user asked whether they should be on medication and accepted a question to raise with their doctor.",
+        "relevance": "medium",
+        "topic": "POTS medications"
+      },
+      {
+        "reason": "The user asked for actions to take during a racing-heart episode and wrote down the suggestions.",
+        "relevance": "medium",
+        "topic": "heart-racing coping"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user sought an explanation of POTS after a long COVID appointment, asking about heart damage, recovery, and ways to manage symptoms. The assistant explained general self-management and medication considerations, and adjusted its exercise guidance after the user described crashes after exertion; the user said they felt less panicked and understood that their heart was not broken."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5459,
+    "output_tokens": 1212
+  },
+  "version": "gpt_luna"
+}

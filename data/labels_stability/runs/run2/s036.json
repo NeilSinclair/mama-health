@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-10-01T09:09:38+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described pain in both hands, morning stiffness, and episodes of a whole finger swelling, which drove the discussion of possible arthritis.",
+        "relevance": "strong",
+        "topic": "finger joint symptoms"
+      },
+      {
+        "reason": "The user asked whether psoriasis could affect the joints, how serious it might be, and whether waiting could cause lasting damage.",
+        "relevance": "strong",
+        "topic": "psoriatic arthritis"
+      },
+      {
+        "reason": "The user described pitting and a lifting nail, later asked about treatment, and said the appearance made them hide it.",
+        "relevance": "medium",
+        "topic": "nail changes"
+      },
+      {
+        "reason": "The user asked which doctor to see and explained that their health plan may require a referral, then said they would request one.",
+        "relevance": "medium",
+        "topic": "rheumatology referral"
+      },
+      {
+        "reason": "The user asked what to expect at an appointment and whether a blood test could confirm the condition.",
+        "relevance": "medium",
+        "topic": "diagnostic testing"
+      },
+      {
+        "reason": "The user said they were worried and later scared about possible permanent joint damage, before saying they felt better with a plan.",
+        "relevance": "medium",
+        "topic": "health-related worry"
+      },
+      {
+        "reason": "The user briefly asked what they could take for the pain and mentioned sometimes taking dipyrone.",
+        "relevance": "low",
+        "topic": "pain relief"
+      },
+      {
+        "reason": "The user mentioned having psoriasis on their elbows and knees as background to the newer nail and joint symptoms.",
+        "relevance": "low",
+        "topic": "skin psoriasis"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user described psoriasis, nail changes, and finger pain with morning stiffness and swelling; the assistant said these could point to psoriatic arthritis but that a rheumatologist would need to assess them. The assistant discussed referral options, the appointment and tests, and pain and nail treatment; the user said they felt better with a plan and would ask their dermatologist for a referral that week."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4693,
+    "cache_write_tokens": 0,
+    "input_tokens": 4696,
+    "output_tokens": 1480
+  },
+  "version": "gpt_luna"
+}

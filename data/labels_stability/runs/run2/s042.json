@@ -1,0 +1,70 @@
+{
+  "created_at": "2026-10-01T09:09:49+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave US-centric guidance"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user asked for a starting point and discussed the disease's course, flares and remission, and what to expect.",
+        "relevance": "strong",
+        "topic": "Crohn's disease education"
+      },
+      {
+        "reason": "The user described feeling overwhelmed and unsure how to organize what they needed to learn, then said the conversation made it feel more manageable.",
+        "relevance": "medium",
+        "topic": "new diagnosis overwhelm"
+      },
+      {
+        "reason": "The user asked about their medication, identified it as budesonide, and made clarifying the plan after it their main next step.",
+        "relevance": "medium",
+        "topic": "Crohn's medication plan"
+      },
+      {
+        "reason": "The user asked what monitoring to expect and received an overview of tests and follow-up.",
+        "relevance": "medium",
+        "topic": "Crohn's monitoring"
+      },
+      {
+        "reason": "The user asked whether they should follow a Crohn's diet and engaged with the individualized guidance.",
+        "relevance": "medium",
+        "topic": "Crohn's diet"
+      },
+      {
+        "reason": "The user asked whether to move from their current gastroenterologist to a larger specialist center and said the guidance reassured them.",
+        "relevance": "medium",
+        "topic": "specialist care access"
+      },
+      {
+        "reason": "The user asked where to learn more because online information felt scary and difficult to trust.",
+        "relevance": "medium",
+        "topic": "reliable health information"
+      },
+      {
+        "reason": "The user said they did not know how to organize information and accepted starting with one page of notes.",
+        "relevance": "medium",
+        "topic": "health information organization"
+      },
+      {
+        "reason": "The user briefly recalled that the Crohn's might be near the end of the small intestine and noted their memory was hazy.",
+        "relevance": "low",
+        "topic": "disease location"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "Newly diagnosed with Crohn's, the user felt overwhelmed and sought an overview of the disease, medication, monitoring, diet, and reliable information. After the user raised whether US-based resources and care guidance applied in India, the assistant acknowledged this and discussed local specialist-care options; the user ended feeling more able to manage the information and planned to ask their doctor about the plan after budesonide."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5719,
+    "cache_write_tokens": 0,
+    "input_tokens": 5722,
+    "output_tokens": 1498
+  },
+  "version": "gpt_luna"
+}

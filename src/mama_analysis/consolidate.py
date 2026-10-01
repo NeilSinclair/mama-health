@@ -31,6 +31,74 @@ DISPLAY_NAMES = {
     },
 }
 
+# Human merges applied on top of the model's mapping (D-039): any canonical label starting
+# with a prefix becomes that prefix's target. The model keeps splitting one failure mode by
+# subject or by whether pushback is mentioned, despite the prompt.
+CANONICAL_MERGES = {
+    "conversation_pain_points": {"bot repeated ": "bot repeated advice"},
+}
+
+# Human grouping of canonical topics into ten broad topic groups (D-042), applied on top of the
+# model's mapping. Keyed by the canonical labels of the committed mapping, so a remap or relabel
+# that renames topics leaves them "(ungrouped)" until this table is updated.
+TOPIC_GROUPS = {
+    "Physical symptoms": (
+        "symptom management",
+        "gastrointestinal symptoms",
+        "pain management",
+        "skin conditions",
+        "hair and scalp health",
+        "hormonal health",
+    ),
+    "Treatment choice": (
+        "treatment decisions",
+        "medication options",
+        "surgery decisions",
+        "treatment response",
+        "supplements and alternative therapies",
+        "endometriosis care",
+    ),
+    "Understanding the condition & outlook": (
+        "disease education",
+        "disease prognosis",
+        "cancer risk",
+        "diabetes risk",
+    ),
+    "Fatigue, sleep, diet & activity": (
+        "fatigue and cognition",
+        "sleep problems",
+        "exercise and pacing",
+        "diet and food triggers",
+    ),
+    "Tests & monitoring": (
+        "disease monitoring",
+        "diagnostic testing",
+        "lab results interpretation",
+        "blood glucose management",
+    ),
+    "Access to care": (
+        "specialist access",
+        "care access barriers",
+        "medication access",
+        "travel and care logistics",
+    ),
+    "Taking medication safely": (
+        "medication dosing",
+        "medication use",
+        "medication safety",
+        "medication side effects",
+    ),
+    "Work & life plans": ("work impact", "fertility and pregnancy"),
+    "Emotional wellbeing": ("emotional distress", "suicidal thoughts", "relationship strain"),
+    "Working with clinicians": (
+        "medical communication",
+        "appointment preparation",
+        "health information management",
+    ),
+}
+UNGROUPED = "(ungrouped)"
+_GROUP_OF = {topic: group for group, topics in TOPIC_GROUPS.items() for topic in topics}
+
 # Every topic is consolidated, but only topics at this relevance become chips, counts and
 # graph nodes.
 KEPT_RELEVANCE = "strong"
@@ -154,6 +222,37 @@ def validate_mapping(raws: list[str], mapping: LabelMapping) -> dict[str, str]:
     if extras:
         warnings.warn(f"dropped {len(extras)} labels not in the input", stacklevel=2)
     return dict(sorted(result.items()))
+
+
+def topic_groups(topics: list[str]) -> list[str]:
+    """Map canonical topics to their ``TOPIC_GROUPS`` group.
+
+    Args:
+        topics: Canonical topic labels.
+
+    Returns:
+        The groups, in first-seen order without duplicates; a topic in no group gives
+        ``UNGROUPED``.
+    """
+    return list(dict.fromkeys(_GROUP_OF.get(t, UNGROUPED) for t in topics))
+
+
+def merge_canonicals(field: str, mapping: dict[str, str]) -> dict[str, str]:
+    """Apply the human merges in ``CANONICAL_MERGES`` to one field's mapping.
+
+    Args:
+        field: Field the mapping belongs to.
+        mapping: Raw-to-canonical dict from the model.
+
+    Returns:
+        The mapping with every canonical label that starts with a merge prefix replaced by
+        that prefix's target.
+    """
+    merges = CANONICAL_MERGES.get(field, {})
+    return {
+        raw: next((t for p, t in merges.items() if canon.startswith(p)), canon)
+        for raw, canon in mapping.items()
+    }
 
 
 def apply_mapping(value: str | list[str], mapping: dict[str, str]) -> str | list[str]:

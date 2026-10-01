@@ -12,7 +12,7 @@ uv sync
 uv run mama-pipeline
 ```
 
-Outputs are written to `outputs/`. Tests: `uv run pytest`.
+Outputs are written to `outputs/`. Tests: `uv run pytest`. If the memo draft `docs/memo.md` exists, the run also renders it, with its tables and interactive panels, to `outputs/memo.html`.
 
 ## LLM labels
 

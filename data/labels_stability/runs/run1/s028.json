@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-01T09:07:54+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described repeatedly crashing for days after walks or beginner yoga and asked how exercise could be reconciled with that response.",
+        "relevance": "strong",
+        "topic": "exercise-related flares"
+      },
+      {
+        "reason": "The user discussed overdoing activity on good days, understood the idea of capping activity, and reflected on years of swinging between overdoing it and giving up.",
+        "relevance": "strong",
+        "topic": "activity pacing"
+      },
+      {
+        "reason": "The user opened by feeling stuck between common advice to exercise and their own experience of worsening afterward.",
+        "relevance": "medium",
+        "topic": "conflicting exercise advice"
+      },
+      {
+        "reason": "The user asked whether walking or yoga was preferable and responded positively to the possibility of using a community-center pool.",
+        "relevance": "medium",
+        "topic": "exercise options"
+      },
+      {
+        "reason": "The user asked how long it might take to notice a difference and said they appreciated not having progress oversold.",
+        "relevance": "medium",
+        "topic": "exercise progress expectations"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user described fibromyalgia symptoms flaring for days after walks or beginner yoga and asked how to exercise without another crash. The assistant suggested starting with a very small amount, pacing activity on good days, considering warm-water exercise, and tracking gradual progress; the user said the advice was genuinely useful and appreciated having a practical plan."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5838,
+    "output_tokens": 756
+  },
+  "version": "gpt_luna"
+}

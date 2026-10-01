@@ -6,6 +6,7 @@ end_reason,need met,main_topics,disease education,4,"s006,s012,s036,s042"
 end_reason,need met,main_topics,treatment decisions,4,"s001,s031,s041,s044"
 main_topics,treatment decisions,reason_for_conversation,decide on treatment,4,"s001,s031,s041,s044"
 conversation_pain_points,bot ignored a direct question,reason_for_conversation,decide on treatment,3,"s014,s030,s047"
+conversation_pain_points,bot repeated advice,end_reason,partial resolution,3,"s014,s017,s038"
 end_reason,need met,main_topics,cancer risk,3,"s023,s032,s041"
 end_reason,need met,main_topics,fatigue and cognition,3,"s004,s016,s025"
 end_reason,need met,main_topics,gastrointestinal symptoms,3,"s013,s022,s037"
@@ -18,7 +19,8 @@ conversation_pain_points,bot ignored a direct question,end_reason,partial resolu
 conversation_pain_points,bot ignored emotional distress,end_reason,unresolved need,2,"s030,s043"
 conversation_pain_points,bot ignored suicidal statement,end_reason,unresolved need,2,"s005,s026"
 conversation_pain_points,bot missed urgent symptom,end_reason,unresolved need,2,"s026,s030"
-conversation_pain_points,bot repeated medication advice after pushback,end_reason,partial resolution,2,"s014,s038"
+conversation_pain_points,bot repeated advice,reason_for_conversation,decide on treatment,2,"s014,s030"
+conversation_pain_points,bot repeated advice,reason_for_conversation,understand my condition,2,"s017,s038"
 end_reason,need met,main_topics,diet and food triggers,2,"s004,s027"
 end_reason,need met,main_topics,disease monitoring,2,"s023,s025"
 end_reason,need met,main_topics,emotional distress,2,"s042,s049"
@@ -100,19 +102,11 @@ conversation_pain_points,bot missed urgent symptom,main_topics,gastrointestinal 
 conversation_pain_points,bot missed urgent symptom,main_topics,pain management,1,s030
 conversation_pain_points,bot missed urgent symptom,reason_for_conversation,decide on treatment,1,s030
 conversation_pain_points,bot missed urgent symptom,reason_for_conversation,emotional support,1,s026
-conversation_pain_points,bot repeated advice,end_reason,partial resolution,1,s017
+conversation_pain_points,bot repeated advice,end_reason,unresolved need,1,s030
 conversation_pain_points,bot repeated advice,main_topics,blood glucose management,1,s017
-conversation_pain_points,bot repeated advice,reason_for_conversation,understand my condition,1,s017
-conversation_pain_points,bot repeated advice after pushback,end_reason,partial resolution,1,s017
-conversation_pain_points,bot repeated advice after pushback,end_reason,unresolved need,1,s030
-conversation_pain_points,bot repeated advice after pushback,main_topics,blood glucose management,1,s017
-conversation_pain_points,bot repeated advice after pushback,main_topics,pain management,1,s030
-conversation_pain_points,bot repeated advice after pushback,reason_for_conversation,decide on treatment,1,s030
-conversation_pain_points,bot repeated advice after pushback,reason_for_conversation,understand my condition,1,s017
-conversation_pain_points,bot repeated medication advice after pushback,main_topics,supplements and alternative therapies,1,s014
-conversation_pain_points,bot repeated medication advice after pushback,main_topics,treatment decisions,1,s038
-conversation_pain_points,bot repeated medication advice after pushback,reason_for_conversation,decide on treatment,1,s014
-conversation_pain_points,bot repeated medication advice after pushback,reason_for_conversation,understand my condition,1,s038
+conversation_pain_points,bot repeated advice,main_topics,pain management,1,s030
+conversation_pain_points,bot repeated advice,main_topics,supplements and alternative therapies,1,s014
+conversation_pain_points,bot repeated advice,main_topics,treatment decisions,1,s038
 end_reason,need met,main_topics,blood glucose management,1,s029
 end_reason,need met,main_topics,disease prognosis,1,s010
 end_reason,need met,main_topics,hair and scalp health,1,s007

@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-01T09:07:27+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user asked whether gluten-free eating helps Hashimoto's and later wanted a structured trial to judge whether it improves symptoms.",
+        "relevance": "strong",
+        "topic": "gluten-free diet"
+      },
+      {
+        "reason": "The user explained these ongoing symptoms were why they were considering diet and returned to them when asking about their levothyroxine dose.",
+        "relevance": "strong",
+        "topic": "persistent fatigue and brain fog"
+      },
+      {
+        "reason": "The user asked why testing matters and confirmed they would ask about screening before changing their diet.",
+        "relevance": "medium",
+        "topic": "celiac disease testing"
+      },
+      {
+        "reason": "The user asked whether their levothyroxine dose might be off and included dose review and nutrient checks in their proposed plan.",
+        "relevance": "medium",
+        "topic": "fatigue evaluation"
+      },
+      {
+        "reason": "The user said the diet approach appealed partly because it felt within their control compared with waiting on doctors.",
+        "relevance": "low",
+        "topic": "healthcare access"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether a gluten-free diet has evidence for Hashimoto's, explaining they still feel tired and foggy while taking levothyroxine. The assistant discussed celiac screening before eliminating gluten, suggested reviewing the dose and other possible fatigue causes with a doctor, and outlined a tracked, time-limited diet trial. The user agreed to pursue testing and a medication review first, then consider the trial, and said the balanced discussion was helpful."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5520,
+    "output_tokens": 1268
+  },
+  "version": "gpt_luna"
+}

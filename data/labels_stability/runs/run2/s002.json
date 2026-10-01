@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-10-01T09:08:48+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to understand preventive treatments before a neurologist visit and discussed newer and traditional options across several turns.",
+        "relevance": "strong",
+        "topic": "migraine prevention options"
+      },
+      {
+        "reason": "The user asked about precautions and side effects of a newer oral option and received a response about possible effects.",
+        "relevance": "medium",
+        "topic": "migraine medication side effects"
+      },
+      {
+        "reason": "The user raised insurance as a concern and asked whether trying older medications is required before newer ones are covered.",
+        "relevance": "medium",
+        "topic": "insurance coverage requirements"
+      },
+      {
+        "reason": "The user asked for questions to bring to the appointment and said the resulting list was exactly what they needed.",
+        "relevance": "medium",
+        "topic": "neurologist visit preparation"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user wanted to compare chronic migraine preventatives before a neurologist visit, including newer CGRP options, traditional medications, side effects, and insurance requirements. The assistant also discussed an oral option called migraxone and suggested questions for the neurologist; the user said the preparation was exactly what they needed and planned to ask about it."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4718,
+    "cache_write_tokens": 0,
+    "input_tokens": 4721,
+    "output_tokens": 707
+  },
+  "version": "gpt_luna"
+}

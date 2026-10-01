@@ -86,6 +86,7 @@ def test_payload_marks_missing_version_unavailable(records):
         },
     )
     assert [(v["key"], v["available"]) for v in payload["versions"]] == [("a", True), ("b", False)]
+    assert payload["topic_groups"]["pain management"] == "Physical symptoms"
     assert payload["conversations"]["s1"][0] == {
         "turn": 1,
         "role": "user",
@@ -206,6 +207,9 @@ def test_breakdown_fields_exist_in_rows(records):
     by_id = {r["session_id"]: r for r in records}
     dyn = {sid: fake_dynamics(render_conversation(rec)) for sid, rec in by_id.items()}
     row = attach_dynamics(_rows(records), dyn, by_id)[0]
+    # Topic groups are derived in the page from the topics and the payload's group table.
+    assert "topic_group" in keys and "main_topics" in row and "topic_scores" in row
+    keys = [k for k in keys if k != "topic_group"]
     assert keys and all(k in row for k in keys), keys
     assert 'data-tab="breakdown"' in template
 

@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-10-01T09:09:07+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by describing worsening memory and concentration problems and asked for practical ways to manage them.",
+        "relevance": "strong",
+        "topic": "fibromyalgia brain fog"
+      },
+      {
+        "reason": "The user discussed accounting errors and losing their train of thought in meetings, then engaged with several work strategies.",
+        "relevance": "strong",
+        "topic": "workplace cognitive difficulties"
+      },
+      {
+        "reason": "The user said they were scared of losing their job and later raised the risks of disclosing a chronic illness.",
+        "relevance": "medium",
+        "topic": "job security fears"
+      },
+      {
+        "reason": "The user asked whether to disclose to their employer and explored a confidential HR route, saying it changed their perspective.",
+        "relevance": "medium",
+        "topic": "workplace accommodations"
+      },
+      {
+        "reason": "The user described waking repeatedly and not feeling rested, and returned to sleep as a possible contributor to the fog.",
+        "relevance": "medium",
+        "topic": "sleep disruption"
+      },
+      {
+        "reason": "The user reported that their husband noticed snoring and pauses in breathing, and said they would book an evaluation.",
+        "relevance": "medium",
+        "topic": "sleep apnea symptoms"
+      },
+      {
+        "reason": "The user disclosed taking diphenhydramine most nights and reacted with relief and frustration to the possibility it contributed to fog.",
+        "relevance": "medium",
+        "topic": "antihistamine cognitive effects"
+      },
+      {
+        "reason": "The user asked whether medication or supplements could treat the fog, but did not return to that question separately.",
+        "relevance": "low",
+        "topic": "brain fog treatments"
+      },
+      {
+        "reason": "The user mentioned higher stress because the workplace was short-staffed as context for the worsening fog.",
+        "relevance": "low",
+        "topic": "work stress"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user sought practical ways to manage worsening fibromyalgia brain fog affecting accounting work and meetings, and discussed whether to seek workplace accommodations. The assistant offered work strategies, described a possible confidential HR route, and suggested raising breathing pauses during sleep and nightly diphenhydramine with a clinician or pharmacist. The user said the plan was clear and the conversation was more useful than expected."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 6524,
+    "cache_write_tokens": 0,
+    "input_tokens": 6527,
+    "output_tokens": 1170
+  },
+  "version": "gpt_luna"
+}

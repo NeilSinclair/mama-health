@@ -1,0 +1,134 @@
+import json
+import re
+
+import pandas as pd
+import pytest
+
+from mama_analysis.analysis import outcome_by, pain_point_list
+from mama_analysis.memo import (
+    memo_breakdown,
+    outcome_table_html,
+    pain_points_html,
+    pretty,
+    render_memo,
+)
+
+
+def _chips(*labels):
+    return [{"label": x, "raw": [x]} for x in labels]
+
+
+def _row(sid, reason, topics, end, disease):
+    return {
+        "session_id": sid,
+        "reason_for_conversation": _chips(reason),
+        "main_topics": _chips(*topics),
+        "conversation_pain_points": [],
+        "end_reason": _chips(end),
+        "disease": disease,
+        "summary": f"Summary of {sid}. More.",
+    }
+
+
+ROWS = [
+    _row("s1", "decide", ["common", "rare"], "need met", "type_2_diabetes"),
+    _row("s2", "decide", ["common"], "need met", "ibs"),
+    _row("s3", "understand", ["other"], "unresolved need", "ibs"),
+]
+
+
+def test_pretty():
+    assert pretty("type_2_diabetes") == "type 2 diabetes"
+
+
+def test_memo_breakdown_flattens_labels_per_conversation():
+    b = memo_breakdown(ROWS)
+    assert b["fields"] == [
+        "reason_for_conversation",
+        "topic_group",
+        "conversation_pain_points",
+        "end_reason",
+        "disease",
+    ]
+    first = b["rows"][0]
+    assert first["session_id"] == "s1"
+    assert first["reason_for_conversation"] == ["decide"]
+    assert first["disease"] == ["type 2 diabetes"]
+    assert first["topic_group"] == ["(ungrouped)"]
+    assert set(first) == {"session_id", "summary", *b["fields"]}
+
+
+def test_outcome_table_html_shows_resolved_unresolved_and_pct():
+    page = outcome_table_html(outcome_by(ROWS, "disease"), "disease", "outputs/x.csv")
+    assert '<table class="sortable">' in page
+    assert "<th>Disease</th>" in page and "outputs/x.csv" in page
+    heads = re.findall(r'<th class="num">([^<]+)</th>', page)
+    assert heads == ["Resolved", "Unresolved", "Total", "Need met %"]
+    assert re.search(
+        r'<th scope="row">ibs</th>'
+        + r'<td class="num">1</td>' * 2
+        + r'<td class="num">2</td><td class="num">50%</td>',
+        page,
+    )
+    assert re.search(r'<tr class="all"><th scope="row">All</th>.*?67%</td></tr>', page)
+    assert "type 2 diabetes" in page
+
+
+def test_render_memo_replaces_markers_and_embeds_breakdown():
+    text = "# My memo\n\nIntro *text*.\n\n<!-- memo:t -->\n\n<!-- memo:breakdown -->\n"
+    data = {"rows": [{"summary": "</script>"}], "fields": []}
+    page = render_memo(text, {"t": "<table id='t'></table>"}, data)
+    assert "<title>My memo</title>" in page
+    assert "<h1>My memo</h1>" in page and "<em>text</em>" in page
+    assert "<table id='t'></table>" in page and 'id="bgrid"' in page
+    deepdive = page[page.index('<details class="deepdive">') :]
+    assert deepdive.index('id="bgrid"') < deepdive.index("</section></details>")
+    assert "memo:" not in page
+    payload = page.split("const DATA = ", 1)[1].split(";\n", 1)[0]
+    assert "</script>" not in payload
+    assert json.loads(payload) == data
+
+
+def test_render_memo_rejects_unknown_marker():
+    with pytest.raises(ValueError, match="unknown memo marker"):
+        render_memo("<!-- memo:nope -->", {}, {"rows": [], "fields": []})
+
+
+def test_render_memo_renders_markdown_inside_collapsible_sections():
+    text = (
+        '## Part\n\n<details markdown="1">\n<summary>Deep dive</summary>\n\n'
+        "Some **bold** text.\n\n- a point\n\n</details>\n"
+    )
+    page = render_memo(text, {}, {"rows": [], "fields": []})
+    details = page[page.index("<details") : page.index("</details>")]
+    assert "<summary>Deep dive</summary>" in details
+    assert "<strong>bold</strong>" in details and "<li>a point</li>" in details
+
+
+def test_pain_points_html_one_table_with_where_column_per_field():
+    rows = [r | {"conversation_pain_points": _chips("bot repeated advice")} for r in ROWS]
+    page = pain_points_html(pain_point_list(rows), "outputs/p.csv")
+    assert re.findall(r'<option value="(\w+)">', page) == ["topic_group", "disease"]
+    assert 'data-rows="topic_group"' in page and page.count("<table") == 1
+    assert '<th data-field="disease">Where it happens (disease)</th>' in page
+    assert '<span class="wchip">type 2 diabetes <b>1</b></span>' in page
+    assert '<th scope="row">bot repeated advice</th><td class="num">3</td>' in page
+    assert "any pain point" not in page and 'class="all"' not in page
+    assert "s1, s2, s3" in page and "outputs/p.csv" in page
+
+
+def test_pain_points_html_rejects_malformed_where():
+    df = pain_point_list([]).iloc[:0]
+    bad = pd.DataFrame(
+        [
+            {
+                "pain_point": "x",
+                "n_sessions": 1,
+                "session_ids": "a",
+                "where_topic_group": "no count",
+                "where_disease": "",
+            }
+        ]
+    )
+    with pytest.raises(ValueError, match="unexpected 'where' item"):
+        pain_points_html(pd.concat([df, bad]), "s")

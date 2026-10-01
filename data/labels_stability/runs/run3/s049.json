@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:12:24+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described making mistakes by late morning and crashing for two days, which drove the conversation about being unable to continue working.",
+        "relevance": "strong",
+        "topic": "work impairment"
+      },
+      {
+        "reason": "The user said they had decided to resign, asked for a letter, and worked with the assistant to make it warmer.",
+        "relevance": "strong",
+        "topic": "resignation decision"
+      },
+      {
+        "reason": "The user described fatigue and brain fog and later asked what to do about long COVID after leaving work.",
+        "relevance": "strong",
+        "topic": "long covid symptoms"
+      },
+      {
+        "reason": "The user said they needed someone who would listen, felt tired of fighting for support, and felt calmer after the conversation.",
+        "relevance": "medium",
+        "topic": "emotional exhaustion"
+      },
+      {
+        "reason": "The user described HR's vague response and learned about occupational health and possible adjustments over several turns.",
+        "relevance": "medium",
+        "topic": "workplace adjustments"
+      },
+      {
+        "reason": "The user asked for a clear explanation of pacing and said it finally made sense.",
+        "relevance": "medium",
+        "topic": "pacing"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "The user described long COVID fatigue and brain fog impairing their office work and said they had decided to resign; the assistant drafted and then warmed up a resignation letter. The user also asked about caring for their health after leaving, found the explanation of pacing helpful, and said they felt calmer."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5133,
+    "cache_write_tokens": 0,
+    "input_tokens": 5136,
+    "output_tokens": 1219
+  },
+  "version": "gpt_luna"
+}

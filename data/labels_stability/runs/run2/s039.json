@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-10-01T09:09:37+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to understand how to plan medication choices ahead of trying for a baby and returned to this throughout the conversation.",
+        "relevance": "strong",
+        "topic": "pregnancy planning with RA"
+      },
+      {
+        "reason": "The user asked which medicines are compatible with trying and pregnancy, which should be avoided, and whether their current treatment was a concern.",
+        "relevance": "strong",
+        "topic": "medication safety around conception"
+      },
+      {
+        "reason": "After saying their rheumatologist had started methotrexate, the user asked whether to worry and discussed contraception and stopping it before trying.",
+        "relevance": "medium",
+        "topic": "methotrexate use"
+      },
+      {
+        "reason": "The user asked what would happen if a pregnancy-compatible medication did not control their RA as well as methotrexate.",
+        "relevance": "medium",
+        "topic": "RA control during medication changes"
+      },
+      {
+        "reason": "The user asked whether RA itself changes during pregnancy and engaged with the explanation about possible symptom improvement.",
+        "relevance": "medium",
+        "topic": "RA during pregnancy"
+      },
+      {
+        "reason": "The user said they wanted to be prepared for a postpartum flare rather than surprised by it.",
+        "relevance": "medium",
+        "topic": "postpartum flare risk"
+      },
+      {
+        "reason": "The user asked whether pregnancy-compatible medicines are also compatible with breastfeeding.",
+        "relevance": "medium",
+        "topic": "breastfeeding medication safety"
+      },
+      {
+        "reason": "The user asked who to coordinate with and whether to raise pregnancy plans with their rheumatologist now.",
+        "relevance": "medium",
+        "topic": "preconception care coordination"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "Recently diagnosed with RA and taking methotrexate, the user asked how to plan for trying for a baby in about 18 months, including medication safety, disease control, pregnancy, and breastfeeding. The assistant discussed medication transitions and care-team planning; the user said the recap was exactly right and that they felt they had a handle on the plan."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5913,
+    "cache_write_tokens": 0,
+    "input_tokens": 5916,
+    "output_tokens": 864
+  },
+  "version": "gpt_luna"
+}

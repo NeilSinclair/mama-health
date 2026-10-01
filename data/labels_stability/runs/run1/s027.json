@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:07:53+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came overwhelmed by the diet’s food rules and discussed how to approach its phases and meals throughout the conversation.",
+        "relevance": "strong",
+        "topic": "low fodmap diet"
+      },
+      {
+        "reason": "The user repeatedly described contradictory online lists and asked how to find reliable information without cross-referencing websites.",
+        "relevance": "strong",
+        "topic": "food list confusion"
+      },
+      {
+        "reason": "The user asked whether the diet meant avoiding foods such as onions and garlic forever and agreed that identifying personal triggers was the goal.",
+        "relevance": "medium",
+        "topic": "food trigger identification"
+      },
+      {
+        "reason": "The user asked how to test foods properly and whether to do reintroduction alone or with professional support.",
+        "relevance": "medium",
+        "topic": "diet reintroduction"
+      },
+      {
+        "reason": "The user asked whether the NHS might cover a dietitian referral for IBS and accepted asking their GP about it as part of a plan.",
+        "relevance": "medium",
+        "topic": "dietitian referral"
+      },
+      {
+        "reason": "The user worried that elimination would leave them with almost nothing to eat and said the reassurance helped.",
+        "relevance": "medium",
+        "topic": "fear of hunger"
+      },
+      {
+        "reason": "The user questioned whether paying for the Monash app was worthwhile but did not return to the cost after receiving alternatives.",
+        "relevance": "low",
+        "topic": "health app cost"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user, whose gastroenterologist recommended low FODMAP for IBS, felt overwhelmed by conflicting food lists and worried about permanent restrictions and hunger. The assistant explained the temporary elimination and reintroduction approach, suggested the Monash app and asking the GP about a dietitian referral, and outlined options for eating during elimination. The user said they felt less panicked, summarized an accepted plan, and called the conversation more helpful than their online searching."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5331,
+    "output_tokens": 782
+  },
+  "version": "gpt_luna"
+}

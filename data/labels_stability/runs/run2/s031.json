@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:09:34+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether to delay metformin and try lifestyle changes first, then discussed a monitored three-month trial.",
+        "relevance": "strong",
+        "topic": "metformin versus lifestyle changes"
+      },
+      {
+        "reason": "The user asked whether delaying medication could damage the eyes and kidneys and returned to how to judge the trial's results.",
+        "relevance": "medium",
+        "topic": "diabetes complication risk"
+      },
+      {
+        "reason": "The user asked for food guidance and discussed rice, chapati, vegetarian meals, and difficulty refusing sweets.",
+        "relevance": "medium",
+        "topic": "diabetes diet changes"
+      },
+      {
+        "reason": "The user explained that knee problems limit exercise and asked about walking after meals, ultimately saying slow walks were manageable.",
+        "relevance": "medium",
+        "topic": "exercise with knee limitations"
+      },
+      {
+        "reason": "The user said her husband urged her to start medication because he feared future complications.",
+        "relevance": "low",
+        "topic": "family medication concerns"
+      },
+      {
+        "reason": "The user asked whether to check sugar at home during the trial and mentioned possibly using her son's old meter.",
+        "relevance": "low",
+        "topic": "home glucose monitoring"
+      },
+      {
+        "reason": "The user mentioned her mother's diabetes and her sister's improvement with walking and weight loss as context for her own decision.",
+        "relevance": "low",
+        "topic": "family diabetes experiences"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user had not started prescribed metformin and wanted to know whether trying diet and exercise first was reasonable, while also worrying about complications and limitations from knee problems. The assistant suggested a monitored three-month lifestyle trial, offered diet and walking ideas, and discussed home checks; the user said she would tell her doctor and talk it over with family."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5269,
+    "cache_write_tokens": 0,
+    "input_tokens": 5272,
+    "output_tokens": 1439
+  },
+  "version": "gpt_luna"
+}

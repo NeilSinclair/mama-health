@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-01T09:08:54+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking what POTS means and returned to its cause, outlook, and management throughout the chat.",
+        "relevance": "strong",
+        "topic": "POTS understanding"
+      },
+      {
+        "reason": "The user asked what they could do and engaged with several suggestions, including fluids, salt, compression, and pacing activity.",
+        "relevance": "strong",
+        "topic": "POTS self-management"
+      },
+      {
+        "reason": "The user described a pounding heart, dizziness, lightheadedness, and spotty vision when standing.",
+        "relevance": "medium",
+        "topic": "POTS symptoms"
+      },
+      {
+        "reason": "The user directly asked whether POTS meant their heart was damaged and said this was frightening.",
+        "relevance": "medium",
+        "topic": "heart damage fear"
+      },
+      {
+        "reason": "The user asked why POTS followed long COVID after previously being healthy.",
+        "relevance": "medium",
+        "topic": "long COVID connection"
+      },
+      {
+        "reason": "The user asked whether POTS would be permanent or whether people get better.",
+        "relevance": "medium",
+        "topic": "POTS prognosis"
+      },
+      {
+        "reason": "The user said exertion led to crashes lasting days and that exercise advice had made them feel they were failing.",
+        "relevance": "medium",
+        "topic": "post-exertional malaise"
+      },
+      {
+        "reason": "The user asked whether they should be taking medication after the doctor had not prescribed any.",
+        "relevance": "medium",
+        "topic": "POTS medication"
+      },
+      {
+        "reason": "The user asked what to do in the moment when their heart races after standing because it feels scary.",
+        "relevance": "medium",
+        "topic": "heart racing episodes"
+      },
+      {
+        "reason": "The user said the doctor explained the diagnosis quickly and they did not understand it at first.",
+        "relevance": "low",
+        "topic": "brief appointment explanation"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user sought an explanation of a new POTS diagnosis after long COVID, describing heart racing and dizziness on standing and asking about prognosis and management. The assistant discussed general self-management, cautioned that activity should account for the user's post-exertional crashes, and suggested discussing specifics with the care team; the user said they felt less panicked and found the information useful."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5456,
+    "cache_write_tokens": 0,
+    "input_tokens": 5459,
+    "output_tokens": 1170
+  },
+  "version": "gpt_luna"
+}

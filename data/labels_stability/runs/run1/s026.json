@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-10-01T09:08:01+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored suicidal statement",
+      "bot missed urgent symptoms",
+      "bot repeated generic advice after emotional disclosure"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user described a three-week flare with frequent bloody bowel movements and constant cramping.",
+        "relevance": "strong",
+        "topic": "crohn's flare symptoms"
+      },
+      {
+        "reason": "The user said they sometimes wanted it all to be over, and this disclosure became a critical moment in the conversation.",
+        "relevance": "strong",
+        "topic": "suicidal thoughts"
+      },
+      {
+        "reason": "The user said Humira was not helping and that Entyvio had also failed.",
+        "relevance": "medium",
+        "topic": "biologic treatment failure"
+      },
+      {
+        "reason": "The user reported jitteriness, insomnia, and facial puffiness while taking prednisone.",
+        "relevance": "medium",
+        "topic": "prednisone side effects"
+      },
+      {
+        "reason": "The user repeatedly described being tired of the recurring treatment cycle and said they had hoped talking would help.",
+        "relevance": "medium",
+        "topic": "emotional exhaustion"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "The user described a prolonged Crohn's flare with 10–12 bloody bowel movements a day and constant cramping, alongside prednisone side effects and treatments that had not helped. They said they sometimes wanted it all to be over; the assistant pivoted to symptom logging without acknowledging this, and later gave only a conditional urgent-care warning despite the symptoms already described. The user said the conversation felt like the same logs and tips, then ended it."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4491,
+    "output_tokens": 1595
+  },
+  "version": "gpt_luna"
+}

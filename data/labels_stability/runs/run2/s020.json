@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:09:12+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking why their A1C rose despite an unchanged routine and sought an explanation throughout the conversation.",
+        "relevance": "strong",
+        "topic": "rising A1C"
+      },
+      {
+        "reason": "The user described months of waking repeatedly and loud snoring, returned to sleep as a likely factor, and included it in their appointment plan.",
+        "relevance": "strong",
+        "topic": "broken sleep and snoring"
+      },
+      {
+        "reason": "The user worried the result meant diabetes was suddenly getting much worse or that age meant things were downhill.",
+        "relevance": "medium",
+        "topic": "diabetes progression worry"
+      },
+      {
+        "reason": "The user asked what an individualized target meant after their doctor had only given them a general target.",
+        "relevance": "medium",
+        "topic": "personalized A1C target"
+      },
+      {
+        "reason": "The user asked whether to get a home meter and why fasting and after-meal readings matter, then included asking about monitoring in their plan.",
+        "relevance": "medium",
+        "topic": "blood sugar monitoring"
+      },
+      {
+        "reason": "The user mentioned gaining a few pounds and asked whether it could affect blood sugar, but did not return to it afterward.",
+        "relevance": "low",
+        "topic": "weight gain"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why their A1C rose from 6.8 to 7.4 despite keeping their routine the same, and whether age explained it. They discussed broken sleep with loud snoring and modest weight gain, and the assistant suggested raising these with their doctor along with asking about their personal A1C target, home monitoring, and possible sleep evaluation. The user restated this plan and said the conversation was more useful than expecting to be told things were simply downhill."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5071,
+    "cache_write_tokens": 0,
+    "input_tokens": 5074,
+    "output_tokens": 1020
+  },
+  "version": "gpt_luna"
+}

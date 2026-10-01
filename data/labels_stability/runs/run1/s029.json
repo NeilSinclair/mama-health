@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-01T09:07:54+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came in overwhelmed by the two diagnoses and asked how they are connected and which came first.",
+        "relevance": "strong",
+        "topic": "pcos and insulin resistance"
+      },
+      {
+        "reason": "The user asked why metformin was suggested despite not having diabetes and later chose to start it as their doctor advised.",
+        "relevance": "strong",
+        "topic": "metformin treatment"
+      },
+      {
+        "reason": "The user asked what they could do beyond medication and engaged with discussion of movement and eating patterns.",
+        "relevance": "strong",
+        "topic": "lifestyle management"
+      },
+      {
+        "reason": "The user said repeated efforts to lose weight had been frustrating and that PCOS made it feel almost impossible.",
+        "relevance": "medium",
+        "topic": "weight loss frustration"
+      },
+      {
+        "reason": "The user specifically asked whether metformin causes stomach problems.",
+        "relevance": "medium",
+        "topic": "metformin side effects"
+      },
+      {
+        "reason": "The user asked whether there is a specific diet and whether lower-glycemic eating means eliminating carbohydrates.",
+        "relevance": "medium",
+        "topic": "pcos diet"
+      },
+      {
+        "reason": "The user asked what exercise is best and said they do not enjoy going to the gym.",
+        "relevance": "medium",
+        "topic": "exercise preferences"
+      },
+      {
+        "reason": "The user asked whether a continuous glucose monitor might be useful for them.",
+        "relevance": "low",
+        "topic": "glucose monitor usefulness"
+      },
+      {
+        "reason": "The user briefly doubted their insurer would cover a monitor for this purpose.",
+        "relevance": "low",
+        "topic": "glucose monitor coverage"
+      },
+      {
+        "reason": "The user described feeling overwhelmed by the new diagnosis and later said the explanation made it feel less scary.",
+        "relevance": "medium",
+        "topic": "diagnosis-related overwhelm"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user wanted to understand newly identified insulin resistance alongside PCOS and asked about metformin, side effects, lifestyle changes, diet, exercise, and a glucose monitor. The assistant explained these topics and acknowledged the user's frustration about weight loss; the user said the discussion helped and planned to start metformin as their doctor suggested and walk more after dinner."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4833,
+    "output_tokens": 840
+  },
+  "version": "gpt_luna"
+}

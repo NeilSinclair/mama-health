@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:12:03+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user asked whether it was wrong to defer the prescribed medication and repeatedly considered trying lifestyle changes first.",
+        "relevance": "strong",
+        "topic": "metformin treatment decision"
+      },
+      {
+        "reason": "The user asked for a structured approach and engaged with advice about walking and food as a three-month trial.",
+        "relevance": "strong",
+        "topic": "lifestyle changes"
+      },
+      {
+        "reason": "The user's husband's warning about eye and kidney damage caused confusion, and the user asked whether delaying medication was risky.",
+        "relevance": "medium",
+        "topic": "diabetes complications"
+      },
+      {
+        "reason": "The user discussed vegetarian meals, rice and chapati, and difficulty refusing sweets during festivals.",
+        "relevance": "medium",
+        "topic": "dietary habits"
+      },
+      {
+        "reason": "The user asked whether a small A1c decrease would count as success and whether to check glucose at home during the trial.",
+        "relevance": "medium",
+        "topic": "blood sugar targets"
+      },
+      {
+        "reason": "The user said knee problems made running and gym exercise difficult, then identified slow walking as manageable.",
+        "relevance": "low",
+        "topic": "knee limitations"
+      },
+      {
+        "reason": "The user mentioned a mother with diabetes and a sister whose blood sugar improved with walking and weight loss.",
+        "relevance": "low",
+        "topic": "family diabetes history"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user, who had not started prescribed metformin after a type 2 diabetes diagnosis and an A1c of 6.9, asked whether trying lifestyle changes first was reasonable and worried about complications from delaying medication. The assistant proposed a monitored three-month lifestyle trial and discussed food, walking, and glucose checks; the user accepted the approach and said they would tell the doctor and talk it over with family."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5269,
+    "cache_write_tokens": 0,
+    "input_tokens": 5272,
+    "output_tokens": 1683
+  },
+  "version": "gpt_luna"
+}

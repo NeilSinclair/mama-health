@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-10-01T09:08:07+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user wanted to understand the options and what might shape the rheumatologist’s recommendation, returning to practical questions to bring to the appointment.",
+        "relevance": "strong",
+        "topic": "biologic treatment choice"
+      },
+      {
+        "reason": "The user described persistent hand and wrist synovitis, elevated CRP, and prolonged morning stiffness despite current treatment, which prompted the proposed step-up in therapy.",
+        "relevance": "strong",
+        "topic": "active rheumatoid arthritis"
+      },
+      {
+        "reason": "The user said long-term risk was the part that scared them most and discussed how medication risks compare with risks from ongoing inflammation.",
+        "relevance": "strong",
+        "topic": "cancer risk"
+      },
+      {
+        "reason": "The user asked whether a previous shingles episode could affect treatment choice and vaccination planning.",
+        "relevance": "medium",
+        "topic": "shingles history"
+      },
+      {
+        "reason": "The user raised frequent sinus infections as a possible factor in choosing an immunosuppressive treatment.",
+        "relevance": "medium",
+        "topic": "recurrent infections"
+      },
+      {
+        "reason": "The user asked whether Shingrix was appropriate at 51 and while immunosuppressed.",
+        "relevance": "medium",
+        "topic": "shingles vaccination"
+      },
+      {
+        "reason": "The user asked how injections, infusions, and oral options differ because they travel for work.",
+        "relevance": "medium",
+        "topic": "travel treatment logistics"
+      },
+      {
+        "reason": "The user asked how long it takes to know whether a biologic is working and did not want to endure months of pain without a checkpoint.",
+        "relevance": "medium",
+        "topic": "biologic response timeline"
+      },
+      {
+        "reason": "The user said they were needle-shy despite being accustomed to their methotrexate injection, and found self-injection appealing overall.",
+        "relevance": "low",
+        "topic": "injection anxiety"
+      },
+      {
+        "reason": "The user asked whether possible hormone therapy during perimenopause could interact with RA treatment.",
+        "relevance": "medium",
+        "topic": "hormone therapy"
+      },
+      {
+        "reason": "The user mentioned controlled mild hypertension once as a possible factor in treatment choice.",
+        "relevance": "low",
+        "topic": "hypertension"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user wanted to prepare for a rheumatology appointment about adding a biologic for active RA despite methotrexate and sulfasalazine. The conversation covered treatment classes, infection and shingles history, cancer risk, travel logistics, response timelines, and possible hormone therapy; the user said they felt prepared for a real discussion and that their anxiety had lowered."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 6584,
+    "output_tokens": 1366
+  },
+  "version": "gpt_luna"
+}

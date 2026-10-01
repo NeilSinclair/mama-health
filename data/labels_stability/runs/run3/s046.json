@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-10-01T09:12:18+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot shifted trial search to user",
+      "bot left clinic question unanswered"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user asked what new, disease-modifying research is underway beyond standard POTS management and discussed specific research directions.",
+        "relevance": "strong",
+        "topic": "long covid research"
+      },
+      {
+        "reason": "The user repeatedly asked how to find trials they could join and whether specific treatments were recruiting in the US.",
+        "relevance": "strong",
+        "topic": "clinical trial access"
+      },
+      {
+        "reason": "The user returned several times to the difficulty of judging eligibility and said they could not manage reading and matching listings one by one.",
+        "relevance": "medium",
+        "topic": "trial eligibility matching"
+      },
+      {
+        "reason": "The user said they were not connected to a dedicated clinic and described the waitlist as a major barrier.",
+        "relevance": "medium",
+        "topic": "long covid clinic access"
+      },
+      {
+        "reason": "The user cited cognitive impairment as making trial-list reading and matching difficult.",
+        "relevance": "medium",
+        "topic": "cognitive impairment"
+      },
+      {
+        "reason": "The user described their POTS as fairly stable and said they had already tried standard management approaches.",
+        "relevance": "low",
+        "topic": "pots management"
+      },
+      {
+        "reason": "The user said they still could not work, but did not return to this impact during the conversation.",
+        "relevance": "low",
+        "topic": "work limitations"
+      },
+      {
+        "reason": "The user opened by saying they were tired of trying things that did not help, but the discussion moved to research and access.",
+        "relevance": "low",
+        "topic": "treatment fatigue"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "After more than two years with long COVID and stable-ish POTS, the user asked about emerging disease-modifying research and how to access relevant trials. The assistant discussed research directions and suggested trial databases, referrals, and clinic waitlists, but did not identify specific centers or match the user to trials; the user ended with a general picture, while the practical access problem remained."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5388,
+    "cache_write_tokens": 0,
+    "input_tokens": 5391,
+    "output_tokens": 1333
+  },
+  "version": "gpt_luna"
+}

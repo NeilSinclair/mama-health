@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:07:32+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user said their pain was returning and repeatedly described the pill-free week as the worst time.",
+        "relevance": "strong",
+        "topic": "endometriosis pain"
+      },
+      {
+        "reason": "The user asked for the full range of alternatives, explored several options, and asked what to try first.",
+        "relevance": "strong",
+        "topic": "endometriosis treatment options"
+      },
+      {
+        "reason": "The user said they were tired of treatment always being about hormones and asked whether anything else was available.",
+        "relevance": "medium",
+        "topic": "hormone treatment fatigue"
+      },
+      {
+        "reason": "The user explained that endometriosis was found on the ovary and near the bowel and asked whether that changed treatment choices.",
+        "relevance": "medium",
+        "topic": "deep endometriosis"
+      },
+      {
+        "reason": "The user said they had been discharged to the GP after surgery and felt this was unsatisfactory given where the disease was found.",
+        "relevance": "medium",
+        "topic": "specialist follow-up"
+      },
+      {
+        "reason": "The user asked whether this option would require private care and included it in their list for the GP.",
+        "relevance": "medium",
+        "topic": "pelvic floor physiotherapy"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user described endometriosis pain returning on the combined pill, especially during the break week, and asked about hormonal and non-hormonal options, including how disease found on the ovary and near the bowel might affect choices. The assistant outlined options and suggested discussing continuous pill use, other treatments, specialist re-referral, and pelvic floor physiotherapy with the GP; the user said they had a proper list and felt less stuck."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5873,
+    "output_tokens": 915
+  },
+  "version": "gpt_luna"
+}

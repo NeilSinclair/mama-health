@@ -6,13 +6,17 @@ from fakes import FakeLabeller, fake_respond, fake_summary, topics
 from mama_analysis.consolidate import (
     CONSOLIDATED_FIELDS,
     DISPLAY_NAMES,
+    TOPIC_GROUPS,
+    UNGROUPED,
     apply_mapping,
     consolidate_all,
     field_labels,
     mapping_dir,
+    merge_canonicals,
     raw_labels,
     render_labels,
     shown_labels,
+    topic_groups,
     validate_mapping,
 )
 from mama_analysis.labellers import Prompt
@@ -138,3 +142,44 @@ def test_display_names_cover_every_fixed_value():
         values = get_args(SummaryLLM.model_fields[field].annotation)
         assert set(names) == set(values), field
         assert len(set(names.values())) == len(names)  # no two values share a name
+
+
+def test_merge_canonicals_collapses_repeated_advice_variants():
+    mapping = {
+        "r1": "bot repeated advice after pushback",
+        "r2": "bot repeated medication advice after pushback",
+        "r3": "bot repeated advice",
+        "r4": "bot repeatedly ignored a question",
+        "r5": "bot ignored a direct question",
+    }
+    assert merge_canonicals("conversation_pain_points", mapping) == {
+        "r1": "bot repeated advice",
+        "r2": "bot repeated advice",
+        "r3": "bot repeated advice",
+        "r4": "bot repeatedly ignored a question",
+        "r5": "bot ignored a direct question",
+    }
+
+
+def test_merge_canonicals_leaves_other_fields_alone():
+    mapping = {"r": "bot repeated advice after pushback"}
+    assert merge_canonicals("main_topics", mapping) == mapping
+
+
+def test_topic_groups_maps_dedupes_and_flags_unknown():
+    assert topic_groups(["pain management", "skin conditions", "cancer risk", "new thing"]) == [
+        "Physical symptoms",
+        "Understanding the condition & outlook",
+        UNGROUPED,
+    ]
+
+
+def test_topic_groups_are_disjoint_and_cover_the_committed_vocabulary():
+    import json
+    from pathlib import Path
+
+    grouped = [t for topics in TOPIC_GROUPS.values() for t in topics]
+    assert len(grouped) == len(set(grouped))
+    path = Path(__file__).resolve().parents[1] / "data/labels/mappings/gpt_luna/main_topics.json"
+    canonical = set(json.loads(path.read_text())["output"]["mapping"].values())
+    assert canonical == set(grouped)

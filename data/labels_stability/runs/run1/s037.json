@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-10-01T09:08:20+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with urgency as the main problem and returned to its effect on work and daily life throughout the conversation.",
+        "relevance": "strong",
+        "topic": "bowel urgency"
+      },
+      {
+        "reason": "The user described urgency interfering with caring for their children and doing their job, especially during meetings.",
+        "relevance": "medium",
+        "topic": "daily life disruption"
+      },
+      {
+        "reason": "The user said the symptoms were embarrassing to discuss and later described arriving feeling ashamed.",
+        "relevance": "medium",
+        "topic": "shame and embarrassment"
+      },
+      {
+        "reason": "The user reported occasional blood, which shaped the discussion of symptom control and seeking specialist care.",
+        "relevance": "medium",
+        "topic": "rectal bleeding"
+      },
+      {
+        "reason": "The user said they had taken mesalamine tablets for about two years and asked about adding rectal treatment.",
+        "relevance": "medium",
+        "topic": "mesalamine treatment"
+      },
+      {
+        "reason": "The user said their doctor had described UC as simply being like this, leading them to think the symptoms were normal.",
+        "relevance": "medium",
+        "topic": "dismissed symptoms"
+      },
+      {
+        "reason": "The user had not seen a gastroenterologist since diagnosis and later asked how to get an appointment sooner because waits were long.",
+        "relevance": "medium",
+        "topic": "specialist access"
+      },
+      {
+        "reason": "The user asked what to ask a doctor about after learning their current treatment might not be controlling symptoms.",
+        "relevance": "medium",
+        "topic": "treatment escalation"
+      },
+      {
+        "reason": "The user asked whether a calprotectin test could show inflammation without a colonoscopy.",
+        "relevance": "low",
+        "topic": "inflammation testing"
+      },
+      {
+        "reason": "The user asked for ways to cope with urgency at work, particularly during meetings.",
+        "relevance": "medium",
+        "topic": "workplace coping"
+      },
+      {
+        "reason": "The user had loperamide at home and said they would not take it before asking their doctor.",
+        "relevance": "medium",
+        "topic": "loperamide safety"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "The user described frequent, unpredictable urgency and occasional blood from ulcerative colitis, affecting work and family life, and said they had assumed this was normal after their doctor’s advice. The assistant discussed specialist review, possible treatment options, testing, and coping strategies; the user accepted a plan and said they felt able to act rather than suffer quietly."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5917,
+    "output_tokens": 1771
+  },
+  "version": "gpt_luna"
+}

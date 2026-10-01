@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-01T09:08:04+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether constant exhaustion was normal and returned to how it had continued despite treatment.",
+        "relevance": "strong",
+        "topic": "persistent fatigue"
+      },
+      {
+        "reason": "The user asked what Free T3 and Free T4 show and whether to request testing and a dose discussion.",
+        "relevance": "medium",
+        "topic": "thyroid evaluation"
+      },
+      {
+        "reason": "The user worried fatigue might not be thyroid-related and asked about ferritin after learning a normal blood count may not rule out low iron stores.",
+        "relevance": "medium",
+        "topic": "other fatigue causes"
+      },
+      {
+        "reason": "The user asked whether to push for desiccated thyroid or added T3 and discussed how to raise treatment questions with the doctor.",
+        "relevance": "medium",
+        "topic": "alternative thyroid treatments"
+      },
+      {
+        "reason": "The user said they felt gaslit about fatigue and worried about being written off as an internet patient.",
+        "relevance": "medium",
+        "topic": "feeling dismissed by doctor"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user described persistent exhaustion despite six months of levothyroxine for Hashimoto's and a TSH they were told was normal. The assistant helped outline questions about dose adjustment, thyroid and other fatigue tests, and later treatment options; the user restated a plan and said they felt prepared and were looking forward to the appointment."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5422,
+    "output_tokens": 1694
+  },
+  "version": "gpt_luna"
+}

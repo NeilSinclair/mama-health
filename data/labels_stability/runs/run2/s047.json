@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-10-01T09:09:49+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not answer interaction question"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether methotrexate was safe with warfarin and whether starting it could affect their warfarin readings.",
+        "relevance": "strong",
+        "topic": "methotrexate and warfarin safety"
+      },
+      {
+        "reason": "The user asked whether methotrexate blood tests would detect warfarin-related changes, and the conversation also covered continuing usual warfarin checks.",
+        "relevance": "medium",
+        "topic": "medication monitoring"
+      },
+      {
+        "reason": "The user asked what to watch for at home, and the assistant listed possible bleeding and methotrexate-related symptoms.",
+        "relevance": "medium",
+        "topic": "medication warning signs"
+      },
+      {
+        "reason": "The user confirmed their GP had stressed that methotrexate is taken weekly, not daily.",
+        "relevance": "low",
+        "topic": "weekly methotrexate dosing"
+      },
+      {
+        "reason": "The user asked what to raise with the GP before starting, and the assistant suggested several points to confirm.",
+        "relevance": "low",
+        "topic": "pre-start GP questions"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user wanted to know whether starting methotrexate for rheumatoid arthritis was safe while taking warfarin, especially whether it could affect their readings. The assistant discussed monitoring, warning signs, weekly dosing, and questions for the GP, but did not clearly answer how the specific drug combination might affect warfarin; the user nevertheless said they felt much better."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4479,
+    "cache_write_tokens": 0,
+    "input_tokens": 4482,
+    "output_tokens": 1073
+  },
+  "version": "gpt_luna"
+}

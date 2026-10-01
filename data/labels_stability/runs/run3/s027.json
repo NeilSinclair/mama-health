@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-01T09:11:46+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user began overwhelmed by conflicting food lists and kept asking how to navigate the diet and its phases.",
+        "relevance": "strong",
+        "topic": "low fodmap diet guidance"
+      },
+      {
+        "reason": "The user worried they would have to avoid onions and garlic forever and later feared elimination would leave them with too little to eat.",
+        "relevance": "medium",
+        "topic": "food restriction fears"
+      },
+      {
+        "reason": "The user asked how to carry out reintroduction and whether to do it with professional support.",
+        "relevance": "medium",
+        "topic": "fodmap reintroduction"
+      },
+      {
+        "reason": "The user asked whether the NHS would cover a dietitian referral for IBS and considered asking their GP.",
+        "relevance": "medium",
+        "topic": "dietitian referral access"
+      },
+      {
+        "reason": "The user questioned whether the Monash app was worth paying for but did not return to the cost after hearing about free alternatives.",
+        "relevance": "low",
+        "topic": "health app cost"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user was overwhelmed by conflicting low-FODMAP food lists and worried the diet meant permanently giving up foods or being hungry. The assistant explained the diet phases, suggested the Monash app and asking the GP about a dietitian referral, and answered questions about reintroduction and food variety. The user restated a plan and said the conversation was genuinely helpful."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5328,
+    "cache_write_tokens": 0,
+    "input_tokens": 5331,
+    "output_tokens": 639
+  },
+  "version": "gpt_luna"
+}

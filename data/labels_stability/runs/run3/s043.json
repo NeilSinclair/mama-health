@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-10-01T09:12:11+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot repeatedly ignored emotional distress"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly described mourning the life and identity they feel endometriosis has taken from them and explicitly asked to be heard.",
+        "relevance": "strong",
+        "topic": "illness-related grief"
+      },
+      {
+        "reason": "The user returned several times to their marriage barely holding on and feeling their husband pulling away.",
+        "relevance": "medium",
+        "topic": "marriage strain"
+      },
+      {
+        "reason": "The user described giving up on having children and grieving the loss of becoming a mother.",
+        "relevance": "medium",
+        "topic": "infertility grief"
+      },
+      {
+        "reason": "The user mentioned that illness has affected their ability to work, but did not return to that impact separately.",
+        "relevance": "low",
+        "topic": "work disruption"
+      },
+      {
+        "reason": "The user said they had been told they need a fourth surgery, which framed the distress, though they repeatedly clarified they were not seeking surgery advice.",
+        "relevance": "low",
+        "topic": "repeat surgery"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "After being told they need a fourth endometriosis surgery, the user described grief about their marriage, plans for children, work, and sense of self, and asked to be heard. The assistant repeatedly gave surgery-preparation and recovery tips despite the user's corrections and direct requests for acknowledgment. The user ended the conversation saying the assistant could not help."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4601,
+    "cache_write_tokens": 0,
+    "input_tokens": 4604,
+    "output_tokens": 1090
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-01T09:09:34+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described daily nausea, early fullness, and difficulty eating, and returned to the symptoms while asking about stopping the medication.",
+        "relevance": "strong",
+        "topic": "ozempic nausea"
+      },
+      {
+        "reason": "The user asked whether it was safe to pause Ozempic and worried about the planned dose increase, then accepted a plan to discuss delaying it with the doctor.",
+        "relevance": "strong",
+        "topic": "medication dose decisions"
+      },
+      {
+        "reason": "The user identified fried food, meat, and evenings as worsening the nausea and agreed to continue smaller meals and avoid fried foods.",
+        "relevance": "medium",
+        "topic": "food-related nausea triggers"
+      },
+      {
+        "reason": "The user asked when nausea would require prompt medical care and confirmed they did not have the warning signs discussed.",
+        "relevance": "medium",
+        "topic": "urgent nausea warning signs"
+      },
+      {
+        "reason": "The user asked whether Ozempic was working, shared that occasional morning readings seemed lower, and agreed to check more regularly.",
+        "relevance": "medium",
+        "topic": "blood sugar monitoring"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user reported daily nausea and early fullness after starting Ozempic for diabetes and asked whether to stop or increase the dose despite the symptoms. The assistant discussed eating adjustments, advised contacting the prescriber before changing doses, described symptoms that would warrant urgent care, and addressed the user's blood sugar readings. The user said they felt calmer and planned to keep the current dose for now, monitor morning sugar more regularly, and talk with the doctor before increasing."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5004,
+    "cache_write_tokens": 0,
+    "input_tokens": 5007,
+    "output_tokens": 881
+  },
+  "version": "gpt_luna"
+}

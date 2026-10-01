@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
+from collections import Counter
 from typing import Any
 
 import pandas as pd
 
+from mama_analysis.consolidate import topic_groups
 from mama_analysis.dynamics import check_dynamics
 from mama_analysis.eda import word_count
 from mama_analysis.schemas import DynamicsLLM
@@ -106,6 +108,109 @@ def ending_vs_outcome(rows: list[dict[str, Any]]) -> pd.DataFrame:
     pairs = [(r["session_ended_by"], _end(r)) for r in rows]
     df = _counts(pairs, sorted({k for k, _ in pairs}))
     return df.rename(columns={"key": "session_ended_by"})
+
+
+def outcome_by(rows: list[dict[str, Any]], field: str) -> pd.DataFrame:
+    """Count end reasons per value of a single-valued field.
+
+    Args:
+        rows: Output of ``explorer.label_rows``.
+        field: A one-label field such as ``"reason_for_conversation"``, or a metadata
+            field such as ``"disease"``.
+
+    Returns:
+        One row per value, a column per end reason, ``resolved`` (need met) and
+        ``unresolved`` (partial resolution or unresolved need), ``total`` and
+        ``need_met_pct`` (whole percent), sorted by total descending, then value.
+    """
+
+    def value(r: dict[str, Any]) -> str:
+        v = r[field]
+        return v if isinstance(v, str) else v[0]["label"]
+
+    pairs = [(value(r), _end(r)) for r in rows]
+    df = _counts(pairs, sorted({k for k, _ in pairs}))
+    df.insert(len(END_REASONS) + 1, "resolved", df["need met"])
+    df.insert(len(END_REASONS) + 2, "unresolved", df["partial resolution"] + df["unresolved need"])
+    df["need_met_pct"] = (100 * df["need met"] / df["total"]).round().astype(int)
+    df = df.sort_values(["total", "key"], ascending=[False, True], ignore_index=True)
+    return df.rename(columns={"key": field})
+
+
+def _where(subset: list[dict[str, Any]], keys: Any) -> str:
+    """Count conversations per key as ``"key (n); key (n)"``, most common first."""
+    counts = Counter(k for r in subset for k in keys(r))
+    return "; ".join(f"{k} ({n})" for k, n in sorted(counts.items(), key=lambda x: (-x[1], x[0])))
+
+
+def pain_point_list(rows: list[dict[str, Any]]) -> pd.DataFrame:
+    """List each conversation pain point with its conversations and where they occur.
+
+    Args:
+        rows: Output of ``explorer.label_rows``.
+
+    Returns:
+        One row per pain point, sorted by count descending, then name. Columns:
+        ``pain_point``, ``n_sessions``, comma-joined
+        ``session_ids``, and ``where_topic_group`` / ``where_disease`` as
+        ``"value (n); ..."`` (topic groups of the strong topics; a conversation can count
+        in several groups).
+    """
+
+    def groups(r: dict[str, Any]) -> list[str]:
+        return topic_groups([c["label"] for c in r["main_topics"]]) or ["(none)"]
+
+    def entry(label: str, subset: list[dict[str, Any]]) -> dict[str, Any]:
+        return {
+            "pain_point": label,
+            "n_sessions": len(subset),
+            "session_ids": ",".join(r["session_id"] for r in subset),
+            "where_topic_group": _where(subset, groups),
+            "where_disease": _where(subset, lambda r: [r["disease"]]),
+        }
+
+    totals = Counter(p for r in rows for p in _pains(r))
+    return pd.DataFrame(
+        [
+            entry(p, [r for r in rows if p in _pains(r)])
+            for p in sorted(totals, key=lambda p: (-totals[p], p))
+        ],
+        columns=["pain_point", "n_sessions", "session_ids", "where_topic_group", "where_disease"],
+    )
+
+
+def topic_group_counts(rows: list[dict[str, Any]]) -> pd.DataFrame:
+    """Count sessions per topic group (strong topics only), with the topics behind each.
+
+    Args:
+        rows: Output of ``explorer.label_rows``.
+
+    Returns:
+        One row per group with ``topic_group``, ``n_sessions``, comma-joined
+        ``session_ids`` and ``topics`` (the canonical topics seen in it, "; "-joined),
+        sorted by count descending, then group.
+    """
+    sessions: dict[str, list[str]] = {}
+    topics: dict[str, set[str]] = {}
+    for r in rows:
+        labels = [c["label"] for c in r["main_topics"]]
+        for t in labels:
+            topics.setdefault(topic_groups([t])[0], set()).add(t)
+        for g in topic_groups(labels):
+            sessions.setdefault(g, []).append(r["session_id"])
+    df = pd.DataFrame(
+        [
+            {
+                "topic_group": g,
+                "n_sessions": len(ids),
+                "session_ids": ",".join(ids),
+                "topics": "; ".join(sorted(topics[g])),
+            }
+            for g, ids in sessions.items()
+        ],
+        columns=["topic_group", "n_sessions", "session_ids", "topics"],
+    )
+    return df.sort_values(["n_sessions", "topic_group"], ascending=[False, True], ignore_index=True)
 
 
 def ending_mismatches(rows: list[dict[str, Any]]) -> pd.DataFrame:

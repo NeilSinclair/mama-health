@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:12:04+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked which RA medications are compatible with pregnancy and how to plan a transition before trying to conceive.",
+        "relevance": "strong",
+        "topic": "pregnancy medication planning"
+      },
+      {
+        "reason": "After explaining they had recently started methotrexate, the user asked whether to worry and discussed contraception and the washout period.",
+        "relevance": "medium",
+        "topic": "methotrexate pregnancy precautions"
+      },
+      {
+        "reason": "The user asked what could happen if pregnancy-compatible medication did not control their RA as well as methotrexate.",
+        "relevance": "medium",
+        "topic": "treatment control after switching"
+      },
+      {
+        "reason": "The user asked whether RA changes during pregnancy and said they wanted to be prepared for a possible postpartum flare.",
+        "relevance": "medium",
+        "topic": "RA during pregnancy and postpartum"
+      },
+      {
+        "reason": "The user asked whether pregnancy-compatible medications could also be used while breastfeeding.",
+        "relevance": "medium",
+        "topic": "breastfeeding medication compatibility"
+      },
+      {
+        "reason": "The user asked which clinicians to involve and whether to raise pregnancy plans with their rheumatologist now.",
+        "relevance": "medium",
+        "topic": "preconception care coordination"
+      },
+      {
+        "reason": "The user described being anxious about having to choose between their health and having a baby, then said they felt more reassured.",
+        "relevance": "medium",
+        "topic": "pregnancy-related anxiety"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "Recently diagnosed with rheumatoid arthritis, the user wanted to plan medication choices for trying for a baby in one to two years and learned about pregnancy-compatible options, methotrexate precautions, switching and postpartum planning. The assistant outlined a care-team and preconception plan; the user said the recap matched their understanding and that they left feeling they had a handle on the issue."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5913,
+    "cache_write_tokens": 0,
+    "input_tokens": 5916,
+    "output_tokens": 879
+  },
+  "version": "gpt_luna"
+}

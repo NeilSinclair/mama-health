@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-10-01T09:11:56+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to understand the treatment landscape and repeatedly asked how clinicians choose among options.",
+        "relevance": "strong",
+        "topic": "biologic treatment options"
+      },
+      {
+        "reason": "The user called long-term risk their biggest fear, explored the risks of treatment versus active inflammation, and said the discussion reframed the decision.",
+        "relevance": "strong",
+        "topic": "cancer risk"
+      },
+      {
+        "reason": "The user described persistent hand and wrist synovitis, elevated CRP, and prolonged morning stiffness as the reason escalation was being considered.",
+        "relevance": "medium",
+        "topic": "active rheumatoid arthritis"
+      },
+      {
+        "reason": "The user asked whether recurrent sinus infections and prior shingles should steer the choice of treatment.",
+        "relevance": "medium",
+        "topic": "infection and shingles history"
+      },
+      {
+        "reason": "The user asked whether Shingrix was appropriate at their age and while immunosuppressed, then added it to their appointment questions.",
+        "relevance": "medium",
+        "topic": "shingles vaccination"
+      },
+      {
+        "reason": "The user discussed frequent work travel and asked how self-injections, infusions, and oral options differ in practice.",
+        "relevance": "medium",
+        "topic": "treatment logistics"
+      },
+      {
+        "reason": "The user asked how long it takes to know whether a biologic is working and wanted to avoid months of uncertainty and pain.",
+        "relevance": "medium",
+        "topic": "treatment response timeline"
+      },
+      {
+        "reason": "The user asked whether possible hormone therapy during perimenopause could interact with RA treatment.",
+        "relevance": "low",
+        "topic": "hormone therapy interactions"
+      },
+      {
+        "reason": "The user briefly said they were needle-shy despite already using injectable methotrexate.",
+        "relevance": "low",
+        "topic": "injection anxiety"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user wanted to prepare for a rheumatology appointment about adding a biologic for active RA despite methotrexate and sulfasalazine. The assistant discussed treatment classes, infection and shingles history, vaccination, travel logistics, cancer risk, response timelines, and possible hormone therapy; the user said the discussion gave them a useful question list and lowered their anxiety. No safety-critical moment was raised."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 6581,
+    "cache_write_tokens": 0,
+    "input_tokens": 6584,
+    "output_tokens": 958
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:11:30+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with a recurring link between stressful work weeks and flares and returned to building a plan around that pattern.",
+        "relevance": "strong",
+        "topic": "stress-related IBS flares"
+      },
+      {
+        "reason": "The user specifically asked what to do during urgent diarrhea and cramping before meetings and discussed several immediate options.",
+        "relevance": "strong",
+        "topic": "acute flare management"
+      },
+      {
+        "reason": "The user asked where to find hypnotherapy and later considered it as part of a longer-term plan.",
+        "relevance": "medium",
+        "topic": "gut-brain therapies"
+      },
+      {
+        "reason": "The user disclosed drinking several coffees on stressful days and reflected that it may worsen the pattern.",
+        "relevance": "medium",
+        "topic": "caffeine intake"
+      },
+      {
+        "reason": "The user said urgency and repeated bathroom trips disrupt meetings, but did not discuss the work impact at length.",
+        "relevance": "low",
+        "topic": "work disruption"
+      },
+      {
+        "reason": "The user contrasted the conversation with prior advice to eat more fiber and asked whether to involve their doctor.",
+        "relevance": "low",
+        "topic": "doctor advice"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user described stress-linked IBS flares involving diarrhea, cramping, and urgency that disrupt meetings, and asked about both immediate and longer-term ways to manage them. The assistant discussed gut-directed therapies, symptom-management options, caffeine changes, and involving the doctor; the user said the advice was helpful and that they had a plan to try."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5420,
+    "cache_write_tokens": 0,
+    "input_tokens": 5423,
+    "output_tokens": 928
+  },
+  "version": "gpt_luna"
+}

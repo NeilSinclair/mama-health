@@ -1,0 +1,70 @@
+{
+  "created_at": "2026-10-01T09:12:11+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot assumed US care context"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user asked for help understanding a new diagnosis and engaged with explanations of the disease, flares, remission, and treatment goals.",
+        "relevance": "strong",
+        "topic": "Crohn's disease education"
+      },
+      {
+        "reason": "The user asked what category their medication belonged to and ended by prioritizing clarification of the plan after budesonide.",
+        "relevance": "strong",
+        "topic": "budesonide treatment plan"
+      },
+      {
+        "reason": "The user described feeling overwhelmed and later said organizing the information was part of that feeling.",
+        "relevance": "medium",
+        "topic": "diagnosis-related overwhelm"
+      },
+      {
+        "reason": "The user asked where Crohn's affects the digestive tract and shared that their doctor may have mentioned the terminal ileum.",
+        "relevance": "medium",
+        "topic": "Crohn's disease location"
+      },
+      {
+        "reason": "The user asked what monitoring to expect and received an overview of tests and follow-up.",
+        "relevance": "medium",
+        "topic": "Crohn's monitoring"
+      },
+      {
+        "reason": "The user said they did not know how to organize what they were learning and accepted starting with one page of notes.",
+        "relevance": "medium",
+        "topic": "health information organization"
+      },
+      {
+        "reason": "The user asked where to learn more and expressed concern about frightening or unreliable online information.",
+        "relevance": "medium",
+        "topic": "reliable health information"
+      },
+      {
+        "reason": "The user said they were seeing a gastroenterologist in India and wondered whether they should attend a larger specialist center.",
+        "relevance": "medium",
+        "topic": "specialist care access"
+      },
+      {
+        "reason": "The user directly asked whether they should follow a specific diet, and the assistant discussed individualized food approaches.",
+        "relevance": "medium",
+        "topic": "Crohn's diet"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "Newly diagnosed with Crohn's disease, the user felt overwhelmed and asked for an accessible overview, including disease location, budesonide, monitoring, diet, and reliable resources. The assistant provided practical orientation and adapted after the user noted they were in India and questioned how US-based guidance applied. The user said the conversation made the diagnosis feel manageable and ended with a plan to write down questions and clarify treatment after budesonide with their doctor."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5719,
+    "cache_write_tokens": 0,
+    "input_tokens": 5722,
+    "output_tokens": 1272
+  },
+  "version": "gpt_luna"
+}

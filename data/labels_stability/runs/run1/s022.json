@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:08:00+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user reported urgency returning after months of stability and came back to it when discussing possible flare symptoms and diet.",
+        "relevance": "strong",
+        "topic": "bowel urgency"
+      },
+      {
+        "reason": "The user said blood was the main reason for concern, asked whether it was worrying, and later included it in their appointment plan.",
+        "relevance": "strong",
+        "topic": "blood in stool"
+      },
+      {
+        "reason": "The user asked whether antibodies could explain the change and spent several turns asking how they develop and how they are tested.",
+        "relevance": "medium",
+        "topic": "biologic drug antibodies"
+      },
+      {
+        "reason": "The user asked whether Humira might be adjusted or replaced and whether other treatments exist.",
+        "relevance": "medium",
+        "topic": "treatment change options"
+      },
+      {
+        "reason": "The user said they feared this was the start of a flare and later said they had been spiralling but felt calmer.",
+        "relevance": "medium",
+        "topic": "flare anxiety"
+      },
+      {
+        "reason": "The user noted the gastro appointment was weeks away and asked whether it was reasonable to wait until then.",
+        "relevance": "medium",
+        "topic": "care timing"
+      },
+      {
+        "reason": "The user asked what foods might help during urgency and said the response was helpful.",
+        "relevance": "medium",
+        "topic": "diet during symptoms"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "After about eight stable months on Humira, the user described five or six days of returning urgency and small amounts of blood that were becoming more frequent, and asked about antibodies, testing, and possible treatment changes. The assistant discussed drug-level and antibody testing, symptom tracking, diet, and the upcoming gastro appointment, advising the user to seek care if things changed dramatically. The user made a list of questions for the appointment and said they felt calmer."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4949,
+    "output_tokens": 2117
+  },
+  "version": "gpt_luna"
+}

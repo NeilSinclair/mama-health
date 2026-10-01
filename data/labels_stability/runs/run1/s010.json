@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:07:33+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether they would improve and returned to the recovery timeline and longer-term outcomes later.",
+        "relevance": "strong",
+        "topic": "long covid prognosis"
+      },
+      {
+        "reason": "The user described being wiped out for days after shopping and asked whether these crashes could affect recovery.",
+        "relevance": "medium",
+        "topic": "post-exertional crashes"
+      },
+      {
+        "reason": "The user asked how to find their energy limits, discussed tracking and task adjustments, and decided to start pacing.",
+        "relevance": "medium",
+        "topic": "pacing activity"
+      },
+      {
+        "reason": "The user explained that a job and household make resting difficult and that their manager does not understand the illness is ongoing.",
+        "relevance": "medium",
+        "topic": "work and rest constraints"
+      },
+      {
+        "reason": "The user described a prior appointment as dismissive and later asked what to raise to avoid another such experience.",
+        "relevance": "medium",
+        "topic": "dismissive gp appointments"
+      },
+      {
+        "reason": "The user said false reassurance makes them feel more alone and later said this conversation had not made them feel worse.",
+        "relevance": "medium",
+        "topic": "emotional isolation"
+      },
+      {
+        "reason": "The user asked what to flag to their GP, and the assistant suggested asking about referral to a long covid service.",
+        "relevance": "low",
+        "topic": "long covid care access"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user sought an honest outlook on long covid after six months, describing unpredictable crashes after ordinary activity and frustration with dismissive reassurance. The assistant acknowledged uncertainty, discussed pacing and work constraints, and suggested points to raise with the GP; the user said they had something concrete to bring and that the conversation had not made them feel worse."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4953,
+    "output_tokens": 1220
+  },
+  "version": "gpt_luna"
+}

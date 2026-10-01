@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:07:45+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether endometriosis tends to improve after menopause and returned to the uncertainty about lasting symptoms.",
+        "relevance": "strong",
+        "topic": "menopause and endometriosis"
+      },
+      {
+        "reason": "The user asked whether estrogen could worsen endometriosis, whether HRT should be avoided, and how to prepare to discuss treatment with the prescriber.",
+        "relevance": "strong",
+        "topic": "hormone therapy decisions"
+      },
+      {
+        "reason": "The user described a past laparoscopy with adhesions and bowel-area involvement and wondered how that might affect improvement after menopause.",
+        "relevance": "medium",
+        "topic": "deep endometriosis"
+      },
+      {
+        "reason": "The user said these symptoms were getting rough and were the reason their primary care doctor raised HRT.",
+        "relevance": "medium",
+        "topic": "hot flashes and sleep problems"
+      },
+      {
+        "reason": "The user asked what to do before a follow-up and welcomed a list of points to raise with the doctor.",
+        "relevance": "medium",
+        "topic": "appointment preparation"
+      },
+      {
+        "reason": "The user said doctors had treated endometriosis as only about periods and assumed symptoms would end with menopause.",
+        "relevance": "low",
+        "topic": "dismissive medical care"
+      },
+      {
+        "reason": "The user asked whether returning pain after starting HRT would be obvious or subtle, but did not revisit the concern.",
+        "relevance": "low",
+        "topic": "endometriosis pain recurrence"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether endometriosis is likely to improve after menopause and whether HRT could reactivate it, noting a history of adhesions near the bowel and current hot flashes and sleep problems. The assistant discussed possible persistent symptoms, HRT considerations, and questions for the upcoming primary-care appointment; the user said the exchange clarified the issue and left them feeling more prepared."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5284,
+    "output_tokens": 1008
+  },
+  "version": "gpt_luna"
+}

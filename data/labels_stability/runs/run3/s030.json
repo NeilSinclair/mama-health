@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:11:55+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot missed urgent symptom",
+      "bot repeated generic advice after pushback",
+      "bot deflected to unavailable doctor",
+      "bot ignored direct treatment question"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked what to do about a four-day attack that was not responding to triptans and left them unable to function.",
+        "relevance": "strong",
+        "topic": "prolonged refractory migraine"
+      },
+      {
+        "reason": "The user said their neurologist was unavailable for six weeks and asked about urgent care or bridge treatment before then.",
+        "relevance": "medium",
+        "topic": "urgent care access"
+      },
+      {
+        "reason": "The user said they had taken over-the-counter medicines alongside triptans for days and worried about a rebound headache.",
+        "relevance": "medium",
+        "topic": "medication overuse concerns"
+      },
+      {
+        "reason": "The user said the attack had already caused them to miss three days of work.",
+        "relevance": "low",
+        "topic": "work disruption"
+      },
+      {
+        "reason": "The user said they came in a genuinely bad place and later expressed frustration at not being heard.",
+        "relevance": "low",
+        "topic": "emotional distress"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user sought help for a four-day migraine unresponsive to triptans that left them unable to function, with their neurologist unavailable for six weeks and concern about rebound from additional medication. The assistant repeatedly offered diary, lifestyle, rest, and doctor-follow-up advice despite the user's corrections, and did not address the possible urgent attack or the requested treatment options; the user ended frustrated and gave up."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4249,
+    "cache_write_tokens": 0,
+    "input_tokens": 4252,
+    "output_tokens": 1394
+  },
+  "version": "gpt_luna"
+}

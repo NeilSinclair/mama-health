@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-01T09:09:53+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking what to expect while trying to conceive with PCOS and later summarized several next steps for discussing with their doctor.",
+        "relevance": "strong",
+        "topic": "pcos fertility planning"
+      },
+      {
+        "reason": "The user described being caught up in online horror stories and later asked how to keep trying from taking over their life.",
+        "relevance": "strong",
+        "topic": "fertility anxiety"
+      },
+      {
+        "reason": "The user described cycles lasting 35 to over 50 days, questioned whether they ovulate, and asked how to time trying.",
+        "relevance": "medium",
+        "topic": "irregular ovulation"
+      },
+      {
+        "reason": "The user asked about Clomid and letrozole and whether to start medication or try naturally first.",
+        "relevance": "medium",
+        "topic": "ovulation induction medication"
+      },
+      {
+        "reason": "The user asked whether ovulation tests work with PCOS and how they could know when to try.",
+        "relevance": "medium",
+        "topic": "ovulation tracking"
+      },
+      {
+        "reason": "The user asked what to do before returning to their doctor, including whether to change their diet or take something.",
+        "relevance": "medium",
+        "topic": "preconception preparation"
+      },
+      {
+        "reason": "The user mentioned a prior high insulin result and asked how it related to fertility and metformin.",
+        "relevance": "medium",
+        "topic": "insulin resistance"
+      },
+      {
+        "reason": "The user directly asked whether conception typically takes months or years.",
+        "relevance": "medium",
+        "topic": "time to conception"
+      },
+      {
+        "reason": "The user asked whether their husband should be checked and added a semen analysis to their planned workup.",
+        "relevance": "medium",
+        "topic": "partner fertility testing"
+      },
+      {
+        "reason": "The user asked when to move from their regular OB to a specialist.",
+        "relevance": "medium",
+        "topic": "fertility specialist referral"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user, who has PCOS and irregular cycles, sought realistic expectations and guidance on trying to conceive, including medication, timing, preparation, and when to seek specialist care. The assistant outlined questions and next steps for the user's doctor, and the user said they now had a concrete plan. The assistant also discussed coping with fertility-related anxiety; the user said they felt heard and much better."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 6375,
+    "cache_write_tokens": 0,
+    "input_tokens": 6378,
+    "output_tokens": 1444
+  },
+  "version": "gpt_luna"
+}

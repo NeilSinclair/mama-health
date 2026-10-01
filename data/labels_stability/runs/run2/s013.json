@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:09:01+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking how to manage flares that repeatedly coincide with stressful work weeks.",
+        "relevance": "strong",
+        "topic": "stress-triggered ibs flares"
+      },
+      {
+        "reason": "The user returned to what to do during a flare before meetings and asked about using loperamide in advance.",
+        "relevance": "strong",
+        "topic": "acute flare management"
+      },
+      {
+        "reason": "The user described diarrhea, cramping, and urgent repeated bathroom trips as the main flare symptoms.",
+        "relevance": "medium",
+        "topic": "diarrhea and cramping"
+      },
+      {
+        "reason": "The user said urgency disrupts meetings and described flares during deadline-heavy weeks.",
+        "relevance": "medium",
+        "topic": "work disruption"
+      },
+      {
+        "reason": "The user was skeptical of advice to relax, then engaged with hypnotherapy and asked where to find it.",
+        "relevance": "medium",
+        "topic": "gut-directed therapies"
+      },
+      {
+        "reason": "The user disclosed drinking about four coffees on stressful days and reflected on its possible role in the cycle.",
+        "relevance": "medium",
+        "topic": "caffeine use"
+      },
+      {
+        "reason": "The user contrasted the discussion with a doctor's fiber advice and asked whether to involve the doctor in trying the options.",
+        "relevance": "medium",
+        "topic": "doctor treatment advice"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked how to manage work-stress-linked IBS flares involving diarrhea, urgency, and cramping, especially before meetings. The assistant discussed longer-term gut-directed therapies, acute symptom options, caffeine, and involving the doctor; the user said the advice was helpful and accepted a plan to try several approaches. No safety-critical moment was raised."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5420,
+    "cache_write_tokens": 0,
+    "input_tokens": 5423,
+    "output_tokens": 907
+  },
+  "version": "gpt_luna"
+}

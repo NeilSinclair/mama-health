@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:09:22+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking why they remain exhausted despite treatment and returned to the fatigue throughout the conversation.",
+        "relevance": "strong",
+        "topic": "persistent fatigue"
+      },
+      {
+        "reason": "Several turns focused on what Free T4 and Free T3 could show and what tests to request alongside TSH.",
+        "relevance": "strong",
+        "topic": "thyroid testing"
+      },
+      {
+        "reason": "The user worried the fatigue might not be thyroid-related and asked about ferritin after learning a normal blood count may not address iron stores.",
+        "relevance": "medium",
+        "topic": "other fatigue causes"
+      },
+      {
+        "reason": "The user asked about a dose adjustment and whether to pursue T3 or desiccated thyroid, then accepted discussing options with their doctor.",
+        "relevance": "medium",
+        "topic": "thyroid treatment options"
+      },
+      {
+        "reason": "The user described feeling gaslit about fatigue and worried their doctor might write them off.",
+        "relevance": "medium",
+        "topic": "feeling dismissed by clinician"
+      },
+      {
+        "reason": "The user requested a list of questions, considered keeping a symptom log, and restated the plan for the appointment.",
+        "relevance": "medium",
+        "topic": "appointment preparation"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user described persistent exhaustion despite six months of levothyroxine for Hashimoto's and a TSH of 3.8, and asked what else might explain it. The assistant discussed tests and questions for the doctor, possible treatment discussions, and tracking symptoms; the user summarized the plan and said they felt prepared and were looking forward to the appointment."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5419,
+    "cache_write_tokens": 0,
+    "input_tokens": 5422,
+    "output_tokens": 1290
+  },
+  "version": "gpt_luna"
+}

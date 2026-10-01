@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:08:33+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described a three-week flare with thick scaling at several scalp areas and said the shampoos were no longer working.",
+        "relevance": "strong",
+        "topic": "scalp psoriasis flare"
+      },
+      {
+        "reason": "The user asked what treatment comes after shampoos and formed a plan to ask the GP about steroid solution and calcipotriol.",
+        "relevance": "strong",
+        "topic": "psoriasis treatment options"
+      },
+      {
+        "reason": "The user specifically asked whether scalp steroids are safe because they had heard steroids can thin skin.",
+        "relevance": "medium",
+        "topic": "steroid skin thinning"
+      },
+      {
+        "reason": "The user said itching was especially disruptive at night and discussed ways to manage it while waiting for treatment.",
+        "relevance": "medium",
+        "topic": "nighttime itch"
+      },
+      {
+        "reason": "The user asked whether to see a GP or dermatologist and noted that dermatology appointments can take a long time.",
+        "relevance": "medium",
+        "topic": "dermatology access"
+      },
+      {
+        "reason": "The user said they were at the end of their rope, felt overwhelmed, and found flakes on their shoulders embarrassing at work.",
+        "relevance": "medium",
+        "topic": "psoriasis-related distress"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user described a worsening scalp psoriasis flare despite medicated shampoos, with itching and visible flakes affecting work, and asked about treatment and care options. The assistant explained topical treatments, discussed itch measures, and suggested seeing the GP while waiting for dermatology; the user ended with an accepted plan to book the GP and ask about treatments."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5135,
+    "output_tokens": 1299
+  },
+  "version": "gpt_luna"
+}

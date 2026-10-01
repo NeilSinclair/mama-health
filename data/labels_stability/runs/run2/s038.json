@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-10-01T09:09:39+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not simplify language when asked"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user asked whether anything could help and returned to what treatments might be available.",
+        "relevance": "strong",
+        "topic": "fibromyalgia treatment"
+      },
+      {
+        "reason": "The user directly asked whether they would feel this way forever, a central concern alongside treatment.",
+        "relevance": "strong",
+        "topic": "fibromyalgia prognosis"
+      },
+      {
+        "reason": "The user described pain in several areas and persistent tiredness, and asked whether these were part of fibromyalgia.",
+        "relevance": "medium",
+        "topic": "morning pain and fatigue"
+      },
+      {
+        "reason": "The user said their doctor had not offered treatment and asked how they could get it.",
+        "relevance": "medium",
+        "topic": "access to treatment"
+      },
+      {
+        "reason": "The user repeatedly said the terminology was confusing and asked for simpler explanations.",
+        "relevance": "medium",
+        "topic": "medical language barrier"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether fibromyalgia pain can be treated and whether it would last forever, and also asked about morning pain and fatigue and how to get treatment after their doctor sent them home without offering any. The assistant said symptoms can improve, but repeatedly used jargon after requests for plain language; the user said they felt more confused and ended the conversation to rest."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4653,
+    "cache_write_tokens": 0,
+    "input_tokens": 4656,
+    "output_tokens": 1095
+  },
+  "version": "gpt_luna"
+}

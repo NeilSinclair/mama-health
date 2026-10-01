@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:09:14+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user began by asking whether menopause would improve lifelong endometriosis and returned to what deeper disease might mean for that outlook.",
+        "relevance": "strong",
+        "topic": "endometriosis after menopause"
+      },
+      {
+        "reason": "The user explored whether estrogen could worsen endometriosis, whether HRT should be avoided, and how to approach choosing a regimen.",
+        "relevance": "strong",
+        "topic": "HRT with endometriosis"
+      },
+      {
+        "reason": "The user said these perimenopause symptoms were becoming difficult and were the reason their primary care doctor had raised HRT.",
+        "relevance": "medium",
+        "topic": "hot flashes and sleep problems"
+      },
+      {
+        "reason": "The user said doctors had treated endometriosis as only a period problem and expressed frustration with that simplification.",
+        "relevance": "medium",
+        "topic": "dismissive endometriosis care"
+      },
+      {
+        "reason": "The user asked what to do before a scheduled follow-up and said the suggested questions would help them feel prepared.",
+        "relevance": "medium",
+        "topic": "HRT appointment preparation"
+      },
+      {
+        "reason": "The user asked whether returning endometriosis pain after starting HRT would be obvious or subtle, and discussed tracking symptoms.",
+        "relevance": "medium",
+        "topic": "monitoring pain on HRT"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether endometriosis, including past adhesions and possible bowel involvement, might improve after menopause, then explored HRT risks and what regimen to discuss given their endometriosis history. The assistant offered caveats about persistent symptoms, suggested questions for the user's upcoming primary-care appointment, and described watching for returning pain. The user said the discussion clarified the issue and left them feeling more prepared."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5281,
+    "cache_write_tokens": 0,
+    "input_tokens": 5284,
+    "output_tokens": 932
+  },
+  "version": "gpt_luna"
+}

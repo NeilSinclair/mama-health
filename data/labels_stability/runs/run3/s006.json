@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-10-01T09:11:19+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came wanting to understand the POTS diagnosis and asked follow-up questions about what it means.",
+        "relevance": "strong",
+        "topic": "pots explanation"
+      },
+      {
+        "reason": "The user asked what they could do, sought practical steps to write down, and asked how to manage racing-heart episodes.",
+        "relevance": "strong",
+        "topic": "pots self-management"
+      },
+      {
+        "reason": "The user described a pounding heart, dizziness, lightheadedness, and spotty vision when standing.",
+        "relevance": "medium",
+        "topic": "standing symptoms"
+      },
+      {
+        "reason": "The user explicitly asked whether POTS meant their heart was damaged and said that possibility scared them.",
+        "relevance": "medium",
+        "topic": "heart damage fear"
+      },
+      {
+        "reason": "The user asked why POTS followed long COVID and connected it to a major change from their previous health and activity.",
+        "relevance": "medium",
+        "topic": "long covid"
+      },
+      {
+        "reason": "The user asked whether POTS would be permanent or whether people get better.",
+        "relevance": "medium",
+        "topic": "pots prognosis"
+      },
+      {
+        "reason": "The user said exertion with long COVID causes crashes lasting days and that this made exercise advice frightening.",
+        "relevance": "medium",
+        "topic": "post-exertional malaise"
+      },
+      {
+        "reason": "The user asked whether they should be on medication because their doctor had not prescribed any.",
+        "relevance": "medium",
+        "topic": "pots medication"
+      },
+      {
+        "reason": "The user said the diagnosis was explained too quickly at the appointment and later found the conversation more useful than what they received there.",
+        "relevance": "low",
+        "topic": "appointment communication"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user sought an explanation of POTS diagnosed after long COVID, asking about standing symptoms, heart damage, prognosis, and management. The assistant explained self-management options and addressed the user's concern that exercise triggers days-long crashes; the user said they felt less panicked, understood that their heart was not broken, and had written down practical steps."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5456,
+    "cache_write_tokens": 0,
+    "input_tokens": 5459,
+    "output_tokens": 918
+  },
+  "version": "gpt_luna"
+}

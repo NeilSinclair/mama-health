@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:12:01+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described finger pain, morning stiffness, and episodes of whole-finger swelling and asked what these symptoms might mean.",
+        "relevance": "strong",
+        "topic": "psoriatic arthritis symptoms"
+      },
+      {
+        "reason": "The user raised nail pitting and lifting early in the conversation and later asked whether treatment could help the nail that looked bad.",
+        "relevance": "medium",
+        "topic": "nail changes"
+      },
+      {
+        "reason": "The user asked whether waiting could lead to permanent damage and said the possibility scared them.",
+        "relevance": "medium",
+        "topic": "joint damage risk"
+      },
+      {
+        "reason": "The user asked which doctor to see and explained that their health plan may require a referral, then planned to request one.",
+        "relevance": "medium",
+        "topic": "rheumatology referral"
+      },
+      {
+        "reason": "The user asked what would happen at the appointment and whether a blood test could confirm the condition.",
+        "relevance": "medium",
+        "topic": "diagnostic testing"
+      },
+      {
+        "reason": "The user asked what they could take for the pain and mentioned sometimes taking dipyrone.",
+        "relevance": "low",
+        "topic": "pain relief medication"
+      },
+      {
+        "reason": "The user mentioned having psoriasis for years as context for the newer nail and finger symptoms.",
+        "relevance": "low",
+        "topic": "psoriasis history"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user described psoriasis, new nail pitting and lifting, and painful, stiff, sometimes swollen fingers, and asked whether this could be serious or psoriatic arthritis. The assistant explained the possibility, discussed evaluation by a rheumatologist, what testing may involve, pain relief, and possible nail improvement; the user said they felt better, understood the possibility, and would ask for a referral that week."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4693,
+    "cache_write_tokens": 0,
+    "input_tokens": 4696,
+    "output_tokens": 950
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:08:01+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot missed urgent symptom",
+      "bot repeated generic advice after correction",
+      "bot deflected to unavailable doctor",
+      "bot ignored direct treatment questions"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked what to do about a four-day attack that was preventing them from functioning.",
+        "relevance": "strong",
+        "topic": "prolonged migraine attack"
+      },
+      {
+        "reason": "The user said their triptans were no longer helping and returned to the need for treatment of an attack that would not break.",
+        "relevance": "strong",
+        "topic": "ineffective rescue medication"
+      },
+      {
+        "reason": "The user said their neurologist was booked for six weeks and asked about options before then.",
+        "relevance": "medium",
+        "topic": "neurologist access"
+      },
+      {
+        "reason": "The user worried about rebound headache after taking over-the-counter medication alongside triptans for days.",
+        "relevance": "medium",
+        "topic": "medication overuse concern"
+      },
+      {
+        "reason": "The user said they were in a genuinely bad place and repeatedly said they felt unheard.",
+        "relevance": "medium",
+        "topic": "emotional distress"
+      },
+      {
+        "reason": "The user said the attack had caused them to miss three days of work, but did not return to this separately.",
+        "relevance": "low",
+        "topic": "work disruption"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user sought help for a four-day migraine that their triptans and over-the-counter medication were not stopping, with missed work and no neurologist appointment available for six weeks. They asked about urgent treatment options and raised concern about rebound headache, but the assistant repeatedly offered diary and lifestyle tips or advised following up with the unavailable neurologist without addressing the prolonged, disabling attack. The user ended the conversation saying, “Forget it.”"
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4252,
+    "output_tokens": 1132
+  },
+  "version": "gpt_luna"
+}

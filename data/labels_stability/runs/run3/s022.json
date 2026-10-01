@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-10-01T09:11:54+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot missed urgent symptom"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user described renewed urgency and visible blood, said the symptoms were gradually worsening, and returned to whether this could signal a flare.",
+        "relevance": "strong",
+        "topic": "returning bowel symptoms"
+      },
+      {
+        "reason": "The user repeatedly asked whether Humira could stop working because of antibodies, how that happens, and how clinicians might test for it.",
+        "relevance": "strong",
+        "topic": "biologic loss of response"
+      },
+      {
+        "reason": "The user asked whether it was reasonable to wait several weeks for the gastro appointment despite the blood and worsening symptoms.",
+        "relevance": "medium",
+        "topic": "waiting for medical review"
+      },
+      {
+        "reason": "The user asked whether a failing Humira would lead to a dose change or a switch and whether other options existed.",
+        "relevance": "medium",
+        "topic": "treatment alternatives"
+      },
+      {
+        "reason": "The user asked what foods might help during urgency and said they almost did not want to eat when symptoms were bad.",
+        "relevance": "medium",
+        "topic": "diet and reduced eating"
+      },
+      {
+        "reason": "The user said they were scared the worsening symptoms were the start of a flare and that they had been spiralling.",
+        "relevance": "medium",
+        "topic": "fear of disease flare"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "After months of stability on Humira, the user reported several days of renewed urgency and small amounts of blood that were getting worse, and asked about antibodies, testing, and treatment options. They also asked whether they could wait for a gastro appointment in a few weeks; the assistant largely supported waiting unless things changed dramatically, despite the reported worsening, and the user ended feeling calmer with a list of questions for the visit."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4946,
+    "cache_write_tokens": 0,
+    "input_tokens": 4949,
+    "output_tokens": 2011
+  },
+  "version": "gpt_luna"
+}

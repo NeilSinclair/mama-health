@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:08:51+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user asks whether avoiding gluten could help and spends several turns working out a measurable trial they could use if other checks are clear.",
+        "relevance": "strong",
+        "topic": "gluten-free diet trial"
+      },
+      {
+        "reason": "The user explains these ongoing symptoms are the reason they are considering diet and later asks whether their levothyroxine dose could be involved.",
+        "relevance": "strong",
+        "topic": "persistent fatigue and brain fog"
+      },
+      {
+        "reason": "The user asks why screening matters, recognizes they should remain on gluten before testing, and includes testing in their plan.",
+        "relevance": "medium",
+        "topic": "celiac disease screening"
+      },
+      {
+        "reason": "The user asks whether a drop in antibodies would necessarily improve tiredness, and the distinction is discussed over several turns.",
+        "relevance": "medium",
+        "topic": "thyroid antibody levels"
+      },
+      {
+        "reason": "The user asks whether their levothyroxine dose might be off and agrees to raise it with their doctor.",
+        "relevance": "medium",
+        "topic": "thyroid dose review"
+      },
+      {
+        "reason": "The user includes iron, B12, and vitamin D checks in the plan they restates at the end.",
+        "relevance": "low",
+        "topic": "nutrient testing"
+      },
+      {
+        "reason": "The user says the gluten idea appealed partly because it was within their control compared with waiting on doctors.",
+        "relevance": "low",
+        "topic": "medical care delays"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asks whether a gluten-free diet has evidence for Hashimoto's because they remain tired and foggy despite a supposedly normal TSH on levothyroxine. They agree to ask about celiac screening while still eating gluten and review their dose and nutrient levels first, then consider a tracked three-month gluten-free trial; they end by saying the discussion felt balanced and expressing appreciation."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5517,
+    "cache_write_tokens": 0,
+    "input_tokens": 5520,
+    "output_tokens": 996
+  },
+  "version": "gpt_luna"
+}

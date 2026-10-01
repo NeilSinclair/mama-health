@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-10-01T09:09:16+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to understand their cancer risk and asked what factors raise or lower it, including how left-sided disease and stable inflammation affect the picture.",
+        "relevance": "strong",
+        "topic": "colorectal cancer risk"
+      },
+      {
+        "reason": "The user asked when monitoring should start, how often it should happen, and whether the procedure differs from a routine colonoscopy.",
+        "relevance": "strong",
+        "topic": "surveillance colonoscopy"
+      },
+      {
+        "reason": "The user asked whether mesalamine affects cancer risk and said they sometimes wonder whether they still need it when feeling well.",
+        "relevance": "medium",
+        "topic": "mesalamine maintenance"
+      },
+      {
+        "reason": "The user asked whether lifestyle could affect risk and received guidance on several general measures.",
+        "relevance": "low",
+        "topic": "lifestyle risk factors"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user, who has had stable left-sided ulcerative colitis for about nine years while taking mesalamine, wanted a clearer understanding of colorectal cancer risk and surveillance. The assistant explained risk factors, colonoscopy timing and intervals, surveillance technique, and mesalamine and lifestyle considerations; the user said they felt better equipped to speak with their gastroenterologist."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5196,
+    "cache_write_tokens": 0,
+    "input_tokens": 5199,
+    "output_tokens": 654
+  },
+  "version": "gpt_luna"
+}

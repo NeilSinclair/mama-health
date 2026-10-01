@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:09:50+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described recurring, severe nausea after the weekly dose and returned to how to make it manageable.",
+        "relevance": "strong",
+        "topic": "methotrexate nausea"
+      },
+      {
+        "reason": "The user opened by asking whether to quit and later asked whether to keep taking it until the doctor visit.",
+        "relevance": "strong",
+        "topic": "methotrexate treatment decision"
+      },
+      {
+        "reason": "The user asked whether taking folic acid on the methotrexate day was a problem and agreed to move it to Sunday.",
+        "relevance": "medium",
+        "topic": "folic acid timing"
+      },
+      {
+        "reason": "The user asked whether injections make a significant difference and said they were scared of injecting themself.",
+        "relevance": "medium",
+        "topic": "self-injection concerns"
+      },
+      {
+        "reason": "The user asked whether an anti-nausea medicine could be taken safely with methotrexate.",
+        "relevance": "medium",
+        "topic": "anti-nausea medication"
+      },
+      {
+        "reason": "The user said methotrexate was helping their hands, which informed their wish not to stop if avoidable.",
+        "relevance": "low",
+        "topic": "joint improvement"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user considered stopping weekly methotrexate because of recurring nausea, despite improved joints, and asked about folic acid timing, dose-splitting, injections, and anti-nausea medicine. The assistant outlined options and advised continuing as prescribed until a doctor visit in about two weeks; the user accepted a plan to move folic acid to Sunday, try taking the tablets with food, and discuss options with the doctor, saying they felt much better and were helped."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5675,
+    "cache_write_tokens": 0,
+    "input_tokens": 5678,
+    "output_tokens": 1212
+  },
+  "version": "gpt_luna"
+}

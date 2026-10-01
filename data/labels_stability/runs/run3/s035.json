@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:11:59+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to work out how to handle an infliximab infusion due during a three-week trip and returned to whether and when to move it.",
+        "relevance": "strong",
+        "topic": "infusion scheduling"
+      },
+      {
+        "reason": "The user asked what precautions to take while travelling on infliximab and discussed vaccines and infection prevention.",
+        "relevance": "medium",
+        "topic": "travel on immunosuppression"
+      },
+      {
+        "reason": "The user noted they needed to check pre-existing-condition coverage, and the assistant discussed declaring Crohn's and infliximab.",
+        "relevance": "medium",
+        "topic": "travel insurance"
+      },
+      {
+        "reason": "The user asked what paperwork to carry and engaged with the suggestions for a treatment letter and medication list.",
+        "relevance": "medium",
+        "topic": "travel medical documentation"
+      },
+      {
+        "reason": "The user said they should know where to go if they had a flare, and the assistant discussed finding suitable care at the destination.",
+        "relevance": "medium",
+        "topic": "medical care abroad"
+      },
+      {
+        "reason": "The user said they usually feel tired the day after an infusion and used this to rule out scheduling it immediately before the flight.",
+        "relevance": "low",
+        "topic": "post-infusion fatigue"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user wanted to plan an infliximab infusion due during a three-week trip and considered having it a few days before departure, allowing time for usual post-infusion fatigue. They also discussed travel precautions, insurance, documentation, and finding care abroad; the user said the conversation turned their worry into actionable steps and planned to call the IBD team the next day."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5115,
+    "cache_write_tokens": 0,
+    "input_tokens": 5118,
+    "output_tokens": 762
+  },
+  "version": "gpt_luna"
+}

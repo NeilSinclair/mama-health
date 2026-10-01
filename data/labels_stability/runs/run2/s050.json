@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-01T09:11:02+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described a three-week flare with thick scale at the crown and patches around the hairline and ears.",
+        "relevance": "strong",
+        "topic": "scalp psoriasis flare"
+      },
+      {
+        "reason": "The user asked what treatment comes after shampoos and discussed steroid preparations, calcipotriol, and softening the scale.",
+        "relevance": "strong",
+        "topic": "treatment options"
+      },
+      {
+        "reason": "The user said tar and ketoconazole shampoos were no longer helping and later noted they were the only treatments provided.",
+        "relevance": "medium",
+        "topic": "ineffective medicated shampoos"
+      },
+      {
+        "reason": "The user asked whether scalp steroids are safe because they had heard steroids can thin skin.",
+        "relevance": "medium",
+        "topic": "steroid safety"
+      },
+      {
+        "reason": "The user asked whether to return to a GP or see a dermatologist and noted long waits for dermatology appointments in France.",
+        "relevance": "medium",
+        "topic": "healthcare access"
+      },
+      {
+        "reason": "The user asked for help with nighttime itch, said avoiding scratching would be hard, and asked about the Koebner term.",
+        "relevance": "medium",
+        "topic": "itch and scratching"
+      },
+      {
+        "reason": "The user said visible flakes falling on their shoulders were embarrassing at work.",
+        "relevance": "low",
+        "topic": "work embarrassment"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user described a persistent scalp psoriasis flare despite medicated shampoos, with thick scale, itching, and embarrassment at work. The assistant discussed scale-softening and prescription treatments, answered questions about steroid safety and calcipotriol, and suggested seeing the GP while waiting for dermatology; the user ended with a plan to book the GP, ask about treatments, use oil on the thick patch, and try not to scratch."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5132,
+    "cache_write_tokens": 0,
+    "input_tokens": 5135,
+    "output_tokens": 1038
+  },
+  "version": "gpt_luna"
+}

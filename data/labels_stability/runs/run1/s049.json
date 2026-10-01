@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:08:31+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described persistent fatigue and brain fog and later asked how to look after their long COVID after leaving work.",
+        "relevance": "strong",
+        "topic": "long covid symptoms"
+      },
+      {
+        "reason": "The user explained that fatigue and brain fog lead to mistakes by late morning and a two-day crash, making work difficult to sustain.",
+        "relevance": "medium",
+        "topic": "work impairment"
+      },
+      {
+        "reason": "The user described HR's vague response and learned about specific adjustments and occupational health over several turns.",
+        "relevance": "medium",
+        "topic": "workplace adjustments"
+      },
+      {
+        "reason": "The user said they had decided to resign and asked for help writing a health-related resignation letter, then planned to send it Monday.",
+        "relevance": "strong",
+        "topic": "resignation decision"
+      },
+      {
+        "reason": "The user began by needing a nonjudgmental place to talk, later described being tired of fighting, and said the letter made them tear up and feel calmer.",
+        "relevance": "strong",
+        "topic": "emotional exhaustion"
+      },
+      {
+        "reason": "The user asked for a clear explanation of pacing, engaged with the advice, and said it was the first time the concept had clicked.",
+        "relevance": "medium",
+        "topic": "long covid pacing"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "The user described long COVID fatigue and brain fog disrupting work and decided to resign; the assistant drafted a warmer letter that the user welcomed. The conversation then shifted to pacing and other health follow-up, and the user said the explanation clicked and they felt calmer."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5136,
+    "output_tokens": 1242
+  },
+  "version": "gpt_luna"
+}

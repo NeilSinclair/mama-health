@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:09:44+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether the new manufacturer was something to worry about and returned to what to do because of the switch.",
+        "relevance": "strong",
+        "topic": "levothyroxine brand switch"
+      },
+      {
+        "reason": "The user asked why testing should wait six to eight weeks and whether a recent in-range TSH result counted.",
+        "relevance": "medium",
+        "topic": "thyroid blood test monitoring"
+      },
+      {
+        "reason": "The user asked what signs to watch for and said they tend to notice coldness and tiredness quickly.",
+        "relevance": "medium",
+        "topic": "thyroid symptom monitoring"
+      },
+      {
+        "reason": "The user said they would prefer to stay on one brand to avoid uncertainty each time.",
+        "relevance": "medium",
+        "topic": "brand consistency preference"
+      },
+      {
+        "reason": "The user said they were annoyed that the pharmacy switched brands without explaining the change.",
+        "relevance": "medium",
+        "topic": "pharmacy communication"
+      },
+      {
+        "reason": "The user asked whether to keep taking the medicine exactly as before.",
+        "relevance": "low",
+        "topic": "medication-taking routine"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user wanted to know whether a pharmacy switch to a different levothyroxine manufacturer required action. The assistant explained monitoring and consistent medication routines; the user accepted a plan to watch for symptoms, arrange a TSH test in early to mid September, and ask about staying on one brand. The user said the answer was clear and exactly what they hoped for."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4612,
+    "cache_write_tokens": 0,
+    "input_tokens": 4615,
+    "output_tokens": 681
+  },
+  "version": "gpt_luna"
+}

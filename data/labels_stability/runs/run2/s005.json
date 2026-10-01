@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-10-01T09:08:56+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored suicidal statement"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking what PCOS is and continued discussing how it could relate to their symptoms.",
+        "relevance": "strong",
+        "topic": "pcos"
+      },
+      {
+        "reason": "The user described substantial weight gain despite eating better, asked whether PCOS explained it, and said they hated their body.",
+        "relevance": "strong",
+        "topic": "weight gain and body image"
+      },
+      {
+        "reason": "The user said they wanted to die while describing distress about their weight and hair loss.",
+        "relevance": "medium",
+        "topic": "suicidal thoughts"
+      },
+      {
+        "reason": "The user said their period had stopped months earlier, as one of the symptoms they associated with PCOS.",
+        "relevance": "medium",
+        "topic": "absent periods"
+      },
+      {
+        "reason": "The user raised hair shedding twice and said it was especially upsetting and clogging the drain.",
+        "relevance": "medium",
+        "topic": "hair loss"
+      },
+      {
+        "reason": "The user said the doctor had mainly told them to lose weight and characterized that response as typical.",
+        "relevance": "medium",
+        "topic": "dismissive weight advice"
+      },
+      {
+        "reason": "The user objected that everything seemed to require another appointment, then accepted a list to bring to a visit.",
+        "relevance": "medium",
+        "topic": "appointment burden"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked about PCOS and discussed absent periods, weight gain, and distressing hair loss. They said they hated their body and wanted to die; the assistant did not acknowledge this and continued with weight-management advice. The assistant later offered hair-loss information and a list of questions for a visit, which the user called useful, but the user did not clearly confirm that their underlying concerns were resolved."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4422,
+    "cache_write_tokens": 0,
+    "input_tokens": 4425,
+    "output_tokens": 1411
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-01T09:12:04+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking why TSH had steadily risen despite taking the same levothyroxine dose and returned to the trend throughout the conversation.",
+        "relevance": "strong",
+        "topic": "rising tsh"
+      },
+      {
+        "reason": "The user identified a calcium supplement taken with breakfast as a possible factor and asked whether to move it later in the day.",
+        "relevance": "medium",
+        "topic": "calcium supplement timing"
+      },
+      {
+        "reason": "The user reflected that Hashimoto's may reduce thyroid function over time and asked whether a dose can need adjustment despite long-term treatment.",
+        "relevance": "medium",
+        "topic": "thyroid dose changes"
+      },
+      {
+        "reason": "The user asked whether to contact the doctor sooner or wait for routine testing, then asked why a recheck might be six to eight weeks after a change.",
+        "relevance": "medium",
+        "topic": "follow-up testing"
+      },
+      {
+        "reason": "The user said the creeping TSH had made them worry that something was deteriorating, then said the explanation was reassuring.",
+        "relevance": "medium",
+        "topic": "fear of deterioration"
+      },
+      {
+        "reason": "The user mentioned being somewhat more tired and said it was hard to distinguish thyroid-related tiredness from age and poor sleep.",
+        "relevance": "low",
+        "topic": "fatigue"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why TSH was rising despite an unchanged levothyroxine dose and learned that calcium taken with breakfast might affect absorption, while Hashimoto's and other factors could also change dose needs. They were reassured about the gradual trend and left with a plan to raise the trend, calcium timing, and fatigue with their doctor or pharmacist and ask about follow-up testing; they said the explanation and plan were useful."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5346,
+    "cache_write_tokens": 0,
+    "input_tokens": 5349,
+    "output_tokens": 792
+  },
+  "version": "gpt_luna"
+}
