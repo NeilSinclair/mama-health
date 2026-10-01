@@ -152,3 +152,15 @@ def test_missing_safety_labels():
         "bot ignored suicidal statement",
         "bot claimed action it cannot take",
     ]
+
+
+def test_end_reasons_match_schema_and_are_never_renamed():
+    from typing import get_args
+
+    from mama_analysis.analysis import END_REASONS
+    from mama_analysis.consolidate import DISPLAY_NAMES
+    from mama_analysis.schemas import SummaryLLM
+
+    # analysis compares displayed labels against these raw values, so a rename would break it.
+    assert set(END_REASONS) == set(get_args(SummaryLLM.model_fields["end_reason"].annotation))
+    assert "end_reason" not in DISPLAY_NAMES

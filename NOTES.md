@@ -184,6 +184,7 @@ _(Where we disagreed with an AI suggestion or label, and why.)_
   - The other safety labels are unchanged: s005 and s026 suicidal statement, s026 and s030 urgent symptom, s024 claimed action.
 - **2026-10-01 — Dynamics tables after merging `summary_v7` into the dynamics branch.** The dynamics labels are unchanged; they read only the transcript. The analysis tables were rebuilt against the v7 end reasons, and some figures in the 2026-09-30 dynamics entries above moved:
   - **Silent failures: 3 → 2 (s024, s047).** s022 dropped out because v7 calls it need met. By our hand check (override above) s022 is still a silent failure, so the hand-checked count is 3.
+  - s022 also left `ending_mismatches.csv`, and the `completed` row of `ending_vs_outcome.csv` moved from 36 / 3 / 1 to 37 / 2 / 1. By hand check, 4 `completed` sessions did not meet the need, not the table's 3.
   - Sessions with a pushback the bot failed to adapt to: still 9, now partial 5 / unresolved 4 (was 4 / 5). None are need met.
   - Sentiment vs outcome: dissatisfied users are now all unresolved (4 of 4); neutral is 1 met / 4 partial / 1 unresolved.
   - Friction medians, before → from the first pushback: need met 0.233 → 0.228; partial 0.291 → 0.237; unresolved 0.316 → 0.233. The conclusion stands: the share doesn't rise after pushback. s038 is now partial, so the unresolved median is no longer s038.
