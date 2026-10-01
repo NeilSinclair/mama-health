@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:06:37+00:00",
+  "created_at": "2026-10-01T15:48:14+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,71 +7,71 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came to understand whether their longstanding IBS diagnosis might instead involve SIBO and returned to the uncertainty throughout the conversation.",
+        "reason": "The user questioned whether their longstanding IBS diagnosis might instead involve SIBO and sought clarity on how the conditions overlap.",
         "relevance": "strong",
-        "topic": "IBS and SIBO uncertainty",
+        "topic": "SIBO versus IBS",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user described severe bloating after eating as the main symptom prompting their concern about SIBO.",
+        "reason": "The user described severe bloating after eating, especially later in the day, as the symptom prompting their doubts about IBS.",
         "relevance": "medium",
         "topic": "post-meal bloating",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked how SIBO is tested and questioned whether an unreliable breath test would give a clear answer.",
+        "reason": "The user asked whether there is a proper test and returned to concern that an unreliable result might not provide a clear answer.",
         "relevance": "medium",
-        "topic": "SIBO testing",
+        "topic": "SIBO breath testing",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user clarified that their bowel pattern is mostly constipated or mixed, and the assistant discussed its relevance to testing and treatment.",
+        "reason": "The user clarified that they tend toward constipation or alternating patterns, which shaped the discussion of possible methane-related testing and treatment.",
         "relevance": "medium",
         "topic": "constipation and mixed bowel habits",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user decided to request a gastroenterology referral and noted that the wait in Canada might be long.",
+        "reason": "The user heard about a possible treatment trial and clarified that their symptoms are not mainly diarrhea-type, prompting discussion of whether that option fits.",
+        "relevance": "medium",
+        "topic": "antibiotic treatment trial",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user was annoyed that nobody had explained the SIBO discussion during their years with an IBS label and asked whether their GP had known or cared.",
+        "relevance": "medium",
+        "topic": "frustration with prior care",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user decided to ask for a gastroenterology referral and noted that the wait in Canada might be long.",
         "relevance": "medium",
         "topic": "specialist referral wait",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user said previous food diaries had not revealed a consistent pattern, and the conversation addressed how to interpret that variability.",
-        "relevance": "medium",
+        "reason": "The user said earlier food diaries did not reveal reliable patterns, but this was discussed briefly as part of the interim plan.",
+        "relevance": "low",
         "topic": "food diary patterns",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user wondered whether their GP had not explained SIBO because of limited knowledge or lack of effort.",
+        "reason": "The user mentioned seeing online supplement promotion and accepted the plan not to buy supplements before specialist assessment.",
         "relevance": "low",
-        "topic": "doctor communication",
-        "topic_group": "Working with clinicians"
-      },
-      {
-        "reason": "The user said they were annoyed that nobody had explained these possibilities during the years they had an IBS label.",
-        "relevance": "low",
-        "topic": "diagnosis frustration",
-        "topic_group": "Emotional wellbeing"
-      },
-      {
-        "reason": "The user mentioned online supplement marketing and ended by agreeing not to buy supplements before specialist assessment.",
-        "relevance": "low",
-        "topic": "supplement decisions",
+        "topic": "SIBO supplement claims",
         "topic_group": "Treatment choice"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user asked whether their longstanding IBS diagnosis could involve SIBO, describing severe post-meal bloating and mostly constipated or mixed bowel habits; the assistant explained the overlap and limits of breath testing without claiming to diagnose them. The user decided to request a gastroenterology referral, keep notes despite unclear food patterns, and hold off on supplements, and said the conversation was clarifying."
+    "summary": "The user questioned whether longstanding IBS and severe post-meal bloating could involve SIBO, and asked about testing, the constipation-related distinction, and possible treatment. The assistant explained uncertainty around testing and diagnosis, discussed a gastroenterology referral and keeping notes, and the user ended with a plan to seek referral, keep notes, and avoid supplements for now. The user said the conversation was clarifying and that they had what they needed."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 5845,
-    "output_tokens": 1316
+    "input_tokens": 6239,
+    "output_tokens": 1432
   },
   "version": "gpt_luna"
 }

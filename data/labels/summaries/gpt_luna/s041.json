@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:07:44+00:00",
+  "created_at": "2026-10-01T15:49:15+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,53 +7,53 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came to weigh starting a biologic and later asked what to discuss with the dermatologist.",
+        "reason": "The user came to weigh the risks of starting a biologic and returned to how those risks compare with leaving psoriasis untreated.",
         "relevance": "strong",
-        "topic": "biologic treatment decision",
+        "topic": "starting biologic treatment",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked how large the infection risk is and followed up specifically about tuberculosis and screening.",
+        "reason": "The user called cancer the concern that most stayed with them and asked about lymphoma and skin cancer risks in light of family history and sun exposure.",
+        "relevance": "strong",
+        "topic": "cancer risk",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked how large the infection risk is and specifically raised tuberculosis.",
         "relevance": "medium",
         "topic": "infection risk",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user said cancer risk was their main lingering worry and discussed a family history of lymphoma.",
+        "reason": "The user asked how the biologic classes differ and engaged with the comparison of their safety profiles.",
         "relevance": "medium",
-        "topic": "cancer risk",
+        "topic": "biologic safety differences",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked about skin cancer and mentioned burning easily and having had substantial sun exposure.",
+        "reason": "The user asked what to bring up with the dermatologist and responded positively to the suggested questions.",
         "relevance": "medium",
-        "topic": "skin cancer risk",
-        "topic_group": "Treatment choice"
+        "topic": "dermatology visit preparation",
+        "topic_group": "Working with clinicians"
       },
       {
-        "reason": "The user described feeling frightened by worst-case stories and later said the risk framing felt less scary.",
+        "reason": "The user said the risks were frightening and that cancer risk weighed on them, though most of the conversation focused on understanding the risks.",
         "relevance": "medium",
-        "topic": "treatment-related fear",
+        "topic": "fear of treatment risks",
         "topic_group": "Emotional wellbeing"
-      },
-      {
-        "reason": "The user adopted the comparison between biologic risks and the risks of doing nothing near the end.",
-        "relevance": "low",
-        "topic": "untreated psoriasis risks",
-        "topic_group": "Treatment choice"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user was considering a biologic for psoriasis and worried about infection and cancer risks, including lymphoma in the family and skin cancer given their sun exposure. The assistant explained risk considerations and suggested questions for the dermatologist; the user said the absolute-risk framing helped and felt better prepared to discuss a personalized choice."
+    "summary": "The user wanted to understand infection and cancer risks before deciding about a biologic for psoriasis, including how their family history of lymphoma and sun exposure might matter. The assistant compared biologic classes and suggested questions for the dermatologist; the user said the discussion and absolute-risk framing were helpful and recognized that treatment risks must be weighed against risks of doing nothing."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 5370,
-    "output_tokens": 1712
+    "input_tokens": 5764,
+    "output_tokens": 1510
   },
   "version": "gpt_luna"
 }

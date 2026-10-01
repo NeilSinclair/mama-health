@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:06:50+00:00",
+  "created_at": "2026-10-01T15:48:30+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,53 +7,53 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user described a first episode of shimmering zigzag vision before a usual migraine and sought help understanding it.",
+        "reason": "The user came in frightened by a first episode of shimmering zigzag vision before a familiar migraine and returned to what it might mean and how to respond.",
         "relevance": "strong",
-        "topic": "new visual symptoms",
+        "topic": "visual migraine aura",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked whether to go to the ER that night or arrange non-urgent care, and agreed to book with a family doctor.",
-        "relevance": "strong",
-        "topic": "urgent care decision",
-        "topic_group": "Access to care"
+        "reason": "The user directly asked whether aura could signal a stroke or something serious and discussed how the episode differed from stroke symptoms.",
+        "relevance": "medium",
+        "topic": "stroke concern",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user said the new symptom scared them and asked whether it could signal a stroke, later reporting they felt calmer.",
+        "reason": "The user said the episode scared them and later reported feeling much calmer after the discussion.",
         "relevance": "medium",
-        "topic": "fear of serious cause",
+        "topic": "fear about new symptoms",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user asked whether aura would become a permanent or recurring feature after this first episode.",
+        "reason": "The user asked whether aura would become a permanent or recurring feature, and the assistant explained that it varies.",
         "relevance": "medium",
         "topic": "aura recurrence",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked whether aura could signal when to take their usual sumatriptan and appreciated the caution about changing its timing.",
+        "reason": "The user asked whether aura could be a cue to take their usual sumatriptan sooner and received guidance to ask their doctor about timing.",
         "relevance": "medium",
         "topic": "sumatriptan timing",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked about aura and birth control and said they had considered hormonal contraception, though they are not using it now.",
+        "reason": "The user asked about the connection between aura and birth control and said they had considered hormonal contraception.",
         "relevance": "medium",
-        "topic": "contraception with aura",
+        "topic": "hormonal contraception",
         "topic_group": "Treatment choice"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user described a new, shimmering visual disturbance before a familiar migraine and worried it might indicate a stroke or require an ER visit. The assistant said the description sounded consistent with migraine aura, gave warning signs and suggested a non-urgent doctor appointment; it also discussed aura recurrence, sumatriptan timing and hormonal contraception. The user said they felt calmer and planned to book with their family doctor that week and rest."
+    "summary": "The user described a first episode of shimmering zigzag vision lasting about 20 minutes before their usual migraine and worried it could signal a stroke. The assistant said it sounded like aura, recommended a non-urgent family-doctor appointment rather than the ER that night, and gave warning signs for seeking urgent care; it also discussed aura recurrence, sumatriptan timing, and estrogen-containing contraception. The user said they felt much calmer and planned to book with their doctor that week and rest."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 6020,
-    "output_tokens": 1240
+    "input_tokens": 6414,
+    "output_tokens": 1221
   },
   "version": "gpt_luna"
 }

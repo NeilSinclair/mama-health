@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:06:38+00:00",
+  "created_at": "2026-10-01T15:48:15+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,59 +7,53 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened with recurring work-stress flares and described diarrhea, cramping, and urgency that disrupt meetings.",
+        "reason": "The user described recurring diarrhea, cramping, and urgency during stressful work weeks and asked what could help.",
         "relevance": "strong",
-        "topic": "stress-linked IBS symptoms",
+        "topic": "stress-triggered IBS flares",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked what to do during a high-pressure morning, then asked about preemptive loperamide and requested a practical plan.",
+        "reason": "The user focused on what to do during an immediate flare and asked about using loperamide before symptoms, then included acute treatments in their plan.",
         "relevance": "strong",
         "topic": "acute flare treatments",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked where to find hypnotherapy and later included it or IBS-focused CBT in a plan to reduce stress-related flares.",
+        "reason": "The user explored hypnotherapy and CBT after learning they may help with the stress-symptom pattern, including where to find them.",
         "relevance": "medium",
-        "topic": "gut-directed therapies",
+        "topic": "gut-brain therapies",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user raised drinking several coffees on stressful days and agreed it might be worsening the cycle.",
+        "reason": "The user mentioned drinking several coffees on stressful days and considered cutting back as part of the plan.",
         "relevance": "medium",
-        "topic": "caffeine use",
+        "topic": "caffeine and symptoms",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user said urgency and repeated bathroom trips interfere with back-to-back meetings.",
+        "reason": "The user said urgency and repeated bathroom trips disrupt meetings, though the conversation focused more on symptom management than workplace impact.",
         "relevance": "low",
         "topic": "work disruption",
         "topic_group": "Work & life plans"
       },
       {
-        "reason": "The user compared the chatbot's suggestions with a doctor's fiber advice and asked whether to involve the doctor in the plan.",
-        "relevance": "low",
+        "reason": "The user compared the discussion with prior fiber advice and asked whether to involve their doctor in trying the options.",
+        "relevance": "medium",
         "topic": "doctor guidance",
         "topic_group": "Working with clinicians"
-      },
-      {
-        "reason": "The user asked where to find hypnotherapy, and the assistant discussed clinic referrals and app-based options.",
-        "relevance": "low",
-        "topic": "finding gut-directed therapy",
-        "topic_group": "Access to care"
       }
     ],
-    "reason_for_conversation": "informational",
-    "summary": "The user described stress-triggered IBS flares with diarrhea, cramping, and urgency that disrupt meetings, and asked for both long-term and in-the-moment strategies. The assistant discussed gut-directed hypnotherapy or CBT, acute options including loperamide, caffeine changes, and involving the doctor; the user said the advice was helpful and accepted a plan to try."
+    "reason_for_conversation": "decisional",
+    "summary": "The user described stress-linked IBS flares with diarrhea, cramping, and urgency that disrupt meetings, and wanted practical ways to manage them. The assistant discussed longer-term gut-directed therapies, acute options, caffeine changes, and when to involve a doctor; the user said the advice was helpful and accepted a plan to try."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 5972,
-    "output_tokens": 932
+    "input_tokens": 6366,
+    "output_tokens": 1437
   },
   "version": "gpt_luna"
 }

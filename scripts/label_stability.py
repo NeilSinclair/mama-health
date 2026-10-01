@@ -3,9 +3,10 @@
 Exploratory, not part of the pipeline: it writes only under ``data/labels_stability/`` and
 never touches ``data/labels/`` or ``outputs/``.
 
-Frozen at ``summary_v7``. "Committed" means the v7 labels that were committed when the
-experiment ran, copied to ``data/labels_stability/committed_v7/`` before the pipeline was
-relabelled with topic groups (D-047). The v7 schema (no ``topic_group``) is kept here.
+Frozen at ``summary_v7`` and ``consolidate_v3``. "Committed" means the v7 labels that were
+committed when the experiment ran, copied to ``data/labels_stability/committed_v7/`` before
+the pipeline was relabelled with topic groups (D-047). The v7 schema (no ``topic_group``) is
+kept here.
 
 - ``run``: three fresh ``summary_v7`` runs over all 50 sessions; one ``consolidate_v3`` call
   over the raw labels of all four runs (committed + three fresh), so every run shares one
@@ -35,7 +36,6 @@ from pydantic import BaseModel
 from mama_analysis import labellers
 from mama_analysis.cache import read_entries
 from mama_analysis.consolidate import (
-    CONSOLIDATE_PROMPT,
     CONSOLIDATED_FIELDS,
     DISPLAY_NAMES,
     consolidate_all,
@@ -47,6 +47,7 @@ from mama_analysis.schemas import SummaryLLM as _SummaryLLM
 from mama_analysis.summarise import label_sessions
 
 SUMMARY_PROMPT = "summary_v7"
+CONSOLIDATE_PROMPT = "consolidate_v3"
 
 
 class ScoredTopicV7(BaseModel):

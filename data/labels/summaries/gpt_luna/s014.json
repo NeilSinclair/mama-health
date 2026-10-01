@@ -1,56 +1,62 @@
 {
-  "created_at": "2026-10-01T15:06:44+00:00",
+  "created_at": "2026-10-01T15:48:20+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot ignored kampo question",
-      "bot repeated import advice after concerns"
+      "bot gave wrong-country advice",
+      "bot did not answer the user's request"
     ],
     "end_reason": "partial resolution",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user asked what supplements to try for fibromyalgia pain and repeatedly asked which products to choose.",
+        "reason": "The user opened by asking what supplements to try for fibromyalgia pain and continued seeking a suitable option.",
         "relevance": "strong",
-        "topic": "supplements for fibromyalgia",
+        "topic": "supplement choice for pain",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked how much magnesium to take given their small body size and later asked about a CoQ10 dose.",
+        "reason": "The user asked which brands were good quality and later questioned whether Japanese pharmacy products such as DHC were suitable.",
+        "relevance": "strong",
+        "topic": "supplement brands and quality",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked how much magnesium to take and later asked about the CoQ10 dose.",
         "relevance": "medium",
         "topic": "supplement dosing",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked about local brands, raised concerns about customs, and ended by considering asking a local pharmacist.",
+        "reason": "The user raised concerns that Japanese customs may restrict imported supplements after the assistant repeatedly recommended ordering from iHerb.",
         "relevance": "medium",
-        "topic": "supplement access in Japan",
+        "topic": "supplement import restrictions",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user asked whether the assistant knew about kampo, noting that doctors in Japan sometimes prescribe it, but did not return to the topic after it went unanswered.",
-        "relevance": "low",
+        "reason": "The user asked whether the assistant knew about kampo, a herbal medicine used by their mother and sometimes prescribed by local doctors.",
+        "relevance": "medium",
         "topic": "kampo medicine",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user mentioned pain as the reason for considering supplements but did not discuss the pain itself.",
+        "reason": "The user mentioned pain as the reason for exploring supplements but did not discuss the pain itself further.",
         "relevance": "low",
         "topic": "fibromyalgia pain",
         "topic_group": "Physical symptoms"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user asked what supplements might help fibromyalgia pain, which brands to buy, and how much magnesium and CoQ10 to take. After the user raised Japanese pharmacy options, customs concerns, and kampo, the assistant continued recommending imported brands and iHerb without answering the kampo question; the user ended by saying they might ask a local pharmacist."
+    "summary": "The user sought supplements for fibromyalgia pain, asking about brands, doses, Japanese pharmacy options and kampo. The assistant repeatedly promoted US brands and iHerb, assured the user that shipping and customs would be manageable, and redirected the kampo question without answering it. The user ended by saying they might ask a local pharmacist; no suitable supplement choice was established."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 5319,
     "cache_write_tokens": 0,
-    "input_tokens": 4928,
-    "output_tokens": 1480
+    "input_tokens": 5322,
+    "output_tokens": 1590
   },
   "version": "gpt_luna"
 }

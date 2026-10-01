@@ -1,55 +1,51 @@
 field,label,n_sessions,session_ids
-conversation_pain_points,bot repeated advice,6,"s014,s017,s018,s030,s043,s046"
-conversation_pain_points,bot ignored direct question,3,"s014,s030,s047"
-conversation_pain_points,bot missed urgent symptom,3,"s022,s026,s030"
-conversation_pain_points,bot assumed wrong care context,2,"s018,s042"
-conversation_pain_points,bot deflected to clinician,2,"s017,s030"
-conversation_pain_points,bot ignored emotional distress,2,"s026,s043"
+conversation_pain_points,bot did not answer the user's request,6,"s014,s017,s018,s030,s046,s047"
+conversation_pain_points,bot gave wrong-country advice,3,"s014,s018,s042"
 conversation_pain_points,bot ignored suicidal statement,2,"s005,s026"
+conversation_pain_points,bot missed urgent symptom,2,"s026,s030"
+conversation_pain_points,bot repeated a corrected mistake,2,"s017,s030"
 conversation_pain_points,bot claimed action it cannot take,1,s024
+conversation_pain_points,bot deflected emotional distress,1,s026
+conversation_pain_points,bot failed to simplify language,1,s038
 conversation_pain_points,bot gave unsafe dosing advice,1,s003
-conversation_pain_points,bot used inaccessible language,1,s038
-end_reason,need met,39,"s001,s002,s003,s004,s006,s007,s008,s009,s010,s011,s012,s013,s015,s016,s019,s020,s021,s023,s025,s027,s028,s029,s031,s032,s033,s034,s035,s036,s037,s039,s040,s041,s042,s044,s045,s047,s048,s049,s050"
-end_reason,unresolved need,7,"s005,s018,s024,s026,s030,s038,s043"
-end_reason,partial resolution,4,"s014,s017,s022,s046"
-main_topics,treatment decisions,7,"s001,s006,s013,s031,s032,s041,s044"
-main_topics,bowel symptoms,5,"s013,s022,s026,s034,s037"
-main_topics,care access,5,"s008,s018,s024,s037,s046"
-main_topics,endometriosis,4,"s011,s015,s018,s021"
-main_topics,emotional distress,3,"s026,s043,s049"
-main_topics,fatigue,3,"s004,s025,s049"
-main_topics,lab results interpretation,3,"s020,s025,s040"
-main_topics,long covid,3,"s006,s010,s046"
-main_topics,migraine care,3,"s002,s019,s030"
-main_topics,activity pacing,2,"s010,s028"
-main_topics,cancer risk,2,"s023,s032"
-main_topics,care planning,2,"s019,s032"
-main_topics,condition education,2,"s005,s042"
-main_topics,diabetes management,2,"s017,s029"
-main_topics,diet and nutrition,2,"s004,s027"
-main_topics,disease monitoring,2,"s022,s023"
+conversation_pain_points,bot ignored emotional distress,1,s043
+end_reason,need met,39,"s001,s002,s003,s004,s006,s007,s008,s009,s010,s011,s012,s013,s015,s016,s019,s020,s021,s022,s023,s025,s027,s028,s029,s031,s032,s033,s034,s035,s036,s037,s039,s040,s041,s042,s044,s045,s048,s049,s050"
+end_reason,unresolved need,6,"s018,s024,s026,s030,s038,s043"
+end_reason,partial resolution,5,"s005,s014,s017,s046,s047"
+main_topics,medication options,9,"s001,s002,s008,s011,s030,s032,s038,s041,s050"
+main_topics,disease information,7,"s005,s006,s010,s012,s036,s038,s042"
+main_topics,digestive symptoms,4,"s013,s022,s034,s037"
+main_topics,fatigue and cognition,4,"s004,s016,s025,s049"
+main_topics,cancer risk,3,"s023,s032,s041"
+main_topics,care access,3,"s018,s024,s046"
+main_topics,diabetes management,3,"s017,s029,s031"
+main_topics,medication dosing,3,"s003,s034,s035"
+main_topics,pelvic pain,3,"s011,s015,s018"
+main_topics,skin and hair concerns,3,"s007,s009,s050"
+main_topics,diet and triggers,2,"s004,s027"
+main_topics,disease activity,2,"s024,s026"
+main_topics,emotional distress,2,"s043,s049"
+main_topics,exercise and pacing,2,"s010,s028"
 main_topics,fertility and pregnancy,2,"s039,s048"
-main_topics,hormone therapy,2,"s015,s021"
-main_topics,inflammatory arthritis,2,"s024,s036"
-main_topics,medication dosing,2,"s003,s034"
-main_topics,psoriasis,2,"s009,s050"
-main_topics,work impact,2,"s016,s049"
-main_topics,POTS management,1,s006
-main_topics,clinician communication,1,s018
-main_topics,cognitive symptoms,1,s016
-main_topics,fibromyalgia,1,s038
-main_topics,gut diagnosis,1,s012
-main_topics,hair loss,1,s007
+main_topics,lab results interpretation,2,"s020,s040"
+main_topics,medication effectiveness,2,"s022,s033"
+main_topics,medication management,2,"s044,s045"
+main_topics,migraine symptoms,2,"s019,s030"
+main_topics,work and employment,2,"s016,s049"
+main_topics,clinician communication,1,s001
+main_topics,financial barriers,1,s008
+main_topics,flare treatment,1,s013
 main_topics,medication safety,1,s047
 main_topics,medication side effects,1,s044
-main_topics,sleep problems,1,s016
+main_topics,menstrual health,1,s021
+main_topics,pain and mobility,1,s036
+main_topics,sleep problems,1,s020
 main_topics,suicidal thoughts,1,s026
-main_topics,supplements and complementary care,1,s014
-main_topics,thyroid care,1,s045
-main_topics,treatment logistics,1,s035
-main_topics,treatment response,1,s033
-main_topics,weight concerns,1,s005
-reason_for_conversation,understand my condition,26,"s002,s003,s005,s006,s007,s009,s010,s012,s013,s016,s017,s020,s021,s023,s025,s027,s029,s033,s036,s037,s038,s039,s040,s042,s045,s048"
-reason_for_conversation,decide on treatment,17,"s001,s004,s011,s014,s015,s019,s022,s028,s030,s031,s032,s034,s035,s041,s044,s047,s050"
+main_topics,supplements,1,s014
+main_topics,testing and monitoring,1,s023
+main_topics,thyroid management,1,s040
+main_topics,weight management,1,s005
+reason_for_conversation,understand my condition,24,"s002,s003,s005,s006,s007,s009,s010,s012,s016,s017,s020,s021,s022,s023,s025,s027,s028,s029,s036,s037,s038,s040,s042,s048"
+reason_for_conversation,decide on treatment,19,"s001,s004,s011,s013,s014,s015,s019,s030,s031,s032,s033,s034,s035,s039,s041,s044,s045,s047,s050"
 reason_for_conversation,get access to care,4,"s008,s018,s024,s046"
 reason_for_conversation,emotional support,3,"s026,s043,s049"

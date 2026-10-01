@@ -86,6 +86,19 @@ Record this as we go. For each item: what the AI did, how we checked it, and whe
   - Review verdict: ship after fixes. It confirmed provenance, no stale labels, outputs matching a fresh run, and stability results unchanged.
   - Fixed: the draft memo's percentages were updated to the v8 table (88/82/25/33%, 43 vs 7 conversations), changing only the numbers. D-047 now states that 4 of the 6 reason changes moved away from the v7 stability majority.
   - Not changed: `schemas.TOPIC_GROUPS` is used only by a test. It is kept as the public list of the ten names.
+- **2026-10-01 — Full conversations in the memo's deep dive (human request).** The human found one-sentence summaries too short to judge. Each "Matching conversations" entry now opens to the full LLM summary and the transcript, as user and bot turns styled like the explorer. The transcript is built on first open; `memo_breakdown` now embeds the transcripts, which brings the page to about 0.5 MB. Headless Chrome: opening all 50 entries gives each one exactly its number of turns, and the short first sentence hides when an entry is open.
+- **2026-10-01 — "Repeated advice" diagnosis and `summary_v9` draft (human observation).** The human judged that conversations labelled "bot repeated advice" were not about repetition. Opus read the six (s014, s017, s018, s030, s043, s046) with their pushback labels and agreed. The label covered two failures: not answering what the user asked (s014, s030, s043, s046) and not retaining a correction (s017, s018). In 5 of the 6 it sat on top of a more specific label. Cause: `summary_v8` offers "bot repeated advice after pushback" as an example and has no label for an unanswered request. Draft `summary_v9` (not yet wired in; the pipeline is still on v8):
+  - It removes that example and adds the rule "name what went wrong, not that it happened more than once".
+  - It defines three fixed labels: `bot gave wrong-country advice`, `bot repeated a corrected mistake` and `bot did not answer the user's request`.
+  - It adds a most-specific-label rule.
+
+  Test: 3 runs on 15 conversations (the six, six with other failures, three clean), then two re-tests of the six after wording changes. The cost was about $0.07, and the outputs sit in the session scratch folder, not committed. Result with the final wording:
+  - No "repeated advice" labels, and the clean conversations stayed clean.
+  - s014, s018, s043 and s046 got identical labels in 3/3 runs. s017 got "repeated a corrected mistake" in 3/3.
+  - s030 keeps "missed urgent symptom" in 3/3, but its secondary labels vary.
+  - Regression to note: s022 lost "missed urgent symptom" in 3/3 runs (v8 flagged it; v7 flagged it in 1 of 4).
+  - Wording tried and dropped: listing "something they have already tried" under the corrected-mistake label mislabelled s030 (3/3). An explicit exclusion sentence destabilised s017 (1/3).
+- **2026-10-01 — Full relabel with `summary_v9` and `consolidate_v4` (human go-ahead, D-048).** Opus wired in `summary_v9`, wrote `consolidate_v4` (three fixed pain-point labels kept verbatim) and removed the D-039 merge rule and its tests. The stability script was pinned to `consolidate_v3`, and its results stayed identical. The commands were the same as for v8: the `summarise_all` one-off with `load_prompt("summary_v9")`, then `uv run mama-pipeline --remap gpt_luna`. Dynamics were not rerun. Changes against v8 are in D-048. The draft memo's "decide on treatment" figure was updated from 82% to 84%; the other quoted figures still match. **The s022 override is live again:** v9 labels s022 as need met with no pain point, while our hand check says the bot missed an urgent symptom. The D-047 note saying the override no longer differed from `outputs/` held only for the v8 labels.
 
 ## Overrides of AI output
 

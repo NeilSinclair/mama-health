@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:06:53+00:00",
+  "created_at": "2026-10-01T15:48:32+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,65 +7,59 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened by asking why their A1C rose from 6.8 to 7.4 despite an unchanged routine.",
+        "reason": "The user opened by asking why their A1C rose despite no perceived changes and returned to what the result meant.",
         "relevance": "strong",
-        "topic": "rising a1c",
+        "topic": "rising A1C",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user described months of waking repeatedly, loud snoring, and feeling unrefreshed, then returned to sleep as a likely contributor.",
-        "relevance": "medium",
-        "topic": "sleep disruption",
-        "topic_group": "Fatigue, sleep, diet & activity"
-      },
-      {
-        "reason": "The user asked whether age explained the increase and feared it meant diabetes was suddenly getting much worse.",
+        "reason": "The user wondered whether age explained the increase and said they feared diabetes was going downhill.",
         "relevance": "medium",
         "topic": "diabetes progression",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked what an individualized target means after their doctor had only said to stay under 7.",
+        "reason": "The user described months of interrupted sleep and loud snoring, then identified sleep as a likely contributor and planned to raise it with their doctor.",
+        "relevance": "strong",
+        "topic": "broken sleep and snoring",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user mentioned gaining a few pounds and asked whether it could affect their blood sugar.",
         "relevance": "medium",
-        "topic": "individualized a1c target",
+        "topic": "weight gain",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked what an individualized target meant after their doctor had given them a general target.",
+        "relevance": "medium",
+        "topic": "personal A1C target",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user asked whether to get a meter and why morning and after-meal readings matter.",
+        "reason": "The user asked whether to get a meter and followed up on why morning and after-meal readings matter.",
         "relevance": "medium",
         "topic": "home glucose monitoring",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user wanted a concrete plan for the next appointment rather than receiving the same vague response, and summarized questions to bring.",
+        "reason": "The user wanted to avoid getting the same shrug at their next appointment and confirmed a list of questions to bring.",
         "relevance": "medium",
-        "topic": "appointment preparation",
+        "topic": "doctor appointment preparation",
         "topic_group": "Working with clinicians"
-      },
-      {
-        "reason": "The user mentioned gaining a few pounds and asked whether it could affect blood sugar, but did not return to it.",
-        "relevance": "low",
-        "topic": "weight gain",
-        "topic_group": "Fatigue, sleep, diet & activity"
-      },
-      {
-        "reason": "The user said they had worried the result meant a sudden decline and later said they had expected things to be downhill because of age.",
-        "relevance": "medium",
-        "topic": "fear of worsening diabetes",
-        "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user asked why their A1C rose from 6.8 to 7.4 despite no reported routine changes and whether age was to blame; they also described broken sleep, loud snoring, and modest weight gain as possible contributors. The assistant discussed individualized targets and glucose monitoring and helped shape an appointment agenda, including a two-week food and sleep diary and questions about the snoring and a meter. The user said the conversation was more useful than expected, felt reassured, and restated the plan."
+    "summary": "The user asked why their A1C had risen despite an unchanged routine and whether it was simply age; they also described months of broken sleep and loud snoring, and some winter weight gain. The assistant discussed possible contributors, A1C targets and home readings, and the user accepted a plan to keep food and sleep notes and ask their doctor about the target, snoring, a meter and a sleep study; they said the conversation was more useful than expecting things to be downhill."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 5623,
-    "output_tokens": 1872
+    "input_tokens": 6017,
+    "output_tokens": 1452
   },
   "version": "gpt_luna"
 }

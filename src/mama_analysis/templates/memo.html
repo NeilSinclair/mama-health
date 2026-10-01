@@ -10,19 +10,19 @@
   /* Field colours match the explorer (validated in D-036); disease uses its neutral. */
   :root {
     --bg: #fbfaf8; --surface: #ffffff; --text: #1d1d1f; --muted: #6b6b70;
-    --border: #e6e3de; --accent: #b4532a; --accent-soft: #fbeee7; --chip: #f3f1ed; --code-bg: #f3f1ed;
+    --border: #e6e3de; --accent: #b4532a; --accent-soft: #fbeee7; --chip: #f3f1ed; --code-bg: #f3f1ed; --user-bubble: #fbeee7; --bot-bubble: #f3f1ed;
     --reason: #a8408f; --topic: #3867b5; --end: #1f7a4d; --neutral: #6b7a8c; --pain: #c2412d;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #141414; --surface: #1c1c1e; --text: #ececec; --muted: #a0a0a6;
-      --border: #2e2e31; --accent: #ec8a5c; --accent-soft: #2e1f18; --chip: #26262a; --code-bg: #26262a;
+      --border: #2e2e31; --accent: #ec8a5c; --accent-soft: #2e1f18; --chip: #26262a; --code-bg: #26262a; --user-bubble: #2e1f18; --bot-bubble: #26262a;
       --reason: #c064bc; --topic: #5f8ce0; --end: #34a595; --neutral: #8b95a3; --pain: #dd6e58;
     }
   }
   :root[data-theme="dark"] {
     --bg: #141414; --surface: #1c1c1e; --text: #ececec; --muted: #a0a0a6;
-    --border: #2e2e31; --accent: #ec8a5c; --accent-soft: #2e1f18; --chip: #26262a; --code-bg: #26262a;
+    --border: #2e2e31; --accent: #ec8a5c; --accent-soft: #2e1f18; --chip: #26262a; --code-bg: #26262a; --user-bubble: #2e1f18; --bot-bubble: #26262a;
     --reason: #c064bc; --topic: #5f8ce0; --end: #34a595; --neutral: #8b95a3; --pain: #dd6e58;
   }
   * { box-sizing: border-box; }
@@ -93,7 +93,17 @@
   .brow .fill { display: block; height: 10px; border-radius: 0 4px 4px 0; min-width: 2px; }
   .brow .n { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
   .bdetails { margin-top: 14px; }
-  .bdetails summary { cursor: pointer; font-weight: 600; font-size: 15px; margin-bottom: 8px; }
+  .bdetails > summary { cursor: pointer; font-weight: 600; font-size: 15px; margin-bottom: 8px; }
+  /* Each matching conversation opens to its full summary and transcript. */
+  .blist details > summary { cursor: pointer; list-style-position: outside; }
+  .blist details > summary:hover .sid { color: var(--accent); }
+  .blist .full { margin: 10px 0 4px; }
+  .blist details[open] > summary .first { display: none; }
+  .convo { display: flex; flex-direction: column; gap: 8px; margin: 10px 0 4px; }
+  .bubble { max-width: 82%; padding: 8px 12px; border-radius: 12px; white-space: pre-wrap; font-size: 14px; }
+  .bubble.user { align-self: flex-end; background: var(--user-bubble); border-bottom-right-radius: 4px; }
+  .bubble.assistant { align-self: flex-start; background: var(--bot-bubble); border-bottom-left-radius: 4px; }
+  .bubble .who { display: block; font-size: 11px; font-weight: 600; color: var(--muted); margin-bottom: 2px; }
   .blist { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
   .blist li { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; font-size: 14px; margin: 0; }
   .blist .sid { font-weight: 700; margin-right: 8px; }
@@ -179,11 +189,25 @@ function render() {
     return panel;
   }));
 
-  document.getElementById("bhead").textContent = `Matching conversations (${n})`;
-  document.getElementById("blist").replaceChildren(...rows.map((r) => el("li", { title: r.summary },
-    el("span", { class: "sid" }, r.session_id),
-    el("span", { class: "tag" }, `${r.disease.join(", ")} · ${r.end_reason.join(", ")}`),
-    r.summary.split(/(?<=[.!?])\s/)[0])));
+  document.getElementById("bhead").textContent = `Matching conversations (${n}) · click one to read it`;
+  document.getElementById("blist").replaceChildren(...rows.map((r) => el("li", {}, conversationItem(r))));
+}
+
+// A matching conversation: one line, opening to the full summary and transcript (built on first open).
+function conversationItem(r) {
+  const item = el("details", {},
+    el("summary", {},
+      el("span", { class: "sid" }, r.session_id),
+      el("span", { class: "tag" }, `${r.disease.join(", ")} · ${r.end_reason.join(", ")}`),
+      el("span", { class: "first" }, r.summary.split(/(?<=[.!?])\s/)[0])));
+  item.addEventListener("toggle", () => {
+    if (!item.open || item.dataset.loaded) return;
+    item.dataset.loaded = "1";
+    const bubbles = DATA.conversations[r.session_id].map((t) => el("div", { class: `bubble ${t.role}` },
+      el("span", { class: "who" }, `t${t.turn} · ${t.role}`), t.text));
+    item.append(el("p", { class: "full" }, el("strong", {}, "Summary (LLM): "), r.summary), el("div", { class: "convo" }, ...bubbles));
+  });
+  return item;
 }
 
 render();

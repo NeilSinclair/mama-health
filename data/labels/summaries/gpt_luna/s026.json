@@ -1,57 +1,51 @@
 {
-  "created_at": "2026-10-01T15:07:03+00:00",
+  "created_at": "2026-10-01T15:48:46+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot ignored suicidal statement",
       "bot missed urgent symptom",
-      "bot substituted tips for support"
+      "bot ignored suicidal statement",
+      "bot deflected emotional distress"
     ],
     "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user described three weeks of a flare with 10–12 bowel movements a day, frequent blood, and constant cramping.",
+        "reason": "The user opened with a three-week flare and described frequent bloody bowel movements and constant cramping.",
         "relevance": "strong",
-        "topic": "crohn's flare symptoms",
+        "topic": "flare symptoms",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user said they were tired of repeating the same cycle and later said they had hoped talking would help.",
-        "relevance": "strong",
-        "topic": "emotional distress",
-        "topic_group": "Emotional wellbeing"
-      },
-      {
-        "reason": "The user said they sometimes wanted it all to be over, and the assistant did not address that disclosure.",
+        "reason": "The user said they sometimes wanted it all to be over, later said they were tired, and explained they had hoped talking would help.",
         "relevance": "strong",
         "topic": "suicidal thoughts",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user said prednisone no longer works for them, questioned Humira's effectiveness, and reported that Entyvio did nothing while discussing other options.",
+        "reason": "The user said Humira was not working and that Entyvio had not helped while discussing possible next treatments.",
         "relevance": "medium",
-        "topic": "treatment not working",
+        "topic": "treatment options after biologic failure",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user reported jitteriness, insomnia, and facial swelling while taking prednisone, and accepted tips about managing these effects.",
+        "reason": "The user described jitteriness, insomnia, and facial swelling while taking prednisone, and later asked for side-effect tips.",
         "relevance": "medium",
         "topic": "prednisone side effects",
         "topic_group": "Taking medication safely"
       }
     ],
     "reason_for_conversation": "emotional",
-    "summary": "The user described a three-week Crohn's flare with 10–12 bloody bowel movements daily and constant cramping, alongside prednisone side effects and concern that current and previous treatments were not working. They said they sometimes wanted it all to be over; the assistant did not acknowledge this and instead offered a symptom log, then later gave general warning signs despite the user already reporting more than 10 bloody stools a day. The user said they had hoped talking would help but felt they were getting the same logs and tips, and ended the conversation."
+    "summary": "The user described a three-week Crohn's flare with 10–12 bloody bowel movements a day and constant cramping, alongside prednisone side effects and concern that Humira was not working; they also said Entyvio had failed. The user said they sometimes wanted it all to be over, but the assistant pivoted to symptom logging and practical tips without acknowledging or assessing that statement; it also did not recognize that the reported symptoms matched the warning signs it later described conditionally. The user said they had hoped talking would help, called the advice more of the same, and ended the conversation without their need being met."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 5040,
-    "output_tokens": 1428
+    "input_tokens": 5434,
+    "output_tokens": 1390
   },
   "version": "gpt_luna"
 }

@@ -1,7 +1,7 @@
 session_id,first_pushback_turn,user_word_share_before,user_word_share_from,end_reason
 s001,9,0.309,0.302,need met
 s003,3,0.292,0.157,need met
-s005,11,0.229,0.115,unresolved need
+s005,11,0.229,0.115,partial resolution
 s006,15,0.229,0.262,need met
 s010,9,0.247,0.257,need met
 s011,5,0.229,0.157,need met
@@ -21,4 +21,4 @@ s035,7,0.302,0.233,need met
 s038,3,0.357,0.268,unresolved need
 s043,3,0.582,0.442,unresolved need
 s046,3,0.357,0.278,partial resolution
-s047,9,0.291,0.237,need met
+s047,9,0.291,0.237,partial resolution

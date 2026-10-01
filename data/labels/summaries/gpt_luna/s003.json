@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:06:28+00:00",
+  "created_at": "2026-10-01T15:47:54+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
@@ -9,53 +9,41 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user repeatedly asked whether their prescribed dose was correct or too low, making this the central question.",
+        "reason": "The user repeatedly asked whether their prescribed dose was right or too low and ended by confirming their understanding.",
         "relevance": "strong",
-        "topic": "mesalamine dose suitability",
+        "topic": "mesalamine dose",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user said the initial dose comparison made them worry they had been underprescribed and later said the clarification made them feel better.",
-        "relevance": "medium",
-        "topic": "undertreatment worry",
-        "topic_group": "Emotional wellbeing"
-      },
-      {
-        "reason": "The user asked why formulation mattered, identified their sachet form, and checked that it fit the prescribed schedule.",
+        "reason": "The user asked why formulation mattered and identified their medicine as granules in sachets.",
         "relevance": "medium",
         "topic": "mesalamine formulation",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked how long it would take to know whether the medicine was working and accepted guidance on when to follow up.",
-        "relevance": "medium",
-        "topic": "mesalamine response timing",
-        "topic_group": "Treatment choice"
-      },
-      {
-        "reason": "The user asked once whether to take the sachets with food.",
+        "reason": "The user asked whether to take the sachets with food but did not return to the question.",
         "relevance": "low",
-        "topic": "taking mesalamine with food",
+        "topic": "taking granules with food",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user described their symptoms as moderate to provide context for the dose question, but did not discuss symptoms further.",
-        "relevance": "low",
-        "topic": "moderate colitis symptoms",
-        "topic_group": "Physical symptoms"
+        "reason": "The user asked how long it would take to know whether mesalamine was working.",
+        "relevance": "medium",
+        "topic": "time to treatment effect",
+        "topic_group": "Treatment choice"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user asked whether their newly prescribed mesalamine dose was too low after the assistant initially gave a higher dose without enough context, which worried them. The assistant acknowledged the mistake, discussed formulation and administration, and the user said the clarification made them feel better and thanked the assistant."
+    "summary": "The user asked whether their prescribed mesalamine dose of 1.2 g twice daily was too low after the assistant initially gave 4.8 g/day as a typical dose. The assistant acknowledged the initial answer was too broad, explained that dose depends on the formulation and situation, and answered questions about sachets, food, and how long treatment may take to work. The user said the clarification made them feel better and ended satisfied."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 5051,
-    "output_tokens": 1508
+    "input_tokens": 5445,
+    "output_tokens": 1093
   },
   "version": "gpt_luna"
 }

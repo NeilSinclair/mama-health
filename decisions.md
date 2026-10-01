@@ -367,3 +367,35 @@ Append-only. Each entry records the decision, its rationale, the alternatives co
   - The pain-point vocabulary was re-consolidated from 14 to 10 categories. Wrong-country advice is now named "bot assumed wrong care context" (s018, s042).
   - The pre-relabel v7 labels are in git history, and the stability experiment keeps a frozen copy in `data/labels_stability/committed_v7/`.
 - **What would change it:** topic groups that the model fills inconsistently between reruns. That is untested for v8; the stability experiment measured v7.
+
+### D-048 — Pain points name what went wrong, not that it repeated (summary_v9, consolidate_v4; supersedes D-039)
+- **Date:** 2026-10-01
+- **Decision:** `summary_v9` changes the pain-point rules:
+  - "Bot repeated advice after pushback" is no longer an example. New rule: name what went wrong, not that it happened more than once; whether the bot adapted after pushback belongs to the dynamics pass.
+  - Three labels have fixed wording and definitions:
+    - `bot gave wrong-country advice`.
+    - `bot repeated a corrected mistake`: a fact about the user that the bot got wrong again after correction.
+    - `bot did not answer the user's request`: a quotable request still unanswered at the end. It absorbs "ignored a direct question".
+  - Each failure gets its most specific label, and only one.
+
+  `consolidate_v4` keeps those three labels verbatim as their own categories. The D-039 prefix merge (`CANONICAL_MERGES`, `merge_canonicals`) is removed: it is no longer needed, and it would rename "bot repeated a corrected mistake".
+- **Rationale:** The human found that conversations labelled "bot repeated advice" were not about repetition. Reading the six with their pushback labels showed two failures under one name:
+  - Not answering what the user asked (s014, s030, s043, s046).
+  - Not retaining a correction (s017, s018).
+
+  In five of the six, the label sat on top of a more specific one. The v8 prompt offered "repeated advice" as an example and had no label for an unanswered request.
+- **Test before adoption:** 3 runs on 15 conversations, plus two re-tests of the six after wording changes (NOTES). With the final wording:
+  - No "repeated" labels.
+  - Clean controls stayed clean.
+  - s014, s018, s043 and s046 were identical across runs.
+  - s017's main label was stable.
+  - s030 kept "missed urgent symptom", but its secondary labels varied.
+- **Effect of the full relabel (against v8):**
+  - Need met stays at 39/50.
+  - Reason changed in 6 conversations (understand 26 → 24, decide 17 → 19) and end reason in 3.
+  - There are 10 pain-point categories over 13 conversations: did not answer the user's request 6, wrong-country advice 3 (s014, s018, s042), repeated a corrected mistake 2 (s017, s030).
+  - **s022 is again "need met" with no pain point**, as in all three test runs, so our hand check (NOTES, overrides) once more disagrees with `outputs/`. D-038's caveat applies again: memo figures touching s022 must say which they use.
+  - s030's "repeated a corrected mistake" is the weak variant: the bot re-suggested a diary the user already keeps.
+  - Consolidation left two near-duplicate categories: "bot ignored emotional distress" (s043) and "bot deflected emotional distress" (s026).
+- **Alternatives considered:** Keeping "repeated advice" as a persistence marker. It duplicates the dynamics pass's "bot failed to adapt", which is measured per turn. Two wordings of the corrected-mistake definition were tested and dropped (NOTES).
+- **What would change it:** A rerun in which the three fixed labels are applied inconsistently, or a decision to write the s022 pattern (worsening bleeding, bot endorses waiting) into the prompt. That was not done, to avoid fitting the prompt to one conversation.

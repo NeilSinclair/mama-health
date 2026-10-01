@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:07:18+00:00",
+  "created_at": "2026-10-01T15:49:01+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,53 +7,53 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came to work out whether and how to shift an infliximab infusion that falls during a three-week trip.",
+        "reason": "The user came to understand whether and how to shift an infliximab infusion that falls during a three-week trip, and settled on calling the care team about having it before departure.",
         "relevance": "strong",
-        "topic": "infusion timing around travel",
-        "topic_group": "Treatment choice"
-      },
-      {
-        "reason": "The user asked what to do while travelling on infliximab and later included checking vaccines in their plan.",
-        "relevance": "medium",
-        "topic": "travel infection precautions",
+        "topic": "infusion timing",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user noted needing coverage for a pre-existing condition after the assistant raised insurance.",
+        "reason": "The user asked what to do about travelling while on infliximab and discussed vaccines and infection precautions.",
         "relevance": "medium",
-        "topic": "travel insurance coverage",
+        "topic": "travel precautions",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user noted they needed insurance to cover Crohn's as a pre-existing condition and engaged with advice on what to declare.",
+        "relevance": "medium",
+        "topic": "travel insurance",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user asked whether to carry paperwork and agreed that a generic-name medication list would be useful.",
+        "reason": "The user asked what paperwork to carry and discussed a clinician letter and medication list.",
         "relevance": "medium",
-        "topic": "medical travel documents",
+        "topic": "medical documentation abroad",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user said they should know where to go if they had a flare while away.",
-        "relevance": "low",
+        "reason": "The user mentioned wanting to know where to go if they had a flare, and the assistant suggested identifying local care before travel.",
+        "relevance": "medium",
         "topic": "finding care abroad",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user said they usually feel tired the day after an infusion and used that to consider timing before the flight.",
+        "reason": "The user said they usually feel tired the day after an infusion and used that to consider timing it several days before the flight.",
         "relevance": "low",
         "topic": "post-infusion fatigue",
-        "topic_group": "Fatigue, sleep, diet & activity"
+        "topic_group": "Physical symptoms"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user wanted to plan an infliximab infusion that would fall during a three-week trip and asked about shifting it, travel precautions, insurance, documents, and finding care abroad. The assistant helped build a checklist, including contacting the IBD team about timing and vaccines; the user said they would call the next day and that the conversation turned their worry into actionable steps."
+    "summary": "The user wanted to plan an infliximab infusion that falls during a three-week trip and asked about shifting it, travel precautions, insurance, documentation, and care abroad. The assistant suggested discussing an earlier infusion with the IBD team and preparing for travel; the user summarized the steps, planned to call the team the next day, and said the conversation turned their worry into actionable steps."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 5667,
-    "output_tokens": 1242
+    "input_tokens": 6061,
+    "output_tokens": 1177
   },
   "version": "gpt_luna"
 }

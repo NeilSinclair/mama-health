@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:07:00+00:00",
+  "created_at": "2026-10-01T15:48:41+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,41 +7,47 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user repeatedly asked how to exercise without crashing, discussed pacing on good days, and appreciated a practical slow-build plan.",
+        "reason": "The user described being unable to function for days after walking or yoga and asked how to exercise without another crash.",
         "relevance": "strong",
-        "topic": "exercise pacing and progression",
-        "topic_group": "Fatigue, sleep, diet & activity"
-      },
-      {
-        "reason": "The user described being unable to function for days after walks or beginner yoga and asked how to avoid another crash.",
-        "relevance": "strong",
-        "topic": "delayed post-exercise flares",
+        "topic": "post-exercise flares",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked whether walking or yoga was preferable and responded positively to the idea of trying warm-water exercise.",
-        "relevance": "medium",
-        "topic": "exercise type",
+        "reason": "The conversation repeatedly focused on starting at a tolerable level, building slowly, and limiting activity on good days.",
+        "relevance": "strong",
+        "topic": "exercise pacing",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user said they felt stuck between standard advice and their body's response and described exercise crashes as feeling punishing.",
+        "reason": "The user asked whether walking or yoga was preferable and considered trying the community-center pool.",
+        "relevance": "medium",
+        "topic": "exercise options",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user said they felt stuck between standard advice and their body's response, and described feeling punished for trying.",
         "relevance": "medium",
         "topic": "frustration with exercise advice",
         "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked how long it might take to notice a difference and discussed a history of overdoing activity or giving up.",
+        "relevance": "medium",
+        "topic": "expected progress",
+        "topic_group": "Fatigue, sleep, diet & activity"
       }
     ],
-    "reason_for_conversation": "decisional",
-    "summary": "The user felt stuck because exercise advice for fibromyalgia conflicted with their experience of delayed crashes after walks and beginner yoga. The assistant discussed starting with very small amounts, pacing on good days, possible exercise types, and gradual progress; the user said the advice was genuinely useful and thanked the assistant."
+    "reason_for_conversation": "informational",
+    "summary": "The user felt stuck because exercise advice for fibromyalgia conflicted with delayed crashes after walking or yoga. The assistant discussed starting very small, pacing on good days, possible exercise types including warm-water movement, and a gradual timeline; the user said the advice helped and identified a plan to try the pool cautiously."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 6387,
-    "output_tokens": 886
+    "input_tokens": 6781,
+    "output_tokens": 941
   },
   "version": "gpt_luna"
 }

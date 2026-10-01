@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:06:31+00:00",
+  "created_at": "2026-10-01T15:47:59+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,51 +7,51 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user described gradual thinning, a widening part and a thinner ponytail, and returned to concern about it throughout the chat.",
+        "reason": "The user described thinning at the front, a wider part and a thinner ponytail, which prompted the conversation.",
         "relevance": "strong",
-        "topic": "hair thinning",
+        "topic": "gradual hair thinning",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked whether the thinning could be related to PCOS or another cause and asked whether it might worsen or be permanent.",
+        "reason": "The user asked whether PCOS or another cause could explain the thinning and followed up about stress and exams as a possible factor.",
         "relevance": "strong",
-        "topic": "hair loss causes",
+        "topic": "causes of hair thinning",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked what can be done for PCOS-related hair loss and discussed possible treatment options.",
+        "reason": "The user asked what could be done for PCOS-related hair loss and discussed treatment options.",
         "relevance": "medium",
         "topic": "hair loss treatments",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user said the widening part was upsetting to look at and later said they had feared there was nothing to do.",
+        "reason": "The user asked whether the widening part would keep getting worse and whether the loss could be permanent.",
+        "relevance": "medium",
+        "topic": "hair loss progression",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user expressed nervousness about hormone medications and specifically asked whether spironolactone is safe.",
+        "relevance": "medium",
+        "topic": "medication safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user said the widening part frightened them and later shared they had feared there was nothing they could do.",
         "relevance": "medium",
         "topic": "hair loss distress",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user specifically asked whether spironolactone was safe and said they felt nervous about hormone medications.",
-        "relevance": "medium",
-        "topic": "spironolactone safety",
-        "topic_group": "Taking medication safely"
-      },
-      {
-        "reason": "The user asked whether a stressful period with exams could have contributed to the thinning.",
-        "relevance": "medium",
-        "topic": "stress-related hair shedding",
-        "topic_group": "Physical symptoms"
-      },
-      {
-        "reason": "The user asked whether certain foods help PCOS-related hair loss.",
+        "reason": "The user asked whether particular foods could help with PCOS-related hair loss.",
         "relevance": "low",
-        "topic": "hair loss nutrition",
+        "topic": "diet for hair loss",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
         "reason": "The user asked whether to see a regular doctor or a skin specialist.",
-        "relevance": "low",
-        "topic": "finding a clinician",
+        "relevance": "medium",
+        "topic": "choosing a clinician",
         "topic_group": "Access to care"
       },
       {
@@ -61,23 +61,23 @@
         "topic_group": "Working with clinicians"
       },
       {
-        "reason": "The user asked whether to avoid straightening their hair or change anything while waiting for an appointment.",
+        "reason": "The user asked whether to stop straightening their hair or avoid anything while waiting for the appointment.",
         "relevance": "low",
         "topic": "hair care practices",
         "topic_group": "Physical symptoms"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user asked whether gradual hair thinning and a widening part could be related to PCOS or other causes, and explored stress, treatment options, medication safety, diet and hair care. The assistant discussed possible causes and treatments, responded to the user's distress, and gave suggestions for arranging and preparing for an appointment. The user said the conversation helped and planned to book an appointment that week."
+    "summary": "The user asked whether gradual hair thinning and a widening part could be related to PCOS or another cause, including stress, and discussed treatment options, medication safety, diet and hair care. The assistant suggested discussing tests and treatment with a clinician and helped the user prepare for an appointment; the user said the conversation helped and planned to book one that week."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 6130,
-    "output_tokens": 1707
+    "input_tokens": 6524,
+    "output_tokens": 1505
   },
   "version": "gpt_luna"
 }

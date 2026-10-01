@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:06:30+00:00",
+  "created_at": "2026-10-01T15:48:01+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,47 +7,65 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user repeatedly asked whether tirzepatide would be covered in France and said they could not afford the full monthly cost.",
+        "reason": "The user repeatedly asked whether tirzepatide was covered in France and said they could not afford the full cost.",
         "relevance": "strong",
         "topic": "medication reimbursement",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user opened by saying their A1C remained high on metformin and asking about tirzepatide as a possible option.",
-        "relevance": "medium",
-        "topic": "blood sugar control on metformin",
+        "reason": "The user asked about tirzepatide because their A1C remained high on metformin and asked whether to discuss switching or adding it.",
+        "relevance": "strong",
+        "topic": "tirzepatide treatment option",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked how to inject it, said self-injection made them nervous, and then asked what side effects to watch for.",
+        "reason": "The user said self-injection made them nervous and asked how to take it.",
         "relevance": "medium",
-        "topic": "injection use and side effects",
+        "topic": "injection technique",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked whether tirzepatide could help with weight after mentioning weight gain since diagnosis.",
+        "reason": "The user asked what side effects to watch for, and the assistant described common effects and a rare warning symptom.",
         "relevance": "medium",
-        "topic": "weight effects",
+        "topic": "medication side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user mentioned gaining weight since diagnosis and said they disliked it.",
+        "relevance": "low",
+        "topic": "weight gain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked whether tirzepatide could help with weight, and the assistant answered at length.",
+        "relevance": "medium",
+        "topic": "medication and weight loss",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user said they hated the weight gain but did not return to that feeling separately.",
+        "reason": "The user mentioned that their A1C was still somewhat high on metformin as context for asking about another treatment.",
         "relevance": "low",
-        "topic": "distress about weight",
+        "topic": "high A1C",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user described the cost uncertainty as stressful and said the answer took a load off.",
+        "relevance": "low",
+        "topic": "financial stress",
         "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "access",
-    "summary": "The user asked about tirzepatide because their A1C remained high on metformin, with affordability and reimbursement in France as their main concern. The assistant repeatedly assured them it was covered and discussed injection use, side effects, and weight effects; the user felt reassured and said they would book with their doctor that week."
+    "summary": "The user asked about tirzepatide for type 2 diabetes, with affordability and reimbursement in France as the main concern. The assistant repeatedly assured them it was covered, and also discussed injection technique, side effects, and potential weight loss. The user felt reassured and planned to book a doctor appointment that week."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 5103,
-    "output_tokens": 1477
+    "input_tokens": 5497,
+    "output_tokens": 1610
   },
   "version": "gpt_luna"
 }

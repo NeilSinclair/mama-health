@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:06:21+00:00",
+  "created_at": "2026-10-01T15:47:48+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,41 +7,35 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user asked whether psoriasis patches itch more at night, why it happens, and what might help.",
+        "reason": "The user asked whether psoriasis patches itch worse at night and then asked why and what might help.",
         "relevance": "strong",
-        "topic": "nighttime psoriasis itch",
+        "topic": "nighttime psoriasis itching",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user said they wake with their skin raw from scratching and considered covering the knee with cotton.",
+        "reason": "The user said they wake with the affected skin raw and discussed ways to reduce damage from scratching.",
         "relevance": "medium",
         "topic": "scratching during sleep",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked whether greasy ointment works better than regular cream and received a comparison.",
+        "reason": "The user asked what helps and specifically compared greasy ointment with normal cream, accepting several bedtime measures to try.",
         "relevance": "medium",
-        "topic": "moisturizer choice",
+        "topic": "itch relief measures",
         "topic_group": "Treatment choice"
-      },
-      {
-        "reason": "The user mentioned usually keeping the bedroom warm and agreed to try making it cooler for nighttime itch.",
-        "relevance": "low",
-        "topic": "cooler bedroom",
-        "topic_group": "Fatigue, sleep, diet & activity"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user asked why psoriasis patches itch more at night and what could help, noting patches on the elbows and one knee and waking with skin raw from scratching. The assistant suggested a cooler bedroom, ointment before bed, short nails, and a cotton layer over the knee, and explained that ointment holds moisture longer than cream; the user said this was what they needed and planned to try the suggestions."
+    "summary": "The user asked about nighttime itching from psoriasis patches on their elbows and knee, including why it happens and how to reduce it. They also said they sometimes wake with the skin raw from scratching; the assistant suggested moisturizer or ointment, a cooler bedroom, short nails and a cotton layer, and the user said this was what they needed and planned to try it."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 4519,
-    "output_tokens": 723
+    "input_tokens": 4913,
+    "output_tokens": 617
   },
   "version": "gpt_luna"
 }

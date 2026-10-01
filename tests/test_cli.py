@@ -179,21 +179,6 @@ def test_mapping_that_misses_new_summary_labels_fails_clearly(data_file, tmp_pat
         run_summaries(data_file, labels, tmp_path / "out")
 
 
-def test_pain_point_merges_reach_outputs(data_file, tmp_path, fake_api):
-    """The human merge rule is applied on top of the cached model mapping."""
-    import json
-
-    labels, out = tmp_path / "labels", tmp_path / "out"
-    cli.relabel("gpt_luna", data_file, labels)
-    path = labels / "mappings" / "gpt_luna" / "conversation_pain_points.json"
-    entry = json.loads(path.read_text())
-    entry["output"]["mapping"] = {"bot repeated advice": "bot repeated advice after pushback"}
-    path.write_text(json.dumps(entry))
-    run_summaries(data_file, labels, out)
-    summaries = pd.read_csv(out / "summaries" / "gpt_luna" / "summaries.csv")
-    assert set(summaries["conversation_pain_points"]) == {"bot repeated advice"}
-
-
 def test_memo_page_written_only_when_draft_exists(data_file, tmp_path, fake_api):
     labels, out = tmp_path / "labels", tmp_path / "out"
     cli.relabel("gpt_luna", data_file, labels)

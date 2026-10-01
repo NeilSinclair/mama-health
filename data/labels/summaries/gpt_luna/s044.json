@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:07:37+00:00",
+  "created_at": "2026-10-01T15:49:23+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,25 +7,25 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user described severe nausea after the weekly dose and returned to ways to make it manageable.",
+        "reason": "The user opened with severe nausea after the weekly dose and returned to ways to manage it throughout the conversation.",
         "relevance": "strong",
-        "topic": "methotrexate-related nausea",
+        "topic": "methotrexate nausea",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user opened by asking whether to quit, then explored alternatives because the medicine helps their hands.",
+        "reason": "The user initially asked whether to quit, then explored alternatives because the medicine was helping their joints and asked whether to continue until the appointment.",
         "relevance": "strong",
-        "topic": "whether to stop methotrexate",
+        "topic": "methotrexate continuation",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked whether taking folic acid on the methotrexate day was a problem and agreed to change the timing.",
+        "reason": "The user asked whether taking folic acid on the same day as methotrexate was a problem and agreed to change the timing.",
         "relevance": "medium",
         "topic": "folic acid timing",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked whether injections could help and discussed feeling scared to inject themselves.",
+        "reason": "The user asked whether injections could reduce nausea, expressed fear of self-injection, and checked whether simpler options could come first.",
         "relevance": "medium",
         "topic": "injectable methotrexate",
         "topic_group": "Treatment choice"
@@ -37,23 +37,23 @@
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked what to tell the doctor so they would remember the options, and accepted a suggested note.",
+        "reason": "The user asked what to tell the doctor and said they would write down the suggested points.",
         "relevance": "medium",
         "topic": "appointment preparation",
         "topic_group": "Working with clinicians"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user considered stopping weekly methotrexate because of severe nausea after dosing, despite improved hand symptoms, and asked about alternatives including folic acid timing, dose splitting, injections, and anti-nausea medication. The assistant outlined options and helped prepare questions for the rheumatology visit; the user said they felt much better, planned to move folic acid to Sunday and take the tablets with food, and accepted continuing methotrexate as prescribed until an appointment in about two weeks."
+    "summary": "The user described severe nausea after weekly methotrexate, which was helping their joints, and asked whether they could stop. The assistant discussed folic acid timing, splitting the dose, injections, and anti-nausea medication; the user felt reassured, planned small changes, and accepted a list to take to the doctor in two weeks."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 6227,
-    "output_tokens": 1695
+    "input_tokens": 6621,
+    "output_tokens": 1146
   },
   "version": "gpt_luna"
 }

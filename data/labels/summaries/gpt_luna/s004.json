@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:06:23+00:00",
+  "created_at": "2026-10-01T15:47:57+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,53 +7,53 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user asks whether going gluten-free is evidence-based and wants a structured trial to judge whether it helps.",
+        "reason": "The user asked whether gluten-free eating is evidence-based for Hashimoto's and how to test whether it helps, then adopted a time-limited trial as part of their plan.",
         "relevance": "strong",
         "topic": "gluten-free diet trial",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "Persistent tiredness and fog despite a reportedly normal TSH are the reason the user is considering diet and recur throughout the conversation.",
+        "reason": "Ongoing tiredness and fog despite a reportedly normal TSH prompted the user's question and remained the main symptom they wanted to address.",
         "relevance": "strong",
         "topic": "fatigue and brain fog",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user wonders whether their dose may be off and includes reviewing it in their plan.",
-        "relevance": "medium",
-        "topic": "levothyroxine dose review",
-        "topic_group": "Taking medication safely"
-      },
-      {
-        "reason": "The user asks why testing matters, recognizes it must happen before stopping gluten, and plans to ask about testing.",
+        "reason": "The user asked why testing matters, recognized they should remain on gluten until tested, and included screening in their plan.",
         "relevance": "medium",
         "topic": "celiac screening",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user includes iron, B12, and vitamin D testing in the plan they restate near the end.",
+        "reason": "The user wondered whether their dose might be contributing to tiredness and agreed to ask for it to be reviewed.",
         "relevance": "medium",
-        "topic": "fatigue-related blood tests",
+        "topic": "levothyroxine dose review",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user included checks for iron, B12, and vitamin D in their proposed next steps after the assistant raised them as possible fatigue-related checks.",
+        "relevance": "medium",
+        "topic": "nutrient testing",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user says the gluten idea appealed partly because it was controllable compared with waiting on doctors.",
+        "reason": "The user said the gluten idea appealed partly because it was something they could control themselves while waiting on doctors.",
         "relevance": "low",
         "topic": "waiting for medical care",
         "topic_group": "Access to care"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user asked whether a gluten-free diet has evidence for Hashimoto's and explained they still feel tired and foggy despite a reportedly normal TSH while taking levothyroxine. The assistant suggested discussing celiac screening while still eating gluten and reviewing the dose and fatigue-related blood tests before considering a tracked, time-limited gluten-free trial; the user endorsed that plan and appreciated the balanced answer."
+    "summary": "The user asked whether a gluten-free diet has evidence for Hashimoto's after describing persistent tiredness and brain fog despite a reportedly normal TSH. The assistant discussed the uncertain evidence, advised celiac screening while still eating gluten, and suggested clinician review of the dose and nutrient levels before a tracked three-month trial. The user accepted that sequence as their plan and said the discussion felt balanced."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 6069,
-    "output_tokens": 1013
+    "input_tokens": 6463,
+    "output_tokens": 1465
   },
   "version": "gpt_luna"
 }

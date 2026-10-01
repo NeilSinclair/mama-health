@@ -20,7 +20,6 @@ from mama_analysis.consolidate import (
     FIELDS,
     consolidate_all,
     mapping_dir,
-    merge_canonicals,
     raw_labels,
 )
 from mama_analysis.data import DEFAULT_DATA_PATH, load_sessions, sessions_frame, turns_frame
@@ -139,9 +138,7 @@ def load_version(
             f"{version}: cached summaries don't match the current schema; "
             f"run: uv run mama-pipeline --relabel {version}"
         ) from err
-    field_maps = {
-        f: merge_canonicals(f, mappings[f].output["mapping"]) for f in CONSOLIDATED_FIELDS
-    }
+    field_maps = {f: mappings[f].output["mapping"] for f in CONSOLIDATED_FIELDS}
     # Fixed-vocabulary fields map to their display name, or to themselves.
     field_maps |= {
         f: {x: DISPLAY_NAMES.get(f, {}).get(x, x) for x in raw_labels(merged, f)}
@@ -312,7 +309,7 @@ def run_summaries(
         )
         path = out_dir / "memo.html"
         text = memo_path.read_text(encoding="utf-8")
-        path.write_text(render_memo(text, blocks, memo_breakdown(rows)), encoding="utf-8")
+        path.write_text(render_memo(text, blocks, memo_breakdown(rows, records)), encoding="utf-8")
         written["memo"] = path
     return written
 
