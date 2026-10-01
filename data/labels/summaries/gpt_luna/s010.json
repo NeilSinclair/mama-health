@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:06:30+00:00",
+  "created_at": "2026-10-01T15:48:02+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,65 +7,59 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened by asking whether long covid would improve and returned to the longer-term outlook later.",
+        "reason": "The user opened by asking whether long COVID would improve and returned to ask what persistent symptoms could mean.",
         "relevance": "strong",
         "topic": "long covid outlook",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user explored how to find an energy limit, manage activity, and said they planned to start pacing and tracking.",
+        "reason": "The user asked how to find an energy limit and ended by planning to try pacing and activity tracking.",
         "relevance": "strong",
-        "topic": "activity pacing",
+        "topic": "pacing activity",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user described being wiped out for days after ordinary exertion and asked whether these crashes could affect recovery.",
+        "reason": "The user described being wiped out for days after a food shop and asked whether those crashes could affect recovery.",
         "relevance": "medium",
         "topic": "post-exertional crashes",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user explained that work and household responsibilities make resting difficult.",
+        "reason": "The user described the long timeline as feeling like forever and said false reassurance made them feel more alone.",
         "relevance": "medium",
-        "topic": "work and household limits",
-        "topic_group": "Work & life plans"
-      },
-      {
-        "reason": "The user said their manager knew they had been unwell but did not understand that it was ongoing.",
-        "relevance": "medium",
-        "topic": "workplace understanding",
-        "topic_group": "Work & life plans"
-      },
-      {
-        "reason": "The user said a previous GP appointment felt dismissive and wanted to avoid another similar appointment.",
-        "relevance": "medium",
-        "topic": "dismissive gp appointment",
-        "topic_group": "Working with clinicians"
-      },
-      {
-        "reason": "The user asked what to raise with their GP and said the suggestions gave them something concrete to bring.",
-        "relevance": "medium",
-        "topic": "gp appointment preparation",
-        "topic_group": "Working with clinicians"
-      },
-      {
-        "reason": "The user said the uncertain timeline felt overwhelming and that false reassurance made them feel more alone.",
-        "relevance": "medium",
-        "topic": "fear and loneliness",
+        "topic": "emotional distress",
         "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user said work and household demands limit rest and that their manager does not understand the illness is ongoing.",
+        "relevance": "medium",
+        "topic": "workplace adjustments",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user described a prior GP appointment as dismissive and asked what to raise at a future appointment.",
+        "relevance": "medium",
+        "topic": "dismissive clinician",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked what to flag to their GP, and the assistant suggested asking about referral to a long COVID service.",
+        "relevance": "low",
+        "topic": "long covid clinic referral",
+        "topic_group": "Access to care"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user wanted an honest account of whether long covid might improve, and described unpredictable crashes after ordinary exertion alongside limits on resting because of work and household responsibilities. The assistant discussed uncertainty, pacing and tracking, then offered points to raise with the GP; the user said they had a concrete plan and that the conversation had not made them feel worse."
+    "summary": "The user wanted an honest account of whether long COVID might improve, described delayed crashes after ordinary activity, and explored pacing around work and household demands. The assistant discussed uncertainty in recovery, ways to track activity, possible workplace adjustments, and points to raise with the GP; the user said the conversation helped and planned to try pacing and tracking."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 5502,
-    "output_tokens": 973
+    "input_tokens": 5896,
+    "output_tokens": 1062
   },
   "version": "gpt_luna"
 }

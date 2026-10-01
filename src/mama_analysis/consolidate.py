@@ -12,7 +12,7 @@ from mama_analysis.config import CONCURRENCY
 from mama_analysis.labellers import Labeller, Prompt
 from mama_analysis.schemas import CacheEntry, LabelMapping, SummaryLLM, Usage
 
-CONSOLIDATE_PROMPT = "consolidate_v3"
+CONSOLIDATE_PROMPT = "consolidate_v4"
 
 FIELDS = ("main_topics", "conversation_pain_points", "reason_for_conversation", "end_reason")
 
@@ -30,13 +30,6 @@ DISPLAY_NAMES = {
         "emotional": "emotional support",
         "access": "get access to care",
     },
-}
-
-# Human merges applied on top of the model's mapping (D-039): any canonical label starting
-# with a prefix becomes that prefix's target. The model keeps splitting one failure mode by
-# subject or by whether pushback is mentioned, despite the prompt.
-CANONICAL_MERGES = {
-    "conversation_pain_points": {"bot repeated ": "bot repeated advice"},
 }
 
 # Every topic is consolidated, but only topics at this relevance become chips, counts and
@@ -180,24 +173,6 @@ def topic_groups(scores: list[dict[str, Any]], relevance: str | None = KEPT_RELE
             t["topic_group"] for t in scores if relevance is None or t["relevance"] == relevance
         )
     )
-
-
-def merge_canonicals(field: str, mapping: dict[str, str]) -> dict[str, str]:
-    """Apply the human merges in ``CANONICAL_MERGES`` to one field's mapping.
-
-    Args:
-        field: Field the mapping belongs to.
-        mapping: Raw-to-canonical dict from the model.
-
-    Returns:
-        The mapping with every canonical label that starts with a merge prefix replaced by
-        that prefix's target.
-    """
-    merges = CANONICAL_MERGES.get(field, {})
-    return {
-        raw: next((t for p, t in merges.items() if canon.startswith(p)), canon)
-        for raw, canon in mapping.items()
-    }
 
 
 def apply_mapping(value: str | list[str], mapping: dict[str, str]) -> str | list[str]:

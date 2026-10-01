@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:06:37+00:00",
+  "created_at": "2026-10-01T15:48:15+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,59 +7,47 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened with pain returning and said it is worst during the pill break, which prompted the discussion.",
+        "reason": "The user opened with pain returning and said it was worst during the pill-free week.",
         "relevance": "strong",
         "topic": "returning endometriosis pain",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked for the full range of alternatives, explored their drawbacks, and asked what to try first.",
+        "reason": "The user asked for the full range of options, weighed hormonal and non-hormonal approaches, and asked what to try first.",
         "relevance": "strong",
         "topic": "endometriosis treatment options",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked whether disease found on the ovary and near the bowel changes which treatments may work.",
-        "relevance": "medium",
-        "topic": "lesion location and treatment",
-        "topic_group": "Treatment choice"
-      },
-      {
-        "reason": "The user described being discharged to the GP after surgery and discussed asking for specialist re-referral.",
+        "reason": "The user said they had been discharged to their GP after surgery and discussed seeking a specialist re-referral.",
         "relevance": "medium",
         "topic": "specialist follow-up",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user asked whether there were alternatives to hormones and then asked specifically about pelvic floor physiotherapy.",
-        "relevance": "medium",
-        "topic": "nonhormonal pain options",
-        "topic_group": "Treatment choice"
-      },
-      {
-        "reason": "The user asked whether physiotherapy would require private care, and the assistant discussed NHS referral and availability.",
+        "reason": "The user asked whether physiotherapy would require private care after learning it was an option.",
         "relevance": "medium",
         "topic": "pelvic floor physiotherapy access",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user said they were tired of treatments always being about hormones, though they did not return to this feeling later.",
-        "relevance": "low",
-        "topic": "hormone treatment fatigue",
+        "reason": "The user said they were tired of treatment always being about hormones and asked whether anything else was available.",
+        "relevance": "medium",
+        "topic": "frustration with hormonal treatment",
         "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user described endometriosis pain returning on the combined pill, especially during the break week, and asked about hormonal and nonhormonal options, including whether disease near the bowel and on the ovary affects treatment choices. They also discussed seeking specialist follow-up and access to pelvic floor physiotherapy; by the end, they had a list of options to raise with the GP and said they felt less stuck."
+    "summary": "The user described endometriosis pain returning on the combined pill, especially during the break week, and asked about alternatives, including non-hormonal options. The assistant discussed treatment choices and specialist follow-up; the user ended with a list of points for the GP and said they felt less stuck."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 6422,
-    "output_tokens": 1422
+    "input_tokens": 6816,
+    "output_tokens": 1044
   },
   "version": "gpt_luna"
 }

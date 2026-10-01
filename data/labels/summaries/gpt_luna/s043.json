@@ -1,62 +1,61 @@
 {
-  "created_at": "2026-10-01T15:07:45+00:00",
+  "created_at": "2026-10-01T15:49:18+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot ignored emotional distress",
-      "bot repeated advice after pushback"
+      "bot ignored emotional distress"
     ],
     "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user repeatedly said they were devastated and grieving the life, identity, and plans they felt they had lost, and explicitly asked to be heard.",
+        "reason": "The user repeatedly described feeling devastated and grieving their life, and explicitly asked to be heard.",
         "relevance": "strong",
-        "topic": "grief and distress",
+        "topic": "grief and devastation",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user returned several times to fears that their marriage was falling apart and that their husband was no longer connecting with them.",
-        "relevance": "medium",
-        "topic": "relationship strain",
-        "topic_group": "Emotional wellbeing"
-      },
-      {
-        "reason": "The user repeatedly described giving up the dream of having children and needing to grieve that loss.",
+        "reason": "The user returned several times to grieving the children they had hoped to have.",
         "relevance": "medium",
         "topic": "fertility loss",
         "topic_group": "Work & life plans"
       },
       {
-        "reason": "The user said their job was gone and later emphasized that they could not work because of the disease's impact.",
+        "reason": "The user repeatedly said their marriage was falling apart and that their husband barely looked at them.",
         "relevance": "medium",
-        "topic": "work impact",
+        "topic": "marriage strain",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user said they could not work and that their job had been shaped by the disease and its treatment.",
+        "relevance": "medium",
+        "topic": "work disruption",
         "topic_group": "Work & life plans"
       },
       {
-        "reason": "The user mentioned being told they need a fourth surgery, but did not ask for help deciding about or preparing for it.",
+        "reason": "The user mentioned being told they need a fourth surgery, but did not ask for help deciding about it.",
         "relevance": "low",
         "topic": "repeat surgery",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user said pain and repeated surgeries had shaped their relationships, work, and plans, but did not discuss pain management.",
+        "reason": "The user said pain has shaped their relationships, work, and plans, but did not discuss managing it.",
         "relevance": "low",
         "topic": "chronic pain",
         "topic_group": "Physical symptoms"
       }
     ],
     "reason_for_conversation": "emotional",
-    "summary": "The user described grief over a fourth endometriosis surgery and the effects of the disease on work, their marriage, and their hopes of having children, saying they wanted someone to hear them. Despite repeated corrections and explicit requests for acknowledgment, the assistant kept offering surgery-preparation and recovery tips; the user ended the conversation feeling unheard."
+    "summary": "After being told they need a fourth surgery for endometriosis, the user described grief over possible fertility loss, a deteriorating marriage, and being unable to work, and asked to be heard. The assistant repeatedly gave surgery-preparation advice despite the user's corrections; the user ended the conversation saying there was nothing the assistant could help with."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 5544,
     "cache_write_tokens": 0,
-    "input_tokens": 5153,
-    "output_tokens": 1607
+    "input_tokens": 5547,
+    "output_tokens": 974
   },
   "version": "gpt_luna"
 }

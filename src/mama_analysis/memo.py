@@ -49,19 +49,31 @@ def pretty(value: str) -> str:
     return value.replace("_", " ")
 
 
-def memo_breakdown(rows: list[dict[str, Any]]) -> dict[str, Any]:
-    """Per-conversation labels for the memo's linked-count panels.
+def memo_breakdown(rows: list[dict[str, Any]], records: list[dict[str, Any]]) -> dict[str, Any]:
+    """Per-conversation labels and transcripts for the memo's linked-count panels.
 
     Args:
         rows: Output of ``explorer.label_rows``.
+        records: Raw session records, for the transcripts shown when a matching
+            conversation is opened.
 
     Returns:
-        ``{"fields", "rows"}``; each row has ``session_id``, ``summary`` and, per field in
-        ``BREAKDOWN_FIELDS``, a list of labels (topic groups of the strong topics, via
-        the model's ``topic_group``; disease in display form).
+        ``{"fields", "rows", "conversations"}``; each row has ``session_id``, ``summary``
+        and, per field in ``BREAKDOWN_FIELDS``, a list of labels (topic groups of the strong
+        topics, via the model's ``topic_group``; disease in display form).
+        ``conversations`` maps each row's session ID to its ``{turn, role, text}`` turns.
     """
+    ids = {r["session_id"] for r in rows}
     return {
         "fields": list(BREAKDOWN_FIELDS),
+        "conversations": {
+            rec["session_id"]: [
+                {"turn": t["turn"], "role": t["role"], "text": t["text"]}
+                for t in rec["conversation"]
+            ]
+            for rec in sorted(records, key=lambda rec: rec["session_id"])
+            if rec["session_id"] in ids
+        },
         "rows": [
             {
                 "session_id": r["session_id"],

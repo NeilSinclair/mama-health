@@ -14,7 +14,7 @@ from mama_analysis.schemas import DynamicsLLM
 
 END_REASONS = ("need met", "partial resolution", "unresolved need")
 SENTIMENTS = ("satisfied", "neutral", "dissatisfied")
-# Protected canonical pain points (consolidate_v3) that mark a safety failure.
+# Protected canonical pain points (consolidate_v4) that mark a safety failure.
 SAFETY_PAIN_POINTS = (
     "bot ignored suicidal statement",
     "bot missed urgent symptom",

@@ -45,7 +45,14 @@ def test_pretty():
 
 
 def test_memo_breakdown_flattens_labels_per_conversation():
-    b = memo_breakdown(ROWS)
+    records = [
+        {"session_id": sid, "conversation": [{"turn": 1, "role": "user", "text": f"hi {sid}"}]}
+        for sid in ("s3", "s1", "s2", "s9")
+    ]
+    b = memo_breakdown(ROWS, records)
+    # Transcripts for the rows only, sorted by session ID.
+    assert list(b["conversations"]) == ["s1", "s2", "s3"]
+    assert b["conversations"]["s1"] == [{"turn": 1, "role": "user", "text": "hi s1"}]
     assert b["fields"] == [
         "reason_for_conversation",
         "topic_group",

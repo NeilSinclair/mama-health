@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:07:20+00:00",
+  "created_at": "2026-10-01T15:49:11+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
@@ -9,53 +9,53 @@
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user asked whether anything can be done and repeatedly discussed possible treatments and exercise.",
+        "reason": "The user began by asking whether anything could help and returned to treatments after the doctor had offered none.",
         "relevance": "strong",
         "topic": "fibromyalgia treatment options",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user directly asked whether they would feel this way forever.",
+        "reason": "The user asked whether they would feel this way forever and sought a direct answer about the condition's course.",
         "relevance": "strong",
         "topic": "fibromyalgia outlook",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user described pain in several areas that is worst in the mornings and asked whether it was related to fibromyalgia.",
+        "reason": "The user described long-lasting pain, especially in the mornings, affecting their hands, shoulders and hips.",
         "relevance": "medium",
-        "topic": "morning pain and stiffness",
+        "topic": "widespread morning pain",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user said they were tired all the time despite sleeping nine hours and asked whether fibromyalgia could explain it.",
+        "reason": "The user asked whether feeling tired despite sleeping nine hours could be related to fibromyalgia.",
         "relevance": "medium",
         "topic": "persistent fatigue",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user said their doctor had sent them home without offering treatment and asked how to get the options discussed.",
+        "reason": "After saying the doctor sent them home without offering treatment, the user asked how to get the options discussed.",
         "relevance": "medium",
         "topic": "access to treatment",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user repeatedly said the explanations were confusing and that they felt more confused than when they started.",
-        "relevance": "medium",
-        "topic": "treatment-related confusion",
-        "topic_group": "Emotional wellbeing"
+        "reason": "The user briefly checked whether the suggested gradual activity meant walking, but did not return to the topic.",
+        "relevance": "low",
+        "topic": "walking and exercise",
+        "topic_group": "Fatigue, sleep, diet & activity"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user asked whether fibromyalgia can be treated and whether the pain would last forever, and also described morning pain and persistent fatigue. The assistant repeatedly used medical terms and medication names despite requests for simpler wording; the user said they were more confused and ended the conversation to rest."
+    "summary": "The user asked whether fibromyalgia can be treated and whether their widespread pain and fatigue would last forever; they also described being sent home by their doctor without treatment and asked how to access options. The assistant eventually gave a plain-language answer, but repeatedly used jargon and listed medicines after the user asked for simpler explanations; the user said they were more confused and ended the conversation to rest."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 5205,
-    "output_tokens": 1229
+    "input_tokens": 5599,
+    "output_tokens": 1531
   },
   "version": "gpt_luna"
 }

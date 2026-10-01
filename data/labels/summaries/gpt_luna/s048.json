@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:07:57+00:00",
+  "created_at": "2026-10-01T15:49:36+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,71 +7,71 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened by asking what to expect when trying to conceive with PCOS and later asked how long it might take.",
+        "reason": "The user opened by asking what to expect when trying to conceive with PCOS and returned to questions about chances and timing.",
         "relevance": "strong",
-        "topic": "pcos fertility outlook",
+        "topic": "PCOS fertility outlook",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked about letrozole and Clomid, whether to try naturally first, and what to discuss with her doctor.",
+        "reason": "The user described spiraling over online stories and later asked how to keep trying from taking over their life.",
         "relevance": "strong",
-        "topic": "fertility treatment options",
-        "topic_group": "Treatment choice"
-      },
-      {
-        "reason": "The user described becoming anxious from online stories, later asked how to keep trying from taking over her life, and said she felt much better.",
-        "relevance": "medium",
         "topic": "fertility-related anxiety",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user asked whether ovulation tests work with unpredictable PCOS cycles and how to know when to try.",
+        "reason": "The user described long, unpredictable cycles and asked whether irregular ovulation was the main PCOS-related barrier to pregnancy.",
         "relevance": "medium",
-        "topic": "ovulation tests and timing",
-        "topic_group": "Tests & monitoring"
+        "topic": "irregular ovulation",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked whether to change her diet or take anything before returning to her doctor.",
+        "reason": "The user asked about letrozole and Clomid and whether to try naturally before considering medication.",
         "relevance": "medium",
-        "topic": "preconception preparation",
-        "topic_group": "Fatigue, sleep, diet & activity"
-      },
-      {
-        "reason": "The user asked how her previously noted high insulin relates to fertility and agreed to hear about metformin.",
-        "relevance": "medium",
-        "topic": "metformin and insulin",
+        "topic": "ovulation induction medication",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "After learning male factors can contribute, the user asked whether her husband should be checked and added semen analysis to their list.",
+        "reason": "The user asked whether ovulation tests work with PCOS and how to time trying with unpredictable cycles.",
+        "relevance": "medium",
+        "topic": "ovulation testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked whether to start a supplement or change diet before returning to the doctor.",
+        "relevance": "low",
+        "topic": "preconception preparation",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "After mentioning a prior high insulin result, the user asked how it relates to fertility and invited an explanation of metformin.",
+        "relevance": "medium",
+        "topic": "insulin and metformin",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether her husband should be checked and added a semen analysis to their plan.",
         "relevance": "medium",
         "topic": "male fertility testing",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user asked when to escalate from her regular OB to a specialist.",
+        "reason": "The user asked when to move from care with her regular OB to a specialist.",
         "relevance": "medium",
         "topic": "fertility specialist referral",
         "topic_group": "Access to care"
-      },
-      {
-        "reason": "The user planned to return to her doctor and summarized questions and next steps to raise at the appointment.",
-        "relevance": "medium",
-        "topic": "doctor visit planning",
-        "topic_group": "Working with clinicians"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user, who has PCOS and irregular cycles, sought realistic expectations about trying to conceive, treatment options, and practical next steps. The assistant discussed ovulation, possible medications and monitoring, partner testing, and preparing for a doctor visit; it also offered support for the user's anxiety. The user said she had a concrete plan and felt much better than when she started."
+    "summary": "The user, who has PCOS and irregular cycles, sought realistic expectations for trying to conceive and information about ovulation, treatment options, testing, and preparation. The assistant offered explanations and next steps, and the user said the plan helped her feel much better; she also asked how to manage anxiety, and said she felt heard."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 6927,
-    "output_tokens": 1479
+    "input_tokens": 7321,
+    "output_tokens": 1677
   },
   "version": "gpt_luna"
 }

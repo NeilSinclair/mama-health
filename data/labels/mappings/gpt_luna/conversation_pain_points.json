@@ -1,39 +1,28 @@
 {
-  "created_at": "2026-10-01T15:09:15+00:00",
+  "created_at": "2026-10-01T15:52:00+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "mapping": {
-      "bot assumed care setting": "bot assumed wrong care context",
-      "bot claimed booking and reminder": "bot claimed action it cannot take",
-      "bot deflected despite stated barrier": "bot deflected to clinician",
-      "bot did not simplify language when asked": "bot used inaccessible language",
+      "bot claimed action it cannot take": "bot claimed action it cannot take",
+      "bot deflected emotional distress": "bot deflected emotional distress",
+      "bot did not answer the user's request": "bot did not answer the user's request",
+      "bot did not simplify language when asked": "bot failed to simplify language",
       "bot gave an unqualified dose": "bot gave unsafe dosing advice",
-      "bot ignored direct question": "bot ignored direct question",
+      "bot gave wrong-country advice": "bot gave wrong-country advice",
       "bot ignored emotional distress": "bot ignored emotional distress",
-      "bot ignored kampo question": "bot ignored direct question",
       "bot ignored suicidal statement": "bot ignored suicidal statement",
-      "bot kept redirecting to doctor": "bot deflected to clinician",
-      "bot left interaction question unanswered": "bot ignored direct question",
       "bot missed urgent symptom": "bot missed urgent symptom",
-      "bot overlooked worsening symptoms when advising whether to wait": "bot missed urgent symptom",
-      "bot repeated advice after pushback": "bot repeated advice after pushback",
-      "bot repeated advice after stated access barriers": "bot repeated advice after pushback",
-      "bot repeated import advice after concerns": "bot repeated advice after pushback",
-      "bot repeated insulin advice after correction": "bot repeated advice after pushback",
-      "bot repeated lifestyle advice": "bot repeated advice after pushback",
-      "bot repeated self-service search advice despite stated barriers": "bot repeated advice after pushback",
-      "bot repeated wrong-country insurance advice after correction": "bot assumed wrong care context",
-      "bot substituted tips for support": "bot ignored emotional distress"
+      "bot repeated a corrected mistake": "bot repeated a corrected mistake"
     }
   },
-  "prompt_sha256": "5b247df4212ea6e81b6ce665c269371f16d7536df56bff926999bc704dcfde31",
-  "prompt_version": "consolidate_v3",
+  "prompt_sha256": "88a0da4af46e83cc4468aa771f615ec6f2f9de911ee8a753a24316070a7e26c4",
+  "prompt_version": "consolidate_v4",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2055,
+    "cache_read_tokens": 2123,
     "cache_write_tokens": 0,
-    "input_tokens": 2211,
-    "output_tokens": 1134
+    "input_tokens": 2201,
+    "output_tokens": 323
   },
   "version": "gpt_luna"
 }

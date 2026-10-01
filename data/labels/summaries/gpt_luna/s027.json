@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:07:06+00:00",
+  "created_at": "2026-10-01T15:48:48+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,47 +7,41 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came overwhelmed by conflicting food lists and asked how to follow the diet, including whether it means permanent restriction.",
+        "reason": "The user came overwhelmed by conflicting food lists, then asked about the diet’s purpose, a reliable food source, and how to do reintroduction.",
         "relevance": "strong",
-        "topic": "low-fodmap food guidance",
+        "topic": "low-fodmap diet guidance",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user asked how to test foods and whether reintroduction should be done with professional support, then included it in their plan.",
-        "relevance": "medium",
-        "topic": "food reintroduction",
-        "topic_group": "Fatigue, sleep, diet & activity"
-      },
-      {
-        "reason": "The user asked whether an NHS dietitian referral for IBS would be covered and decided to ask their GP.",
+        "reason": "The user asked whether the NHS would cover a referral for IBS and accepted asking their GP about it as part of their plan.",
         "relevance": "medium",
         "topic": "dietitian referral",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user worried that elimination would leave them starving or eating only plain rice and sought reassurance about eating varied meals.",
+        "reason": "The user worried they would be hungry or limited to plain rice, and said the reassurance about varied meals helped.",
         "relevance": "medium",
-        "topic": "food adequacy during elimination",
+        "topic": "adequate food during elimination",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user described feeling overwhelmed and later panicked by the food lists, then said they felt less panicked and reassured.",
-        "relevance": "low",
+        "reason": "The user described feeling overwhelmed and panicked by the lists, and later said they felt less panicked.",
+        "relevance": "medium",
         "topic": "diet-related overwhelm",
         "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user was overwhelmed by conflicting low-FODMAP food lists and worried the diet meant giving up foods permanently or eating very little. The assistant explained the phases, suggested the Monash app and asking a GP about a dietitian referral, and described reintroduction and meal options; the user summarized an accepted plan and said the conversation was genuinely helpful."
+    "summary": "The user was overwhelmed by conflicting low-FODMAP food lists and initially thought they would have to avoid foods such as onion and garlic permanently. The assistant explained the diet’s phases, suggested the Monash app and a GP referral to a dietitian, and addressed concerns about reintroduction and eating enough; the user felt reassured and restated a plan they accepted."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 5880,
-    "output_tokens": 1382
+    "input_tokens": 6274,
+    "output_tokens": 1603
   },
   "version": "gpt_luna"
 }

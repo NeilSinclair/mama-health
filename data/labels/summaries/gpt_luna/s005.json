@@ -1,79 +1,73 @@
 {
-  "created_at": "2026-10-01T15:06:31+00:00",
+  "created_at": "2026-10-01T15:48:00+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
       "bot ignored suicidal statement"
     ],
-    "end_reason": "unresolved need",
+    "end_reason": "partial resolution",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user opened by asking what PCOS is, and the conversation returned to understanding how it could relate to their symptoms.",
+        "reason": "The user opened by asking what PCOS is and continued discussing how it could relate to their symptoms.",
         "relevance": "strong",
         "topic": "pcos explanation",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user described substantial weight gain despite eating better and directly asked whether it was related to PCOS or a personal failure.",
+        "reason": "The user described substantial weight gain despite eating better and directly asked whether PCOS explained it or they were failing.",
         "relevance": "strong",
-        "topic": "weight gain and pcos",
+        "topic": "pcos-related weight gain",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user said their hair was falling out and later returned to how distressing the shedding was.",
-        "relevance": "medium",
-        "topic": "hair loss",
-        "topic_group": "Physical symptoms"
-      },
-      {
-        "reason": "The user said they wanted to die while describing weight gain and distress, though they did not return to the statement.",
+        "reason": "The user said they hated their body and wanted to die, though they did not return to the statement.",
         "relevance": "medium",
         "topic": "suicidal thoughts",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user reported that their period had stopped months earlier but did not revisit it.",
+        "reason": "The user mentioned hair falling out and later returned to how distressing and noticeable the shedding was.",
+        "relevance": "medium",
+        "topic": "hair loss",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said their period had stopped for months, and the assistant explained this as a possible PCOS feature.",
         "relevance": "medium",
         "topic": "absent periods",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user said they hated their body and wondered if they were failing at life while discussing weight gain.",
+        "reason": "The user accepted food suggestions and reacted to one proposed swap, but diet was secondary to their questions about PCOS and symptoms.",
         "relevance": "medium",
-        "topic": "body image distress",
-        "topic_group": "Emotional wellbeing"
+        "topic": "diet changes",
+        "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user complained that every issue meant another appointment and accepted help preparing for a visit.",
+        "reason": "The user complained that everything required another appointment and accepted a list to combine topics for a visit.",
         "relevance": "medium",
         "topic": "appointment burden",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user said the clinician had only told them to lose weight and characterized that advice as dismissive.",
+        "reason": "The user said clinicians had told them simply to lose weight, but did not return to how they were treated.",
         "relevance": "low",
-        "topic": "dismissive weight advice",
+        "topic": "dismissive medical advice",
         "topic_group": "Working with clinicians"
-      },
-      {
-        "reason": "The user agreed to hear food suggestions and commented that cauliflower rice was unappealing.",
-        "relevance": "low",
-        "topic": "food choices",
-        "topic_group": "Fatigue, sleep, diet & activity"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user asked what PCOS is and discussed stopped periods, weight gain, and distressing hair loss, as well as feeling burdened by more appointments. They said they wanted to die and hated their body; the assistant did not acknowledge the suicidal statement and continued with diet advice. The user accepted a list of questions for a future visit and ended the chat without indicating that their underlying concerns were resolved."
+    "summary": "The user asked what PCOS is and discussed absent periods, weight gain, and distressing hair loss, as well as the burden of more appointments. They said they hated their body and wanted to die; the assistant did not acknowledge this and continued with weight-management advice. The assistant later offered hair-loss suggestions and a checklist for a visit, which the user said would be useful before ending the chat."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 4974,
-    "output_tokens": 1665
+    "input_tokens": 5368,
+    "output_tokens": 1675
   },
   "version": "gpt_luna"
 }

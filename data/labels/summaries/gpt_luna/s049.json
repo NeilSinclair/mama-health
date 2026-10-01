@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:07:50+00:00",
+  "created_at": "2026-10-01T15:49:35+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,47 +7,47 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user said they had decided to resign because of their health and asked for help writing and warming a resignation letter.",
-        "relevance": "strong",
-        "topic": "work resignation",
-        "topic_group": "Work & life plans"
-      },
-      {
-        "reason": "The user opened by saying they needed someone who would listen, described being tired of fighting, and later said the conversation made them feel calmer.",
+        "reason": "The user said they needed somewhere to talk without being judged, described being tired of fighting for support, and later said they felt calmer.",
         "relevance": "strong",
         "topic": "emotional exhaustion",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user described fatigue and brain fog affecting their work, with mistakes by late morning and crashes lasting two days.",
+        "reason": "The user had decided to resign and spent several turns asking for and refining a resignation letter.",
+        "relevance": "strong",
+        "topic": "resigning from work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user described fatigue and brain fog causing work errors and prolonged crashes, which drove the discussion about whether they could keep working.",
         "relevance": "strong",
         "topic": "fatigue and brain fog",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user described receiving only vague support from HR and engaged with information about adjustments and occupational health.",
+        "reason": "The user described receiving only a vague offer of help from HR and engaged with information about occupational health and possible adjustments.",
         "relevance": "medium",
         "topic": "workplace adjustments",
         "topic_group": "Work & life plans"
       },
       {
-        "reason": "The user asked for a clear explanation of pacing and said it was the first time the idea had clicked.",
+        "reason": "The user asked for an explanation of pacing and said the explanation made sense and had clicked for them.",
         "relevance": "medium",
-        "topic": "activity pacing",
+        "topic": "pacing",
         "topic_group": "Fatigue, sleep, diet & activity"
       }
     ],
     "reason_for_conversation": "emotional",
-    "summary": "The user described long COVID fatigue and brain fog disrupting work, said they had decided to resign, and received help drafting a warmer resignation letter. They then asked how to look after their health and got an explanation of pacing; they said it made sense and that they felt calmer."
+    "summary": "The user described long COVID-related fatigue and brain fog making work unsustainable, and said they had decided to resign; the assistant drafted and then warmed up a resignation letter. The user appreciated the letter, planned to send it Monday, and asked about caring for their health afterward; after an explanation of pacing, they said they felt calmer."
   },
-  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
-  "prompt_version": "summary_v8",
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3881,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
-    "input_tokens": 5685,
-    "output_tokens": 1343
+    "input_tokens": 6079,
+    "output_tokens": 1438
   },
   "version": "gpt_luna"
 }
