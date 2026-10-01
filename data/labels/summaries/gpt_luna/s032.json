@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T12:14:14+00:00",
+  "created_at": "2026-09-30T14:31:42+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,44 +7,39 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came to understand the available options and spent much of the conversation comparing treatment classes and how a clinician might choose among them.",
+        "reason": "The user opened by asking to understand the landscape before deciding with the rheumatologist and returned to comparing classes and practical questions.",
         "relevance": "strong",
         "topic": "biologic treatment options"
       },
       {
-        "reason": "The user called long-term risk the question that scared them most, discussed it over several turns, and said the explanation changed how they viewed treatment.",
+        "reason": "The user called long-term risk the question that scared them most, discussed it with the assistant, and said the risk-benefit framing changed their perspective.",
         "relevance": "strong",
         "topic": "cancer risk"
       },
       {
-        "reason": "The user described persistent hand and wrist synovitis, elevated CRP, and prolonged morning stiffness as the reason escalation was being considered.",
+        "reason": "The user described persistent synovitis, elevated CRP, and prolonged morning stiffness despite current treatment, which set the context for escalation.",
         "relevance": "medium",
         "topic": "active rheumatoid arthritis"
       },
       {
-        "reason": "The user raised frequent sinus infections as a factor that might affect the treatment choice.",
+        "reason": "The user raised recurrent sinus infections and prior shingles and asked whether these should influence the treatment choice.",
         "relevance": "medium",
-        "topic": "infection history"
+        "topic": "infection and shingles history"
       },
       {
-        "reason": "The user discussed prior shingles and how it might affect the choice of treatment.",
-        "relevance": "medium",
-        "topic": "shingles history"
-      },
-      {
-        "reason": "The user asked whether Shingrix was appropriate at their age and while immunosuppressed, and said they were writing down the advice.",
+        "reason": "The user asked whether Shingrix was appropriate at age 51 while immunosuppressed and noted the assistant's suggested question for the rheumatologist.",
         "relevance": "medium",
         "topic": "shingles vaccination"
       },
       {
-        "reason": "The user asked how injections and infusions differ because they travel often for work, and said self-injection sounded appealing.",
+        "reason": "The user asked how injections, infusions, and oral options differ because they travel frequently for work.",
         "relevance": "medium",
         "topic": "travel treatment logistics"
       },
       {
-        "reason": "The user asked how long it takes to know whether a biologic is working and said they did not want to endure months of pain without a checkpoint.",
+        "reason": "The user asked how long it takes to know whether a biologic works and said they did not want to endure months of pain without a checkpoint.",
         "relevance": "medium",
-        "topic": "treatment monitoring timeline"
+        "topic": "treatment response timeline"
       },
       {
         "reason": "The user asked whether possible hormone therapy during perimenopause could interact with RA treatment and agreed to coordinate with their clinicians.",
@@ -52,32 +47,27 @@
         "topic": "hormone therapy interactions"
       },
       {
-        "reason": "The user said learning that inflammation itself could cause damage reframed the treatment risk-benefit for them.",
+        "reason": "The user said the decision scared them and later reported that the conversation lowered their anxiety and helped them feel less railroaded.",
         "relevance": "medium",
-        "topic": "untreated disease risk"
+        "topic": "treatment anxiety"
       },
       {
-        "reason": "The user briefly mentioned being needle-shy despite already injecting methotrexate and responded positively to reassurance about auto-injector pens.",
+        "reason": "The user said they were somewhat needle-shy despite already injecting methotrexate, but did not return to this concern.",
         "relevance": "low",
-        "topic": "injection anxiety"
-      },
-      {
-        "reason": "The user mentioned controlled mild hypertension once while asking whether their health history affected treatment choice.",
-        "relevance": "low",
-        "topic": "hypertension"
+        "topic": "injection apprehension"
       }
     ],
-    "reason_for_conversation": "informed treatment decision",
-    "summary": "The user sought preparation for discussing a biologic for active RA despite methotrexate and sulfasalazine, asking about treatment options, risks, vaccination, travel logistics, and monitoring. The assistant helped build a question list, and the user said they felt equipped for a real discussion with their rheumatologist and that their anxiety had genuinely decreased."
+    "reason_for_conversation": "decisional",
+    "summary": "The user wanted to prepare for a rheumatology appointment about adding a biologic for active RA despite methotrexate and sulfasalazine. The assistant discussed treatment classes, the user's infection and shingles history, vaccination, travel logistics, cancer-risk uncertainty, and response timelines; the user said they felt ready for a real back-and-forth with the rheumatologist and that their anxiety had genuinely decreased."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 6378,
-    "output_tokens": 1479
+    "input_tokens": 6584,
+    "output_tokens": 1033
   },
   "version": "gpt_luna"
 }

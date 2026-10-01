@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T12:14:02+00:00",
+  "created_at": "2026-09-30T14:31:31+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,42 +7,47 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened with feeling overwhelmed by conflicting food lists and returned to ask how to identify high-FODMAP foods.",
+        "reason": "The user opened by saying the conflicting lists were overwhelming and returned to this as their main problem.",
         "relevance": "strong",
-        "topic": "low fodmap food guidance"
+        "topic": "low fodmap food lists"
       },
       {
-        "reason": "The user feared having to give up onions and garlic forever and expressed relief after learning the diet has phases aimed at identifying personal triggers.",
+        "reason": "The user asked whether they would have to avoid onions and garlic forever and welcomed the explanation that the aim is to identify individual triggers.",
         "relevance": "medium",
-        "topic": "long-term food restriction"
+        "topic": "food restriction and triggers"
       },
       {
-        "reason": "The user asked how to reintroduce foods properly and whether professional support was needed.",
+        "reason": "The user asked how to conduct reintroduction and whether to do it with professional support.",
         "relevance": "medium",
-        "topic": "diet reintroduction"
+        "topic": "food reintroduction"
       },
       {
-        "reason": "The user considered asking their GP for a dietitian and asked whether the NHS would cover a referral for IBS.",
+        "reason": "The user asked whether the NHS would cover an IBS dietitian referral and accepted asking their GP about one.",
         "relevance": "medium",
         "topic": "dietitian referral"
       },
       {
-        "reason": "The user worried about being hungry and having too few foods to eat, then said the food examples were reassuring.",
+        "reason": "The user worried that elimination would leave them with too few foods and said the answer reassured them.",
         "relevance": "medium",
-        "topic": "food adequacy during elimination"
+        "topic": "hunger during elimination"
+      },
+      {
+        "reason": "The user questioned whether the Monash app was worth paying for but did not return to the cost after the answer.",
+        "relevance": "low",
+        "topic": "health app cost"
       }
     ],
-    "reason_for_conversation": "low fodmap diet guidance",
-    "summary": "The user felt overwhelmed by conflicting low-FODMAP food lists and worried the diet meant permanently avoiding many foods. The assistant explained the temporary phases, suggested the Monash app and asking the GP about a dietitian referral, and discussed structured reintroduction and eating adequately during elimination. The user restated an accepted plan and said the conversation was more helpful than searching online."
+    "reason_for_conversation": "informational",
+    "summary": "The user felt overwhelmed by conflicting low FODMAP food lists and feared the diet meant giving up foods such as onions and garlic permanently. The assistant explained the temporary elimination and reintroduction phases, suggested the Monash app and asking a GP about a dietitian referral, and addressed concerns about hunger; the user said they felt less panicked and summarized a plan they found helpful."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 5125,
-    "output_tokens": 853
+    "input_tokens": 5331,
+    "output_tokens": 712
   },
   "version": "gpt_luna"
 }

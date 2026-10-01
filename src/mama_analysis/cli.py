@@ -16,6 +16,7 @@ from mama_analysis.config import DEFAULT_LABELS_DIR, MODELS
 from mama_analysis.consolidate import (
     CONSOLIDATE_PROMPT,
     CONSOLIDATED_FIELDS,
+    DISPLAY_NAMES,
     FIELDS,
     consolidate_all,
     mapping_dir,
@@ -131,9 +132,11 @@ def load_version(
             f"run: uv run mama-pipeline --relabel {version}"
         ) from err
     field_maps = {f: mappings[f].output["mapping"] for f in CONSOLIDATED_FIELDS}
-    # Fixed-vocabulary fields map to themselves.
+    # Fixed-vocabulary fields map to their display name, or to themselves.
     field_maps |= {
-        f: {x: x for x in raw_labels(merged, f)} for f in FIELDS if f not in CONSOLIDATED_FIELDS
+        f: {x: DISPLAY_NAMES.get(f, {}).get(x, x) for x in raw_labels(merged, f)}
+        for f in FIELDS
+        if f not in CONSOLIDATED_FIELDS
     }
     for field, mapping in field_maps.items():
         unmapped = set(raw_labels(merged, field)) - mapping.keys()

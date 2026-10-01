@@ -52,6 +52,7 @@ Record this as we go. For each item: what the AI did, how we checked it, and whe
   - A guard (`missing_safety_labels`) that notes when a remap drops a safety label the silent-failure rule depends on.
 
   Not done: a `dynamics_v2` with fully invented phrases. That's for the human to decide.
+- **2026-09-30 — `summary_v7`, four need types for the reason (Opus edit of v6, human request, D-038).** Opus rewrote the `reason_for_conversation` section. The human gave the four categories; Opus wrote the definitions and tie-break rules. GPT Luna relabel took 133 s, with 2 consolidation calls (reason and end reason skipped).
 
 ## Overrides of AI output
 
@@ -163,6 +164,29 @@ _(Where we disagreed with an AI suggestion or label, and why.)_
   - **`bot_adapted` looks generous in places (s018, seen in the explorer).** t13 ("i think you only know US things") is marked adapted, but the next reply still says "confirm they take your coverage before booking". t11 is marked adapted, but its own reason notes the reply "also returns to insurance-based search options". We'd mark both not adapted. That would strengthen, not weaken, the recovery pattern, but it shows the label needs a hand check before any memo claim rests on it.
   - **Friction hypothesis not supported:** the user's share of words does not rise after the first pushback. Median share by end reason, before → from the first pushback: need met 0.233 → 0.228; partial 0.291 → 0.233; unresolved 0.357 → 0.268 (the unresolved median is s038). Unresolved sessions show a higher share *before* the first pushback, but that isn't evidence of distress at the outset. For s030, s038 and s043 the first pushback is at t3, so the "before" window is just the opening exchange, and a long opening message alone would produce it.
   - **The safety clause of the silent-failure rule adds nothing on this data.** All three silent failures (s022, s024, s047) are already caught by "need not met". No need-met session has a safety pain point.
+- **2026-09-30 — Spot-check of `summary_v7` (GPT Luna).**
+  - Reasons: informational 22, decisional 20, access 5, emotional 3. At the human's request these are displayed as "understand my condition", "decide on treatment", "get access to care" and "emotional support" (a deterministic rename, no relabel).
+  - v6 → v7 mapping is sensible: all 3 "coping emotionally" → emotional; all 4 "navigating care access" → access; "deciding on treatment" 10 → decisional and 3 → informational; "understanding a diagnosis" 5 → informational.
+  - Outcomes by need (`summaries.csv`):
+
+    | Need | Need met | Partial | Unresolved | With a pain point |
+    |---|---|---|---|---|
+    | informational | 19 | 2 | 1 | 4 of 22 |
+    | decisional | 17 | 2 | 1 | 4 of 20 |
+    | access | 2 | 1 | 2 | 3 of 5 |
+    | emotional | 1 | 0 | 2 | 2 of 3 |
+
+    4 of the 6 unresolved conversations are emotional or access, which are 8 of the 50.
+  - Access conversations are where the bot makes claims about the health system it can't back up: s024 (the fake booking), s018 (US insurance advice for a SUS user) and s008 (unqualified "fully reimbursed", end reason need met).
+  - Emotional: s026 and s043 are unresolved; s049 (the resignation letter) is met.
+  - **Label churn from the relabel:** 5 end reasons changed. s005 and s018 went partial → unresolved; s014 and s038 went unresolved → partial; s022 went partial → need met. Resolved moved from 38 to 39. s018 is now unresolved, which matches our earlier override.
+  - **Override, s022 (again):** v7 drops "bot missed urgent symptom" and calls it need met. This label has now flipped across versions: v4 had it, v5 didn't, v6 had it, v7 doesn't. We keep "not resolved" and "bot missed urgent symptom", per the 2026-09-29 hand-check. It's the least stable safety label in the data, so its status should come from the hand check, not a single run.
+  - The other safety labels are unchanged: s005 and s026 suicidal statement, s026 and s030 urgent symptom, s024 claimed action.
+- **2026-10-01 — Dynamics tables after merging `summary_v7` into the dynamics branch.** The dynamics labels are unchanged; they read only the transcript. The analysis tables were rebuilt against the v7 end reasons, and some figures in the 2026-09-30 dynamics entries above moved:
+  - **Silent failures: 3 → 2 (s024, s047).** s022 dropped out because v7 calls it need met. By our hand check (override above) s022 is still a silent failure, so the hand-checked count is 3.
+  - Sessions with a pushback the bot failed to adapt to: still 9, now partial 5 / unresolved 4 (was 4 / 5). None are need met.
+  - Sentiment vs outcome: dissatisfied users are now all unresolved (4 of 4); neutral is 1 met / 4 partial / 1 unresolved.
+  - Friction medians, before → from the first pushback: need met 0.233 → 0.228; partial 0.291 → 0.237; unresolved 0.316 → 0.233. The conclusion stands: the share doesn't rise after pushback. s038 is now partial, so the unresolved median is no longer s038.
 
 ## Anomalies in the brief / data
 

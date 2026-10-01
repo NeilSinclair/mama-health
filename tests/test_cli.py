@@ -65,6 +65,9 @@ def test_relabel_then_build_from_cache(data_file, tmp_path, capsys, fake_api):
     ]
     summaries = pd.read_csv(out / "summaries" / "gpt_luna" / "summaries.csv")
     assert summaries["session_id"].tolist() == ["s1", "s2"]
+    # The model's short reason value is shown by its display name, and kept as the raw label.
+    assert summaries["reason_for_conversation"].tolist() == ["understand my condition"] * 2
+    assert summaries["reason_for_conversation_raw"].tolist() == ["informational"] * 2
     assert (out / "summaries" / "gpt_luna" / "label_counts.csv").exists()
     # --relabel also labels dynamics, so every analysis table is written.
     assert sorted(p.name for p in (labels / "dynamics" / "gpt_luna").iterdir()) == [
@@ -90,7 +93,7 @@ def test_run_summaries_warns_on_stale_cache(data_file, tmp_path, capsys, fake_ap
         cli.MODELS, "gpt_luna", cli.MODELS["gpt_luna"].__class__("openai", "new", "G")
     )
     run_summaries(data_file, labels, tmp_path / "out")
-    assert "gpt_luna: 5 cached labels predate" in capsys.readouterr().out
+    assert "gpt_luna: 4 cached labels predate" in capsys.readouterr().out
 
 
 def test_committed_outputs_match_fresh_run(tmp_path):
@@ -108,7 +111,7 @@ def test_remap_rebuilds_mappings_from_cached_summaries(data_file, tmp_path, caps
     labels = tmp_path / "labels"
     cli.relabel("gpt_luna", data_file, labels)
     before = (labels / "summaries" / "gpt_luna" / "s1.json").read_text()
-    (labels / "mappings" / "gpt_luna" / "reason_for_conversation.json").unlink()
+    (labels / "mappings" / "gpt_luna" / "conversation_pain_points.json").unlink()
     main(
         [
             "--data",
@@ -122,7 +125,7 @@ def test_remap_rebuilds_mappings_from_cached_summaries(data_file, tmp_path, caps
         ]
     )
     assert "re-consolidating gpt_luna" in capsys.readouterr().out
-    assert (labels / "mappings" / "gpt_luna" / "reason_for_conversation.json").exists()
+    assert (labels / "mappings" / "gpt_luna" / "conversation_pain_points.json").exists()
     assert (labels / "summaries" / "gpt_luna" / "s1.json").read_text() == before
 
 

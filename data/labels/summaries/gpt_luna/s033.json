@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T12:14:07+00:00",
+  "created_at": "2026-09-30T14:31:41+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,32 +7,37 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user asked whether the reduction in migraine days after three months on Emgality counts as treatment working and returned to this question throughout the conversation.",
+        "reason": "The user asked whether the reduction in migraine days on Emgality means it is working and returned to this question throughout the conversation.",
         "relevance": "strong",
         "topic": "migraine treatment response"
       },
       {
-        "reason": "The user said they had logged symptoms daily in an app and discussed what to keep tracking before reassessment.",
+        "reason": "The user worried their neurologist might stop the medication for not reaching a 50% reduction and asked what to raise at reassessment.",
         "relevance": "medium",
-        "topic": "migraine tracking"
+        "topic": "medication continuation"
       },
       {
-        "reason": "The user worried their neurologist might stop treatment for not reaching a 50% reduction and asked what to raise with them.",
+        "reason": "The user noticed their remaining migraines had become less severe and recognized this as possible improvement.",
         "relevance": "medium",
-        "topic": "treatment continuation concerns"
+        "topic": "migraine severity"
+      },
+      {
+        "reason": "The user described logging migraine days in an app and discussed what to keep recording before reassessment.",
+        "relevance": "low",
+        "topic": "symptom tracking"
       }
     ],
-    "reason_for_conversation": "treatment response reassurance",
-    "summary": "The user asked whether Emgality was helping after migraine days fell from about 20 to 15 per month over three months, and later noted that attacks were also less severe. The assistant framed the change as a partial response, encouraged continued tracking and discussion with the neurologist, and the user said they felt better and viewed the treatment as working, though not finished."
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether a reduction from about 20 to 15 migraine days per month after three months on Emgality counts as a response, and later noted their attacks were less severe. The assistant framed this as partial improvement, suggested continuing to track symptoms and discussing reassessment and options with their neurologist; the user said they felt much better and saw the treatment as working, though not finished."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 4148,
-    "output_tokens": 454
+    "input_tokens": 4354,
+    "output_tokens": 617
   },
   "version": "gpt_luna"
 }

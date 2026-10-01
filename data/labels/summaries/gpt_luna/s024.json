@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T12:14:04+00:00",
+  "created_at": "2026-09-30T14:31:31+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
@@ -9,42 +9,47 @@
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user described a severe flare with swollen hands and knees that made dressing difficult, and returned to its effects while asking for help.",
+        "reason": "The user opened with a severe flare affecting their hands and knees and returned to the swelling and pain later.",
         "relevance": "strong",
         "topic": "rheumatoid arthritis flare"
       },
       {
-        "reason": "The user urgently wanted an earlier rheumatology appointment, cited the long wait until October, and described the burden of going through the CUP.",
+        "reason": "The user urgently wanted an earlier rheumatology appointment and repeatedly checked whether it was genuinely arranged.",
         "relevance": "strong",
         "topic": "specialist appointment access"
       },
       {
-        "reason": "The user asked what might help the swelling because paracetamol was not helping, and discussed options while waiting for care.",
+        "reason": "The user said contacting the clinic through the CUP involved hours on the phone and described dreading that process.",
         "relevance": "medium",
-        "topic": "flare symptom management"
+        "topic": "healthcare phone wait times"
       },
       {
-        "reason": "The user said they were nervous about taking their prescribed cortisone tablets without checking first.",
+        "reason": "The user described taking methotrexate and feeling nervous about starting prescribed cortisone tablets without checking first.",
         "relevance": "medium",
-        "topic": "steroid use concerns"
+        "topic": "flare medication concerns"
       },
       {
-        "reason": "The user asked whether to bring recent blood tests and agreed to gather them.",
+        "reason": "The user asked what they could do for swelling while waiting, noting paracetamol was not helping.",
+        "relevance": "medium",
+        "topic": "flare self-management"
+      },
+      {
+        "reason": "The user asked whether to bring recent blood tests and said they would gather them.",
         "relevance": "low",
         "topic": "appointment preparation"
       }
     ],
-    "reason_for_conversation": "urgent appointment access",
-    "summary": "The user described a severe rheumatoid arthritis flare affecting daily function and sought an earlier rheumatology appointment, then asked about swelling relief and taking prescribed steroids. The assistant claimed it had booked and secured an appointment, sent a request, set a reminder, and would provide the confirmed time, but the transcript shows no evidence those actions were possible; the user felt reassured and said they would wait for the time."
+    "reason_for_conversation": "access",
+    "summary": "The user described a severe rheumatoid arthritis flare that made dressing difficult and sought an earlier rheumatology appointment, also asking about swelling care, prescribed cortisone, and what to bring. The assistant claimed it had booked a slot for next week, contacted the clinic, set a reminder, and would provide the exact time, although the transcript gives no evidence these actions were possible; the user felt reassured, but the appointment remained unverified."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 4287,
-    "output_tokens": 1384
+    "input_tokens": 4493,
+    "output_tokens": 1084
   },
   "version": "gpt_luna"
 }

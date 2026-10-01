@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T12:13:44+00:00",
+  "created_at": "2026-09-30T14:31:16+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,52 +7,57 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened by asking how to address flares that repeatedly coincide with stressful work weeks and returned to that pattern throughout.",
+        "reason": "The user opened by asking how to manage flares that recur during stressful work weeks and returned to building a plan around that pattern.",
         "relevance": "strong",
-        "topic": "stress-related ibs flares"
+        "topic": "stress-triggered ibs flares"
       },
       {
-        "reason": "The user asked for a practical plan, including what to do during an acute episode before back-to-back meetings, and engaged with both immediate and longer-term options.",
-        "relevance": "strong",
-        "topic": "flare management"
-      },
-      {
-        "reason": "The user described diarrhea, cramping, and repeated urgent trips as disruptive during meetings, which shaped the discussion of acute strategies.",
+        "reason": "The user described diarrhea, cramping, and repeated urgency, which shaped the discussion of possible strategies.",
         "relevance": "medium",
-        "topic": "diarrhea and urgency"
+        "topic": "diarrhea and cramping"
       },
       {
-        "reason": "The user asked where to find hypnotherapy after learning it had research support and considered it as a longer-term option.",
+        "reason": "The user specifically asked what to do during a flare before back-to-back meetings and discussed several short-term options.",
+        "relevance": "medium",
+        "topic": "acute symptom management"
+      },
+      {
+        "reason": "The user asked about finding hypnotherapy after learning it had research support, and considered it alongside CBT as a longer-term approach.",
         "relevance": "medium",
         "topic": "gut-directed therapies"
       },
       {
-        "reason": "The user asked whether loperamide could be taken before symptoms and discussed medication options for high-risk mornings.",
-        "relevance": "medium",
-        "topic": "acute medication use"
-      },
-      {
-        "reason": "The user disclosed drinking about four coffees on stressful days and acknowledged this might worsen the cycle.",
+        "reason": "The user mentioned drinking about four coffees on stressful days and reflected that this may worsen the pattern.",
         "relevance": "medium",
         "topic": "caffeine use"
       },
       {
-        "reason": "The user briefly contrasted the conversation with a doctor's advice to eat more fiber but did not return to that experience.",
+        "reason": "The user said urgency and multiple bathroom trips disrupt meetings, but this mainly framed the symptom-management question.",
         "relevance": "low",
-        "topic": "doctor's fiber advice"
+        "topic": "work disruption"
+      },
+      {
+        "reason": "The user briefly contrasted the conversation with a doctor's advice to eat more fiber.",
+        "relevance": "low",
+        "topic": "fiber advice"
+      },
+      {
+        "reason": "The user asked whether to involve their doctor, but this was a brief final question rather than the main need.",
+        "relevance": "low",
+        "topic": "clinician follow-up"
       }
     ],
-    "reason_for_conversation": "stress flare management",
-    "summary": "The user asked for practical ways to manage IBS flares linked to stressful work weeks, describing diarrhea, cramping, and urgency that disrupt meetings. The assistant discussed gut-directed therapies, acute options including loperamide, and reducing caffeine; the user said the advice was helpful, accepted a plan to try, and asked how to involve their doctor."
+    "reason_for_conversation": "informational",
+    "summary": "The user asked how to manage work-stress-linked IBS flares involving diarrhea, cramping, and urgency that disrupt meetings. The assistant discussed longer-term gut-directed therapies, short-term symptom options, and reducing caffeine; the user said the advice was helpful and ended with a plan to try changes and involve their doctor as appropriate."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 5217,
-    "output_tokens": 963
+    "input_tokens": 5423,
+    "output_tokens": 1099
   },
   "version": "gpt_luna"
 }

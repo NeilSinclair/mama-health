@@ -29,8 +29,8 @@ class SummaryLLM(BaseModel):
         description="Every topic the user talks about, incl. their health issues, each scored."
     )
     summary: str = Field(description="Two or three short sentences summarising the conversation.")
-    reason_for_conversation: str = Field(
-        description="Why the user started the conversation; a short generic label."
+    reason_for_conversation: Literal["informational", "decisional", "emotional", "access"] = Field(
+        description="The user's underlying need: to understand, to decide, to cope, or to get care."
     )
     conversation_pain_points: list[str] = Field(
         description="Problems the user had with this conversation itself; short labels."

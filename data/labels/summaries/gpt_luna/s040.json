@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T12:14:23+00:00",
+  "created_at": "2026-09-30T14:31:51+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,52 +7,47 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened by asking why TSH had climbed across three checks despite taking the same levothyroxine dose and returned to what the trend might mean.",
+        "reason": "The user opened by asking why TSH had risen across three checks despite taking the same levothyroxine dose, and returned to understanding the trend.",
         "relevance": "strong",
-        "topic": "rising tsh"
+        "topic": "rising tsh on stable dose"
       },
       {
-        "reason": "The user identified a calcium supplement started around the time of the rise, asked whether to take it later, and explored how it might affect absorption.",
-        "relevance": "strong",
-        "topic": "calcium supplement timing"
-      },
-      {
-        "reason": "The user related to the possibility of gradual gland function loss and reconsidered the assumption that a thyroid dose stays fixed forever.",
+        "reason": "The user identified a recently started calcium supplement and asked whether moving it later in the day could help.",
         "relevance": "medium",
-        "topic": "hashimoto's progression"
+        "topic": "calcium interaction"
       },
       {
-        "reason": "The user mentioned feeling somewhat more tired and discussed uncertainty about whether it was thyroid-related.",
+        "reason": "The user questioned whether a dose stays fixed forever and engaged with the explanation that Hashimoto's can change hormone needs over time.",
         "relevance": "medium",
-        "topic": "fatigue"
+        "topic": "thyroid dose changes"
       },
       {
-        "reason": "The user said the rising number had worried them, then said the explanation was reassuring.",
+        "reason": "The user asked whether to wait for routine bloodwork or contact the doctor sooner, then discussed the proposed recheck interval.",
         "relevance": "medium",
-        "topic": "worry about deterioration"
+        "topic": "thyroid monitoring plan"
       },
       {
-        "reason": "The user asked whether to wait for routine testing or contact the doctor sooner and asked about the suggested recheck interval.",
+        "reason": "The user said the creeping TSH had made them worry that something was deteriorating and later said the explanation was reassuring.",
         "relevance": "medium",
-        "topic": "follow-up testing"
+        "topic": "fear of deterioration"
       },
       {
-        "reason": "The user briefly mentioned age and poorer sleep as possible explanations for tiredness.",
+        "reason": "The user mentioned being somewhat more tired and said it was hard to distinguish thyroid effects from sleep or aging.",
         "relevance": "low",
-        "topic": "sleep and aging"
+        "topic": "fatigue"
       }
     ],
-    "reason_for_conversation": "understanding rising tsh",
-    "summary": "The user asked why TSH had risen over three checks while taking the same levothyroxine dose and identified a calcium supplement begun around the time the trend started. The assistant discussed calcium timing and gradual Hashimoto's changes, and suggested contacting the doctor or pharmacist about the trend, fatigue, and a possible recheck after a change; the user said the explanation was reassuring and left with an action plan."
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why TSH had risen from about 1.5 to 3.6 despite an unchanged levothyroxine dose, and learned that morning calcium could affect absorption as well as Hashimoto's progression changing dose needs. The assistant suggested raising the trend, calcium timing, and fatigue with the doctor or pharmacist and discussing a recheck around six to eight weeks after a change; the user said the explanation was reassuring and the action plan was useful."
   },
-  "prompt_sha256": "0710666d341217d5ae0955eaa9b73009ec6bf30303841ea722eb755ff746e16e",
-  "prompt_version": "summary_v6",
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3126,
+    "cache_read_tokens": 3332,
     "cache_write_tokens": 0,
-    "input_tokens": 5143,
-    "output_tokens": 1001
+    "input_tokens": 5349,
+    "output_tokens": 892
   },
   "version": "gpt_luna"
 }
