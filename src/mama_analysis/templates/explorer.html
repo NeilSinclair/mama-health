@@ -67,6 +67,14 @@
   .scores .medium { background: var(--chip); color: var(--text); }
   .scores .low { background: var(--chip); color: var(--muted); }
   .scores .why { color: var(--muted); }
+  .bubble.push { box-shadow: inset 3px 0 0 var(--accent); }
+  .bubble mark.q { background: var(--accent-soft); color: inherit; border-radius: 3px; padding: 0 2px; font-weight: 600; }
+  .bubble mark.fq { background: var(--ok-soft); color: inherit; border-radius: 3px; padding: 0 2px; }
+  .pmark { display: block; margin-top: 6px; font-size: 12px; color: var(--muted); white-space: normal; }
+  .pmark .kind { font-weight: 600; color: var(--text); }
+  .pmark .ok { color: var(--ok); font-weight: 600; }
+  .pmark .no { color: var(--bad); font-weight: 600; }
+  .dnote { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
   details { margin-top: 12px; border-top: 1px solid var(--border); padding-top: 10px; }
   summary { cursor: pointer; color: var(--accent); font-weight: 600; font-size: 14px; }
   .convo { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
@@ -164,6 +172,9 @@ const FILTERS = [
   ["end_reason", "End reason (LLM)"],
   ["session_ended_by", "Ended by (logged)"],
   ["issue_resolved", "Resolved (LLM)"],
+  ["final_sentiment", "Final sentiment (LLM)"],
+  ["silent_failure", "Silent failure"],
+  ["pushback", "Pushback (LLM)"],
   ["disease", "Disease"],
 ];
 const LABEL_FIELDS = ["reason_for_conversation", "main_topics", "conversation_pain_points", "end_reason"];
@@ -194,7 +205,7 @@ function el(tag, attrs = {}, ...children) {
 function values(row, key) {
   if (LABEL_FIELDS.includes(key)) return row[key].map((c) => c.label);
   if (key === "issue_resolved") return [row.issue_resolved ? "resolved" : "not resolved"];
-  return [row[key]];
+  return key in row ? [row[key]] : [];
 }
 
 function current() {
@@ -228,7 +239,7 @@ function renderSwitcher() {
 
 function renderFilters(rows) {
   const box = document.getElementById("filters");
-  box.replaceChildren(...FILTERS.map(([key, name]) => {
+  box.replaceChildren(...FILTERS.filter(([key]) => rows.some((r) => values(r, key).length || LABEL_FIELDS.includes(key))).map(([key, name]) => {
     const counts = new Map();
     for (const r of rows) for (const v of new Set(values(r, key))) counts.set(v, (counts.get(v) || 0) + 1);
     const opts = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
@@ -252,12 +263,42 @@ function chip(key, label, raw) {
   }, label);
 }
 
-function renderConversation(details, sid) {
+// Wrap the first case-insensitive match of `quote` in `text` in a <mark>.
+function markQuote(text, quote, cls) {
+  const q = (quote || "").trim();
+  const i = q ? text.toLowerCase().indexOf(q.toLowerCase()) : -1;
+  if (i < 0) return [text];
+  return [text.slice(0, i), el("mark", { class: cls }, text.slice(i, i + q.length)), text.slice(i + q.length)];
+}
+
+function renderConversation(details, r) {
   if (details.dataset.loaded) return;
   details.dataset.loaded = "1";
-  details.append(el("div", { class: "convo" }, ...DATA.conversations[sid].map((t) =>
-    el("div", { class: `bubble ${t.role}` }, el("span", { class: "who" }, `t${t.turn} · ${t.role}`), t.text)
-  )));
+  const convo = DATA.conversations[r.session_id];
+  const dyn = r.dynamics;
+  const pushes = new Map((dyn ? dyn.pushbacks : []).map((p) => [p.turn, p]));
+  const fq = dyn ? dyn.final_sentiment_quote.trim().toLowerCase() : "";
+  const finalTurn = fq && [...convo].reverse().find((t) => t.role === "user" && t.text.toLowerCase().includes(fq));
+  const bubbles = convo.map((t) => {
+    const p = pushes.get(t.turn);
+    const isFinal = finalTurn && finalTurn.turn === t.turn;
+    const body = p ? markQuote(t.text, p.quote, "q") : isFinal ? markQuote(t.text, dyn.final_sentiment_quote, "fq") : [t.text];
+    const b = el("div", { class: `bubble ${t.role}${p ? " push" : ""}` }, el("span", { class: "who" }, `t${t.turn} · ${t.role}`), ...body);
+    if (p) {
+      b.append(el("span", { class: "pmark" },
+        el("span", { class: "kind" }, `pushback · ${p.kind}`), " — bot's next reply: ",
+        el("span", { class: p.bot_adapted ? "ok" : "no" }, p.bot_adapted ? "adapted ✓" : "did not adapt ✗"),
+        el("span", { class: "why" }, ` · ${p.reason}`),
+        p.quote_found ? "" : el("span", { class: "no" }, " · quote not found in this turn")));
+    }
+    if (isFinal) b.append(el("span", { class: "pmark" }, el("span", { class: "kind" }, `final sentiment · ${r.final_sentiment}`)));
+    return b;
+  });
+  const note = dyn
+    ? el("p", { class: "dnote" }, `Dynamics (LLM): ends ${r.final_sentiment} · ${dyn.pushbacks.length} pushback turn(s), bot adapted to ${dyn.pushbacks.filter((p) => p.bot_adapted).length}.` +
+        (dyn.final_quote_found ? "" : " The final-sentiment quote was not found in any user turn."))
+    : "";
+  details.append(note, el("div", { class: "convo" }, ...bubbles));
 }
 
 function renderRow(r) {
@@ -271,6 +312,15 @@ function renderRow(r) {
     chip("disease", r.disease),
     el("span", {}, `${r.age_group} · ${r.gender} · ${r.country}`),
     resolved,
+    ...(r.dynamics ? [
+      el("button", { type: "button", class: "chip", title: "How the user sounded at the end (LLM)",
+        onclick: () => toggleFilter("final_sentiment", r.final_sentiment) }, `ends ${r.final_sentiment}`),
+      ...(r.silent_failure === "yes" ? [el("button", { type: "button", class: "badge bad chip",
+        title: "Sounded satisfied, but the need was not met or a safety failure occurred",
+        onclick: () => toggleFilter("silent_failure", "yes") }, "silent failure")] : []),
+      ...(r.pushback !== "none" ? [el("button", { type: "button", class: "chip", title: "Pushback (LLM)",
+        onclick: () => toggleFilter("pushback", r.pushback) }, `pushback: ${r.pushback}`)] : []),
+    ] : []),
   );
   const fields = el("dl", { class: "fields" });
   for (const key of LABEL_FIELDS) {
@@ -287,7 +337,7 @@ function renderRow(r) {
       el("span", { class: `rel ${t.relevance}` }, t.relevance), el("strong", { title: `raw: ${t.topic}` }, t.label),
       el("span", { class: "why" }, ` — ${t.reason}`)))));
   const details = el("details", {}, el("summary", {}, "Show full conversation"));
-  details.addEventListener("toggle", () => details.open && renderConversation(details, r.session_id));
+  details.addEventListener("toggle", () => details.open && renderConversation(details, r));
   return el("div", { class: "row" }, meta, el("p", { class: "summary" }, r.summary), fields, scores, details);
 }
 
@@ -558,6 +608,9 @@ const BREAK_FIELDS = [
   ["conversation_pain_points", "Conversation pain point", "pain"],
   ["end_reason", "End reason (LLM)", "end"],
   ["issue_resolved", "Resolved (LLM)", "neutral"],
+  ["final_sentiment", "Final sentiment (LLM)", "neutral"],
+  ["silent_failure", "Silent failure", "neutral"],
+  ["pushback", "Pushback (LLM)", "neutral"],
   ["disease", "Disease", "neutral"],
 ];
 const NONE = "(none)";
@@ -608,7 +661,9 @@ function renderBreakdown() {
     el("button", { type: "button", class: "bclear", onclick: () => { breakState.selected = []; renderBreakdown(); } }, "Clear"),
   );
 
-  grid.replaceChildren(...BREAK_FIELDS.map(([key, , cls]) => {
+  // Dynamics panels appear only when the version has dynamics labels.
+  const fields = BREAK_FIELDS.filter(([key]) => LABEL_FIELDS.includes(key) || v.rows.some((r) => key in r));
+  grid.replaceChildren(...fields.map(([key, , cls]) => {
     const counts = new Map();
     for (const r of rows) for (const lab of new Set(breakValues(r, key))) counts.set(lab, (counts.get(lab) || 0) + 1);
     const items = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));

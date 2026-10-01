@@ -23,6 +23,9 @@ Labels are cached in `data/labels/`, and the pipeline uses the cache by default,
 ```bash
 uv run mama-pipeline --relabel gpt_luna   # re-summarise and re-consolidate
 uv run mama-pipeline --remap gpt_luna     # re-consolidate only, from the cached summaries
+uv run mama-pipeline --dynamics gpt_luna  # re-label conversation dynamics only (pushback, final sentiment)
 ```
+
+A separate dynamics pass labels each conversation's pushback turns (and whether the bot's next reply adapted) and the user's final sentiment. From these and the summaries, `outputs/analysis/<version>/` holds: the logged end state vs the outcome, silent failures (the user sounded satisfied but the need was not met or a safety failure occurred), every pushback, recovery by outcome, and the user's share of words before and after the first pushback. The explorer shows the same labels: final sentiment, silent failure and pushback status as filters, row badges and Breakdown panels, and each expanded conversation marks the pushback turns (kind, whether the bot's next reply adapted, and why).
 
 Models are pinned in `src/mama_analysis/config.py`, and prompts are versioned in `src/mama_analysis/prompts/`. Each cache entry records its model ID, prompt SHA-256, timestamp and token usage.

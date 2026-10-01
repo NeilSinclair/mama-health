@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-09-30T13:52:54+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "final_sentiment": "neutral",
+    "final_sentiment_quote": "I think I've had about enough for today. My eyes are tired.",
+    "pushbacks": [
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "That's a lot of words. I didn't understand most of that, honey. I'm 71, I'm not a doctor. Can you say it plainer?",
+        "reason": "The reply attempts a simpler explanation but continues using technical terms and medical jargon.",
+        "turn": 3
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "See you're doing it again. SNRI, anti-convul-whatever. I don't know what those are. My arthritis pills are the only pills I really know the names of.",
+        "reason": "The reply defines the medication categories but continues with technical terminology rather than switching to plain language.",
+        "turn": 5
+      },
+      {
+        "bot_adapted": true,
+        "kind": "repeated question",
+        "quote": "I just wanted to know if I'm going to feel like this forever.",
+        "reason": "The reply directly addresses whether the condition means the user will feel this way forever and says symptoms can improve.",
+        "turn": 11
+      },
+      {
+        "bot_adapted": true,
+        "kind": "frustration",
+        "quote": "You keep listing medicines. My doctor didn't offer me any of that. He just said fibromyalgia and sent me home. So how do I even get those?",
+        "reason": "The reply gives concrete ways to raise the options with the doctor and suggests asking about referrals.",
+        "turn": 13
+      },
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "I don't think I can pronounce half of those to say them to him.",
+        "reason": "The reply offers a workaround—writing the names down or using a general phrase to ask the doctor.",
+        "turn": 15
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "No. No more of that. I'm more confused than when I started, to be honest with you.",
+        "reason": "The reply apologizes but continues using confusing terms such as “central sensitization” and “desensitize.”",
+        "turn": 17
+      },
+      {
+        "bot_adapted": true,
+        "kind": "frustration",
+        "quote": "There's that word again. Sensitized. I asked you to keep it simple three times now.",
+        "reason": "The reply drops the technical term and explains the point in plain language.",
+        "turn": 19
+      },
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "I think I've had about enough for today. My eyes are tired.",
+        "reason": "The reply accepts that the user is done for now and leaves the conversation open for another time.",
+        "turn": 21
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2173,
+    "cache_write_tokens": 0,
+    "input_tokens": 3497,
+    "output_tokens": 2050
+  },
+  "version": "gpt_luna"
+}

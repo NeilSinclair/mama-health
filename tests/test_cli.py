@@ -69,6 +69,20 @@ def test_relabel_then_build_from_cache(data_file, tmp_path, capsys, fake_api):
     assert summaries["reason_for_conversation"].tolist() == ["understand my condition"] * 2
     assert summaries["reason_for_conversation_raw"].tolist() == ["informational"] * 2
     assert (out / "summaries" / "gpt_luna" / "label_counts.csv").exists()
+    # --relabel also labels dynamics, so every analysis table is written.
+    assert sorted(p.name for p in (labels / "dynamics" / "gpt_luna").iterdir()) == [
+        "s1.json",
+        "s2.json",
+    ]
+    assert sorted(p.stem for p in (out / "analysis" / "gpt_luna").iterdir()) == [
+        "ending_mismatches",
+        "ending_vs_outcome",
+        "friction",
+        "pushbacks",
+        "recovery_by_outcome",
+        "sentiment_vs_outcome",
+        "silent_failures",
+    ]
 
 
 def test_run_summaries_warns_on_stale_cache(data_file, tmp_path, capsys, fake_api, monkeypatch):
@@ -165,3 +179,86 @@ def test_old_schema_cache_fails_with_relabel_hint(data_file, tmp_path, fake_api)
     path.write_text(json.dumps(entry))
     with pytest.raises(ValueError, match="run: uv run mama-pipeline --relabel gpt_luna"):
         run_summaries(data_file, labels, tmp_path / "out")
+
+
+def test_missing_dynamics_skips_only_those_tables(data_file, tmp_path, capsys, fake_api):
+    import shutil
+
+    labels, out = tmp_path / "labels", tmp_path / "out"
+    cli.relabel("gpt_luna", data_file, labels)
+    shutil.rmtree(labels / "dynamics")
+    capsys.readouterr()
+    run_summaries(data_file, labels, out)
+    assert "no complete cached dynamics for gpt_luna" in capsys.readouterr().out
+    assert sorted(p.stem for p in (out / "analysis" / "gpt_luna").iterdir()) == [
+        "ending_mismatches",
+        "ending_vs_outcome",
+    ]
+
+
+def test_dynamics_flag_relabels_only_dynamics(data_file, tmp_path, capsys, fake_api):
+    labels = tmp_path / "labels"
+    cli.relabel("gpt_luna", data_file, labels)
+    summary = (labels / "summaries" / "gpt_luna" / "s1.json").read_text()
+    (labels / "dynamics" / "gpt_luna" / "s1.json").unlink()
+    args = ["--data", str(data_file), "--out", str(tmp_path / "out"), "--labels", str(labels)]
+    main([*args, "--dynamics", "gpt_luna"])
+    assert "labelling gpt_luna conversation dynamics" in capsys.readouterr().out
+    assert (labels / "dynamics" / "gpt_luna" / "s1.json").exists()
+    assert (labels / "summaries" / "gpt_luna" / "s1.json").read_text() == summary
+
+
+def test_old_schema_dynamics_fail_with_hint(data_file, tmp_path, fake_api):
+    import json
+
+    labels = tmp_path / "labels"
+    cli.relabel("gpt_luna", data_file, labels)
+    path = labels / "dynamics" / "gpt_luna" / "s1.json"
+    entry = json.loads(path.read_text())
+    entry["output"]["final_sentiment"] = "happy"
+    path.write_text(json.dumps(entry))
+    with pytest.raises(ValueError, match="run: uv run mama-pipeline --dynamics gpt_luna"):
+        run_summaries(data_file, labels, tmp_path / "out")
+
+
+def test_invented_dynamics_quotes_are_reported(data_file, tmp_path, capsys, fake_api):
+    import json
+
+    labels = tmp_path / "labels"
+    cli.relabel("gpt_luna", data_file, labels)
+    path = labels / "dynamics" / "gpt_luna" / "s1.json"
+    entry = json.loads(path.read_text())
+    entry["output"]["pushbacks"][0]["quote"] = "words nobody said"
+    path.write_text(json.dumps(entry))
+    capsys.readouterr()
+    run_summaries(data_file, labels, tmp_path / "out")
+    assert "gpt_luna: 1 dynamics quotes not found" in capsys.readouterr().out
+
+
+def test_stale_dynamics_warn(data_file, tmp_path, capsys, fake_api, monkeypatch):
+    labels = tmp_path / "labels"
+    cli.relabel("gpt_luna", data_file, labels)
+    capsys.readouterr()
+    monkeypatch.setitem(
+        cli.MODELS, "gpt_luna", cli.MODELS["gpt_luna"].__class__("openai", "new", "G")
+    )
+    run_summaries(data_file, labels, tmp_path / "out")
+    assert "gpt_luna: 2 cached dynamics labels predate" in capsys.readouterr().out
+
+
+def test_dynamics_closes_client_even_on_failure(data_file, tmp_path, monkeypatch):
+    made = []
+
+    def broken(version):
+        def respond(schema, user):
+            raise RuntimeError("api down")
+
+        lab = FakeLabeller(respond, version=version)
+        made.append(lab)
+        return lab
+
+    monkeypatch.setattr(cli, "load_dotenv", lambda: None)
+    monkeypatch.setattr(cli, "make_labeller", broken)
+    with pytest.raises(RuntimeError, match="api down"):
+        cli.dynamics("gpt_luna", data_file, tmp_path)
+    assert made[0].closed

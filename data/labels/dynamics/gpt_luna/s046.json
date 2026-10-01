@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-09-30T13:53:02+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "final_sentiment": "neutral",
+    "final_sentiment_quote": "Right. Okay. I think I have the general picture at least.",
+    "pushbacks": [
+      {
+        "bot_adapted": true,
+        "kind": "correction",
+        "quote": "I've done all of that. Salt loading, waist-high 30-40mmHg compression, ivabradine, midodrine, the recumbent rowing protocol. That's exactly what I mean. I know the standard stuff cold. What I'm asking is what's NEW.",
+        "reason": "The reply shifts from standard POTS management to disease-modifying research directions.",
+        "turn": 3
+      },
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "Reading about BC 007 or temelimab doesn't help me if I can't get them. Knowing a molecule exists in a trial somewhere in Germany does nothing for me sitting here in the US. How do I actually find trials I could get into?",
+        "reason": "The reply moves from discussing research to offering US trial-search resources and ways to filter by location and recruiting status.",
+        "turn": 7
+      },
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "I've been on ClinicalTrials.gov. It's a mess. There are hundreds of entries, half are observational surveys, half are closed or 'not yet recruiting,' and the eligibility criteria are written in a language I can't parse. How do I actually figure out which ones I'd qualify for?",
+        "reason": "The reply responds to the navigation problem with filters, examples of eligibility criteria, and a way to confirm qualification with a coordinator.",
+        "turn": 9
+      },
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "Okay but 'reach out to the coordinator' — for which ones? That's what I keep getting stuck on. I don't know how to tell if I'm even in the ballpark before I spend energy I don't have emailing twenty sites.",
+        "reason": "The reply offers specific screening factors to compare against listings so the user can estimate a yes, maybe, or no before contacting a site.",
+        "turn": 11
+      },
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "See, that's helpful in theory but I still have to do all that reading and matching myself, one trial at a time, while cognitively impaired. There's no shortcut? No service that matches you?",
+        "reason": "The reply changes from self-screening instructions to naming matching-style resources, patient-organization lists, and clinic-based trial rosters.",
+        "turn": 13
+      },
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "I'm not at a dedicated clinic. My care is basically a cardiologist for the POTS and my PCP. Getting into one of those long COVID centers has its own waitlist nightmare.",
+        "reason": "The reply continues to recommend getting on a clinic waitlist and adds asking the current clinicians for a referral, rather than offering a different route around the waitlist.",
+        "turn": 15
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "Okay. I guess. It just feels like the answer is always 'get into a clinic that won't see you' or 'read a thousand trial listings yourself.'",
+        "reason": "The reply acknowledges the difficulty but repeats the clinic waitlist, referral, and documentation steps the user has just described as unworkable.",
+        "turn": 17
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "So basically I still have to go do the searching myself.",
+        "reason": "The reply confirms that the user must do the location-specific search and restates the same clinic-and-waitlist approach rather than providing a different way to find clinics.",
+        "turn": 21
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2173,
+    "cache_write_tokens": 0,
+    "input_tokens": 4232,
+    "output_tokens": 2023
+  },
+  "version": "gpt_luna"
+}

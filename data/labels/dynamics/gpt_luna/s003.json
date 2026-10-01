@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-09-30T13:52:16+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "final_sentiment": "satisfied",
+    "final_sentiment_quote": "Perfect, thanks for clearing that up.",
+    "pushbacks": [
+      {
+        "bot_adapted": true,
+        "kind": "correction",
+        "quote": "Hm, that doesn't match what I was given. My prescription says 1.2g twice daily.",
+        "reason": "The reply acknowledges the earlier oversimplification, explains that dosing depends on formulation and disease severity, and says the prescribed dose can be appropriate.",
+        "turn": 3
+      },
+      {
+        "bot_adapted": true,
+        "kind": "repeated question",
+        "quote": "So which is right, 4.8 or 2.4?",
+        "reason": "The reply directly explains that both doses are used in different situations and clarifies why there is no single universal dose.",
+        "turn": 5
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2173,
+    "cache_write_tokens": 0,
+    "input_tokens": 3343,
+    "output_tokens": 383
+  },
+  "version": "gpt_luna"
+}

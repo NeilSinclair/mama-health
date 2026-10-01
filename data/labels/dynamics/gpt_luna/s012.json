@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-09-30T13:52:20+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "final_sentiment": "satisfied",
+    "final_sentiment_quote": "no, I think I've got what I need. referral, keep some notes even if they're messy, and don't buy the supplements yet. thanks, this was actually really clarifying",
+    "pushbacks": [
+      {
+        "bot_adapted": true,
+        "kind": "correction",
+        "quote": "I've tried food diaries before and honestly found it hard to see any pattern. everything seemed to set me off on some days and be fine on others",
+        "reason": "The reply addresses the difficulty by reframing the inconsistent patterns as useful information and suggesting a dietitian who could help interpret them.",
+        "turn": 19
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 2173,
+    "cache_write_tokens": 0,
+    "input_tokens": 4137,
+    "output_tokens": 587
+  },
+  "version": "gpt_luna"
+}

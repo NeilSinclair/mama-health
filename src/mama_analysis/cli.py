@@ -10,7 +10,7 @@ from typing import Any
 from dotenv import load_dotenv
 from pydantic import ValidationError
 
-from mama_analysis import eda
+from mama_analysis import analysis, eda
 from mama_analysis.cache import read_entries, stale_keys
 from mama_analysis.config import DEFAULT_LABELS_DIR, MODELS
 from mama_analysis.consolidate import (
@@ -23,7 +23,9 @@ from mama_analysis.consolidate import (
     raw_labels,
 )
 from mama_analysis.data import DEFAULT_DATA_PATH, load_sessions, sessions_frame, turns_frame
+from mama_analysis.dynamics import DYNAMICS_PROMPT, check_dynamics, dynamics_all, dynamics_dir
 from mama_analysis.explorer import (
+    attach_dynamics,
     cooccurrence_table,
     explorer_payload,
     label_counts,
@@ -33,7 +35,7 @@ from mama_analysis.explorer import (
     summaries_table,
 )
 from mama_analysis.labellers import Labeller, load_prompt, make_labeller
-from mama_analysis.schemas import CacheEntry, SummaryLLM
+from mama_analysis.schemas import CacheEntry, DynamicsLLM, SummaryLLM
 from mama_analysis.summarise import (
     SUMMARY_PROMPT,
     merge_deterministic,
@@ -146,8 +148,82 @@ def load_version(
     return label_rows(merged, field_maps), model_ids
 
 
+def load_dynamics(
+    records: list[dict[str, Any]], labels_dir: Path, version: str
+) -> dict[str, DynamicsLLM] | None:
+    """Load one version's cached dynamics labels.
+
+    Args:
+        records: Raw session records.
+        labels_dir: Root of the label cache.
+        version: Key into ``config.MODELS``.
+
+    Returns:
+        Dynamics labels keyed by session ID, or ``None`` unless every session is cached.
+
+    Raises:
+        ValueError: If cached dynamics labels don't fit the current schema.
+    """
+    entries = read_entries(dynamics_dir(labels_dir, version))
+    if not {r["session_id"] for r in records} <= entries.keys():
+        return None
+    stale = stale_keys(entries, MODELS[version], load_prompt(DYNAMICS_PROMPT))
+    if stale:
+        print(f"warning: {version}: {len(stale)} cached dynamics labels predate the current prompt")
+    try:
+        dyn = {
+            r["session_id"]: DynamicsLLM.model_validate(entries[r["session_id"]].output)
+            for r in records
+        }
+    except ValidationError as err:
+        raise ValueError(
+            f"{version}: cached dynamics don't match the current schema; "
+            f"run: uv run mama-pipeline --dynamics {version}"
+        ) from err
+    bad = 0
+    for r in records:
+        check = check_dynamics(r, dyn[r["session_id"]])
+        bad += (not check["final_quote_found"]) + check["pushback_ok"].count(False)
+    if bad:
+        print(f"warning: {version}: {bad} dynamics quotes not found in their transcript turn")
+    return dyn
+
+
+def analysis_tables(
+    records: list[dict[str, Any]],
+    rows: list[dict[str, Any]],
+    dyn: dict[str, DynamicsLLM] | None,
+) -> dict[str, Any]:
+    """Build the analysis tables for one version.
+
+    Args:
+        records: Raw session records.
+        rows: Output of ``explorer.label_rows``.
+        dyn: Dynamics labels keyed by session ID, or ``None`` if not cached.
+
+    Returns:
+        DataFrames keyed by table name; the dynamics tables only when ``dyn`` is given.
+    """
+    tables = {
+        "ending_vs_outcome": analysis.ending_vs_outcome(rows),
+        "ending_mismatches": analysis.ending_mismatches(rows),
+    }
+    if dyn is not None:
+        by_id = {r["session_id"]: r for r in records}
+        tables |= {
+            "sentiment_vs_outcome": analysis.sentiment_vs_outcome(rows, dyn),
+            "silent_failures": analysis.silent_failures(rows, dyn, by_id),
+            "pushbacks": analysis.pushbacks_table(rows, dyn, by_id),
+            "recovery_by_outcome": analysis.recovery_by_outcome(rows, dyn),
+            "friction": analysis.friction(rows, dyn, by_id),
+        }
+    return tables
+
+
 def run_summaries(data_path: Path, labels_dir: Path, out_dir: Path) -> dict[str, Path]:
-    """Write summary tables and the explorer page from cached labels; makes no API calls.
+    """Write summary and analysis tables and the explorer page from cached labels.
+
+    Makes no API calls.
 
     Args:
         data_path: Path to the conversations JSON file.
@@ -176,6 +252,22 @@ def run_summaries(data_path: Path, labels_dir: Path, out_dir: Path) -> dict[str,
             path = target / f"{name}.csv"
             df.to_csv(path, index=False)
             written[f"{version}/{name}"] = path
+        missing = analysis.missing_safety_labels(rows)
+        if missing:
+            print(
+                f"note: {version}: no session has safety pain point(s) {missing}; check the mapping"
+            )
+        dyn = load_dynamics(records, labels_dir, version)
+        if dyn is None:
+            print(f"note: no complete cached dynamics for {version}; skipping those tables")
+        target = out_dir / "analysis" / version
+        target.mkdir(parents=True, exist_ok=True)
+        for name, df in analysis_tables(records, rows, dyn).items():
+            path = target / f"{name}.csv"
+            df.to_csv(path, index=False)
+            written[f"analysis/{version}/{name}"] = path
+        by_id = {r["session_id"]: r for r in records}
+        versions[version]["rows"] = attach_dynamics(rows, dyn, by_id)
     path = out_dir / "explorer.html"
     path.write_text(render_explorer(explorer_payload(records, versions)), encoding="utf-8")
     written["explorer"] = path
@@ -203,6 +295,15 @@ async def _consolidate(
     _print_usage("mapping", mappings)
 
 
+async def _run_dynamics(
+    labeller: Labeller, records: list[dict[str, Any]], labels_dir: Path
+) -> None:
+    entries = await dynamics_all(
+        records, labeller, load_prompt(DYNAMICS_PROMPT), dynamics_dir(labels_dir, labeller.version)
+    )
+    _print_usage("dynamics", entries)
+
+
 async def _relabel(version: str, records: list[dict[str, Any]], labels_dir: Path) -> None:
     labeller = make_labeller(version)
     print(f"relabelling {version} with {labeller.spec.model_id}")
@@ -212,6 +313,16 @@ async def _relabel(version: str, records: list[dict[str, Any]], labels_dir: Path
         )
         _print_usage("summary", summaries)
         await _consolidate(labeller, summaries, labels_dir)
+        await _run_dynamics(labeller, records, labels_dir)
+    finally:
+        await labeller.aclose()
+
+
+async def _dynamics(version: str, records: list[dict[str, Any]], labels_dir: Path) -> None:
+    labeller = make_labeller(version)
+    print(f"labelling {version} conversation dynamics with {labeller.spec.model_id}")
+    try:
+        await _run_dynamics(labeller, records, labels_dir)
     finally:
         await labeller.aclose()
 
@@ -229,7 +340,7 @@ async def _remap(version: str, labels_dir: Path) -> None:
 
 
 def relabel(version: str, data_path: Path, labels_dir: Path) -> None:
-    """Regenerate one version's summaries and label mappings via the API.
+    """Regenerate one version's summaries, label mappings and dynamics via the API.
 
     Reads API keys from ``.env``. Overwrites that version's cache in ``labels_dir``.
 
@@ -255,6 +366,20 @@ def remap(version: str, labels_dir: Path) -> None:
     asyncio.run(_remap(version, labels_dir))
 
 
+def dynamics(version: str, data_path: Path, labels_dir: Path) -> None:
+    """Regenerate only one version's conversation-dynamics labels via the API.
+
+    Reads API keys from ``.env``. Overwrites that version's dynamics cache.
+
+    Args:
+        version: Key into ``config.MODELS``.
+        data_path: Path to the conversations JSON file.
+        labels_dir: Root of the label cache.
+    """
+    load_dotenv()
+    asyncio.run(_dynamics(version, load_sessions(data_path), labels_dir))
+
+
 def main(argv: list[str] | None = None) -> None:
     """Run the pipeline from the command line.
 
@@ -275,6 +400,11 @@ def main(argv: list[str] | None = None) -> None:
         choices=[*MODELS, "all"],
         help="regenerate only the label mappings, from cached summaries (needs .env keys)",
     )
+    parser.add_argument(
+        "--dynamics",
+        choices=[*MODELS, "all"],
+        help="regenerate only the conversation-dynamics labels (needs .env keys)",
+    )
     args = parser.parse_args(argv)
 
     if args.relabel:
@@ -283,6 +413,9 @@ def main(argv: list[str] | None = None) -> None:
     if args.remap:
         for version in MODELS if args.remap == "all" else [args.remap]:
             remap(version, args.labels)
+    if args.dynamics:
+        for version in MODELS if args.dynamics == "all" else [args.dynamics]:
+            dynamics(version, args.data, args.labels)
 
     written = run_eda(args.data, args.out)
     written |= run_summaries(args.data, args.labels, args.out)
