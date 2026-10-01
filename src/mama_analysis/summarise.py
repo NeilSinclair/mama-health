@@ -12,7 +12,7 @@ from mama_analysis.config import CONCURRENCY
 from mama_analysis.labellers import Labeller, Prompt
 from mama_analysis.schemas import CacheEntry, SessionSummary, SummaryLLM
 
-SUMMARY_PROMPT = "summary_v7"
+SUMMARY_PROMPT = "summary_v8"
 
 
 def summary_dir(labels_dir: Path, version: str) -> Path:

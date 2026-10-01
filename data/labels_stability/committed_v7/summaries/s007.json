@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-09-30T14:31:06+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with gradual scalp thinning and a widening part, and returned to worries about whether it would worsen.",
+        "relevance": "strong",
+        "topic": "hair thinning"
+      },
+      {
+        "reason": "The user asked whether PCOS could explain the thinning and explored what could be done if androgens were involved.",
+        "relevance": "medium",
+        "topic": "pcos-related hair loss"
+      },
+      {
+        "reason": "The user mentioned stressful exams and asked whether they could contribute to the hair loss.",
+        "relevance": "medium",
+        "topic": "stress-related shedding"
+      },
+      {
+        "reason": "The user asked about permanence and treatment options, including minoxidil and medication.",
+        "relevance": "medium",
+        "topic": "hair loss treatments"
+      },
+      {
+        "reason": "The user expressed nervousness about hormone medications and specifically asked whether spironolactone was safe.",
+        "relevance": "medium",
+        "topic": "hormone medication safety"
+      },
+      {
+        "reason": "The user said the widening part freaked them out when looking in the mirror and later said they had been scared there was nothing to do.",
+        "relevance": "medium",
+        "topic": "appearance-related distress"
+      },
+      {
+        "reason": "The user asked which clinician to see, how to prepare, and said they planned to book an appointment that week.",
+        "relevance": "medium",
+        "topic": "hair loss appointment"
+      },
+      {
+        "reason": "The user asked whether particular foods help with PCOS-related hair loss.",
+        "relevance": "low",
+        "topic": "diet for hair health"
+      },
+      {
+        "reason": "The user asked whether to stop straightening their hair while waiting for the appointment.",
+        "relevance": "low",
+        "topic": "hair styling practices"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked about six to eight months of gradual hair thinning and whether it could be related to PCOS or exam stress, then discussed possible tests, treatments, medication safety, diet, and hair care. The assistant answered these questions and gave guidance on seeing and preparing for a doctor; the user said the conversation helped and planned to book an appointment that week."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5581,
+    "output_tokens": 1047
+  },
+  "version": "gpt_luna"
+}

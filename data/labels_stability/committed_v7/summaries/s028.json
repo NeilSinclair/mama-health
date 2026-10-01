@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-09-30T14:31:36+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with the conflict between exercise advice and being unable to function for days after walking or yoga, and returned to how to avoid another crash.",
+        "relevance": "strong",
+        "topic": "exercise-related flares"
+      },
+      {
+        "reason": "The user explored starting at a very small level, holding back on good days, and gradually building activity across several turns.",
+        "relevance": "strong",
+        "topic": "activity pacing"
+      },
+      {
+        "reason": "The user described overdoing activity on good days to make up for bad ones and then crashing, and said the framing of capping activity was useful.",
+        "relevance": "medium",
+        "topic": "boom-bust activity cycle"
+      },
+      {
+        "reason": "The user asked whether walking or yoga was better and responded that a community-center pool might be doable.",
+        "relevance": "medium",
+        "topic": "exercise options"
+      },
+      {
+        "reason": "The user said they felt stuck between general advice and their body's response, and described feeling punished for trying.",
+        "relevance": "medium",
+        "topic": "exercise frustration"
+      },
+      {
+        "reason": "The user asked how long it might take to notice a difference and accepted that progress could take weeks to months.",
+        "relevance": "medium",
+        "topic": "exercise progress expectations"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user described delayed flares after walking or beginner yoga despite repeated advice to exercise, and asked how to find a tolerable approach. The assistant discussed very small starting amounts, pacing on good days, warm-water movement, and gradual progress; the user said the advice was genuinely useful and that a pool might be doable. The user ended appreciative and described the conversation as more helpful than many appointments."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5838,
+    "output_tokens": 897
+  },
+  "version": "gpt_luna"
+}

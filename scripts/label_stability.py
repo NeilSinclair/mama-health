@@ -3,6 +3,10 @@
 Exploratory, not part of the pipeline: it writes only under ``data/labels_stability/`` and
 never touches ``data/labels/`` or ``outputs/``.
 
+Frozen at ``summary_v7``. "Committed" means the v7 labels that were committed when the
+experiment ran, copied to ``data/labels_stability/committed_v7/`` before the pipeline was
+relabelled with topic groups (D-047). The v7 schema (no ``topic_group``) is kept here.
+
 - ``run``: three fresh ``summary_v7`` runs over all 50 sessions; one ``consolidate_v3`` call
   over the raw labels of all four runs (committed + three fresh), so every run shares one
   vocabulary; and three ``consolidate_v3`` reruns on the committed summaries. Needs
@@ -22,25 +26,42 @@ import asyncio
 import itertools
 from collections import Counter
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 import pandas as pd
 from dotenv import load_dotenv
+from pydantic import BaseModel
 
 from mama_analysis import labellers
 from mama_analysis.cache import read_entries
-from mama_analysis.config import DEFAULT_LABELS_DIR
 from mama_analysis.consolidate import (
     CONSOLIDATE_PROMPT,
     CONSOLIDATED_FIELDS,
     DISPLAY_NAMES,
     consolidate_all,
-    mapping_dir,
 )
 from mama_analysis.data import DEFAULT_DATA_PATH, load_sessions
 from mama_analysis.labellers import load_prompt, make_labeller
-from mama_analysis.schemas import CacheEntry, SummaryLLM
-from mama_analysis.summarise import SUMMARY_PROMPT, summarise_all, summary_dir
+from mama_analysis.schemas import CacheEntry
+from mama_analysis.schemas import SummaryLLM as _SummaryLLM
+from mama_analysis.summarise import label_sessions
+
+SUMMARY_PROMPT = "summary_v7"
+
+
+class ScoredTopicV7(BaseModel):
+    """A ``summary_v7`` topic: no ``topic_group`` yet."""
+
+    topic: str
+    reason: str
+    relevance: Literal["strong", "medium", "low"]
+
+
+class SummaryLLM(_SummaryLLM):
+    """The ``summary_v7`` output schema."""
+
+    main_topics: list[ScoredTopicV7]
+
 
 VERSION = "gpt_luna"
 ROOT = Path("data/labels_stability")
@@ -48,6 +69,7 @@ RESULTS = ROOT / "results"
 RUNS = ("run1", "run2", "run3")
 REPS = ("rep1", "rep2", "rep3")
 COMMITTED = "committed"
+COMMITTED_DIR = ROOT / "committed_v7"
 
 # GPT-6 Luna standard tier, USD per million tokens (checked 2026-10-01; not in the repo).
 PRICE_IN, PRICE_CACHED, PRICE_OUT = 0.10, 0.01, 0.50
@@ -64,9 +86,9 @@ PROTECTED = (
 
 
 def run_dir(run: str) -> Path:
-    """Cache directory for one summary run (the committed run lives in ``data/labels``)."""
+    """Cache directory for one summary run (the committed v7 run is a frozen copy)."""
     if run == COMMITTED:
-        return summary_dir(DEFAULT_LABELS_DIR, VERSION)
+        return COMMITTED_DIR / "summaries"
     return ROOT / "runs" / run
 
 
@@ -86,7 +108,9 @@ async def _run(records: list[dict[str, Any]]) -> None:
                 print(f"{run}: cached, skipping")
                 continue
             print(f"{run}: summarising {len(records)} sessions")
-            await summarise_all(records, labeller, load_prompt(SUMMARY_PROMPT), run_dir(run))
+            await label_sessions(
+                records, labeller, load_prompt(SUMMARY_PROMPT), SummaryLLM, run_dir(run)
+            )
 
         prompt = load_prompt(CONSOLIDATE_PROMPT)
         joint = ROOT / "joint_mappings"
@@ -244,7 +268,7 @@ def ari(a: list[str], b: list[str]) -> float:
 
 def consolidation_tables(committed: list[SummaryLLM]) -> pd.DataFrame:
     """Agreement between the committed mapping and three reruns on the same raw labels."""
-    maps = {COMMITTED: read_entries(mapping_dir(DEFAULT_LABELS_DIR, VERSION))}
+    maps = {COMMITTED: read_entries(COMMITTED_DIR / "mappings")}
     maps |= {rep: read_entries(ROOT / "consolidation_reruns" / rep) for rep in REPS}
     rows = []
     for field in CONSOLIDATED_FIELDS:
@@ -294,7 +318,7 @@ def consolidation_tables(committed: list[SummaryLLM]) -> pd.DataFrame:
 def cost_table() -> pd.DataFrame:
     """Tokens and USD for every group of calls (committed run included for reference)."""
     groups = {f"summary {r}": load_summaries(r) for r in (COMMITTED, *RUNS)}
-    groups["mapping committed"] = read_entries(mapping_dir(DEFAULT_LABELS_DIR, VERSION))
+    groups["mapping committed"] = read_entries(COMMITTED_DIR / "mappings")
     groups["mapping joint (4 runs)"] = read_entries(ROOT / "joint_mappings")
     groups |= {f"mapping {rep}": read_entries(ROOT / "consolidation_reruns" / rep) for rep in REPS}
     rows = []

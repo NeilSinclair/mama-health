@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-09-30T14:31:55+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not simplify language when asked",
+      "bot continued listing medicines after user objected"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether anything can be done and returned to how to access treatment and whether symptoms would last forever.",
+        "relevance": "strong",
+        "topic": "fibromyalgia treatment options"
+      },
+      {
+        "reason": "The user described long-standing pain in several body areas and asked whether it was part of fibromyalgia.",
+        "relevance": "medium",
+        "topic": "widespread pain"
+      },
+      {
+        "reason": "The user described morning pain and persistent tiredness despite sleeping and asked whether these symptoms were related to fibromyalgia.",
+        "relevance": "medium",
+        "topic": "fatigue and morning stiffness"
+      },
+      {
+        "reason": "The user said their doctor diagnosed fibromyalgia, offered little hope, and sent them home without discussing treatment.",
+        "relevance": "medium",
+        "topic": "limited treatment guidance"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether fibromyalgia can be treated and described widespread pain, morning stiffness, and fatigue. The assistant said symptoms can improve, but repeatedly used medical jargon and listed medicines despite requests for plain language and then to stop; the user said they were more confused and ended the chat to rest. The user left without confirming that they understood how to pursue care or felt their main concern was resolved."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4656,
+    "output_tokens": 1228
+  },
+  "version": "gpt_luna"
+}

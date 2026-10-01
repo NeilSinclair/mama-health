@@ -18,12 +18,10 @@ from mama_analysis.consolidate import (
     CONSOLIDATED_FIELDS,
     DISPLAY_NAMES,
     FIELDS,
-    UNGROUPED,
     consolidate_all,
     mapping_dir,
     merge_canonicals,
     raw_labels,
-    topic_groups,
 )
 from mama_analysis.data import DEFAULT_DATA_PATH, load_sessions, sessions_frame, turns_frame
 from mama_analysis.dynamics import DYNAMICS_PROMPT, check_dynamics, dynamics_all, dynamics_dir
@@ -281,10 +279,6 @@ def run_summaries(
             print(
                 f"note: {version}: no session has safety pain point(s) {missing}; check the mapping"
             )
-        topics = sorted({c["label"] for r in rows for c in r["main_topics"]})
-        ungrouped = [t for t in topics if topic_groups([t]) == [UNGROUPED]]
-        if ungrouped:
-            print(f"note: {version}: topics in no TOPIC_GROUPS group: {ungrouped}")
         dyn = load_dynamics(records, labels_dir, version)
         if dyn is None:
             print(f"note: no complete cached dynamics for {version}; skipping those tables")

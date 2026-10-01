@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-09-30T14:31:06+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking what POTS means and continued asking how it relates to symptoms, long COVID, and management.",
+        "relevance": "strong",
+        "topic": "POTS understanding"
+      },
+      {
+        "reason": "The user described a pounding heart, dizziness, lightheadedness, and spotty vision when standing.",
+        "relevance": "medium",
+        "topic": "orthostatic symptoms"
+      },
+      {
+        "reason": "The user directly asked whether POTS meant their heart was damaged and later said the explanation eased that fear.",
+        "relevance": "medium",
+        "topic": "heart damage fear"
+      },
+      {
+        "reason": "The user asked why POTS followed long COVID after previously being healthy and active.",
+        "relevance": "medium",
+        "topic": "post-COVID POTS cause"
+      },
+      {
+        "reason": "The user asked whether POTS could be permanent or whether people improve.",
+        "relevance": "medium",
+        "topic": "POTS prognosis"
+      },
+      {
+        "reason": "The user asked what they could do, asked about salt, and wrote down several practical strategies.",
+        "relevance": "strong",
+        "topic": "POTS self-management"
+      },
+      {
+        "reason": "The user worried exercise could worsen symptoms and described crashing for days after exertion; they also shared feeling they had failed when exercise advice backfired.",
+        "relevance": "medium",
+        "topic": "exercise intolerance"
+      },
+      {
+        "reason": "The user asked whether they should be taking medication after their doctor had not prescribed any.",
+        "relevance": "medium",
+        "topic": "POTS medications"
+      },
+      {
+        "reason": "The user asked what they could do during an episode of heart racing because it felt scary.",
+        "relevance": "medium",
+        "topic": "acute racing heart coping"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user wanted to understand a POTS diagnosis following long COVID, including whether it meant heart damage, whether it might improve, and what management options were available. The assistant explained the condition, discussed self-management and medication questions, and addressed the user's concern that exercise triggers prolonged crashes. The user said they felt less panicked, understood that the explanation described a signalling problem rather than heart damage, and found the practical advice useful."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5459,
+    "output_tokens": 947
+  },
+  "version": "gpt_luna"
+}

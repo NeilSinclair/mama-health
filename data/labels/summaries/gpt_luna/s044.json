@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:32:04+00:00",
+  "created_at": "2026-10-01T15:07:37+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,62 +7,53 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user described severe nausea after the weekly dose and repeatedly explored ways to manage it.",
+        "reason": "The user described severe nausea after the weekly dose and returned to ways to make it manageable.",
         "relevance": "strong",
-        "topic": "methotrexate-related nausea"
+        "topic": "methotrexate-related nausea",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user opened by asking whether to quit and later asked whether to continue until the upcoming appointment.",
+        "reason": "The user opened by asking whether to quit, then explored alternatives because the medicine helps their hands.",
         "relevance": "strong",
-        "topic": "methotrexate continuation"
+        "topic": "whether to stop methotrexate",
+        "topic_group": "Treatment choice"
       },
       {
         "reason": "The user asked whether taking folic acid on the methotrexate day was a problem and agreed to change the timing.",
         "relevance": "medium",
-        "topic": "folic acid timing"
+        "topic": "folic acid timing",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked whether injections could make a difference and whether they could try other options first.",
+        "reason": "The user asked whether injections could help and discussed feeling scared to inject themselves.",
         "relevance": "medium",
-        "topic": "injectable methotrexate"
+        "topic": "injectable methotrexate",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked whether an anti-nausea medicine could be taken with methotrexate.",
+        "reason": "The user asked whether an anti-nausea medicine could be taken safely with methotrexate.",
         "relevance": "medium",
-        "topic": "anti-nausea medication"
+        "topic": "anti-nausea medication safety",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user said they were a little scared of injecting themselves, then said the explanation was reassuring.",
-        "relevance": "low",
-        "topic": "self-injection fear"
-      },
-      {
-        "reason": "The user included splitting the dose among the options to raise with the doctor but did not discuss it further.",
-        "relevance": "low",
-        "topic": "methotrexate dose splitting"
-      },
-      {
-        "reason": "The user mentioned that methotrexate had helped their hands as context for wanting to avoid stopping it.",
-        "relevance": "low",
-        "topic": "joint improvement"
-      },
-      {
-        "reason": "The user asked what to say at the appointment so they would remember the options and accepted a suggested note.",
-        "relevance": "low",
-        "topic": "doctor visit preparation"
+        "reason": "The user asked what to tell the doctor so they would remember the options, and accepted a suggested note.",
+        "relevance": "medium",
+        "topic": "appointment preparation",
+        "topic_group": "Working with clinicians"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user asked whether to stop methotrexate because of severe nausea after the weekly dose, despite improvement in their hands. The assistant discussed folic acid timing, dose splitting, injections, and anti-nausea medication, and helped prepare questions for the doctor; the user said they felt much better and planned to continue as prescribed until the appointment while trying the suggested changes."
+    "summary": "The user considered stopping weekly methotrexate because of severe nausea after dosing, despite improved hand symptoms, and asked about alternatives including folic acid timing, dose splitting, injections, and anti-nausea medication. The assistant outlined options and helped prepare questions for the rheumatology visit; the user said they felt much better, planned to move folic acid to Sunday and take the tablets with food, and accepted continuing methotrexate as prescribed until an appointment in about two weeks."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5678,
-    "output_tokens": 1211
+    "input_tokens": 6227,
+    "output_tokens": 1695
   },
   "version": "gpt_luna"
 }

@@ -6,8 +6,6 @@ from fakes import FakeLabeller, fake_respond, fake_summary, topics
 from mama_analysis.consolidate import (
     CONSOLIDATED_FIELDS,
     DISPLAY_NAMES,
-    TOPIC_GROUPS,
-    UNGROUPED,
     apply_mapping,
     consolidate_all,
     field_labels,
@@ -166,20 +164,17 @@ def test_merge_canonicals_leaves_other_fields_alone():
     assert merge_canonicals("main_topics", mapping) == mapping
 
 
-def test_topic_groups_maps_dedupes_and_flags_unknown():
-    assert topic_groups(["pain management", "skin conditions", "cancer risk", "new thing"]) == [
-        "Physical symptoms",
-        "Understanding the condition & outlook",
-        UNGROUPED,
+def test_topic_groups_reads_model_groups_of_strong_topics_by_default():
+    scores = [
+        {"topic_group": "Physical symptoms", "relevance": "strong"},
+        {"topic_group": "Access to care", "relevance": "medium"},
+        {"topic_group": "Physical symptoms", "relevance": "strong"},
+        {"topic_group": "Emotional wellbeing", "relevance": "strong"},
     ]
-
-
-def test_topic_groups_are_disjoint_and_cover_the_committed_vocabulary():
-    import json
-    from pathlib import Path
-
-    grouped = [t for topics in TOPIC_GROUPS.values() for t in topics]
-    assert len(grouped) == len(set(grouped))
-    path = Path(__file__).resolve().parents[1] / "data/labels/mappings/gpt_luna/main_topics.json"
-    canonical = set(json.loads(path.read_text())["output"]["mapping"].values())
-    assert canonical == set(grouped)
+    assert topic_groups(scores) == ["Physical symptoms", "Emotional wellbeing"]
+    assert topic_groups(scores, relevance=None) == [
+        "Physical symptoms",
+        "Access to care",
+        "Emotional wellbeing",
+    ]
+    assert topic_groups([]) == []

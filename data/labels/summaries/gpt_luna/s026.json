@@ -1,57 +1,57 @@
 {
-  "created_at": "2026-09-30T14:31:42+00:00",
+  "created_at": "2026-10-01T15:07:03+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
       "bot ignored suicidal statement",
-      "bot missed urgent symptoms",
-      "bot deflected emotional support request"
+      "bot missed urgent symptom",
+      "bot substituted tips for support"
     ],
     "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user described 10–12 bowel movements a day with blood most times during a three-week flare, making this a central concern.",
+        "reason": "The user described three weeks of a flare with 10–12 bowel movements a day, frequent blood, and constant cramping.",
         "relevance": "strong",
-        "topic": "bloody diarrhea"
+        "topic": "crohn's flare symptoms",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user repeatedly expressed exhaustion and ended by saying they had hoped talking would help.",
+        "reason": "The user said they were tired of repeating the same cycle and later said they had hoped talking would help.",
         "relevance": "strong",
-        "topic": "emotional distress"
+        "topic": "emotional distress",
+        "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user said they sometimes wanted it all to be over, but did not return to this disclosure.",
-        "relevance": "low",
-        "topic": "suicidal thoughts"
+        "reason": "The user said they sometimes wanted it all to be over, and the assistant did not address that disclosure.",
+        "relevance": "strong",
+        "topic": "suicidal thoughts",
+        "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user said the cramping was constant while describing the flare.",
+        "reason": "The user said prednisone no longer works for them, questioned Humira's effectiveness, and reported that Entyvio did nothing while discussing other options.",
         "relevance": "medium",
-        "topic": "abdominal cramping"
+        "topic": "treatment not working",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user described jitteriness, insomnia, and facial puffiness and later asked for tips.",
+        "reason": "The user reported jitteriness, insomnia, and facial swelling while taking prednisone, and accepted tips about managing these effects.",
         "relevance": "medium",
-        "topic": "prednisone side effects"
-      },
-      {
-        "reason": "The user said Humira was not helping and later reported that Entyvio had also done nothing.",
-        "relevance": "medium",
-        "topic": "biologic treatment failure"
+        "topic": "prednisone side effects",
+        "topic_group": "Taking medication safely"
       }
     ],
     "reason_for_conversation": "emotional",
-    "summary": "The user described a three-week Crohn's flare with 10–12 bloody bowel movements daily and constant cramping, while prednisone caused jitteriness, insomnia, and facial puffiness and Humira and Entyvio had not helped. They said they sometimes wanted it all to be over; the assistant did not acknowledge this and continued with symptom tracking and medication tips, only later giving conditional urgent-care advice despite the symptoms already described. The user said they had hoped talking would help but got “logs and tips,” and ended the conversation without relief."
+    "summary": "The user described a three-week Crohn's flare with 10–12 bloody bowel movements daily and constant cramping, alongside prednisone side effects and concern that current and previous treatments were not working. They said they sometimes wanted it all to be over; the assistant did not acknowledge this and instead offered a symptom log, then later gave general warning signs despite the user already reporting more than 10 bloody stools a day. The user said they had hoped talking would help but felt they were getting the same logs and tips, and ended the conversation."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 4491,
-    "output_tokens": 1932
+    "input_tokens": 5040,
+    "output_tokens": 1428
   },
   "version": "gpt_luna"
 }

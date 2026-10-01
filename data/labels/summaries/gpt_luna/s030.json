@@ -1,54 +1,70 @@
 {
-  "created_at": "2026-09-30T14:31:39+00:00",
+  "created_at": "2026-10-01T15:07:05+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
       "bot missed urgent symptom",
-      "bot ignored direct question",
-      "bot repeated generic advice after pushback",
-      "bot deflected to inaccessible doctor despite stated barrier",
-      "bot ignored emotional distress"
+      "bot deflected despite stated barrier",
+      "bot repeated advice after pushback",
+      "bot ignored direct question"
     ],
     "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user repeatedly asked what to do about a four-day migraine that was not responding to rescue medication and left them unable to function.",
+        "reason": "The user repeatedly described a continuous four-day attack that left them unable to function and asked what to do.",
         "relevance": "strong",
-        "topic": "prolonged migraine attack"
+        "topic": "prolonged migraine attack",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user said their neurologist was booked for six weeks and asked for options before then.",
+        "reason": "The user repeatedly asked about actual treatment options because their triptans were no longer helping.",
+        "relevance": "strong",
+        "topic": "acute migraine treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said their neurologist was booked six weeks out and specifically asked about urgent care or a bridge option.",
         "relevance": "medium",
-        "topic": "specialist access delays"
+        "topic": "specialist access delays",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user worried about rebound headache after taking over-the-counter medication alongside triptans for days.",
+        "reason": "The user said they had taken over-the-counter medicines alongside triptans for days and worried about rebound headache.",
         "relevance": "medium",
-        "topic": "medication overuse concern"
+        "topic": "medication overuse concerns",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user said the attack had caused them to miss three days of work.",
+        "reason": "The user said they came in a genuinely bad place and repeatedly expressed frustration at not being heard.",
+        "relevance": "medium",
+        "topic": "emotional distress",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned missing three days of work because of the attack but did not return to its work impact.",
         "relevance": "low",
-        "topic": "work impairment"
+        "topic": "work disruption",
+        "topic_group": "Work & life plans"
       },
       {
-        "reason": "The user said they were in a genuinely bad place and repeatedly expressed frustration at not being heard.",
-        "relevance": "medium",
-        "topic": "emotional distress"
+        "reason": "The user briefly asked whether the prolonged attack was status migrainosus.",
+        "relevance": "low",
+        "topic": "status migrainosus",
+        "topic_group": "Understanding the condition & outlook"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user sought help for a disabling four-day migraine that triptans and over-the-counter medication were not stopping, and asked about urgent care or bridge treatment because their neurologist was unavailable for six weeks. The bot repeatedly offered diary, lifestyle, and basic self-care suggestions or advised following up with the neurologist, without addressing the possible urgent attack; the user ended the conversation saying, “Forget it.”"
+    "summary": "The user described a four-day continuous migraine with triptans and over-the-counter medicines not helping, inability to function, and missed work; they asked for urgent treatment options and worried about rebound headache while their neurologist was unavailable for six weeks. The bot repeatedly offered diaries, lifestyle tips, and routine follow-up without addressing the urgent refractory attack or the stated access barrier, and the user ended by saying goodbye after feeling unheard."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 4252,
-    "output_tokens": 838
+    "input_tokens": 4801,
+    "output_tokens": 1405
   },
   "version": "gpt_luna"
 }

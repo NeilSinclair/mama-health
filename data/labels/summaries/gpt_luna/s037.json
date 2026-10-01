@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:54+00:00",
+  "created_at": "2026-10-01T15:07:19+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,67 +7,59 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened with urgency as the main problem, described having almost no warning, and returned to its effects and coping strategies.",
+        "reason": "The user described sudden urgency, frequent bowel movements, and occasional blood as the main problem affecting daily life.",
         "relevance": "strong",
-        "topic": "bowel urgency"
+        "topic": "bowel urgency and bleeding",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user said appointments were hard to get and asked specifically how to get a gastroenterology appointment faster.",
+        "reason": "The user said appointments were hard to get and specifically asked how to get a gastroenterology appointment faster.",
         "relevance": "strong",
-        "topic": "specialist access"
+        "topic": "specialist access and wait times",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user described embarrassment and feeling ashamed, then said they felt able to act after discussing it.",
+        "reason": "The user asked what to ask the doctor about and explored whether adding rectal mesalamine could help.",
         "relevance": "medium",
-        "topic": "shame about symptoms"
+        "topic": "treatment escalation options",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user said urgency interfered with work and caring for their children and feared an accident in meetings.",
+        "reason": "The user said urgency affected their job and caring for their children, and asked how to cope during work meetings.",
         "relevance": "medium",
-        "topic": "daily life disruption"
+        "topic": "work and caregiving impact",
+        "topic_group": "Work & life plans"
       },
       {
-        "reason": "The user reported occasional small amounts of blood while discussing their symptoms.",
+        "reason": "The user asked whether a calprotectin test could show inflammation without a colonoscopy.",
         "relevance": "medium",
-        "topic": "rectal bleeding"
+        "topic": "fecal inflammation testing",
+        "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user reported going six or seven times a day, sometimes more, but did not return to frequency separately from urgency.",
+        "reason": "The user described embarrassment and later anger about having thought the symptoms were normal, then said they felt able to act.",
         "relevance": "medium",
-        "topic": "bowel frequency"
+        "topic": "emotional distress",
+        "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user described taking mesalamine tablets and asked whether adding rectal treatment could help urgency.",
+        "reason": "The user said they had loperamide at home and had considered taking it, then agreed to ask a doctor first.",
         "relevance": "medium",
-        "topic": "mesalamine treatment"
-      },
-      {
-        "reason": "The user asked whether fecal calprotectin could show inflammation without a colonoscopy.",
-        "relevance": "medium",
-        "topic": "inflammation testing"
-      },
-      {
-        "reason": "The user said they had loperamide at home and planned to check with a doctor before taking it.",
-        "relevance": "medium",
-        "topic": "loperamide use"
-      },
-      {
-        "reason": "The user asked for ways to cope with urgency at work, especially during meetings.",
-        "relevance": "medium",
-        "topic": "workplace coping"
+        "topic": "loperamide safety",
+        "topic_group": "Taking medication safely"
       }
     ],
-    "reason_for_conversation": "access",
-    "summary": "The user described ulcerative colitis urgency, occasional blood, and disruption to work and family life while taking mesalamine tablets. The assistant outlined questions for a specialist, referral and testing options, and interim coping steps; the user ended feeling less ashamed and able to act. The user said they would ask a doctor before using loperamide."
+    "reason_for_conversation": "informational",
+    "summary": "The user described ulcerative colitis symptoms including sudden urgency, frequent bowel movements, and occasional blood, which affected work and caregiving and had caused shame. The assistant discussed treatment options, specialist access, testing, and practical coping; the user ended by saying they felt able to take action and had a plan."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5917,
-    "output_tokens": 1427
+    "input_tokens": 6466,
+    "output_tokens": 1309
   },
   "version": "gpt_luna"
 }

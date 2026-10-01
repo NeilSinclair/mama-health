@@ -185,13 +185,30 @@ def test_topic_group_counts_per_session_with_member_topics():
     def chips(*xs):
         return [{"label": x, "raw": [x]} for x in xs]
 
+    def scores(*items):
+        return [{"label": lab, "topic_group": g, "relevance": rel} for lab, g, rel in items]
+
     rows = [
-        {"session_id": "a", "main_topics": chips("pain management", "skin conditions")},
-        {"session_id": "b", "main_topics": chips("pain management", "new thing")},
-        {"session_id": "c", "main_topics": []},
+        {
+            "session_id": "a",
+            "topic_scores": scores(
+                ("pain management", "Physical symptoms", "strong"),
+                ("skin conditions", "Physical symptoms", "strong"),
+                ("diet", "Fatigue, sleep, diet & activity", "medium"),
+            ),
+        },
+        {
+            "session_id": "b",
+            "topic_scores": scores(
+                ("pain management", "Physical symptoms", "strong"),
+                ("care cost", "Access to care", "strong"),
+            ),
+        },
+        {"session_id": "c", "topic_scores": []},
     ]
     df = topic_group_counts(rows)
-    assert df["topic_group"].tolist() == ["Physical symptoms", "(ungrouped)"]
+    # Medium topics don't count; only the model's groups of strong topics.
+    assert df["topic_group"].tolist() == ["Physical symptoms", "Access to care"]
     first = df.iloc[0]
     assert (first["n_sessions"], first["session_ids"]) == (2, "a,b")
     assert first["topics"] == "pain management; skin conditions"
@@ -201,17 +218,19 @@ def test_pain_point_list_ranks_pain_points_with_where():
     def chips(*xs):
         return [{"label": x, "raw": [x]} for x in xs]
 
-    def row(sid, topics, disease, pains):
+    def row(sid, groups, disease, pains):
         return {
             "session_id": sid,
-            "main_topics": chips(*topics),
+            "topic_scores": [{"topic_group": g, "relevance": "strong"} for g in groups],
             "disease": disease,
             "conversation_pain_points": chips(*pains),
         }
 
     rows = [
-        row("a", ["pain management", "cancer risk"], "ibs", ["p1", "p2"]),
-        row("b", ["skin conditions"], "type_2_diabetes", ["p1"]),
+        row(
+            "a", ["Physical symptoms", "Understanding the condition & outlook"], "ibs", ["p1", "p2"]
+        ),
+        row("b", ["Physical symptoms"], "type_2_diabetes", ["p1"]),
         row("c", [], "pcos", []),
     ]
     df = pain_point_list(rows).set_index("pain_point")
@@ -226,7 +245,7 @@ def test_pain_point_list_ranks_pain_points_with_where():
 
 def test_pain_point_list_keeps_columns_when_no_pain_points():
     rows = [
-        {"session_id": "a", "main_topics": [], "disease": "ibs", "conversation_pain_points": []}
+        {"session_id": "a", "topic_scores": [], "disease": "ibs", "conversation_pain_points": []}
     ]
     df = pain_point_list(rows)
     assert df.empty and list(df.columns) == [

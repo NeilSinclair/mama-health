@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:24+00:00",
+  "created_at": "2026-10-01T15:06:53+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,37 +7,47 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came wanting a clearer understanding of cancer risk with long-standing ulcerative colitis and asked what raises or lowers it.",
+        "reason": "The user wanted to understand what raises or lowers cancer risk in long-standing, left-sided ulcerative colitis.",
         "relevance": "strong",
-        "topic": "colorectal cancer risk"
+        "topic": "colorectal cancer risk factors",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked when monitoring should begin, how often it occurs, what determines the interval, and whether surveillance differs from prior colonoscopies.",
+        "reason": "The user asked when monitoring should start, how often it is repeated, and whether surveillance colonoscopy differs from a routine scope.",
         "relevance": "strong",
-        "topic": "colonoscopy surveillance"
+        "topic": "surveillance colonoscopy",
+        "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user asked whether mesalamine affects cancer risk and disclosed sometimes wondering whether to continue it when feeling well.",
+        "reason": "The user asked whether mesalamine affects cancer risk and mentioned wondering whether they still need it when feeling well.",
         "relevance": "medium",
-        "topic": "mesalamine maintenance"
+        "topic": "mesalamine maintenance",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked once whether lifestyle or other actions could affect risk and accepted the response as sensible.",
+        "reason": "The user asked whether lifestyle or other actions could affect risk and received discussion of diet, smoking, alcohol, and activity.",
+        "relevance": "medium",
+        "topic": "lifestyle cancer prevention",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user appreciated a specific question to bring to the gastroenterologist and said they felt better equipped for that conversation.",
         "relevance": "low",
-        "topic": "lifestyle cancer prevention"
+        "topic": "gastroenterology discussion",
+        "topic_group": "Working with clinicians"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user, whose ulcerative colitis has been stable on mesalamine for about nine years, wanted to understand colorectal cancer risk and surveillance. The assistant discussed risk factors, colonoscopy timing and intervals, surveillance technique, mesalamine, and lifestyle; the user said they felt better equipped to discuss a plan with their gastroenterologist."
+    "summary": "The user, who has had stable ulcerative colitis for about nine years while taking mesalamine, asked about colorectal cancer risk and surveillance. The assistant discussed risk factors, colonoscopy timing and technique, mesalamine, and lifestyle; the user said they felt better equipped to discuss monitoring with their gastroenterologist."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5199,
-    "output_tokens": 655
+    "input_tokens": 5748,
+    "output_tokens": 824
   },
   "version": "gpt_luna"
 }

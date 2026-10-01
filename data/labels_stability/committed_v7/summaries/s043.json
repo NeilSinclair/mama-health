@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-09-30T14:32:05+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored emotional distress"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly described devastation over how illness had changed their life and explicitly said they wanted to be heard.",
+        "relevance": "strong",
+        "topic": "emotional grief"
+      },
+      {
+        "reason": "The user returned several times to grieving the loss of the dream of having children.",
+        "relevance": "medium",
+        "topic": "fertility grief"
+      },
+      {
+        "reason": "The user repeatedly said the marriage was barely holding on and might not survive the illness and surgery.",
+        "relevance": "medium",
+        "topic": "marital strain"
+      },
+      {
+        "reason": "The user said they could not work, as part of describing the losses caused by the illness.",
+        "relevance": "low",
+        "topic": "work impact"
+      },
+      {
+        "reason": "The user said they had endometriosis for twelve years and had just been told they needed a fourth surgery.",
+        "relevance": "medium",
+        "topic": "endometriosis surgery"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "After being told they need a fourth surgery for endometriosis, the user described grief over fertility, a failing marriage, work, and lost life plans, and said they wanted to be heard. The assistant repeatedly responded with surgery-preparation and recovery tips despite the user's direct corrections and requests for acknowledgment. The user ended the conversation feeling unheard and said goodbye."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4604,
+    "output_tokens": 1675
+  },
+  "version": "gpt_luna"
+}

@@ -58,7 +58,7 @@ def memo_breakdown(rows: list[dict[str, Any]]) -> dict[str, Any]:
     Returns:
         ``{"fields", "rows"}``; each row has ``session_id``, ``summary`` and, per field in
         ``BREAKDOWN_FIELDS``, a list of labels (topic groups of the strong topics, via
-        ``consolidate.TOPIC_GROUPS``; disease in display form).
+        the model's ``topic_group``; disease in display form).
     """
     return {
         "fields": list(BREAKDOWN_FIELDS),
@@ -70,7 +70,7 @@ def memo_breakdown(rows: list[dict[str, Any]]) -> dict[str, Any]:
                     f: [c["label"] for c in r[f]]
                     for f in ("reason_for_conversation", "conversation_pain_points", "end_reason")
                 },
-                "topic_group": topic_groups([c["label"] for c in r["main_topics"]]),
+                "topic_group": topic_groups(r["topic_scores"]),
                 "disease": [pretty(r["disease"])],
             }
             for r in rows

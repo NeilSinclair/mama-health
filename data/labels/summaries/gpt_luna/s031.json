@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:45+00:00",
+  "created_at": "2026-10-01T15:07:10+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,47 +7,59 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user repeatedly weighed starting metformin against trying lifestyle changes first and accepted a monitored trial with a follow-up A1c.",
+        "reason": "The user asked whether to defer metformin and try lifestyle changes first, then accepted a monitored three-month trial.",
         "relevance": "strong",
-        "topic": "metformin decision"
+        "topic": "starting medication",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked whether delaying medication could cause eye or kidney damage and sought reassurance about that risk.",
+        "reason": "The user asked about managing rice, chapati, and festival sweets and engaged with several food suggestions.",
         "relevance": "medium",
-        "topic": "diabetes complications"
+        "topic": "diet changes",
+        "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user discussed rice, chapati, vegetarian meals, and difficulty declining sweets over several turns.",
+        "reason": "The user explained that knee problems rule out running and gym exercise, then asked about when to walk after meals and said slow indoor walking was manageable.",
         "relevance": "medium",
-        "topic": "diet changes"
+        "topic": "exercise limitations",
+        "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user explained that knee problems limit exercise and asked about walking after meals, then said slow walking was manageable.",
+        "reason": "The user asked whether to use a home glucose meter during the trial and discussed the planned follow-up blood test.",
         "relevance": "medium",
-        "topic": "knee-limited exercise"
+        "topic": "blood sugar monitoring",
+        "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user asked whether to check sugar at home during the trial and mentioned looking for a family member's old meter.",
+        "reason": "The user asked whether delaying medication could damage the eyes and kidneys after hearing this concern from her husband.",
         "relevance": "medium",
-        "topic": "home glucose testing"
+        "topic": "diabetes complications",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user mentioned diabetes in their mother and their sister's improvement after walking and losing weight as context for their decision.",
+        "reason": "The user asked whether lifestyle changes could normalize blood sugar, citing her sister's experience.",
+        "relevance": "medium",
+        "topic": "diabetes remission",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user mentioned her mother's diabetes as context for her doctor's concern but did not return to it.",
         "relevance": "low",
-        "topic": "family diabetes history"
+        "topic": "family diabetes history",
+        "topic_group": "Understanding the condition & outlook"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user asked whether to try diet and exercise before starting metformin for type 2 diabetes, and raised concerns about complications, knee-limited exercise, food choices, and glucose monitoring. The assistant proposed a monitored three-month lifestyle trial with a repeat A1c; the user said this sounded balanced, planned to tell the doctor, and ended by saying they would think it over and talk with family."
+    "summary": "The user was unsure about starting metformin and wanted to try diet and exercise first, while worrying about complication risk and noting knee limitations. The assistant discussed a monitored three-month lifestyle trial, food and walking changes, and follow-up testing; the user found the plan balanced and said she would tell her doctor and discuss it with family."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5272,
-    "output_tokens": 1464
+    "input_tokens": 5821,
+    "output_tokens": 1447
   },
   "version": "gpt_luna"
 }

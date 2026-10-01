@@ -66,7 +66,7 @@ def test_only_strong_topics_become_chips_but_all_scores_are_mapped(records):
     t = summaries_table(rows).set_index("session_id")
     assert t.loc["s1", "main_topics"] == "insomnia"
     assert t.loc["s1", "topic_scores"].split(" | ")[1] == (
-        "insomnia (trouble sleeping) [medium]: user raised trouble sleeping"
+        "insomnia (trouble sleeping) [medium; Physical symptoms]: user raised trouble sleeping"
     )
 
 
@@ -86,7 +86,6 @@ def test_payload_marks_missing_version_unavailable(records):
         },
     )
     assert [(v["key"], v["available"]) for v in payload["versions"]] == [("a", True), ("b", False)]
-    assert payload["topic_groups"]["pain management"] == "Physical symptoms"
     assert payload["conversations"]["s1"][0] == {
         "turn": 1,
         "role": "user",

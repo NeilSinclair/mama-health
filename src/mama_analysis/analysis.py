@@ -7,7 +7,7 @@ from typing import Any
 
 import pandas as pd
 
-from mama_analysis.consolidate import topic_groups
+from mama_analysis.consolidate import KEPT_RELEVANCE, topic_groups
 from mama_analysis.dynamics import check_dynamics
 from mama_analysis.eda import word_count
 from mama_analysis.schemas import DynamicsLLM
@@ -158,7 +158,7 @@ def pain_point_list(rows: list[dict[str, Any]]) -> pd.DataFrame:
     """
 
     def groups(r: dict[str, Any]) -> list[str]:
-        return topic_groups([c["label"] for c in r["main_topics"]]) or ["(none)"]
+        return topic_groups(r["topic_scores"]) or ["(none)"]
 
     def entry(label: str, subset: list[dict[str, Any]]) -> dict[str, Any]:
         return {
@@ -180,23 +180,23 @@ def pain_point_list(rows: list[dict[str, Any]]) -> pd.DataFrame:
 
 
 def topic_group_counts(rows: list[dict[str, Any]]) -> pd.DataFrame:
-    """Count sessions per topic group (strong topics only), with the topics behind each.
+    """Count sessions per topic group the model filed strong topics in, with their topics.
 
     Args:
         rows: Output of ``explorer.label_rows``.
 
     Returns:
         One row per group with ``topic_group``, ``n_sessions``, comma-joined
-        ``session_ids`` and ``topics`` (the canonical topics seen in it, "; "-joined),
-        sorted by count descending, then group.
+        ``session_ids`` and ``topics`` (the canonical strong topics filed in it,
+        "; "-joined), sorted by count descending, then group.
     """
     sessions: dict[str, list[str]] = {}
     topics: dict[str, set[str]] = {}
     for r in rows:
-        labels = [c["label"] for c in r["main_topics"]]
-        for t in labels:
-            topics.setdefault(topic_groups([t])[0], set()).add(t)
-        for g in topic_groups(labels):
+        for t in r["topic_scores"]:
+            if t["relevance"] == KEPT_RELEVANCE:
+                topics.setdefault(t["topic_group"], set()).add(t["label"])
+        for g in topic_groups(r["topic_scores"]):
             sessions.setdefault(g, []).append(r["session_id"])
     df = pd.DataFrame(
         [

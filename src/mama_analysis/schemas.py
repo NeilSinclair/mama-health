@@ -2,18 +2,35 @@
 
 from __future__ import annotations
 
-from typing import Any, Literal
+from typing import Any, Literal, get_args
 
 from pydantic import BaseModel, Field
 
+# Fixed topic groups (D-047): the model names each topic freely, then files it in one group.
+TopicGroup = Literal[
+    "Physical symptoms",
+    "Treatment choice",
+    "Understanding the condition & outlook",
+    "Fatigue, sleep, diet & activity",
+    "Tests & monitoring",
+    "Access to care",
+    "Taking medication safely",
+    "Work & life plans",
+    "Emotional wellbeing",
+    "Working with clinicians",
+]
+TOPIC_GROUPS: tuple[str, ...] = get_args(TopicGroup)
+
 
 class ScoredTopic(BaseModel):
-    """One topic the user raised, scored for how central it is to the conversation.
+    """One topic the user raised, filed in a topic group and scored for how central it is.
 
-    ``reason`` comes before ``relevance`` so the model justifies the score before giving it.
+    ``topic`` comes before ``topic_group`` so the model names the topic in its own words
+    before filing it; ``reason`` comes before ``relevance`` so it justifies the score first.
     """
 
     topic: str = Field(description="Something the user talks about; a short generic label.")
+    topic_group: TopicGroup = Field(description="The fixed group this topic belongs to.")
     reason: str = Field(
         description="One short sentence, grounded in the transcript, for the score."
     )

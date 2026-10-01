@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:50+00:00",
+  "created_at": "2026-10-01T15:07:16+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,62 +7,71 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user asked whether their symptoms could mean psoriatic arthritis and returned to what it could mean for their health.",
+        "reason": "The user described pain in both hands, morning stiffness, and episodes of whole-finger swelling as the main signs prompting the conversation.",
         "relevance": "strong",
-        "topic": "psoriatic arthritis"
+        "topic": "finger joint pain and swelling",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user described pain in both hands, morning stiffness, and episodes of whole-finger swelling that prompted the conversation.",
+        "reason": "The user asked what psoriatic arthritis is and whether waiting could lead to permanent joint damage.",
         "relevance": "strong",
-        "topic": "finger joint symptoms"
+        "topic": "possible psoriatic arthritis",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user raised nail pitting and lifting at the start and later asked whether treatment could improve the nails.",
+        "reason": "The user described nail pitting and lifting and returned to ask about improving the nail that looked bad.",
         "relevance": "medium",
-        "topic": "nail changes"
+        "topic": "nail changes",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked whether waiting could lead to permanent damage after hearing about protecting the joints.",
+        "reason": "The user asked which doctor to see and said they would request a referral through their health plan.",
         "relevance": "medium",
-        "topic": "joint damage risk"
+        "topic": "rheumatology referral",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user asked which doctor to see and explained that their health plan may require a referral.",
+        "reason": "The user asked what to expect at the appointment because they dislike not knowing what will happen.",
         "relevance": "medium",
-        "topic": "rheumatology referral"
-      },
-      {
-        "reason": "The user asked what would happen during the appointment because they dislike not knowing what to expect.",
-        "relevance": "low",
-        "topic": "rheumatology appointment"
+        "topic": "rheumatology appointment",
+        "topic_group": "Access to care"
       },
       {
         "reason": "The user asked whether a blood test could confirm the suspected condition.",
-        "relevance": "low",
-        "topic": "diagnostic blood tests"
-      },
-      {
-        "reason": "The user asked what they could take for pain and mentioned sometimes taking dipyrone.",
         "relevance": "medium",
-        "topic": "pain relief"
+        "topic": "diagnostic blood tests",
+        "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user mentioned having psoriasis for several years as background to the nail and joint symptoms.",
-        "relevance": "low",
-        "topic": "psoriasis"
+        "reason": "The user asked what they could take for pain and mentioned sometimes using dipyrone.",
+        "relevance": "medium",
+        "topic": "pain relief medication",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether anything could be done for the affected nail and whether arthritis treatment could help it.",
+        "relevance": "medium",
+        "topic": "nail treatment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said the possibility of arthritis and lasting damage scared them, then reported feeling better after understanding the plan.",
+        "relevance": "medium",
+        "topic": "fear about health",
+        "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user described psoriasis, new nail changes, and finger pain with morning stiffness and swelling, and asked whether this could be psoriatic arthritis and whether joint damage could be permanent. The assistant explained that evaluation by a rheumatologist was advisable soon, discussed referral options through the user's Brazilian health plan, and answered questions about the appointment, tests, pain relief, and nails. The user said they felt better and planned to ask for a referral that week."
+    "summary": "The user described psoriasis, nail pitting and lifting, and painful, stiff, sometimes swollen fingers, and asked whether this could be psoriatic arthritis and whether it could cause permanent damage. The assistant explained the suspected condition, referral and appointment process, testing, and symptom and nail treatment; the user said they felt better, understood the possibility, and planned to ask their dermatologist for a referral that week."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 4696,
-    "output_tokens": 1245
+    "input_tokens": 5245,
+    "output_tokens": 1165
   },
   "version": "gpt_luna"
 }

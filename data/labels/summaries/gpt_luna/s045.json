@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:58+00:00",
+  "created_at": "2026-10-01T15:07:41+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,47 +7,47 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened by asking whether a different levothyroxine maker was a concern and returned several times to what the switch meant.",
+        "reason": "The user came to ask whether changing to a different maker of the same dose was something to worry about and what to do.",
         "relevance": "strong",
-        "topic": "medication brand switch"
+        "topic": "levothyroxine brand switch",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked when to recheck TSH, whether a recent result counted, and confirmed the timing for a new test.",
+        "reason": "The user asked why to wait six to eight weeks, whether an earlier TSH result counted, and when to test again.",
         "relevance": "medium",
-        "topic": "thyroid blood test monitoring"
+        "topic": "thyroid test timing",
+        "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user asked what changes to watch for and said they tend to notice coldness and tiredness quickly.",
+        "reason": "The user said they would prefer one brand and discussed asking the doctor and pharmacy whether this could be arranged.",
         "relevance": "medium",
-        "topic": "thyroid symptom monitoring"
+        "topic": "consistent medication brand",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user said they would prefer to stay on one brand to avoid uncertainty and discussed raising this with the pharmacy or doctor.",
+        "reason": "The user said the pharmacy switched brands without explaining the change, which left them annoyed.",
         "relevance": "medium",
-        "topic": "consistent medication brand"
+        "topic": "pharmacy communication",
+        "topic_group": "Working with clinicians"
       },
       {
-        "reason": "The user said they were annoyed that the pharmacy switched the product without explaining the change.",
+        "reason": "The user asked what to watch for and said coldness and tiredness are signs they notice quickly.",
         "relevance": "low",
-        "topic": "pharmacy communication"
-      },
-      {
-        "reason": "The user asked whether to keep taking the medicine exactly as before and accepted guidance to keep the routine consistent.",
-        "relevance": "low",
-        "topic": "medication-taking routine"
+        "topic": "thyroid symptoms",
+        "topic_group": "Physical symptoms"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user asked whether a switch to a different maker of levothyroxine required action, and sought guidance on TSH testing, symptoms to watch for, and whether to keep the same routine. The assistant advised a new TSH test about 6–8 weeks after the switch and discussed asking for brand consistency; the user said the plan was clear and was exactly the kind of answer they wanted."
+    "summary": "The user asked whether a pharmacy’s switch to a different maker of the same levothyroxine dose required action. The assistant explained that the user could keep their routine consistent, watch for symptoms, arrange a TSH test six to eight weeks after the switch, and ask about staying on one brand; the user said this was a clear plan and exactly the answer they wanted."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 0,
     "cache_write_tokens": 0,
-    "input_tokens": 4615,
-    "output_tokens": 786
+    "input_tokens": 5164,
+    "output_tokens": 1234
   },
   "version": "gpt_luna"
 }

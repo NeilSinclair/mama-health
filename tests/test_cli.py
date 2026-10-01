@@ -167,7 +167,12 @@ def test_mapping_that_misses_new_summary_labels_fails_clearly(data_file, tmp_pat
     path = labels / "summaries" / "gpt_luna" / "s1.json"
     entry = json.loads(path.read_text())
     entry["output"]["main_topics"] = [
-        {"topic": "a label no mapping has seen", "reason": "r", "relevance": "strong"}
+        {
+            "topic": "a label no mapping has seen",
+            "topic_group": "Physical symptoms",
+            "reason": "r",
+            "relevance": "strong",
+        }
     ]
     path.write_text(json.dumps(entry))
     with pytest.raises(ValueError, match="run: uv run mama-pipeline --remap gpt_luna"):

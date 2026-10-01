@@ -10,7 +10,7 @@ from typing import Any
 import pandas as pd
 
 from mama_analysis.analysis import is_silent_failure, pushback_status
-from mama_analysis.consolidate import FIELDS, TOPIC_GROUPS, apply_mapping, shown_labels
+from mama_analysis.consolidate import FIELDS, apply_mapping, shown_labels
 from mama_analysis.dynamics import check_dynamics
 from mama_analysis.schemas import DynamicsLLM, SessionSummary
 
@@ -102,14 +102,14 @@ def summaries_table(rows: list[dict[str, Any]]) -> pd.DataFrame:
     Returns:
         DataFrame with metadata, summary and ``issue_resolved``; for each label field a
         canonical column and a ``<field>_raw`` column, lists joined with ``"; "``; and
-        ``topic_scores`` as ``"label (raw topic) [relevance]: reason"`` items joined with
-        ``" | "``.
+        ``topic_scores`` as ``"label (raw topic) [relevance; topic group]: reason"`` items
+        joined with ``" | "``.
     """
     out = []
     for r in rows:
         flat = {k: v for k, v in r.items() if k not in FIELDS}
         flat["topic_scores"] = " | ".join(
-            f"{t['label']} ({t['topic']}) [{t['relevance']}]: {t['reason']}"
+            f"{t['label']} ({t['topic']}) [{t['relevance']}; {t['topic_group']}]: {t['reason']}"
             for t in r["topic_scores"]
         )
         for field in FIELDS:
@@ -230,12 +230,10 @@ def explorer_payload(
             of ``label_rows``, or ``None`` if the version has no complete cached labels.
 
     Returns:
-        ``{"versions": [...], "conversations": {session_id: [{turn, role, text}]},
-        "topic_groups": {canonical topic: group}}`` (``consolidate.TOPIC_GROUPS``, for the
-        Breakdown tab); each available version also carries its ``label_graph``.
+        ``{"versions": [...], "conversations": {session_id: [{turn, role, text}]}}``; each
+        available version also carries its ``label_graph``.
     """
     return {
-        "topic_groups": {t: g for g, topics in TOPIC_GROUPS.items() for t in topics},
         "versions": [
             {
                 "key": key,

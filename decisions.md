@@ -345,3 +345,25 @@ Append-only. Each entry records the decision, its rationale, the alternatives co
 - **Rationale:** The human found the 12-column grid too dense: 27 of 120 cells were non-zero. Coarser pain-point groups were considered and rejected, because grouping hides specific failures with their own fixes (wrong-country advice, claimed actions). The list keeps all 12 pain points and drops the empty cells.
 - **Alternatives considered:** Five fix-based pain-point groups (rejected for the reason above), and keeping the grid with group headings over its columns (organises the cells but doesn't reduce them).
 - **Caveat:** As in D-045: 13 conversations, no pain point above 4, and a conversation can count in several topic groups.
+
+### D-047 — The model files each topic in one of ten fixed topic groups (summary_v8; supersedes D-042's code table)
+- **Date:** 2026-10-01
+- **Decision:**
+  - `ScoredTopic` gains a required `topic_group`, one of ten fixed values (`schemas.TopicGroup`; the D-042 names), and `summary_v8` defines them.
+  - The model names each topic in its own words first and then files it in a group, in the same call. Field order: topic, topic_group, reason, relevance.
+  - Choose by what the user wanted about the subject: a medicine's cost is Access to care, its side effects Taking medication safely, whether to start it Treatment choice. A suicidal statement is always Emotional wellbeing, and an urgent symptom always Physical symptoms.
+  - `consolidate.topic_groups` now reads the model's groups (strong topics by default). The D-042 code table, `UNGROUPED` and the explorer payload's topic → group table are removed.
+  - Free-text topics and their consolidation are unchanged, so the explorer's detailed topics still work.
+  - `summaries.csv`'s `topic_scores` items now include the group.
+- **Rationale:** The human wanted the model, not a code table, to place topics in the groups, and leaned to a two-step "own topics first, then groups". Doing both steps in the one per-conversation call costs nothing extra and keeps the transcript in view when filing. A separate mapping call over bare topic labels can't tell, say, a medicine's cost from its side effects.
+- **Alternatives considered:**
+  - Groups only, with no free-text topic (loses the detail the explorer shows).
+  - A second, separate mapping call from raw topics to the ten groups (cheap, but without conversation context).
+- **How it was run:** a summaries-only relabel (`summarise_all` with `summary_v8`; exact command in NOTES), then `uv run mama-pipeline --remap gpt_luna`. Dynamics labels were not rerun because they don't read summaries. Cost was about $0.05 and runtime about 3 minutes.
+- **Effect on other labels:** a full re-summarise also re-draws every other label, as the stability experiment predicted.
+  - Need met stays at 39/50.
+  - Reason changed in 6 conversations, mostly the understand/decide boundary. Against the stability experiment's 3-run v7 majority, 2 moved towards it (s003, s025) and 4 away from it (s021, s028, s037, s048); s021 and s048 went against all three runs. Four of the six moved towards "understand my condition", which grew from 22 to 26. One run can't show it, but the new "Understanding the condition & outlook" group may be pulling the reason label that way. The stability runs used v7, so the comparison is only indicative.
+  - End reason changed in 3 conversations. s022 is now partial resolution with "bot missed urgent symptom", which agrees with our hand check (NOTES, overrides).
+  - The pain-point vocabulary was re-consolidated from 14 to 10 categories. Wrong-country advice is now named "bot assumed wrong care context" (s018, s042).
+  - The pre-relabel v7 labels are in git history, and the stability experiment keeps a frozen copy in `data/labels_stability/committed_v7/`.
+- **What would change it:** topic groups that the model fills inconsistently between reruns. That is untested for v8; the stability experiment measured v7.

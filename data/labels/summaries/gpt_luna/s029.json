@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:38+00:00",
+  "created_at": "2026-10-01T15:07:05+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,57 +7,71 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user asked how the two conditions relate and which might have come first, making this the central question.",
+        "reason": "The user asked how the two conditions relate and which came first, making this the central question.",
         "relevance": "strong",
-        "topic": "pcos and insulin resistance"
+        "topic": "pcos and insulin resistance",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked why it was suggested without diabetes and then asked about side effects and other options.",
+        "reason": "The user asked why metformin was suggested despite not having diabetes and whether medication was the only option.",
         "relevance": "medium",
-        "topic": "metformin"
+        "topic": "metformin use",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user said the new diagnosis felt overwhelming and later said the explanation helped make it less scary.",
+        "reason": "The user specifically asked about stomach side effects before deciding to start the medication.",
         "relevance": "medium",
-        "topic": "diagnosis-related overwhelm"
+        "topic": "metformin side effects",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user described repeated difficulty losing weight and frustration with hearing weight loss advice in the context of PCOS.",
+        "reason": "The user described repeated attempts to lose weight and frustration that it feels difficult with PCOS.",
         "relevance": "medium",
-        "topic": "weight loss frustration"
+        "topic": "weight loss frustration",
+        "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user asked what diet to follow and whether low-glycemic eating meant avoiding all carbohydrates.",
+        "reason": "The user said the new diagnosis felt overwhelming and later said the explanation made it feel less scary.",
         "relevance": "medium",
-        "topic": "diet for pcos"
+        "topic": "diagnosis overwhelm",
+        "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user asked which exercise helps and said they do not like going to the gym.",
+        "reason": "The user asked what diet to follow and whether lower-glycemic eating meant eliminating carbohydrates.",
         "relevance": "medium",
-        "topic": "exercise preferences"
+        "topic": "pcos diet and carbohydrates",
+        "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user asked whether a glucose monitor would be useful and briefly raised concerns about coverage.",
+        "reason": "The user asked which exercise is best and said they do not enjoy the gym.",
+        "relevance": "medium",
+        "topic": "exercise options",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked whether a continuous glucose monitor would be useful for them.",
         "relevance": "low",
-        "topic": "continuous glucose monitor"
+        "topic": "continuous glucose monitoring",
+        "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user doubted their insurer would cover a glucose monitor for this purpose but did not return to the concern.",
+        "reason": "The user briefly wondered whether their Krankenkasse would cover a monitor.",
         "relevance": "low",
-        "topic": "device coverage"
+        "topic": "monitor coverage",
+        "topic_group": "Access to care"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user felt overwhelmed after being told they had insulin resistance alongside PCOS and asked about how the conditions relate, metformin, and lifestyle options. The assistant explained medication side effects and discussed weight, diet, exercise, and an optional glucose monitor; the user said the explanation helped and chose to start metformin as their doctor suggested and walk more after dinner."
+    "summary": "The user felt overwhelmed by learning they had insulin resistance alongside PCOS and asked how the conditions relate, about metformin, and about lifestyle options including food, exercise, and glucose monitoring. The assistant broke these topics down, acknowledged the user's frustration about weight loss, and the user said the explanation helped; they decided to start metformin as their doctor suggested and try walking more after dinner."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 4833,
-    "output_tokens": 708
+    "input_tokens": 5382,
+    "output_tokens": 1146
   },
   "version": "gpt_luna"
 }

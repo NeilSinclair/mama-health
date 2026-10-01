@@ -75,6 +75,17 @@ Record this as we go. For each item: what the AI did, how we checked it, and whe
   - D-044 now states that it supersedes D-038's "counts, not rates".
 
   Raised with the human, not changed (memo content): the outcome tables count s022 as need met with no note, though our hand check disagrees (D-038); and the draft prose quotes percentages on groups of 3 and 5.
+- **2026-10-01 — Model-assigned topic groups, `summary_v8` (human request, D-047).** The human asked for the LLM, not a code table, to place topics in the ten groups. Opus recommended doing both steps (free topic, then group) in one call; the human had leaned towards two steps. Opus wrote `summary_v8` (v7 plus the group definitions and a tie-break rule), the schema field and the code changes, with tests. Before the relabel, Opus froze the v7 committed labels into `data/labels_stability/committed_v7/` and pinned the stability script to the v7 schema; its results stayed byte-identical. Relabel commands:
+  1. `uv run python -` with: `load_dotenv(".env")`; `asyncio.run(summarise_all(load_sessions(DEFAULT_DATA_PATH), make_labeller("gpt_luna"), load_prompt("summary_v8"), summary_dir(DEFAULT_LABELS_DIR, "gpt_luna")))`. This took 117 s. `load_dotenv()` with no path fails on piped stdin.
+  2. `uv run mama-pipeline --remap gpt_luna` took 72 s.
+
+  Changes against the v7 labels are listed in D-047. **s022 now carries "bot missed urgent symptom" and ends as partial resolution, matching our hand check**, so the s022 override below no longer differs from `outputs/`. The draft memo's percentages predate this relabel.
+- **2026-10-01 — Checks on the `summary_v8` labels and pre-push review (code-reviewer).**
+  - Headless Chrome: the explorer's Breakdown "Topic group" panel matches `topic_groups.csv` exactly (21, 17, 15, 7, 6, 5, 3, 3, 3, 2).
+  - Hand spot-check of strong topics' groups in 12 conversations: all sensible except s019's "urgent care decision", filed under Access to care. We'd file it under Treatment choice (a whether-to-act-now decision). Its symptom is correctly under Physical symptoms. Recorded, not overridden.
+  - Review verdict: ship after fixes. It confirmed provenance, no stale labels, outputs matching a fresh run, and stability results unchanged.
+  - Fixed: the draft memo's percentages were updated to the v8 table (88/82/25/33%, 43 vs 7 conversations), changing only the numbers. D-047 now states that 4 of the 6 reason changes moved away from the v7 stability majority.
+  - Not changed: `schemas.TOPIC_GROUPS` is used only by a test. It is kept as the public list of the ten names.
 
 ## Overrides of AI output
 

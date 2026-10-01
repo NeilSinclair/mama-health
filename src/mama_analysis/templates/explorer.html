@@ -618,12 +618,12 @@ const PANEL_ROWS = 12;
 const breakState = { selected: [], allTopics: false, expanded: new Set() };
 
 // A conversation's labels for one field; "(none)" when a list field is empty. Topic groups
-// (D-042) come from the strong topics, or from every scored topic when the toggle is on.
+// are the model's topic_group (D-047) of the strong topics, or of every topic when the toggle is on.
 function breakValues(row, key) {
   let vals = values(row, key);
   if (key === "topic_group") {
-    const topics = breakState.allTopics ? row.topic_scores.map((t) => t.label) : values(row, "main_topics");
-    vals = [...new Set(topics.map((t) => DATA.topic_groups[t] || "(ungrouped)"))];
+    const scores = row.topic_scores.filter((t) => breakState.allTopics || t.relevance === "strong");
+    vals = [...new Set(scores.map((t) => t.topic_group))];
   }
   return vals.length ? vals : [NONE];
 }

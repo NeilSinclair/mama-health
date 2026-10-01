@@ -23,6 +23,9 @@ def _row(sid, reason, topics, end, disease):
         "session_id": sid,
         "reason_for_conversation": _chips(reason),
         "main_topics": _chips(*topics),
+        "topic_scores": [
+            {"label": t, "topic_group": "Physical symptoms", "relevance": "strong"} for t in topics
+        ],
         "conversation_pain_points": [],
         "end_reason": _chips(end),
         "disease": disease,
@@ -54,7 +57,7 @@ def test_memo_breakdown_flattens_labels_per_conversation():
     assert first["session_id"] == "s1"
     assert first["reason_for_conversation"] == ["decide"]
     assert first["disease"] == ["type 2 diabetes"]
-    assert first["topic_group"] == ["(ungrouped)"]
+    assert first["topic_group"] == ["Physical symptoms"]
     assert set(first) == {"session_id", "summary", *b["fields"]}
 
 

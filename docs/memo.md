@@ -23,9 +23,9 @@ Conversations are grouped into 4 broad categories:
 
 ### Where it is working
 
-The LLM pipeline classified the assistant as generally working where the user has questions relating to understanding their condition (86% needs met) and deciding on their treatment (85% needs met). However, the LLM classified conversations as generally working for questions around getting access to care (40% needs met) and emotional support (33% needs met) much less frequently. 
+The LLM pipeline classified the assistant as generally working where the user has questions relating to understanding their condition (88% needs met) and deciding on their treatment (82% needs met). However, the LLM classified conversations as generally working for questions around getting access to care (25% needs met) and emotional support (33% needs met) much less frequently. 
 
-As a caveat, it should be noted that 42 (84%) of the conversations fall into the first two categories, therefore the results for the second two categories comprising only 8 conversations (16%) should be taken with caution. 
+As a caveat, it should be noted that 43 (86%) of the conversations fall into the first two categories, therefore the results for the second two categories comprising only 7 conversations (14%) should be taken with caution. 
 
 These results show that the assistant is generally good with helping users to understand their condition and decide on thie treatment, but is not working as well with helping users get access to care and providing emotional support in charged situations.
 

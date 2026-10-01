@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-09-30T14:32:04+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described severe nausea after the weekly dose and repeatedly explored ways to manage it.",
+        "relevance": "strong",
+        "topic": "methotrexate-related nausea"
+      },
+      {
+        "reason": "The user opened by asking whether to quit and later asked whether to continue until the upcoming appointment.",
+        "relevance": "strong",
+        "topic": "methotrexate continuation"
+      },
+      {
+        "reason": "The user asked whether taking folic acid on the methotrexate day was a problem and agreed to change the timing.",
+        "relevance": "medium",
+        "topic": "folic acid timing"
+      },
+      {
+        "reason": "The user asked whether injections could make a difference and whether they could try other options first.",
+        "relevance": "medium",
+        "topic": "injectable methotrexate"
+      },
+      {
+        "reason": "The user asked whether an anti-nausea medicine could be taken with methotrexate.",
+        "relevance": "medium",
+        "topic": "anti-nausea medication"
+      },
+      {
+        "reason": "The user said they were a little scared of injecting themselves, then said the explanation was reassuring.",
+        "relevance": "low",
+        "topic": "self-injection fear"
+      },
+      {
+        "reason": "The user included splitting the dose among the options to raise with the doctor but did not discuss it further.",
+        "relevance": "low",
+        "topic": "methotrexate dose splitting"
+      },
+      {
+        "reason": "The user mentioned that methotrexate had helped their hands as context for wanting to avoid stopping it.",
+        "relevance": "low",
+        "topic": "joint improvement"
+      },
+      {
+        "reason": "The user asked what to say at the appointment so they would remember the options and accepted a suggested note.",
+        "relevance": "low",
+        "topic": "doctor visit preparation"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether to stop methotrexate because of severe nausea after the weekly dose, despite improvement in their hands. The assistant discussed folic acid timing, dose splitting, injections, and anti-nausea medication, and helped prepare questions for the doctor; the user said they felt much better and planned to continue as prescribed until the appointment while trying the suggested changes."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 5678,
+    "output_tokens": 1211
+  },
+  "version": "gpt_luna"
+}

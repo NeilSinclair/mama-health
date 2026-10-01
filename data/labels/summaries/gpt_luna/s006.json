@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:31:06+00:00",
+  "created_at": "2026-10-01T15:06:34+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,62 +7,77 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened by asking what POTS means and continued asking how it relates to symptoms, long COVID, and management.",
+        "reason": "The user opened by asking what POTS means and engaged with the explanation of how it relates to their symptoms.",
         "relevance": "strong",
-        "topic": "POTS understanding"
+        "topic": "POTS explanation",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user described a pounding heart, dizziness, lightheadedness, and spotty vision when standing.",
-        "relevance": "medium",
-        "topic": "orthostatic symptoms"
-      },
-      {
-        "reason": "The user directly asked whether POTS meant their heart was damaged and later said the explanation eased that fear.",
-        "relevance": "medium",
-        "topic": "heart damage fear"
-      },
-      {
-        "reason": "The user asked why POTS followed long COVID after previously being healthy and active.",
-        "relevance": "medium",
-        "topic": "post-COVID POTS cause"
-      },
-      {
-        "reason": "The user asked whether POTS could be permanent or whether people improve.",
-        "relevance": "medium",
-        "topic": "POTS prognosis"
-      },
-      {
-        "reason": "The user asked what they could do, asked about salt, and wrote down several practical strategies.",
+        "reason": "The user asked why POTS followed long COVID and whether it would be permanent.",
         "relevance": "strong",
-        "topic": "POTS self-management"
+        "topic": "post-viral cause and outlook",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user worried exercise could worsen symptoms and described crashing for days after exertion; they also shared feeling they had failed when exercise advice backfired.",
+        "reason": "The user described a pounding heart, dizziness, lightheadedness and spotty vision when standing.",
         "relevance": "medium",
-        "topic": "exercise intolerance"
+        "topic": "standing-related symptoms",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked whether they should be taking medication after their doctor had not prescribed any.",
+        "reason": "The user directly asked whether POTS meant their heart was damaged and said the reassurance helped.",
         "relevance": "medium",
-        "topic": "POTS medications"
+        "topic": "heart damage concerns",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked what they could do during an episode of heart racing because it felt scary.",
+        "reason": "The user asked what they could do and requested more options to write down, including salt, fluids and compression.",
+        "relevance": "strong",
+        "topic": "non-drug management",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user explained that exertion leads to crashes lasting days and asked how to approach exercise safely.",
         "relevance": "medium",
-        "topic": "acute racing heart coping"
+        "topic": "exercise intolerance",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user said previous exercise advice had backfired and made them feel as if they were failing, and responded positively to reassurance.",
+        "relevance": "medium",
+        "topic": "exercise-related self-blame",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked whether they should be on medication and accepted a question to raise with their doctor.",
+        "relevance": "medium",
+        "topic": "medication options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked what they could do in the moment to make heart racing after standing stop faster.",
+        "relevance": "medium",
+        "topic": "acute symptom management",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said the doctor explained the diagnosis quickly and they did not understand it at the appointment.",
+        "relevance": "low",
+        "topic": "rushed appointment",
+        "topic_group": "Working with clinicians"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user wanted to understand a POTS diagnosis following long COVID, including whether it meant heart damage, whether it might improve, and what management options were available. The assistant explained the condition, discussed self-management and medication questions, and addressed the user's concern that exercise triggers prolonged crashes. The user said they felt less panicked, understood that the explanation described a signalling problem rather than heart damage, and found the practical advice useful."
+    "summary": "The user wanted to understand a POTS diagnosis after four months of long COVID, including its cause, outlook and relationship to their heart-racing and dizziness when standing. The assistant explained the condition and discussed general management, while acknowledging that exercise advice needs caution given the user's crashes after exertion; it also suggested questions for the doctor about individualized guidance. The user said they felt less panicked, understood what POTS meant and found the practical information useful."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5459,
-    "output_tokens": 947
+    "input_tokens": 6008,
+    "output_tokens": 2195
   },
   "version": "gpt_luna"
 }

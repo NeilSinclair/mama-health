@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-09-30T14:31:07+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether tirzepatide would be covered in France because they could not afford the full price, and said the answer relieved their concern.",
+        "relevance": "strong",
+        "topic": "medication affordability"
+      },
+      {
+        "reason": "The user asked about adding or switching to tirzepatide and sought practical information about taking it and its effects.",
+        "relevance": "medium",
+        "topic": "tirzepatide treatment"
+      },
+      {
+        "reason": "The user said their A1C remained high while taking metformin, which framed their interest in another treatment.",
+        "relevance": "medium",
+        "topic": "high blood sugar"
+      },
+      {
+        "reason": "The user mentioned gaining weight since diagnosis, said they disliked it, and asked whether tirzepatide could help.",
+        "relevance": "medium",
+        "topic": "weight gain"
+      },
+      {
+        "reason": "The user said self-injection made them nervous, then said the explanation made it sound less daunting.",
+        "relevance": "low",
+        "topic": "injection anxiety"
+      },
+      {
+        "reason": "The user asked what side effects to watch for and received information about common effects and a rare serious symptom.",
+        "relevance": "low",
+        "topic": "medication side effects"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "The user with type 2 diabetes and a high A1C on metformin asked whether tirzepatide was approved and reimbursed in France, emphasizing that they could not afford full-price treatment. The assistant repeatedly assured them it was covered and also explained injection use, side effects, and possible weight effects; the user felt reassured and planned to book with their doctor."
+  },
+  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
+  "prompt_version": "summary_v7",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 3332,
+    "cache_write_tokens": 0,
+    "input_tokens": 4554,
+    "output_tokens": 1045
+  },
+  "version": "gpt_luna"
+}

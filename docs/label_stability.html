@@ -69,6 +69,8 @@
     <p class="sub">We ran GPT Luna's summary stage three more times over all 50 conversations, using the same model (<code>gpt-6-luna</code>) and the same prompt (<code>summary_v7</code>, identical SHA-256 in all four runs). Every number below comes from <code>scripts/label_stability.py</code> and is in <code>data/labels_stability/results/</code>. The interpretation is hand-written.</p>
   </header>
 
+  <div class="card warn"><p><strong>Note (later the same day):</strong> the committed labels have since been relabelled with <code>summary_v8</code> (D-047). "Committed run" below means the earlier <code>summary_v7</code> labels, kept in <code>data/labels_stability/committed_v7/</code>; the experiment's numbers are unchanged.</p></div>
+
   <div class="stats">
     <div class="stat"><div class="n">48 / 50</div><div class="l">sessions with the same resolved / not resolved in all 3 runs</div></div>
     <div class="stat"><div class="n">43 / 50</div><div class="l">same reason for conversation</div></div>

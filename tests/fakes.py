@@ -38,9 +38,12 @@ class FakeLabeller:
         self.closed = True
 
 
-def topics(*names, relevance="strong"):
-    """Scored topics as the model returns them, all with the same relevance."""
-    return [{"topic": n, "reason": f"user raised {n}", "relevance": relevance} for n in names]
+def topics(*names, relevance="strong", group="Physical symptoms"):
+    """Scored topics as the model returns them, all with the same relevance and group."""
+    return [
+        {"topic": n, "topic_group": group, "reason": f"user raised {n}", "relevance": relevance}
+        for n in names
+    ]
 
 
 def fake_summary(**overrides):

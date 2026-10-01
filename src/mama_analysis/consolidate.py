@@ -5,6 +5,7 @@ from __future__ import annotations
 import warnings
 from collections.abc import Iterable
 from pathlib import Path
+from typing import Any
 
 from mama_analysis.cache import make_entry, warm_then_parallel, write_entry
 from mama_analysis.config import CONCURRENCY
@@ -37,67 +38,6 @@ DISPLAY_NAMES = {
 CANONICAL_MERGES = {
     "conversation_pain_points": {"bot repeated ": "bot repeated advice"},
 }
-
-# Human grouping of canonical topics into ten broad topic groups (D-042), applied on top of the
-# model's mapping. Keyed by the canonical labels of the committed mapping, so a remap or relabel
-# that renames topics leaves them "(ungrouped)" until this table is updated.
-TOPIC_GROUPS = {
-    "Physical symptoms": (
-        "symptom management",
-        "gastrointestinal symptoms",
-        "pain management",
-        "skin conditions",
-        "hair and scalp health",
-        "hormonal health",
-    ),
-    "Treatment choice": (
-        "treatment decisions",
-        "medication options",
-        "surgery decisions",
-        "treatment response",
-        "supplements and alternative therapies",
-        "endometriosis care",
-    ),
-    "Understanding the condition & outlook": (
-        "disease education",
-        "disease prognosis",
-        "cancer risk",
-        "diabetes risk",
-    ),
-    "Fatigue, sleep, diet & activity": (
-        "fatigue and cognition",
-        "sleep problems",
-        "exercise and pacing",
-        "diet and food triggers",
-    ),
-    "Tests & monitoring": (
-        "disease monitoring",
-        "diagnostic testing",
-        "lab results interpretation",
-        "blood glucose management",
-    ),
-    "Access to care": (
-        "specialist access",
-        "care access barriers",
-        "medication access",
-        "travel and care logistics",
-    ),
-    "Taking medication safely": (
-        "medication dosing",
-        "medication use",
-        "medication safety",
-        "medication side effects",
-    ),
-    "Work & life plans": ("work impact", "fertility and pregnancy"),
-    "Emotional wellbeing": ("emotional distress", "suicidal thoughts", "relationship strain"),
-    "Working with clinicians": (
-        "medical communication",
-        "appointment preparation",
-        "health information management",
-    ),
-}
-UNGROUPED = "(ungrouped)"
-_GROUP_OF = {topic: group for group, topics in TOPIC_GROUPS.items() for topic in topics}
 
 # Every topic is consolidated, but only topics at this relevance become chips, counts and
 # graph nodes.
@@ -224,17 +164,22 @@ def validate_mapping(raws: list[str], mapping: LabelMapping) -> dict[str, str]:
     return dict(sorted(result.items()))
 
 
-def topic_groups(topics: list[str]) -> list[str]:
-    """Map canonical topics to their ``TOPIC_GROUPS`` group.
+def topic_groups(scores: list[dict[str, Any]], relevance: str | None = KEPT_RELEVANCE) -> list[str]:
+    """The topic groups the model filed a conversation's topics in (D-047).
 
     Args:
-        topics: Canonical topic labels.
+        scores: A row's ``topic_scores`` (see ``explorer.label_rows``), each with
+            ``topic_group`` and ``relevance``.
+        relevance: Keep only topics at this relevance; ``None`` keeps every topic.
 
     Returns:
-        The groups, in first-seen order without duplicates; a topic in no group gives
-        ``UNGROUPED``.
+        The groups, in first-seen order without duplicates.
     """
-    return list(dict.fromkeys(_GROUP_OF.get(t, UNGROUPED) for t in topics))
+    return list(
+        dict.fromkeys(
+            t["topic_group"] for t in scores if relevance is None or t["relevance"] == relevance
+        )
+    )
 
 
 def merge_canonicals(field: str, mapping: dict[str, str]) -> dict[str, str]:

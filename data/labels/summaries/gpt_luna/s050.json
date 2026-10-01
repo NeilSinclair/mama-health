@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T14:32:11+00:00",
+  "created_at": "2026-10-01T15:07:52+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,57 +7,59 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user described a three-week flare with thick scale, flaking, and affected areas, and the conversation focused on managing it.",
+        "reason": "The user described a three-week flare with thick scale, flaking, and affected areas along the hairline, behind the ears, and on the crown.",
         "relevance": "strong",
-        "topic": "scalp psoriasis flare"
+        "topic": "scalp psoriasis flare",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked what treatment comes after the shampoos and discussed descaling, topical treatments, and calcipotriol.",
+        "reason": "The user asked what treatment comes after shampoos and considered a steroid solution and calcipotriol as part of a plan.",
         "relevance": "strong",
-        "topic": "psoriasis treatment options"
+        "topic": "psoriasis treatment options",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked whether scalp steroids are safe and specifically raised concern about skin thinning.",
+        "reason": "The user said itching was especially disruptive at night and discussed ways to manage it while waiting for care.",
         "relevance": "medium",
-        "topic": "steroid safety"
+        "topic": "itch management",
+        "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user said the itch was especially bothersome at night and discussed ways to manage it while waiting for treatment.",
+        "reason": "The user asked whether scalp steroids are safe because of concerns about skin thinning and said the response was reassuring.",
         "relevance": "medium",
-        "topic": "nighttime itching"
+        "topic": "steroid safety",
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked whether to see a GP or dermatologist and noted that dermatology appointments can take a long time.",
+        "reason": "The user asked whether to return to a GP or see a dermatologist and noted long waits for dermatology appointments.",
         "relevance": "medium",
-        "topic": "care access"
+        "topic": "access to psoriasis care",
+        "topic_group": "Access to care"
       },
       {
-        "reason": "The user said they were at the end of their rope and later described the situation as overwhelming.",
-        "relevance": "medium",
-        "topic": "emotional distress"
-      },
-      {
-        "reason": "The user said visible flakes falling on their shoulders were embarrassing at work.",
+        "reason": "The user said visible flakes falling on their shoulders were embarrassing at work, but did not return to this impact.",
         "relevance": "low",
-        "topic": "work embarrassment"
+        "topic": "workplace embarrassment",
+        "topic_group": "Work & life plans"
       },
       {
-        "reason": "The user said avoiding scratching would be difficult and engaged with the explanation of psoriasis appearing after skin trauma.",
-        "relevance": "low",
-        "topic": "skin scratching"
+        "reason": "The user described being at the end of their rope and later said the situation felt like a lot, expressing distress about the flare.",
+        "relevance": "medium",
+        "topic": "frustration with flare",
+        "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user described a persistent scalp psoriasis flare despite medicated shampoos, with itching and visible flakes affecting work, and asked about next treatments, steroid safety, and itch relief. The assistant outlined treatment options and suggested seeing a GP soon while seeking dermatology referral if needed; the user ended with an accepted plan to book the GP, ask about treatments, soften the scale, and avoid scratching."
+    "summary": "The user described a worsening scalp psoriasis flare despite tar and ketoconazole shampoos, with thick scale, nighttime itching, and embarrassment at work. The assistant discussed scale-softening, prescription treatment options, and seeing a GP while waiting for dermatology; the user ended with an accepted plan to book the GP, ask about a steroid solution and calcipotriol, use oil on the thick patch, and try not to scratch."
   },
-  "prompt_sha256": "70e6a05c3f9fd6da6dfe7e7be20624bfe8aeb025d774a28a5aee6ccca0a85792",
-  "prompt_version": "summary_v7",
+  "prompt_sha256": "cac90f571c1606300c6abc4f1271170ff8ac6df85be700f112b6a1a715f47717",
+  "prompt_version": "summary_v8",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 3332,
+    "cache_read_tokens": 3881,
     "cache_write_tokens": 0,
-    "input_tokens": 5135,
-    "output_tokens": 1193
+    "input_tokens": 5684,
+    "output_tokens": 905
   },
   "version": "gpt_luna"
 }
