@@ -1,25 +1,34 @@
 # Memo
 
-This document presents the results of the analysis of the mama health conversations.
+This document presents the results of the analysis of the mama health conversations. It begins with an overview of the process followed by a highlevel look at the data. It then presents data on where the bot is an isn't working. This is followed by a section putting forward a prioritised feature to work on and suggesting deprioritised features. The document ends with a discussion of the five most interesting conversations followed by appendix.
 
+The performance of the assistant is discussed primary with respect to the areas where it does not resolve the users' queries.
 
 ## Data And Process Overview
 
 Presented with 50 user conversations with an AI assistant, I ran the conversations through an LLM pipeline to understand the overall reason for the conversation, the topics discussed, the conversation pain points vis-a-vis the assistant and whether the user's issue was resolved or not. More information on the approach and design considerations is given in the appendix. 
 
-The data was then displayed in an interactive website that enabled me to look for patterns in the conversations and their outcomes to understand where the assistant was and wasn't working.
+The data was then displayed in an interactive website that enabled me to look for patterns in the conversations and their outcomes to understand where the assistant was and wasn't working. The most illustrative graphs were then used in this document.
 
 ## What Are Users Talking About?
 
-Conversations are grouped into 4 broad categories:
+### Summaries of Conversation Resolution by Key Factors 
+
+The LLM pipeline was used to classify conversations into four 'Reasons for conversation'. The table below shows the assistant's success in resolving these conversations. An analysis of these results is presented in the following section.
 
 <!-- memo:outcome_by_reason -->
 
+Conversation success rates vary by diseases with fibromyalgia, endometriosis and rheumatiod arthritis scoring the lowest.
+
 <!-- memo:outcome_by_disease -->
 
-### Explore Conversations by Tags:
+Access to care and emotional well-being have the lowest rates of resolution in the conversations with the agents, whereas working with clinicians, work & life plans and fatigue, sleep, diet & activity have the highest resolution rates. The failures of the assistant are discussed further in the following section 'Is the bot working'.
 
-In the following section you are able to filter the conversations by multiple factors to understand which conversations are tagged in which ways by the LLM pipeline.
+<!-- memo:outcome_by_topic_group -->
+
+### Explore Conversations by Tags
+
+In the following section you are able to filter the conversations by multiple factors to understand which conversations are tagged in which ways by the LLM pipeline. You can select multiple factors at once. Below the tables with selectable factors, you can find the filtered conversations each with a one line summary. Click on each conversation card to see the full conversation.
 
 <!-- memo:breakdown -->
 
@@ -37,7 +46,7 @@ The assistant is not working as well with helping users get access to care and p
 
 ### Where it's not working
 
-The assistant does, however, respond inadequately to emotional distress in the other two of these conversations (s026 and s043), and it ignores a suicidal statement in two conversations (s005 and s026). The assistant in these conversations doesn't appear to be able to switch its tone away from 'happy and always providing a solution' to primarily acting as a sounding board. At these points of high emotional distress the user should be routed to a human operator or at the very least to an agent that can deal with these sorts of emotional problems.
+The assistant does, however, respond inadequately to emotional distress in the other two of these conversations (s026 and s043), and it ignores a suicidal statement in two conversations (s005 and s026). The assistant in these conversations doesn't appear able to switch its tone away from 'happy and always providing a solution' to primarily acting as a sounding board or councellor. At these points of high emotional distress the user should be routed to a human operator or at the very least to an agent that can deal with these sorts of emotional problems.
 
 The getting access to care failure points related to the assistant giving a user incorrect advice for their country (Brazil) and for another user telling them they had booked an appointment, which the assistant can't do. These conversations are discussed further below.  
 
@@ -47,7 +56,7 @@ As a more general diagnosis, the bot failed to adapt the conversation to the con
 
 ## Next Feature to Build
 
-### Features 
+### Prioritised Feature 
 
 The next feature I would propose building would localise the information provided to users - or at least to improve the current functioning of this feature. There were three failure cases (s014, s018 and s042) where the assistant gave the user information that wasn't applicable to the country the user was in. In s014 the assistant kept insisting that the user buys something online for import into Japan; in s018 the assistant keeps trying to give the user US-based medical insurance information; and in s042 the assistant initially gives the user US-based information until they mention they're in India. The assistant already has the user's location information, so ensuring it knows where the user resides is trivial. The assistant doesn't always get the location information incorrect though - in some cases the information provided is country specific when the user mentions their country (s008) or the assistant already knows the user's country (e.g. Canada in s016).
 
@@ -73,21 +82,22 @@ One user wanted the assistant to help them understand how to access clinical tri
 
 ## Most Interesting Conversations
 
-In conversation s024 the assistant tells the user that it has booked an appointment for them. It does not have this ability, but is fully convinced that it does, with the user believing the appointment has been booked. This is a major failure point for the system with respect to hallucination. I would suggest trying one of two things to fix this - either ensuring that the system prompt forbids this action (this probably already exists) or giving the agent a tool to use to book appointments - however, as this functionality is not available, have the tool always return the string, 'I'm currently not able to book appointments.'
+In conversation s024 the assistant tells the user that it has booked an appointment for them. It does not have this ability, but is fully convinced that it does, with the user believing the appointment has been booked. This is interesting because it is a major failure point for the system with respect to hallucination and it's difficult to catch. I would suggest trying one of two things to fix this - either ensuring that the system prompt forbids this action (this probably already exists) or giving the agent a tool to use to book appointments - however, as this functionality is not available, have the tool always return the string, 'I'm currently not able to book appointments.'
 
-In conversation s018 with a user in Brazil, the assistant kept trying to give the user information relating to medical insurance in the US, despite the user saying repeatedly that she was in Brazil and used the public system (SUS), and switching into Portuguese in frustration. This is interesting because of the difficulty the assistant had in adjusting its flow. 
+In conversation s018 with a user in Brazil, the assistant kept trying to give the user information relating to medical insurance in the US, despite the user saying repeatedly that she was in Brazil and using the public system (SUS). The user then switches into Portuguese in frustration. This is interesting because of the difficulty the assistant had in adjusting its flow to acknowledge the information the user was giving them, despite the user being very clear that they were in Brazil. This is interesting because it appears on the surface to be something that's relatively easy to fix (see Prioritised Feature).
 
-In conversation s026 the user is desperate and expresses thoughts of suicide. The conversation is interesting because of how palpable the user's desperation and frustration is and because of how difficult it is for the user to get treatment that actually makes a difference to them. For me this points either to focusing on adding more psychological counselling features - or refining them - or making human handover a possibility. 
+In conversation s026 the user is desperate and expresses thoughts of suicide. This conversation is sad to read. It also highlights the difficulty in providing adequate psychological care for users on the mama health platform; no proactive suggestions in this situation  - e.g. better illness tracking or management - are going to give the user the kind of support that they need. For me this points either to focusing on adding more psychological counselling features - or refining them - or making human handover a possibility. This was discussed above.
+
+In conversation s017 the user is asking about how to control their morning insulin levels without seeing a doctor. This conversation was interesting to me because it was classified as 'partial resolution' by the LLM pipeline, which I believe is the correct classification, yet the assistant has suggested everything within its capability. The user gets annoyed with the assistant when it suggests they take insulin at night, saying 'you said insulin again. i told you i dont take insulin' - yet the assistant was making a suggestion for taking a different medication, not incorrectly suggesting what the user was taking. I think the assistant manages to keep a placating tone here, which is good. I also believe this shows how in some situations, it's not possible to give the user the information that they want, because it doesn't exist.
 
 ## Appendix
-
 
 ### Overview of the Analysis Pipeline
 
 The analysis pipeline uses an LLM (OpenAI GPT Luna) with a structured output to extract the following features from each conversation:
 
 - **Reason for conversation:** the user's underlying need. One of four fixed options: understand my condition, decide on treatment, get access to care, or emotional support.
-- **Topics:** everything the user raised, named in the model's own words. Each topic is scored strong, medium or low for how central it is, and the tables above count strong topics only.
+- **Raw topics:** everything the user raised, named in the model's own words. Each topic is scored strong, medium or low for how central it is, and the tables above count strong topics only.
 - **Conversation pain points:** what the assistant did wrong or failed to do, named in the model's own words (e.g. "bot gave wrong-country advice"). The user's illness and their difficulties with doctors are topics, not pain points.
 - **Outcome:** need met, partial resolution or unresolved need. It is judged from what the user says in their final turns, not from the assistant's closing recap. "Resolved" in this memo means need met.
 - **Summary:** two or three sentences on what the user brought and how it ended.
@@ -96,16 +106,16 @@ A second pass over each conversation records every turn where the user pushes ba
 
 The reason for conversation and the outcome are picked from fixed lists, so they need no grouping. Topics and pain points are named freely first and grouped afterwards:
 
-- **Topics:** in the same call, the model files each topic in one of ten fixed topic groups, such as "Treatment choice" or "Access to care" [outputs/analysis/gpt_luna/topic_groups.csv].
+- **Grouped Topics:** in the same call, the model files each topic in one of ten fixed topic groups, such as "Treatment choice" or "Access to care" [outputs/analysis/gpt_luna/topic_groups.csv]. These grouped topics were decided by looking through the Raw Topics with Claude Opus 5.5 and deciding on groupings.
 - **Pain points:** a second LLM call merges the free-text labels from all 50 conversations into a shared list. This gave 10 pain points across 13 conversations [outputs/analysis/gpt_luna/pain_points.csv]. Three safety-critical pain points are never merged into a broader one: an ignored suicidal statement, a missed urgent symptom, and a claimed action the assistant can't take.
 
-This grouping was decided upon through a number of iterations of classifying the conversations and analysing the labels which were created. For this reason, we keep the raw topics in the model's own words so we can refresh the topic groups at a later stage. It is important that this labelling capability is dynamic because the themes discussed in conversations as well as the pain points users experience may change over time - especially if the pain points are fixed based on conversation analysis.
+This grouping was decided upon through a number of iterations of classifying the conversations and analysing the labels which were created. For this reason, we keep the raw topics in the model's own words so we can refresh the grouped topics at a later stage. It is important that this labelling capability is dynamic because the themes discussed in conversations as well as the pain points users experience may change over time - especially if the pain points are fixed based on conversation analysis.
 
 ### Strengths and Limitations
 
 What the approach does well:
 
-- **Results are trustworthy** The prompting version used for classifying conversations was chosen based on a gold set of 10 examples. Although this only classifies Need Met versus Partial resolution or Unresolved need - and not the specific topics and pain points - it gives the analyst confidence that the LLM outputs are somewhat tuned.
+- **Results are trustworthy** The prompting version used for classifying conversations was chosen based on a gold set of 10 examples classifying conversation on Need Met, Partial resolution and Unresolved need. 
 - **It is reproducible.** The tables in this memo are rebuilt by the pipeline from saved labels, without an API key.
 - **It reads for the user's experience.** Outcomes rest on the user's own words, and every quote in the second pass is checked against the transcript.
 - **The fixed-choice labels are stable.** In three repeat runs on an earlier version of the prompt, resolved or not agreed in 48 of 50 conversations and the reason in 43 of 50 [data/labels_stability/results/agreement_summary.csv].

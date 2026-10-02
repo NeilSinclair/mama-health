@@ -83,6 +83,7 @@ def test_relabel_then_build_from_cache(data_file, tmp_path, capsys, fake_api):
         "friction",
         "outcome_by_disease",
         "outcome_by_reason",
+        "outcome_by_topic_group",
         "pain_points",
         "pushbacks",
         "recovery_by_outcome",
@@ -247,6 +248,7 @@ def test_missing_dynamics_skips_only_those_tables(data_file, tmp_path, capsys, f
         "ending_vs_outcome",
         "outcome_by_disease",
         "outcome_by_reason",
+        "outcome_by_topic_group",
         "pain_points",
         "topic_groups",
     ]

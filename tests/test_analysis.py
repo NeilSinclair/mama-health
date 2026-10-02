@@ -186,6 +186,21 @@ def test_outcome_by_counts_end_reasons_per_value():
     assert outcome_by(reasons, "reason_for_conversation")["total"].tolist() == [4]
 
 
+def test_outcome_by_topic_group_counts_a_conversation_in_each_strong_group():
+    def scores(*groups):
+        return [{"label": g, "topic_group": g, "relevance": "strong"} for g in groups]
+
+    low = {"label": "x", "topic_group": "Tests & monitoring", "relevance": "low"}
+    rows = [
+        _row("a", "completed", "need met") | {"topic_scores": scores("A", "B")},
+        _row("b", "completed", "unresolved need") | {"topic_scores": [*scores("A"), low]},
+    ]
+    df = outcome_by(rows, "topic_group").set_index("topic_group")
+    assert list(df.index) == ["A", "B"]
+    assert (df.loc["A", "resolved"], df.loc["A", "unresolved"], df.loc["A", "total"]) == (1, 1, 2)
+    assert (df.loc["B", "total"], df.loc["B", "need_met_pct"]) == (1, 100)
+
+
 def test_topic_group_counts_per_session_with_member_topics():
     def chips(*xs):
         return [{"label": x, "raw": [x]} for x in xs]

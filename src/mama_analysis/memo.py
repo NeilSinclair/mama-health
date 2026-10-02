@@ -24,6 +24,7 @@ from mama_analysis.explorer import PAYLOAD_MARKER
 DEFAULT_MEMO_PATH = Path("docs/memo.md")
 
 BODY_MARKER = "<!--__BODY__-->"
+TOC_MARKER = "<!--__TOC__-->"
 TITLE_MARKER = "__TITLE__"
 MARKER_RE = re.compile(r"<!--\s*memo:([a-z_]+)\s*-->")
 VALUE_RE = re.compile(r"\{\{(.*?)\}\}")
@@ -37,7 +38,11 @@ BREAKDOWN_FIELDS = (
     "disease",
 )
 
-FIELD_TITLES = {"reason_for_conversation": "Reason for conversation", "disease": "Disease"}
+FIELD_TITLES = {
+    "reason_for_conversation": "Reason for conversation",
+    "disease": "Disease",
+    "topic_group": "Topic group (strong topics)",
+}
 
 
 def pretty(value: str) -> str:
@@ -130,20 +135,32 @@ def memo_breakdown(rows: list[dict[str, Any]], records: list[dict[str, Any]]) ->
     }
 
 
-def outcome_table_html(df: pd.DataFrame, field: str, source: str) -> str:
+def _fold(summary: str, figure: str) -> str:
+    """Put a table behind a disclosure widget, closed by default."""
+    return f'<details class="tablefold"><summary>{html.escape(summary)}</summary>{figure}</details>'
+
+
+def outcome_table_html(
+    df: pd.DataFrame, field: str, source: str, overall: tuple[int, int, int] | None = None
+) -> str:
     """Render an ``analysis.outcome_by`` table as HTML: resolved vs unresolved, with an "All" row.
+
+    Rows are in ascending order of resolved %, then larger groups first.
 
     Args:
         df: Output of ``analysis.outcome_by``.
         field: The field the table is split by.
         source: Output path of the CSV, cited under the table.
+        overall: Resolved, unresolved and total counts for the "All" row. Give them when a
+            conversation can count in several rows; by default the row sums the columns.
 
     Returns:
-        A ``<figure>`` holding the table and its source line.
+        A ``<details>`` block, closed by default, holding the table and its source line.
     """
     cols = ["resolved", "unresolved", "total"]
     head = "".join(f'<th class="num">{c.capitalize()}</th>' for c in cols)
-    head += '<th class="num">Need met %</th>'
+    head += '<th class="num" aria-sort="ascending">Resolved %</th>'
+    df = df.sort_values(["need_met_pct", "total", field], ascending=[True, False, True])
 
     def tr(cells: list[str], cls: str = "") -> str:
         first, *rest = cells
@@ -154,15 +171,20 @@ def outcome_table_html(df: pd.DataFrame, field: str, source: str) -> str:
         tr([html.escape(pretty(r[field])), *(str(r[c]) for c in cols), f"{r['need_met_pct']}%"])
         for _, r in df.iterrows()
     ]
-    totals = [int(df[c].sum()) for c in cols]
+    totals = list(overall) if overall else [int(df[c].sum()) for c in cols]
     all_pct = f"{round(100 * totals[0] / totals[-1])}%"
     body.append(tr(["All", *map(str, totals), all_pct], ' class="all"'))
-    return (
+    note = (
+        "A conversation can count in more than one row; All counts each once. " if overall else ""
+    )
+    title = FIELD_TITLES.get(field, field)
+    return _fold(
+        f"Table: resolved and unresolved by {title[0].lower()}{title[1:]}",
         '<figure class="table-fig"><div class="table-wrap"><table class="sortable">'
-        f"<thead><tr><th>{html.escape(FIELD_TITLES.get(field, field))}</th>{head}</tr></thead>"
+        f"<thead><tr><th>{html.escape(title)}</th>{head}</tr></thead>"
         f"<tbody>{''.join(body)}</tbody></table></div>"
         f"<figcaption>Resolved = need met; unresolved = partial resolution or unresolved need. "
-        f"Source: <code>{html.escape(source)}</code></figcaption></figure>"
+        f"{note}Source: <code>{html.escape(source)}</code></figcaption></figure>",
     )
 
 
@@ -190,9 +212,9 @@ def pain_points_html(df: pd.DataFrame, source: str) -> str:
         source: Output path of its CSV, cited under the table.
 
     Returns:
-        A ``<figure>`` with the dropdown and one sortable table. It holds a "where" column
-        per field in ``WHERE_FIELDS``, and CSS shows the one the dropdown picks (topic
-        group by default).
+        A ``<details>`` block, closed by default, with the dropdown and one sortable table.
+        It holds a "where" column per field in ``WHERE_FIELDS``, and CSS shows the one the
+        dropdown picks (topic group by default).
 
     Raises:
         ValueError: If a "where" value is not in ``"value (n); ..."`` form.
@@ -212,14 +234,15 @@ def pain_points_html(df: pd.DataFrame, source: str) -> str:
             f'<tr><th scope="row">{html.escape(r["pain_point"])}</th>'
             f'<td class="num">{r["n_sessions"]}</td>{wheres}<td class="ids">{ids}</td></tr>'
         )
-    return (
+    return _fold(
+        "Table: conversation pain points",
         '<figure class="table-fig pain-fig" data-rows="topic_group">'
         f'<label class="rowpick">Where by <select id="pain-rows">{options}</select></label>'
         '<div class="table-wrap"><table class="sortable pain-table">'
         f"<thead><tr>{head}</tr></thead><tbody>{''.join(body)}</tbody></table></div>"
         "<figcaption>Counts are conversations; pain points are what the bot did wrong, "
         "most common first. A conversation can count in more than one topic group. "
-        f"Source: <code>{html.escape(source)}</code></figcaption></figure>"
+        f"Source: <code>{html.escape(source)}</code></figcaption></figure>",
     )
 
 
@@ -245,7 +268,8 @@ def render_memo(text: str, blocks: dict[str, str], breakdown: dict[str, Any]) ->
         breakdown: Output of ``memo_breakdown``, embedded for the ``breakdown`` marker.
 
     Returns:
-        The HTML page.
+        The HTML page. Its contents list, beside the text, links the second- and third-level
+        headings; a draft without any has no list.
 
     Raises:
         ValueError: If the Markdown uses a marker name with no block.
@@ -254,15 +278,23 @@ def render_memo(text: str, blocks: dict[str, str], breakdown: dict[str, Any]) ->
     unknown = sorted(set(MARKER_RE.findall(text)) - blocks.keys())
     if unknown:
         raise ValueError(f"unknown memo marker(s) {unknown}; known: {sorted(blocks)}")
-    # md_in_html renders Markdown inside <details markdown="1"> blocks (collapsible sections).
-    body = markdown.markdown(text, extensions=["tables", "sane_lists", "md_in_html"])
-    body = MARKER_RE.sub(lambda m: blocks[m.group(1)], body)
+    # md_in_html renders Markdown inside <details markdown="1"> blocks (collapsible sections);
+    # toc gives every heading an anchor and builds the contents list.
+    md = markdown.Markdown(
+        extensions=["tables", "sane_lists", "md_in_html", "toc"],
+        extension_configs={"toc": {"toc_depth": "2-3"}},
+    )
+    body = MARKER_RE.sub(lambda m: blocks[m.group(1)], md.convert(text))
+    toc = ""
+    if md.toc_tokens:
+        toc = f'<nav class="contents" aria-label="Contents"><p>Contents</p>{md.toc}</nav>'
     title = next((ln[2:].strip() for ln in text.splitlines() if ln.startswith("# ")), "Memo")
     template = (files("mama_analysis") / "templates" / "memo.html").read_text(encoding="utf-8")
     # Escaping every "<" keeps label text from closing the script.
     data = json.dumps(breakdown, sort_keys=True, ensure_ascii=False).replace("<", "\\u003c")
     return (
         template.replace(TITLE_MARKER, html.escape(title))
+        .replace(TOC_MARKER, toc)
         .replace(BODY_MARKER, body)
         .replace(PAYLOAD_MARKER, data)
     )
