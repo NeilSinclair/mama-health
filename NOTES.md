@@ -100,6 +100,23 @@ Record this as we go. For each item: what the AI did, how we checked it, and whe
   - Wording tried and dropped: listing "something they have already tried" under the corrected-mistake label mislabelled s030 (3/3). An explicit exclusion sentence destabilised s017 (1/3).
 - **2026-10-01 — Full relabel with `summary_v9` and `consolidate_v4` (human go-ahead, D-048).** Opus wired in `summary_v9`, wrote `consolidate_v4` (three fixed pain-point labels kept verbatim) and removed the D-039 merge rule and its tests. The stability script was pinned to `consolidate_v3`, and its results stayed identical. The commands were the same as for v8: the `summarise_all` one-off with `load_prompt("summary_v9")`, then `uv run mama-pipeline --remap gpt_luna`. Dynamics were not rerun. Changes against v8 are in D-048. The draft memo's "decide on treatment" figure was updated from 82% to 84%; the other quoted figures still match. **The s022 override is live again:** v9 labels s022 as need met with no pain point, while our hand check says the bot missed an urgent symptom. The D-047 note saying the override no longer differed from `outputs/` held only for the v8 labels.
 - **2026-10-01 — Code review before pushing the v9 relabel.** The `code-reviewer` agent reviewed commit `5b9b71f`: ship it, 0 critical, 0 major, 6 minor, 2 nits. It confirmed that a fresh offline run reproduces all 29 `outputs/` files byte for byte, and that all 52 summary and mapping cache entries carry the v9 / v4 prompt hashes. Opus fixed the documentation findings: a D-048 addendum (which sessions changed; the 7-word fixed label against the prompts' word caps), a v9 entry under overrides, a stale `consolidate_v3` comment and the stability doc's version note. Left for the human, because it is memo wording: the 88% counts s022 as met, "25%" and "33%" are 1 of 4 and 1 of 3, and "ignoring emotional distress" is split across two 1-conversation rows.
+- **2026-10-01 — Memo draft checked against the pipeline tables and corrected (human request).** The human wrote new prose in `docs/memo.md`. Opus checked its figures against `outputs/analysis/gpt_luna/` and, on the human's go-ahead, fixed typos and six points of fact:
+  - "Emotional support as a topic" (4 conversations) is the Emotional wellbeing topic group (`topic_groups.csv`), not the reason category (3).
+  - Two users made ignored suicidal statements (s005, s026 in `pain_points.csv`), not one.
+  - The 9 of 11 unadapted-pushback conversations (`recovery_by_outcome.csv`, `pushbacks.csv`) exclude s024 and s005.
+  - Complicated language (s038) and the long COVID trials (s046) are two conversations, not one.
+  - The Brazil conversation is s018.
+  - In s018 the user says she is in Brazil in English (t5) and switches to Portuguese in frustration; the draft had her saying it in Portuguese.
+
+  The 88 / 84 / 25 / 33%, 43 vs 7 and 9 of 11 figures matched and were left alone. The page was re-rendered with `uv run mama-pipeline`.
+- **2026-10-01 — Pre-push review of the memo draft (code-reviewer).** Verdict: ship after fixes, 0 critical, 2 major, 5 minor. It confirmed every number and session ID in the changed prose against the CSVs and transcripts, that a fresh offline run reproduces all 29 `outputs/` files, and that tests and ruff pass. All findings are memo wording, so they are left open for the human and nothing was changed:
+  - Major: "the information that the assistant has … is adequate" is not measured by the pipeline. Need met records whether the user's need was met, not whether the answer was right, and s003 (unsafe dosing advice) is a need-met conversation.
+  - Major: "25%" and "33%" are 1 of 4 and 1 of 3 (D-044 asks for "n of N" in prose), and the 88% counts s022 as met without the note D-048 requires.
+  - Minor: "9 out of 11" cites no file, rests on the `bot_adapted` label that D-037 says needs a hand check, and omits the comparator (0 of 39 need-met conversations).
+  - Minor: the bot's inability to book is stated as fact; D-022 records it as an assumption.
+  - Minor: "four conversations" in Emotional wellbeing holds for strong topics only.
+  - Minor: s046 is a third unresolved access conversation, not named as one.
+  - Minor: the prose already suggests three fixes (human handover, a booking guard, counselling features) before the single recommendation is written.
 
 ## Overrides of AI output
 
