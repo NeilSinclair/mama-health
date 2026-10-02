@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-10-02T09:50:50+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot missed urgent symptom",
+      "bot did not answer the user's request"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly described a disabling four-day attack that was not responding to rescue medication and asked what to do.",
+        "relevance": "strong",
+        "topic": "prolonged migraine attack",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user repeatedly asked for actual treatment options for an attack that would not break, including options before seeing the neurologist.",
+        "relevance": "strong",
+        "topic": "acute migraine treatment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said the neurologist was booked six weeks out and asked about urgent care or bridge options in the meantime.",
+        "relevance": "medium",
+        "topic": "neurologist wait time",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said they had taken over-the-counter medicines along with triptans for days and worried about rebound headache.",
+        "relevance": "medium",
+        "topic": "medication overuse concern",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user said they came in a genuinely bad place and felt the assistant was not hearing them.",
+        "relevance": "medium",
+        "topic": "emotional distress",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user reported missing three days of work because of the attack but did not return to its work impact.",
+        "relevance": "low",
+        "topic": "work disruption",
+        "topic_group": "Work & life plans"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user described a disabling four-day migraine, triptans no longer helping, and concern about rebound headache after days of additional over-the-counter medication; they had missed three days of work and could not see their neurologist for six weeks. Despite repeated requests for acute treatment or urgent-care options, the assistant offered generic lifestyle advice and deferred to the neurologist, leaving the user to end the conversation saying, “Forget it.”"
+  },
+  "prompt_sha256": "af85dba9cd15f4f621d94089c6d16290f66a3606ce1459cb3d1936d73df0fcae",
+  "prompt_version": "summary_v10",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4614,
+    "cache_write_tokens": 0,
+    "input_tokens": 5534,
+    "output_tokens": 1613
+  },
+  "version": "gpt_luna"
+}

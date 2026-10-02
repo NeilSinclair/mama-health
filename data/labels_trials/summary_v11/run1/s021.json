@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-02T09:57:27+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether endometriosis really improves after menopause and sought an honest account of the outlook.",
+        "relevance": "strong",
+        "topic": "menopause and endometriosis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user explored whether to avoid HRT, which regimen might fit their endometriosis history, and how to discuss the choice with their doctor.",
+        "relevance": "strong",
+        "topic": "HRT with endometriosis",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said hot flashes were getting rough and included them among the symptoms motivating consideration of HRT.",
+        "relevance": "medium",
+        "topic": "hot flashes",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said sleep issues were getting rough and later planned to describe their impact at the appointment.",
+        "relevance": "medium",
+        "topic": "sleep disruption",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user recalled adhesions and bowel-area involvement from a past laparoscopy and wondered whether this affected their outlook.",
+        "relevance": "low",
+        "topic": "deep endometriosis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user described doctors treating endometriosis as only a period problem and expressed frustration with that view.",
+        "relevance": "medium",
+        "topic": "doctor dismissal",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked what to do before a scheduled follow-up so they could participate more actively, and later said they felt prepared.",
+        "relevance": "medium",
+        "topic": "appointment preparation",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked how to recognize a return of endometriosis pain if they start HRT.",
+        "relevance": "low",
+        "topic": "pain recurrence monitoring",
+        "topic_group": "Taking medication safely"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether endometriosis tends to improve after menopause, then discussed HRT for rough hot flashes and sleep disruption, given a history of adhesions and possible deep disease. The assistant explained possible HRT considerations and suggested questions and symptom monitoring for the user's upcoming follow-up; the user said the conversation clarified the issue and left them feeling prepared."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6771,
+    "output_tokens": 1876
+  },
+  "version": "gpt_luna"
+}

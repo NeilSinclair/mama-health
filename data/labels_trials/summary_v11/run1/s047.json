@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-02T09:55:52+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether methotrexate could affect their long-term warfarin treatment and whether their readings might change.",
+        "relevance": "strong",
+        "topic": "methotrexate-warfarin interaction",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether methotrexate blood tests would also detect warfarin-related changes and discussed continuing their usual checks.",
+        "relevance": "medium",
+        "topic": "blood test monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what symptoms to watch for at home and received examples related to both medicines.",
+        "relevance": "medium",
+        "topic": "medication warning signs",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether tests help set the dose and confirmed they understood the once-weekly schedule.",
+        "relevance": "medium",
+        "topic": "weekly methotrexate dosing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what to raise with their GP before starting and accepted a list of points to confirm.",
+        "relevance": "low",
+        "topic": "pre-start GP discussion",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user wanted reassurance about starting methotrexate for rheumatoid arthritis while taking warfarin, especially whether it could affect their warfarin readings and what to watch for. The assistant discussed monitoring, warning signs, weekly dosing, and points to confirm with the GP; the user said they felt much better about starting."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 5969,
+    "output_tokens": 1396
+  },
+  "version": "gpt_luna"
+}

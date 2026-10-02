@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-02T09:57:50+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came in because nausea after the weekly dose had become severe and described feeling unwell through Saturday and Sunday.",
+        "relevance": "strong",
+        "topic": "methotrexate nausea",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user wondered whether to quit, then sought options for controlling nausea while keeping a medicine that helps their joints.",
+        "relevance": "strong",
+        "topic": "methotrexate continuation",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether taking folic acid on the same day as methotrexate was a problem and agreed to change the timing.",
+        "relevance": "medium",
+        "topic": "folic acid timing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether injectable methotrexate could make a difference and said they were scared of injecting themselves.",
+        "relevance": "medium",
+        "topic": "injection concerns",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether an anti-nausea medicine was safe to take with methotrexate.",
+        "relevance": "medium",
+        "topic": "anti-nausea medication safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what to say at the upcoming appointment and said they would write down the suggested questions.",
+        "relevance": "medium",
+        "topic": "appointment preparation",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said methotrexate had made their hands much better, which informed their wish not to stop if avoidable.",
+        "relevance": "low",
+        "topic": "joint improvement",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user considered stopping methotrexate because of severe nausea after the weekly dose, despite improved joints. They explored folic acid timing, dose-splitting, anti-nausea medicine and injections, and prepared questions for a doctor visit in about two weeks. The user felt much better and said they would continue for now and try the agreed changes; no urgent symptoms were reported."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 7165,
+    "output_tokens": 1290
+  },
+  "version": "gpt_luna"
+}

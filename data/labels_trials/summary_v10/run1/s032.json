@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-10-02T09:50:52+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to understand the options and why the rheumatologist might choose one class over another.",
+        "relevance": "strong",
+        "topic": "biologic treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said this was the question that scared them most and discussed how treatment risks compare with leaving active RA untreated.",
+        "relevance": "strong",
+        "topic": "cancer risk",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user described persistent hand and wrist synovitis, elevated CRP, and prolonged morning stiffness as evidence that the disease remained active.",
+        "relevance": "medium",
+        "topic": "active RA symptoms",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user engaged with the idea that ongoing inflammation can cause harm and said it reframed the risk-benefit decision.",
+        "relevance": "medium",
+        "topic": "untreated disease risks",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked whether prior shingles should steer treatment choice and followed up about vaccination while immunosuppressed.",
+        "relevance": "medium",
+        "topic": "shingles history",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user raised frequent sinus infections as a factor that might affect biologic selection.",
+        "relevance": "medium",
+        "topic": "recurrent infections",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user travels for work and asked how home injections and infusion visits differ in practice.",
+        "relevance": "medium",
+        "topic": "travel treatment logistics",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user asked for questions to take to the rheumatologist and wanted to participate in the decision rather than feel railroaded.",
+        "relevance": "medium",
+        "topic": "appointment preparation",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked how long it would take to know whether a biologic was working and wanted a defined checkpoint.",
+        "relevance": "medium",
+        "topic": "treatment response timeline",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether Shingrix was appropriate at their age and while immunosuppressed.",
+        "relevance": "medium",
+        "topic": "vaccine timing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user mentioned being needle-shy while weighing the appeal of self-injections.",
+        "relevance": "low",
+        "topic": "needle anxiety",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether mild, controlled hypertension might affect the choice of treatment.",
+        "relevance": "low",
+        "topic": "controlled hypertension",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether possible hormone therapy during perimenopause could interact with RA treatment.",
+        "relevance": "low",
+        "topic": "hormone therapy interactions",
+        "topic_group": "Taking medication safely"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user wanted to understand biologic options for active RA and prepare for a discussion with their rheumatologist, including cancer risk, infection history, shingles vaccination, travel logistics, and treatment timelines. The assistant answered these questions and helped frame the risks of treatment against ongoing inflammation; the user said they felt prepared for a real back-and-forth and that their anxiety had genuinely decreased."
+  },
+  "prompt_sha256": "af85dba9cd15f4f621d94089c6d16290f66a3606ce1459cb3d1936d73df0fcae",
+  "prompt_version": "summary_v10",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4614,
+    "cache_write_tokens": 0,
+    "input_tokens": 7866,
+    "output_tokens": 2071
+  },
+  "version": "gpt_luna"
+}

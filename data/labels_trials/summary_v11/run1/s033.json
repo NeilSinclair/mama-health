@@ -1,0 +1,47 @@
+{
+  "created_at": "2026-10-02T09:55:40+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user asked whether Emgality was working despite a reduction from about 20 to 15 migraine days and returned to their concerns about continuing it.",
+        "relevance": "strong",
+        "topic": "preventive treatment response",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user noted that their remaining migraines had become less severe and came to see this as an improvement.",
+        "relevance": "medium",
+        "topic": "migraine severity",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user described logging migraine days in an app and discussed tracking severity and acute medication response through the next assessment.",
+        "relevance": "medium",
+        "topic": "migraine tracking",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to raise with their neurologist and worried the treatment might be stopped for not reaching a 50% reduction.",
+        "relevance": "medium",
+        "topic": "neurologist discussion",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether a reduction from about 20 to 15 migraine days after three months on Emgality counted as a response, and later added that their attacks were less severe. The assistant encouraged continued tracking and suggested discussing reassessment and next steps with the neurologist; the user said the conversation reframed their view and felt reassured that the treatment was helping, though not fully."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 5841,
+    "output_tokens": 694
+  },
+  "version": "gpt_luna"
+}

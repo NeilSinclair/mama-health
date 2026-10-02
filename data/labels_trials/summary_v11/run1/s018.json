@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-10-02T09:57:20+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave wrong-country advice"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user described severe pain for six months, including during periods, on other days, and sometimes when using the bathroom.",
+        "relevance": "strong",
+        "topic": "pelvic pain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user repeatedly asked how to get evaluation and treatment when their doctor dismisses the pain and SUS specialist waits are months long.",
+        "relevance": "strong",
+        "topic": "access to gynecologic care",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said their doctor calls the pain normal cramps and asked how to obtain an ultrasound when the doctor does not believe them.",
+        "relevance": "medium",
+        "topic": "dismissive doctor",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they needed someone to believe them, making validation an explicit part of what they wanted.",
+        "relevance": "medium",
+        "topic": "feeling believed",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user said the pain sometimes prevents them from working, but did not discuss its work impact further.",
+        "relevance": "medium",
+        "topic": "work impact",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user mentioned that endometriosis had been suggested, but did not ask for an explanation of the condition.",
+        "relevance": "low",
+        "topic": "endometriosis evaluation",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user considered asking their doctor about continuous pills after the assistant discussed this option.",
+        "relevance": "medium",
+        "topic": "hormonal pain treatment",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "The user described severe, persistent pelvic pain, possible endometriosis, and difficulty being taken seriously by their doctor; the pain sometimes stops them working. After the user explained they rely mostly on Brazil’s SUS and do not have an insurance plan, the assistant repeatedly suggested US-style insurance directories and other advice the user said did not fit. The user was open to asking their doctor about continuous pills, but ended by saying the conversation was not helping."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6258,
+    "output_tokens": 1597
+  },
+  "version": "gpt_luna"
+}

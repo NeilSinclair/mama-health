@@ -1,0 +1,49 @@
+{
+  "created_at": "2026-10-02T09:50:43+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot claimed action it cannot take"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user described severe swelling in their hands and knees and difficulty dressing, then asked what might help the swelling.",
+        "relevance": "strong",
+        "topic": "rheumatoid arthritis flare",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user urgently asked for an earlier appointment and returned to whether it had really been arranged because clinic calls usually take a long time.",
+        "relevance": "strong",
+        "topic": "earlier rheumatology appointment",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said they were nervous about taking prescribed cortisone tablets without checking first.",
+        "relevance": "medium",
+        "topic": "steroid use during flares",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether to bring their recent blood tests to the appointment.",
+        "relevance": "low",
+        "topic": "recent blood test results",
+        "topic_group": "Tests & monitoring"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "The user described a severe rheumatoid arthritis flare that was making it hard to dress and asked for an earlier rheumatology appointment because the next one was not until October. The assistant claimed it had booked a slot for next week, sent a request, and set a reminder, although no clinic confirmation was shown; it also discussed swelling care, prescribed cortisone tablets, and what records to bring."
+  },
+  "prompt_sha256": "af85dba9cd15f4f621d94089c6d16290f66a3606ce1459cb3d1936d73df0fcae",
+  "prompt_version": "summary_v10",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4614,
+    "cache_write_tokens": 0,
+    "input_tokens": 5775,
+    "output_tokens": 941
+  },
+  "version": "gpt_luna"
+}

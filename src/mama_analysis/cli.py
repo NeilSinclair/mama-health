@@ -7,6 +7,7 @@ import asyncio
 from pathlib import Path
 from typing import Any
 
+import pandas as pd
 from dotenv import load_dotenv
 from pydantic import ValidationError
 
@@ -37,6 +38,7 @@ from mama_analysis.explorer import (
 from mama_analysis.labellers import Labeller, load_prompt, make_labeller
 from mama_analysis.memo import (
     DEFAULT_MEMO_PATH,
+    fill_values,
     memo_breakdown,
     outcome_table_html,
     pain_points_html,
@@ -196,6 +198,10 @@ def load_dynamics(
     return dyn
 
 
+# The human's blind end-reason labels (D-050).
+DEFAULT_GOLD_PATH = Path("data/gold/outcome_check.csv")
+
+
 def analysis_tables(
     records: list[dict[str, Any]],
     rows: list[dict[str, Any]],
@@ -232,7 +238,11 @@ def analysis_tables(
 
 
 def run_summaries(
-    data_path: Path, labels_dir: Path, out_dir: Path, memo_path: Path | None = None
+    data_path: Path,
+    labels_dir: Path,
+    out_dir: Path,
+    memo_path: Path | None = None,
+    gold_path: Path | None = None,
 ) -> dict[str, Path]:
     """Write summary and analysis tables, the explorer page and the memo page from cached labels.
 
@@ -244,6 +254,8 @@ def run_summaries(
         out_dir: Output root.
         memo_path: Memo draft in Markdown; ``memo.html`` is written only if it is given,
             exists, and some version has complete labels (the first such version is used).
+        gold_path: The human's end-reason labels (CSV saved from ``docs/outcome_check.html``);
+            the ``outcome_check`` tables are written only if it is given and exists.
 
     Returns:
         Mapping from output name to the path written.
@@ -281,7 +293,12 @@ def run_summaries(
             print(f"note: no complete cached dynamics for {version}; skipping those tables")
         target = out_dir / "analysis" / version
         target.mkdir(parents=True, exist_ok=True)
-        for name, df in analysis_tables(records, rows, dyn).items():
+        tables = analysis_tables(records, rows, dyn)
+        if gold_path and gold_path.exists():
+            check = analysis.outcome_check(rows, pd.read_csv(gold_path, keep_default_na=False))
+            tables["outcome_check"] = check
+            tables["outcome_check_counts"] = analysis.outcome_check_counts(check)
+        for name, df in tables.items():
             path = target / f"{name}.csv"
             df.to_csv(path, index=False)
             written[f"analysis/{version}/{name}"] = path
@@ -293,22 +310,21 @@ def run_summaries(
     memo_version = next((k for k, v in versions.items() if v["rows"] is not None), None)
     if memo_path and memo_path.exists() and memo_version:
         rows = versions[memo_version]["rows"]
+        fields = {"outcome_by_reason": "reason_for_conversation", "outcome_by_disease": "disease"}
+        tables = {name: analysis.outcome_by(rows, field) for name, field in fields.items()}
+        tables["pain_points"] = analysis.pain_point_list(rows)
         blocks = {
             name: outcome_table_html(
-                analysis.outcome_by(rows, field),
-                field,
-                f"outputs/analysis/{memo_version}/{name}.csv",
+                tables[name], field, f"outputs/analysis/{memo_version}/{name}.csv"
             )
-            for name, field in (
-                ("outcome_by_reason", "reason_for_conversation"),
-                ("outcome_by_disease", "disease"),
-            )
+            for name, field in fields.items()
         }
         blocks["pain_points"] = pain_points_html(
-            analysis.pain_point_list(rows), f"outputs/analysis/{memo_version}/pain_points.csv"
+            tables["pain_points"], f"outputs/analysis/{memo_version}/pain_points.csv"
         )
         path = out_dir / "memo.html"
-        text = memo_path.read_text(encoding="utf-8")
+        # Numbers in the prose are filled from the same tables the page shows.
+        text = fill_values(memo_path.read_text(encoding="utf-8"), tables)
         path.write_text(render_memo(text, blocks, memo_breakdown(rows, records)), encoding="utf-8")
         written["memo"] = path
     return written
@@ -431,6 +447,7 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--out", type=Path, default=Path("outputs"))
     parser.add_argument("--labels", type=Path, default=DEFAULT_LABELS_DIR)
     parser.add_argument("--memo", type=Path, default=DEFAULT_MEMO_PATH)
+    parser.add_argument("--gold", type=Path, default=DEFAULT_GOLD_PATH)
     parser.add_argument(
         "--relabel",
         choices=[*MODELS, "all"],
@@ -459,7 +476,7 @@ def main(argv: list[str] | None = None) -> None:
             dynamics(version, args.data, args.labels)
 
     written = run_eda(args.data, args.out)
-    written |= run_summaries(args.data, args.labels, args.out, args.memo)
+    written |= run_summaries(args.data, args.labels, args.out, args.memo, args.gold)
     for name, path in written.items():
         print(f"wrote {name}: {path}")
 

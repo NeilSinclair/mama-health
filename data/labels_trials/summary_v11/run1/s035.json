@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-02T09:55:43+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to understand whether and how to shift the infusion due during the trip, then settled on discussing an earlier appointment with the team.",
+        "relevance": "strong",
+        "topic": "infusion timing around travel",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what to do about travelling while immunosuppressed and included vaccine checks in their end-of-chat plan.",
+        "relevance": "strong",
+        "topic": "travel precautions on infliximab",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user raised pre-existing-condition coverage and recognized they needed to declare Crohn's and infliximab.",
+        "relevance": "medium",
+        "topic": "travel insurance coverage",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked what paperwork to carry and engaged with the suggestion of a treatment letter and generic-name medication list.",
+        "relevance": "medium",
+        "topic": "medical documents for travel",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user raised knowing where to go if they had a flare abroad and included this in their summary of the plan.",
+        "relevance": "medium",
+        "topic": "finding care abroad",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user wanted to plan an infliximab infusion that would fall during a three-week trip and asked about shifting it, travel precautions, insurance, documentation, and care abroad. The assistant helped turn these into steps to discuss with the IBD team and handle before travelling; the user said the conversation turned a stressful worry into actionable steps and planned to call the team the next day."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6605,
+    "output_tokens": 1065
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-02T09:56:51+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user asked what alternatives existed to Humira and why another anti-TNF was being proposed after infliximab stopped working.",
+        "relevance": "strong",
+        "topic": "biologic treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user repeatedly described being brushed off and wanted to take part in the treatment decision rather than simply nod along.",
+        "relevance": "strong",
+        "topic": "being heard by consultant",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said these tests had not been mentioned and engaged with the idea of asking whether they had been done.",
+        "relevance": "medium",
+        "topic": "drug level and antibody testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked whether seeking a second opinion would cause problems on the NHS and discussed their worry about how it would look.",
+        "relevance": "medium",
+        "topic": "second opinion",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said they were furious and later described feeling less angry as they gained a plan.",
+        "relevance": "medium",
+        "topic": "anger about treatment decision",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user was furious that their consultant presented switching from infliximab to Humira as settled and brushed off questions; they asked about other treatment options, testing, and seeking a second opinion on the NHS. The assistant offered possible questions and options to raise, and the user said they felt more in control, wanted to participate rather than reject Humira, and planned to book an appointment and take the list."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 5964,
+    "output_tokens": 1210
+  },
+  "version": "gpt_luna"
+}

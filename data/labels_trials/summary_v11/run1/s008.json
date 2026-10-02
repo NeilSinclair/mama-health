@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-02T09:57:10+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether tirzepatide would be covered in France because they could not afford the full price.",
+        "relevance": "strong",
+        "topic": "medication reimbursement",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked about tirzepatide while their A1C remained high on metformin and later asked whether to raise adding or switching to it with their doctor.",
+        "relevance": "medium",
+        "topic": "tirzepatide treatment option",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said self-injection made them nervous and asked how to take the medication.",
+        "relevance": "medium",
+        "topic": "injection technique",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what side effects to watch for and received information about gastrointestinal effects and severe abdominal pain.",
+        "relevance": "medium",
+        "topic": "medication side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether tirzepatide could help with weight after mentioning weight gain since diagnosis.",
+        "relevance": "medium",
+        "topic": "weight loss benefit",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said they hated the weight they had gained, but did not return to that distress.",
+        "relevance": "low",
+        "topic": "weight-related distress",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned that their A1C remained high on metformin, but did not ask about the result in detail.",
+        "relevance": "low",
+        "topic": "high A1C",
+        "topic_group": "Tests & monitoring"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "The user with type 2 diabetes and a still-high A1C on metformin asked about tirzepatide, focusing on whether it was approved and reimbursed in France; they also asked about injections, side effects, and weight loss. The assistant repeatedly assured them it was covered, and the user said the cost worry had eased and planned to book with their doctor that week."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6041,
+    "output_tokens": 1993
+  },
+  "version": "gpt_luna"
+}

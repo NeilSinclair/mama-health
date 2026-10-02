@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-02T09:56:14+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether the new medicine could affect their long-term warfarin and whether their readings might change.",
+        "relevance": "strong",
+        "topic": "drug interaction safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether methotrexate tests would also monitor warfarin and returned to how tests guide dosing.",
+        "relevance": "medium",
+        "topic": "blood test monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked how tests help set the dose and confirmed their GP had stressed weekly dosing.",
+        "relevance": "medium",
+        "topic": "medicine dosing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user said they were worried at the start and later reported feeling much better.",
+        "relevance": "low",
+        "topic": "treatment-related worry",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked what to bring up with the GP before starting treatment.",
+        "relevance": "low",
+        "topic": "preparing for clinician visit",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user wanted to know whether starting methotrexate for rheumatoid arthritis was safe while taking warfarin for a heart valve issue. The assistant discussed monitoring, warning signs, weekly dosing, and questions for the GP; the user said they felt much better and reassured."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5966,
+    "cache_write_tokens": 0,
+    "input_tokens": 5969,
+    "output_tokens": 1391
+  },
+  "version": "gpt_luna"
+}

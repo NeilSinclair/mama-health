@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outcome check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Colours match the memo page and the explorer. */
+  :root {
+    --bg: #fbfaf8; --surface: #ffffff; --text: #1d1d1f; --muted: #6b6b70;
+    --border: #e6e3de; --accent: #b4532a; --accent-soft: #fbeee7; --chip: #f3f1ed; --user-bubble: #fbeee7; --bot-bubble: #f3f1ed;
+    --on-accent: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141414; --surface: #1c1c1e; --text: #ececec; --muted: #a0a0a6;
+      --border: #2e2e31; --accent: #ec8a5c; --accent-soft: #2e1f18; --chip: #26262a; --user-bubble: #2e1f18; --bot-bubble: #26262a;
+      --on-accent: #141414;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141414; --surface: #1c1c1e; --text: #ececec; --muted: #a0a0a6;
+    --border: #2e2e31; --accent: #ec8a5c; --accent-soft: #2e1f18; --chip: #26262a; --user-bubble: #2e1f18; --bot-bubble: #26262a;
+    --on-accent: #141414;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 Inter, system-ui, -apple-system, sans-serif; }
+  button, input { font: inherit; color: inherit; }
+  header { position: sticky; top: 0; z-index: 2; background: var(--bg); border-bottom: 1px solid var(--border); }
+  .bar { max-width: 820px; margin: 0 auto; padding: 10px 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+  header h1 { font-size: 17px; margin: 0; letter-spacing: -.005em; }
+  .count { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+  .dots { display: flex; gap: 6px; margin-left: auto; }
+  .dot { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface); font-size: 12px; font-weight: 600; cursor: pointer; padding: 0; font-variant-numeric: tabular-nums; }
+  .dot.done { background: var(--accent-soft); border-color: var(--accent); }
+  .dot.current { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .primary { background: var(--accent); color: var(--on-accent); border: 0; border-radius: 8px; padding: 6px 14px; font-size: 14px; font-weight: 600; cursor: pointer; }
+  .primary:disabled { opacity: .45; cursor: default; }
+  main { max-width: 820px; margin: 0 auto; padding: 20px 16px 230px; }
+  .guide { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 4px 16px; margin-bottom: 20px; font-size: 14.5px; }
+  .guide summary { cursor: pointer; font-weight: 600; padding: 8px 0; }
+  .guide dl { margin: 4px 0 10px; display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; }
+  .guide dt { font-weight: 600; }
+  .guide dd { margin: 0; }
+  .guide p { margin: 6px 0 10px; color: var(--muted); }
+  h2 { font-size: 21px; margin: 0 0 14px; letter-spacing: -.005em; }
+  .convo { display: flex; flex-direction: column; gap: 10px; }
+  .bubble { max-width: 82%; padding: 9px 13px; border-radius: 12px; white-space: pre-wrap; font-size: 15px; overflow-wrap: anywhere; }
+  .bubble.user { align-self: flex-end; background: var(--user-bubble); border-bottom-right-radius: 4px; }
+  .bubble.assistant { align-self: flex-start; background: var(--bot-bubble); border-bottom-left-radius: 4px; }
+  .bubble .who { display: block; font-size: 11px; font-weight: 600; color: var(--muted); margin-bottom: 2px; }
+  .end { text-align: center; color: var(--muted); font-size: 13px; margin: 18px 0 0; }
+  footer { position: fixed; left: 0; right: 0; bottom: 0; z-index: 2; background: var(--surface); border-top: 1px solid var(--border); }
+  .ask { max-width: 820px; margin: 0 auto; padding: 12px 16px 14px; display: grid; gap: 10px; }
+  .ask .q { font-weight: 600; font-size: 15px; margin: 0; }
+  .choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .choice { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px 10px; cursor: pointer; text-align: left; font-size: 14.5px; font-weight: 600; }
+  .choice:hover, .choice:focus-visible { border-color: var(--accent); }
+  .choice[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .choice kbd { font: 600 12px Inter, system-ui, sans-serif; border: 1px solid currentColor; border-radius: 4px; padding: 0 5px; margin-right: 6px; opacity: .7; }
+  .row { display: flex; gap: 8px; align-items: center; }
+  .row input { flex: 1; min-width: 0; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; font-size: 14px; }
+  .nav { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 6px 14px; font-size: 14px; cursor: pointer; white-space: nowrap; }
+  .nav:disabled { opacity: .4; cursor: default; }
+  .done-note { margin: 0; font-size: 14px; color: var(--muted); }
+  .done-note b { color: var(--text); }
+  @media (max-width: 560px) { .choices { grid-template-columns: 1fr; } .dots { margin-left: 0; } main { padding-bottom: 330px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <h1>Outcome check</h1>
+    <span class="count" id="count"></span>
+    <div class="dots" id="dots"></div>
+    <button type="button" class="primary" id="download">Download labels</button>
+  </div>
+</header>
+<main>
+  <details class="guide" id="guide" open>
+    <summary>How to judge</summary>
+    <p>Judge from what the user says in their last turns, not from the assistant's closing recap. A polite "ok thanks" on its own is not a need met. These are the definitions the labelling model was given.</p>
+    <dl>
+      <dt>Need met</dt><dd>The user got what they came for. Minor side questions may be left open.</dd>
+      <dt>Partial resolution</dt><dd>Part of the need was met, but the main need was left open: the user accepted a partial answer, or a plan that puts off the main question.</dd>
+      <dt>Unresolved need</dt><dd>The user left without their need met: they gave up, left unheard or frustrated, went elsewhere, or were reassured only by a claim the assistant can't back up.</dd>
+    </dl>
+  </details>
+  <h2 id="title"></h2>
+  <div class="convo" id="convo"></div>
+  <p class="end">End of conversation</p>
+</main>
+<footer>
+  <div class="ask">
+    <p class="q">How did the user's need stand when the conversation ended?</p>
+    <div class="choices" id="choices"></div>
+    <div class="row">
+      <input type="text" id="note" placeholder="Optional note: why, or anything odd" aria-label="Optional note">
+      <button type="button" class="nav" id="prev">← Previous</button>
+      <button type="button" class="nav" id="next">Next →</button>
+    </div>
+    <p class="done-note" id="done"></p>
+  </div>
+</footer>
+<script>
+// Each item: {item, session_id, turns}. The page holds no model labels.
+const ITEMS = /*__PAYLOAD__*/null;
+const CHOICES = ["need met", "partial resolution", "unresolved need"];
+const CHOICE_NAMES = { "need met": "Need met", "partial resolution": "Partial resolution", "unresolved need": "Unresolved need" };
+const STORE = "outcome_check_v1";
+const FILE_NAME = "outcome_check.csv";
+
+// Answers survive a refresh; the page still works if storage is unavailable.
+function load() {
+  try { return JSON.parse(localStorage.getItem(STORE)) || {}; } catch { return {}; }
+}
+function save() {
+  try { localStorage.setItem(STORE, JSON.stringify(state.answers)); } catch { /* keep going without it */ }
+}
+const state = { index: 0, answers: load() };
+
+function el(tag, attrs = {}, ...children) {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k.startsWith("on")) node.addEventListener(k.slice(2), v);
+    else node.setAttribute(k, v);
+  }
+  for (const c of children) node.append(c);
+  return node;
+}
+
+function answer(item) {
+  return state.answers[item.session_id] || { label: "", note: "" };
+}
+
+function setLabel(label) {
+  const item = ITEMS[state.index];
+  state.answers[item.session_id] = { ...answer(item), label };
+  save();
+  render();
+}
+
+function go(index) {
+  state.index = Math.max(0, Math.min(ITEMS.length - 1, index));
+  render();
+  window.scrollTo(0, 0);
+}
+
+function render() {
+  const item = ITEMS[state.index];
+  const labelled = ITEMS.filter((it) => answer(it).label).length;
+  document.getElementById("count").textContent = `${labelled} of ${ITEMS.length} labelled`;
+  document.getElementById("dots").replaceChildren(...ITEMS.map((it, i) => el("button", {
+    type: "button",
+    class: `dot${answer(it).label ? " done" : ""}${i === state.index ? " current" : ""}`,
+    title: `Conversation ${it.item}${answer(it).label ? ": labelled" : ""}`,
+    onclick: () => go(i),
+  }, String(it.item))));
+  document.getElementById("title").textContent = `Conversation ${item.item} of ${ITEMS.length}`;
+  document.getElementById("convo").replaceChildren(...item.turns.map((t) => el("div", { class: `bubble ${t.role}` },
+    el("span", { class: "who" }, `t${t.turn} · ${t.role}`), t.text)));
+  document.getElementById("choices").replaceChildren(...CHOICES.map((c, i) => el("button", {
+    type: "button", class: "choice", "aria-pressed": String(answer(item).label === c), onclick: () => setLabel(c),
+  }, el("kbd", {}, String(i + 1)), CHOICE_NAMES[c])));
+  document.getElementById("note").value = answer(item).note;
+  document.getElementById("prev").disabled = state.index === 0;
+  document.getElementById("next").disabled = state.index === ITEMS.length - 1;
+  const done = document.getElementById("done");
+  done.replaceChildren(...(labelled === ITEMS.length
+    ? [el("b", {}, `All ${ITEMS.length} labelled. `), `Download the labels and save the file as data/gold/${FILE_NAME}.`]
+    : ["Keys: 1, 2, 3 to label; ← and → to move. Answers are kept if you refresh."]));
+}
+
+document.getElementById("note").addEventListener("input", (e) => {
+  const item = ITEMS[state.index];
+  state.answers[item.session_id] = { ...answer(item), note: e.target.value };
+  save();
+});
+document.getElementById("prev").addEventListener("click", () => go(state.index - 1));
+document.getElementById("next").addEventListener("click", () => go(state.index + 1));
+document.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "INPUT" || e.metaKey || e.ctrlKey || e.altKey) return;
+  if (["1", "2", "3"].includes(e.key)) setLabel(CHOICES[Number(e.key) - 1]);
+  else if (e.key === "ArrowRight") go(state.index + 1);
+  else if (e.key === "ArrowLeft") go(state.index - 1);
+});
+
+// CSV: item, session_id, human_end_reason, note. Unlabelled conversations keep an empty label.
+function csv() {
+  const quote = (s) => `"${String(s).replace(/"/g, '""')}"`;
+  const lines = ITEMS.map((it) => [it.item, it.session_id, answer(it).label, quote(answer(it).note)].join(","));
+  return ["item,session_id,human_end_reason,note", ...lines].join("\n") + "\n";
+}
+document.getElementById("download").addEventListener("click", () => {
+  const url = URL.createObjectURL(new Blob([csv()], { type: "text/csv" }));
+  const a = el("a", { href: url, download: FILE_NAME });
+  document.body.append(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+});
+
+render();
+</script>
+</body>
+</html>

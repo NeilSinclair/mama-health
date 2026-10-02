@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-02T09:57:40+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described frequent bowel movements, occasional blood, and urgency with little warning as the main problem affecting daily life.",
+        "relevance": "strong",
+        "topic": "bowel urgency and bleeding",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said appointments were difficult to get and asked how to get a gastroenterology appointment faster.",
+        "relevance": "medium",
+        "topic": "specialist access",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked what to ask the doctor about, then specifically asked whether rectal treatment could help urgency.",
+        "relevance": "medium",
+        "topic": "treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said urgency affected their job and caring for their children, and later described fear of an accident during a meeting.",
+        "relevance": "medium",
+        "topic": "work and caregiving impact",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user said the symptoms were embarrassing to discuss and later said they had come feeling ashamed.",
+        "relevance": "medium",
+        "topic": "embarrassment about symptoms",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user reported being told by their doctor to be careful because UC was like this and said they had felt they were complaining too much.",
+        "relevance": "medium",
+        "topic": "clinician dismissal",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked what a calprotectin test shows and whether it can indicate inflammation without a colonoscopy.",
+        "relevance": "medium",
+        "topic": "inflammation testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user had loperamide at home and said they would wait to ask their doctor before taking it.",
+        "relevance": "low",
+        "topic": "loperamide safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user said they felt angry after learning there might be options beyond accepting the symptoms as normal.",
+        "relevance": "low",
+        "topic": "anger about past care",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user described ulcerative colitis urgency, frequent bowel movements, and occasional blood that disrupted work and family life, and asked what could be done. The assistant discussed specialist review, possible treatment questions, testing, coping strategies, and checking with a doctor before taking loperamide; the user said they felt less ashamed and had a plan."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 7404,
+    "output_tokens": 1425
+  },
+  "version": "gpt_luna"
+}

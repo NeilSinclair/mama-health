@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-02T09:50:46+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to compare options for an infusion due during the trip and settled on asking to move it before departure.",
+        "relevance": "strong",
+        "topic": "infusion timing during travel",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked what precautions to take while travelling on infliximab, and the assistant discussed vaccines and infection prevention.",
+        "relevance": "medium",
+        "topic": "travel precautions on infliximab",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user raised the need to check coverage for a pre-existing condition and engaged with advice to declare Crohn's and infliximab.",
+        "relevance": "medium",
+        "topic": "travel insurance coverage",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked what paperwork to carry and responded positively to suggestions for a treatment letter and medication list.",
+        "relevance": "medium",
+        "topic": "medical travel documentation",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said they wanted to know where to seek care if a flare occurred while away.",
+        "relevance": "medium",
+        "topic": "care for a flare abroad",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said they usually feel tired the day after an infusion and used that to rule out scheduling it just before flying.",
+        "relevance": "medium",
+        "topic": "post-infusion fatigue",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user wanted to plan an infliximab infusion due during a three-week trip and asked about shifting it, travel precautions, insurance, documentation, and care abroad. The assistant helped turn these into a checklist, including contacting the IBD team about timing and vaccines; the user said they would call the next day and that the steps eased their worry."
+  },
+  "prompt_sha256": "af85dba9cd15f4f621d94089c6d16290f66a3606ce1459cb3d1936d73df0fcae",
+  "prompt_version": "summary_v10",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4614,
+    "cache_write_tokens": 0,
+    "input_tokens": 6400,
+    "output_tokens": 1322
+  },
+  "version": "gpt_luna"
+}

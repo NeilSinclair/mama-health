@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-02T09:57:57+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with a worsening flare and described its locations, thickness, flaking, and lack of response to shampoos.",
+        "relevance": "strong",
+        "topic": "scalp psoriasis flare",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked what treatment comes after shampoos and discussed steroid preparations and calcipotriol as possible options.",
+        "relevance": "strong",
+        "topic": "scalp treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked for help with intense nighttime itching and discussed the difficulty of not scratching.",
+        "relevance": "medium",
+        "topic": "scalp itching",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked whether to see a GP or dermatologist and noted that dermatology appointments can take a long time to get.",
+        "relevance": "medium",
+        "topic": "specialist wait times",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user specifically asked whether scalp steroids are safe given the possibility of skin thinning and said the answer was reassuring.",
+        "relevance": "medium",
+        "topic": "topical steroid safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user said they were at the end of their rope and later expressed that the situation felt like a lot.",
+        "relevance": "medium",
+        "topic": "illness-related distress",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user said flakes falling on their shoulders were embarrassing at work, but did not return to the work impact.",
+        "relevance": "low",
+        "topic": "visible symptoms at work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user asked whether calcipotriol could be bought or required a prescription.",
+        "relevance": "low",
+        "topic": "prescription access",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user described a three-week scalp psoriasis flare with thick scale, itching, and visible flakes at work, despite using medicated shampoos. The assistant discussed scale-softening, possible topical treatments, itch management, and care options; the user ended with a plan to book a GP appointment and try oil while waiting, saying they had more of a plan than before."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6622,
+    "output_tokens": 1437
+  },
+  "version": "gpt_luna"
+}

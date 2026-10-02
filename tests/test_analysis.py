@@ -1,3 +1,5 @@
+import pandas as pd
+
 from mama_analysis.analysis import (
     ending_mismatches,
     ending_vs_outcome,
@@ -5,6 +7,8 @@ from mama_analysis.analysis import (
     is_silent_failure,
     missing_safety_labels,
     outcome_by,
+    outcome_check,
+    outcome_check_counts,
     pain_point_list,
     pushback_status,
     pushbacks_table,
@@ -255,3 +259,41 @@ def test_pain_point_list_keeps_columns_when_no_pain_points():
         "where_topic_group",
         "where_disease",
     ]
+
+
+def test_outcome_check_compares_human_and_model_end_reasons():
+    rows = [
+        _row("a", "completed", "need met"),
+        _row("b", "completed", "partial resolution"),
+        _row("c", "user_closed", "unresolved need"),
+        _row("d", "completed", "need met"),
+    ]
+    gold = pd.DataFrame(
+        {
+            "item": [1, 2, 3, 4],
+            "session_id": ["c", "b", "a", "d"],
+            "human_end_reason": ["unresolved need", "need met", "need met", ""],
+            "note": ["gave up", "", "", ""],
+        }
+    )
+    check = outcome_check(rows, gold)
+    assert list(check.columns) == [
+        "item",
+        "session_id",
+        "human_end_reason",
+        "model_end_reason",
+        "agree",
+        "note",
+    ]
+    # d is unlabelled, so it is skipped; the file's order is kept.
+    assert list(check["session_id"]) == ["c", "b", "a"]
+    assert list(check["model_end_reason"]) == ["unresolved need", "partial resolution", "need met"]
+    assert list(check["agree"]) == [True, False, True]
+
+    counts = outcome_check_counts(check).set_index("human_end_reason")
+    assert list(counts.index) == ["need met", "partial resolution", "unresolved need"]
+    assert counts.loc["need met", "need met"] == 1
+    assert counts.loc["need met", "partial resolution"] == 1
+    assert counts.loc["unresolved need", "unresolved need"] == 1
+    assert counts.loc["partial resolution", "total"] == 0
+    assert counts["total"].sum() == 3

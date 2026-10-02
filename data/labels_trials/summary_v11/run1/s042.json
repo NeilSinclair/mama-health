@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-02T09:57:45+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave wrong-country advice"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came wanting a starting point and asked about the disease, its course, and where it affects the digestive tract.",
+        "relevance": "strong",
+        "topic": "new Crohn's diagnosis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user described feeling overwhelmed after diagnosis and later said the conversation made the situation feel manageable.",
+        "relevance": "medium",
+        "topic": "emotional overwhelm",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked what category their medication belonged to and identified clarifying the plan after budesonide as their main next step.",
+        "relevance": "medium",
+        "topic": "budesonide treatment plan",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked what monitoring to expect and received an overview of tests and follow-up.",
+        "relevance": "medium",
+        "topic": "Crohn's monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked whether to seek care at a larger specialist center after mentioning their current gastroenterologist.",
+        "relevance": "medium",
+        "topic": "specialist care options",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said they did not know how to organize the information and accepted the idea of starting a page of notes and questions.",
+        "relevance": "medium",
+        "topic": "organizing health information",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user directly asked whether they should follow a Crohn's diet and received guidance on an individualized approach.",
+        "relevance": "medium",
+        "topic": "Crohn's diet",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked where to learn more and raised concern that US-based advice might not apply in India.",
+        "relevance": "medium",
+        "topic": "reliable health information",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "Recently diagnosed with Crohn's, the user sought a clear starting point and discussed disease course, medication, monitoring, diet, and care options. After the assistant suggested a US-based resource, the user noted being in India and questioned how much US advice applied; the assistant acknowledged this and shifted to India-specific care context. The user felt the conversation made things manageable and planned to write questions and clarify the plan after budesonide with their doctor."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 7209,
+    "output_tokens": 1560
+  },
+  "version": "gpt_luna"
+}

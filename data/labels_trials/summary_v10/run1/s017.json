@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-10-02T09:51:03+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot repeated a corrected mistake",
+      "bot prioritized clinician review"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user asked why morning readings were high and compared them with lower after-meal readings.",
+        "relevance": "strong",
+        "topic": "morning glucose highs",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user clarified they take 1000 mg of metformin at night and did not know whether it was extended release.",
+        "relevance": "medium",
+        "topic": "metformin routine",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user described walking after dinner daily and eating less rice, then asked what else they could do themselves.",
+        "relevance": "medium",
+        "topic": "diet and walking",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked about waking to check glucose at 3 a.m. and what the reading would lead to.",
+        "relevance": "medium",
+        "topic": "overnight glucose check",
+        "topic_group": "Tests & monitoring"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why morning glucose readings were around 160–180 despite lower after-meal readings, and said they take metformin at night, walk daily, and have reduced rice. The assistant repeatedly mentioned insulin after the user clarified they do not take it, and the user asked for actions they could take themselves rather than doctor-related advice; the assistant suggested a 3 a.m. check and clinician review. The user said they understood, but did not clearly confirm that their need was met."
+  },
+  "prompt_sha256": "af85dba9cd15f4f621d94089c6d16290f66a3606ce1459cb3d1936d73df0fcae",
+  "prompt_version": "summary_v10",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4614,
+    "cache_write_tokens": 0,
+    "input_tokens": 5971,
+    "output_tokens": 3088
+  },
+  "version": "gpt_luna"
+}

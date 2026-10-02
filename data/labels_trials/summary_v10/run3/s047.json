@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-10-02T09:52:09+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not answer the user's request"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether the medicines are safe together and whether methotrexate could affect warfarin readings.",
+        "relevance": "strong",
+        "topic": "methotrexate and warfarin safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether methotrexate blood tests would detect warfarin-related changes and whether readings might move after starting.",
+        "relevance": "medium",
+        "topic": "warfarin blood monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to watch for at home, and the assistant listed possible bleeding and methotrexate-related warning signs.",
+        "relevance": "medium",
+        "topic": "medication warning signs",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether blood tests help set the dose and confirmed they understood the medicine is taken weekly.",
+        "relevance": "low",
+        "topic": "methotrexate dosing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what to raise with the GP before starting and received a list of points to confirm.",
+        "relevance": "low",
+        "topic": "preparing for a gp visit",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user wanted to know whether starting methotrexate for rheumatoid arthritis was safe while taking warfarin, and asked about monitoring, home warning signs, and dosing. The assistant offered general reassurance and practical points to confirm with the GP, but did not clearly answer whether the two medicines interact; the user said they felt much better by the end."
+  },
+  "prompt_sha256": "af85dba9cd15f4f621d94089c6d16290f66a3606ce1459cb3d1936d73df0fcae",
+  "prompt_version": "summary_v10",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5761,
+    "cache_write_tokens": 0,
+    "input_tokens": 5764,
+    "output_tokens": 1763
+  },
+  "version": "gpt_luna"
+}

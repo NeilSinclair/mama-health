@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-10-02T09:57:02+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot contradicted earlier answer"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether their prescribed 2.4 g daily dose was correct or too low, and ended saying the explanation cleared up their worry.",
+        "relevance": "strong",
+        "topic": "mesalamine dose adequacy",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked why formulation mattered and identified their medicine as twice-daily granules in sachets.",
+        "relevance": "medium",
+        "topic": "mesalamine formulation",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked how long it would take to know whether mesalamine was working and received a timeframe and guidance on when to contact their gastroenterologist.",
+        "relevance": "medium",
+        "topic": "treatment response timeline",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user briefly asked whether to take the sachets with food.",
+        "relevance": "low",
+        "topic": "taking sachets with food",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user mentioned their symptoms had been moderate as context for asking whether the dose was appropriate.",
+        "relevance": "low",
+        "topic": "moderate colitis symptoms",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said they had been diagnosed about a month earlier, but did not ask further about the diagnosis itself.",
+        "relevance": "low",
+        "topic": "recent ulcerative colitis diagnosis",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether their newly prescribed mesalamine dose of 1.2 g twice daily was right after the assistant initially gave 4.8 g as a typical dose, then acknowledged that it had given an overly broad answer. The user asked about formulation, food, and how long treatment might take to work; the assistant answered, and the user said the dose explanation made them feel better and cleared things up."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 5989,
+    "output_tokens": 1147
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-02T09:55:46+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to understand the options and what might influence the rheumatologist's recommendation, returning to the decision throughout the conversation.",
+        "relevance": "strong",
+        "topic": "biologic treatment choice",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said this was the question that scared them most and discussed how medication risks compare with risks from active RA.",
+        "relevance": "strong",
+        "topic": "long-term cancer risk",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user described persistent hand and wrist synovitis and prolonged morning stiffness as evidence that current treatment was not controlling the disease.",
+        "relevance": "medium",
+        "topic": "active rheumatoid arthritis symptoms",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user raised recurrent sinus infections and prior shingles to understand how their history might affect medication selection.",
+        "relevance": "medium",
+        "topic": "infection and shingles history",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether Shingrix was appropriate at their age and while immunosuppressed, and the timing was discussed.",
+        "relevance": "medium",
+        "topic": "shingles vaccination",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked how long it would take to know whether a biologic was working and discussed checkpoints for assessing response.",
+        "relevance": "medium",
+        "topic": "treatment response timeline",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked how injections and infusions differ in practice because they travel for work.",
+        "relevance": "medium",
+        "topic": "treatment logistics during travel",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user wanted to arrive prepared for a shared discussion and asked for concrete questions to bring to the rheumatologist.",
+        "relevance": "medium",
+        "topic": "rheumatology appointment preparation",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user mentioned being needle-shy, but did not return to this concern after the assistant discussed auto-injectors.",
+        "relevance": "low",
+        "topic": "injection anxiety",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked whether possible hormone therapy could interact with RA treatment and said they would coordinate with their clinicians.",
+        "relevance": "low",
+        "topic": "hormone therapy interactions",
+        "topic_group": "Taking medication safely"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user described active RA despite methotrexate and sulfasalazine and wanted to understand biologic options before a rheumatology appointment. They discussed cancer risk, infection and shingles history, vaccination, travel logistics, and how to monitor treatment; the user said the preparation lowered their anxiety and helped them feel ready for a real discussion with the rheumatologist."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 8071,
+    "output_tokens": 1583
+  },
+  "version": "gpt_luna"
+}

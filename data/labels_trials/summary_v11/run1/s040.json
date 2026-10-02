@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-02T09:57:38+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking why TSH had risen across three checks despite an unchanged dose and returned to the trend while discussing next steps.",
+        "relevance": "strong",
+        "topic": "rising tsh trend",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user identified a recently started calcium supplement, asked whether to move it later, and discussed separating it from levothyroxine.",
+        "relevance": "medium",
+        "topic": "calcium timing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user connected gradual thyroid function loss with long-standing Hashimoto's and questioned whether medication doses stay fixed forever.",
+        "relevance": "medium",
+        "topic": "hashimoto's progression",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked whether to contact their doctor sooner or wait for routine testing and engaged with the suggested recheck interval.",
+        "relevance": "medium",
+        "topic": "follow-up timing",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said the creeping TSH had worried them as a possible sign of something deteriorating, then said the explanation was reassuring.",
+        "relevance": "medium",
+        "topic": "fear of deterioration",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned being somewhat more tired and said poorer sleep made it hard to tell whether fatigue was thyroid-related.",
+        "relevance": "low",
+        "topic": "fatigue and sleep",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why TSH was gradually rising despite an unchanged levothyroxine dose and learned that calcium taken with breakfast might affect absorption, while Hashimoto's progression and other factors could also contribute. They discussed moving calcium farther from the medication, contacting their doctor about the trend and fatigue, and rechecking after a change; the user said the explanation was reassuring and left with an action plan."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6836,
+    "output_tokens": 812
+  },
+  "version": "gpt_luna"
+}

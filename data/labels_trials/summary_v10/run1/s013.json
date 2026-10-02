@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-02T09:50:45+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking how to address flares that repeatedly occur during stressful work weeks, describing diarrhea, cramping and urgency.",
+        "relevance": "strong",
+        "topic": "stress-triggered IBS flares",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user specifically asked what to do during a meeting-heavy morning and discussed antispasmodics, peppermint oil and loperamide.",
+        "relevance": "medium",
+        "topic": "acute flare treatments",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user explored hypnotherapy and IBS-focused CBT as longer-term options and asked where to find them.",
+        "relevance": "medium",
+        "topic": "gut-directed therapies",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said they drink several coffees on stressful days and considered reducing caffeine as part of a plan.",
+        "relevance": "medium",
+        "topic": "caffeine use",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user contrasted the advice previously received about fiber with this discussion and asked whether to involve their doctor.",
+        "relevance": "medium",
+        "topic": "doctor communication",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said urgency and repeated bathroom trips disrupt meetings, but did not return to the work impact as a separate concern.",
+        "relevance": "low",
+        "topic": "meeting disruption",
+        "topic_group": "Work & life plans"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user described work-stress-linked IBS flares with diarrhea, cramping and urgency, and asked for both longer-term and in-the-moment options. The assistant discussed gut-directed therapies, acute symptom treatments, caffeine and involving the doctor; the user said the advice was helpful and accepted a plan to try."
+  },
+  "prompt_sha256": "af85dba9cd15f4f621d94089c6d16290f66a3606ce1459cb3d1936d73df0fcae",
+  "prompt_version": "summary_v10",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4614,
+    "cache_write_tokens": 0,
+    "input_tokens": 6705,
+    "output_tokens": 1229
+  },
+  "version": "gpt_luna"
+}

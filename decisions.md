@@ -405,3 +405,49 @@ Append-only. Each entry records the decision, its rationale, the alternatives co
   - `silent_failures.csv` moved from s022, s024 to s024, s047. By our hand check all three are silent failures.
   - "Understand my condition" is 21 of 24 need met in `outcome_by_reason.csv`, with s022 counted as met. By the hand check it is 20 of 24, and 38 of 50 overall.
   - Known weakness: `bot did not answer the user's request` is 7 words, while `consolidate_v4` caps categories at 5 words and `summary_v9` caps labels at 6. Both prompts also say to keep it verbatim, and the committed mapping does. Nothing in code pins the three names, so a later `--remap` could shorten it. The prompts are not edited in place; fix the caps in the next version.
+
+### D-049 — Numbers in the memo's prose can be filled from the pipeline tables
+- **Date:** 2026-10-02
+- **Decision:** The memo draft can write a number as `{{ table | row | column }}`, e.g. `{{ outcome_by_reason | emotional support | need_met_pct }}`. `memo.fill_values` replaces it with that cell when the pipeline renders `outputs/memo.html`. The tables are the ones the page already shows: `outcome_by_reason`, `outcome_by_disease` and `pain_points`. The row is the value in the table's first column, as written in the CSV. A placeholder that is malformed, or names an unknown table, row or column, fails the run and lists the valid names. The four "needs met" percentages in "Where it is working" now use it.
+- **Rationale:** The human asked for the numbers in that paragraph to follow the tables. A relabel then updates the prose and the table together, and a number in the prose cannot drift from its source (CLAUDE.md traceability).
+- **Alternatives considered:** Arithmetic in placeholders (sums, shares). Not built: the four numbers are single cells. Filling silently with a blank when a row is missing; rejected, because a wrong or missing number should stop the run.
+- **Caveats:**
+  - Only the number updates. The words around it ("generally working", "much less frequently") are still written by hand, so check them after a relabel.
+  - The draft read as plain Markdown shows the placeholder, not the number. `MEMO.md`, the Markdown submission, needs the numbers written in, or a filled Markdown copy written by the pipeline (not built).
+  - The next paragraph's "43 (86%)" and "7 (14%)" are sums over two rows, so they are still typed by hand.
+  - A relabel that leaves a reason group with no conversations drops its row, and the run then fails on that placeholder until the prose is edited.
+- **What would change it:** More prose numbers that need sums or shares; then add those as columns or rows of a pipeline table rather than arithmetic in the draft.
+
+### D-050 — A blind check of the outcome label on ten conversations; the human's reading of s022 and s008 stands
+- **Date:** 2026-10-02
+- **Decision:**
+  - `scripts/make_outcome_check.py` writes `docs/outcome_check.html`: ten conversations for the human to label by hand. Five are ones the model labelled need met and five are ones it labelled partial resolution or unresolved need, drawn with a fixed seed and shown in shuffled order.
+  - The page shows only the transcript, as the model saw it: no session ID, no model label and no metadata. The human picks need met, partial resolution or unresolved need (the model's three values, with the prompt's definitions on the page) and can add a note.
+  - The labels download as a CSV (`item, session_id, human_end_reason, note`), to be saved as `data/gold/outcome_check.csv`.
+  - The human read s022 and s008 and agrees with the model on both: need met, no pain point. This closes the s022 caveats in D-038 and D-048: memo figures no longer need a note about s022, and the counts in `outputs/` stand (39 need met, 2 silent failures).
+- **Rationale:** There was no hand-labelled set. The "hand checks" in NOTES were Claude's readings, and the human overruled the two that still disagreed with the outputs. The human asked for a small set they could label quickly without seeing the model's label.
+- **Caveats:**
+  - Five and five is balanced by the model's label, not representative: the data has 39 need met and 11 not. Agreement should be reported per group, not as one accuracy figure.
+  - Ten conversations is a sanity check. It can show the label is badly off; it can't show it is right.
+  - It is not fully blind. The human has already read 13 conversations with their labels in view (those named in the memo draft, plus s008). The script avoids them where it can, but only three of the 11 not-need-met conversations are outside that list, so two of that group's five come from it.
+- **Alternatives considered:** A random ten from all 50, which would hold about two not-need-met conversations, too few to test that side. Labelling all 50, which the human did not ask for. Showing the session ID, which makes the label easy to recall from the explorer.
+- **What would change it:** Disagreement on the ten. Then label more conversations, or revisit the outcome definitions in the prompt.
+- **Next step, not built:** once the CSV exists, a tested pipeline function compares it with the model's labels and writes the result to `outputs/`.
+- **Addendum (2026-10-02, the comparison is built and run):**
+  - The pipeline now reads `data/gold/outcome_check.csv`, if it exists, and writes two tables: `outputs/analysis/<version>/outcome_check.csv` (one row per conversation: the human's end reason, the model's, and whether they agree) and `outcome_check_counts.csv` (human's label by model's label). `--gold` points it at another file. The model's labels are the committed `summary_v9` cache; no new API call is made.
+  - Result: the human and the model agree on 9 of 10, across all three end reasons. All five that the model called need met, the human also called need met. Of the five the model called not met, the human agreed on four (three unresolved, one partial) and called one need met: s047, which the model labels partial resolution.
+  - s047 is the kind of case the silent-failure rule (D-037) was written for: the user asks whether methotrexate will move their warfarin readings (t9), gets no direct answer, and ends "I feel much better about it now". The model counts the unanswered question; the human counts the user's own verdict. The outputs keep the model's label. With the human's label, need met would be 40 of 50 and `silent_failures.csv` would list only s024.
+  - The per-group caveat above still holds: this is 5 of 5 and 4 of 5, not an accuracy rate for all 50.
+
+### D-051 — Keep `summary_v9`; `summary_v10` and `summary_v11` are not adopted, and s047 is not overridden
+- **Date:** 2026-10-02
+- **Decision:** The human chose to keep the committed `summary_v9` labels as they are. `summary_v11` is not adopted, and no hand override is applied for s047. So `outputs/` keeps the model's label for s047 (partial resolution, "bot did not answer the user's request"), although the human reads it as need met. Need met stays 39 of 50, and `silent_failures.csv` keeps s024 and s047.
+- **Rationale:** The trial (NOTES, 2026-10-02) showed no net gain. v11 matched the human on all ten gold conversations, but on all 50 it moved s022 from need met to not resolved with "bot missed urgent symptom" in 3 of 3 runs, against the human's reading. On the 12 conversations the human has read, v9 and v11 each match on 11. v11's single full run also changed the reason for conversation in 7 conversations and raw pain-point labels in 9. v10 failed on its one target and was not run in full.
+- **Alternatives considered:**
+  - A hand-override file for s047 on top of v9 (Opus's recommendation). The human declined: the figures stay the model's.
+  - Adopting v11 with an override for s022. It would trade one disagreement for another and move other labels.
+  - A third prompt draft aimed at s022. Each fix so far moved something else, and D-048 already warned against fitting the prompt to one conversation.
+- **Consequences:**
+  - The gold check stands as the measure of the outcome label: 9 of 10, in `outputs/analysis/<version>/outcome_check.csv`. The memo can cite that, and should say that the one disagreement (s047) is counted in the tables as the model labelled it.
+  - `summary_v10.md`, `summary_v11.md`, `scripts/prompt_trial.py` and `data/labels_trials/` are kept as the record of the trial. The pipeline does not read them.
+- **What would change it:** More hand labels that show v9 is wrong on a pattern, not one conversation; or a need to relabel for another reason, at which point v11's rule could be retested.

@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-10-02T09:59:27+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot missed urgent symptom"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user described urgency and recurring blood after months without symptoms, then said both were worsening.",
+        "relevance": "strong",
+        "topic": "urgency and rectal bleeding",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked whether Humira might be losing effect and explored what might happen if it was failing.",
+        "relevance": "strong",
+        "topic": "biologic treatment failure",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said the appointment was weeks away and asked whether it was okay to wait.",
+        "relevance": "medium",
+        "topic": "gastroenterology appointment timing",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked whether these tests would be checked and included them in their appointment list.",
+        "relevance": "medium",
+        "topic": "drug level and antibody testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked whether a failing treatment might be adjusted or switched and whether other options existed.",
+        "relevance": "medium",
+        "topic": "treatment alternatives",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said they were scared of a flare and later reported feeling calmer.",
+        "relevance": "medium",
+        "topic": "flare-related fear",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked what to eat when urgency made them reluctant to eat.",
+        "relevance": "low",
+        "topic": "food during symptoms",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user described renewed urgency and small amounts of blood while stable on Humira, with symptoms worsening over several days, and asked about antibodies, testing, and treatment options. The assistant helped organize questions for an appointment weeks away and offered diet suggestions, but advised that waiting was reasonable despite the worsening symptoms, saying to seek care if things changed dramatically. The user felt calmer, but the question of whether it was safe to wait was not adequately resolved."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 6433,
+    "cache_write_tokens": 0,
+    "input_tokens": 6436,
+    "output_tokens": 1928
+  },
+  "version": "gpt_luna"
+}
