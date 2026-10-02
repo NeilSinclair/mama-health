@@ -19,6 +19,10 @@ def _chips(*labels):
     return [{"label": x, "raw": [x]} for x in labels]
 
 
+def _strong(group):
+    return {"label": group.lower(), "topic_group": group, "relevance": "strong"}
+
+
 def _row(sid, reason, topics, end, disease):
     return {
         "session_id": sid,
@@ -73,8 +77,15 @@ def test_outcome_table_html_shows_resolved_unresolved_and_pct():
     page = outcome_table_html(outcome_by(ROWS, "disease"), "disease", "outputs/x.csv")
     assert '<table class="sortable">' in page
     assert "<th>Disease</th>" in page and "outputs/x.csv" in page
-    heads = re.findall(r'<th class="num">([^<]+)</th>', page)
-    assert heads == ["Resolved", "Unresolved", "Total", "Need met %"]
+    heads = re.findall(r'<th class="num"[^>]*>([^<]+)</th>', page)
+    assert heads == ["Resolved", "Unresolved", "Total", "Resolved %"]
+    # Behind a disclosure widget, closed by default, in ascending order of resolved %.
+    assert page.startswith(
+        '<details class="tablefold"><summary>Table: resolved and unresolved by disease</summary>'
+    )
+    assert "<details open" not in page and page.endswith("</figure></details>")
+    assert '<th class="num" aria-sort="ascending">Resolved %</th>' in page
+    assert re.findall(r'<th scope="row">([^<]+)</th>', page) == ["ibs", "type 2 diabetes", "All"]
     assert re.search(
         r'<th scope="row">ibs</th>'
         + r'<td class="num">1</td>' * 2
@@ -83,6 +94,37 @@ def test_outcome_table_html_shows_resolved_unresolved_and_pct():
     )
     assert re.search(r'<tr class="all"><th scope="row">All</th>.*?67%</td></tr>', page)
     assert "type 2 diabetes" in page
+
+
+def test_outcome_table_html_sorts_by_resolved_pct_then_larger_group():
+    # "few" sorts before "more" by name, so a tie broken by name would fail below.
+    ends = {"more": ["need met"] * 2 + ["unresolved need"] * 2, "all": ["need met"] * 3}
+    ends["few"] = ["need met", "unresolved need"]
+    rows = [
+        _row(f"{d}{i}", "decide", ["t"], end, d)
+        for d, es in ends.items()
+        for i, end in enumerate(es)
+    ]
+    df = outcome_by(rows, "disease")
+    assert df["disease"].tolist() == ["more", "all", "few"]  # by total, as in the CSV
+    page = outcome_table_html(df, "disease", "s")
+    # 50% (4 conversations), 50% (2 conversations), 100%, then All.
+    assert re.findall(r'<th scope="row">([^<]+)</th>', page) == ["more", "few", "all", "All"]
+
+
+def test_outcome_table_html_by_topic_group_uses_the_overall_counts():
+    rows = [r | {"topic_scores": r["topic_scores"] + [_strong("Access to care")]} for r in ROWS]
+    df = outcome_by(rows, "topic_group")
+    assert df["total"].sum() == 2 * len(ROWS)
+    page = outcome_table_html(df, "topic_group", "outputs/t.csv", overall=(2, 1, 3))
+    assert "<th>Topic group (strong topics)</th>" in page
+    assert re.search(
+        r'<tr class="all"><th scope="row">All</th><td class="num">2</td><td class="num">1</td>'
+        r'<td class="num">3</td><td class="num">67%</td></tr>',
+        page,
+    )
+    assert "can count in more than one row" in page
+    assert "can count in more than one row" not in outcome_table_html(df, "topic_group", "s")
 
 
 def test_fill_values_replaces_placeholders_with_table_cells():
@@ -131,7 +173,8 @@ def test_render_memo_replaces_markers_and_embeds_breakdown():
     data = {"rows": [{"summary": "</script>"}], "fields": []}
     page = render_memo(text, {"t": "<table id='t'></table>"}, data)
     assert "<title>My memo</title>" in page
-    assert "<h1>My memo</h1>" in page and "<em>text</em>" in page
+    assert '<h1 id="my-memo">My memo</h1>' in page and "<em>text</em>" in page
+    assert "<nav" not in page  # no sections, so no contents list
     assert "<table id='t'></table>" in page and 'id="bgrid"' in page
     deepdive = page[page.index('<details class="deepdive">') :]
     assert deepdive.index('id="bgrid"') < deepdive.index("</section></details>")
@@ -139,6 +182,20 @@ def test_render_memo_replaces_markers_and_embeds_breakdown():
     payload = page.split("const DATA = ", 1)[1].split(";\n", 1)[0]
     assert "</script>" not in payload
     assert json.loads(payload) == data
+
+
+def test_render_memo_contents_list_links_second_and_third_level_headings():
+    text = "# Memo\n\n## First part\n\n### A detail\n\n#### Too deep\n\n## Second part\n"
+    page = render_memo(text, {}, {"rows": [], "fields": []})
+    nav = page[page.index('<nav class="contents"') : page.index("</nav>")]
+    assert re.findall(r'<a href="#([^"]+)">([^<]+)</a>', nav) == [
+        ("first-part", "First part"),
+        ("a-detail", "A detail"),
+        ("second-part", "Second part"),
+    ]
+    assert page.index("</nav>") < page.index("<main>")
+    assert '<h2 id="first-part">First part</h2>' in page
+    assert '<h4 id="too-deep">Too deep</h4>' in page
 
 
 def test_render_memo_rejects_unknown_marker():
@@ -166,6 +223,9 @@ def test_pain_points_html_one_table_with_where_column_per_field():
     assert '<span class="wchip">type 2 diabetes <b>1</b></span>' in page
     assert '<th scope="row">bot repeated advice</th><td class="num">3</td>' in page
     assert "any pain point" not in page and 'class="all"' not in page
+    assert page.startswith(
+        '<details class="tablefold"><summary>Table: conversation pain points</summary>'
+    )
     assert "s1, s2, s3" in page and "outputs/p.csv" in page
 
 

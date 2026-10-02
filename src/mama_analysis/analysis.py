@@ -111,24 +111,29 @@ def ending_vs_outcome(rows: list[dict[str, Any]]) -> pd.DataFrame:
 
 
 def outcome_by(rows: list[dict[str, Any]], field: str) -> pd.DataFrame:
-    """Count end reasons per value of a single-valued field.
+    """Count end reasons per value of a field.
 
     Args:
         rows: Output of ``explorer.label_rows``.
-        field: A one-label field such as ``"reason_for_conversation"``, or a metadata
-            field such as ``"disease"``.
+        field: A one-label field such as ``"reason_for_conversation"``, a metadata field
+            such as ``"disease"``, or ``"topic_group"`` (the groups of the strong topics).
 
     Returns:
         One row per value, a column per end reason, ``resolved`` (need met) and
         ``unresolved`` (partial resolution or unresolved need), ``total`` and
-        ``need_met_pct`` (whole percent), sorted by total descending, then value.
+        ``need_met_pct`` (whole percent), sorted by total descending, then value. With
+        ``"topic_group"`` a conversation counts once in each of its groups, so the rows
+        can add up to more than the number of conversations; one with no strong topic
+        counts under ``"(none)"``.
     """
 
-    def value(r: dict[str, Any]) -> str:
+    def values(r: dict[str, Any]) -> list[str]:
+        if field == "topic_group":
+            return topic_groups(r["topic_scores"]) or ["(none)"]
         v = r[field]
-        return v if isinstance(v, str) else v[0]["label"]
+        return [v if isinstance(v, str) else v[0]["label"]]
 
-    pairs = [(value(r), _end(r)) for r in rows]
+    pairs = [(v, _end(r)) for r in rows for v in values(r)]
     df = _counts(pairs, sorted({k for k, _ in pairs}))
     df.insert(len(END_REASONS) + 1, "resolved", df["need met"])
     df.insert(len(END_REASONS) + 2, "unresolved", df["partial resolution"] + df["unresolved need"])

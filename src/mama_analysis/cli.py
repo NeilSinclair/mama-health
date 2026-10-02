@@ -222,6 +222,7 @@ def analysis_tables(
         "ending_mismatches": analysis.ending_mismatches(rows),
         "outcome_by_reason": analysis.outcome_by(rows, "reason_for_conversation"),
         "outcome_by_disease": analysis.outcome_by(rows, "disease"),
+        "outcome_by_topic_group": analysis.outcome_by(rows, "topic_group"),
         "topic_groups": analysis.topic_group_counts(rows),
         "pain_points": analysis.pain_point_list(rows),
     }
@@ -311,12 +312,23 @@ def run_summaries(
     memo_version = next((k for k, v in versions.items() if v["rows"] is not None), None)
     if memo_path and memo_path.exists() and memo_version:
         rows = versions[memo_version]["rows"]
-        fields = {"outcome_by_reason": "reason_for_conversation", "outcome_by_disease": "disease"}
+        fields = {
+            "outcome_by_reason": "reason_for_conversation",
+            "outcome_by_disease": "disease",
+            "outcome_by_topic_group": "topic_group",
+        }
         tables = {name: analysis.outcome_by(rows, field) for name, field in fields.items()}
         tables["pain_points"] = analysis.pain_point_list(rows)
+        # Each conversation has one reason, so that table's sums are the overall counts.
+        overall = tuple(
+            int(tables["outcome_by_reason"][c].sum()) for c in ("resolved", "unresolved", "total")
+        )
         blocks = {
             name: outcome_table_html(
-                tables[name], field, f"outputs/analysis/{memo_version}/{name}.csv"
+                tables[name],
+                field,
+                f"outputs/analysis/{memo_version}/{name}.csv",
+                overall if field == "topic_group" else None,
             )
             for name, field in fields.items()
         }
