@@ -466,7 +466,11 @@ Append-only. Each entry records the decision, its rationale, the alternatives co
   - `analysis.outcome_by(rows, "topic_group")` counts resolved, unresolved and total per topic group of the strong topics, written to `outputs/analysis/<version>/outcome_by_topic_group.csv`. The memo page shows it at `<!-- memo:outcome_by_topic_group -->`, after the reason and disease tables, with the same columns.
   - A conversation counts once in each of its topic groups, so the rows add up to 78, not 50. The table's "All" row shows the overall counts (39 resolved, 11 unresolved, 50), and the caption says so.
   - In all three outcome tables the header "Need met %" now reads "Resolved %". The CSV column stays `need_met_pct`, because the memo's placeholders (D-049) name it.
-- **Rationale:** The human asked for both. "Topics" is read as the ten topic groups (D-047), as in the rest of the memo; single topics have counts of 1 to 5. "Resolved %" matches the "Resolved" and "Unresolved" columns beside it.
-- **Caveats:** Six of the ten groups have 6 conversations or fewer, and two have 1 or 2, so their percentages move a lot on one conversation (D-044's caveat). Four groups largely restate the reason for conversation (D-042).
+- **Rationale:** The human asked for both. "Topics" is read as the ten topic groups (D-047), as in the rest of the memo; single strong topics have counts of 1 to 9, most of them 1 or 2. "Resolved %" matches the "Resolved" and "Unresolved" columns beside it.
+- **Caveats:** Seven of the ten groups have 6 conversations or fewer, and two have 1 or 2, so their percentages move a lot on one conversation (D-044's caveat). Four groups largely restate the reason for conversation (D-042).
 - **What would change it:** A wish to count every scored topic, not only strong ones, or to rename the CSV column as well.
+- **Addendum (2026-10-02, presentation):**
+  - At the human's request, the three outcome tables open sorted by Resolved %, lowest first (ties: larger group first), and all four memo tables sit behind disclosure widgets, closed by default. The CSVs keep their order.
+  - Opening on a percentage ranking puts the smallest groups at the top and bottom of each table, which is what D-044's caveat warns about. The counts sit beside every percentage; prose that cites these tables should give small groups as n of N.
+  - A conversation with no strong topic would count under "(none)" in the topic-group table, as in the pain-point list. There is none in the committed labels.
 

@@ -199,6 +199,9 @@ def test_outcome_by_topic_group_counts_a_conversation_in_each_strong_group():
     assert list(df.index) == ["A", "B"]
     assert (df.loc["A", "resolved"], df.loc["A", "unresolved"], df.loc["A", "total"]) == (1, 1, 2)
     assert (df.loc["B", "total"], df.loc["B", "need_met_pct"]) == (1, 100)
+    # A conversation with no strong topic is counted, under "(none)".
+    df = outcome_by([_row("c", "completed", "need met") | {"topic_scores": [low]}], "topic_group")
+    assert df["topic_group"].tolist() == ["(none)"] and df["total"].tolist() == [1]
 
 
 def test_topic_group_counts_per_session_with_member_topics():

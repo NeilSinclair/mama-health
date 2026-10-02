@@ -111,7 +111,7 @@ def ending_vs_outcome(rows: list[dict[str, Any]]) -> pd.DataFrame:
 
 
 def outcome_by(rows: list[dict[str, Any]], field: str) -> pd.DataFrame:
-    """Count end reasons per value of a single-valued field.
+    """Count end reasons per value of a field.
 
     Args:
         rows: Output of ``explorer.label_rows``.
@@ -123,12 +123,13 @@ def outcome_by(rows: list[dict[str, Any]], field: str) -> pd.DataFrame:
         ``unresolved`` (partial resolution or unresolved need), ``total`` and
         ``need_met_pct`` (whole percent), sorted by total descending, then value. With
         ``"topic_group"`` a conversation counts once in each of its groups, so the rows
-        can add up to more than the number of conversations.
+        can add up to more than the number of conversations; one with no strong topic
+        counts under ``"(none)"``.
     """
 
     def values(r: dict[str, Any]) -> list[str]:
         if field == "topic_group":
-            return topic_groups(r["topic_scores"])
+            return topic_groups(r["topic_scores"]) or ["(none)"]
         v = r[field]
         return [v if isinstance(v, str) else v[0]["label"]]
 

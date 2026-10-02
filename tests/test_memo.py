@@ -96,6 +96,21 @@ def test_outcome_table_html_shows_resolved_unresolved_and_pct():
     assert "type 2 diabetes" in page
 
 
+def test_outcome_table_html_sorts_by_resolved_pct_then_larger_group():
+    ends = {"big": ["need met"] * 2 + ["unresolved need"] * 2, "all": ["need met"] * 3}
+    ends["small"] = ["need met", "unresolved need"]
+    rows = [
+        _row(f"{d}{i}", "decide", ["t"], end, d)
+        for d, es in ends.items()
+        for i, end in enumerate(es)
+    ]
+    df = outcome_by(rows, "disease")
+    assert df["disease"].tolist() == ["big", "all", "small"]  # by total, as in the CSV
+    page = outcome_table_html(df, "disease", "s")
+    # 50% (4 conversations), 50% (2 conversations), 100%, then All.
+    assert re.findall(r'<th scope="row">([^<]+)</th>', page) == ["big", "small", "all", "All"]
+
+
 def test_outcome_table_html_by_topic_group_uses_the_overall_counts():
     rows = [r | {"topic_scores": r["topic_scores"] + [_strong("Access to care")]} for r in ROWS]
     df = outcome_by(rows, "topic_group")
