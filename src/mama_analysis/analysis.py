@@ -148,9 +148,17 @@ def outcome_check(rows: list[dict[str, Any]], gold: pd.DataFrame) -> pd.DataFram
     Returns:
         One row per labelled conversation, in the file's order: ``item``, ``session_id``,
         ``human_end_reason``, ``model_end_reason``, ``agree`` and ``note``.
+
+    Raises:
+        ValueError: If a labelled row names a session without a model label, or an end
+            reason outside ``END_REASONS``.
     """
     model = {r["session_id"]: _end(r) for r in rows}
     df = gold[gold["human_end_reason"] != ""].reset_index(drop=True)
+    unknown = sorted(set(df["session_id"]) - model.keys())
+    bad = sorted(set(df["human_end_reason"]) - set(END_REASONS))
+    if unknown or bad:
+        raise ValueError(f"gold labels: unknown sessions {unknown}, unknown end reasons {bad}")
     df.insert(3, "model_end_reason", df["session_id"].map(model))
     df.insert(4, "agree", df["human_end_reason"] == df["model_end_reason"])
     return df

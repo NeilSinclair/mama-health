@@ -108,6 +108,17 @@ def test_fill_values_rejects_bad_placeholders(value, message):
         fill_values(value, {"outcome_by_disease": outcome_by(ROWS, "disease")})
 
 
+@pytest.mark.parametrize("text", ["{{ outcome_by_disease | ibs", "a }} b", "{{ a | b\n| c }}"])
+def test_fill_values_rejects_unclosed_placeholders(text):
+    with pytest.raises(ValueError, match="not closed"):
+        fill_values(text, {"outcome_by_disease": outcome_by(ROWS, "disease")})
+
+
+def test_fill_values_escapes_cell_text():
+    tables = {"t": pd.DataFrame({"key": ["a"], "label": ["<b>bot</b> & co"]})}
+    assert fill_values("{{ t | a | label }}", tables) == "&lt;b&gt;bot&lt;/b&gt; &amp; co"
+
+
 def test_fill_values_rejects_unknown_column():
     tables = {"outcome_by_disease": outcome_by(ROWS, "disease")}
     name = tables["outcome_by_disease"].iloc[0]["disease"]

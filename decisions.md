@@ -452,3 +452,11 @@ Append-only. Each entry records the decision, its rationale, the alternatives co
   - `summary_v10.md`, `summary_v11.md`, `scripts/prompt_trial.py` and `data/labels_trials/` are kept as the record of the trial. The pipeline does not read them.
 - **What would change it:** More hand labels that show v9 is wrong on a pattern, not one conversation; or a need to relabel for another reason, at which point v11's rule could be retested.
 - **Addendum (2026-10-02):** The human asked for the unused trial prompts to be removed. `summary_v10.md` and `summary_v11.md` are deleted from `src/mama_analysis/prompts/`; their text is in commit `29d3bb5`, which the trial labels' `prompt_sha256` values can be checked against. `scripts/prompt_trial.py` and `data/labels_trials/` stay. Earlier prompt versions stay too, per D-020.
+
+### D-052 — The pain-point panels have no "(none)" row (amends D-036)
+- **Date:** 2026-10-02
+- **Decision:** The Conversation pain point panel in the explorer's Breakdown tab and in the memo page's deep dive lists only pain points. A conversation without one is not counted in that panel. D-036's "Empty pain-point lists count as "(none)"" no longer holds. The Topic group panel still shows "(none)" for a conversation with no strong topic.
+- **Rationale:** The human asked for it: the "(none)" bar invited a question the memo does not investigate.
+- **Consequence:** The panel can no longer be used to filter to the conversations without a pain point.
+- **What would change it:** A need to look at the conversations with no pain point as a group.
+

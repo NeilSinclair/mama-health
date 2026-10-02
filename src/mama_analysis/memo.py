@@ -63,8 +63,8 @@ def fill_values(text: str, tables: dict[str, pd.DataFrame]) -> str:
         The Markdown with every placeholder replaced by its cell's value.
 
     Raises:
-        ValueError: If a placeholder is not in ``table | row | column`` form, or names an
-            unknown table, row or column.
+        ValueError: If a placeholder is not in ``table | row | column`` form, names an
+            unknown table, row or column, or is left unclosed or split over lines.
     """
 
     def cell(m: re.Match[str]) -> str:
@@ -80,9 +80,13 @@ def fill_values(text: str, tables: dict[str, pd.DataFrame]) -> str:
             raise ValueError(f"memo value {m.group(0)!r}: no row; rows: {list(df.iloc[:, 0])}")
         if column not in df.columns:
             raise ValueError(f"memo value {m.group(0)!r}: no column; columns: {list(df.columns)}")
-        return str(rows.iloc[0][column])
+        return html.escape(str(rows.iloc[0][column]))
 
-    return VALUE_RE.sub(cell, text)
+    filled = VALUE_RE.sub(cell, text)
+    for line in filled.splitlines():
+        if "{{" in line or "}}" in line:
+            raise ValueError(f"memo value not closed on one line: {line.strip()!r}")
+    return filled
 
 
 def memo_breakdown(rows: list[dict[str, Any]], records: list[dict[str, Any]]) -> dict[str, Any]:

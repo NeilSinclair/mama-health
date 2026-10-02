@@ -262,7 +262,8 @@ def run_summaries(
 
     Raises:
         ValueError: If cached labels don't fit the current schema or mapping (see
-            ``load_version``), or the memo draft uses an unknown marker.
+            ``load_version``), the memo draft uses an unknown marker or a bad value
+            placeholder, or the gold labels name an unknown session or end reason.
     """
     records = load_sessions(data_path)
     versions = {}

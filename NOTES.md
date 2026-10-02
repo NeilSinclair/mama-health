@@ -132,6 +132,22 @@ Record this as we go. For each item: what the AI did, how we checked it, and whe
   - Opus added the repeat runs on s047, s022 and s005 to tell a prompt effect from run-to-run noise; the human asked for one run. About 70 API calls in total. Not adopted; the human decides.
 - **2026-10-02 — Trial outcome: keep `summary_v9`, no override (human decision, D-051).** Opus recommended a hand-override file for s047; the human declined it and kept v9 unchanged. The trial files are kept as a record.
 - **2026-10-02 — Trial prompts removed (human request, D-051 addendum).** Opus deleted `summary_v10.md` and `summary_v11.md`. It read "unused prompts" as the two trial drafts, not the earlier versions that D-020 keeps. To reproduce the trial, restore the two files from commit `29d3bb5` and run `scripts/prompt_trial.py`.
+- **2026-10-02 — Pre-push review of the gold-check branch (code-reviewer).** Verdict: ship after fixes; 3 major, 8 minor, 1 nit. Tests, ruff and the committed-outputs check passed. The reviewer confirmed the gold-check and trial figures in D-050, D-051 and NOTES against the committed files, that the labelling page holds no model label, and that the trial labels' prompt hashes match the prompt files in commit `29d3bb5`. Fixed:
+  - `fill_values` left an unclosed or line-wrapped placeholder in the page with no error; it now fails the run (new tests).
+  - `fill_values` inserted cell text unescaped; it is now HTML-escaped (new test).
+  - `outcome_check` treated an unknown session or a misspelt end reason as a disagreement; it now raises (new tests).
+  - `scripts/prompt_trial.py` resumed by session ID alone; it now also checks the prompt hash, so a reused prompt name can't mix two prompt texts.
+  - The v10 `comparison.csv` lacked its run2 and run3 columns; regenerated.
+  - The s022 note in the memo appendix had come back (an editor save overwrote the earlier replacement); the sentence with the human's reading is restored.
+  - No decision covered the "(none)" removal; added D-052. The `Raises:` section of `run_summaries` now lists the new errors.
+
+  Not fixed: a zero-byte gold file or one with a missing column still fails with a pandas error; the page always writes the header.
+
+  Raised with the human, not changed (memo content):
+  - Major: the appendix bullet "Results are trustworthy … chosen based on a gold set of 10" does not match the record. `summary_v9` scores 9 of 10 on the gold set and the rejected `summary_v11` scores 10 of 10; the bullet cites no file and does not say s047 is counted as the model labelled it (D-051).
+  - Major: "3 of the 50 (6%)" and "2 of 11 (18%)" are typed by hand. They are correct today, but no output crosses pain point with outcome, and 18% is a percentage on 11.
+  - Major: the stability figures (48, 43 and 19 of 50) come from an untested script on `summary_v7` labels and cite `data/labels_stability/`, not `outputs/`.
+  - Minor: the recommendation has no "what would change our mind"; the draft is about 2,190 words plus three tables; it has three of five conversations; and "the assistant already has the user's location" is stated as fact.
 
 ## Overrides of AI output
 

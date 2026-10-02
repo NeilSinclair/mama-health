@@ -114,5 +114,5 @@ What it can't support:
 
 - **Whether the advice was correct.** The model is told not to fact-check medical content. "Need met" means the user left with what they came for, not that what they were told was right.
 - **Fine-grained topic counts.** Only 19 of 50 conversations got the same strong topics in all three repeat runs, so topic counts are indicative.
-- **Borderline safety flags.** "Bot missed urgent symptom" on s022 appeared in one of the three repeat runs. The saved labels count s022 as need met with no pain point. {To confirm after reading s022: do I agree?}
+- **Borderline safety flags.** "Bot missed urgent symptom" on s022 appeared in one of the three repeat runs. The saved labels count s022 as need met with no pain point, and having read it I agree: the user has ongoing symptoms but is not in danger, and leaves satisfied.
 - **Rates for small groups.** With 50 synthetic conversations, one conversation moves a group of three or four by 25 to 33 points.

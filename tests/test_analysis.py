@@ -1,4 +1,5 @@
 import pandas as pd
+import pytest
 
 from mama_analysis.analysis import (
     ending_mismatches,
@@ -297,3 +298,14 @@ def test_outcome_check_compares_human_and_model_end_reasons():
     assert counts.loc["unresolved need", "unresolved need"] == 1
     assert counts.loc["partial resolution", "total"] == 0
     assert counts["total"].sum() == 3
+
+
+@pytest.mark.parametrize(
+    ("session_id", "label"), [("zz", "need met"), ("a", "Need met"), ("a", "need met ")]
+)
+def test_outcome_check_rejects_unknown_sessions_and_labels(session_id, label):
+    gold = pd.DataFrame(
+        {"item": [1], "session_id": [session_id], "human_end_reason": [label], "note": [""]}
+    )
+    with pytest.raises(ValueError, match="gold labels"):
+        outcome_check([_row("a", "completed", "need met")], gold)

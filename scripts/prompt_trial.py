@@ -55,13 +55,16 @@ def load_gold() -> dict[str, str]:
 async def run(prompt_version: str, run_number: int, sessions: set[str] | None) -> None:
     """Label the chosen sessions with one prompt version, skipping those already done.
 
+    A session counts as done only if its cached label was made with this prompt text.
+
     Args:
         prompt_version: Prompt file stem, e.g. ``"summary_v10"``.
         run_number: Which repeat this is; each has its own directory.
         sessions: Session IDs to label, or ``None`` for all.
     """
     out_dir = TRIALS_DIR / prompt_version / f"run{run_number}"
-    done = set(read_entries(out_dir))
+    prompt = load_prompt(prompt_version)
+    done = {s for s, e in read_entries(out_dir).items() if e.prompt_sha256 == prompt.sha256}
     records = [
         r
         for r in load_sessions()
@@ -72,7 +75,7 @@ async def run(prompt_version: str, run_number: int, sessions: set[str] | None) -
         return
     labeller = make_labeller(VERSION)
     try:
-        await summarise_all(records, labeller, load_prompt(prompt_version), out_dir)
+        await summarise_all(records, labeller, prompt, out_dir)
     finally:
         await labeller.aclose()
 
