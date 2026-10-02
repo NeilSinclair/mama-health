@@ -148,6 +148,7 @@ Record this as we go. For each item: what the AI did, how we checked it, and whe
   - Major: "3 of the 50 (6%)" and "2 of 11 (18%)" are typed by hand. They are correct today, but no output crosses pain point with outcome, and 18% is a percentage on 11.
   - Major: the stability figures (48, 43 and 19 of 50) come from an untested script on `summary_v7` labels and cite `data/labels_stability/`, not `outputs/`.
   - Minor: the recommendation has no "what would change our mind"; the draft is about 2,190 words plus three tables; it has three of five conversations; and "the assistant already has the user's location" is stated as fact.
+- **2026-10-02 — Re-review of the fix commit `4ca5823` before merge (code-reviewer).** Verdict: ship it; every fix confirmed, 135 tests pass. Two findings, not fixed: `prompt_trial.py`'s `compare` reads a run directory without checking the prompt hash (not live: each committed run holds one hash), and a placeholder inside a backtick code span would be double-escaped (none is). The memo-wording points above stay open for the human.
 
 ## Overrides of AI output
 
