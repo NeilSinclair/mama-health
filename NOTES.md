@@ -168,6 +168,7 @@ Record this as we go. For each item: what the AI did, how we checked it, and whe
   - Minor: the s017 paragraph says "morning insulin levels" where the user says "morning sugar" and is on metformin; and it says the assistant was not wrongly assuming insulin, but the assistant did at turn 4, admitted it at turn 6 and raised insulin again at turn 10 (`pain_points.csv`: "bot repeated a corrected mistake").
   - Minor: "Results are trustworthy" still cites no figure and overstates how the prompt was chosen (D-051).
   - Minor: the introduction promises five conversations and "graphs"; there are four conversations and tables only. The draft is about 2,640 words. The recommendation still has no "what would change our mind".
+- **2026-10-02 — Re-review of the fix commit `530bad1` before merge (code-reviewer).** Verdict: ship it; every fix confirmed, 139 tests pass, and the page layout measured identical before and after the stylesheet change at nine widths. One finding, fixed: the new sort test would still pass with a tie broken by name; its groups are renamed so it would not. The memo-wording points above stay open for the human.
 
 ## Overrides of AI output
 
