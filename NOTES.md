@@ -131,6 +131,7 @@ Record this as we go. For each item: what the AI did, how we checked it, and whe
   - On the 12 conversations the human has read (the ten, s008 and s022), v9 matches the human on 11 (wrong on s047) and v11 on 11 (wrong on s022).
   - Opus added the repeat runs on s047, s022 and s005 to tell a prompt effect from run-to-run noise; the human asked for one run. About 70 API calls in total. Not adopted; the human decides.
 - **2026-10-02 — Trial outcome: keep `summary_v9`, no override (human decision, D-051).** Opus recommended a hand-override file for s047; the human declined it and kept v9 unchanged. The trial files are kept as a record.
+- **2026-10-02 — Trial prompts removed (human request, D-051 addendum).** Opus deleted `summary_v10.md` and `summary_v11.md`. It read "unused prompts" as the two trial drafts, not the earlier versions that D-020 keeps. To reproduce the trial, restore the two files from commit `29d3bb5` and run `scripts/prompt_trial.py`.
 
 ## Overrides of AI output
 

@@ -12,6 +12,9 @@ touches ``data/labels/`` or ``outputs/``.
   ``data/labels_trials/<prompt>/results/comparison.csv``. Pain points are the model's raw
   labels; they are not consolidated.
 
+The prompts trialled so far (``summary_v10``, ``summary_v11``) were not adopted and are no
+longer in ``src/mama_analysis/prompts/``; see D-051 for the commit that holds them.
+
 Usage:
     uv run python scripts/prompt_trial.py run summary_v10 --gold
     uv run python scripts/prompt_trial.py run summary_v10
