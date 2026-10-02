@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-02T09:57:07+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether long covid would improve and returned later to ask what persistent symptoms could mean.",
+        "relevance": "strong",
+        "topic": "long covid outlook",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user described being wiped out for days after ordinary activity and asked whether these crashes could affect recovery.",
+        "relevance": "strong",
+        "topic": "post-exertional crashes",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user explored how to find an energy envelope, manage food shopping, and track activity, while noting that rest is constrained by work and household responsibilities.",
+        "relevance": "strong",
+        "topic": "pacing and energy limits",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user described the long timeline as feeling like forever and said reassurance from others had made them feel more alone.",
+        "relevance": "medium",
+        "topic": "emotional distress",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user said their manager did not understand that the illness was ongoing and considered looking into possible workplace adjustments.",
+        "relevance": "medium",
+        "topic": "work adjustments",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user described a previous GP appointment as dismissive and asked what to raise at a future appointment.",
+        "relevance": "medium",
+        "topic": "feeling dismissed by gp",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user sought an honest account of the outlook for long covid and discussed crashes after everyday exertion, pacing, and the limits imposed by work and household responsibilities. The assistant acknowledged uncertainty, offered pacing suggestions and ways to prepare for a GP appointment; the user said they had a concrete starting point and that the conversation had not made them feel worse."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6440,
+    "output_tokens": 1009
+  },
+  "version": "gpt_luna"
+}

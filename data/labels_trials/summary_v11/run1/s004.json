@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-02T09:57:04+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user explained that persistent tiredness and fog despite a reportedly normal TSH prompted the diet question.",
+        "relevance": "strong",
+        "topic": "fatigue and brain fog",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked whether going gluten-free could help and how to test its effect, then agreed to consider a tracked trial.",
+        "relevance": "strong",
+        "topic": "gluten-free diet trial",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked why celiac testing mattered and included screening before changing their diet in their plan.",
+        "relevance": "medium",
+        "topic": "celiac screening",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user wondered whether their dose might be off and agreed to ask for it to be reviewed.",
+        "relevance": "medium",
+        "topic": "levothyroxine dose review",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether to discuss ongoing symptoms with a doctor and planned to request a review and blood tests.",
+        "relevance": "medium",
+        "topic": "medical follow-up",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user briefly contrasted taking control through diet with waiting on doctors.",
+        "relevance": "low",
+        "topic": "waiting for medical care",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether a gluten-free diet has evidence for Hashimoto's after describing ongoing fatigue and brain fog while taking levothyroxine. The assistant discussed a celiac test before changing diet and suggested reviewing the dose and other possible causes with a doctor; the user formed a plan to do those checks first, then consider a tracked three-month trial. The user said the conversation felt more balanced than what they usually read."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 7007,
+    "output_tokens": 1296
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-02T09:56:31+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether taking methotrexate with warfarin could affect safety or warfarin readings.",
+        "relevance": "strong",
+        "topic": "methotrexate and warfarin safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether methotrexate blood tests would also detect changes related to warfarin.",
+        "relevance": "medium",
+        "topic": "blood test monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked whether tests help set the dose and confirmed they understood methotrexate is taken weekly.",
+        "relevance": "medium",
+        "topic": "methotrexate dosing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user briefly mentioned that antibiotics had previously affected their warfarin.",
+        "relevance": "low",
+        "topic": "antibiotic effects on warfarin",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what to raise with the GP before starting and accepted the suggested checklist.",
+        "relevance": "low",
+        "topic": "preparing for gp discussion",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user wanted to know whether starting methotrexate for rheumatoid arthritis was safe alongside long-term warfarin, including whether warfarin readings might change and what to watch for. The assistant discussed monitoring, warning signs, weekly dosing, and points to confirm with the GP; the user ended saying they felt much better about starting."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5966,
+    "cache_write_tokens": 0,
+    "input_tokens": 5969,
+    "output_tokens": 1810
+  },
+  "version": "gpt_luna"
+}

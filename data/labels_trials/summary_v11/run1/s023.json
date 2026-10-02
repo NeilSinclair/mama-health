@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-02T09:57:21+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came wanting to understand their cancer risk with long-standing ulcerative colitis and asked what makes it higher or lower.",
+        "relevance": "strong",
+        "topic": "colorectal cancer risk",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked when monitoring should begin, how often colonoscopies are repeated, and how surveillance differs from routine scopes.",
+        "relevance": "strong",
+        "topic": "surveillance colonoscopy",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked whether mesalamine affects cancer risk and raised wondering if they still need it when feeling well.",
+        "relevance": "medium",
+        "topic": "mesalamine maintenance use",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether lifestyle or other actions could affect risk and engaged with the advice as supportive measures.",
+        "relevance": "medium",
+        "topic": "lifestyle risk reduction",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user said they appreciated a specific question to bring and ended feeling better equipped to speak with their gastroenterologist.",
+        "relevance": "low",
+        "topic": "gastroenterologist discussion",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user, who has had stable ulcerative colitis for about nine years while taking mesalamine, asked about colorectal cancer risk and surveillance. The assistant discussed risk factors, colonoscopy timing and technique, mesalamine, and lifestyle; the user said they had a clear picture and felt better equipped to talk with their gastroenterologist."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6686,
+    "output_tokens": 769
+  },
+  "version": "gpt_luna"
+}

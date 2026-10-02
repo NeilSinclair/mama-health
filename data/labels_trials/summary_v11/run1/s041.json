@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-02T09:57:43+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user said this was the concern that sat with them and asked about family lymphoma history and skin cancer risk.",
+        "relevance": "strong",
+        "topic": "cancer risk",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked how large the infection risk was and followed up specifically about tuberculosis.",
+        "relevance": "strong",
+        "topic": "infection risk",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked how the classes differed because their risks mattered to the concern about starting treatment.",
+        "relevance": "medium",
+        "topic": "biologic class differences",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user raised easy sunburn and substantial past sun exposure while asking about a skin cancer angle.",
+        "relevance": "medium",
+        "topic": "skin cancer risk",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked what to bring to the dermatologist to make the discussion productive and accepted the suggested questions.",
+        "relevance": "medium",
+        "topic": "preparing for dermatologist visit",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said the risks were freaking them out and that online worst-case stories were contributing to their worry.",
+        "relevance": "medium",
+        "topic": "fear of treatment risks",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user wanted to understand infection and cancer risks before deciding about a psoriasis biologic, with particular concern about family lymphoma history and past sun exposure. The assistant compared risk information across biologic classes and suggested questions for the dermatologist; the user said the discussion was helpful and adopted the framing of weighing treatment risks against the risks of untreated psoriasis."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6308,
+    "output_tokens": 1341
+  },
+  "version": "gpt_luna"
+}

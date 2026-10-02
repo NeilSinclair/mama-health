@@ -138,8 +138,9 @@ function el(tag, attrs = {}, ...children) {
 }
 
 // A conversation's labels for one field; "(none)" when it has none (e.g. no strong topic).
+// Pain points get no "(none)" row: a conversation without one is just not counted there.
 function vals(row, key) {
-  return row[key].length ? row[key] : [NONE];
+  return row[key].length || key === "conversation_pain_points" ? row[key] : [NONE];
 }
 
 function isSelected(key, label) {

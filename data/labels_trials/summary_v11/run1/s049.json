@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-02T09:57:53+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described fatigue and brain fog affecting work by midmorning and leading to two-day crashes.",
+        "relevance": "strong",
+        "topic": "fatigue and brain fog",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user said they had decided to resign and asked for help writing a health-related resignation letter.",
+        "relevance": "strong",
+        "topic": "leaving work due to illness",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user came needing a nonjudgmental place to talk, described being tired of fighting for support, and later said they felt calmer.",
+        "relevance": "strong",
+        "topic": "emotional exhaustion",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user described HR's vague response and engaged with information about occupational health and possible adjustments.",
+        "relevance": "medium",
+        "topic": "workplace adjustments",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user asked for pacing to be explained and said the explanation finally made sense.",
+        "relevance": "medium",
+        "topic": "pacing",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "The user described long COVID-related fatigue and brain fog disrupting work and said they had decided to resign; the assistant drafted a resignation letter and then made it warmer at the user's request. The assistant explained pacing when asked, and the user said it clicked and that they felt calmer than they had in ages."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6623,
+    "output_tokens": 1203
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,11 @@
+item,session_id,human_end_reason,note
+1,s030,unresolved need,""
+2,s047,need met,""
+3,s026,unresolved need,""
+4,s033,need met,""
+5,s012,need met,""
+6,s035,need met,""
+7,s017,partial resolution,""
+8,s013,need met,""
+9,s032,need met,""
+10,s024,unresolved need,"The assistant wasn't actually able to book the appointment; it doesn't have this ability."

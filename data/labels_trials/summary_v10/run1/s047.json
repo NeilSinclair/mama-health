@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-10-02T09:51:09+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not answer the user's request"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether methotrexate was safe with long-term warfarin and whether readings might change.",
+        "relevance": "strong",
+        "topic": "drug interactions",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether methotrexate tests would detect warfarin-related problems and what to expect from monitoring.",
+        "relevance": "medium",
+        "topic": "blood test monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user specifically asked what symptoms to watch for at home and received examples for both medicines.",
+        "relevance": "medium",
+        "topic": "medication warning signs",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether tests help set the methotrexate dose and confirmed they understood it is taken weekly.",
+        "relevance": "medium",
+        "topic": "dose timing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what to raise with the GP before starting and received a checklist.",
+        "relevance": "low",
+        "topic": "appointment preparation",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user wanted to know whether starting methotrexate for rheumatoid arthritis was safe alongside long-term warfarin, and asked about monitoring, warning signs, and weekly dosing. The assistant emphasized routine checks and gave a pre-start checklist, but did not directly compare the interaction with the user's past antibiotic experience; the user said they felt much better about starting."
+  },
+  "prompt_sha256": "af85dba9cd15f4f621d94089c6d16290f66a3606ce1459cb3d1936d73df0fcae",
+  "prompt_version": "summary_v10",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4614,
+    "cache_write_tokens": 0,
+    "input_tokens": 5764,
+    "output_tokens": 2736
+  },
+  "version": "gpt_luna"
+}

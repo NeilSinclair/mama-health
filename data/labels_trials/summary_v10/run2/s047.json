@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-10-02T09:51:52+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not answer the user's request"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether methotrexate could affect their long-term warfarin treatment and whether their readings might change.",
+        "relevance": "strong",
+        "topic": "drug interaction safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether methotrexate blood tests would monitor warfarin too and whether tests help set the methotrexate dose.",
+        "relevance": "medium",
+        "topic": "blood test monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to watch for at home, and the assistant listed possible bleeding and methotrexate-related warning signs.",
+        "relevance": "medium",
+        "topic": "medication warning signs",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked about methotrexate dosing and confirmed their GP had stressed that it is taken weekly.",
+        "relevance": "medium",
+        "topic": "weekly medication dosing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what to raise with the GP before starting and received a checklist.",
+        "relevance": "low",
+        "topic": "preparing for GP visit",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user wanted to know whether starting methotrexate for rheumatoid arthritis was safe while taking warfarin for a heart valve issue, including whether warfarin readings might change. The assistant discussed monitoring, warning signs, weekly dosing and points to confirm with the GP, but did not clearly answer the specific interaction question; the user nevertheless said they felt much better."
+  },
+  "prompt_sha256": "af85dba9cd15f4f621d94089c6d16290f66a3606ce1459cb3d1936d73df0fcae",
+  "prompt_version": "summary_v10",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5761,
+    "cache_write_tokens": 0,
+    "input_tokens": 5764,
+    "output_tokens": 2334
+  },
+  "version": "gpt_luna"
+}

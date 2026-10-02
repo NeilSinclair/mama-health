@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-02T09:57:39+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described pain in both hands, morning stiffness, and occasional whole-finger swelling as the main reason for concern.",
+        "relevance": "strong",
+        "topic": "finger joint symptoms",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user raised pitting and lifting nails at the start and returned to their appearance later.",
+        "relevance": "medium",
+        "topic": "nail changes",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked what psoriatic arthritis is and whether waiting could cause permanent damage.",
+        "relevance": "strong",
+        "topic": "psoriatic arthritis and joint damage",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user said the possibility scared them, then later reported feeling better after understanding the plan.",
+        "relevance": "medium",
+        "topic": "fear about joint damage",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked which doctor to see and explained that their health plan may require a referral.",
+        "relevance": "medium",
+        "topic": "rheumatology referral",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked what would happen at the rheumatology appointment because they dislike not knowing what to expect.",
+        "relevance": "medium",
+        "topic": "appointment expectations",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked whether a blood test could confirm psoriatic arthritis.",
+        "relevance": "medium",
+        "topic": "diagnostic blood tests",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what they could take for pain and mentioned sometimes using dipyrone.",
+        "relevance": "medium",
+        "topic": "pain relief medication",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether anything could help the affected nails, and then checked whether arthritis treatment might help them too.",
+        "relevance": "medium",
+        "topic": "nail treatment",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user described psoriasis with nail pitting and lifting, painful stiff finger joints, and occasional swollen fingers, and asked whether this could be psoriatic arthritis and whether it could cause lasting damage. The assistant recommended a rheumatology evaluation and answered questions about referral through the user's health plan in Brazil, the appointment, testing, pain relief, and nail treatment; the user said they felt better and planned to ask for a referral that week."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6183,
+    "output_tokens": 1396
+  },
+  "version": "gpt_luna"
+}

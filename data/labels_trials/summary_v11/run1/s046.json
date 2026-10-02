@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-10-02T09:58:06+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot missed request for new research",
+      "bot did not answer the user's request"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked how to identify trials they might qualify for without screening listings and contacting many sites alone.",
+        "relevance": "strong",
+        "topic": "trial eligibility matching",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user raised long waitlists and asked for specific research-active clinics, but received only general search guidance.",
+        "relevance": "medium",
+        "topic": "long covid clinic access",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked about new research beyond POTS management and discussed BC 007, temelimab, and antiviral trial evidence.",
+        "relevance": "medium",
+        "topic": "long covid treatment research",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said cognitive impairment makes it difficult to read and match trial listings independently.",
+        "relevance": "medium",
+        "topic": "cognitive impairment",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user described being tired of ineffective approaches and frustrated that trial access leaves the work to them.",
+        "relevance": "medium",
+        "topic": "health-related frustration",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user listed standard POTS treatments already tried to explain that they were seeking something beyond symptom management.",
+        "relevance": "low",
+        "topic": "pots treatment history",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user mentioned being unable to work, but did not return to its impact or ask for help with it.",
+        "relevance": "low",
+        "topic": "work limitations",
+        "topic_group": "Work & life plans"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "The user has had long COVID for just over two years, says their POTS is stable-ish after standard measures, and wants new research and a practical route into US trials. The assistant discussed BC 007, temelimab, and antiviral research, then offered general search and referral steps, but did not identify specific clinics or match trials to the user's eligibility; cognitive impairment and clinic waitlists make that burden difficult. The user said they had the general picture but still felt they would have to search themselves."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6878,
+    "output_tokens": 2822
+  },
+  "version": "gpt_luna"
+}

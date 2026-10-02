@@ -6,6 +6,7 @@ import pytest
 
 from mama_analysis.analysis import outcome_by, pain_point_list
 from mama_analysis.memo import (
+    fill_values,
     memo_breakdown,
     outcome_table_html,
     pain_points_html,
@@ -82,6 +83,47 @@ def test_outcome_table_html_shows_resolved_unresolved_and_pct():
     )
     assert re.search(r'<tr class="all"><th scope="row">All</th>.*?67%</td></tr>', page)
     assert "type 2 diabetes" in page
+
+
+def test_fill_values_replaces_placeholders_with_table_cells():
+    tables = {"outcome_by_disease": outcome_by(ROWS, "disease")}
+    row = tables["outcome_by_disease"].iloc[0]
+    name = row["disease"]
+    table = "outcome_by_disease"
+    text = f"{{{{ {table} | {name} | resolved }}}} of {{{{{table}|{name}|total}}}}."
+    assert fill_values(text, tables) == f"{row['resolved']} of {row['total']}."
+    assert fill_values("No placeholders.", tables) == "No placeholders."
+
+
+@pytest.mark.parametrize(
+    ("value", "message"),
+    [
+        ("{{ outcome_by_disease | total }}", "is not"),
+        ("{{ nope | x | total }}", "unknown table"),
+        ("{{ outcome_by_disease | nope | total }}", "no row"),
+    ],
+)
+def test_fill_values_rejects_bad_placeholders(value, message):
+    with pytest.raises(ValueError, match=message):
+        fill_values(value, {"outcome_by_disease": outcome_by(ROWS, "disease")})
+
+
+@pytest.mark.parametrize("text", ["{{ outcome_by_disease | ibs", "a }} b", "{{ a | b\n| c }}"])
+def test_fill_values_rejects_unclosed_placeholders(text):
+    with pytest.raises(ValueError, match="not closed"):
+        fill_values(text, {"outcome_by_disease": outcome_by(ROWS, "disease")})
+
+
+def test_fill_values_escapes_cell_text():
+    tables = {"t": pd.DataFrame({"key": ["a"], "label": ["<b>bot</b> & co"]})}
+    assert fill_values("{{ t | a | label }}", tables) == "&lt;b&gt;bot&lt;/b&gt; &amp; co"
+
+
+def test_fill_values_rejects_unknown_column():
+    tables = {"outcome_by_disease": outcome_by(ROWS, "disease")}
+    name = tables["outcome_by_disease"].iloc[0]["disease"]
+    with pytest.raises(ValueError, match="no column"):
+        fill_values(f"{{{{ outcome_by_disease | {name} | nope }}}}", tables)
 
 
 def test_render_memo_replaces_markers_and_embeds_breakdown():

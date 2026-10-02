@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-02T09:57:54+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came in asking what to expect with PCOS and fertility and later said the information gave them a map instead of panic.",
+        "relevance": "strong",
+        "topic": "pcos fertility outlook",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked about letrozole and Clomid, whether to try naturally first, and what to discuss with their doctor.",
+        "relevance": "strong",
+        "topic": "ovulation treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user described anxiety from online stories, asked how to keep trying from taking over their life, and said they felt much better after being heard.",
+        "relevance": "strong",
+        "topic": "fertility-related anxiety",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user described long, unpredictable cycles and asked whether irregular ovulation was the main PCOS-related fertility issue.",
+        "relevance": "medium",
+        "topic": "irregular ovulation",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked how to time trying with unpredictable cycles and whether ovulation tests work with PCOS.",
+        "relevance": "medium",
+        "topic": "ovulation timing tests",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to change or take before trying and received information about prenatal vitamins and lifestyle.",
+        "relevance": "medium",
+        "topic": "preconception preparation",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "After mentioning that their doctor had noted high insulin, the user asked how it related to fertility and invited more information about metformin.",
+        "relevance": "medium",
+        "topic": "insulin and metformin",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether their husband should be checked too and agreed to add a semen analysis to their plan.",
+        "relevance": "medium",
+        "topic": "male fertility testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked when to escalate from their regular OB to a fertility specialist.",
+        "relevance": "medium",
+        "topic": "fertility specialist referral",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user, who has PCOS and irregular cycles, sought realistic expectations about trying to conceive and asked about ovulation treatments, timing, preconception steps, and when to seek specialist care. The assistant offered information and helped shape a list of questions and next steps for the user's doctor; the user said the plan made them feel much better and also felt their anxiety had been taken seriously."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 7865,
+    "output_tokens": 1542
+  },
+  "version": "gpt_luna"
+}

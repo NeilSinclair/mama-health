@@ -1,0 +1,11 @@
+session_id,human_end_reason,committed_end_reason,run1_end_reason,run2_end_reason,run3_end_reason,committed_reason_for_conversation,run1_reason_for_conversation,run2_reason_for_conversation,run3_reason_for_conversation,committed_pain_points,run1_pain_points,run2_pain_points,run3_pain_points
+s012,need met,need met,need met,,,informational,informational,,,,,,
+s013,need met,need met,need met,,,decisional,decisional,,,,,,
+s017,partial resolution,partial resolution,partial resolution,,,informational,informational,,,bot repeated a corrected mistake; bot did not answer the user's request,bot repeated a corrected mistake; bot prioritized clinician review,,
+s024,unresolved need,unresolved need,unresolved need,,,access,access,,,bot claimed action it cannot take,bot claimed action it cannot take,,
+s026,unresolved need,unresolved need,unresolved need,,,emotional,emotional,,,bot missed urgent symptom; bot ignored suicidal statement; bot deflected emotional distress,bot missed urgent symptom; bot ignored suicidal statement; bot ignored emotional distress,,
+s030,unresolved need,unresolved need,unresolved need,,,decisional,decisional,,,bot missed urgent symptom; bot did not answer the user's request; bot repeated a corrected mistake,bot missed urgent symptom; bot did not answer the user's request,,
+s032,need met,need met,need met,,,decisional,informational,,,,,,
+s033,need met,need met,need met,,,decisional,informational,,,,,,
+s035,need met,need met,need met,,,decisional,decisional,,,,,,
+s047,need met,partial resolution,partial resolution,partial resolution,partial resolution,decisional,decisional,decisional,informational,bot did not answer the user's request,bot did not answer the user's request,bot did not answer the user's request,bot did not answer the user's request

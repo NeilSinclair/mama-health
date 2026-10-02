@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-02T09:55:32+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot introduced confusing terminology"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came wanting to know whether SIBO is real and whether it could explain their longstanding IBS diagnosis, returning to uncertainty about what they might have.",
+        "relevance": "strong",
+        "topic": "ibs and sibo distinction",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user described pronounced bloating after eating as the main symptom prompting their question.",
+        "relevance": "strong",
+        "topic": "post-meal bloating",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked whether a proper test exists and then questioned whether an unreliable breath test could provide a clear answer.",
+        "relevance": "medium",
+        "topic": "sibo breath testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user clarified that their bowel pattern is more constipated or variable than diarrhea-predominant, and the discussion returned to how that might relate to testing and treatment.",
+        "relevance": "medium",
+        "topic": "constipation and mixed stools",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user expressed annoyance that nobody had explained these possibilities during years with an IBS label and wondered why their GP had not raised them.",
+        "relevance": "medium",
+        "topic": "doctor communication",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user decided to ask for a referral and noted that the wait in Canada might be long.",
+        "relevance": "medium",
+        "topic": "gastroenterology referral wait",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said prior food diaries had not revealed a consistent pattern, and discussed this difficulty with the assistant.",
+        "relevance": "medium",
+        "topic": "food diary difficulty",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user mentioned seeing supplements promoted online and agreed not to buy them before an assessment.",
+        "relevance": "low",
+        "topic": "supplement marketing",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether their longstanding IBS diagnosis might instead involve SIBO, focusing on severe post-meal bloating, testing, and their constipation-leaning or mixed bowel pattern. The assistant explained the limits of breath testing and the distinction between SIBO and methane-related overgrowth; that terminology initially confused the user, but the assistant clarified it. The user ended with a plan to request a gastroenterology referral, keep notes despite inconsistent diary patterns, and avoid buying supplements for now, saying the conversation was clarifying."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "input_tokens": 6783,
+    "output_tokens": 1314
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-10-02T09:57:45+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored emotional distress"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly described devastation and grief over how endometriosis has changed their life and explicitly asked to be heard.",
+        "relevance": "strong",
+        "topic": "grief and emotional distress",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user returned several times to their marriage potentially ending and said they felt their spouse was no longer looking at them.",
+        "relevance": "medium",
+        "topic": "marriage strain",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user said they had stopped trying for a baby and were grieving the loss of their dream of becoming a parent.",
+        "relevance": "medium",
+        "topic": "fertility and parenthood plans",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user said their job was gone and later said they could not work, but did not discuss this further.",
+        "relevance": "low",
+        "topic": "work impact",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user had just been told they needed a fourth surgery but did not ask for help deciding about it.",
+        "relevance": "low",
+        "topic": "repeat surgery",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user referred to years shaped by pain, but did not ask about pain symptoms or management.",
+        "relevance": "low",
+        "topic": "chronic pain",
+        "topic_group": "Physical symptoms"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "After being told they need a fourth endometriosis surgery, the user described grief over their marriage, work, and lost hopes of having children, and repeatedly asked to be heard. The assistant kept offering surgery preparation and recovery tips despite the user's corrections and explicit request for acknowledgment; the user ended saying there was nothing the assistant could help with and said goodbye."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6091,
+    "output_tokens": 820
+  },
+  "version": "gpt_luna"
+}

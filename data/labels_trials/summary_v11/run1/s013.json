@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-02T09:55:47+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking how to manage flares that reliably coincide with stressful work weeks and described diarrhea, cramping, and urgency.",
+        "relevance": "strong",
+        "topic": "stress-triggered bowel flares",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked about longer-term therapies, immediate flare options, and what a practical plan could look like.",
+        "relevance": "strong",
+        "topic": "ibs management options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether drinking several coffees on stressful days could be contributing and considered cutting back.",
+        "relevance": "medium",
+        "topic": "caffeine and bowel symptoms",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user compared the doctor's fiber advice with the discussion and asked whether to involve the doctor in the plan.",
+        "relevance": "medium",
+        "topic": "doctor treatment discussions",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said urgency and repeated trips to the bathroom disrupt meetings, but did not return to the work impact separately.",
+        "relevance": "low",
+        "topic": "work meeting disruption",
+        "topic_group": "Work & life plans"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user described IBS flares linked to stressful work weeks, with diarrhea, cramping, and urgency that can disrupt meetings. The assistant suggested longer-term therapies, options for acute flares, reducing caffeine on stressful days, and discussing some options with the doctor; the user said the advice was helpful and that they had a plan to try."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6910,
+    "output_tokens": 1595
+  },
+  "version": "gpt_luna"
+}

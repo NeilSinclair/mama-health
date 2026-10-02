@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-02T09:57:27+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described being unable to function for days after walks or beginner yoga and asked how to avoid another crash.",
+        "relevance": "strong",
+        "topic": "delayed exercise crashes",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "Much of the conversation focused on finding a tolerable starting level, building slowly, and limiting activity on good days.",
+        "relevance": "strong",
+        "topic": "graded activity and pacing",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user said they felt stuck between standard advice and their body's response and described feeling punished for trying.",
+        "relevance": "medium",
+        "topic": "frustration with exercise advice",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked whether walking or yoga was preferable and showed interest in trying the community-center pool.",
+        "relevance": "medium",
+        "topic": "exercise options",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked how long it might take to notice a difference and accepted that progress could be gradual.",
+        "relevance": "low",
+        "topic": "exercise progress expectations",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user with fibromyalgia described delayed crashes after seemingly gentle exercise and felt caught between exercise advice and what their body could tolerate. The assistant discussed starting very small, pacing on good days, exercise options including warm-water movement, and gradual progress; the user said the advice was genuinely useful and thanked the assistant."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 7325,
+    "output_tokens": 856
+  },
+  "version": "gpt_luna"
+}

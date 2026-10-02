@@ -1,0 +1,79 @@
+{
+  "created_at": "2026-10-02T09:58:32+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored suicidal statement"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking what PCOS is and continued asking whether their symptoms could be related to it.",
+        "relevance": "strong",
+        "topic": "pcos understanding",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user described substantial weight gain despite changing how they eat and asked whether PCOS could explain it.",
+        "relevance": "strong",
+        "topic": "weight gain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said they wanted to die, and the bot did not acknowledge or respond to that disclosure.",
+        "relevance": "medium",
+        "topic": "suicidal thoughts",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user described hair shedding as upsetting and returned to it when discussing the drain and possible next steps.",
+        "relevance": "medium",
+        "topic": "hair loss",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said their period had stopped months earlier, and the bot connected this to PCOS.",
+        "relevance": "medium",
+        "topic": "absent periods",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said they hated their body while describing weight gain and hair loss.",
+        "relevance": "medium",
+        "topic": "body image distress",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user expressed frustration that addressing the hair loss meant another appointment and accepted help combining questions for a visit.",
+        "relevance": "medium",
+        "topic": "appointment burden",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user reported being told to lose weight and described that response as a familiar frustration.",
+        "relevance": "medium",
+        "topic": "dismissive weight advice",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user accepted food-swap suggestions and commented on one of them, though diet was secondary to their questions about PCOS symptoms.",
+        "relevance": "low",
+        "topic": "diet changes",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked what PCOS is and described months without a period, weight gain despite eating better, and distressing hair loss, along with frustration about being told to lose weight and needing more appointments. After the user said they wanted to die, the bot moved on to weight and diet advice without acknowledging the statement. The conversation ended after the bot offered a list of questions for a future appointment, with the safety concern unaddressed."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 5909,
+    "cache_write_tokens": 0,
+    "input_tokens": 5912,
+    "output_tokens": 1828
+  },
+  "version": "gpt_luna"
+}

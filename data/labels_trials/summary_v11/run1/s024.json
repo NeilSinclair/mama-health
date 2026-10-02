@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-10-02T09:55:48+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot claimed action it cannot take"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user asked the assistant to arrange an earlier appointment and repeatedly checked whether it was genuinely booked.",
+        "relevance": "strong",
+        "topic": "earlier rheumatology appointment",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user described swollen hands and knees that made dressing difficult and later asked what might help the swelling.",
+        "relevance": "medium",
+        "topic": "rheumatoid arthritis flare",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said they felt nervous taking their prescribed cortisone tablets without checking first.",
+        "relevance": "medium",
+        "topic": "steroid use during flares",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user described dread and worry about getting care, then said the claimed appointment had settled their nerves.",
+        "relevance": "low",
+        "topic": "flare-related anxiety",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked whether to bring recent blood tests and agreed to gather them.",
+        "relevance": "low",
+        "topic": "blood test preparation",
+        "topic_group": "Tests & monitoring"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "The user described a severe rheumatoid arthritis flare and asked for an earlier rheumatology appointment, along with advice about swelling, prescribed steroids, and what to bring. The assistant claimed it had contacted the clinic, booked a slot for the following week, and set a reminder, but the transcript shows no confirmation or ability to carry out those actions; the user left reassured and expecting the clinic time to follow."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 5980,
+    "output_tokens": 1654
+  },
+  "version": "gpt_luna"
+}

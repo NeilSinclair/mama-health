@@ -1,7 +1,9 @@
 """Render the memo draft (Markdown) as an HTML page with pipeline tables and linked counts.
 
 The draft places generated blocks with HTML-comment markers, e.g. ``<!-- memo:breakdown -->``,
-which stay invisible when the Markdown is read on its own.
+which stay invisible when the Markdown is read on its own. Numbers in the prose can be
+placeholders, e.g. ``{{ outcome_by_reason | emotional support | need_met_pct }}``, filled from
+the pipeline tables.
 """
 
 from __future__ import annotations
@@ -24,6 +26,7 @@ DEFAULT_MEMO_PATH = Path("docs/memo.md")
 BODY_MARKER = "<!--__BODY__-->"
 TITLE_MARKER = "__TITLE__"
 MARKER_RE = re.compile(r"<!--\s*memo:([a-z_]+)\s*-->")
+VALUE_RE = re.compile(r"\{\{(.*?)\}\}")
 
 # Linked-count panels, in order (as in the explorer's Breakdown tab).
 BREAKDOWN_FIELDS = (
@@ -47,6 +50,43 @@ def pretty(value: str) -> str:
         The value with underscores shown as spaces.
     """
     return value.replace("_", " ")
+
+
+def fill_values(text: str, tables: dict[str, pd.DataFrame]) -> str:
+    """Replace ``{{ table | row | column }}`` placeholders with cells of the pipeline tables.
+
+    Args:
+        text: Memo Markdown.
+        tables: Pipeline tables by name. A table's first column names its rows.
+
+    Returns:
+        The Markdown with every placeholder replaced by its cell's value.
+
+    Raises:
+        ValueError: If a placeholder is not in ``table | row | column`` form, names an
+            unknown table, row or column, or is left unclosed or split over lines.
+    """
+
+    def cell(m: re.Match[str]) -> str:
+        parts = [part.strip() for part in m.group(1).split("|")]
+        if len(parts) != 3:
+            raise ValueError(f"memo value {m.group(0)!r} is not {{{{ table | row | column }}}}")
+        table, row, column = parts
+        if table not in tables:
+            raise ValueError(f"memo value {m.group(0)!r}: unknown table; known: {sorted(tables)}")
+        df = tables[table]
+        rows = df[df.iloc[:, 0] == row]
+        if rows.empty:
+            raise ValueError(f"memo value {m.group(0)!r}: no row; rows: {list(df.iloc[:, 0])}")
+        if column not in df.columns:
+            raise ValueError(f"memo value {m.group(0)!r}: no column; columns: {list(df.columns)}")
+        return html.escape(str(rows.iloc[0][column]))
+
+    filled = VALUE_RE.sub(cell, text)
+    for line in filled.splitlines():
+        if "{{" in line or "}}" in line:
+            raise ValueError(f"memo value not closed on one line: {line.strip()!r}")
+    return filled
 
 
 def memo_breakdown(rows: list[dict[str, Any]], records: list[dict[str, Any]]) -> dict[str, Any]:

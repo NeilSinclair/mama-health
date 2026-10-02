@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-02T09:57:29+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came in overwhelmed and asked how the two conditions relate and which came first.",
+        "relevance": "strong",
+        "topic": "pcos and insulin resistance",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked why metformin was suggested without diabetes and whether medication was the only option, then chose to start it as their doctor advised.",
+        "relevance": "medium",
+        "topic": "metformin use",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user described repeated attempts to lose weight and frustration that it feels especially difficult with PCOS.",
+        "relevance": "medium",
+        "topic": "weight loss frustration",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked about stomach side effects after hearing they were common.",
+        "relevance": "medium",
+        "topic": "metformin side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether there is a specific diet to follow and whether low-glycemic eating means avoiding all carbohydrates.",
+        "relevance": "medium",
+        "topic": "pcos diet",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked what exercise is best and said they do not enjoy the gym, ultimately identifying after-dinner walks as a first step.",
+        "relevance": "medium",
+        "topic": "exercise preferences",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked whether a continuous glucose monitor would be useful for them.",
+        "relevance": "low",
+        "topic": "continuous glucose monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user briefly questioned whether their insurer would cover a monitor without diabetes.",
+        "relevance": "low",
+        "topic": "monitor coverage",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user felt overwhelmed by a new insulin-resistance diagnosis alongside PCOS and asked how they relate, as well as about metformin, lifestyle changes, diet, exercise, and glucose monitoring. The assistant explained these topics, and the user said the discussion made the diagnosis feel less scary; they planned to start metformin as their doctor suggested and walk more after dinner."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6320,
+    "output_tokens": 1028
+  },
+  "version": "gpt_luna"
+}

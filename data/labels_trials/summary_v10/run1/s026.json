@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-10-02T09:50:49+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot missed urgent symptom",
+      "bot ignored suicidal statement",
+      "bot ignored emotional distress"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user reports 10–12 bowel movements a day, blood most times, and constant cramping during a three-week flare.",
+        "relevance": "strong",
+        "topic": "bloody diarrhea and cramping",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user says they sometimes want it all to be over and questions how much longer they can continue.",
+        "relevance": "strong",
+        "topic": "suicidal thoughts",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user describes jitteriness, insomnia, and facial swelling after restarting prednisone, and later asks for side-effect tips.",
+        "relevance": "medium",
+        "topic": "prednisone side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user says Humira is not working and that Entyvio did not help, then engages with discussion of possible alternatives.",
+        "relevance": "medium",
+        "topic": "biologic treatment options",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "The user described a three-week Crohn’s flare with 10–12 bloody bowel movements a day and constant cramping, alongside prednisone side effects and concern that Humira is not working. They also said they sometimes wanted it all to be over; the assistant did not acknowledge this and continued with symptom-tracking and medication tips, despite the user later saying they had hoped talking would help. The assistant also gave only conditional urgent-care advice even though the user had already reported frequent bloody stools, and the conversation ended with the user leaving without their need being met."
+  },
+  "prompt_sha256": "af85dba9cd15f4f621d94089c6d16290f66a3606ce1459cb3d1936d73df0fcae",
+  "prompt_version": "summary_v10",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4614,
+    "cache_write_tokens": 0,
+    "input_tokens": 5773,
+    "output_tokens": 1474
+  },
+  "version": "gpt_luna"
+}

@@ -12,7 +12,7 @@ uv sync
 uv run mama-pipeline
 ```
 
-Outputs are written to `outputs/`. Tests: `uv run pytest`. If the memo draft `docs/memo.md` exists, the run also renders it, with its tables and interactive panels, to `outputs/memo.html`.
+Outputs are written to `outputs/`. Tests: `uv run pytest`. If the memo draft `docs/memo.md` exists, the run also renders it, with its tables and interactive panels, to `outputs/memo.html`. A `{{ table | row | column }}` placeholder in the draft is filled with that cell of the pipeline table (D-049). If the hand labels in `data/gold/outcome_check.csv` exist, the run compares them with the model's end reasons and writes `outcome_check.csv` and `outcome_check_counts.csv` under `outputs/analysis/` (D-050).
 
 ## LLM labels
 

@@ -8,6 +8,8 @@ from mama_analysis import cli
 from mama_analysis.cli import main, run_eda, run_summaries
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+# Runs on fake labels skip the repo's memo draft and gold labels: both name real rows and sessions.
+NO_MEMO = ("--memo", "no_such_memo.md", "--gold", "no_such_gold.csv")
 
 
 @pytest.fixture
@@ -56,6 +58,7 @@ def test_relabel_then_build_from_cache(data_file, tmp_path, capsys, fake_api):
             str(labels),
             "--relabel",
             "gpt_luna",
+            *NO_MEMO,
         ]
     )
     assert "relabelling gpt_luna" in capsys.readouterr().out
@@ -105,7 +108,11 @@ def test_committed_outputs_match_fresh_run(tmp_path):
     data = REPO_ROOT / "data" / "conversations.json"
     written = {f"eda/{k}": v for k, v in run_eda(data, tmp_path).items()}
     written |= run_summaries(
-        data, REPO_ROOT / "data" / "labels", tmp_path, REPO_ROOT / "docs/memo.md"
+        data,
+        REPO_ROOT / "data" / "labels",
+        tmp_path,
+        REPO_ROOT / "docs/memo.md",
+        REPO_ROOT / cli.DEFAULT_GOLD_PATH,
     )
     for name, path in written.items():
         committed_file = REPO_ROOT / "outputs" / path.relative_to(tmp_path)
@@ -128,6 +135,7 @@ def test_remap_rebuilds_mappings_from_cached_summaries(data_file, tmp_path, caps
             str(labels),
             "--remap",
             "gpt_luna",
+            *NO_MEMO,
         ]
     )
     assert "re-consolidating gpt_luna" in capsys.readouterr().out
@@ -184,11 +192,32 @@ def test_memo_page_written_only_when_draft_exists(data_file, tmp_path, fake_api)
     cli.relabel("gpt_luna", data_file, labels)
     assert "memo" not in run_summaries(data_file, labels, out, tmp_path / "missing.md")
     draft = tmp_path / "memo.md"
-    draft.write_text("# Draft\n\n<!-- memo:outcome_by_reason -->\n\n<!-- memo:breakdown -->\n")
+    table = pd.read_csv(out / "analysis" / "gpt_luna" / "outcome_by_reason.csv")
+    reason, total = table.iloc[0][["reason_for_conversation", "total"]]
+    draft.write_text(
+        "# Draft\n\n<!-- memo:outcome_by_reason -->\n\n<!-- memo:breakdown -->\n\n"
+        f"Prose total: {{{{ outcome_by_reason | {reason} | total }}}} conversations.\n"
+    )
     written = run_summaries(data_file, labels, out, draft)
     page = written["memo"].read_text()
     assert "outputs/analysis/gpt_luna/outcome_by_reason.csv" in page
     assert 'id="bgrid"' in page
+    assert f"Prose total: {total} conversations." in page
+
+
+def test_outcome_check_written_only_when_gold_labels_exist(data_file, tmp_path, fake_api):
+    labels, out = tmp_path / "labels", tmp_path / "out"
+    cli.relabel("gpt_luna", data_file, labels)
+    written = run_summaries(data_file, labels, out, gold_path=tmp_path / "missing.csv")
+    assert "analysis/gpt_luna/outcome_check" not in written
+    gold = tmp_path / "gold.csv"
+    gold.write_text('item,session_id,human_end_reason,note\n1,s1,need met,""\n2,s2,,""\n')
+    written = run_summaries(data_file, labels, out, gold_path=gold)
+    check = pd.read_csv(written["analysis/gpt_luna/outcome_check"])
+    assert list(check["session_id"]) == ["s1"]
+    assert check["agree"].iloc[0] == (check["model_end_reason"].iloc[0] == "need met")
+    counts = pd.read_csv(written["analysis/gpt_luna/outcome_check_counts"])
+    assert counts["total"].sum() == 1
 
 
 def test_old_schema_cache_fails_with_relabel_hint(data_file, tmp_path, fake_api):
@@ -229,7 +258,7 @@ def test_dynamics_flag_relabels_only_dynamics(data_file, tmp_path, capsys, fake_
     summary = (labels / "summaries" / "gpt_luna" / "s1.json").read_text()
     (labels / "dynamics" / "gpt_luna" / "s1.json").unlink()
     args = ["--data", str(data_file), "--out", str(tmp_path / "out"), "--labels", str(labels)]
-    main([*args, "--dynamics", "gpt_luna"])
+    main([*args, "--dynamics", "gpt_luna", *NO_MEMO])
     assert "labelling gpt_luna conversation dynamics" in capsys.readouterr().out
     assert (labels / "dynamics" / "gpt_luna" / "s1.json").exists()
     assert (labels / "summaries" / "gpt_luna" / "s1.json").read_text() == summary

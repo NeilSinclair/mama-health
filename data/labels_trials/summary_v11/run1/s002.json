@@ -1,0 +1,47 @@
+{
+  "created_at": "2026-10-02T09:56:59+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to learn about preventive options and asked in depth about newer CGRP medicines, oral versus injectable treatments, and traditional alternatives.",
+        "relevance": "strong",
+        "topic": "migraine prevention options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked about side effects and precautions for a specific oral preventive.",
+        "relevance": "medium",
+        "topic": "preventive medication side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user raised insurance coverage and asked whether trying older medicines is usually required before newer ones are covered.",
+        "relevance": "medium",
+        "topic": "insurance step therapy",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user requested a short list of questions to bring to their neurologist and said they planned to ask about a named option.",
+        "relevance": "medium",
+        "topic": "neurologist appointment preparation",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user wanted to understand chronic migraine preventive options before a neurologist visit, asking about newer CGRP treatments, older alternatives, side effects, and insurance requirements. The assistant provided a list of questions for the visit, and the user said it was exactly what they needed and planned to ask about migraxone."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6208,
+    "output_tokens": 706
+  },
+  "version": "gpt_luna"
+}

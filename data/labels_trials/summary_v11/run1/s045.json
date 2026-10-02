@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-02T09:57:49+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to check whether a different maker's version of the same dose was something to worry about and asked what to do.",
+        "relevance": "strong",
+        "topic": "levothyroxine brand switch",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked why to wait six to eight weeks, whether a recent TSH result counted, and when to test again.",
+        "relevance": "strong",
+        "topic": "thyroid monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user said they would prefer to stay on one brand and discussed asking the doctor and pharmacy about this.",
+        "relevance": "medium",
+        "topic": "brand consistency",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said they notice coldness and tiredness quickly and would watch for them while waiting for the test.",
+        "relevance": "low",
+        "topic": "coldness and tiredness",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user briefly said they were annoyed that the pharmacy switched the brand without explaining the change.",
+        "relevance": "low",
+        "topic": "pharmacy frustration",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether a pharmacy substitution of a different maker's levothyroxine required action, and asked about TSH timing, symptoms to watch for, and keeping the same routine. The assistant advised a new TSH check six to eight weeks after the switch and suggested discussing brand consistency with the doctor and pharmacy; the user said the plan was clear and exactly the straight answer they wanted."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6102,
+    "output_tokens": 997
+  },
+  "version": "gpt_luna"
+}

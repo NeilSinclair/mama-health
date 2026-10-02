@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-02T09:57:42+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user asked which RA medications are compatible or should be avoided and explored a future medication-switch timeline and alternatives if control worsens.",
+        "relevance": "strong",
+        "topic": "pregnancy medication planning",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "After saying they had recently started methotrexate, the user asked whether to worry and discussed contraception and stopping it before trying to conceive.",
+        "relevance": "medium",
+        "topic": "methotrexate pregnancy precautions",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether RA may change during pregnancy and engaged with the discussion of possible postpartum flares.",
+        "relevance": "medium",
+        "topic": "ra during pregnancy",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked whether pregnancy-compatible medications are also suitable while breastfeeding.",
+        "relevance": "medium",
+        "topic": "breastfeeding medication safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whom to coordinate with and whether to raise pregnancy plans with the rheumatologist now, then said they would bring it up at the next visit.",
+        "relevance": "medium",
+        "topic": "preconception care planning",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user described arriving anxious and fearing a choice between their health and having a baby, then said they felt more in control.",
+        "relevance": "low",
+        "topic": "pregnancy-related anxiety",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "Recently diagnosed with RA and taking methotrexate, the user wanted to plan medication choices for a pregnancy they hope to try for in one to two years. The assistant discussed medication options and timing, possible changes in RA during pregnancy and postpartum, breastfeeding, and care-team coordination; the user said the discussion eased their anxiety and planned to raise it at their next rheumatology visit."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 7403,
+    "output_tokens": 1305
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-02T09:57:18+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking why their A1C rose despite an unchanged routine and whether age explained it, then returned to concern about worsening diabetes.",
+        "relevance": "strong",
+        "topic": "rising a1c",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user described waking two or three times nightly, loud snoring, and unrefreshing sleep, and later identified sleep as a likely contributor.",
+        "relevance": "strong",
+        "topic": "broken sleep and snoring",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked what an individualized target meant after their doctor had only told them to aim under 7.",
+        "relevance": "medium",
+        "topic": "personal a1c target",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked whether to get a meter and why fasting and after-meal readings would matter.",
+        "relevance": "medium",
+        "topic": "home glucose monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to do before the next appointment and restated a list of questions and issues to raise with their doctor.",
+        "relevance": "medium",
+        "topic": "appointment preparation",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user mentioned gaining a few pounds and asked whether it could affect their blood sugar.",
+        "relevance": "low",
+        "topic": "weight gain",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user said they feared the rise meant diabetes was suddenly getting much worse, then said the explanation made them feel better.",
+        "relevance": "medium",
+        "topic": "fear of worsening diabetes",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user wanted to understand an A1C increase from 6.8 to 7.4 and worried it meant diabetes was worsening with age. They discussed broken sleep and snoring, modest weight gain, personal A1C targets, and possible home monitoring; the assistant helped form a plan to track food and sleep and raise these questions with the doctor. The user summarized the plan and said the conversation was more useful than expecting to be told it was downhill from here."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6561,
+    "output_tokens": 1095
+  },
+  "version": "gpt_luna"
+}

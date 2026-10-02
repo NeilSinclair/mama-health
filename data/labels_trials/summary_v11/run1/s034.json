@@ -1,0 +1,47 @@
+{
+  "created_at": "2026-10-02T09:57:31+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user described daily nausea, feeling full quickly, food triggers, and evening worsening across several turns.",
+        "relevance": "strong",
+        "topic": "daily nausea and early fullness",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked whether to stop Ozempic and worried about increasing the dose, then accepted discussing a slower increase with the doctor.",
+        "relevance": "strong",
+        "topic": "medication dose changes",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether the medication was working, shared occasional morning readings, and agreed to check more regularly.",
+        "relevance": "medium",
+        "topic": "blood sugar monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user said they were scared the nausea would worsen with a dose increase and later said they felt calmer.",
+        "relevance": "medium",
+        "topic": "fear of worsening nausea",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user reported daily nausea and early fullness after starting Ozempic for diabetes and asked whether it was safe to stop; they were also worried about the planned dose increase. The assistant advised discussing the dose with the prescriber, offered food and glucose-monitoring suggestions, and listed urgent warning signs, which the user said they did not have; the user decided to wait and talk to the doctor and said they felt calmer."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6494,
+    "output_tokens": 999
+  },
+  "version": "gpt_luna"
+}

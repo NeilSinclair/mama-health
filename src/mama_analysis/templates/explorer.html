@@ -617,7 +617,8 @@ const NONE = "(none)";
 const PANEL_ROWS = 12;
 const breakState = { selected: [], allTopics: false, expanded: new Set() };
 
-// A conversation's labels for one field; "(none)" when a list field is empty. Topic groups
+// A conversation's labels for one field; "(none)" when a list field is empty, except pain
+// points, where a conversation without one is just not counted. Topic groups
 // are the model's topic_group (D-047) of the strong topics, or of every topic when the toggle is on.
 function breakValues(row, key) {
   let vals = values(row, key);
@@ -625,7 +626,7 @@ function breakValues(row, key) {
     const scores = row.topic_scores.filter((t) => breakState.allTopics || t.relevance === "strong");
     vals = [...new Set(scores.map((t) => t.topic_group))];
   }
-  return vals.length ? vals : [NONE];
+  return vals.length || key === "conversation_pain_points" ? vals : [NONE];
 }
 
 // Panel and chip name for a field; the topic-group name says which topics are counted.

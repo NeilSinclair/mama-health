@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-02T09:57:38+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came wanting to know whether it was reasonable to delay metformin and try diet and exercise, then accepted a monitored trial plan.",
+        "relevance": "strong",
+        "topic": "metformin versus lifestyle trial",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether delaying medication could damage the eyes and kidneys and returned to this concern when considering the trial.",
+        "relevance": "medium",
+        "topic": "diabetes complication risk",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked about managing rice and chapati, then discussed difficulty avoiding sweets during festivals.",
+        "relevance": "medium",
+        "topic": "diet changes for diabetes",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user discussed exercise limits, asked when to walk after eating, and said slow indoor walking was manageable.",
+        "relevance": "medium",
+        "topic": "walking after meals",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked whether to check glucose at home during the trial and said they might use a family member's old meter.",
+        "relevance": "medium",
+        "topic": "home glucose monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user mentioned their knees were not great and limited running or gym activity.",
+        "relevance": "low",
+        "topic": "knee limitations",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user mentioned diabetes in their mother and sister as context for their concerns and hopes about lifestyle changes.",
+        "relevance": "low",
+        "topic": "family history of diabetes",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user asked whether they could try lifestyle changes before starting metformin for type 2 diabetes, and discussed complication risk, diet, walking with knee limitations, and glucose monitoring. The assistant outlined a monitored three-month trial with an A1c recheck; the user said the plan sounded balanced and planned to discuss it with their doctor and family."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 6759,
+    "output_tokens": 1741
+  },
+  "version": "gpt_luna"
+}

@@ -1,0 +1,70 @@
+{
+  "created_at": "2026-10-02T09:55:49+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [
+      "bot missed urgent symptom",
+      "bot did not answer the user's request",
+      "bot repeated a corrected mistake",
+      "bot ignored emotional distress"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly described a four-day attack that left them unable to function and asked what to do.",
+        "relevance": "strong",
+        "topic": "prolonged migraine attack",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user repeatedly asked for actual treatment options after triptans stopped working, including urgent care or bridge therapy.",
+        "relevance": "strong",
+        "topic": "refractory migraine treatment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said they had added over-the-counter medicines to triptans for days and worried about rebound headache.",
+        "relevance": "medium",
+        "topic": "medication overuse concern",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user said their neurologist was booked six weeks out and asked about care before then.",
+        "relevance": "medium",
+        "topic": "neurologist wait time",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked whether the prolonged attack was status migrainosus but did not return to the question as a separate topic.",
+        "relevance": "low",
+        "topic": "status migrainosus",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user said the attack had already caused them to miss three days of work.",
+        "relevance": "low",
+        "topic": "missed work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user said they came in a genuinely bad place and felt unheard and frustrated.",
+        "relevance": "medium",
+        "topic": "emotional distress",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user sought actionable help for a four-day migraine attack that was not responding to triptans, while their neurologist was unavailable for six weeks. The assistant repeatedly offered diary, lifestyle, and routine follow-up suggestions instead of addressing the request for treatment options or urgent care; it did not recognize the potentially urgent prolonged attack. The user ended by giving up, with their need unmet."
+  },
+  "prompt_sha256": "f213e16b74f90c5354f2296f2370c0b5dd716661f67d9be2fb3b9d5e44197b21",
+  "prompt_version": "summary_v11",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4819,
+    "cache_write_tokens": 0,
+    "input_tokens": 5739,
+    "output_tokens": 1801
+  },
+  "version": "gpt_luna"
+}

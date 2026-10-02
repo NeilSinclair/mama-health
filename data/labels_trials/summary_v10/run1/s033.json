@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-02T09:50:45+00:00",
+  "model_id": "gpt-6-luna",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly asked whether the reduction in migraine days meant Emgality was working and whether to continue assessing it.",
+        "relevance": "strong",
+        "topic": "preventive treatment response",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user described fewer migraine days and later noted that their attacks had become less severe.",
+        "relevance": "medium",
+        "topic": "migraine frequency and severity",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user explained they log daily in an app and asked what to track through the six-month assessment point.",
+        "relevance": "medium",
+        "topic": "migraine tracking",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to raise with their neurologist and discussed bringing their tracking data.",
+        "relevance": "medium",
+        "topic": "neurologist discussion",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user expressed disappointment and worry that the treatment might be stopped, then said the conversation made them feel better.",
+        "relevance": "low",
+        "topic": "worry about treatment failure",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether Emgality was working after three months, with migraine days decreasing from about 20 to 15; they also reported that attacks had become less severe. The assistant discussed tracking both frequency and severity and preparing to reassess with the neurologist, and the user said the conversation reframed their progress and left them feeling better."
+  },
+  "prompt_sha256": "af85dba9cd15f4f621d94089c6d16290f66a3606ce1459cb3d1936d73df0fcae",
+  "prompt_version": "summary_v10",
+  "provider": "openai",
+  "usage": {
+    "cache_read_tokens": 4614,
+    "cache_write_tokens": 0,
+    "input_tokens": 5636,
+    "output_tokens": 926
+  },
+  "version": "gpt_luna"
+}
