@@ -100,6 +100,8 @@ All code for this case study was written with Opus 5.5 in Claude Code. Claude wa
 
 An initial planning document was created for the pipeline and Claude was instructed to use this. Results from the LLM pipeline were displayed in an interactive HTML file and the pipeline was improved iteratively. From there, the best tables and interactive widgets were moved into an interactive memo (this document). When the pipeline runs, this memo is updated. 
 
+The final memo was designed by myself and almost all of the text was written by me, with the exception of a few sentences and grammatic fixes by Claude.
+
 ## Time spent
 
 I spent between 10 - 12 hours on this project. The additional time went into experimenting with ways to get the LLM pipeline to be more stable.
