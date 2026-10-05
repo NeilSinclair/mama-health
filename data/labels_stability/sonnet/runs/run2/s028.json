@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-05T06:49:21+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user's core question was how to reconcile exercise advice with being flattened for days, and most turns dealt with it.",
+        "relevance": "strong",
+        "topic": "exercise causing delayed crashes",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user recognised overdoing it on good days and called capping good days the most useful idea.",
+        "relevance": "strong",
+        "topic": "pacing and boom-bust cycle",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked whether walking or yoga is better and took up warm-water exercise at a community pool.",
+        "relevance": "medium",
+        "topic": "best type of exercise",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked in one turn how long before any difference would show and accepted the realistic answer.",
+        "relevance": "low",
+        "topic": "time to see improvement",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user opened by venting about feeling stuck and punished, which framed the conversation.",
+        "relevance": "medium",
+        "topic": "frustration with conflicting advice",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned that doctors say exercise is key and, at the end, that this chat helped more than many appointments.",
+        "relevance": "low",
+        "topic": "unhelpful clinician advice",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with fibromyalgia vented about being told exercise is key while every attempt left them flattened for days. The bot explained graded exercise, starting very small, pacing and capping activity on good days, and suggested warm-water exercise at the user's community pool. The user said it was the most useful guidance they had received and ended with a plan they accepted. No safety-critical moments occurred."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3743,
+    "output_tokens": 653
+  },
+  "version": "sonnet"
+}

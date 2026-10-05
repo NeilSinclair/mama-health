@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T08:04:31+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with worsening brain fog and asked for practical strategies, and most of the conversation addressed it.",
+        "relevance": "strong",
+        "topic": "brain fog",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user fears losing their accounting job over mistakes and asked for in-the-moment work strategies across many turns.",
+        "relevance": "strong",
+        "topic": "job performance worries",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user asked whether to tell their employer and whether a middle path exists, which took several turns and shifted their thinking.",
+        "relevance": "medium",
+        "topic": "workplace disclosure and accommodations",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user reported waking repeatedly and never feeling rested, and the bot linked this to the fog and gave sleep hygiene advice.",
+        "relevance": "medium",
+        "topic": "poor sleep quality",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user mentioned snoring and breathing pauses seen by their husband and asked if this was related, which prompted a recommendation for a sleep study.",
+        "relevance": "medium",
+        "topic": "suspected sleep apnea",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user disclosed nightly diphenhydramine and asked if it was a problem for their cognition.",
+        "relevance": "medium",
+        "topic": "nightly antihistamine use",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked in one turn whether any medication or supplement treats the fog.",
+        "relevance": "low",
+        "topic": "fog medications and supplements",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said they were scared of losing their job and felt mortified in meetings, mentioned mainly as framing for the practical requests.",
+        "relevance": "low",
+        "topic": "fear of job loss",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user called losing their train of thought in meetings mortifying and asked for in-the-moment help, one exchange.",
+        "relevance": "low",
+        "topic": "embarrassment losing train of thought",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user said in one line it was frustrating that no one had flagged the antihistamine issue before.",
+        "relevance": "low",
+        "topic": "missed by previous clinicians",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with fibromyalgia worried about losing their accounting job asked for practical strategies for worsening brain fog. The bot gave workplace tactics, advice on disclosing to HR with the diagnosis kept confidential, and flagged possible sleep apnea and nightly diphenhydramine for the doctor. The user said the plan was clear and more useful than expected, and ended with a prioritised list to act on."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 5048,
+    "output_tokens": 989
+  },
+  "version": "sonnet"
+}

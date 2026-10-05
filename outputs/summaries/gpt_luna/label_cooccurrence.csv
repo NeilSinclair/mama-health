@@ -1,163 +1,155 @@
 field_a,label_a,field_b,label_b,n_sessions,session_ids
-end_reason,need met,reason_for_conversation,understand my condition,21,"s002,s003,s006,s007,s009,s010,s012,s016,s020,s021,s022,s023,s025,s027,s028,s029,s036,s037,s040,s042,s048"
-end_reason,need met,reason_for_conversation,decide on treatment,16,"s001,s004,s011,s013,s015,s019,s031,s032,s033,s034,s035,s039,s041,s044,s045,s050"
-end_reason,need met,main_topics,medication options,7,"s001,s002,s008,s011,s032,s041,s050"
-main_topics,disease information,reason_for_conversation,understand my condition,7,"s005,s006,s010,s012,s036,s038,s042"
-main_topics,medication options,reason_for_conversation,decide on treatment,6,"s001,s011,s030,s032,s041,s050"
-end_reason,need met,main_topics,disease information,5,"s006,s010,s012,s036,s042"
-conversation_pain_points,bot did not answer the user's request,end_reason,partial resolution,4,"s014,s017,s046,s047"
-end_reason,need met,main_topics,digestive symptoms,4,"s013,s022,s034,s037"
-end_reason,need met,main_topics,fatigue and cognition,4,"s004,s016,s025,s049"
-conversation_pain_points,bot did not answer the user's request,reason_for_conversation,decide on treatment,3,"s014,s030,s047"
-end_reason,need met,main_topics,cancer risk,3,"s023,s032,s041"
-end_reason,need met,main_topics,medication dosing,3,"s003,s034,s035"
-end_reason,need met,main_topics,skin and hair concerns,3,"s007,s009,s050"
+end_reason,need met,reason_for_conversation,understand my condition,23,"s002,s003,s006,s007,s009,s010,s012,s013,s016,s020,s023,s025,s027,s028,s029,s032,s033,s036,s039,s040,s042,s045,s048"
+end_reason,need met,reason_for_conversation,decide on treatment,11,"s001,s004,s011,s015,s019,s021,s034,s035,s041,s044,s050"
+end_reason,need met,main_topics,IBD care,5,"s001,s003,s023,s032,s035"
+end_reason,need met,main_topics,fatigue and pacing,5,"s004,s010,s016,s025,s049"
+main_topics,reproductive health,reason_for_conversation,understand my condition,4,"s005,s029,s039,s048"
+main_topics,treatment decisions,reason_for_conversation,decide on treatment,4,"s021,s031,s041,s044"
+conversation_pain_points,bot did not answer the user's request,end_reason,partial resolution,3,"s017,s046,s047"
+end_reason,need met,main_topics,disease risks,3,"s023,s032,s041"
+end_reason,need met,main_topics,endometriosis care,3,"s011,s015,s021"
+end_reason,need met,main_topics,gastrointestinal symptoms,3,"s012,s013,s037"
+end_reason,need met,main_topics,migraine care,3,"s002,s019,s033"
+end_reason,need met,main_topics,reproductive health,3,"s029,s039,s048"
+end_reason,need met,main_topics,thyroid care,3,"s025,s040,s045"
+end_reason,need met,main_topics,treatment decisions,3,"s021,s041,s044"
+end_reason,partial resolution,reason_for_conversation,decide on treatment,3,"s022,s031,s047"
+main_topics,IBD care,reason_for_conversation,understand my condition,3,"s003,s023,s032"
 main_topics,care access,reason_for_conversation,get access to care,3,"s018,s024,s046"
-conversation_pain_points,bot did not answer the user's request,end_reason,unresolved need,2,"s018,s030"
-conversation_pain_points,bot did not answer the user's request,main_topics,care access,2,"s018,s046"
-conversation_pain_points,bot did not answer the user's request,reason_for_conversation,get access to care,2,"s018,s046"
+main_topics,endometriosis care,reason_for_conversation,decide on treatment,3,"s011,s015,s021"
+main_topics,fatigue and pacing,reason_for_conversation,understand my condition,3,"s010,s016,s025"
+main_topics,thyroid care,reason_for_conversation,understand my condition,3,"s025,s040,s045"
+conversation_pain_points,bot did not answer the user's request,reason_for_conversation,decide on treatment,2,"s014,s047"
+conversation_pain_points,bot gave wrong-country advice,end_reason,unresolved need,2,"s014,s018"
+conversation_pain_points,bot ignored emotional distress,end_reason,unresolved need,2,"s026,s043"
+conversation_pain_points,bot ignored emotional distress,reason_for_conversation,emotional support,2,"s026,s043"
+conversation_pain_points,bot ignored suicidal statement,end_reason,unresolved need,2,"s005,s026"
 conversation_pain_points,bot missed urgent symptom,end_reason,unresolved need,2,"s026,s030"
-end_reason,need met,main_topics,diabetes management,2,"s029,s031"
-end_reason,need met,main_topics,diet and triggers,2,"s004,s027"
-end_reason,need met,main_topics,exercise and pacing,2,"s010,s028"
-end_reason,need met,main_topics,fertility and pregnancy,2,"s039,s048"
-end_reason,need met,main_topics,lab results interpretation,2,"s020,s040"
-end_reason,need met,main_topics,medication effectiveness,2,"s022,s033"
-end_reason,need met,main_topics,medication management,2,"s044,s045"
-end_reason,need met,main_topics,pelvic pain,2,"s011,s015"
-end_reason,need met,main_topics,work and employment,2,"s016,s049"
-end_reason,partial resolution,reason_for_conversation,decide on treatment,2,"s014,s047"
-end_reason,partial resolution,reason_for_conversation,understand my condition,2,"s005,s017"
+conversation_pain_points,bot missed urgent symptom,main_topics,gastrointestinal symptoms,2,"s022,s026"
+conversation_pain_points,bot missed urgent symptom,reason_for_conversation,decide on treatment,2,"s022,s030"
+end_reason,need met,main_topics,diet and nutrition,2,"s004,s027"
+end_reason,need met,main_topics,disease outlook,2,"s010,s042"
+end_reason,need met,main_topics,exercise and activity,2,"s006,s028"
+end_reason,need met,main_topics,medication side effects,2,"s034,s044"
+end_reason,need met,main_topics,pain management,2,"s015,s036"
+end_reason,need met,main_topics,skin conditions,2,"s009,s050"
+end_reason,need met,main_topics,treatment options,2,"s013,s015"
+end_reason,need met,main_topics,work impact,2,"s016,s049"
+end_reason,need met,reason_for_conversation,get access to care,2,"s008,s037"
 end_reason,unresolved need,main_topics,care access,2,"s018,s024"
-end_reason,unresolved need,main_topics,disease activity,2,"s024,s026"
-end_reason,unresolved need,main_topics,medication options,2,"s030,s038"
+end_reason,unresolved need,main_topics,pain management,2,"s018,s024"
+end_reason,unresolved need,reason_for_conversation,decide on treatment,2,"s014,s030"
 end_reason,unresolved need,reason_for_conversation,emotional support,2,"s026,s043"
 end_reason,unresolved need,reason_for_conversation,get access to care,2,"s018,s024"
-main_topics,cancer risk,reason_for_conversation,decide on treatment,2,"s032,s041"
-main_topics,diabetes management,reason_for_conversation,understand my condition,2,"s017,s029"
-main_topics,digestive symptoms,reason_for_conversation,decide on treatment,2,"s013,s034"
-main_topics,digestive symptoms,reason_for_conversation,understand my condition,2,"s022,s037"
+end_reason,unresolved need,reason_for_conversation,understand my condition,2,"s005,s038"
+main_topics,IBD care,reason_for_conversation,decide on treatment,2,"s001,s035"
+main_topics,disease outlook,reason_for_conversation,understand my condition,2,"s010,s042"
+main_topics,disease risks,reason_for_conversation,understand my condition,2,"s023,s032"
 main_topics,emotional distress,reason_for_conversation,emotional support,2,"s043,s049"
-main_topics,exercise and pacing,reason_for_conversation,understand my condition,2,"s010,s028"
-main_topics,fatigue and cognition,reason_for_conversation,understand my condition,2,"s016,s025"
-main_topics,lab results interpretation,reason_for_conversation,understand my condition,2,"s020,s040"
-main_topics,medication dosing,reason_for_conversation,decide on treatment,2,"s034,s035"
-main_topics,medication management,reason_for_conversation,decide on treatment,2,"s044,s045"
-main_topics,medication options,reason_for_conversation,understand my condition,2,"s002,s038"
-main_topics,migraine symptoms,reason_for_conversation,decide on treatment,2,"s019,s030"
-main_topics,pelvic pain,reason_for_conversation,decide on treatment,2,"s011,s015"
-main_topics,skin and hair concerns,reason_for_conversation,understand my condition,2,"s007,s009"
+main_topics,exercise and activity,reason_for_conversation,understand my condition,2,"s006,s028"
+main_topics,gastrointestinal symptoms,reason_for_conversation,understand my condition,2,"s012,s013"
+main_topics,medication side effects,reason_for_conversation,decide on treatment,2,"s034,s044"
+main_topics,migraine care,reason_for_conversation,decide on treatment,2,"s019,s030"
+main_topics,migraine care,reason_for_conversation,understand my condition,2,"s002,s033"
+main_topics,pain management,reason_for_conversation,get access to care,2,"s018,s024"
+main_topics,treatment options,reason_for_conversation,understand my condition,2,"s013,s038"
 conversation_pain_points,bot claimed action it cannot take,end_reason,unresolved need,1,s024
 conversation_pain_points,bot claimed action it cannot take,main_topics,care access,1,s024
-conversation_pain_points,bot claimed action it cannot take,main_topics,disease activity,1,s024
+conversation_pain_points,bot claimed action it cannot take,main_topics,pain management,1,s024
 conversation_pain_points,bot claimed action it cannot take,reason_for_conversation,get access to care,1,s024
-conversation_pain_points,bot deflected emotional distress,end_reason,unresolved need,1,s026
-conversation_pain_points,bot deflected emotional distress,main_topics,disease activity,1,s026
-conversation_pain_points,bot deflected emotional distress,main_topics,suicidal thoughts,1,s026
-conversation_pain_points,bot deflected emotional distress,reason_for_conversation,emotional support,1,s026
-conversation_pain_points,bot did not answer the user's request,main_topics,diabetes management,1,s017
-conversation_pain_points,bot did not answer the user's request,main_topics,medication options,1,s030
+conversation_pain_points,bot deflected to a doctor,end_reason,unresolved need,1,s030
+conversation_pain_points,bot deflected to a doctor,main_topics,migraine care,1,s030
+conversation_pain_points,bot deflected to a doctor,reason_for_conversation,decide on treatment,1,s030
+conversation_pain_points,bot did not answer the user's request,end_reason,unresolved need,1,s014
+conversation_pain_points,bot did not answer the user's request,main_topics,care access,1,s046
+conversation_pain_points,bot did not answer the user's request,main_topics,glucose management,1,s017
 conversation_pain_points,bot did not answer the user's request,main_topics,medication safety,1,s047
-conversation_pain_points,bot did not answer the user's request,main_topics,migraine symptoms,1,s030
-conversation_pain_points,bot did not answer the user's request,main_topics,pelvic pain,1,s018
-conversation_pain_points,bot did not answer the user's request,main_topics,supplements,1,s014
+conversation_pain_points,bot did not answer the user's request,main_topics,supplement use,1,s014
+conversation_pain_points,bot did not answer the user's request,main_topics,treatment options,1,s046
+conversation_pain_points,bot did not answer the user's request,reason_for_conversation,get access to care,1,s046
 conversation_pain_points,bot did not answer the user's request,reason_for_conversation,understand my condition,1,s017
 conversation_pain_points,bot failed to simplify language,end_reason,unresolved need,1,s038
-conversation_pain_points,bot failed to simplify language,main_topics,disease information,1,s038
-conversation_pain_points,bot failed to simplify language,main_topics,medication options,1,s038
+conversation_pain_points,bot failed to simplify language,main_topics,treatment options,1,s038
 conversation_pain_points,bot failed to simplify language,reason_for_conversation,understand my condition,1,s038
-conversation_pain_points,bot gave unsafe dosing advice,end_reason,need met,1,s003
-conversation_pain_points,bot gave unsafe dosing advice,main_topics,medication dosing,1,s003
-conversation_pain_points,bot gave unsafe dosing advice,reason_for_conversation,understand my condition,1,s003
+conversation_pain_points,bot gave contradictory guidance,end_reason,need met,1,s003
+conversation_pain_points,bot gave contradictory guidance,main_topics,IBD care,1,s003
+conversation_pain_points,bot gave contradictory guidance,reason_for_conversation,understand my condition,1,s003
 conversation_pain_points,bot gave wrong-country advice,end_reason,need met,1,s042
-conversation_pain_points,bot gave wrong-country advice,end_reason,partial resolution,1,s014
-conversation_pain_points,bot gave wrong-country advice,end_reason,unresolved need,1,s018
 conversation_pain_points,bot gave wrong-country advice,main_topics,care access,1,s018
-conversation_pain_points,bot gave wrong-country advice,main_topics,disease information,1,s042
-conversation_pain_points,bot gave wrong-country advice,main_topics,pelvic pain,1,s018
-conversation_pain_points,bot gave wrong-country advice,main_topics,supplements,1,s014
+conversation_pain_points,bot gave wrong-country advice,main_topics,disease outlook,1,s042
+conversation_pain_points,bot gave wrong-country advice,main_topics,pain management,1,s018
+conversation_pain_points,bot gave wrong-country advice,main_topics,supplement use,1,s014
 conversation_pain_points,bot gave wrong-country advice,reason_for_conversation,decide on treatment,1,s014
 conversation_pain_points,bot gave wrong-country advice,reason_for_conversation,get access to care,1,s018
 conversation_pain_points,bot gave wrong-country advice,reason_for_conversation,understand my condition,1,s042
-conversation_pain_points,bot ignored emotional distress,end_reason,unresolved need,1,s043
 conversation_pain_points,bot ignored emotional distress,main_topics,emotional distress,1,s043
-conversation_pain_points,bot ignored emotional distress,reason_for_conversation,emotional support,1,s043
-conversation_pain_points,bot ignored suicidal statement,end_reason,partial resolution,1,s005
-conversation_pain_points,bot ignored suicidal statement,end_reason,unresolved need,1,s026
-conversation_pain_points,bot ignored suicidal statement,main_topics,disease activity,1,s026
-conversation_pain_points,bot ignored suicidal statement,main_topics,disease information,1,s005
+conversation_pain_points,bot ignored emotional distress,main_topics,gastrointestinal symptoms,1,s026
+conversation_pain_points,bot ignored emotional distress,main_topics,suicidal thoughts,1,s026
+conversation_pain_points,bot ignored suicidal statement,main_topics,gastrointestinal symptoms,1,s026
+conversation_pain_points,bot ignored suicidal statement,main_topics,reproductive health,1,s005
 conversation_pain_points,bot ignored suicidal statement,main_topics,suicidal thoughts,1,s026
 conversation_pain_points,bot ignored suicidal statement,main_topics,weight management,1,s005
 conversation_pain_points,bot ignored suicidal statement,reason_for_conversation,emotional support,1,s026
 conversation_pain_points,bot ignored suicidal statement,reason_for_conversation,understand my condition,1,s005
-conversation_pain_points,bot missed urgent symptom,main_topics,disease activity,1,s026
-conversation_pain_points,bot missed urgent symptom,main_topics,medication options,1,s030
-conversation_pain_points,bot missed urgent symptom,main_topics,migraine symptoms,1,s030
+conversation_pain_points,bot missed urgent symptom,end_reason,partial resolution,1,s022
+conversation_pain_points,bot missed urgent symptom,main_topics,migraine care,1,s030
 conversation_pain_points,bot missed urgent symptom,main_topics,suicidal thoughts,1,s026
-conversation_pain_points,bot missed urgent symptom,reason_for_conversation,decide on treatment,1,s030
 conversation_pain_points,bot missed urgent symptom,reason_for_conversation,emotional support,1,s026
 conversation_pain_points,bot repeated a corrected mistake,end_reason,partial resolution,1,s017
-conversation_pain_points,bot repeated a corrected mistake,end_reason,unresolved need,1,s030
-conversation_pain_points,bot repeated a corrected mistake,main_topics,diabetes management,1,s017
-conversation_pain_points,bot repeated a corrected mistake,main_topics,medication options,1,s030
-conversation_pain_points,bot repeated a corrected mistake,main_topics,migraine symptoms,1,s030
-conversation_pain_points,bot repeated a corrected mistake,reason_for_conversation,decide on treatment,1,s030
+conversation_pain_points,bot repeated a corrected mistake,main_topics,glucose management,1,s017
 conversation_pain_points,bot repeated a corrected mistake,reason_for_conversation,understand my condition,1,s017
+end_reason,need met,main_topics,POTS concerns,1,s006
 end_reason,need met,main_topics,clinician communication,1,s001
+end_reason,need met,main_topics,diagnostic testing,1,s036
 end_reason,need met,main_topics,emotional distress,1,s049
-end_reason,need met,main_topics,financial barriers,1,s008
-end_reason,need met,main_topics,flare treatment,1,s013
-end_reason,need met,main_topics,medication side effects,1,s044
-end_reason,need met,main_topics,menstrual health,1,s021
-end_reason,need met,main_topics,migraine symptoms,1,s019
-end_reason,need met,main_topics,pain and mobility,1,s036
-end_reason,need met,main_topics,sleep problems,1,s020
-end_reason,need met,main_topics,testing and monitoring,1,s023
-end_reason,need met,main_topics,thyroid management,1,s040
+end_reason,need met,main_topics,hair loss,1,s007
+end_reason,need met,main_topics,lab interpretation,1,s020
+end_reason,need met,main_topics,medication access,1,s008
+end_reason,need met,main_topics,medication dosing,1,s034
+end_reason,need met,main_topics,medication safety,1,s039
 end_reason,need met,reason_for_conversation,emotional support,1,s049
-end_reason,need met,reason_for_conversation,get access to care,1,s008
 end_reason,partial resolution,main_topics,care access,1,s046
-end_reason,partial resolution,main_topics,diabetes management,1,s017
-end_reason,partial resolution,main_topics,disease information,1,s005
+end_reason,partial resolution,main_topics,gastrointestinal symptoms,1,s022
+end_reason,partial resolution,main_topics,glucose management,1,s017
 end_reason,partial resolution,main_topics,medication safety,1,s047
-end_reason,partial resolution,main_topics,supplements,1,s014
-end_reason,partial resolution,main_topics,weight management,1,s005
+end_reason,partial resolution,main_topics,treatment decisions,1,s031
+end_reason,partial resolution,main_topics,treatment options,1,s046
 end_reason,partial resolution,reason_for_conversation,get access to care,1,s046
-end_reason,unresolved need,main_topics,disease information,1,s038
+end_reason,partial resolution,reason_for_conversation,understand my condition,1,s017
 end_reason,unresolved need,main_topics,emotional distress,1,s043
-end_reason,unresolved need,main_topics,migraine symptoms,1,s030
-end_reason,unresolved need,main_topics,pelvic pain,1,s018
+end_reason,unresolved need,main_topics,gastrointestinal symptoms,1,s026
+end_reason,unresolved need,main_topics,migraine care,1,s030
+end_reason,unresolved need,main_topics,reproductive health,1,s005
 end_reason,unresolved need,main_topics,suicidal thoughts,1,s026
-end_reason,unresolved need,reason_for_conversation,decide on treatment,1,s030
-end_reason,unresolved need,reason_for_conversation,understand my condition,1,s038
-main_topics,cancer risk,reason_for_conversation,understand my condition,1,s023
+end_reason,unresolved need,main_topics,supplement use,1,s014
+end_reason,unresolved need,main_topics,treatment options,1,s038
+end_reason,unresolved need,main_topics,weight management,1,s005
+main_topics,POTS concerns,reason_for_conversation,understand my condition,1,s006
 main_topics,clinician communication,reason_for_conversation,decide on treatment,1,s001
-main_topics,diabetes management,reason_for_conversation,decide on treatment,1,s031
-main_topics,diet and triggers,reason_for_conversation,decide on treatment,1,s004
-main_topics,diet and triggers,reason_for_conversation,understand my condition,1,s027
-main_topics,disease activity,reason_for_conversation,emotional support,1,s026
-main_topics,disease activity,reason_for_conversation,get access to care,1,s024
-main_topics,fatigue and cognition,reason_for_conversation,decide on treatment,1,s004
-main_topics,fatigue and cognition,reason_for_conversation,emotional support,1,s049
-main_topics,fertility and pregnancy,reason_for_conversation,decide on treatment,1,s039
-main_topics,fertility and pregnancy,reason_for_conversation,understand my condition,1,s048
-main_topics,financial barriers,reason_for_conversation,get access to care,1,s008
-main_topics,flare treatment,reason_for_conversation,decide on treatment,1,s013
-main_topics,medication dosing,reason_for_conversation,understand my condition,1,s003
-main_topics,medication effectiveness,reason_for_conversation,decide on treatment,1,s033
-main_topics,medication effectiveness,reason_for_conversation,understand my condition,1,s022
-main_topics,medication options,reason_for_conversation,get access to care,1,s008
+main_topics,diagnostic testing,reason_for_conversation,understand my condition,1,s036
+main_topics,diet and nutrition,reason_for_conversation,decide on treatment,1,s004
+main_topics,diet and nutrition,reason_for_conversation,understand my condition,1,s027
+main_topics,disease risks,reason_for_conversation,decide on treatment,1,s041
+main_topics,fatigue and pacing,reason_for_conversation,decide on treatment,1,s004
+main_topics,fatigue and pacing,reason_for_conversation,emotional support,1,s049
+main_topics,gastrointestinal symptoms,reason_for_conversation,decide on treatment,1,s022
+main_topics,gastrointestinal symptoms,reason_for_conversation,emotional support,1,s026
+main_topics,gastrointestinal symptoms,reason_for_conversation,get access to care,1,s037
+main_topics,glucose management,reason_for_conversation,understand my condition,1,s017
+main_topics,hair loss,reason_for_conversation,understand my condition,1,s007
+main_topics,lab interpretation,reason_for_conversation,understand my condition,1,s020
+main_topics,medication access,reason_for_conversation,get access to care,1,s008
+main_topics,medication dosing,reason_for_conversation,decide on treatment,1,s034
 main_topics,medication safety,reason_for_conversation,decide on treatment,1,s047
-main_topics,medication side effects,reason_for_conversation,decide on treatment,1,s044
-main_topics,menstrual health,reason_for_conversation,understand my condition,1,s021
-main_topics,pain and mobility,reason_for_conversation,understand my condition,1,s036
-main_topics,pelvic pain,reason_for_conversation,get access to care,1,s018
-main_topics,skin and hair concerns,reason_for_conversation,decide on treatment,1,s050
-main_topics,sleep problems,reason_for_conversation,understand my condition,1,s020
+main_topics,medication safety,reason_for_conversation,understand my condition,1,s039
+main_topics,pain management,reason_for_conversation,decide on treatment,1,s015
+main_topics,pain management,reason_for_conversation,understand my condition,1,s036
+main_topics,skin conditions,reason_for_conversation,decide on treatment,1,s050
+main_topics,skin conditions,reason_for_conversation,understand my condition,1,s009
 main_topics,suicidal thoughts,reason_for_conversation,emotional support,1,s026
-main_topics,supplements,reason_for_conversation,decide on treatment,1,s014
-main_topics,testing and monitoring,reason_for_conversation,understand my condition,1,s023
-main_topics,thyroid management,reason_for_conversation,understand my condition,1,s040
+main_topics,supplement use,reason_for_conversation,decide on treatment,1,s014
+main_topics,treatment options,reason_for_conversation,decide on treatment,1,s015
+main_topics,treatment options,reason_for_conversation,get access to care,1,s046
 main_topics,weight management,reason_for_conversation,understand my condition,1,s005
-main_topics,work and employment,reason_for_conversation,emotional support,1,s049
-main_topics,work and employment,reason_for_conversation,understand my condition,1,s016
+main_topics,work impact,reason_for_conversation,emotional support,1,s049
+main_topics,work impact,reason_for_conversation,understand my condition,1,s016

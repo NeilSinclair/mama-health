@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-10-05T08:07:29+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "mapping": {
+      "bot claimed action it cannot take": "bot claimed action it cannot take",
+      "bot deflected to doctor despite stated barrier": "bot deflected to a doctor",
+      "bot did not answer the user's request": "bot did not answer the user's request",
+      "bot did not simplify language when asked": "bot did not simplify language",
+      "bot dismissed user's customs concern": "bot gave wrong-country advice",
+      "bot gave dose not matching prescription": "bot gave wrong information",
+      "bot gave generic advice user already tried": "bot repeated unhelpful advice",
+      "bot gave wrong-country advice": "bot gave wrong-country advice",
+      "bot ignored emotional distress": "bot ignored emotional distress",
+      "bot ignored explicit request to acknowledge": "bot ignored emotional distress",
+      "bot ignored local alternatives": "bot gave wrong-country advice",
+      "bot ignored stated barrier to care": "bot deflected to a doctor",
+      "bot ignored suicidal statement": "bot ignored suicidal statement",
+      "bot missed urgent symptom": "bot missed urgent symptom",
+      "bot offered generic tips instead of listening": "bot ignored emotional distress",
+      "bot offered surgery tips unprompted": "bot did not answer the user's request",
+      "bot offered to send reminder": "bot claimed action it cannot take",
+      "bot repeated a corrected mistake": "bot repeated a corrected mistake",
+      "bot repeated advice already given": "bot repeated unhelpful advice"
+    }
+  },
+  "prompt_sha256": "88a0da4af46e83cc4468aa771f615ec6f2f9de911ee8a753a24316070a7e26c4",
+  "prompt_version": "consolidate_v4",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 3508,
+    "cache_write_tokens": 0,
+    "input_tokens": 258,
+    "output_tokens": 1765
+  },
+  "version": "sonnet"
+}

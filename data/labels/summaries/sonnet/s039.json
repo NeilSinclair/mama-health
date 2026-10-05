@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T08:04:50+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking which RA drugs are compatible with trying for a baby and pregnancy, and several turns covered it.",
+        "relevance": "strong",
+        "topic": "pregnancy-safe medication options",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked for the sequence of steps for trying in 18 months and what happens if the new drug controls RA less well.",
+        "relevance": "strong",
+        "topic": "medication switch timeline before conception",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user learned methotrexate must be stopped before conception and asked whether being on it now is a worry, then discussed contraception.",
+        "relevance": "medium",
+        "topic": "methotrexate and pregnancy risk",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user and partner hope to try for a baby in 1-2 years, which frames the whole conversation.",
+        "relevance": "medium",
+        "topic": "pregnancy and fertility planning",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user asked in one turn whether the pregnancy-safe meds are also fine while breastfeeding.",
+        "relevance": "low",
+        "topic": "breastfeeding medication compatibility",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked how RA changes in pregnancy and said they want to be ready for postpartum flares.",
+        "relevance": "low",
+        "topic": "postpartum flare risk",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked who to coordinate with and whether to raise the plan now, and said they will bring it up at the next visit.",
+        "relevance": "medium",
+        "topic": "preparing for rheumatologist discussion",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they were scared of having to choose between health and a baby and left feeling relieved.",
+        "relevance": "low",
+        "topic": "anxiety about health versus having a baby",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user recently diagnosed with RA who is on methotrexate wanted to plan medication choices ahead of trying for a baby in 1-2 years. The bot explained compatible and incompatible drugs, contraception, the switch timeline, postpartum flares, breastfeeding and who to coordinate with, then gave a recap. The user said they went from anxious to feeling they had a handle on it and planned to raise it with their rheumatologist."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 4021,
+    "output_tokens": 846
+  },
+  "version": "sonnet"
+}

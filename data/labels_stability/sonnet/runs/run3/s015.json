@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:50:04+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with pain returning three months after surgery and came back to why it recurred so fast.",
+        "relevance": "strong",
+        "topic": "recurrent endometriosis pain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The opening question was whether another surgery is needed, and the user later asked when surgery would be considered.",
+        "relevance": "strong",
+        "topic": "repeat surgery decision",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "Several turns covered alternatives to the pill, with the user asking specifically about the hormonal IUD and mood effects.",
+        "relevance": "strong",
+        "topic": "hormonal treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user explained they stopped the pill because of low mood and no libido, which shaped the options discussed.",
+        "relevance": "medium",
+        "topic": "pill side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user said they felt defeated and later said they felt less hopeless and valued being taken seriously.",
+        "relevance": "medium",
+        "topic": "feeling defeated",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user engaged with the new idea that pain may not be all endometriosis, over a few turns.",
+        "relevance": "medium",
+        "topic": "pelvic floor muscle pain",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user had not taken in the surgery findings and welcomed the idea of requesting the note.",
+        "relevance": "medium",
+        "topic": "operative note request",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user mentioned once that they were given no hormonal treatment and only told to come back if problems arose.",
+        "relevance": "low",
+        "topic": "no post-surgery follow-up",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user whose endometriosis pain returned three months after laparoscopy asked whether they need more surgery. The bot explained recurrence, hormonal options such as the hormonal IUD given they did not tolerate the pill, when repeat surgery is considered, and possible pelvic floor involvement, then gave a three-step plan. The user said it was clear and that they felt less like it was 'surgery forever'."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2762,
+    "output_tokens": 780
+  },
+  "version": "sonnet"
+}

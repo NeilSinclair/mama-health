@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T06:50:00+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The opening question was whether it will improve, and the user returned to the far end of the timeline at t21.",
+        "relevance": "strong",
+        "topic": "long covid prognosis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user described being wiped out for days after a food shop and asked whether the crashes prolong the illness.",
+        "relevance": "medium",
+        "topic": "post-exertional crashes",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "Several turns on what pacing is, finding an energy envelope and tracking, and the user chose to start it.",
+        "relevance": "strong",
+        "topic": "pacing and energy management",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked what to raise with their GP so it is not another dismissive visit and left with concrete points.",
+        "relevance": "medium",
+        "topic": "preparing for gp appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user mentioned once that a previous appointment was 'pats on the head' and it framed the later question.",
+        "relevance": "low",
+        "topic": "dismissive gp",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said the timeline feels like forever and that false reassurance from others makes them feel alone.",
+        "relevance": "medium",
+        "topic": "fear and loneliness about illness",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user said job and household make resting hard and that their manager does not grasp it is ongoing; discussed over a few turns.",
+        "relevance": "medium",
+        "topic": "work and rest constraints",
+        "topic_group": "Work & life plans"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with long covid of about six months asked for an honest view on whether it will improve. The bot gave a candid outlook and introduced post-exertional malaise and pacing, then covered work adjustments and what to raise with their GP. The user said they would start pacing and tracking and called it the first conversation that had not made them feel worse. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2407,
+    "output_tokens": 708
+  },
+  "version": "sonnet"
+}

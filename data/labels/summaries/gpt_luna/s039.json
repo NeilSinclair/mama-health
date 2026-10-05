@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:49:10+00:00",
+  "created_at": "2026-10-05T07:50:11+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,50 +7,50 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came to understand which RA treatments could fit with trying for a baby and returned to planning a safe transition.",
+        "reason": "The user asked which RA medicines could be used while trying to conceive and during pregnancy, then asked what to do if a new regimen did not control the disease as well.",
         "relevance": "strong",
-        "topic": "pregnancy medication planning",
+        "topic": "pregnancy-compatible medication options",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked whether being on methotrexate now was concerning and recognized the need for contraception while taking it.",
-        "relevance": "medium",
-        "topic": "methotrexate safety",
+        "reason": "After revealing they had started methotrexate, the user asked whether to worry and engaged with guidance about contraception and stopping it before trying to conceive.",
+        "relevance": "strong",
+        "topic": "methotrexate pregnancy precautions",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked what options would remain if a pregnancy-compatible medication did not control RA as well.",
-        "relevance": "medium",
-        "topic": "disease control after switching",
-        "topic_group": "Treatment choice"
+        "reason": "The user described hopes to have a baby in one to two years and asked for a rough sequence for preparing to try.",
+        "relevance": "strong",
+        "topic": "pregnancy planning",
+        "topic_group": "Work & life plans"
       },
       {
-        "reason": "The user asked whether RA changes during pregnancy and followed up about postpartum flares.",
+        "reason": "The user asked whether RA changes during pregnancy and noted they wanted to prepare for possible postpartum flares.",
         "relevance": "medium",
-        "topic": "ra course in pregnancy",
+        "topic": "ra during pregnancy and postpartum",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked whether pregnancy-compatible medications could also be used while breastfeeding.",
+        "reason": "The user specifically asked whether pregnancy-compatible medicines are also suitable for breastfeeding.",
         "relevance": "medium",
         "topic": "breastfeeding medication safety",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked whom to coordinate with and whether to raise pregnancy plans with the rheumatologist now.",
+        "reason": "The user asked who should coordinate the plan and whether to raise pregnancy plans with their rheumatologist now.",
         "relevance": "medium",
-        "topic": "preconception care coordination",
+        "topic": "pregnancy care coordination",
         "topic_group": "Working with clinicians"
       },
       {
-        "reason": "The user described fear of having to choose between their health and having a baby, then said the conversation eased that anxiety.",
+        "reason": "The user described being anxious about choosing between their health and having a baby, then said they felt they had a path and a handle on the situation.",
         "relevance": "medium",
-        "topic": "pregnancy-related anxiety",
+        "topic": "anxiety about pregnancy and ra",
         "topic_group": "Emotional wellbeing"
       }
     ],
-    "reason_for_conversation": "decisional",
-    "summary": "Recently diagnosed with RA, the user hopes to try for a baby in one to two years and asked about medication choices, methotrexate safety, timing a switch, disease control, pregnancy and postpartum changes, and breastfeeding. The assistant discussed compatible treatment options and care coordination; the user said the plan was clear, intended to raise it at the next rheumatology visit, and felt less anxious and more in control."
+    "reason_for_conversation": "informational",
+    "summary": "Recently diagnosed with RA and taking methotrexate, the user wanted to understand medication choices and plan for trying for a baby in one to two years. The assistant discussed pregnancy-compatible options, methotrexate precautions and timing, disease changes during pregnancy and postpartum, breastfeeding, and care coordination; the user said the recap was exactly right and that they felt they had a handle on the plan."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -59,7 +59,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 6859,
-    "output_tokens": 1518
+    "output_tokens": 1271
   },
   "version": "gpt_luna"
 }

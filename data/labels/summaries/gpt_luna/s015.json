@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:48:13+00:00",
+  "created_at": "2026-10-05T07:49:24+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,50 +7,56 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user described the same deep, cyclical pelvic ache returning three months after surgery and asked whether that timing was normal.",
+        "reason": "The user came in because a similar deep pelvic ache had returned after surgery and described its link to their period.",
         "relevance": "strong",
         "topic": "recurrent pelvic pain",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user opened by asking whether another operation was needed and later asked when repeat surgery would be considered.",
+        "reason": "The user asked whether another operation was needed so soon and later asked what circumstances might justify one.",
         "relevance": "strong",
         "topic": "repeat surgery",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked specifically about the hormonal IUD and discussed alternatives to the pill as possible next steps.",
-        "relevance": "medium",
-        "topic": "hormonal treatment options",
+        "reason": "The user explored alternatives to surgery, particularly after learning about hormonal options and pelvic floor physiotherapy.",
+        "relevance": "strong",
+        "topic": "non-surgical treatment options",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user explained that the combined pill caused low mood and loss of libido, which shaped what treatments they were willing to consider.",
+        "reason": "The user said the combined pill had caused low mood and low libido and did not want to take it again.",
         "relevance": "medium",
-        "topic": "hormonal medication side effects",
+        "topic": "hormonal treatment side effects",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user engaged with the explanation that pelvic floor muscles or pain sensitization could also contribute to the pain.",
+        "reason": "The user returned to ask whether pain recurring three months after surgery was normal and said the timing felt very quick.",
         "relevance": "medium",
-        "topic": "other sources of pelvic pain",
+        "topic": "early pain recurrence",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user welcomed the suggestion to request the operative note and accepted a plan to discuss options with their surgeon or gynecologist.",
+        "reason": "The user engaged with the possibility that pelvic floor muscles could contribute to pain beyond endometriosis itself.",
         "relevance": "medium",
-        "topic": "surgical records and follow-up",
-        "topic_group": "Access to care"
+        "topic": "other pelvic pain causes",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user said they felt defeated after expecting surgery to fix the pain, then later expressed feeling more hopeful.",
-        "relevance": "low",
-        "topic": "discouragement about pain returning",
+        "reason": "The user welcomed the idea of obtaining the operative note and asked for a concrete next step to discuss with their care team.",
+        "relevance": "medium",
+        "topic": "surgical records and follow-up",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they felt defeated after expecting surgery to fix the pain, then described feeling more hopeful.",
+        "relevance": "medium",
+        "topic": "discouragement about pain",
         "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user described cyclical pelvic pain returning three months after endometriosis surgery and wanted to know whether another operation was needed. The assistant discussed non-surgical options, possible contributors to pain, and requesting the operative note; the user said the plan was clear and felt less worried that surgery was the only path."
+    "summary": "The user asked whether returning cyclical pelvic pain three months after endometriosis surgery meant they needed another operation, and explained they did not want to resume the pill because of its effects on mood and libido. The assistant discussed non-surgical options, other possible pain contributors, obtaining the operative note, and questions for a follow-up; the user said the plan was clear and felt less resigned to repeated surgery."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -59,7 +65,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 6066,
-    "output_tokens": 1029
+    "output_tokens": 1058
   },
   "version": "gpt_luna"
 }

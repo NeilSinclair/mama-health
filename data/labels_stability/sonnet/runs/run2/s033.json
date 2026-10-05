@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-05T06:49:25+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether a drop from 20 to 15 migraine days counts as the treatment working, and the whole conversation revolves around that.",
+        "relevance": "strong",
+        "topic": "preventive treatment response",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user logs days in an app, and several turns cover what to track (frequency, severity, rescue medication response) until the next review.",
+        "relevance": "medium",
+        "topic": "migraine day tracking",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to raise with the neurologist and worried the drug would be stopped for missing the benchmark.",
+        "relevance": "medium",
+        "topic": "preparing for neurologist visit",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they wanted to feel encouraged but could not tell, and later said they felt a lot better.",
+        "relevance": "medium",
+        "topic": "discouragement about partial response",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user noticed in one turn that attacks were less severe and had not counted this as improvement.",
+        "relevance": "low",
+        "topic": "reduced migraine severity",
+        "topic_group": "Physical symptoms"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user three months into a CGRP migraine preventive asked whether a drop from 20 to 15 migraine days counts as it working. The bot explained the usual 50% benchmark, the later six-month assessment window, tracking severity as well as frequency, and what to ask the neurologist. The user said they felt much better and described the treatment as working but not finished."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1468,
+    "output_tokens": 566
+  },
+  "version": "sonnet"
+}

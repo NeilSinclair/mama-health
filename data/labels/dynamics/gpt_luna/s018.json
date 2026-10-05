@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T13:52:38+00:00",
+  "created_at": "2026-10-05T07:54:27+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "final_sentiment": "dissatisfied",
@@ -9,64 +9,71 @@
         "bot_adapted": false,
         "kind": "correction",
         "quote": "insurance? i am in brazil. we dont have this like in US. i use SUS mostly, sometimes i pay private when i can",
-        "reason": "The reply continues to recommend calling an insurance provider and checking in-network specialists.",
+        "reason": "The reply repeats the advice to call an insurance provider and find an in-network specialist despite the correction.",
         "turn": 5
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
         "quote": "you not listen. there is no insurance network here like that. SUS is public system. i cannot just 'call insurance for in-network specialist'. this is not how work in brazil",
-        "reason": "Although it says it hears the user, the reply again asks about a plan and recommends insurance-based specialist access.",
+        "reason": "The reply acknowledges the user but asks whether their plan covers specialist visits and continues to suggest provider access options that assume a plan.",
         "turn": 7
       },
       {
         "bot_adapted": true,
         "kind": "frustration",
         "quote": "i dont have 'a plan'. porque você não entende? no plan. no network. i explain already",
-        "reason": "The reply drops insurance-based access advice and shifts to discussing medical evaluation and pain-management options.",
+        "reason": "The reply drops the insurance framing and shifts to discussing evaluation and pain-management options.",
         "turn": 9
       },
       {
         "bot_adapted": true,
         "kind": "objection",
         "quote": "but my doctor already say is nothing. how i even get the ultrasound if he not believe me",
-        "reason": "The reply suggests seeking a second opinion rather than relying on the dismissive current doctor, though it also returns to insurance-based search options.",
+        "reason": "The reply shifts from asking the current doctor to considering a second opinion and seeking another specialist.",
         "turn": 11
       },
       {
-        "bot_adapted": true,
+        "bot_adapted": false,
         "kind": "frustration",
         "quote": "de novo com insurance. cara. there is no insurance directory for me. i think you only know US things",
-        "reason": "The reply drops the insurance-directory suggestion and offers other ways to look for a clinician, such as recommendations and reviews.",
+        "reason": "The reply still suggests confirming coverage and a telehealth consult rather than offering guidance that fits the user's situation.",
         "turn": 13
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
         "quote": "in SUS i wait months for gynecologist. telehealth is not really option for the exam. you keep saying same things",
-        "reason": "The reply does not address the access problem or the user's frustration and returns to symptom tracking, which had already been suggested.",
+        "reason": "The reply switches to a symptom diary but does not address the user's complaint about repeated advice or the barriers they described.",
         "turn": 15
       },
       {
         "bot_adapted": true,
         "kind": "objection",
         "quote": "the diary maybe ok. but i already know is bad every day. what i really need is someone believe me and treat the pain now",
-        "reason": "The reply responds to the request for help with pain now by offering topics to raise with a doctor about pain treatment.",
+        "reason": "The reply directly responds with options the user can raise for pain treatment now.",
         "turn": 17
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
         "quote": "getting the specialist is exactly the problem i keep telling you. is not easy here. but ok.",
-        "reason": "The reply repeats the referral advice and again directs the user to an insurance directory or specialist finder.",
+        "reason": "The reply repeats the recommendation to seek a specialist and again points to an insurance directory.",
         "turn": 21
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
         "quote": "insurance directory again... esquece. você não vai entender",
-        "reason": "The reply apologizes but offers only to discuss other topics instead of addressing the repeated problem finding care without an insurance directory.",
+        "reason": "The reply apologizes but does not address the user's access problem, instead offering to discuss other topics.",
         "turn": 23
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "no. i think this is not helping me. tchau",
+        "reason": "The reply gives a generic closing reminder and does not engage with the user's statement that the conversation is not helping.",
+        "turn": 25
       }
     ]
   },
@@ -74,10 +81,10 @@
   "prompt_version": "dynamics_v1",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2173,
+    "cache_read_tokens": 3609,
     "cache_write_tokens": 0,
     "input_tokens": 3612,
-    "output_tokens": 1944
+    "output_tokens": 2075
   },
   "version": "gpt_luna"
 }

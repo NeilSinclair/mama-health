@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:49:01+00:00",
+  "created_at": "2026-10-05T07:50:03+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,44 +7,44 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came to understand whether and how to shift an infliximab infusion that falls during a three-week trip, and settled on calling the care team about having it before departure.",
+        "reason": "The user wanted to know how to adjust an infusion falling during the trip, asked about early versus delayed timing, and settled on asking the team about an infusion before flying.",
         "relevance": "strong",
-        "topic": "infusion timing",
+        "topic": "infliximab infusion timing",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked what to do while travelling on infliximab and included checking vaccines in the travel plan they repeated.",
+        "relevance": "medium",
+        "topic": "travel infection precautions",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked what to do about travelling while on infliximab and discussed vaccines and infection precautions.",
+        "reason": "The user raised coverage for a pre-existing condition and engaged with advice to declare Crohn's and infliximab.",
         "relevance": "medium",
-        "topic": "travel precautions",
-        "topic_group": "Taking medication safely"
-      },
-      {
-        "reason": "The user noted they needed insurance to cover Crohn's as a pre-existing condition and engaged with advice on what to declare.",
-        "relevance": "medium",
-        "topic": "travel insurance",
+        "topic": "travel insurance coverage",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user asked what paperwork to carry and discussed a clinician letter and medication list.",
+        "reason": "The user asked whether to carry paperwork and responded positively to suggestions for a treatment letter and generic-name medication list.",
         "relevance": "medium",
-        "topic": "medical documentation abroad",
+        "topic": "travel medication documentation",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user mentioned wanting to know where to go if they had a flare, and the assistant suggested identifying local care before travel.",
+        "reason": "The user raised knowing where to go if a flare happened abroad, and the assistant suggested identifying appropriate care before travelling.",
         "relevance": "medium",
-        "topic": "finding care abroad",
+        "topic": "care abroad for flares",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user said they usually feel tired the day after an infusion and used that to consider timing it several days before the flight.",
+        "reason": "The user said they usually feel tired the day after an infusion and used that to rule out scheduling it just before the flight.",
         "relevance": "low",
         "topic": "post-infusion fatigue",
-        "topic_group": "Physical symptoms"
+        "topic_group": "Taking medication safely"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user wanted to plan an infliximab infusion that falls during a three-week trip and asked about shifting it, travel precautions, insurance, documentation, and care abroad. The assistant suggested discussing an earlier infusion with the IBD team and preparing for travel; the user summarized the steps, planned to call the team the next day, and said the conversation turned their worry into actionable steps."
+    "summary": "The user wanted to plan an infliximab infusion that fell during a three-week trip, and also asked about travel precautions, insurance, documentation, and where to seek care abroad. They built a list that included arranging the infusion before departure, checking vaccines, declaring their condition for insurance, carrying treatment information, and identifying care; they said they would call their team the next day and that the conversation turned their worry into steps."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -53,7 +53,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 6061,
-    "output_tokens": 1177
+    "output_tokens": 1248
   },
   "version": "gpt_luna"
 }

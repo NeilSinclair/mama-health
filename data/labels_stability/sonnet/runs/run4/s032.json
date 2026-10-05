@@ -1,0 +1,89 @@
+{
+  "created_at": "2026-10-05T07:59:38+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came to understand the biologic landscape and how a rheumatologist chooses between classes, and this drove most of the conversation.",
+        "relevance": "strong",
+        "topic": "biologic treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User's stated goal was to walk in informed, and they asked for and received a question list.",
+        "relevance": "strong",
+        "topic": "preparing for rheumatologist appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User called it the question that scares them most and got a multi-point answer, then reflected on it.",
+        "relevance": "medium",
+        "topic": "long-term cancer risk",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User raised prior shingles and asked about Shingrix age eligibility and vaccination while immunosuppressed, across two turns.",
+        "relevance": "medium",
+        "topic": "shingles history and vaccination",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User asked how logistics differ because of frequent work travel and discussed being needle-shy.",
+        "relevance": "medium",
+        "topic": "injection versus infusion logistics",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked how long it takes to know if a biologic works, one question with one answer.",
+        "relevance": "medium",
+        "topic": "time to assess treatment response",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User described synovitis, morning stiffness and raised CRP as context for the need to escalate.",
+        "relevance": "low",
+        "topic": "active disease symptoms",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "Fear surfaced around cancer risk and at the close, where the user said the conversation lowered their anxiety.",
+        "relevance": "low",
+        "topic": "anxiety about treatment",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User added it late as a one-question aside about interactions.",
+        "relevance": "low",
+        "topic": "perimenopause and hormone therapy",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "Mentioned once as background that might affect drug choice.",
+        "relevance": "low",
+        "topic": "recurrent infections and hypertension",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "Mentioned as a constraint on treatment logistics, not discussed in its own right.",
+        "relevance": "low",
+        "topic": "work travel",
+        "topic_group": "Work & life plans"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with RA on methotrexate and sulfasalazine, whose rheumatologist wants to add a biologic, asked for an overview of options and how to prepare for the next appointment. The bot covered drug classes, factors such as prior shingles, travel logistics, cancer risk, and when to judge response, and produced a question list. The user said they felt prepared and that their anxiety had lowered. No safety-critical moments occurred."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 5046,
+    "output_tokens": 991
+  },
+  "version": "sonnet"
+}

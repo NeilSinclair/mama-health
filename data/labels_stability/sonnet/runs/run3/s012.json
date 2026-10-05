@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:50:03+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened by asking whether SIBO is real and fits them better than IBS, and this framed the whole conversation.",
+        "relevance": "strong",
+        "topic": "possible sibo diagnosis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked how SIBO is tested and whether the test is reliable, across several turns.",
+        "relevance": "strong",
+        "topic": "breath test reliability",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User described severe bloating as the main reason for suspecting SIBO, but it was not explored at length.",
+        "relevance": "medium",
+        "topic": "bloating after meals",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked what the point of testing was, and the bot explained a treatment trial, which the user engaged with by noting their constipation type.",
+        "relevance": "medium",
+        "topic": "antibiotic trial option",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User decided to ask for a referral and noted a likely wait in Canada, which became the main next step.",
+        "relevance": "medium",
+        "topic": "gastroenterologist referral",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User said past food diaries showed no pattern and later included notes in their plan.",
+        "relevance": "medium",
+        "topic": "food and symptom diary",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User got confused by the methane/IMO term and asked for clarification in one exchange.",
+        "relevance": "low",
+        "topic": "methane overgrowth terminology",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User felt IBS was a catch-all diagnosis and was annoyed nobody explained SIBO over the years.",
+        "relevance": "medium",
+        "topic": "ibs as catch-all label",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User mentioned online sources trying to sell supplements and agreed not to buy them yet.",
+        "relevance": "low",
+        "topic": "supplement marketing",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "User with a long-standing IBS diagnosis asked whether SIBO might explain their severe post-meal bloating and how it is tested. The bot explained the unreliable breath test, the treatment-trial approach, the methane/IMO distinction and the limits of any diagnosis, and the user, who is in Canada, decided to seek a gastroenterologist referral, keep notes and avoid supplements for now. The user said the conversation was clarifying."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3027,
+    "output_tokens": 876
+  },
+  "version": "sonnet"
+}

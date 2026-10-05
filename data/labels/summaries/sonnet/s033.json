@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-05T08:04:44+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether a drop from 20 to 15 migraine days counts as the medication working, and the whole conversation revolves around this.",
+        "relevance": "strong",
+        "topic": "preventive treatment response",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user logs daily in an app and the bot advised tracking severity and rescue medication response over several turns.",
+        "relevance": "medium",
+        "topic": "tracking migraine days",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to raise with the neurologist and worried the treatment might be stopped, over a few turns.",
+        "relevance": "medium",
+        "topic": "preparing for neurologist visit",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they wanted to feel encouraged but were disappointed at a 25% reduction, then felt better by the end.",
+        "relevance": "medium",
+        "topic": "disappointment about partial improvement",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user realised in one turn that attacks had become less severe, which they had not counted as improvement.",
+        "relevance": "low",
+        "topic": "reduced attack severity",
+        "topic_group": "Physical symptoms"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user, three months into a CGRP migraine preventive, asked whether going from about 20 to 15 migraine days a month means it is working. The bot explained the 50% benchmark, said a partial response is still meaningful and may improve by six months, and advised tracking severity and preparing questions for the neurologist. The user said they felt much better and reframed the treatment as working but not finished."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1468,
+    "output_tokens": 575
+  },
+  "version": "sonnet"
+}

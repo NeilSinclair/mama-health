@@ -361,7 +361,7 @@ function render() {
     document.getElementById("filters").replaceChildren();
     document.getElementById("count").textContent = "";
     rowsBox.replaceChildren(el("p", { class: "empty" },
-      "No cached labels yet. Run: uv run mama-pipeline --relabel gpt_luna"));
+      "No cached labels yet. Run: uv run mama-pipeline --relabel sonnet"));
     return;
   }
   renderFilters(v.rows);

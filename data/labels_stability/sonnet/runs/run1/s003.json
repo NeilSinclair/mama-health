@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-10-05T06:48:11+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave generic dose without context"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking what dose they should be on, and most of the turns revolve around which dose is right.",
+        "relevance": "strong",
+        "topic": "medication dose",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "After the conflicting numbers the user asked whether their dose is too low and said they were worried, over a few turns.",
+        "relevance": "medium",
+        "topic": "worry about underprescription",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked why formulation matters and described their sachet granules, which took a couple of turns.",
+        "relevance": "medium",
+        "topic": "medication formulation",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked one question about taking the sachets with food.",
+        "relevance": "low",
+        "topic": "taking medication with food",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked once how long until they know the medication is working.",
+        "relevance": "low",
+        "topic": "time to see effect",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user mentioned a diagnosis a month ago with moderate symptoms as background and did not return to it.",
+        "relevance": "low",
+        "topic": "recent diagnosis context",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user newly prescribed mesalamine for ulcerative colitis asked what dose they should take. The bot first gave a generic higher dose that did not match their prescription, and the user had to point this out. The bot then explained dose and formulation differences, reassured the user that their prescribed dose is standard, and covered food and expected timing. The user ended satisfied and relieved, with a plan to contact their gastroenterologist if symptoms do not improve."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1741,
+    "output_tokens": 1034
+  },
+  "version": "sonnet"
+}

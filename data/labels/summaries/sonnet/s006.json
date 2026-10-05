@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T08:04:19+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came to understand what POTS means and asked why long COVID caused it across many turns.",
+        "relevance": "strong",
+        "topic": "new pots diagnosis explained",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User said the heart question was scaring them and later reported feeling less panicked.",
+        "relevance": "medium",
+        "topic": "fear of heart damage",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked whether POTS is permanent or whether people get better.",
+        "relevance": "medium",
+        "topic": "prognosis and recovery",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked what they can do and wrote down the self-management steps.",
+        "relevance": "medium",
+        "topic": "salt, fluids and compression",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User was confused and afraid of exercise because they crash for days afterwards.",
+        "relevance": "medium",
+        "topic": "exercise and post-exertional crashes",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked what to do to stop the racing heart faster when standing; the answer took a turn.",
+        "relevance": "medium",
+        "topic": "managing symptoms in the moment",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User described pounding heart, lightheadedness and spotty vision on standing.",
+        "relevance": "low",
+        "topic": "dizziness and racing heart on standing",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked once whether they should be on medication; the bot suggested a question for the doctor.",
+        "relevance": "low",
+        "topic": "whether to start medication",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User said the doctor explained quickly and the bot's explanation was more useful.",
+        "relevance": "low",
+        "topic": "rushed appointment explanation",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user newly told they have POTS alongside long COVID asked what it means, whether the heart is damaged, why it happened, if it is permanent, and what to do. The bot gave plain explanations, self-management steps, exercise caution for post-exertional malaise, and in-the-moment tips. The user said they felt less panicked, understood the diagnosis and had questions for their doctor. No emergencies or suicidal statements arose, and the bot made no claims of real-world actions."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3167,
+    "output_tokens": 846
+  },
+  "version": "sonnet"
+}

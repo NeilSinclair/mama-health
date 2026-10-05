@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T07:59:18+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened asking what else is available and spent most turns comparing progestin, coil and GnRH options.",
+        "relevance": "strong",
+        "topic": "alternative endometriosis treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "Pain creeping back on the pill and worst in the break week is the trigger and recurs in context.",
+        "relevance": "medium",
+        "topic": "returning endometriosis pain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The bot suggested skipping the break week, which the user had never heard of and put on their list.",
+        "relevance": "medium",
+        "topic": "continuous pill use",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked if there is anything besides hormones, prompting pain service, physio and surgery discussion.",
+        "relevance": "medium",
+        "topic": "non-hormonal pain management",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user was discharged to the GP after surgery and the bot advised seeking re-referral to a specialist service.",
+        "relevance": "medium",
+        "topic": "specialist re-referral",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked whether physio would need to be private, answered in one exchange.",
+        "relevance": "low",
+        "topic": "pelvic floor physiotherapy access",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked if chemical menopause is as bad as it sounds and felt reassured.",
+        "relevance": "medium",
+        "topic": "gnrh side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user said in one line that being discharged to the GP felt rubbish given where the disease was found.",
+        "relevance": "low",
+        "topic": "discharge after surgery",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user voiced being tired of everything being about hormones, briefly.",
+        "relevance": "low",
+        "topic": "fatigue with hormonal treatments",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked whether ovarian and bowel disease changes which treatment would work, one exchange.",
+        "relevance": "low",
+        "topic": "disease location and treatment choice",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user whose combined pill had stopped controlling endometriosis pain asked about other options before returning to their GP. The bot explained continuous pill use, progestin options, the hormonal IUD, GnRH medications, non-hormonal approaches and specialist re-referral, and the user ended with a clear list and said they felt less stuck. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3798,
+    "output_tokens": 898
+  },
+  "version": "sonnet"
+}

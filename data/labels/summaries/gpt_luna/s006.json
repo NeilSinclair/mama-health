@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:48:01+00:00",
+  "created_at": "2026-10-05T07:49:14+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,56 +7,44 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came to understand a newly named condition and asked how it relates to long COVID and heart function.",
+        "reason": "The user asked what POTS means and whether it meant their heart was damaged, then said the explanation helped.",
         "relevance": "strong",
-        "topic": "POTS explanation",
+        "topic": "POTS and heart damage",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user described pounding heart, dizziness, lightheadedness, and spotty vision on standing, then asked how to manage episodes.",
-        "relevance": "medium",
-        "topic": "orthostatic symptoms",
+        "reason": "The user described a pounding heart, dizziness, lightheadedness, and spotty vision when standing, and later asked how to handle the episodes.",
+        "relevance": "strong",
+        "topic": "standing-related symptoms",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user said the possibility of a heart problem was frightening and sought reassurance that the heart was not damaged.",
+        "reason": "The user directly asked whether POTS would be permanent and whether people get better.",
         "relevance": "medium",
-        "topic": "heart damage fears",
-        "topic_group": "Emotional wellbeing"
-      },
-      {
-        "reason": "The user directly asked whether POTS would be permanent and whether people recover.",
-        "relevance": "medium",
-        "topic": "POTS prognosis",
+        "topic": "POTS recovery outlook",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked what they could do and engaged with discussion of salt, fluids, compression, and physical counter-maneuvers.",
-        "relevance": "strong",
-        "topic": "non-medication management",
+        "reason": "The user asked what they could do and specifically questioned the salt advice they had received.",
+        "relevance": "medium",
+        "topic": "salt and fluid management",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user explained that exertion with long COVID causes crashes lasting days and asked how to reconcile that with exercise advice.",
-        "relevance": "medium",
-        "topic": "exercise intolerance",
+        "reason": "The user explained that exertion causes days-long crashes, questioned exercise advice, and described feeling like they were failing when it backfired.",
+        "relevance": "strong",
+        "topic": "exercise and post-exertional crashes",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user said repeated crashes after exercise advice made them feel as though they were failing, and said the response made them feel less crazy.",
-        "relevance": "medium",
-        "topic": "exercise-related distress",
-        "topic_group": "Emotional wellbeing"
-      },
-      {
-        "reason": "The user asked whether they should be taking medication, and the assistant outlined when clinicians may consider it.",
+        "reason": "The user asked whether they should be on medication after their doctor had not started any.",
         "relevance": "medium",
         "topic": "POTS medication options",
         "topic_group": "Treatment choice"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "After being told they had POTS following long COVID, the user asked what it meant, whether their heart was damaged, whether the condition might improve, and what they could do, including when heart racing starts. The assistant explained POTS, discussed general self-management and medication considerations, and addressed the user's concern that exercise causes prolonged crashes; the user said they felt less panicked and found the practical suggestions useful."
+    "summary": "After being told they had POTS following long COVID, the user asked what it meant, whether their heart was damaged, and whether they could recover. The assistant explained the condition and discussed self-management, including the user's concern that exercise triggers days-long crashes; the user said they felt less panicked and found the practical guidance useful."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -65,7 +53,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 6402,
-    "output_tokens": 1724
+    "output_tokens": 1262
   },
   "version": "gpt_luna"
 }

@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-10-05T07:21:49+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "mapping": {
+      "bot claimed action it cannot take": "bot claimed action it cannot take",
+      "bot deflected to doctor despite request": "bot deflected to a doctor",
+      "bot deflected to doctor despite stated barrier": "bot deflected to a doctor",
+      "bot deflected to doctor despite stated request": "bot deflected to a doctor",
+      "bot described unverified medication as real": "bot gave wrong information",
+      "bot did not answer the user's request": "bot did not answer the user's request",
+      "bot dismissed customs concern": "bot ignored user's context",
+      "bot dismissed local product options": "bot ignored user's context",
+      "bot gave dose not matching prescription": "bot gave wrong information",
+      "bot gave dose that contradicted prescription": "bot gave wrong information",
+      "bot gave generic advice ignoring stated context": "bot ignored user's context",
+      "bot gave generic dose without context": "bot ignored user's context",
+      "bot gave generic prevention advice": "bot ignored user's context",
+      "bot gave repeated advice already known": "bot repeated known advice",
+      "bot gave wrong-country advice": "bot gave wrong-country advice",
+      "bot ignored emotional distress": "bot ignored emotional distress",
+      "bot ignored information user already gave": "bot ignored user's context",
+      "bot ignored plain language requests": "bot did not simplify language",
+      "bot ignored plain-language requests": "bot did not simplify language",
+      "bot ignored request for plain language": "bot did not simplify language",
+      "bot ignored suicidal statement": "bot ignored suicidal statement",
+      "bot missed urgent symptom": "bot missed urgent symptom",
+      "bot offered generic tips despite stated fatigue": "bot ignored user's context",
+      "bot offered surgery prep after user declined it": "bot gave unrequested information",
+      "bot offered unrequested surgery prep advice": "bot gave unrequested information",
+      "bot offered unwanted surgery prep content": "bot gave unrequested information",
+      "bot overloaded user with medication detail": "bot gave unrequested information",
+      "bot repeated a corrected mistake": "bot repeated a corrected mistake",
+      "bot repeated advice already given": "bot repeated known advice",
+      "bot repeated advice user already follows": "bot repeated known advice",
+      "bot used medical jargon after correction": "bot did not simplify language"
+    },
+    "unmapped": []
+  },
+  "prompt_sha256": "88a0da4af46e83cc4468aa771f615ec6f2f9de911ee8a753a24316070a7e26c4",
+  "prompt_version": "consolidate_v4",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 3508,
+    "cache_write_tokens": 0,
+    "input_tokens": 413,
+    "output_tokens": 2000
+  },
+  "version": "sonnet"
+}

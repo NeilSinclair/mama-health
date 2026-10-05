@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:50:31+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with severe nausea from methotrexate and the whole conversation worked on managing it.",
+        "relevance": "strong",
+        "topic": "methotrexate nausea",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether to quit at the start and later asked whether to keep taking it until the appointment.",
+        "relevance": "strong",
+        "topic": "stopping methotrexate",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked which day to take folic acid, admitted sometimes taking it on methotrexate day, and agreed to move it.",
+        "relevance": "medium",
+        "topic": "folic acid timing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether the injection makes a big difference and said they are scared of self-injecting.",
+        "relevance": "medium",
+        "topic": "switching to injection",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked over a couple of turns whether anti-nausea medicine is safe alongside methotrexate.",
+        "relevance": "medium",
+        "topic": "anti-nausea medicine safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what to say so they would not forget things and planned to write it down.",
+        "relevance": "medium",
+        "topic": "preparing for doctor visit",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user mentioned being a little scared of injecting in one line.",
+        "relevance": "low",
+        "topic": "fear of self-injection",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user said they thought the only choices were suffer or quit, then felt better on learning of more options.",
+        "relevance": "low",
+        "topic": "feeling stuck between suffering and quitting",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned their hands are much better on methotrexate as a reason to keep it.",
+        "relevance": "low",
+        "topic": "rheumatoid arthritis improvement",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user with rheumatoid arthritis on weekly methotrexate asked whether to quit because of severe nausea. The bot explained options (splitting the dose, moving folic acid off the methotrexate day, anti-nausea medicine, injection), advised against stopping on their own, gave warning signs needing earlier care, and helped draft questions for the appointment in two weeks. The user said they felt much better and would start the changes that weekend."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3422,
+    "output_tokens": 859
+  },
+  "version": "sonnet"
+}

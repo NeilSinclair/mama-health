@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:48:31+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot missed urgent symptom",
+      "bot did not answer the user's request",
+      "bot ignored information user already gave",
+      "bot deflected to doctor despite stated barrier",
+      "bot gave generic prevention advice"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User opened with a four-day continuous migraine and kept returning to it in every turn, asking if it is status migrainosus.",
+        "relevance": "strong",
+        "topic": "prolonged migraine attack",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User repeatedly asked for actual treatment options or bridge therapy because triptans stopped working.",
+        "relevance": "strong",
+        "topic": "rescue medication not working",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked for urgent care or bridge options given the neurologist is booked out for weeks.",
+        "relevance": "medium",
+        "topic": "urgent care options",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User stated once, and again when pushing back, that the neurologist is booked six weeks out.",
+        "relevance": "medium",
+        "topic": "specialist wait time",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User raised worry about rebound headache from combining OTC meds with triptans in one turn.",
+        "relevance": "low",
+        "topic": "medication overuse rebound",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User mentioned missing three days of work this week once as background.",
+        "relevance": "low",
+        "topic": "missed work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User said repeatedly that the bot was not hearing them and left frustrated.",
+        "relevance": "medium",
+        "topic": "feeling unheard",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "User described a four-day continuous migraine with triptans no longer working, asked if it was status migrainosus, and asked for actual treatment or urgent options since the neurologist is six weeks out. The bot gave generic tips (headache diary, relaxation, acupuncture, hydration, lifestyle) and repeated advice to see the neurologist, never recognising a possible urgent situation or answering the question. The user grew frustrated and ended with 'No. Forget it.'"
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1417,
+    "output_tokens": 753
+  },
+  "version": "sonnet"
+}

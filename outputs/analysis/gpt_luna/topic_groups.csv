@@ -1,11 +1,11 @@
 topic_group,n_sessions,session_ids,topics
-Treatment choice,21,"s001,s002,s004,s006,s008,s011,s013,s014,s015,s021,s022,s030,s031,s032,s033,s034,s038,s039,s041,s044,s050",cancer risk; diabetes management; diet and triggers; disease information; fertility and pregnancy; flare treatment; medication dosing; medication effectiveness; medication management; medication options; menstrual health; pelvic pain; supplements
-Physical symptoms,19,"s007,s009,s011,s013,s015,s016,s018,s019,s022,s024,s025,s026,s028,s030,s034,s036,s037,s044,s050",digestive symptoms; disease activity; exercise and pacing; fatigue and cognition; medication side effects; migraine symptoms; pain and mobility; pelvic pain; skin and hair concerns
-Understanding the condition & outlook,13,"s005,s006,s007,s010,s012,s021,s023,s029,s036,s038,s040,s042,s048",cancer risk; diabetes management; disease information; fertility and pregnancy; menstrual health; skin and hair concerns; thyroid management; weight management
-"Fatigue, sleep, diet & activity",6,"s004,s010,s020,s027,s028,s049",diet and triggers; exercise and pacing; fatigue and cognition; sleep problems
-Access to care,4,"s008,s018,s024,s046",care access; financial barriers
-Emotional wellbeing,4,"s026,s043,s048,s049",emotional distress; fertility and pregnancy; suicidal thoughts
-Taking medication safely,4,"s003,s035,s045,s047",medication dosing; medication management; medication safety
-Tests & monitoring,4,"s017,s020,s023,s040",diabetes management; lab results interpretation; testing and monitoring
-Work & life plans,2,"s016,s049",work and employment
+Treatment choice,21,"s001,s002,s004,s011,s013,s014,s015,s021,s030,s031,s032,s033,s034,s035,s038,s039,s041,s044,s046,s047,s050",IBD care; diet and nutrition; disease risks; endometriosis care; medication dosing; medication safety; migraine care; skin conditions; supplement use; treatment decisions; treatment options
+Physical symptoms,19,"s005,s006,s007,s009,s011,s013,s015,s018,s019,s022,s024,s026,s028,s030,s034,s036,s037,s044,s050",POTS concerns; endometriosis care; exercise and activity; gastrointestinal symptoms; hair loss; medication side effects; migraine care; pain management; skin conditions; weight management
+Understanding the condition & outlook,13,"s005,s006,s007,s010,s012,s017,s021,s023,s029,s032,s036,s042,s048",POTS concerns; diagnostic testing; disease outlook; disease risks; endometriosis care; gastrointestinal symptoms; glucose management; hair loss; reproductive health
+"Fatigue, sleep, diet & activity",8,"s004,s006,s010,s016,s025,s027,s028,s049",diet and nutrition; exercise and activity; fatigue and pacing
+Tests & monitoring,5,"s017,s020,s023,s025,s040",IBD care; glucose management; lab interpretation; thyroid care
+Access to care,4,"s008,s018,s024,s046",care access; medication access
+Emotional wellbeing,4,"s026,s043,s048,s049",emotional distress; reproductive health; suicidal thoughts
+Taking medication safely,3,"s003,s039,s045",IBD care; medication safety; thyroid care
+Work & life plans,3,"s016,s039,s049",reproductive health; work impact
 Working with clinicians,1,s001,clinician communication

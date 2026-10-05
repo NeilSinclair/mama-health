@@ -1,0 +1,80 @@
+{
+  "created_at": "2026-10-05T06:48:38+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored request for plain language",
+      "bot used medical jargon after correction"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The opening question and the repeated ask whether she will feel like this forever drive the conversation.",
+        "relevance": "strong",
+        "topic": "whether fibromyalgia is treatable",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "She asked for simpler wording repeatedly (t3, t5, t11, t19) and ended confused.",
+        "relevance": "medium",
+        "topic": "plain-language explanation",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "She describes pain all over, worst in the mornings in hands, shoulders and hips (t1, t9).",
+        "relevance": "medium",
+        "topic": "widespread chronic pain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "She asked in t9 whether tiredness after 9 hours of sleep is part of the condition.",
+        "relevance": "medium",
+        "topic": "persistent fatigue despite sleep",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The bot kept listing medicines and she asked how to get them (t13), but she did not engage with the details.",
+        "relevance": "medium",
+        "topic": "medication options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "She asked once whether graded exercise means walking (t7).",
+        "relevance": "low",
+        "topic": "walking and gentle exercise",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "She said the doctor named the diagnosis and sent her home with no options (t1, t13).",
+        "relevance": "medium",
+        "topic": "doctor offered no treatment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "She asked how to obtain the medicines and said she cannot pronounce the names to tell the doctor (t13, t15).",
+        "relevance": "medium",
+        "topic": "getting treatment or referral",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "She said her head was spinning and she was more confused than when she started (t11, t17).",
+        "relevance": "low",
+        "topic": "confusion and overwhelm",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A 71-year-old with fibromyalgia asked whether anything can be done, since her doctor offered nothing. She repeatedly asked for plain language but the bot kept using terms like SNRI, anticonvulsant and sensitization. She ended the chat tired and confused, with only the advice to ask her doctor about medication and a specialist referral."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2127,
+    "output_tokens": 873
+  },
+  "version": "sonnet"
+}

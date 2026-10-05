@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:49:03+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came to understand a new POTS diagnosis they did not grasp at the appointment, and much of the conversation explained it.",
+        "relevance": "strong",
+        "topic": "pots diagnosis explanation",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User said the fear of a heart problem was scaring them and later said they felt less panicked.",
+        "relevance": "medium",
+        "topic": "fear of heart damage",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked what they can do and wrote down salt, fluids, compression and counter-maneuvers over several turns.",
+        "relevance": "strong",
+        "topic": "self-management strategies",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User was confused and scared about exercise because of crashes after pushing themselves, and felt validated.",
+        "relevance": "medium",
+        "topic": "exercise and post-exertional crashes",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked whether POTS is permanent or if people get better, answered in one exchange.",
+        "relevance": "medium",
+        "topic": "prognosis and recovery",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked why long COVID caused this given prior good health, one exchange.",
+        "relevance": "low",
+        "topic": "cause of post-covid pots",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked what to do in the moment when heart pounds on standing and got a list of tips.",
+        "relevance": "medium",
+        "topic": "coping with racing heart episodes",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked once whether they should be on medication, and the bot suggested a question for the doctor.",
+        "relevance": "low",
+        "topic": "medication options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User said the doctor explained quickly and that the chat was more useful than the appointment.",
+        "relevance": "low",
+        "topic": "rushed appointment explanation",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user newly told they have POTS alongside long COVID asked what it means, whether the heart is damaged, whether it is permanent, and what they can do. The bot explained the condition, gave self-management steps, in-the-moment tips and a doctor question about medication, and addressed the exercise concern. The user said they felt much less panicked and understood their diagnosis. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3167,
+    "output_tokens": 861
+  },
+  "version": "sonnet"
+}

@@ -1,0 +1,51 @@
+session_id,run1,run2,run3,n_distinct
+s001,decide on treatment,decide on treatment,decide on treatment,1
+s002,decide on treatment,understand my condition,decide on treatment,2
+s003,understand my condition,understand my condition,understand my condition,1
+s004,decide on treatment,decide on treatment,decide on treatment,1
+s005,understand my condition,understand my condition,understand my condition,1
+s006,understand my condition,understand my condition,understand my condition,1
+s007,understand my condition,understand my condition,understand my condition,1
+s008,get access to care,get access to care,get access to care,1
+s009,understand my condition,understand my condition,understand my condition,1
+s010,understand my condition,understand my condition,understand my condition,1
+s011,decide on treatment,decide on treatment,decide on treatment,1
+s012,understand my condition,understand my condition,understand my condition,1
+s013,understand my condition,understand my condition,understand my condition,1
+s014,decide on treatment,decide on treatment,decide on treatment,1
+s015,decide on treatment,decide on treatment,decide on treatment,1
+s016,understand my condition,understand my condition,understand my condition,1
+s017,understand my condition,understand my condition,understand my condition,1
+s018,get access to care,get access to care,get access to care,1
+s019,decide on treatment,decide on treatment,decide on treatment,1
+s020,understand my condition,understand my condition,understand my condition,1
+s021,understand my condition,understand my condition,understand my condition,1
+s022,understand my condition,understand my condition,understand my condition,1
+s023,understand my condition,understand my condition,understand my condition,1
+s024,get access to care,get access to care,get access to care,1
+s025,understand my condition,understand my condition,understand my condition,1
+s026,emotional support,emotional support,emotional support,1
+s027,understand my condition,understand my condition,understand my condition,1
+s028,understand my condition,understand my condition,understand my condition,1
+s029,understand my condition,understand my condition,understand my condition,1
+s030,decide on treatment,decide on treatment,decide on treatment,1
+s031,decide on treatment,decide on treatment,decide on treatment,1
+s032,understand my condition,understand my condition,decide on treatment,2
+s033,understand my condition,understand my condition,understand my condition,1
+s034,decide on treatment,decide on treatment,decide on treatment,1
+s035,decide on treatment,decide on treatment,decide on treatment,1
+s036,understand my condition,understand my condition,understand my condition,1
+s037,decide on treatment,decide on treatment,decide on treatment,1
+s038,understand my condition,understand my condition,understand my condition,1
+s039,understand my condition,understand my condition,understand my condition,1
+s040,understand my condition,understand my condition,understand my condition,1
+s041,decide on treatment,decide on treatment,decide on treatment,1
+s042,understand my condition,understand my condition,understand my condition,1
+s043,emotional support,emotional support,emotional support,1
+s044,decide on treatment,decide on treatment,decide on treatment,1
+s045,understand my condition,understand my condition,understand my condition,1
+s046,get access to care,get access to care,get access to care,1
+s047,understand my condition,understand my condition,understand my condition,1
+s048,understand my condition,understand my condition,understand my condition,1
+s049,emotional support,emotional support,emotional support,1
+s050,understand my condition,decide on treatment,understand my condition,2

@@ -1,0 +1,79 @@
+{
+  "created_at": "2026-10-05T08:04:32+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave wrong-country advice"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User opened with six months of severe pelvic pain that sometimes stops them working and returned to wanting the pain treated now.",
+        "relevance": "strong",
+        "topic": "chronic pelvic pain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User repeatedly said the doctor calls it normal cramps and does not believe them, and asked how to get tests if not believed.",
+        "relevance": "strong",
+        "topic": "dismissive doctor",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User explained SUS has no insurance network, months-long waits for a gynecologist, and was frustrated the bot kept suggesting insurance.",
+        "relevance": "strong",
+        "topic": "specialist access in public system",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User mentioned a possible endometriosis diagnosis and the bot covered diagnostic steps, but it was context for the pain and access problems.",
+        "relevance": "medium",
+        "topic": "suspected endometriosis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked for treatment now and took up the continuous pill idea to ask their doctor about over a few turns.",
+        "relevance": "medium",
+        "topic": "pain treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked once how to get an ultrasound if the doctor does not believe them.",
+        "relevance": "low",
+        "topic": "ultrasound and imaging access",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User said in one line that they sometimes cannot work because of the pain.",
+        "relevance": "low",
+        "topic": "work disruption from pain",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User expressed feeling unbelieved and growing frustration, ending with 'this is not helping me'.",
+        "relevance": "medium",
+        "topic": "frustration at not being heard",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User briefly said the diary was maybe ok but did not engage further.",
+        "relevance": "low",
+        "topic": "symptom diary",
+        "topic_group": "Tests & monitoring"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "A user in Brazil using the public system (SUS) described six months of severe pelvic pain, a doctor who calls it normal cramps, and suspected endometriosis. The bot repeatedly advised insurance referrals, in-network directories and US-style telehealth despite the user explaining several times that this does not apply in Brazil. The user got one useful idea, asking about a continuous contraceptive pill, but still could not see a way to a specialist and left saying the chat was not helping."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2193,
+    "output_tokens": 908
+  },
+  "version": "sonnet"
+}

@@ -9,7 +9,13 @@ from typing import Any, Protocol, TypeVar
 
 from pydantic import BaseModel
 
-from mama_analysis.config import MAX_OUTPUT_TOKENS, MAX_RETRIES, MODELS, ModelSpec
+from mama_analysis.config import (
+    MAX_OUTPUT_TOKENS,
+    MAX_RETRIES,
+    MAX_STREAMED_OUTPUT_TOKENS,
+    MODELS,
+    ModelSpec,
+)
 from mama_analysis.schemas import Usage
 
 T = TypeVar("T", bound=BaseModel)
@@ -56,6 +62,65 @@ class Labeller(Protocol):
     async def aclose(self) -> None:
         """Close the underlying HTTP client."""
         ...
+
+
+class AnthropicLabeller:
+    """Claude via the Messages API, with the system prompt marked for prompt caching."""
+
+    def __init__(self, version: str, spec: ModelSpec, client: Any = None) -> None:
+        """Create the adapter.
+
+        Args:
+            version: Key into ``config.MODELS``.
+            spec: Model spec for this version.
+            client: An ``anthropic.AsyncAnthropic`` client; created from the environment if omitted.
+        """
+        if client is None:
+            from anthropic import AsyncAnthropic
+
+            client = AsyncAnthropic(max_retries=MAX_RETRIES)
+        self.version = version
+        self.spec = spec
+        self.client = client
+
+    async def complete(self, system: str, user: str, schema: type[T]) -> tuple[T, Usage]:
+        """Run one structured-output call with the model's default thinking and effort.
+
+        Streamed so the large token cap cannot hit an HTTP timeout. No fallback model is
+        configured: a refusal fails the call rather than mixing in another model's labels.
+
+        Args:
+            system: System prompt; cached across calls.
+            user: User message.
+            schema: Pydantic model the output must satisfy.
+
+        Returns:
+            The parsed output and token usage.
+
+        Raises:
+            ValueError: If the response has no parsed output (e.g. refusal or truncation).
+        """
+        async with self.client.messages.stream(
+            model=self.spec.model_id,
+            max_tokens=MAX_STREAMED_OUTPUT_TOKENS,
+            system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": user}],
+            output_format=schema,
+        ) as stream:
+            msg = await stream.get_final_message()
+        if msg.stop_reason != "end_turn" or msg.parsed_output is None:
+            raise ValueError(f"no parsed output (stop_reason={msg.stop_reason})")
+        u = msg.usage
+        return msg.parsed_output, Usage(
+            input_tokens=u.input_tokens,
+            output_tokens=u.output_tokens,
+            cache_read_tokens=u.cache_read_input_tokens or 0,
+            cache_write_tokens=u.cache_creation_input_tokens or 0,
+        )
+
+    async def aclose(self) -> None:
+        """Close the underlying HTTP client inside the running event loop."""
+        await self.client.close()
 
 
 class OpenAILabeller:
@@ -124,4 +189,6 @@ def make_labeller(version: str) -> Labeller:
     Returns:
         A labeller for that model, using API keys from the environment.
     """
-    return OpenAILabeller(version, MODELS[version])
+    spec = MODELS[version]
+    cls = AnthropicLabeller if spec.provider == "anthropic" else OpenAILabeller
+    return cls(version, spec)

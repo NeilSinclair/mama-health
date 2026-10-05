@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-10-05T06:49:02+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave dose not matching prescription"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking what dose to be on and spent most of the conversation checking whether their prescribed dose was right or too low.",
+        "relevance": "strong",
+        "topic": "mesalamine dose",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "After seeing the bot's higher dose, the user said they were worried they were underprescribed, which drove several turns of reassurance.",
+        "relevance": "medium",
+        "topic": "fear of underprescription",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked why formulation matters and described their sachet type, which became a key part of confirming the dose.",
+        "relevance": "medium",
+        "topic": "mesalamine formulation differences",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked once whether to take the sachets with food.",
+        "relevance": "low",
+        "topic": "taking medication with food",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked once how long until they would know the medication was working.",
+        "relevance": "low",
+        "topic": "time to treatment response",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user mentioned being diagnosed a month ago with moderate symptoms as background for the dose question.",
+        "relevance": "low",
+        "topic": "recent ulcerative colitis diagnosis",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user newly prescribed mesalamine for ulcerative colitis asked what dose they should be on. The bot first gave a flare-induction dose that did not match their prescription of 1.2g twice daily, then corrected itself and explained dosing varies by situation and formulation. The user ended reassured that their dose is fine and that they should contact their gastroenterologist if symptoms do not improve."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1741,
+    "output_tokens": 638
+  },
+  "version": "sonnet"
+}

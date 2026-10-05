@@ -1,0 +1,11 @@
+topic_group,n_sessions,session_ids,topics
+Treatment choice,23,"s001,s002,s004,s007,s008,s011,s013,s014,s015,s021,s022,s026,s030,s031,s032,s033,s034,s035,s037,s041,s044,s046,s050",biologic treatment; diet and triggers; medication changes; medication safety; preventive medication; prognosis and outlook; research and trials; skin and hair concerns; supplements; travel planning; treatment not working; treatment options
+Physical symptoms,14,"s005,s007,s009,s013,s015,s017,s018,s019,s022,s024,s026,s030,s037,s050",diet and triggers; skin and hair concerns; symptom questions; testing and monitoring
+Understanding the condition & outlook,11,"s005,s006,s010,s012,s021,s023,s029,s036,s038,s041,s042",cancer risk; new diagnosis basics; prognosis and outlook
+"Fatigue, sleep, diet & activity",9,"s004,s010,s016,s020,s025,s027,s028,s029,s031",conflicting health information; diet and triggers; fatigue and pacing; sleep problems
+Taking medication safely,7,"s003,s034,s039,s040,s044,s045,s047",fertility and pregnancy; medication changes; medication dosing; medication safety; medication side effects; supplements
+Access to care,6,"s008,s018,s019,s024,s036,s046",care access barriers; cost and coverage; research and trials; specialist referrals; specialist wait times; warning signs
+Emotional wellbeing,5,"s026,s042,s043,s048,s049",emotional distress; family and relationships; fertility and pregnancy; suicidal thoughts
+Tests & monitoring,4,"s020,s023,s025,s040",lab results interpretation; testing and monitoring
+Work & life plans,4,"s016,s039,s048,s049",fertility and pregnancy; work and employment
+Working with clinicians,4,"s001,s018,s025,s032",appointment preparation; dismissive doctor

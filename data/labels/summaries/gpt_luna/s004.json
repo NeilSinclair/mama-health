@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:47:57+00:00",
+  "created_at": "2026-10-05T07:49:16+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,44 +7,50 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user asked whether gluten-free eating is evidence-based for Hashimoto's and how to test whether it helps, then adopted a time-limited trial as part of their plan.",
+        "reason": "The user asked whether avoiding gluten could help and how to test it, then accepted a time-limited, tracked trial as a possible next step.",
         "relevance": "strong",
         "topic": "gluten-free diet trial",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "Ongoing tiredness and fog despite a reportedly normal TSH prompted the user's question and remained the main symptom they wanted to address.",
+        "reason": "The user explained that persistent tiredness and fog despite a reportedly normal TSH were driving the question and returned to finding their cause.",
         "relevance": "strong",
-        "topic": "fatigue and brain fog",
+        "topic": "ongoing fatigue and brain fog",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user asked why testing matters, recognized they should remain on gluten until tested, and included screening in their plan.",
+        "reason": "The user asked why testing mattered, recognized that testing requires continuing to eat gluten, and included screening in their plan.",
         "relevance": "medium",
         "topic": "celiac screening",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user wondered whether their dose might be contributing to tiredness and agreed to ask for it to be reviewed.",
+        "reason": "The user wondered whether their levothyroxine dose might be off and agreed to have it reviewed before trying dietary changes.",
         "relevance": "medium",
-        "topic": "levothyroxine dose review",
+        "topic": "thyroid medication dose review",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user included checks for iron, B12, and vitamin D in their proposed next steps after the assistant raised them as possible fatigue-related checks.",
+        "reason": "The user included iron, B12, and vitamin D testing in their proposed plan after the assistant raised them as possible checks.",
         "relevance": "medium",
-        "topic": "nutrient testing",
+        "topic": "fatigue blood tests",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user said the gluten idea appealed partly because it was something they could control themselves while waiting on doctors.",
+        "reason": "The user said the diet idea appealed partly because it felt controllable while waiting on doctors.",
+        "relevance": "low",
+        "topic": "sense of control",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user contrasted taking action through diet with waiting on doctors, but did not describe a specific access problem.",
         "relevance": "low",
         "topic": "waiting for medical care",
         "topic_group": "Access to care"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user asked whether a gluten-free diet has evidence for Hashimoto's after describing persistent tiredness and brain fog despite a reportedly normal TSH. The assistant discussed the uncertain evidence, advised celiac screening while still eating gluten, and suggested clinician review of the dose and nutrient levels before a tracked three-month trial. The user accepted that sequence as their plan and said the discussion felt balanced."
+    "summary": "The user asked whether a gluten-free diet has evidence for Hashimoto's and explained that ongoing fatigue and brain fog despite a reportedly normal TSH made them consider it. The assistant discussed celiac screening before changing diet and suggested reviewing the levothyroxine dose and checking other possible causes of fatigue; the user settled on those steps first, followed by a tracked three-month trial if appropriate. The user said the balanced answer and plan were helpful."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -53,7 +59,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 6463,
-    "output_tokens": 1465
+    "output_tokens": 1474
   },
   "version": "gpt_luna"
 }

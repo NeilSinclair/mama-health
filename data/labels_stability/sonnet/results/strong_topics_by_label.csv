@@ -1,0 +1,92 @@
+session_id,label,run1,run2,run3,n_runs
+s001,dismissive doctor,True,True,True,3
+s001,treatment decisions,True,True,True,3
+s002,appointment preparation,False,True,True,2
+s002,preventive medication,True,True,True,3
+s003,dosing and formulation,True,True,True,3
+s004,diet and triggers,True,True,True,3
+s004,fatigue and pacing,True,True,True,3
+s005,hair and skin issues,True,True,True,3
+s005,pain and physical symptoms,True,True,True,3
+s006,new diagnosis basics,True,True,True,3
+s006,self-management strategies,True,True,True,3
+s007,hair and skin issues,True,True,True,3
+s007,new diagnosis basics,True,True,True,3
+s008,cost and insurance coverage,True,True,True,3
+s008,treatment decisions,True,True,True,3
+s009,hair and skin issues,True,True,True,3
+s010,fatigue and pacing,True,True,True,3
+s010,prognosis and outlook,True,True,True,3
+s011,treatment options,True,True,True,3
+s012,new diagnosis basics,True,True,True,3
+s012,tests and results,False,True,True,2
+s013,diet and triggers,True,True,True,3
+s013,treatment options,True,True,True,3
+s014,supplements and herbal remedies,True,True,True,3
+s015,pain and physical symptoms,True,True,True,3
+s015,surgery and follow-up,True,True,True,3
+s015,treatment options,False,False,True,1
+s016,fatigue and pacing,True,False,False,1
+s016,work and employment,True,True,True,3
+s017,tests and results,True,True,True,3
+s018,care access barriers,True,True,True,3
+s018,dismissive doctor,True,True,True,3
+s018,pain and physical symptoms,True,True,True,3
+s019,fear of progression,True,True,False,2
+s019,pain and physical symptoms,True,True,True,3
+s019,when to seek care,True,False,True,2
+s020,sleep problems,True,True,True,3
+s020,tests and results,True,True,True,3
+s021,hormonal and cycle issues,True,True,True,3
+s022,loss of treatment response,True,True,True,3
+s022,pain and physical symptoms,True,True,True,3
+s023,cancer risk,True,True,True,3
+s024,pain and physical symptoms,True,True,True,3
+s024,specialist wait times,True,True,True,3
+s025,appointment preparation,True,False,True,2
+s025,fatigue and pacing,True,True,True,3
+s025,tests and results,True,True,True,3
+s026,loss of treatment response,True,False,True,2
+s026,pain and physical symptoms,True,True,True,3
+s026,suicidal thoughts,True,True,True,3
+s027,diet and triggers,True,True,True,3
+s027,health information quality,True,True,True,3
+s028,fatigue and pacing,True,True,True,3
+s029,new diagnosis basics,True,True,True,3
+s029,treatment decisions,False,True,False,1
+s029,treatment options,True,False,True,2
+s030,loss of treatment response,True,True,True,3
+s030,pain and physical symptoms,True,True,True,3
+s031,diet and triggers,True,False,False,1
+s031,treatment decisions,True,True,True,3
+s032,appointment preparation,True,True,True,3
+s032,treatment options,True,True,True,3
+s033,prognosis and outlook,True,True,True,3
+s034,medication side effects,True,True,True,3
+s034,treatment decisions,True,True,True,3
+s035,travel planning,True,True,True,3
+s036,new diagnosis basics,True,True,True,3
+s036,pain and physical symptoms,False,True,True,2
+s036,referrals and choosing doctors,True,False,False,1
+s037,pain and physical symptoms,True,True,True,3
+s037,treatment options,True,True,True,3
+s038,prognosis and outlook,True,True,True,3
+s039,fertility and pregnancy,True,True,True,3
+s040,medication safety,True,True,True,3
+s040,tests and results,True,True,True,3
+s041,medication safety,True,True,True,3
+s042,emotional distress,False,True,True,2
+s042,new diagnosis basics,True,True,True,3
+s043,emotional distress,True,True,True,3
+s043,family and relationships,True,True,True,3
+s044,medication side effects,True,True,True,3
+s044,treatment decisions,True,True,True,3
+s045,dosing and formulation,True,True,True,3
+s045,tests and results,True,False,True,2
+s046,clinical trials and research,True,True,True,3
+s047,medication safety,True,True,True,3
+s048,fertility and pregnancy,True,True,True,3
+s049,emotional distress,True,True,True,3
+s049,work and employment,True,True,True,3
+s050,hair and skin issues,True,True,True,3
+s050,treatment options,True,True,True,3

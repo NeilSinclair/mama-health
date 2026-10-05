@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-05T07:59:06+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came because infliximab stopped working and the consultant said Humira was the only plan; options were discussed across most turns.",
+        "relevance": "strong",
+        "topic": "switching biologic treatment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User is furious at being brushed off and treated as awkward for asking questions, and returns to wanting to be part of the decision.",
+        "relevance": "strong",
+        "topic": "feeling dismissed by consultant",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User opens furious and later says they feel they have a handle on things instead of just anger.",
+        "relevance": "medium",
+        "topic": "anger and frustration",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "Bot raised it and user engaged, taking it as something to push back with, but it was one part of the discussion.",
+        "relevance": "medium",
+        "topic": "drug level and antibody testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked directly about a second opinion and worry about going behind the consultant's back over a few turns.",
+        "relevance": "medium",
+        "topic": "second opinion on NHS",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User accepted a list of questions to bring and said they would book the appointment and take it in.",
+        "relevance": "medium",
+        "topic": "preparing questions for appointment",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "User on infliximab for four years, which stopped working, was angry that their consultant decided on a switch to Humira without discussing other options. The bot acknowledged the frustration, explained other biologic classes, suggested asking about drug levels and antibodies, wrote a question list and addressed second opinions on the NHS. User said they now had a plan and would book an appointment and bring the list. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 6937,
+    "input_tokens": 1694,
+    "output_tokens": 645
+  },
+  "version": "sonnet"
+}

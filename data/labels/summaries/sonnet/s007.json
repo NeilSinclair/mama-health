@@ -1,0 +1,89 @@
+{
+  "created_at": "2026-10-05T08:04:21+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came asking whether widening part and thinning were from PCOS, and the whole conversation revolves around it.",
+        "relevance": "strong",
+        "topic": "hair thinning",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked what can be done and whether it is permanent, spending several turns on minoxidil and anti-androgens.",
+        "relevance": "strong",
+        "topic": "hair loss treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether it was PCOS or something else and explored stress-related shedding.",
+        "relevance": "medium",
+        "topic": "causes of hair loss",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked if spironolactone is safe and said they were nervous about hormone medications.",
+        "relevance": "medium",
+        "topic": "hormone medication safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked who to see and what to say so they are taken seriously, over two turns.",
+        "relevance": "medium",
+        "topic": "preparing for appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said the widening part freaks them out and asked if it will keep getting worse; they later said they were scared nothing could be done.",
+        "relevance": "medium",
+        "topic": "fear of worsening hair loss",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "Thyroid, iron and vitamin tests were discussed as a way to sort out causes and the user planned to ask for them.",
+        "relevance": "medium",
+        "topic": "blood tests for causes",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked in one exchange whether to see a GP or dermatologist.",
+        "relevance": "low",
+        "topic": "which doctor to see",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked in one turn whether certain foods help.",
+        "relevance": "low",
+        "topic": "diet and hair loss",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked in one turn whether to stop straightening while waiting.",
+        "relevance": "low",
+        "topic": "hair care habits",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "Mentioned once as a possible trigger for shedding.",
+        "relevance": "low",
+        "topic": "exam stress",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user with PCOS asked whether gradual hair thinning and a widening part came from PCOS or something else. The bot explained possible causes, treatment options, medication safety, who to see and how to prepare for the appointment. The user said it helped a lot and planned to book an appointment that week."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3426,
+    "output_tokens": 923
+  },
+  "version": "sonnet"
+}

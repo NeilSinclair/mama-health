@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:49:23+00:00",
+  "created_at": "2026-10-05T07:50:20+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,44 +7,44 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened with severe nausea after the weekly dose and returned to ways to manage it throughout the conversation.",
+        "reason": "The user described recurring, severe nausea after their weekly dose and identified it as the only problem with treatment.",
         "relevance": "strong",
-        "topic": "methotrexate nausea",
+        "topic": "methotrexate-related nausea",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user initially asked whether to quit, then explored alternatives because the medicine was helping their joints and asked whether to continue until the appointment.",
+        "reason": "The user asked whether to quit, then explored ways to manage nausea while keeping a medicine that was helping their joints.",
         "relevance": "strong",
-        "topic": "methotrexate continuation",
+        "topic": "continuing methotrexate",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked whether taking folic acid on the same day as methotrexate was a problem and agreed to change the timing.",
+        "reason": "The user asked which days to take folic acid, disclosed sometimes taking it on methotrexate day, and agreed to change the timing.",
         "relevance": "medium",
         "topic": "folic acid timing",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked whether injections could reduce nausea, expressed fear of self-injection, and checked whether simpler options could come first.",
+        "reason": "The user asked whether injections make a difference, shared fear of self-injection, and checked whether they could try other options first.",
         "relevance": "medium",
         "topic": "injectable methotrexate",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked whether an anti-nausea medicine could be taken safely with methotrexate.",
+        "reason": "The user asked whether anti-nausea medicine is safe to take with methotrexate.",
         "relevance": "medium",
         "topic": "anti-nausea medication safety",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked what to tell the doctor and said they would write down the suggested points.",
+        "reason": "The user asked what to say at the appointment so they would remember the options and accepted a suggested note.",
         "relevance": "medium",
-        "topic": "appointment preparation",
+        "topic": "doctor visit preparation",
         "topic_group": "Working with clinicians"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user described severe nausea after weekly methotrexate, which was helping their joints, and asked whether they could stop. The assistant discussed folic acid timing, splitting the dose, injections, and anti-nausea medication; the user felt reassured, planned small changes, and accepted a list to take to the doctor in two weeks."
+    "summary": "The user considered stopping methotrexate because of severe nausea after the weekly dose, despite improved joints, and asked about other ways to manage it. The assistant outlined possible adjustments and helped prepare questions for the doctor; the user planned to move folic acid to Sunday, take methotrexate with food, and continue as prescribed until the appointment in about two weeks. The user said the conversation helped a lot."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -53,7 +53,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 6621,
-    "output_tokens": 1146
+    "output_tokens": 1192
   },
   "version": "gpt_luna"
 }

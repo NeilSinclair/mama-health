@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T06:49:16+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came to understand the cancer risk with ulcerative colitis and asked what raises or lowers it across many turns.",
+        "relevance": "strong",
+        "topic": "colorectal cancer risk",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked what monitoring looks like, what sets the interval and how surveillance differs from a normal scope.",
+        "relevance": "strong",
+        "topic": "surveillance colonoscopy schedule",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked whether staying on mesalamine lowers cancer risk, a single substantive exchange.",
+        "relevance": "medium",
+        "topic": "mesalamine and cancer prevention",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked what they can do on their side; one answer covered it.",
+        "relevance": "medium",
+        "topic": "lifestyle risk reduction",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User mentioned in one line that they sometimes wonder if they still need mesalamine when feeling fine.",
+        "relevance": "low",
+        "topic": "wondering about stopping medication",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User wanted to be better equipped for the appointment and noted the dye-based question as useful.",
+        "relevance": "low",
+        "topic": "preparing questions for gastroenterologist",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User mentioned vague worry at the start and relief at the end, without dwelling on it.",
+        "relevance": "low",
+        "topic": "worry about cancer risk",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with nine years of stable ulcerative colitis on mesalamine wanted to understand colorectal cancer risk and what monitoring involves. The bot explained risk factors, surveillance colonoscopy timing and intervals, chromoendoscopy, mesalamine's possible protective role and lifestyle measures, and advised raising doubts about stopping mesalamine with their gastroenterologist. The user restated the plan and said they felt better equipped for their appointment."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2917,
+    "output_tokens": 750
+  },
+  "version": "sonnet"
+}

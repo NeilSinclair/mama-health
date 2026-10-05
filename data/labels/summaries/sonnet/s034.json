@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T08:04:47+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened with daily nausea on Ozempic and the bot and user spent most turns on managing it.",
+        "relevance": "strong",
+        "topic": "medication nausea",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User asked directly whether it is safe to stop for some days and said they almost stopped that day.",
+        "relevance": "strong",
+        "topic": "stopping medication",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User feared the coming dose rise and learned they can ask the doctor to wait.",
+        "relevance": "medium",
+        "topic": "dose increase schedule",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User described fried food, meat and night-time as worse, and got meal tips over several turns.",
+        "relevance": "medium",
+        "topic": "food triggers",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked when nausea is not normal and needs urgent care, answered in one exchange.",
+        "relevance": "medium",
+        "topic": "warning signs",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked if the drug is working and shared morning readings over two turns.",
+        "relevance": "medium",
+        "topic": "blood sugar monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User planned to raise nausea and dose pacing with the prescriber, but this was a plan rather than a main thread.",
+        "relevance": "low",
+        "topic": "talking to doctor",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User said they were scared about how bad it would be at a higher dose, mentioned once.",
+        "relevance": "low",
+        "topic": "fear of higher dose",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "User started Ozempic three weeks ago and had daily nausea and early fullness, and nearly stopped it. The bot explained the nausea, gave food tips, advised against stopping alone, explained that the dose increase can be delayed, and listed warning signs; no urgent symptoms were present. User said they felt calmer and would keep small meals, check morning sugar, and talk to the doctor before the dose goes up."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2415,
+    "output_tokens": 751
+  },
+  "version": "sonnet"
+}

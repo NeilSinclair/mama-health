@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-10-05T07:59:12+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave dose not matching prescription"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking what dose they should be on and returned to it across many turns, including worry it was too low.",
+        "relevance": "strong",
+        "topic": "mesalamine dose",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether the prescribed dose was too low and said they were worried, over a few turns.",
+        "relevance": "medium",
+        "topic": "worry about underprescribing",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked why formulation matters and described their sachet type, taking two turns.",
+        "relevance": "medium",
+        "topic": "mesalamine formulation differences",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked in one question whether to take the sachets with food.",
+        "relevance": "low",
+        "topic": "how to take with food",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked in one question how long until they know if it is working.",
+        "relevance": "low",
+        "topic": "time to treatment effect",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user gave this as background context once to frame the dose question.",
+        "relevance": "low",
+        "topic": "recent diagnosis with moderate symptoms",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user newly prescribed mesalamine for ulcerative colitis asked what dose they should take. The bot first gave a 4.8g figure that did not match their 1.2g twice-daily prescription, then corrected itself and clarified that doses vary by situation and formulation. The user ended reassured that their dose is fine and that they should contact their gastroenterologist if symptoms do not improve."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1741,
+    "output_tokens": 598
+  },
+  "version": "sonnet"
+}

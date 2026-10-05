@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T06:49:50+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came because infliximab stopped working and wanted to know alternatives to the proposed switch; this drove most turns.",
+        "relevance": "strong",
+        "topic": "switching biologic treatment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User was furious at being brushed off and treated as awkward, and wanted to be part of the decision.",
+        "relevance": "strong",
+        "topic": "dismissive consultant",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "Opened with fury and returned to feeling heard, ending with relief at having a plan.",
+        "relevance": "medium",
+        "topic": "anger and feeling unheard",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "Discussed over several turns as a concrete question to raise; user had not been offered these tests.",
+        "relevance": "medium",
+        "topic": "drug level and antibody testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked directly about a second opinion on the NHS and worried how it would look.",
+        "relevance": "medium",
+        "topic": "second opinion request",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "Bot drafted a question list the user accepted and said they would take in.",
+        "relevance": "medium",
+        "topic": "preparing questions for appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "Mentioned as the background for the switch and the reasons it might happen.",
+        "relevance": "low",
+        "topic": "loss of response to treatment",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "User on infliximab for four years, which stopped working, was angry that their consultant announced a switch to Humira and dismissed questions about alternatives. The bot validated their feelings, explained other biologic classes, suggested asking about drug level and antibody testing, drafted a list of questions, and covered the NHS second opinion route. The user said they now had a plan rather than a grievance and would book an appointment."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1694,
+    "output_tokens": 683
+  },
+  "version": "sonnet"
+}

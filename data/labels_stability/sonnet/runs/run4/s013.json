@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T07:59:21+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with flares during stressful work weeks and the whole conversation addresses that pattern.",
+        "relevance": "strong",
+        "topic": "stress-triggered flares",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked what to do on a Tuesday morning with back-to-back meetings, and the bot covered antispasmodics and loperamide over several turns.",
+        "relevance": "strong",
+        "topic": "managing flares in the moment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user was skeptical, then curious, asked where to find hypnotherapy, and it became part of the plan.",
+        "relevance": "medium",
+        "topic": "gut-directed hypnotherapy and CBT",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user was surprised it can be taken before symptoms and asked about it; the bot covered dosing caution.",
+        "relevance": "medium",
+        "topic": "preemptive loperamide use",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user disclosed drinking about four coffees on stressful days and recognised it as unhelpful.",
+        "relevance": "medium",
+        "topic": "caffeine intake",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user mentioned in one line that their doctor only said to eat more fiber, and later asked whether to involve the doctor.",
+        "relevance": "low",
+        "topic": "dismissive fiber advice",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said urgency and repeated bathroom trips disrupt meetings, mainly as context for the question.",
+        "relevance": "low",
+        "topic": "urgency disrupting meetings",
+        "topic_group": "Work & life plans"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with IBS described diarrhea-predominant flares triggered by work stress and asked what could help, both long-term and on a bad morning. The bot explained the gut-brain link, suggested hypnotherapy and CBT, antispasmodics, preemptive loperamide and cutting caffeine, and built a two-layer plan. The user said it was helpful and not the usual runaround, and left with things to try and a way to raise it with their doctor."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3283,
+    "output_tokens": 765
+  },
+  "version": "sonnet"
+}

@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T08:04:55+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened wanting to talk through risks of starting a biologic and every turn weighed benefits against risks.",
+        "relevance": "strong",
+        "topic": "biologic safety risks",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User said cancer is the worry that sits with them most and spent several turns on lymphoma and skin cancer.",
+        "relevance": "strong",
+        "topic": "cancer risk with biologics",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked how big the infection risk is and followed up on TB over a few turns.",
+        "relevance": "medium",
+        "topic": "infection risk with biologics",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User asked how classes differ in risk and engaged with the explanation for a couple of turns.",
+        "relevance": "medium",
+        "topic": "differences between biologic classes",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked what to bring to the dermatologist and liked the list given.",
+        "relevance": "medium",
+        "topic": "preparing for dermatologist appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User said online worst-case stories freaked them out, framing the conversation, and later felt less scared.",
+        "relevance": "low",
+        "topic": "fear of treatment risks",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User mentioned a grandfather's lymphoma once as a reason for cancer concern.",
+        "relevance": "low",
+        "topic": "family history of lymphoma",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User raised burning easily and heavy sun exposure in one question.",
+        "relevance": "low",
+        "topic": "sun exposure and skin cancer",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "User was considering a biologic for psoriasis suggested by their dermatologist and wanted to understand infection and cancer risks. The bot explained relative versus absolute risk, TB screening, differences between drug classes and cancer and skin cancer considerations, and gave a list of questions for the dermatologist. The user said the reframing of drug risk versus risk of doing nothing helped, and ended feeling better prepared."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2335,
+    "output_tokens": 774
+  },
+  "version": "sonnet"
+}

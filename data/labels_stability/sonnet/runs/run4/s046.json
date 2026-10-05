@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-05T07:59:49+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not answer the user's request"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User opened by asking what is new and evidence-based beyond standard care, and the first half of the chat covers experimental therapies.",
+        "relevance": "strong",
+        "topic": "long covid research pipeline",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User returned repeatedly to how to find and qualify for trials they could actually join, across about ten turns.",
+        "relevance": "strong",
+        "topic": "finding eligible clinical trials",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User said the clinics that route patients into trials have waitlists and asked which specific centers to try.",
+        "relevance": "medium",
+        "topic": "long covid clinic waitlists",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User said they lack energy and are cognitively impaired, which makes sifting through trial listings hard.",
+        "relevance": "medium",
+        "topic": "cognitive impairment limiting search",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User voiced tiredness and frustration at repeated advice to get into a clinic or read listings themselves.",
+        "relevance": "medium",
+        "topic": "frustration with system access",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User listed salt, compression, ivabradine, midodrine and rowing as already done, as background to the question.",
+        "relevance": "low",
+        "topic": "pots management already tried",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User mentioned in one line that they still cannot work.",
+        "relevance": "low",
+        "topic": "inability to work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User asked briefly whether the Paxlovid trial came back negative.",
+        "relevance": "low",
+        "topic": "antiviral trial results",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "A user with long COVID and POTS, with standard POTS treatments already tried, asked about disease-modifying research and then how to find trials they could join in the US. The bot described the research pipeline and gave a trial-search method, but could not name specific clinics or confirm US recruitment status for the named drugs, so the user still had to do the searching. The user ended with a flat 'general picture' and thanks, and no sign the need was met."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3225,
+    "output_tokens": 783
+  },
+  "version": "sonnet"
+}

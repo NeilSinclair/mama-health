@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:49:18+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with exhaustion despite a normal TSH and returned to it throughout, including whether fatigue is even thyroid-related.",
+        "relevance": "strong",
+        "topic": "persistent fatigue despite normal tsh",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "Much of the conversation covered what free T3/T4, ferritin, B12 and vitamin D would show and how to request them.",
+        "relevance": "strong",
+        "topic": "thyroid and nutrient lab testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked whether the dose should change and how long a change takes to work, and put it in their plan.",
+        "relevance": "medium",
+        "topic": "levothyroxine dose adjustment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked for a list of questions to bring and wanted to avoid seeming like an internet patient.",
+        "relevance": "medium",
+        "topic": "preparing for doctor appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User said they felt gaslit about the fatigue and that the bot was more useful than three doctor visits.",
+        "relevance": "medium",
+        "topic": "feeling dismissed by doctors",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User asked once whether to push for these options, and the bot answered in one turn.",
+        "relevance": "low",
+        "topic": "desiccated thyroid or added t3",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User briefly voiced feeling gaslit and told to suck it up, and thanked the bot for the validation.",
+        "relevance": "low",
+        "topic": "fatigue dismissed as busy life",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "Suggested by the bot and accepted by the user as a plan item, with little discussion.",
+        "relevance": "low",
+        "topic": "symptom tracking",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user on levothyroxine for Hashimoto's with a TSH of 3.8 asked whether that is really normal given constant exhaustion. The bot explained free T3/T4, ferritin and other nutrient checks, dose timelines and how to raise these with their doctor, and the user restated a clear plan. They ended feeling prepared and looking forward to the appointment. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3221,
+    "output_tokens": 832
+  },
+  "version": "sonnet"
+}

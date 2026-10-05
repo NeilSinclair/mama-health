@@ -1,0 +1,70 @@
+{
+  "created_at": "2026-10-05T08:04:44+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot missed urgent symptom",
+      "bot did not answer the user's request",
+      "bot ignored stated barrier to care",
+      "bot gave generic advice user already tried"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User opened with a four-day continuous migraine and kept returning to it in every turn.",
+        "relevance": "strong",
+        "topic": "prolonged migraine attack",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User repeatedly asked for actual treatment options or bridge therapy when triptans failed.",
+        "relevance": "strong",
+        "topic": "rescue medication not working",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked about urgent care or a bridge therapy before a neurologist appointment six weeks away.",
+        "relevance": "medium",
+        "topic": "urgent care options",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User said the neurologist is booked out six weeks, which is why they came to the bot.",
+        "relevance": "medium",
+        "topic": "neurologist wait time",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User voiced worry about rebound headache from days of OTC meds plus triptans in one turn.",
+        "relevance": "low",
+        "topic": "rebound headache risk",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User mentioned missing three days of work once as background.",
+        "relevance": "low",
+        "topic": "missed work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User expressed growing frustration at feeling unheard and ended the chat curtly.",
+        "relevance": "low",
+        "topic": "frustration with unhelpful answers",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "User described a four-day continuous migraine unresponsive to triptans, asked whether it was status migrainosus and what treatment options exist, noting a six-week wait for their neurologist. The bot repeatedly offered generic tips (diary, stress, yoga, acupuncture, hydration, see your doctor) and never addressed the prolonged attack as potentially urgent or answered the question about options. The user became frustrated and ended with 'Forget it.'"
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1417,
+    "output_tokens": 727
+  },
+  "version": "sonnet"
+}

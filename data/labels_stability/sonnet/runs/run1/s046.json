@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-05T06:48:46+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not answer the user's request"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user's opening ask was what is new and evidence-based beyond standard POTS management, and turns 3-6 cover it.",
+        "relevance": "strong",
+        "topic": "disease-modifying long covid research",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "Turns 7-24 are about how to find and qualify for trials and which clinics or recruiting trials exist, with the user returning to it repeatedly.",
+        "relevance": "strong",
+        "topic": "finding clinical trials",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said getting into a long COVID center has a waitlist problem and asked which clinics run trials.",
+        "relevance": "medium",
+        "topic": "long covid clinic waitlists",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked about BC 007, temelimab and the Paxlovid trial result, but mainly as context for access.",
+        "relevance": "medium",
+        "topic": "experimental long covid drugs",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said they lack energy and are cognitively impaired for searching and matching trials, as a reason for needing a shortcut.",
+        "relevance": "low",
+        "topic": "cognitive impairment limiting effort",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user said they are tired of trying things that do nothing and that every answer sends them elsewhere.",
+        "relevance": "low",
+        "topic": "frustration with ineffective treatments",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned once that they still cannot work and did not return to it.",
+        "relevance": "low",
+        "topic": "inability to work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user listed standard POTS measures already tried and said it is stable-ish, only as background.",
+        "relevance": "low",
+        "topic": "pots symptom management",
+        "topic_group": "Physical symptoms"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "A US user with long COVID and POTS of over two years, already well-managed on standard POTS care, asked what new disease-modifying research exists and how to get into a trial. The bot listed research directions and general trial-search methods, but could not name specific clinics or recruiting trials, so the user was left to do the searching alone. The user ended with a flat acknowledgment of the general picture and no sign the need was met."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3225,
+    "output_tokens": 824
+  },
+  "version": "sonnet"
+}

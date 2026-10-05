@@ -1,0 +1,13 @@
+measure,who,value,of
+outcome matches hand label,run1,10.0,10
+outcome matches hand label,run2,10.0,10
+outcome matches hand label,run3,10.0,10
+reason_for_conversation: Sonnet majority matches GPT Luna,sonnet vs gpt_luna,44.0,50
+issue_resolved: Sonnet majority matches GPT Luna,sonnet vs gpt_luna,47.0,50
+end_reason: Sonnet majority matches GPT Luna,sonnet vs gpt_luna,45.0,50
+seconds to label 50 conversations,sonnet run1,49.0,
+seconds to label 50 conversations,gpt_luna run1,81.0,
+seconds to label 50 conversations,sonnet run2,49.0,
+seconds to label 50 conversations,gpt_luna run2,141.0,
+seconds to label 50 conversations,sonnet run3,49.0,
+seconds to label 50 conversations,gpt_luna run3,74.0,

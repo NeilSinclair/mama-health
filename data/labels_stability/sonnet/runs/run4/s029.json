@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T07:59:34+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened overwhelmed by the new diagnosis and asked how the two conditions relate and which came first (t1-t4).",
+        "relevance": "strong",
+        "topic": "insulin resistance with pcos",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User was surprised their doctor suggested metformin and ended by deciding to start it (t5-t6, t25).",
+        "relevance": "strong",
+        "topic": "metformin use without diabetes",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked whether they could do something besides a pill and the conversation covered weight, diet and exercise (t9-t12).",
+        "relevance": "medium",
+        "topic": "lifestyle options beyond medication",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked about a PCOS diet and whether it means no carbs over several turns (t13-t16).",
+        "relevance": "medium",
+        "topic": "low glycemic diet",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked what exercise is best given they dislike the gym, and chose after-dinner walks (t21-t22, t25).",
+        "relevance": "medium",
+        "topic": "exercise without gym",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked whether metformin has side effects after hearing it upsets the stomach (t7-t8).",
+        "relevance": "medium",
+        "topic": "metformin stomach side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User said they felt overwhelmed at the start and relieved by the breakdown at the end (t1, t23).",
+        "relevance": "medium",
+        "topic": "feeling overwhelmed by diagnosis",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User said they are tired of hearing 'lose weight' after many attempts (t11).",
+        "relevance": "low",
+        "topic": "frustration with weight loss advice",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked about a glucose sensor a friend mentioned over two turns (t17-t20).",
+        "relevance": "low",
+        "topic": "continuous glucose monitor",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User doubted their health insurer would cover a monitor, in one line (t19).",
+        "relevance": "low",
+        "topic": "glucose monitor insurance coverage",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "User newly diagnosed with insulin resistance on top of PCOS felt overwhelmed and asked how the two relate, about metformin and its side effects, and about diet, exercise and glucose monitors. The bot explained each point and acknowledged frustration about weight loss advice. The user said the breakdown helped and decided to start metformin as their doctor suggested and walk after dinner."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2317,
+    "output_tokens": 974
+  },
+  "version": "sonnet"
+}

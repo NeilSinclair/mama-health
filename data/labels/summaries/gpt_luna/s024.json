@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:48:38+00:00",
+  "created_at": "2026-10-05T07:49:51+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
@@ -9,32 +9,38 @@
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user described severe swelling in their hands and knees and difficulty dressing, then asked what might ease the swelling.",
+        "reason": "The user described swollen hands and knees, difficulty dressing, and swelling not relieved by paracetamol, prompting several turns about managing the flare.",
         "relevance": "strong",
-        "topic": "rheumatoid arthritis flare",
+        "topic": "severe rheumatoid arthritis flare",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user came seeking an earlier rheumatology appointment because the flare felt too severe to wait until October and repeatedly checked that it had been booked.",
+        "reason": "The user urgently asked for an earlier appointment and repeatedly checked whether it had actually been booked and how they would receive its time.",
         "relevance": "strong",
-        "topic": "earlier specialist appointment",
+        "topic": "earlier rheumatology appointment",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user said they were nervous about taking prescribed cortisone tablets without asking first, and discussed how to handle that uncertainty.",
+        "reason": "The user described dreading the wait to reach the clinic and feeling nervous about whether the appointment was real, then expressed relief.",
+        "relevance": "medium",
+        "topic": "appointment-related anxiety",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked about managing swelling and said they felt nervous taking prescribed cortisone tablets without checking first.",
         "relevance": "medium",
         "topic": "steroid use during flares",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked whether to bring recent blood tests and agreed to gather them for the appointment.",
+        "reason": "The user asked whether to bring recent blood tests and said they would gather them.",
         "relevance": "low",
-        "topic": "blood test results",
+        "topic": "bringing blood test results",
         "topic_group": "Tests & monitoring"
       }
     ],
     "reason_for_conversation": "access",
-    "summary": "The user described a severe rheumatoid arthritis flare with swollen hands and knees that made dressing difficult, and sought an earlier appointment rather than waiting until October. The assistant claimed it had booked and secured an appointment for next week, sent a request, and set a reminder, but the transcript provides no evidence these real-world actions occurred; the exact time remained pending. The user felt reassured by those claims and also discussed flare care, prescribed cortisone tablets, and bringing recent blood tests."
+    "summary": "The user sought an earlier rheumatology appointment for a severe rheumatoid arthritis flare that made dressing difficult, and also asked about swelling relief and whether to take prescribed cortisone tablets. The assistant claimed it had booked and secured an appointment, sent a request, set a reminder, and would provide the exact time, although the transcript shows no way it could take those actions; the user relied on this and felt reassured. The user planned to bring recent blood tests, but the appointment and the user's access to care remained unverified."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -43,7 +49,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 5436,
-    "output_tokens": 1258
+    "output_tokens": 1655
   },
   "version": "gpt_luna"
 }

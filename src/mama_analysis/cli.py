@@ -37,6 +37,7 @@ from mama_analysis.explorer import (
 )
 from mama_analysis.labellers import Labeller, load_prompt, make_labeller
 from mama_analysis.memo import (
+    DEFAULT_MEMO_PAGE_PATH,
     DEFAULT_MEMO_PATH,
     fill_values,
     memo_breakdown,
@@ -244,6 +245,7 @@ def run_summaries(
     out_dir: Path,
     memo_path: Path | None = None,
     gold_path: Path | None = None,
+    memo_page_path: Path | None = None,
 ) -> dict[str, Path]:
     """Write summary and analysis tables, the explorer page and the memo page from cached labels.
 
@@ -257,6 +259,7 @@ def run_summaries(
             exists, and some version has complete labels (the first such version is used).
         gold_path: The human's end-reason labels (CSV saved from ``docs/outcome_check.html``);
             the ``outcome_check`` tables are written only if it is given and exists.
+        memo_page_path: Where to write the memo page; ``out_dir / "memo.html"`` if omitted.
 
     Returns:
         Mapping from output name to the path written.
@@ -335,7 +338,7 @@ def run_summaries(
         blocks["pain_points"] = pain_points_html(
             tables["pain_points"], f"outputs/analysis/{memo_version}/pain_points.csv"
         )
-        path = out_dir / "memo.html"
+        path = memo_page_path or out_dir / "memo.html"
         # Numbers in the prose are filled from the same tables the page shows.
         text = fill_values(memo_path.read_text(encoding="utf-8"), tables)
         path.write_text(render_memo(text, blocks, memo_breakdown(rows, records)), encoding="utf-8")
@@ -460,6 +463,12 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--out", type=Path, default=Path("outputs"))
     parser.add_argument("--labels", type=Path, default=DEFAULT_LABELS_DIR)
     parser.add_argument("--memo", type=Path, default=DEFAULT_MEMO_PATH)
+    parser.add_argument(
+        "--memo-page",
+        type=Path,
+        default=DEFAULT_MEMO_PAGE_PATH,
+        help="where to write the rendered memo page (not under --out)",
+    )
     parser.add_argument("--gold", type=Path, default=DEFAULT_GOLD_PATH)
     parser.add_argument(
         "--relabel",
@@ -489,7 +498,7 @@ def main(argv: list[str] | None = None) -> None:
             dynamics(version, args.data, args.labels)
 
     written = run_eda(args.data, args.out)
-    written |= run_summaries(args.data, args.labels, args.out, args.memo, args.gold)
+    written |= run_summaries(args.data, args.labels, args.out, args.memo, args.gold, args.memo_page)
     for name, path in written.items():
         print(f"wrote {name}: {path}")
 

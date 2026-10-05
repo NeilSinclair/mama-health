@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T06:49:41+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came because of a bad flare with failing shampoos, and the whole conversation addresses it.",
+        "relevance": "strong",
+        "topic": "scalp psoriasis flare",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked what the actual treatment is beyond shampoos and about steroid and calcipotriol options over several turns.",
+        "relevance": "strong",
+        "topic": "prescription topical treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked in one exchange whether steroids on the scalp are safe and found the answer reassuring.",
+        "relevance": "medium",
+        "topic": "steroid skin thinning safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what softening the scale means and included it in the final plan.",
+        "relevance": "medium",
+        "topic": "descaling thick scale",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked for help with itch at night and discussed scratching and the Koebner phenomenon.",
+        "relevance": "medium",
+        "topic": "night itch",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked which to see and noted long dermatology waits; this led to the booking plan.",
+        "relevance": "medium",
+        "topic": "gp versus dermatologist",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked in one turn whether it can be bought without a prescription.",
+        "relevance": "low",
+        "topic": "prescription requirement for calcipotriol",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user mentioned embarrassment from flakes at work once, as context.",
+        "relevance": "low",
+        "topic": "visible flakes at work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user said they were at the end of their rope and said 'this is so much', briefly acknowledged by the bot.",
+        "relevance": "low",
+        "topic": "feeling overwhelmed by flare",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The bot suggested how to describe the problem and the user built a list of things to ask the GP.",
+        "relevance": "low",
+        "topic": "preparing for gp appointment",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user came with a three-week scalp psoriasis flare unresponsive to tar and ketoconazole shampoos. The bot explained descaling, a treatment ladder, steroid safety, prescription status in France, GP versus dermatologist, and itch relief. The user ended with a clear plan to book the GP, ask about a steroid solution and calcipotriol, descale with oil, and avoid scratching, and thanked the bot."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2776,
+    "output_tokens": 912
+  },
+  "version": "sonnet"
+}

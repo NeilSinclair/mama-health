@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:49:10+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user's main worry was whether the drug is reimbursed in France, and they returned to it in turns 3, 5, 13 and 15.",
+        "relevance": "strong",
+        "topic": "medication reimbursement coverage",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user came to ask about tirzepatide as an add-on or switch because A1C was still high on metformin.",
+        "relevance": "strong",
+        "topic": "new injectable diabetes medication",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked how the injection works and said they were nervous about injecting for the first time.",
+        "relevance": "medium",
+        "topic": "self-injection technique",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what side effects to watch for and the bot answered over one exchange.",
+        "relevance": "medium",
+        "topic": "medication side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether the drug would help with weight gained since diagnosis and said they hate it.",
+        "relevance": "medium",
+        "topic": "weight gain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said it had been a stressful year and apologised for coming back to the money question, but the topic was framed mainly by coverage.",
+        "relevance": "low",
+        "topic": "financial stress",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned once that self-injecting makes them nervous.",
+        "relevance": "low",
+        "topic": "fear of injections",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned A1C still being high on metformin only as background.",
+        "relevance": "low",
+        "topic": "high blood sugar control",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what the next step is and then said they will book with their doctor.",
+        "relevance": "low",
+        "topic": "asking doctor for prescription",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "A user with type 2 diabetes and a high A1C on metformin asked about Mounjaro, mainly whether it is approved and reimbursed in France, and also about injecting, side effects and weight. The bot said it is covered and gave a recap with the next step of seeing their doctor. The user said it eased their worry and that they would book with their doctor this week. No safety-critical moments occurred."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1851,
+    "output_tokens": 1601
+  },
+  "version": "sonnet"
+}

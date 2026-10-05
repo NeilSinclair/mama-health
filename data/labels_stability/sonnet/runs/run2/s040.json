@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-05T06:49:32+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with the TSH creep on a stable dose and the whole conversation traced its causes and meaning.",
+        "relevance": "strong",
+        "topic": "rising thyroid hormone levels",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user found a calcium supplement taken at breakfast and spent several turns on separating it from levothyroxine.",
+        "relevance": "strong",
+        "topic": "calcium supplement interaction",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user reflected on how dose needs change with progressing Hashimoto's and how other factors can shift it.",
+        "relevance": "medium",
+        "topic": "dose changing over time",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked whether to wait for the routine test or go in sooner, and queried the recheck interval.",
+        "relevance": "medium",
+        "topic": "next steps and recheck timing",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said in one line that the trend worried them, and felt reassured afterward.",
+        "relevance": "low",
+        "topic": "worry about deterioration",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned being a bit more tired once and was unsure whether it was thyroid or ageing.",
+        "relevance": "low",
+        "topic": "mild tiredness",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user, long stable on levothyroxine for Hashimoto's, asked why their TSH had crept up from about 1.5 to 3.6 on an unchanged dose. Through discussion they identified a calcium supplement taken at breakfast as a likely absorption factor, and learned that dose needs can change over time. They left with a plan to raise calcium timing and the trend with their doctor and recheck TSH after six to eight weeks, and said the explanation was what they wanted."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3025,
+    "output_tokens": 674
+  },
+  "version": "sonnet"
+}

@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T07:59:19+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to ask whether SIBO is real and fits them better than IBS, and the question ran through most of the conversation.",
+        "relevance": "strong",
+        "topic": "possible sibo diagnosis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked how SIBO is tested and whether the test is reliable, over several turns.",
+        "relevance": "medium",
+        "topic": "breath test reliability",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user described severe bloating that builds through the day as the reason for suspecting SIBO.",
+        "relevance": "medium",
+        "topic": "bloating after meals",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The bot explained a treatment trial and the user engaged by noting their constipation-leaning pattern.",
+        "relevance": "medium",
+        "topic": "antibiotic trial option",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user decided to ask for a referral and noted the wait in Canada; this became their main next step.",
+        "relevance": "medium",
+        "topic": "gastroenterologist referral and wait",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user was confused about whether SIBO and the methane form are the same, and the bot clarified.",
+        "relevance": "low",
+        "topic": "methane overgrowth terminology",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user said past food diaries showed no pattern; the topic took a couple of turns.",
+        "relevance": "low",
+        "topic": "food and symptom diary",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user felt IBS was a catch-all label and was annoyed that nobody explained this over the years.",
+        "relevance": "low",
+        "topic": "doubts about ibs label",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they were annoyed in one turn and did not return to it.",
+        "relevance": "low",
+        "topic": "frustration with years without explanation",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned in one turn that online sources were selling supplements, and the bot briefly advised caution.",
+        "relevance": "low",
+        "topic": "supplement marketing",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether their long-standing IBS diagnosis might really be SIBO. The bot explained the overlap between the two, the limits of breath testing, how a methane-predominant picture fits constipation, and the option of a treatment trial. The user decided to ask for a gastroenterologist referral, keep messy notes and hold off on supplements, and said the conversation was clarifying."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3027,
+    "output_tokens": 917
+  },
+  "version": "sonnet"
+}

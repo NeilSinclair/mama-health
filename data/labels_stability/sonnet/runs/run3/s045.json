@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-05T06:50:30+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to ask whether a pharmacy brand substitution is a worry, and most turns address it.",
+        "relevance": "strong",
+        "topic": "levothyroxine brand switch",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked why the recheck takes 6 to 8 weeks and whether the earlier TSH counts, over several turns.",
+        "relevance": "strong",
+        "topic": "timing of repeat thyroid test",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to watch for in the meantime and said they notice cold and tiredness quickly.",
+        "relevance": "medium",
+        "topic": "symptoms to watch for",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked in one turn whether to keep taking it exactly as before.",
+        "relevance": "medium",
+        "topic": "keeping consistent medication routine",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user stated a preference for a single brand and the bot suggested raising it with doctor and pharmacy.",
+        "relevance": "medium",
+        "topic": "staying on one brand",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user mentioned annoyance once that the pharmacy switched brands without explaining.",
+        "relevance": "low",
+        "topic": "pharmacy substitution without explanation",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether a pharmacy switching their levothyroxine brand was a concern. The bot explained brand differences, recheck timing for TSH in early to mid September, symptoms to watch, and keeping the routine consistent, and suggested asking for brand consistency. The user said it was a clear plan and exactly the straight answer they wanted. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1911,
+    "output_tokens": 628
+  },
+  "version": "sonnet"
+}

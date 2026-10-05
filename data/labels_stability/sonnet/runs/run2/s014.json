@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-10-05T06:49:09+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave wrong-country advice",
+      "bot did not answer the user's request"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User came to ask which supplements to try after a doctor's suggestion, and most turns revolve around this.",
+        "relevance": "strong",
+        "topic": "supplements for fibromyalgia pain",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked which brand to buy and whether local Japanese pharmacy brands are acceptable, over several turns.",
+        "relevance": "medium",
+        "topic": "supplement brand quality",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User said Whole Foods is unavailable, asked about local pharmacies and raised customs worries about importing.",
+        "relevance": "medium",
+        "topic": "supplement purchasing in Japan",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User asked how much magnesium and CoQ10 to take, mentioning a small body size.",
+        "relevance": "medium",
+        "topic": "supplement dosing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User asked about kampo, which their doctor sometimes prescribes, but the bot never addressed it.",
+        "relevance": "medium",
+        "topic": "traditional herbal medicine",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User decided near the end to ask their local pharmacist, a brief mention.",
+        "relevance": "low",
+        "topic": "checking with pharmacist",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user in Japan asked which supplements and brands to try for fibromyalgia pain. The bot repeatedly pushed US brands via iHerb, did not engage with the local pharmacy brands, the customs concern or kampo, and the user ended by saying they would ask their pharmacist instead."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1616,
+    "output_tokens": 624
+  },
+  "version": "sonnet"
+}

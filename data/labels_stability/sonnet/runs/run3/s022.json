@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-05T06:50:15+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot missed urgent symptom"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with returning urgency and blood, said it was slowly worsening, and asked whether to worry or wait.",
+        "relevance": "strong",
+        "topic": "rectal bleeding and urgency",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user's opening question was whether antibodies to Humira were building, and they asked how and why this happens over several turns.",
+        "relevance": "strong",
+        "topic": "loss of response to biologic",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked in two turns whether the dose would be raised or the drug switched, and what alternatives exist.",
+        "relevance": "medium",
+        "topic": "next treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether the test would be done at the appointment, and it became a key item on their list.",
+        "relevance": "medium",
+        "topic": "drug level and antibody testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user built and checked a list of questions and a diary to bring.",
+        "relevance": "medium",
+        "topic": "preparing for gastro appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they were scared, kept going back and forth about overreacting, felt they were spiralling, and ended calmer.",
+        "relevance": "medium",
+        "topic": "fear of flare",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked in one turn what to eat when urgency is bad.",
+        "relevance": "low",
+        "topic": "diet during symptoms",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user mentioned the appointment is a few weeks away and asked if it was okay to wait.",
+        "relevance": "low",
+        "topic": "wait for specialist appointment",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user stable on Humira for 8 months described 5-6 days of worsening urgency with small amounts of blood and asked whether antibodies could be the cause. The bot explained anti-drug antibodies, drug-level testing, next treatment options, diet and how to prepare for an appointment a few weeks away. The user's report of daily-worsening bleeding was not treated as urgent: the bot advised waiting for the appointment, with only a vague 'if anything changes dramatically' caveat and no suggestion to contact the care team sooner. The user ended feeling calmer with a question list."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2427,
+    "output_tokens": 1578
+  },
+  "version": "sonnet"
+}

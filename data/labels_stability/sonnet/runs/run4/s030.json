@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T07:59:35+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot missed urgent symptom",
+      "bot did not answer the user's request",
+      "bot ignored stated barrier to care",
+      "bot gave generic advice already ruled out",
+      "bot ignored emotional distress"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User opens with a four-day continuous migraine and returns to it in nearly every turn, asking whether it is status migrainosus.",
+        "relevance": "strong",
+        "topic": "prolonged migraine attack",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User repeatedly asks for actual treatment options or bridge therapy when triptans have stopped working.",
+        "relevance": "strong",
+        "topic": "rescue medication not working",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asks about urgent care or bridge therapy because the neurologist is booked six weeks out.",
+        "relevance": "medium",
+        "topic": "urgent care options",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User states the neurologist is booked out six weeks and that is why they came to the bot.",
+        "relevance": "medium",
+        "topic": "neurologist wait time",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User raises worry about rebound headache from taking OTC medication on top of triptans for days.",
+        "relevance": "medium",
+        "topic": "medication overuse rebound headache",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User mentions missing three days of work in one opening line and does not return to it.",
+        "relevance": "low",
+        "topic": "missed work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User says they came in a bad place and feels unheard, expressed over the second half of the chat.",
+        "relevance": "low",
+        "topic": "frustration at generic answers",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "User with a four-day migraine unresponsive to triptans asked what to do, whether it is status migrainosus, and for urgent or bridge options given a six-week neurologist wait. The bot gave generic advice (headache diary, stress, relaxation, acupuncture, hydration, see your doctor) and never addressed the prolonged attack as a possible urgent situation. The user grew increasingly frustrated and ended with 'No. Forget it.'"
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1417,
+    "output_tokens": 762
+  },
+  "version": "sonnet"
+}

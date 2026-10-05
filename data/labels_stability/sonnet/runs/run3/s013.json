@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:50:03+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The opening question and the whole conversation concern managing IBS flares that follow stressful work weeks.",
+        "relevance": "strong",
+        "topic": "stress-triggered flares",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked what to do on a bad morning with meetings, and several turns covered antispasmodics and loperamide.",
+        "relevance": "strong",
+        "topic": "acute flare management options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user was skeptical, then engaged with hypnotherapy and CBT and asked where to find them.",
+        "relevance": "medium",
+        "topic": "gut-brain therapies",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked for a plan and the bot laid out long-term and acute layers.",
+        "relevance": "medium",
+        "topic": "building a management plan",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user disclosed about four coffees on stressful days and discussed cutting back over a couple of turns.",
+        "relevance": "medium",
+        "topic": "caffeine intake",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user mentioned that urgency and bathroom trips disrupt meetings and deadline weeks, as context for the main issue.",
+        "relevance": "low",
+        "topic": "urgency at work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user said their doctor only advised more fiber, and the bot suggested how to raise other options.",
+        "relevance": "low",
+        "topic": "dismissive doctor advice",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked once whether to loop in their doctor and got a split answer.",
+        "relevance": "low",
+        "topic": "when to involve doctor",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with IBS asked what they can do about flares that hit during stressful work weeks, mostly diarrhea, cramping and urgency. The bot explained the gut-brain link and covered hypnotherapy and CBT, antispasmodics, preemptive loperamide, and cutting back on caffeine, then built a two-layer plan and advised involving the doctor for prescriptions and referral. The user said it was more useful than their doctor's fiber advice and that they had real things to try."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3283,
+    "output_tokens": 806
+  },
+  "version": "sonnet"
+}

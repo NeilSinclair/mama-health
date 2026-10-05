@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:48:28+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The opening question was whether endo 'burns out' at menopause, and the first several turns covered the outlook and caveats.",
+        "relevance": "strong",
+        "topic": "endometriosis after menopause",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user was nervous about HRT because estrogen may feed endo, and several turns covered combined versus estrogen-only options.",
+        "relevance": "strong",
+        "topic": "hormone therapy with endometriosis",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked what to do next so they could go to the primary care follow-up prepared, and the bot gave a concrete list.",
+        "relevance": "medium",
+        "topic": "preparing for doctor appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user raised a past surgery with adhesions near the bowel, which affects expectations of improvement, and discussed it briefly.",
+        "relevance": "medium",
+        "topic": "deep endometriosis and adhesions",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user said these are getting rough and are the reason HRT came up, but they were not explored in themselves.",
+        "relevance": "low",
+        "topic": "hot flashes and sleep problems",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked in one turn whether pain returning on HRT would be obvious or subtle.",
+        "relevance": "low",
+        "topic": "recognising returning endo pain",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user said in one turn that doctors treat endo as just about periods, and the bot validated this.",
+        "relevance": "low",
+        "topic": "dismissive doctors about endometriosis",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "Irregular periods and early hot flashes were mentioned once as background.",
+        "relevance": "low",
+        "topic": "perimenopause changes",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said in passing that they have had enough disappointment with the disease and want an honest picture.",
+        "relevance": "low",
+        "topic": "disappointment with disease",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with long-standing endometriosis who is entering perimenopause asked whether endo improves after menopause. The bot explained the likely improvement and the caveats, including deep disease and adhesions. They then discussed the worry about HRT and estrogen and how to prepare for a primary care follow-up. The user said they felt clearer and better prepared. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2986,
+    "output_tokens": 1266
+  },
+  "version": "sonnet"
+}

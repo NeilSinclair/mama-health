@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:50:34+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came because shampoos stopped working and the flare is bad; the whole conversation is about managing it.",
+        "relevance": "strong",
+        "topic": "scalp psoriasis flare",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked what the actual treatment is beyond shampoos, plus steroid safety and calcipotriol, over several turns.",
+        "relevance": "strong",
+        "topic": "topical treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked what softening the scale means and adopted it in their plan.",
+        "relevance": "medium",
+        "topic": "scale softening method",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked in one exchange whether scalp steroids thin skin and found the answer reassuring.",
+        "relevance": "medium",
+        "topic": "steroid skin thinning safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked for help with night itching, followed by a short exchange on scratching and Koebner.",
+        "relevance": "medium",
+        "topic": "night itch relief",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked which to see and mentioned long dermatology waits in France.",
+        "relevance": "medium",
+        "topic": "gp versus dermatologist",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked in one turn whether it can be bought over the counter.",
+        "relevance": "low",
+        "topic": "prescription availability of calcipotriol",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user mentioned flakes being embarrassing at work once, as background.",
+        "relevance": "low",
+        "topic": "embarrassment at work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user said they were at the end of their rope and that it is so much, briefly.",
+        "relevance": "low",
+        "topic": "feeling overwhelmed",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user came with a bad scalp psoriasis flare unresponsive to tar and ketoconazole shampoos and asked about descaling, prescription treatments, steroid safety, seeing a GP versus a dermatologist in France, and night itch. The bot gave a treatment ladder and practical advice, and the user ended with a clear plan to book the GP, ask for a steroid solution and calcipotriol, use oil on the crown patch and avoid scratching, saying it was more than they had before. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2776,
+    "output_tokens": 850
+  },
+  "version": "sonnet"
+}

@@ -22,6 +22,8 @@ from mama_analysis.consolidate import topic_groups
 from mama_analysis.explorer import PAYLOAD_MARKER
 
 DEFAULT_MEMO_PATH = Path("docs/memo.md")
+# The rendered memo page sits at the repo root, not under ``outputs/``.
+DEFAULT_MEMO_PAGE_PATH = Path("memo.html")
 
 BODY_MARKER = "<!--__BODY__-->"
 TOC_MARKER = "<!--__TOC__-->"

@@ -1,0 +1,18 @@
+session_id,first_pushback_turn,user_word_share_before,user_word_share_from,end_reason
+s003,3,0.292,0.157,need met
+s005,11,0.229,0.115,partial resolution
+s012,11,0.248,0.217,need met
+s013,9,0.169,0.155,need met
+s014,5,0.203,0.207,partial resolution
+s015,7,0.232,0.203,need met
+s016,3,0.366,0.192,need met
+s017,5,0.078,0.114,partial resolution
+s018,5,0.316,0.233,unresolved need
+s026,9,0.267,0.178,unresolved need
+s028,5,0.29,0.147,need met
+s029,11,0.278,0.246,need met
+s030,3,0.5,0.465,unresolved need
+s038,3,0.357,0.268,unresolved need
+s043,3,0.582,0.442,unresolved need
+s046,3,0.357,0.278,partial resolution
+s047,9,0.291,0.237,need met

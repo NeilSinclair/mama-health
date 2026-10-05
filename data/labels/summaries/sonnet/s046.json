@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-05T08:04:57+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not answer the user's request"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User opened by asking what is new and evidence-based, and turns 3-6 discuss specific drug candidates and the antiviral trial result.",
+        "relevance": "strong",
+        "topic": "long covid research pipeline",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "From turn 7 the user keeps asking how to find and qualify for trials they can actually get into, which drives most of the conversation.",
+        "relevance": "strong",
+        "topic": "finding eligible clinical trials",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User said getting into a dedicated clinic has its own waitlist and asked which clinics run trials (turns 15-22).",
+        "relevance": "medium",
+        "topic": "long covid clinic waitlists",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User asked in turn 23 whether the named drugs are recruiting in the US, a single question.",
+        "relevance": "medium",
+        "topic": "trial recruitment status in us",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User repeatedly mentioned limited energy and cognitive impairment making trial matching hard.",
+        "relevance": "medium",
+        "topic": "cognitive load of searching",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User expressed being tired of trying things and said the answers are always get into a clinic or read listings yourself.",
+        "relevance": "medium",
+        "topic": "frustration with system burden",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User listed existing POTS treatments in turn 3 as background to show they need something new.",
+        "relevance": "low",
+        "topic": "pots management already tried",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "Mentioned once in the opening message as context.",
+        "relevance": "low",
+        "topic": "inability to work",
+        "topic_group": "Work & life plans"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "A user with long COVID of over two years and POTS asked what is new and evidence-based beyond standard POTS care. The bot listed research-stage treatments, then the conversation turned to how to find and qualify for US trials, with the user finding the self-search burden heavy. The bot gave a general method (filters, research-active clinic waitlist, referral, documentation) but no specific clinics or recruiting trials, and the user ended with a flat thanks."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3225,
+    "output_tokens": 808
+  },
+  "version": "sonnet"
+}

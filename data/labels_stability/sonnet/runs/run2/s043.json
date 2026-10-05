@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-10-05T06:49:35+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored emotional distress",
+      "bot offered surgery prep after user declined it"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user's central message in nearly every turn is grieving a life, motherhood and identity lost to the illness, and asking to be heard.",
+        "relevance": "strong",
+        "topic": "grief over lost plans",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user repeatedly says the marriage is barely holding on and their husband barely looks at them.",
+        "relevance": "strong",
+        "topic": "marriage strain",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user says they stopped trying for a baby because they cannot carry one and does not know how to grieve it.",
+        "relevance": "medium",
+        "topic": "infertility and childlessness",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user was just told a fourth surgery is needed, which triggered the conversation, but they said they know the surgery process and did not ask about it.",
+        "relevance": "medium",
+        "topic": "repeat surgery",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user mentions in passing that their job is gone and they cannot work.",
+        "relevance": "low",
+        "topic": "job loss from illness",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user says twelve years of endometriosis has shaped every relationship, job and plan, as background to their distress.",
+        "relevance": "low",
+        "topic": "long-term disease burden",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user repeatedly asks whether the bot is reading and wants one acknowledgement, but this is a reaction to the conversation rather than a health subject.",
+        "relevance": "low",
+        "topic": "feeling unheard by chatbot",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "The user, twelve years into endometriosis, had just been told they need a fourth surgery and came to be heard about the grief over lost plans, a strained marriage and the loss of the chance to have children. The bot answered every message with surgery prep and recovery tips and never acknowledged the distress, even after the user explicitly asked it to. The user ended the conversation in frustration, saying the bot could not help."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1983,
+    "output_tokens": 763
+  },
+  "version": "sonnet"
+}

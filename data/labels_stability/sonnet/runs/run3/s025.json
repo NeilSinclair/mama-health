@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:50:13+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with ongoing exhaustion despite a normal TSH and returned to it throughout, including worry that it may not be thyroid-related.",
+        "relevance": "strong",
+        "topic": "persistent fatigue despite normal labs",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked what free T3 and T4 would show and which labs, such as ferritin, B12 and vitamin D, to request, over many turns.",
+        "relevance": "strong",
+        "topic": "thyroid tests beyond TSH",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked for a list of things to bring up and worried about being dismissed as an internet patient.",
+        "relevance": "strong",
+        "topic": "preparing for doctor appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked whether to ask about a dose change and how long a change takes to work, discussed over several turns.",
+        "relevance": "medium",
+        "topic": "levothyroxine dose adjustment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether fatigue is always thyroid-related and learned about iron, B12 and vitamin D, a substantive side thread.",
+        "relevance": "medium",
+        "topic": "other causes of fatigue",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked once whether to push for these alternatives and accepted the bot's answer as a later option.",
+        "relevance": "medium",
+        "topic": "natural desiccated thyroid or added T3",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said they felt gaslit about their fatigue and thanked the bot for validating them.",
+        "relevance": "medium",
+        "topic": "feeling dismissed by doctors",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user briefly agreed a symptom log was a good idea as they tend to forget how they felt.",
+        "relevance": "low",
+        "topic": "symptom log",
+        "topic_group": "Tests & monitoring"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user on levothyroxine for Hashimoto's with ongoing exhaustion despite a TSH of 3.8 wanted to know whether that was really normal. The bot explained free T4, free T3 and nutrient testing, gave a question list for the doctor, and validated the user's feeling of being dismissed. The user summarised a clear plan and said they were looking forward to the appointment."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3221,
+    "output_tokens": 846
+  },
+  "version": "sonnet"
+}

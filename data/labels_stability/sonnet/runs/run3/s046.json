@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-10-05T06:50:31+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not answer the user's request"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User opened asking what is new and evidence-based beyond standard care, and returned to it at t5 and t23.",
+        "relevance": "strong",
+        "topic": "long covid research pipeline",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "Most of the conversation (t7-t24) is the user asking how to find and qualify for trials they could actually join.",
+        "relevance": "strong",
+        "topic": "finding eligible clinical trials",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User said dedicated clinics have waitlist problems and asked which clinics run trials (t15, t19).",
+        "relevance": "medium",
+        "topic": "long covid clinic waitlists",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User said they lack energy to email sites and are cognitively impaired while matching trials (t11, t13).",
+        "relevance": "medium",
+        "topic": "cognitive impairment limiting effort",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User voiced being tired of ineffective attempts and that every answer pushes the work back on them (t1, t17, t21).",
+        "relevance": "medium",
+        "topic": "frustration with trial access",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User listed existing POTS treatments only to show they had exhausted standard care.",
+        "relevance": "low",
+        "topic": "pots symptom management",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "Mentioned once in the opening message as background.",
+        "relevance": "low",
+        "topic": "inability to work",
+        "topic_group": "Work & life plans"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "A user with long COVID for over two years, whose POTS is stable but who cannot work, asked what disease-modifying research exists and how to get into US trials. The bot described pipeline candidates and gave general trial-search methods, but could not name specific clinics or confirm US recruitment, leaving the user to do the searching. The user ended with a flat 'I have the general picture' and thanks."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3225,
+    "output_tokens": 709
+  },
+  "version": "sonnet"
+}

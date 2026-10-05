@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T06:48:40+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with the TSH creep and the whole conversation traced its causes and meaning.",
+        "relevance": "strong",
+        "topic": "rising tsh on stable dose",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user disclosed a calcium supplement taken at breakfast and spent several turns on how to separate it from levothyroxine.",
+        "relevance": "strong",
+        "topic": "calcium supplement timing interaction",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what else could push TSH up and reflected that the dose is not fixed for life.",
+        "relevance": "medium",
+        "topic": "hashimoto's progression and changing dose needs",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user said they were worried the creeping number meant something was getting worse, and the user felt reassured.",
+        "relevance": "low",
+        "topic": "worry about deterioration",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user said they were a bit more tired but could not tell if it was thyroid or ageing, in one exchange.",
+        "relevance": "low",
+        "topic": "mild fatigue",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked whether to wait for the routine test or go in sooner and queried the six to eight week recheck interval.",
+        "relevance": "medium",
+        "topic": "timing of next blood test",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked for a next step and the plan was to raise the trend and calcium timing with the doctor.",
+        "relevance": "low",
+        "topic": "contacting doctor about trend",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user on long-term levothyroxine for Hashimoto's asked why TSH had crept from about 1.5 to 3.6 on an unchanged dose. The conversation identified calcium taken at breakfast as a likely absorption factor, explained that dose needs can change over time, and gave a next step of contacting the doctor and rechecking TSH after six to eight weeks. The user said they now had a real action plan and were satisfied. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3025,
+    "output_tokens": 760
+  },
+  "version": "sonnet"
+}

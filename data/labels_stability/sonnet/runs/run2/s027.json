@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T06:49:20+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came overwhelmed by food lists and most of the conversation covers phases, food lists, elimination and reintroduction.",
+        "relevance": "strong",
+        "topic": "low fodmap diet",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User's stated main problem was contradictory online lists and asked how to know what is high FODMAP.",
+        "relevance": "strong",
+        "topic": "conflicting food lists",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked over several turns how to do reintroduction properly and whether to do it alone.",
+        "relevance": "medium",
+        "topic": "reintroduction phase process",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked whether the app was worth paying for given skepticism of health apps.",
+        "relevance": "medium",
+        "topic": "paid diet app worth",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked about getting a dietitian and whether the NHS covers it, and adopted it as part of the plan.",
+        "relevance": "medium",
+        "topic": "dietitian referral through gp",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User worried about giving up onion and garlic forever and felt relieved at the answer.",
+        "relevance": "medium",
+        "topic": "fear of permanent restriction",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked in one exchange whether elimination would leave them starving.",
+        "relevance": "low",
+        "topic": "fear of eating too little",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with IBS told to try low FODMAP by their gastro felt overwhelmed by contradictory food lists. The bot explained the temporary three-phase structure, recommended a trusted app, covered reintroduction and suggested asking the GP for an NHS dietitian referral. The user restated a clear plan and said it was far more helpful than hours of googling."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3037,
+    "output_tokens": 702
+  },
+  "version": "sonnet"
+}

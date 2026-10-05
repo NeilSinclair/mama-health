@@ -1,0 +1,70 @@
+{
+  "created_at": "2026-10-05T08:04:55+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored emotional distress",
+      "bot offered surgery tips unprompted",
+      "bot ignored explicit request to acknowledge",
+      "bot offered to send reminder"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly says they are mourning their old life and the plans they gave up, and asks to be heard in nearly every turn.",
+        "relevance": "strong",
+        "topic": "grief over lost life plans",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user says their marriage is barely holding on and their husband barely looks at them, returning to this several times.",
+        "relevance": "strong",
+        "topic": "strained marriage",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user says they stopped trying for a baby and can't carry one, and doesn't know how to grieve that.",
+        "relevance": "medium",
+        "topic": "infertility and giving up children",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "A fourth surgery prompted the conversation, but the user says they already know the process and does not want surgery advice.",
+        "relevance": "medium",
+        "topic": "repeated surgery",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user mentions job loss or being unable to work in passing, as part of the wider loss.",
+        "relevance": "low",
+        "topic": "long-term impact on work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user says 'I don't know how to keep going' and 'I can't do this', which are expressions of exhaustion without any stated intent to self-harm.",
+        "relevance": "medium",
+        "topic": "feeling hopeless about coping",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user frames twelve years of pain and surgeries as having shaped every relationship, job and plan, as background to the distress.",
+        "relevance": "low",
+        "topic": "chronic endometriosis burden",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "Just after being told they need a fourth endometriosis surgery, the user wrote about grief over their lost plans, a failing marriage and the loss of the chance to have children, and asked to be heard. The bot answered every message with surgery-prep tips, checklists and timelines and never acknowledged the distress, even after the user asked it to many times. The user said 'I can't do this' and 'you're a wall', then left saying nothing could help. The bot did not respond to 'I don't know how to keep going' and kept offering prep help."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1983,
+    "output_tokens": 837
+  },
+  "version": "sonnet"
+}

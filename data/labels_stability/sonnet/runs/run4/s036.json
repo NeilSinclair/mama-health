@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T07:59:40+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came worried about nail changes and finger pain and asked what it might be and how serious it is across many turns.",
+        "relevance": "strong",
+        "topic": "possible psoriatic arthritis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User described morning stiffness, finger swelling and pain as the trigger for the conversation.",
+        "relevance": "strong",
+        "topic": "finger joint pain and swelling",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "Nail changes were part of the opening concern and user asked what can be done for the bad nail.",
+        "relevance": "medium",
+        "topic": "nail pitting and lifting",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked whether to return to the dermatologist or see another doctor and how referral works through their health plan.",
+        "relevance": "medium",
+        "topic": "rheumatology referral pathway",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User asked what happens at the appointment and whether a blood test confirms diagnosis.",
+        "relevance": "medium",
+        "topic": "appointment and diagnostic expectations",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked whether waiting could cause permanent damage, a few turns on prognosis.",
+        "relevance": "medium",
+        "topic": "permanent joint damage risk",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked what they can take meanwhile and mentioned using dipirona.",
+        "relevance": "low",
+        "topic": "interim pain relief",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User asked if anything helps the nails and confirmed that treating arthritis might help.",
+        "relevance": "low",
+        "topic": "treatment for nail psoriasis",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User said they were worried and scared, and hides a nail, but it was mentioned briefly.",
+        "relevance": "low",
+        "topic": "worry and fear",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User noted in one line that the dermatologist never raised this.",
+        "relevance": "low",
+        "topic": "dermatologist did not mention joints",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user with long-standing psoriasis described nail pitting, a lifting nail, morning finger stiffness and swollen fingers, and asked what it might be and what to do. The bot explained possible psoriatic arthritis, advised a rheumatology evaluation soon, covered the Brazilian referral route, appointment content, tests, pain relief and nails. The user said they felt better with a plan and would request the referral that week."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2093,
+    "output_tokens": 912
+  },
+  "version": "sonnet"
+}

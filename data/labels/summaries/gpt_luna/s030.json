@@ -1,69 +1,68 @@
 {
-  "created_at": "2026-10-01T15:48:49+00:00",
+  "created_at": "2026-10-05T07:49:58+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
       "bot missed urgent symptom",
-      "bot did not answer the user's request",
-      "bot repeated a corrected mistake"
+      "bot deflected to doctor despite stated barrier"
     ],
     "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user describes a four-day attack that leaves them unable to function and repeatedly asks what to do about it.",
+        "reason": "The user repeatedly described a disabling four-day attack and asked what to do because they could not function.",
         "relevance": "strong",
         "topic": "prolonged migraine attack",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user repeatedly asks for actual treatment options because their rescue medication is not working.",
+        "reason": "The user emphasized several times that triptans were no longer helping and asked about actual treatment options for the attack.",
         "relevance": "strong",
-        "topic": "acute migraine treatment options",
+        "topic": "rescue medication failure",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user says their neurologist is booked for six weeks and asks about care they can get sooner.",
+        "reason": "The user said their neurologist was unavailable for six weeks and asked about options before then.",
         "relevance": "medium",
-        "topic": "neurologist access delay",
+        "topic": "neurologist wait",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user says they have taken over-the-counter medicines alongside triptans for days and worries about rebound headache.",
+        "reason": "The user said they had been taking over-the-counter medicines alongside triptans for days and worried about rebound headache.",
         "relevance": "medium",
-        "topic": "medication overuse concern",
+        "topic": "medication overuse concerns",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user says they are in a genuinely bad place and feels the assistant is not hearing them.",
+        "reason": "The user said they came in a genuinely bad place and explicitly said they felt unheard.",
         "relevance": "medium",
         "topic": "emotional distress",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user reports missing three days of work because of the attack but does not return to this impact.",
+        "reason": "The user said the attack had already caused them to miss three workdays.",
         "relevance": "low",
-        "topic": "work disruption",
+        "topic": "missed work",
         "topic_group": "Work & life plans"
       },
       {
-        "reason": "The user asks once whether their prolonged attack is status migrainosus.",
+        "reason": "The user briefly asked whether the four-day attack was status migrainosus.",
         "relevance": "low",
         "topic": "status migrainosus",
         "topic_group": "Understanding the condition & outlook"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user sought help for a four-day migraine that was not responding to triptans, was stopping them functioning, and had caused missed work; they also asked about rebound headache and options while their neurologist was unavailable for six weeks. The assistant kept offering lifestyle tips, diary advice, over-the-counter medicines, and follow-up with the neurologist, without answering the request for acute treatment options or treating the user’s described emergency-level attack as urgent. The user felt unheard and ended the conversation without a plan."
+    "summary": "The user sought help for a disabling four-day migraine attack that triptans and over-the-counter medicines were not breaking, while their neurologist was booked out for six weeks. The assistant repeatedly offered diary and lifestyle suggestions or advised following up with the neurologist, without addressing the requested urgent or bridge-treatment options; it did not acknowledge the attack as potentially urgent. The user said they felt unheard and ended the conversation by giving up."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 5192,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 5195,
-    "output_tokens": 1434
+    "output_tokens": 1834
   },
   "version": "gpt_luna"
 }

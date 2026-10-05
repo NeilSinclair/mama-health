@@ -5,7 +5,12 @@ import pytest
 from fakes import fake_summary
 
 from mama_analysis.config import MODELS, ModelSpec
-from mama_analysis.labellers import OpenAILabeller, load_prompt, make_labeller
+from mama_analysis.labellers import (
+    AnthropicLabeller,
+    OpenAILabeller,
+    load_prompt,
+    make_labeller,
+)
 from mama_analysis.schemas import SummaryLLM
 
 
@@ -56,6 +61,63 @@ def test_openai_raises_without_parsed_output():
         asyncio.run(lab.complete("S", "U", SummaryLLM))
 
 
+class _Stream:
+    """Mimics ``client.messages.stream``: records kwargs, yields the final message."""
+
+    def __init__(self, message):
+        self.message = message
+        self.kwargs = None
+
+    def stream(self, **kwargs):
+        self.kwargs = kwargs
+        return self
+
+    async def __aenter__(self):
+        return self
+
+    async def __aexit__(self, *exc):
+        return False
+
+    async def get_final_message(self):
+        return self.message
+
+
+def _anthropic_client(parsed, stop_reason="end_turn"):
+    usage = SimpleNamespace(
+        input_tokens=100,
+        output_tokens=20,
+        cache_read_input_tokens=64,
+        cache_creation_input_tokens=None,
+    )
+    msg = SimpleNamespace(parsed_output=parsed, usage=usage, stop_reason=stop_reason)
+    return SimpleNamespace(messages=_Stream(msg), close=_async_flag)
+
+
+def test_anthropic_caches_system_prompt_and_normalises_usage():
+    client = _anthropic_client(fake_summary())
+    lab = AnthropicLabeller("v", ModelSpec("anthropic", "claude-x", "C"), client=client)
+    out, usage = asyncio.run(lab.complete("SYSTEM", "USER", SummaryLLM))
+    kw = client.messages.kwargs
+    assert kw["model"] == "claude-x"
+    assert kw["system"] == [
+        {"type": "text", "text": "SYSTEM", "cache_control": {"type": "ephemeral"}}
+    ]
+    assert kw["messages"] == [{"role": "user", "content": "USER"}]
+    assert kw["output_format"] is SummaryLLM
+    assert out == fake_summary()
+    assert (usage.cache_read_tokens, usage.cache_write_tokens) == (64, 0)
+
+
+@pytest.mark.parametrize(
+    ("parsed", "stop_reason"), [(None, "end_turn"), (fake_summary(), "refusal")]
+)
+def test_anthropic_raises_without_a_complete_answer(parsed, stop_reason):
+    spec = ModelSpec("anthropic", "claude-x", "C")
+    lab = AnthropicLabeller("v", spec, client=_anthropic_client(parsed, stop_reason))
+    with pytest.raises(ValueError, match="no parsed output"):
+        asyncio.run(lab.complete("S", "U", SummaryLLM))
+
+
 def test_load_prompt_hash_is_stable():
     a, b = load_prompt("summary_v1"), load_prompt("summary_v1")
     assert a.sha256 == b.sha256 and len(a.sha256) == 64
@@ -65,9 +127,11 @@ def test_load_prompt_hash_is_stable():
 
 def test_make_labeller_uses_configured_model(monkeypatch):
     monkeypatch.setenv("OPENAI_API_KEY", "test")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "test")
+    adapters = {"anthropic": AnthropicLabeller, "openai": OpenAILabeller}
     for version, spec in MODELS.items():
         lab = make_labeller(version)
-        assert isinstance(lab, OpenAILabeller)
+        assert type(lab) is adapters[spec.provider]
         assert (lab.version, lab.spec) == (version, spec)
 
 

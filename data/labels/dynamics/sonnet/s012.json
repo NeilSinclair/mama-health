@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-10-05T08:07:43+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "final_sentiment": "satisfied",
+    "final_sentiment_quote": "no, I think I've got what I need. referral, keep some notes even if they're messy, and don't buy the supplements yet. thanks, this was actually really clarifying",
+    "pushbacks": [
+      {
+        "bot_adapted": true,
+        "kind": "correction",
+        "quote": "I don't think mine is the diarrhea type though, I'm honestly more on the constipated end, or it swings",
+        "reason": "The reply drops the IBS-D rifaximin framing and explains the methane/IMO link to constipation and why rifaximin alone is less studied for this pattern.",
+        "turn": 11
+      },
+      {
+        "bot_adapted": true,
+        "kind": "correction",
+        "quote": "I've tried food diaries before and honestly found it hard to see any pattern.",
+        "reason": "The reply accepts the diary didn't yield patterns, reframes the variability as informative, and shifts to suggesting a dietitian instead of repeating the diary advice.",
+        "turn": 19
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 3628,
+    "cache_write_tokens": 0,
+    "input_tokens": 3027,
+    "output_tokens": 321
+  },
+  "version": "sonnet"
+}

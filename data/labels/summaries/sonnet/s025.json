@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T08:04:40+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opens with being exhausted despite normal TSH and returns to whether fatigue is even thyroid-related.",
+        "relevance": "strong",
+        "topic": "persistent fatigue",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "Much of the chat explains TSH, free T3/T4 and ferritin, and what to ask to be tested.",
+        "relevance": "strong",
+        "topic": "thyroid lab interpretation",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asks for a list of questions to bring and finishes by restating the plan for the visit.",
+        "relevance": "strong",
+        "topic": "preparing for doctor appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "Whether to adjust dose toward a lower TSH and how long a change takes was discussed over several turns.",
+        "relevance": "medium",
+        "topic": "levothyroxine dose adjustment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked once whether to push for it and accepted the 'maybe later' answer.",
+        "relevance": "low",
+        "topic": "desiccated thyroid or added t3",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User says they felt gaslit about fatigue and worries about being seen as an internet patient.",
+        "relevance": "medium",
+        "topic": "feeling dismissed by doctors",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User thanks the bot for validation and says they were annoyed and tired, a short emotional thread.",
+        "relevance": "low",
+        "topic": "feeling gaslit and frustrated",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked whether fatigue could be something else and about ferritin versus hemoglobin, over a few turns.",
+        "relevance": "medium",
+        "topic": "nutrient deficiency causes of fatigue",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "User on levothyroxine for Hashimoto's with TSH 3.8 asked whether that is truly normal given ongoing exhaustion. The bot explained free T3/T4, ferritin, B12 and vitamin D, dose-change timelines and gave a list of questions for the doctor. The user felt validated, restated a clear plan, and said they now look forward to the appointment."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3221,
+    "output_tokens": 811
+  },
+  "version": "sonnet"
+}

@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:49:36+00:00",
+  "created_at": "2026-10-05T07:50:28+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -9,60 +9,78 @@
       {
         "reason": "The user opened by asking what to expect when trying to conceive with PCOS and returned to questions about chances and timing.",
         "relevance": "strong",
-        "topic": "PCOS fertility outlook",
+        "topic": "pcos fertility outlook",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user described spiraling over online stories and later asked how to keep trying from taking over their life.",
+        "reason": "The user described spiraling over online stories, later asked how to keep trying from taking over life, and said they felt much better after being heard.",
         "relevance": "strong",
-        "topic": "fertility-related anxiety",
+        "topic": "fertility anxiety",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user described long, unpredictable cycles and asked whether irregular ovulation was the main PCOS-related barrier to pregnancy.",
+        "reason": "The user described cycles of 35 to over 50 days and uncertainty about ovulating, asking how this affects conception.",
         "relevance": "medium",
         "topic": "irregular ovulation",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked about letrozole and Clomid and later considered asking their doctor about ovulation-inducing medication.",
+        "relevance": "medium",
+        "topic": "fertility medication options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether to try naturally first or begin medication, and discussed asking the doctor about the choice.",
+        "relevance": "medium",
+        "topic": "starting ovulation treatment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked how to time attempts with unpredictable cycles and whether ovulation tests work with PCOS.",
+        "relevance": "medium",
+        "topic": "ovulation test reliability",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked how elevated insulin relates to fertility and invited discussion of metformin after their doctor mentioned high insulin.",
+        "relevance": "medium",
+        "topic": "metformin for pcos",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user directly asked whether conception would realistically take months or years.",
+        "relevance": "medium",
+        "topic": "fertility timeline",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked about letrozole and Clomid and whether to try naturally before considering medication.",
+        "reason": "The user asked whether their husband should be checked and added a semen analysis to their next steps.",
         "relevance": "medium",
-        "topic": "ovulation induction medication",
-        "topic_group": "Treatment choice"
-      },
-      {
-        "reason": "The user asked whether ovulation tests work with PCOS and how to time trying with unpredictable cycles.",
-        "relevance": "medium",
-        "topic": "ovulation testing",
+        "topic": "partner fertility testing",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user asked whether to start a supplement or change diet before returning to the doctor.",
-        "relevance": "low",
-        "topic": "preconception preparation",
-        "topic_group": "Treatment choice"
-      },
-      {
-        "reason": "After mentioning a prior high insulin result, the user asked how it relates to fertility and invited an explanation of metformin.",
-        "relevance": "medium",
-        "topic": "insulin and metformin",
-        "topic_group": "Treatment choice"
-      },
-      {
-        "reason": "The user asked whether her husband should be checked and added a semen analysis to their plan.",
-        "relevance": "medium",
-        "topic": "male fertility testing",
-        "topic_group": "Tests & monitoring"
-      },
-      {
-        "reason": "The user asked when to move from care with her regular OB to a specialist.",
+        "reason": "The user asked when to escalate from their regular OB to a fertility specialist.",
         "relevance": "medium",
         "topic": "fertility specialist referral",
         "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked what to take before trying and included starting a prenatal vitamin in their plan.",
+        "relevance": "low",
+        "topic": "prenatal vitamins",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user briefly asked whether to change their diet before returning to the doctor.",
+        "relevance": "low",
+        "topic": "diet and lifestyle changes",
+        "topic_group": "Fatigue, sleep, diet & activity"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user, who has PCOS and irregular cycles, sought realistic expectations for trying to conceive and information about ovulation, treatment options, testing, and preparation. The assistant offered explanations and next steps, and the user said the plan helped her feel much better; she also asked how to manage anxiety, and said she felt heard."
+    "summary": "The user asked what to expect when trying to conceive with PCOS, including irregular ovulation, medication options, timing, and how long conception might take. The assistant discussed treatment and monitoring questions, preconception steps, partner testing, and when to seek specialist care; the user said they now had clear next steps. The user also asked how to manage anxiety around trying, felt heard, and said they felt much better."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -71,7 +89,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 7321,
-    "output_tokens": 1677
+    "output_tokens": 1811
   },
   "version": "gpt_luna"
 }

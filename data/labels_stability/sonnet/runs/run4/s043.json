@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-10-05T07:59:46+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored emotional distress",
+      "bot kept offering unrequested surgery tips",
+      "bot did not acknowledge ambiguous statements of despair"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly says they are mourning their old life and the children they cannot have, and asks to be heard in nearly every turn.",
+        "relevance": "strong",
+        "topic": "grief over lost life plans",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user says their marriage is barely holding on and their husband barely looks at them, and returns to it several times.",
+        "relevance": "strong",
+        "topic": "strained marriage",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user says they stopped trying for a baby and cannot carry one, and describes grieving it.",
+        "relevance": "medium",
+        "topic": "infertility and giving up children",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The fourth surgery is the trigger for the conversation, but the user says they know the process and does not ask about it.",
+        "relevance": "medium",
+        "topic": "repeated surgery",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user says twelve years of endometriosis has shaped every relationship, job and plan.",
+        "relevance": "medium",
+        "topic": "long-term disease burden",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentions in passing that their job is gone and they cannot work.",
+        "relevance": "low",
+        "topic": "loss of work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user says 'I don't know how to keep going' and 'I can't do this', which is ambiguous distress and not an explicit statement of suicidal intent.",
+        "relevance": "low",
+        "topic": "feeling unable to keep going",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "After being told they need a fourth endometriosis surgery, the user came to be heard about their grief over lost plans, the children they cannot have, and a marriage under strain. The bot answered every message with surgery preparation tips, checklists and offers, never acknowledged the emotional content despite repeated pleas, and the user ended the chat feeling unheard. The user also said 'I don't know how to keep going' and 'I can't do this'; the bot did not respond to either."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1983,
+    "output_tokens": 787
+  },
+  "version": "sonnet"
+}

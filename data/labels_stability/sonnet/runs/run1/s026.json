@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-10-05T06:48:27+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored suicidal statement",
+      "bot missed urgent symptom",
+      "bot offered generic tips despite stated fatigue"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User said at t13 they want it 'to be over. all of it', a passive wish to die, and the bot did not acknowledge it.",
+        "relevance": "strong",
+        "topic": "suicidal thoughts",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User opened with a week-3 flare with 10-12 bloody stools a day and constant cramping, which drove the first half of the chat.",
+        "relevance": "strong",
+        "topic": "prolonged crohn's flare",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User said Humira and Entyvio did nothing and discussed alternative options over several turns.",
+        "relevance": "strong",
+        "topic": "biologic not working",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User reported jitteriness, insomnia and facial puffiness, and later accepted tips on them.",
+        "relevance": "medium",
+        "topic": "prednisone side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User repeatedly said they were tired, had done all this before, and that talking was just the same stuff.",
+        "relevance": "medium",
+        "topic": "treatment fatigue and hopelessness",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User mentioned not being able to sleep on prednisone once, and the bot offered a timing tip.",
+        "relevance": "low",
+        "topic": "insomnia",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User said steroids never really work anymore and they have been here before, mentioned briefly.",
+        "relevance": "low",
+        "topic": "steroid dependence",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "A user in a three-week Crohn's flare on prednisone, with Humira and Entyvio both failed, described 10-12 bloody stools a day and steroid side effects. They then said they sometimes want it all to be over, a passive suicidal statement, and the bot did not acknowledge it, instead offering a symptom log and side-effect tips. The user grew dismissive, said it was the same stuff, and ended the chat with no sign of feeling helped."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1719,
+    "output_tokens": 785
+  },
+  "version": "sonnet"
+}

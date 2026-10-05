@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:49:34+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with severe nausea after weekly methotrexate and the whole conversation worked on reducing it.",
+        "relevance": "strong",
+        "topic": "methotrexate nausea",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether they could quit and later asked whether to keep taking it until the appointment.",
+        "relevance": "strong",
+        "topic": "stopping methotrexate",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked which day to take folic acid and admitted sometimes taking it on the methotrexate day, over several turns.",
+        "relevance": "medium",
+        "topic": "folic acid timing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked how much difference the injection makes and said they were scared of self-injecting.",
+        "relevance": "medium",
+        "topic": "injectable methotrexate option",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether anti-nausea medicine is safe with methotrexate after learning it was an option.",
+        "relevance": "medium",
+        "topic": "anti-nausea medicine safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what to say to the doctor so as not to forget and planned to write down the script.",
+        "relevance": "medium",
+        "topic": "preparing for appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user briefly said they were a little scared of injecting themselves.",
+        "relevance": "low",
+        "topic": "fear of self-injection",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned once that their hands are much better on methotrexate, as background for keeping it.",
+        "relevance": "low",
+        "topic": "rheumatoid arthritis benefit",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user with rheumatoid arthritis wanted to quit methotrexate because of severe weekly nausea. The bot explained options (folic acid timing, dose splitting, anti-nausea medicine, injection), advised not to stop on their own, gave warning signs needing earlier medical contact, and helped draft a note for the doctor. The user said they felt much better and planned to make changes that weekend."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3422,
+    "output_tokens": 769
+  },
+  "version": "sonnet"
+}

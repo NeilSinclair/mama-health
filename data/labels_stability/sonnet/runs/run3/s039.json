@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T06:50:26+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened by asking how to think about medication choices before pregnancy and spent most turns on which drugs are compatible or must be avoided.",
+        "relevance": "strong",
+        "topic": "pregnancy-safe medication options",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User asked for the ideal sequence for trying in 18 months and what happens if the new drug controls RA less well.",
+        "relevance": "strong",
+        "topic": "pregnancy planning timeline",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User disclosed being on methotrexate now and asked if that is a worry, then took up contraception and washout advice.",
+        "relevance": "medium",
+        "topic": "methotrexate before conception",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User asked in one turn whether pregnancy-safe meds are also okay with breastfeeding.",
+        "relevance": "medium",
+        "topic": "breastfeeding medication compatibility",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User asked whether RA changes in pregnancy and learned about postpartum flares.",
+        "relevance": "medium",
+        "topic": "disease course in pregnancy",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked who to coordinate with and when to raise planning with the rheumatologist.",
+        "relevance": "medium",
+        "topic": "care team coordination",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User mentioned fear of choosing between health and a baby and said they felt less anxious by the end, but it was not the main focus.",
+        "relevance": "low",
+        "topic": "anxiety about health versus baby",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user recently diagnosed with rheumatoid arthritis, hoping to try for a baby in 1-2 years, asked how to plan medication around pregnancy. The bot covered compatible and incompatible drugs, the user's current methotrexate, a timeline, postpartum flares, breastfeeding and who to involve, ending with a recap. The user said they came in anxious and left with a handle on the plan. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 4021,
+    "output_tokens": 752
+  },
+  "version": "sonnet"
+}

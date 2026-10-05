@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-10-05T08:07:45+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "final_sentiment": "neutral",
+    "final_sentiment_quote": "Right. Maybe I just ask my pharmacist here what they have.",
+    "pushbacks": [
+      {
+        "bot_adapted": true,
+        "kind": "correction",
+        "quote": "Sorry, Whole Foods? We don't have this here. I am living in Japan.",
+        "reason": "The reply drops Whole Foods and points to iHerb international shipping, a route that works from Japan.",
+        "turn": 5
+      },
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "But the customs, sometimes Japan is strict for import medicine. I hear this before.",
+        "reason": "The reply waves the concern away with 'should be fine' and keeps pushing the same iHerb brands, with only a small tip about splitting orders.",
+        "turn": 11
+      },
+      {
+        "bot_adapted": false,
+        "kind": "repeated question",
+        "quote": "So you don't know kampo. Okay.",
+        "reason": "The reply still does not address kampo and goes back to recommending iHerb for Pure Encapsulations magnesium and vitamin D.",
+        "turn": 17
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 3628,
+    "cache_write_tokens": 0,
+    "input_tokens": 1616,
+    "output_tokens": 1253
+  },
+  "version": "sonnet"
+}

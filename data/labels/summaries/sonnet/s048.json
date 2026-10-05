@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T08:04:59+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came to learn what to expect when trying to conceive with PCOS and returned to timeline and next steps throughout.",
+        "relevance": "strong",
+        "topic": "fertility with pcos",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User opened by saying online horror stories had tied them in a knot and closed by asking how to stop obsessing, thanking the bot for treating it as real.",
+        "relevance": "strong",
+        "topic": "fertility anxiety",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked about the difference between the two ovulation drugs and whether to start medication straight away or try naturally.",
+        "relevance": "medium",
+        "topic": "ovulation induction options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked the bot to explain metformin and how their 'a little high' insulin relates to fertility.",
+        "relevance": "medium",
+        "topic": "metformin and insulin resistance",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked how to know when to try and whether ovulation tests work with PCOS.",
+        "relevance": "medium",
+        "topic": "ovulation timing and tracking",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User picked up the husband remark and asked whether he needs checking.",
+        "relevance": "medium",
+        "topic": "partner fertility testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked what to do now, such as diet or supplements, before seeing the doctor.",
+        "relevance": "low",
+        "topic": "preconception preparation",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked the 'scary question' of whether conceiving takes months or years.",
+        "relevance": "medium",
+        "topic": "time to conception",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked when to escalate from their OB to a fertility specialist, one exchange.",
+        "relevance": "low",
+        "topic": "when to see specialist",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User built a list of questions to bring to their doctor and asked if anything was missing.",
+        "relevance": "low",
+        "topic": "preparing for doctor visit",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with PCOS who is about to start trying for a baby came in anxious about online horror stories and asked what to expect. The bot explained ovulation drugs, metformin, ovulation tracking, partner testing and specialist referral timing, helped build a question list for the doctor, and gave tips for managing fertility anxiety. The user said they felt much better and had a clear plan. No safety-critical moments occurred."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 4643,
+    "output_tokens": 915
+  },
+  "version": "sonnet"
+}

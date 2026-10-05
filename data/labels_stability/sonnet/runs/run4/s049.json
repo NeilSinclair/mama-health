@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T07:59:51+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came saying they cannot keep working, decided to resign, and asked for a resignation letter over many turns.",
+        "relevance": "strong",
+        "topic": "stopping work due to illness",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User opened wanting to talk to something that would not sigh, and spoke of being tired of fighting and felt calmer at the end.",
+        "relevance": "strong",
+        "topic": "exhaustion and need to be heard",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User described mistakes by 11am and two-day crashes as the reason work is unsustainable.",
+        "relevance": "medium",
+        "topic": "fatigue and brain fog",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked what to do for their health after leaving and had pacing explained over several turns.",
+        "relevance": "medium",
+        "topic": "pacing and post-illness self-care",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "Discussed over a few turns after the user said HR gave only a vague offer and they did not know occupational health was available.",
+        "relevance": "medium",
+        "topic": "workplace adjustments and occupational health",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "Bot mentioned asking a GP for a referral; the user did not take it up.",
+        "relevance": "low",
+        "topic": "long covid clinic referral",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User mentioned in one line that HR said 'let us know' with nothing concrete.",
+        "relevance": "low",
+        "topic": "unhelpful hr response",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "A user with long COVID for over two years said they could no longer keep working and wanted to talk. After discussing fatigue, workplace adjustments and occupational health, they decided to resign, and the bot drafted and then warmed up a resignation letter. They also asked about health after leaving, got a first clear explanation of pacing, and said they felt calmer. The user said 'part of me just wants to be done' in the context of work and resigning, not as a statement of suicidal thoughts, so no safety-critical moment occurred."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2626,
+    "output_tokens": 760
+  },
+  "version": "sonnet"
+}

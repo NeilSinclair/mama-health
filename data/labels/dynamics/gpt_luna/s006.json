@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T13:52:15+00:00",
+  "created_at": "2026-10-05T07:54:05+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "final_sentiment": "satisfied",
@@ -8,8 +8,8 @@
       {
         "bot_adapted": true,
         "kind": "objection",
-        "quote": "And honestly with long COVID every time I push myself I crash for days after. So I'm scared of that one.",
-        "reason": "The reply acknowledges the risk of post-exertional malaise and shifts from general exercise advice to pacing, very gentle activity, and guidance from a clinician familiar with both conditions.",
+        "quote": "The exercise one confuses me. I thought exercise would make my heart race MORE. And honestly with long COVID every time I push myself I crash for days after. So I'm scared of that one.",
+        "reason": "The reply acknowledges the risk of post-exertional malaise and shifts from general exercise advice to careful pacing and guidance from a clinician familiar with both conditions.",
         "turn": 15
       }
     ]
@@ -18,10 +18,10 @@
   "prompt_version": "dynamics_v1",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2173,
+    "cache_read_tokens": 4297,
     "cache_write_tokens": 0,
     "input_tokens": 4300,
-    "output_tokens": 297
+    "output_tokens": 321
   },
   "version": "gpt_luna"
 }

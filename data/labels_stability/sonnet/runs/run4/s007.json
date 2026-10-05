@@ -1,0 +1,89 @@
+{
+  "created_at": "2026-10-05T07:59:16+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with widening part and thinning hair and the whole conversation centres on its cause and course.",
+        "relevance": "strong",
+        "topic": "hair thinning",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked what can be done and whether it is permanent, and the bot covered minoxidil and anti-androgens over several turns.",
+        "relevance": "strong",
+        "topic": "hair loss treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether it is PCOS or something else and explored stress-related shedding and other causes.",
+        "relevance": "medium",
+        "topic": "possible causes of hair loss",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked what to bring and say so they are taken seriously, and planned to book that week.",
+        "relevance": "medium",
+        "topic": "preparing for doctor appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked whether to see a regular doctor or a skin specialist, answered in one exchange.",
+        "relevance": "low",
+        "topic": "which doctor to see",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "Blood tests came up as the way to sort out causes and the user will ask for them, but the user did not ask about them directly.",
+        "relevance": "low",
+        "topic": "blood tests for causes",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user said the widening part freaks them out and asked if it will keep getting worse, and later said they were scared to look into it.",
+        "relevance": "medium",
+        "topic": "fear of worsening hair loss",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked if spironolactone is safe and said they were nervous about hormone medications, covered in one exchange.",
+        "relevance": "medium",
+        "topic": "spironolactone safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked about foods that help PCOS hair loss in one exchange.",
+        "relevance": "low",
+        "topic": "diet and hair loss",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked in one turn whether to stop straightening their hair while waiting.",
+        "relevance": "low",
+        "topic": "hair care habits",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user mentioned stressful exams and asked if they could be part of it, briefly discussed.",
+        "relevance": "low",
+        "topic": "exam stress as trigger",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with PCOS asked whether their gradual hair thinning and widening part was from PCOS or something else. The bot explained likely causes, treatment options, spironolactone safety, who to see and how to prepare for the appointment. The user said it helped a lot, felt taken seriously and planned to book an appointment that week. No safety-critical moments occurred."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3426,
+    "output_tokens": 1002
+  },
+  "version": "sonnet"
+}

@@ -1,0 +1,89 @@
+{
+  "created_at": "2026-10-05T06:50:23+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came with nail changes and finger pain and spent most turns asking what this might be and whether it is serious.",
+        "relevance": "strong",
+        "topic": "possible psoriatic arthritis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user described morning stiffness, swollen fingers and pain in the opening turns, and these symptoms drive the whole conversation.",
+        "relevance": "strong",
+        "topic": "finger joint pain and swelling",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked whom to see and how to get a referral through their health plan, and ended with a plan to request one.",
+        "relevance": "medium",
+        "topic": "referral to rheumatologist",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user raised nail changes at the start and later asked what could be done for a bad-looking nail.",
+        "relevance": "medium",
+        "topic": "nail pitting and lifting",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked over a couple of turns whether waiting could cause permanent damage.",
+        "relevance": "medium",
+        "topic": "risk of permanent joint damage",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user said they dislike not knowing what will happen and asked what the visit involves.",
+        "relevance": "medium",
+        "topic": "what happens at appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked whether a blood test confirms the diagnosis, as one does for rheumatoid arthritis.",
+        "relevance": "medium",
+        "topic": "diagnostic blood tests",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what they can take meanwhile and mentioned using dipirona when pain is bad.",
+        "relevance": "medium",
+        "topic": "short-term pain relief",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user said they were worried and scared, but this was brief and settled once they had a plan.",
+        "relevance": "low",
+        "topic": "worry about diagnosis",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned once that they keep hiding one bad-looking nail.",
+        "relevance": "low",
+        "topic": "hiding nail appearance",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user noted in one line that their dermatologist never mentioned this and asked whether to return to her.",
+        "relevance": "low",
+        "topic": "dermatologist not mentioning joints",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with long-standing psoriasis described nail pitting, a lifting nail, finger joint pain, morning stiffness and a swollen finger. The assistant explained that this could point to psoriatic arthritis, advised a rheumatology evaluation within weeks, and covered the Brazilian referral route, what to expect at the visit, testing, pain relief and nail treatment. The user said they felt better with a plan and would ask for the referral that week. No emergency or suicidal content arose, and the bot claimed no real-world actions."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2093,
+    "output_tokens": 1053
+  },
+  "version": "sonnet"
+}

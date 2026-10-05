@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T08:04:21+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "Opening question and the thread throughout was whether gluten-free helps Hashimoto's or is a wellness trend.",
+        "relevance": "strong",
+        "topic": "gluten-free diet evidence",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User says they still feel tired and foggy despite normal TSH on levothyroxine, which motivates the whole question.",
+        "relevance": "strong",
+        "topic": "persistent fatigue and brain fog",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "Bot raised it and user engaged for several turns, asking why it matters and including it in the final plan.",
+        "relevance": "medium",
+        "topic": "celiac screening before diet change",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked how to run a trial so it is not self-deception and agreed with the tracked 3-month plan.",
+        "relevance": "medium",
+        "topic": "structured gluten-free trial",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User wondered in one turn whether the dose is off and added dose review to the plan.",
+        "relevance": "medium",
+        "topic": "levothyroxine dose review",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "Bot suggested iron, B12 and vitamin D checks and user included them in the plan, but did not raise them independently.",
+        "relevance": "low",
+        "topic": "nutrient level checks",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked whether to talk to the doctor and summarised what to ask, within a few turns.",
+        "relevance": "low",
+        "topic": "preparing for doctor visit",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User admitted in one turn being drawn to diet because it felt controllable versus waiting on doctors.",
+        "relevance": "low",
+        "topic": "wanting control over health",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user, skeptical about gluten-free diets for Hashimoto's, asked whether there is evidence, mainly because of ongoing tiredness and fog despite normal TSH on levothyroxine. The bot explained the mixed evidence, the need for celiac testing before going gluten-free, and a structured trial, and suggested checking dose and nutrient levels first. The user restated a clear plan (celiac test, iron/B12/vitamin D and dose review, then a tracked 3-month trial) and said the answer was balanced and appreciated."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3441,
+    "output_tokens": 866
+  },
+  "version": "sonnet"
+}

@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:47:53+00:00",
+  "created_at": "2026-10-05T07:49:10+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,32 +7,32 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came to learn about preventatives, then asked about newer oral and injectable options and how they compare with traditional treatments.",
+        "reason": "The user came to understand available preventives, then compared newer oral and injectable options with traditional medicines before a neurology visit.",
         "relevance": "strong",
-        "topic": "migraine prevention options",
+        "topic": "migraine preventive options",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked about side effects and precautions for migraxone before discussing treatment with the neurologist.",
+        "reason": "The user asked about side effects and precautions for a newer oral option.",
         "relevance": "medium",
-        "topic": "preventive medication side effects",
+        "topic": "medication side effects",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user raised insurance as a concern and asked whether insurers require trying older preventatives first.",
+        "reason": "The user raised insurance as a concern and asked whether trying older medicines is usually required before coverage.",
         "relevance": "medium",
-        "topic": "insurance coverage requirements",
+        "topic": "insurance approval requirements",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user requested a short list of questions to bring to the neurologist and said they planned to ask about migraxone.",
+        "reason": "The user requested a short list of questions to take to the neurologist and said the response was exactly what they needed.",
         "relevance": "medium",
-        "topic": "neurologist appointment preparation",
+        "topic": "neurologist visit preparation",
         "topic_group": "Working with clinicians"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user wanted to understand chronic migraine prevention options before a neurologist visit, including newer CGRP medicines, traditional options, side effects, and insurance requirements. The assistant provided information and suggested questions for the appointment; the user said this was exactly what they needed and planned to ask about migraxone."
+    "summary": "The user wanted to understand migraine prevention options before meeting their neurologist, including newer CGRP medicines, traditional preventives, side effects, and insurance requirements. The assistant provided an overview and suggested questions for the visit; the user said this was exactly what they needed and planned to ask about a specific oral option."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -41,7 +41,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 5664,
-    "output_tokens": 941
+    "output_tokens": 832
   },
   "version": "gpt_luna"
 }

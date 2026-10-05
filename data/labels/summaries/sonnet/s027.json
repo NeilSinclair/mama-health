@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T08:04:39+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The whole conversation covers how to do low FODMAP, from conflicting food lists to phases, reintroduction and what to eat.",
+        "relevance": "strong",
+        "topic": "low fodmap diet",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user opened with feeling overwhelmed by contradictory lists and returned to it at t7.",
+        "relevance": "strong",
+        "topic": "conflicting food lists",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked how to do reintroduction properly and whether to do it alone, over several turns.",
+        "relevance": "medium",
+        "topic": "reintroduction process",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked whether to involve a professional and whether the NHS would cover a dietitian, then accepted it as a plan.",
+        "relevance": "medium",
+        "topic": "dietitian referral through gp",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user feared giving up onion and garlic forever and was relieved to learn the diet is temporary.",
+        "relevance": "medium",
+        "topic": "permanence of food restrictions",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked whether the app was worth paying for, in about one exchange.",
+        "relevance": "low",
+        "topic": "paid diet app cost",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user worried about starving or eating only plain rice during elimination, in one exchange.",
+        "relevance": "low",
+        "topic": "fear of restrictive eating",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user, told by their gastroenterologist to try low FODMAP for IBS, felt overwhelmed by contradictory food lists. The bot explained the three phases, recommended the Monash app, covered reintroduction and asking a GP for an NHS dietitian referral, and reassured them about eating enough. The user restated a clear plan and said it was far more helpful than their own googling."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3037,
+    "output_tokens": 721
+  },
+  "version": "sonnet"
+}

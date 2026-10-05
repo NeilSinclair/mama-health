@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:49:27+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "Daily nausea after starting Ozempic is why the user came and drives most of the conversation.",
+        "relevance": "strong",
+        "topic": "nausea from medication",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User asked directly whether it is safe to stop for some days and was almost stopping that day.",
+        "relevance": "strong",
+        "topic": "stopping medication temporarily",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User feared worse nausea at the next dose and learned they could ask to delay the increase, over several turns.",
+        "relevance": "medium",
+        "topic": "dose increase schedule",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User described fried food, meat and evening worsening, and got meal tips they agreed to follow.",
+        "relevance": "medium",
+        "topic": "food triggers and eating",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked when nausea is not normal and when to see a doctor fast, answered in one exchange.",
+        "relevance": "medium",
+        "topic": "warning signs needing urgent care",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked whether the medication is working and shared morning readings, over about two turns.",
+        "relevance": "medium",
+        "topic": "home blood sugar readings",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User said they were scared of how bad it would be on a higher dose, and later felt calmer.",
+        "relevance": "low",
+        "topic": "fear of higher dose",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "Wife's suggestion to stop was mentioned once as context for the question.",
+        "relevance": "low",
+        "topic": "spouse advice to stop",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user three weeks into Ozempic for diabetes asked whether to stop because of daily nausea. The bot gave meal tips, advised not to stop alone, explained they can ask the doctor to delay the dose increase, listed warning signs and reviewed morning sugar readings. The user said they felt calmer and would keep small meals, check sugar and talk to their doctor before the increase."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2415,
+    "output_tokens": 762
+  },
+  "version": "sonnet"
+}

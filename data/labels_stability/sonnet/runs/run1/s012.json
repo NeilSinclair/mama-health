@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:48:16+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came asking whether SIBO is real and fits them better than IBS, and the question runs through the whole conversation.",
+        "relevance": "strong",
+        "topic": "possible sibo diagnosis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked how SIBO is tested and whether the test is reliable, over several turns.",
+        "relevance": "medium",
+        "topic": "breath test reliability",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The bot explained a treatment trial in place of testing and the user engaged, noting their constipation-leaning pattern.",
+        "relevance": "medium",
+        "topic": "antibiotic trial option",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user described severe bloating after eating as the symptom prompting the SIBO question.",
+        "relevance": "medium",
+        "topic": "bloating after meals",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user decided to ask for a referral and noted the Canadian wait, and it became part of their final plan.",
+        "relevance": "medium",
+        "topic": "gastroenterologist referral wait",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said past food diaries showed no clear pattern, discussed over a couple of turns.",
+        "relevance": "low",
+        "topic": "food diary difficulty",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user was annoyed that nobody explained this over years of an IBS label, raised in one exchange.",
+        "relevance": "low",
+        "topic": "feeling unheard by gp",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user mentioned online content trying to sell supplements and the bot advised waiting; brief exchange.",
+        "relevance": "low",
+        "topic": "supplement marketing",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user was confused about whether SIBO and the methane condition are the same and the bot clarified in one exchange.",
+        "relevance": "low",
+        "topic": "terminology confusion sibo vs imo",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user, diagnosed with IBS for years, asked whether SIBO might fit better, how it is tested and whether the breath test is reliable. The bot gave balanced information, clarified the SIBO/methane terminology when the user was confused, and cautioned against supplements. The user, in Canada, decided to ask for a gastroenterologist referral, keep messy notes and hold off on supplements, and said the conversation was clarifying."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3027,
+    "output_tokens": 882
+  },
+  "version": "sonnet"
+}

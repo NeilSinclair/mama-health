@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:49:30+00:00",
+  "created_at": "2026-10-05T07:50:25+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
@@ -9,38 +9,38 @@
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user repeatedly asked whether the medicines were compatible and whether methotrexate might change their warfarin readings.",
+        "reason": "The user repeatedly asked whether methotrexate was safe with their long-term warfarin and whether starting it might change their readings.",
         "relevance": "strong",
-        "topic": "warfarin and methotrexate interaction",
-        "topic_group": "Taking medication safely"
+        "topic": "methotrexate and warfarin safety",
+        "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked whether methotrexate blood tests would also detect warfarin-related changes and returned to the role of monitoring.",
+        "reason": "The user asked whether methotrexate blood tests would detect warfarin-related problems and whether tests help guide the methotrexate dose.",
         "relevance": "medium",
         "topic": "blood test monitoring",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user asked what to watch for at home and received examples of bleeding, infection and other warning signs.",
+        "reason": "The user asked what to watch for at home, and the assistant listed possible bleeding and methotrexate-related warning signs.",
         "relevance": "medium",
         "topic": "medication warning signs",
-        "topic_group": "Physical symptoms"
+        "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked whether tests help set the dose and confirmed they would remember the weekly schedule.",
-        "relevance": "medium",
+        "reason": "The user asked whether tests help set the dose and confirmed their GP had stressed that methotrexate is taken weekly.",
+        "relevance": "low",
         "topic": "weekly methotrexate dosing",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked what to raise with the GP before starting, and the assistant suggested several points to confirm.",
-        "relevance": "medium",
-        "topic": "preparing for gp discussion",
-        "topic_group": "Working with clinicians"
+        "reason": "The user said they were worried about starting treatment, then later said the conversation helped them feel better.",
+        "relevance": "low",
+        "topic": "treatment-related worry",
+        "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user wanted to know whether starting methotrexate for rheumatoid arthritis was safe while taking warfarin, especially whether it could affect warfarin readings. The assistant discussed monitoring, warning signs, weekly dosing and questions for the GP, but did not directly clarify how the interaction compares with antibiotics or whether readings might change; the user nevertheless said they felt much better."
+    "summary": "The user wanted to know whether starting methotrexate for rheumatoid arthritis was safe while taking warfarin, especially whether it could affect their warfarin readings. The assistant focused on monitoring, warning signs and weekly dosing, but did not directly clarify the specific interaction or whether readings might change; the user felt reassured and got suggestions for what to discuss with the GP, while that central question remained unanswered."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -49,7 +49,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 5425,
-    "output_tokens": 1381
+    "output_tokens": 1286
   },
   "version": "gpt_luna"
 }

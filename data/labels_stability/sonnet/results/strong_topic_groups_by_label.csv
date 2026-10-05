@@ -1,0 +1,98 @@
+session_id,label,run1,run2,run3,n_runs
+s001,Treatment choice,True,True,True,3
+s001,Working with clinicians,True,True,True,3
+s002,Treatment choice,True,True,True,3
+s002,Working with clinicians,False,True,True,2
+s003,Taking medication safely,True,True,True,3
+s004,"Fatigue, sleep, diet & activity",True,True,True,3
+s004,Physical symptoms,True,False,True,2
+s004,Treatment choice,False,True,False,1
+s005,Physical symptoms,True,True,True,3
+s006,"Fatigue, sleep, diet & activity",True,True,True,3
+s006,Understanding the condition & outlook,True,True,True,3
+s007,Physical symptoms,True,True,True,3
+s007,Understanding the condition & outlook,True,True,True,3
+s008,Access to care,True,True,True,3
+s008,Treatment choice,True,True,True,3
+s009,"Fatigue, sleep, diet & activity",True,True,True,3
+s009,Physical symptoms,True,True,True,3
+s010,"Fatigue, sleep, diet & activity",True,True,True,3
+s010,Understanding the condition & outlook,True,True,True,3
+s011,Treatment choice,True,True,True,3
+s012,Tests & monitoring,False,True,True,2
+s012,Understanding the condition & outlook,True,True,True,3
+s013,Physical symptoms,True,False,True,2
+s013,Taking medication safely,False,True,False,1
+s013,Treatment choice,False,True,True,2
+s013,Understanding the condition & outlook,True,True,False,2
+s014,Treatment choice,True,True,True,3
+s015,Physical symptoms,True,True,True,3
+s015,Treatment choice,True,True,True,3
+s016,"Fatigue, sleep, diet & activity",True,True,True,3
+s016,Work & life plans,True,True,True,3
+s017,Physical symptoms,True,False,False,1
+s017,Tests & monitoring,False,True,True,2
+s018,Access to care,True,True,True,3
+s018,Physical symptoms,True,True,True,3
+s018,Working with clinicians,True,True,True,3
+s019,Emotional wellbeing,True,True,False,2
+s019,Physical symptoms,True,True,True,3
+s019,Treatment choice,True,False,False,1
+s020,"Fatigue, sleep, diet & activity",True,True,True,3
+s020,Tests & monitoring,True,True,True,3
+s021,Treatment choice,True,True,True,3
+s021,Understanding the condition & outlook,True,True,True,3
+s022,Physical symptoms,True,True,True,3
+s022,Treatment choice,True,True,True,3
+s023,Tests & monitoring,True,True,True,3
+s023,Understanding the condition & outlook,True,True,True,3
+s024,Access to care,True,True,True,3
+s024,Physical symptoms,True,True,True,3
+s025,"Fatigue, sleep, diet & activity",True,True,True,3
+s025,Tests & monitoring,True,True,True,3
+s025,Working with clinicians,True,False,True,2
+s026,Emotional wellbeing,True,True,True,3
+s026,Physical symptoms,True,True,True,3
+s026,Treatment choice,True,False,True,2
+s027,"Fatigue, sleep, diet & activity",True,True,True,3
+s028,"Fatigue, sleep, diet & activity",True,True,True,3
+s029,Treatment choice,True,True,True,3
+s029,Understanding the condition & outlook,True,True,True,3
+s030,Physical symptoms,True,True,True,3
+s030,Treatment choice,True,True,True,3
+s031,"Fatigue, sleep, diet & activity",True,False,False,1
+s031,Treatment choice,True,True,True,3
+s032,Treatment choice,True,True,True,3
+s032,Working with clinicians,True,True,True,3
+s033,Treatment choice,True,True,True,3
+s034,Taking medication safely,True,True,True,3
+s034,Treatment choice,True,True,True,3
+s035,Treatment choice,True,True,True,3
+s036,Access to care,True,False,False,1
+s036,Physical symptoms,False,True,True,2
+s036,Understanding the condition & outlook,True,True,True,3
+s037,Physical symptoms,True,True,True,3
+s037,Treatment choice,True,True,True,3
+s038,Understanding the condition & outlook,True,True,True,3
+s039,Taking medication safely,True,True,True,3
+s039,Work & life plans,True,True,True,3
+s040,Taking medication safely,True,True,True,3
+s040,Tests & monitoring,True,True,True,3
+s041,Treatment choice,True,True,True,3
+s042,Emotional wellbeing,False,True,True,2
+s042,Understanding the condition & outlook,True,True,True,3
+s043,Emotional wellbeing,True,True,True,3
+s044,Taking medication safely,True,True,True,3
+s044,Treatment choice,True,True,True,3
+s045,Taking medication safely,True,True,True,3
+s045,Tests & monitoring,True,False,True,2
+s046,Access to care,True,True,True,3
+s046,Treatment choice,False,False,True,1
+s046,Understanding the condition & outlook,True,True,False,2
+s047,Taking medication safely,True,True,True,3
+s048,Treatment choice,True,True,True,3
+s048,Work & life plans,True,True,True,3
+s049,Emotional wellbeing,True,True,True,3
+s049,Work & life plans,True,True,True,3
+s050,Physical symptoms,True,True,True,3
+s050,Treatment choice,True,True,True,3

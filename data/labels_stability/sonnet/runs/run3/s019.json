@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:50:08+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came because of zigzag lights never experienced before and the conversation centres on what they are and whether they are dangerous.",
+        "relevance": "strong",
+        "topic": "new visual aura",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User said they were scared, asked if aura could signal stroke, and later mentioned shaking hands and feeling calmer.",
+        "relevance": "medium",
+        "topic": "stroke fear",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked whether to go to the ER or not rush anywhere tonight and confirmed this in t9.",
+        "relevance": "strong",
+        "topic": "urgency of seeking care",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked in t13 whether aura would be a permanent new thing.",
+        "relevance": "medium",
+        "topic": "aura recurrence outlook",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked whether aura could be a cue to take sumatriptan earlier, discussed over two turns.",
+        "relevance": "medium",
+        "topic": "migraine medication timing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User asked how to tell if visual symptoms affect one or both eyes, one exchange.",
+        "relevance": "low",
+        "topic": "one eye versus both",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User raised the link between aura and birth control and asked what to mention to the doctor, one exchange.",
+        "relevance": "low",
+        "topic": "aura and hormonal contraception",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User plans to book a family doctor appointment and gathered questions to raise.",
+        "relevance": "low",
+        "topic": "preparing for doctor visit",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user with long-standing migraines reported new zigzag visual disturbances lasting about 20 minutes before a headache and feared a stroke. The bot described the pattern as consistent with migraine aura, said it did not need emergency care tonight, gave red-flag signs, and covered one-eye versus both-eye checks, sumatriptan timing and aura with estrogen contraception. The user said they felt calmer and planned to book their family doctor this week and rest."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3239,
+    "output_tokens": 792
+  },
+  "version": "sonnet"
+}

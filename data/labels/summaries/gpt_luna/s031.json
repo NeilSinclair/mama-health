@@ -1,62 +1,50 @@
 {
-  "created_at": "2026-10-01T15:48:56+00:00",
+  "created_at": "2026-10-05T07:49:58+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
-    "end_reason": "need met",
-    "issue_resolved": true,
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user came to ask whether it was wrong to delay metformin and try diet and exercise first, and returned to this decision throughout the conversation.",
+        "reason": "The user came to ask whether delaying metformin to try lifestyle changes was a reasonable choice and discussed a monitored trial.",
         "relevance": "strong",
-        "topic": "metformin versus lifestyle changes",
+        "topic": "metformin versus lifestyle",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked for diet advice and discussed rice, chapati, vegetarian meals, and difficulty avoiding festival sweets.",
+        "reason": "The user asked whether delaying medication could damage the eyes and kidneys and returned to how to judge the trial's results.",
+        "relevance": "medium",
+        "topic": "diabetes complication risk",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user discussed rice, chapati, vegetarian meals, and difficulty limiting sweets across several turns.",
         "relevance": "medium",
         "topic": "diet changes",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user explored walking as an alternative to running or gym exercise and asked when to walk after meals.",
+        "reason": "The user explained that their knees limit exercise and asked when to walk after meals, settling on slow walks at home as manageable.",
         "relevance": "medium",
-        "topic": "physical activity",
+        "topic": "walking and exercise limits",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user asked whether to check sugar at home during the trial and confirmed they would look for a glucometer.",
+        "reason": "The user asked whether to check glucose at home during the trial and discussed checking HbA1c afterward.",
         "relevance": "medium",
         "topic": "blood sugar monitoring",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user asked whether delaying medicine could cause eye or kidney damage, prompted by their husband's concern.",
-        "relevance": "medium",
-        "topic": "diabetes complications",
-        "topic_group": "Understanding the condition & outlook"
-      },
-      {
-        "reason": "The user asked whether lifestyle changes could bring blood sugar back to normal after describing their sister's experience.",
-        "relevance": "medium",
-        "topic": "diabetes remission",
-        "topic_group": "Understanding the condition & outlook"
-      },
-      {
-        "reason": "The user said their knees made running and gym exercise difficult, shaping the activity options they could manage.",
+        "reason": "The user mentioned a mother's diabetes and a sister whose blood sugar improved with lifestyle changes as context for their own prospects.",
         "relevance": "low",
-        "topic": "knee limitations",
-        "topic_group": "Physical symptoms"
-      },
-      {
-        "reason": "The user mentioned their mother's diabetes as background to the doctor's concern but did not return to it.",
-        "relevance": "low",
-        "topic": "family history of diabetes",
+        "topic": "family diabetes history",
         "topic_group": "Understanding the condition & outlook"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user, diagnosed with type 2 diabetes and not yet taking prescribed metformin, wanted to know whether trying lifestyle changes first was reasonable and asked about complication risks and what would count as progress. The assistant outlined a monitored three-month trial, with food changes, gentle walking, and optional home checks before another A1c test. The user said the plan sounded balanced and intended to tell the doctor and discuss it with family."
+    "summary": "The user asked whether to try diet and exercise before starting metformin and discussed complication risks, food choices, walking with knee limitations, and glucose monitoring. The assistant helped outline a three-month lifestyle trial followed by an HbA1c test; the user said they would discuss it with family and tell their doctor, but did not confirm a final decision."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -65,7 +53,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 6215,
-    "output_tokens": 1418
+    "output_tokens": 1218
   },
   "version": "gpt_luna"
 }

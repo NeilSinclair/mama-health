@@ -1,0 +1,5 @@
+calls,n,input_tokens,cache_read_tokens,cache_write_tokens,output_tokens,usd
+summary run1,50,135524,339913,6937,44044,0.7968
+summary run2,50,135524,346850,0,44875,0.7892
+summary run3,50,135524,346850,0,44389,0.7843
+mapping joint (3 runs),2,7411,3508,3508,43414,0.4584

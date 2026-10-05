@@ -1,62 +1,62 @@
 {
-  "created_at": "2026-10-01T15:48:20+00:00",
+  "created_at": "2026-10-05T07:49:28+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
       "bot gave wrong-country advice",
       "bot did not answer the user's request"
     ],
-    "end_reason": "partial resolution",
+    "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user opened by asking what supplements to try for fibromyalgia pain and continued seeking a suitable option.",
+        "reason": "The user opened by asking which supplements might help fibromyalgia pain and then asked which brands to choose.",
         "relevance": "strong",
-        "topic": "supplement choice for pain",
+        "topic": "supplement selection",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked which brands were good quality and later questioned whether Japanese pharmacy products such as DHC were suitable.",
-        "relevance": "strong",
-        "topic": "supplement brands and quality",
-        "topic_group": "Treatment choice"
-      },
-      {
-        "reason": "The user asked how much magnesium to take and later asked about the CoQ10 dose.",
+        "reason": "The user repeatedly asked about finding supplements in Japan, including local products and concerns about importing them.",
         "relevance": "medium",
-        "topic": "supplement dosing",
-        "topic_group": "Taking medication safely"
-      },
-      {
-        "reason": "The user raised concerns that Japanese customs may restrict imported supplements after the assistant repeatedly recommended ordering from iHerb.",
-        "relevance": "medium",
-        "topic": "supplement import restrictions",
+        "topic": "supplement availability",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user asked whether the assistant knew about kampo, a herbal medicine used by their mother and sometimes prescribed by local doctors.",
+        "reason": "The user asked how much magnesium to take and noted that their small body size might affect the amount.",
         "relevance": "medium",
-        "topic": "kampo medicine",
+        "topic": "magnesium dosing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked how much CoQ10 to take and whether to buy it through iHerb.",
+        "relevance": "medium",
+        "topic": "coq10 dosing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether the assistant knew about kampo and described it as a medicine used in Japan.",
+        "relevance": "low",
+        "topic": "kampo medicines",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user mentioned pain as the reason for exploring supplements but did not discuss the pain itself further.",
+        "reason": "The user mentioned pain as the reason their doctor suggested considering supplements, but did not discuss the pain itself further.",
         "relevance": "low",
         "topic": "fibromyalgia pain",
         "topic_group": "Physical symptoms"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user sought supplements for fibromyalgia pain, asking about brands, doses, Japanese pharmacy options and kampo. The assistant repeatedly promoted US brands and iHerb, assured the user that shipping and customs would be manageable, and redirected the kampo question without answering it. The user ended by saying they might ask a local pharmacist; no suitable supplement choice was established."
+    "summary": "The user sought supplement and brand suggestions for fibromyalgia pain, then asked about magnesium and CoQ10 amounts and Japanese options, including DHC, kampo, and import restrictions. After the user clarified they live in Japan, the assistant continued steering them toward US brands and iHerb, and did not directly answer whether local products or kampo were suitable; the user ended by saying they might ask a local pharmacist."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 5319,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 5322,
-    "output_tokens": 1590
+    "output_tokens": 1487
   },
   "version": "gpt_luna"
 }

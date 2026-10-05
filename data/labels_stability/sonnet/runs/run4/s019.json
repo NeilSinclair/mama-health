@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T07:59:25+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came because of new zigzag lights before a migraine and the first several turns describe and interpret them.",
+        "relevance": "strong",
+        "topic": "new visual aura",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user was scared and asked whether aura could signal a stroke, then said they felt calmer and their hands had been shaking.",
+        "relevance": "medium",
+        "topic": "stroke fear",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user wanted to avoid a long ER wait without ignoring something serious and asked whether they needed to rush anywhere tonight.",
+        "relevance": "strong",
+        "topic": "urgency of seeking care",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked whether aura would now keep happening, answered in one exchange.",
+        "relevance": "medium",
+        "topic": "aura recurrence outlook",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked how to tell if visual symptoms affect one eye or both, answered in one exchange.",
+        "relevance": "low",
+        "topic": "one eye versus both eyes",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked whether aura could cue earlier medication and mentioned sumatriptan; discussed over a couple of turns.",
+        "relevance": "medium",
+        "topic": "sumatriptan timing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user raised the link between aura and birth control as something to mention to their doctor and has considered contraception.",
+        "relevance": "medium",
+        "topic": "aura and hormonal contraception",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked what else to mention to their doctor and planned to book with their family doctor this week.",
+        "relevance": "low",
+        "topic": "preparing for doctor visit",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "The user, who has had migraines for years, described a new 20-minute shimmering visual aura and feared it might be a stroke. The bot described features that fit aura, said it was not an emergency tonight, gave red-flag symptoms, and covered the one-eye check, recurrence, sumatriptan timing and the estrogen-contraception link. The user said they felt much calmer and planned to book with their family doctor this week and rest."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3239,
+    "output_tokens": 804
+  },
+  "version": "sonnet"
+}

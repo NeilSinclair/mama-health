@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T06:48:40+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "Opening complaint and the driver of the whole conversation, with frequency and blood discussed.",
+        "relevance": "strong",
+        "topic": "bowel urgency",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked what to request and learned about rectal mesalamine, steroids and stronger therapies over several turns.",
+        "relevance": "strong",
+        "topic": "stepping up treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked how to get a gastro appointment faster and has not seen one since diagnosis.",
+        "relevance": "medium",
+        "topic": "specialist appointment wait",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User opened with embarrassment, felt they were complaining too much, and ended relieved of shame.",
+        "relevance": "medium",
+        "topic": "embarrassment and shame",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User said they were angry after learning something simple might have helped for two years.",
+        "relevance": "low",
+        "topic": "anger at untreated years",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked whether it can show inflammation without a colonoscopy.",
+        "relevance": "medium",
+        "topic": "calprotectin stool test",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked for self-help strategies and fears an accident in a meeting.",
+        "relevance": "medium",
+        "topic": "coping with urgency at work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User said they planned to take loperamide at home and agreed to ask first.",
+        "relevance": "low",
+        "topic": "loperamide safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User did not know what to ask and feared sounding stupid in front of the doctor.",
+        "relevance": "medium",
+        "topic": "preparing for doctor visit",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User said the doctor told them UC is just like this and to be careful, mentioned once.",
+        "relevance": "low",
+        "topic": "dismissed by doctor",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user with ulcerative colitis described frequent urgency, occasional blood and fear of accidents at work and with their kids. The bot explained that this suggests under-controlled disease, outlined treatment step-up options including rectal mesalamine, suggested ways to speed up a gastroenterology referral, and gave coping tips and a caution about loperamide. The user ended feeling they had a plan and were less ashamed. Bloody stools were mentioned but this was not an acute emergency and the bot advised specialist review."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3886,
+    "output_tokens": 908
+  },
+  "version": "sonnet"
+}

@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-10-05T08:04:32+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot repeated a corrected mistake",
+      "bot deflected to doctor despite stated barrier",
+      "bot repeated advice already given"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user opened with it and every turn concerns explaining and lowering fasting readings of 160-180.",
+        "relevance": "strong",
+        "topic": "high morning blood sugar",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user explicitly asked what they can do themselves and described walking and eating less rice.",
+        "relevance": "medium",
+        "topic": "self-management without doctor",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "Several turns covered when the user takes metformin, the dose, and whether it is XR.",
+        "relevance": "medium",
+        "topic": "metformin timing and formulation",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The bot proposed a 3am reading and the user asked how it works, but the discussion was brief.",
+        "relevance": "medium",
+        "topic": "overnight glucose check",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The bot raised add-on drugs and insulin, but the user wanted self-help rather than medication changes.",
+        "relevance": "low",
+        "topic": "adding or changing medication",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user gave post-meal readings once as context showing only mornings are high.",
+        "relevance": "low",
+        "topic": "daytime glucose readings",
+        "topic_group": "Tests & monitoring"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why their fasting blood sugar is always high despite taking metformin at night, and wanted things they could do themselves. The bot repeatedly suggested insulin after being told the user takes none, and kept pointing to the doctor and repeating light-dinner advice, so the user had to correct it. It ended with a suggested 3am glucose check and the user accepting with a terse thanks."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2121,
+    "output_tokens": 660
+  },
+  "version": "sonnet"
+}

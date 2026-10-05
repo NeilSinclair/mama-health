@@ -1,0 +1,11 @@
+item,session_id,human_end_reason,model_end_reason,agree,note
+1,s030,unresolved need,unresolved need,True,
+2,s047,need met,need met,True,
+3,s026,unresolved need,unresolved need,True,
+4,s033,need met,need met,True,
+5,s012,need met,need met,True,
+6,s035,need met,need met,True,
+7,s017,partial resolution,partial resolution,True,
+8,s013,need met,need met,True,
+9,s032,need met,need met,True,
+10,s024,unresolved need,unresolved need,True,The assistant wasn't actually able to book the appointment; it doesn't have this ability.

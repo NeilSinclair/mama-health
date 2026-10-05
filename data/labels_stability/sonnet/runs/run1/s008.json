@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:48:14+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user asked about approval and reimbursement from the start and came back to it several times (t3, t5, t13, t15).",
+        "relevance": "strong",
+        "topic": "medication cost and reimbursement",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user opened by asking about tirzepatide as an add-on or switch because their A1C was still high on metformin.",
+        "relevance": "strong",
+        "topic": "switching to injectable therapy",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked how to take it and said they were nervous about injecting for the first time (t9).",
+        "relevance": "medium",
+        "topic": "self-injection worries",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what to watch for and the bot answered over one exchange (t11-t12).",
+        "relevance": "medium",
+        "topic": "medication side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether it would help with the eight kilos gained since diagnosis (t17).",
+        "relevance": "medium",
+        "topic": "weight gain and loss",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said it had been a stressful year and feared an unpayable bill (t13), which drove the repeated cost questions.",
+        "relevance": "low",
+        "topic": "financial stress",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked whether the next step was simply asking their doctor (t7) and planned to book an appointment (t21).",
+        "relevance": "low",
+        "topic": "getting a prescription",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user mentioned an A1C still a bit high on metformin once, as background (t1).",
+        "relevance": "low",
+        "topic": "high blood sugar control",
+        "topic_group": "Tests & monitoring"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "A user with type 2 diabetes in France asked about tirzepatide (Mounjaro) as an add-on because their A1C was still high on metformin. They mainly wanted to know whether it is approved and reimbursed, and also asked about self-injection, side effects and weight loss. The bot said it was fully reimbursed, and the user said they were relieved and would book with their doctor that week."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1851,
+    "output_tokens": 1422
+  },
+  "version": "sonnet"
+}
