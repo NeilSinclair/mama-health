@@ -54,10 +54,6 @@ tests/                     offline tests
 
 A `{{ table | row | column }}` placeholder in `docs/memo.md` is filled with that cell of the pipeline table, so numbers in the memo text cannot drift from the tables. If you change `docs/memo.md`, rerun `uv run mama-pipeline` and commit `memo.html` with it; a test fails otherwise.
 
-## How the labelling works
-
-Each conversation is summarised by an LLM (topics, summary, reason, conversation pain points, resolved, end reason), and the free-text labels are then consolidated into a smaller vocabulary. The model scores each topic's relevance (strong, medium or low) with a one-line reason, and files each topic in one of ten fixed topic groups (e.g. "Physical symptoms", "Access to care"). Reasons for conversation are one of four fixed need types, shown as "understand my condition", "decide on treatment", "emotional support" and "get access to care", and end reasons one of three (need met, partial resolution, unresolved need), so neither needs consolidation. All topics are consolidated into one shared vocabulary, but only strong topics are shown as chips, counted and graphed; every score and reason is kept in the cache, in the `topic_scores` column of `summaries.csv` and under "Topic scores" in the explorer. The model is Claude Sonnet 5.5 (`claude-sonnet-5-5`, version key `sonnet`); this is the version the memo uses. Labels from OpenAI GPT Luna (`gpt-6-luna`, version key `gpt_luna`), the model used before the switch, are kept for comparison and shown as a second version in the explorer. Open `outputs/explorer.html` in a browser to explore the results. The Conversations tab lists every summary with filters, the Relationships tab graphs which reasons for conversation, topics, conversation pain points and end reasons occur together, and the Breakdown tab shows linked counts: click any label (e.g. a topic) and every other field recounts for just those conversations. The counts behind the graph are in `outputs/summaries/<version>/label_cooccurrence.csv`.
-
 ## Regenerating the labels (optional, needs an API key)
 
 Labels are cached in `data/labels/`, and the pipeline uses the cache by default, so no API key is needed. Every number in the memo comes from this cache. Regenerated labels will differ slightly from run to run (in three repeat runs the outcome was the same in 47 of 50 conversations), so figures for small groups will move. To regenerate them with your own key, copy `.env.example` to `.env`, set `ANTHROPIC_API_KEY` (and `OPENAI_API_KEY` only if you want the `gpt_luna` version too), then run one of the three `mama-pipeline` commands:
@@ -70,10 +66,18 @@ uv run mama-pipeline --remap sonnet     # re-consolidate only, from the cached s
 uv run mama-pipeline --dynamics sonnet  # re-label conversation dynamics only (pushback, final sentiment)
 ```
 
+## How the labelling works
+
+Each conversation is summarised by an LLM (topics, summary, reason, conversation pain points, resolved, end reason), and the free-text labels are then consolidated into a smaller vocabulary. 
+
+All topics are consolidated into one shared vocabulary, but only strong topics are shown as chips, counted and graphed; every score and reason is kept in the cache, in the `topic_scores` column of `summaries.csv` and under "Topic scores" in the explorer. 
+
+The model is Claude Sonnet 5.5 (`claude-sonnet-5-5`, version key `sonnet`); this is the version the memo uses. Labels from OpenAI GPT Luna (`gpt-6-luna`, version key `gpt_luna`), the model used before the switch, are kept for comparison and shown as a second version in the explorer. Open `outputs/explorer.html` in a browser to explore the results. The Conversations tab lists every summary with filters, the Relationships tab graphs which reasons for conversation, topics, conversation pain points and end reasons occur together, and the Breakdown tab shows linked counts: click any label (e.g. a topic) and every other field recounts for just those conversations. The counts behind the graph are in `outputs/summaries/<version>/label_cooccurrence.csv`.
+
 A full `--relabel sonnet` costs about $1.50 and takes a few minutes. It overwrites the saved labels, so the tables and the numbers filled into the memo will change slightly; `git checkout -- data/labels outputs memo.html` restores the committed ones.
 
 The repeat-run tables cited in the memo appendix are rebuilt offline, without a key, by `uv run python scripts/sonnet_label_stability.py analyse`.
 
-A separate dynamics pass labels each conversation's pushback turns (and whether the bot's next reply adapted) and the user's final sentiment. From these and the summaries, `outputs/analysis/<version>/` holds: the logged end state vs the outcome, silent failures (the user sounded satisfied but the need was not met or a safety failure occurred), every pushback, recovery by outcome, and the user's share of words before and after the first pushback. The explorer shows the same labels: final sentiment, silent failure and pushback status as filters, row badges and Breakdown panels, and each expanded conversation marks the pushback turns (kind, whether the bot's next reply adapted, and why).
+A separate dynamics pass labels each conversation's pushback turns (and whether the bot's next reply adapted) and the user's final sentiment. These were explored, but not used in the final output.
 
 Models are pinned in `src/mama_analysis/config.py`, and prompts are versioned in `src/mama_analysis/prompts/`. Each cache entry records its model ID, prompt SHA-256, timestamp and token usage.
