@@ -6,7 +6,7 @@ The performance of the assistant is discussed primarily with respect to the area
 
 ## Data And Process Overview
 
-Presented with 50 user conversations with an AI assistant, I ran the conversations through an LLM pipeline to understand the overall reason for the conversation, the topics discussed, the conversation pain points vis-a-vis the assistant and whether the user's issue was resolved or not. I used Sonnet-5.5 to classify the conversations. More information on the approach and design considerations is given in the appendix. 
+Presented with 50 user conversations with an AI assistant, I ran the conversations through an LLM pipeline to understand the overall reason for the conversation, the topics discussed, the conversation pain points vis-a-vis the assistant and whether the user's issue was resolved or not. I used Sonnet 5.5 to classify the conversations. More information on the approach and design considerations is given in the appendix. 
 
 The data was then displayed in an interactive website that enabled me to look for patterns in the conversations and their outcomes to understand where the assistant was and wasn't working. The most illustrative tables and interactive widgets (See: Explore Conversations by Tags) were then used in this document.
 
@@ -82,11 +82,11 @@ One user wanted the assistant to help them understand how to access clinical tri
 
 ## Most Interesting Conversations
 
-In conversation s024 the assistant tells the user that it has booked an appointment for them. It does not have this ability, but is fully convinced that it does, with the user believing the appointment has been booked. This is interesting because it is a major failure point for the system with respect to hallucination and it's difficult to catch. I would suggest trying one of two things to fix this - either ensuring that the system prompt forbids this action (this probably already exists) or giving the agent a tool to use to book appointments - however, as this functionality is not available, have the tool always return the string, 'I'm currently not able to book appointments.' Therefore, even if the assistant tries to book an appointment, the failure mode is ensured.
+In conversation s024 the assistant tells the user that it has booked an appointment for them. It does not have this ability, but is fully convinced that it does, with the user believing the appointment has been booked. This is interesting because it is a major failure point for the system with respect to hallucination and it's difficult to catch. I would suggest trying one of two things to fix this - either ensuring that the system prompt forbids this action (this probably already exists) or giving the agent a tool to use to book appointments - however, as this functionality is not available, have the tool always return the string, 'I'm currently not able to book appointments.' Therefore, even if the assistant tries to book an appointment, the failure is handled safely.
 
 In conversation s018 with a user in Brazil, the assistant kept trying to give the user information relating to medical insurance in the US, despite the user saying repeatedly that she was in Brazil and using the public health system (SUS). The user then switches into Portuguese in frustration. This is interesting because of the difficulty the assistant had in adjusting its flow to acknowledge the information the user was giving them, despite the user being very clear that they were in Brazil. It also appears on the surface to be something that's relatively easy to fix (see Prioritised Feature).
 
-In conversation s026 the user is desperate and expresses thoughts of suicide. This conversation is sad to read. It also highlights the difficulty in providing adequate psychological care for users on the mama health platform; no proactive suggestions in this situation - e.g. better illness tracking or management - are going to give the user the kind of support that they need. For me this points either to focusing on adding more psychological counselling features - or refining them - or making human handover a possibility. This was discussed above as deprioritised feature.
+In conversation s026 the user is desperate and expresses thoughts of suicide. This conversation is sad to read. It also highlights the difficulty in providing adequate psychological care for users on the mama health platform; no proactive suggestions in this situation - e.g. better illness tracking or management - are going to give the user the kind of support that they need. For me this points either to focusing on adding more psychological counselling features - or refining them - or making human handover a possibility. This was discussed above as a deprioritised feature.
 
 In conversation s017 the user is asking about how to control their morning glucose levels without seeing a doctor. This conversation was interesting to me because it was classified as 'partial resolution' by the LLM pipeline, which I believe is the correct classification, yet the assistant has suggested everything within its capability. The user gets annoyed with the assistant when it suggests they take insulin at night, saying 'you said insulin again. i told you i dont take insulin' - yet the assistant was making a suggestion for taking a different medication, not incorrectly suggesting what the user was taking - although earlier in the conversation (turn 4) it had wrongly assumed the user was on insulin. I think the assistant manages to keep a placating tone here, which is good. I also believe this shows how in some situations, it's not possible to give the user the information that they want, because it doesn't exist.
 
@@ -94,9 +94,9 @@ In conversation s049 the user approaches the assistant for emotional support - a
 
 ## AI Usage
 
-All code for this case study was written with Opus 5.5 in Claude Code. Claude was instructed to create tests for all code that was written. This was incorporated into the github workflows when pushing a branch and merging a PR. 
+All code for this case study was written with Opus 5.5 in Claude Code. Claude was instructed to create tests for all code that was written. This was incorporated into the GitHub workflows when pushing a branch and merging a PR. 
 
-An initial planning document was created for the pipeline and Claude was instructed to use this. Results from the LLM pipeline were displayed in an interactive html file and the pipeline was improved iteratively. From there, the best tables and interative widgets were moved into an interactive memo (this document). When the pipeline runs, this memo is updated. 
+An initial planning document was created for the pipeline and Claude was instructed to use this. Results from the LLM pipeline were displayed in an interactive HTML file and the pipeline was improved iteratively. From there, the best tables and interactive widgets were moved into an interactive memo (this document). When the pipeline runs, this memo is updated. 
 
 ## Appendix
 
@@ -119,7 +119,7 @@ This grouping was decided upon through a number of iterations of classifying the
 
 ### Choice of Labelling Model
 
-I hand-labeled 10 conversations based on whether they were resolved or not and used this to sense to check whether the models and prompts I was testing agreed with my logic. When choosing a model, I started with OpenAI's GPT Luna for the labelling, after an initial comparison with Claude Haiku 4.5 in which neither model was clearly better. I then compared it with Claude Sonnet 5.5 and switched, for two reasons. Firstly, Sonnet 5.5 matched all 10 of my hand-labelled outcomes where GPT Luna matched 9. Secondly, its labels changed less when the labelling was repeated. 
+I hand-labelled 10 conversations based on whether they were resolved or not and used this to sense-check whether the models and prompts I was testing agreed with my logic. When choosing a model, I started with OpenAI's GPT Luna for the labelling, after an initial comparison with Claude Haiku 4.5 in which neither model was clearly better. I then compared it with Claude Sonnet 5.5 and switched, for two reasons. Firstly, Sonnet 5.5 matched all 10 of my hand-labelled outcomes where GPT Luna matched 9. Secondly, its labels changed less when the labelling was repeated. 
 
 The trade-off is cost. The main labelling pass over the 50 conversations cost about $0.04 with GPT Luna and about $0.79 with Sonnet 5.5 - roughly 20 times more. This is irrelevant for 50 conversations, but it would need to be weighed before running this analysis over every conversation in production. Latency was not a deciding factor: a full run took around 50 seconds with Sonnet 5.5 and between 74 and 141 seconds with GPT Luna.
 
@@ -133,4 +133,4 @@ What the approach does well:
 What it can't support:
 
 - **Whether the advice was correct.** The model is told not to fact-check medical content. "Need met" means the user left with what they came for, not that what they were told was right.
-- **Rates for small groups.** With 50 synthetic conversations, one conversation moves a group of three or four by 25 to 33 points, so one should use caution when assessing how well the model performs on a group of topics based on the these percentage points, especially when there are only three conversations in the topic group.
+- **Rates for small groups.** With 50 synthetic conversations, one conversation moves a group of three or four by 25 to 33 points, so one should use caution when assessing how well the model performs on a group of topics based on these percentage points, especially when there are only three conversations in the topic group.
