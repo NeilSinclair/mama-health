@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-05T06:49:38+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not answer the user's request"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user opened asking what is new and evidence-based beyond standard care, and turns 3-6 and 23-24 return to it.",
+        "relevance": "strong",
+        "topic": "long covid research pipeline",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "Turns 7-14 and 19-22 focus on how to find and qualify for trials they could actually join, the user's main stated barrier.",
+        "relevance": "strong",
+        "topic": "finding clinical trials",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said in turn 15 that dedicated clinics have waitlists and asked in turn 19 which clinics run trials.",
+        "relevance": "medium",
+        "topic": "long covid clinic waitlists",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked in turn 5 whether the Paxlovid trial came back negative, a short exchange.",
+        "relevance": "medium",
+        "topic": "antiviral treatment trials",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user repeatedly said that reading and matching listings while cognitively impaired and low on energy is too much.",
+        "relevance": "medium",
+        "topic": "trial eligibility matching burden",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user voiced weariness in turns 1 and 17, saying the answer is always a clinic that won't see them or reading listings alone.",
+        "relevance": "medium",
+        "topic": "frustration with care system",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user listed the standard treatments already done in turn 3 to exclude them from the discussion.",
+        "relevance": "low",
+        "topic": "pots management already tried",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user mentioned once in turn 1 that they still can't work.",
+        "relevance": "low",
+        "topic": "unable to work",
+        "topic_group": "Work & life plans"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "A user with long COVID for two years and stable-ish POTS, who had already exhausted standard management, asked about the research pipeline and how to actually access trials in the US. The bot described mechanistic research and gave general trial-search and clinic-waitlist strategies, but could not name specific clinics or recruiting trials. The user ended with a flat 'I have the general picture' and thanks, still having to do the searching themselves."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3225,
+    "output_tokens": 829
+  },
+  "version": "sonnet"
+}

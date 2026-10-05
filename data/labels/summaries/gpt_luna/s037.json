@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:49:17+00:00",
+  "created_at": "2026-10-05T07:50:09+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,68 +7,56 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user said sudden urgency was the worst symptom and was disrupting work and family life, then asked how to cope with it.",
+        "reason": "The user described frequent bowel movements, occasional blood, and urgency with almost no warning as the main problem affecting daily life.",
         "relevance": "strong",
-        "topic": "bowel urgency",
+        "topic": "bowel urgency and bleeding",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user reported occasional blood, which came up again as part of the discussion about symptom control and seeking specialist care.",
+        "reason": "The user asked what to discuss after learning their symptoms may not be controlled on mesalamine and asked specifically whether rectal treatment could help.",
         "relevance": "medium",
-        "topic": "rectal bleeding",
-        "topic_group": "Physical symptoms"
-      },
-      {
-        "reason": "The user reported going six or seven times a day, but did not return to frequency as a separate concern.",
-        "relevance": "low",
-        "topic": "bowel frequency",
-        "topic_group": "Physical symptoms"
-      },
-      {
-        "reason": "The user asked what to ask the doctor about after learning tablets might not be enough, and followed up about adding rectal treatment.",
-        "relevance": "medium",
-        "topic": "treatment escalation",
+        "topic": "treatment escalation options",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user said appointments were hard to get and asked how to get a gastroenterology appointment sooner.",
+        "reason": "The user said specialist appointments were hard to get and asked how to get one faster; arranging a referral became part of the plan.",
         "relevance": "medium",
-        "topic": "specialist access",
+        "topic": "gastroenterology access",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user asked whether the test could show inflammation without a colonoscopy and engaged with the explanation.",
+        "reason": "The user said urgency affected their job and asked for ways to cope with fear of needing the bathroom during meetings.",
+        "relevance": "medium",
+        "topic": "workplace impact",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user began ashamed to discuss the symptoms and later expressed anger about having believed they were normal.",
+        "relevance": "medium",
+        "topic": "embarrassment and anger",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked whether the stool test could show inflammation without a colonoscopy and received an explanation of its use.",
         "relevance": "medium",
         "topic": "calprotectin testing",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user said urgency affected their job and specifically described fear of needing a bathroom during meetings.",
+        "reason": "The user felt they might be complaining too much and worried about sounding stupid, then asked what to ask the doctor.",
         "relevance": "medium",
-        "topic": "work impact",
-        "topic_group": "Work & life plans"
-      },
-      {
-        "reason": "The user described embarrassment and shame, later expressed anger about having suffered, and ended by saying they felt able to act.",
-        "relevance": "medium",
-        "topic": "emotional distress",
-        "topic_group": "Emotional wellbeing"
-      },
-      {
-        "reason": "The user worried about sounding stupid or like they were complaining and asked what to raise with the doctor.",
-        "relevance": "medium",
-        "topic": "confidence speaking to doctor",
+        "topic": "speaking up to clinicians",
         "topic_group": "Working with clinicians"
       },
       {
-        "reason": "The user said they had loperamide at home and had considered taking it, then said they would wait to ask a doctor.",
-        "relevance": "medium",
+        "reason": "The user said they had loperamide at home and were considering taking it, then agreed to ask their doctor first.",
+        "relevance": "low",
         "topic": "loperamide safety",
         "topic_group": "Taking medication safely"
       }
     ],
-    "reason_for_conversation": "informational",
-    "summary": "The user described disabling ulcerative colitis urgency, occasional blood, and frequent bowel movements, and said they had believed this was simply how life would be after their doctor said to be careful. The assistant discussed treatment questions, specialist access, testing, coping at work, and checking before using loperamide; the user ended feeling less ashamed and said they had a plan and could take action."
+    "reason_for_conversation": "access",
+    "summary": "The user described ulcerative colitis symptoms, including frequent urgent bowel movements and occasional blood, that were affecting work and family life, and said they had assumed this was simply normal. The assistant discussed specialist review, possible treatment options, calprotectin testing, and practical coping measures, while advising the user to check with a doctor before taking loperamide. The user said they felt less ashamed and had a plan for what to ask and do next."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -77,7 +65,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 6860,
-    "output_tokens": 2357
+    "output_tokens": 1671
   },
   "version": "gpt_luna"
 }

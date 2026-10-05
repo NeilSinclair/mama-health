@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T13:52:22+00:00",
+  "created_at": "2026-10-05T07:54:09+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "final_sentiment": "satisfied",
@@ -9,14 +9,14 @@
         "bot_adapted": true,
         "kind": "repeated question",
         "quote": "But say that doesn't work either — what are the actual other options? I want to know the whole picture before I go back to the GP.",
-        "reason": "The reply gives a fuller overview of the other hormonal options the user asked about.",
+        "reason": "The reply provides the fuller picture of hormonal options beyond the combined pill, answering the question the user pressed.",
         "turn": 5
       },
       {
         "bot_adapted": true,
         "kind": "objection",
         "quote": "Although I'll be honest, part of me is tired of it always being about hormones. The pill, the coil, the injections, it's all hormones. Is there literally nothing else?",
-        "reason": "The reply shifts to non-hormonal supports, including pain management, pelvic floor physiotherapy, and surgery.",
+        "reason": "The reply shifts from hormonal options to pain management, pelvic floor physiotherapy, and surgery as other parts of care.",
         "turn": 19
       }
     ]
@@ -25,10 +25,10 @@
   "prompt_version": "dynamics_v1",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2173,
+    "cache_read_tokens": 4711,
     "cache_write_tokens": 0,
     "input_tokens": 4714,
-    "output_tokens": 681
+    "output_tokens": 520
   },
   "version": "gpt_luna"
 }

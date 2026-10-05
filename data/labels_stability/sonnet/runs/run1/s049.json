@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-05T06:48:45+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User describes fatigue, errors by 11am and two-day crashes as the driver of the work decision.",
+        "relevance": "medium",
+        "topic": "long covid fatigue and brain fog",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User has decided to resign and spends most turns on this, including getting a resignation letter drafted and warmed up.",
+        "relevance": "strong",
+        "topic": "resigning from work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "Discussed over several turns after the user said HR offered nothing concrete, but user had already decided to resign.",
+        "relevance": "medium",
+        "topic": "workplace adjustments and occupational health",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User opened wanting to talk to something that won't sigh, said they are tired of fighting, and teared up at the letter.",
+        "relevance": "strong",
+        "topic": "exhaustion and need to be heard",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked what to do for their health after leaving and asked for pacing to be explained, which clicked for them.",
+        "relevance": "medium",
+        "topic": "pacing and recovery after leaving work",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "Mentioned once that HR said 'let us know' with nothing concrete, as background to the decision.",
+        "relevance": "low",
+        "topic": "unhelpful hr response",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "A user with long COVID said they can no longer keep working and wanted to talk to something that would not sigh at them. The bot listened, covered adjustments and occupational health, then drafted and warmed up a resignation letter at the user's request and explained pacing. The user said pacing finally clicked and that they felt calmer than in ages; no safety-critical moments occurred."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2626,
+    "output_tokens": 661
+  },
+  "version": "sonnet"
+}

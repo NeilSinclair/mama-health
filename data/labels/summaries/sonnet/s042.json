@@ -1,0 +1,79 @@
+{
+  "created_at": "2026-10-05T08:04:58+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave wrong-country advice"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came to make sense of a Crohn's diagnosis from last week, and flares, remission and disease location took many turns.",
+        "relevance": "strong",
+        "topic": "new diagnosis basics",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User opened by saying they were completely overwhelmed, returned to it at t17, and said at t27 it felt less like a wall.",
+        "relevance": "strong",
+        "topic": "feeling overwhelmed",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User identified their budesonide and asked what comes after it, and that became their main next step.",
+        "relevance": "medium",
+        "topic": "steroid medication and next steps",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked what monitoring to expect and got a full answer over one exchange.",
+        "relevance": "medium",
+        "topic": "long-term monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User said they did not know how to organise it all, and the bot suggested a one-page notes file and a question list.",
+        "relevance": "medium",
+        "topic": "organising health information",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User asked whether there is a Crohn's diet they should follow, and it took one exchange.",
+        "relevance": "medium",
+        "topic": "diet for Crohn's",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked where to learn reliably given scary content online, and it took one exchange.",
+        "relevance": "low",
+        "topic": "reliable information sources",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User wondered once whether to move to a bigger specialist centre, and the answer was brief.",
+        "relevance": "low",
+        "topic": "specialist centre referral",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User mentioned being too shocked to ask good questions and having a hazy memory of the appointment, as background.",
+        "relevance": "low",
+        "topic": "hazy appointment memory",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user diagnosed with Crohn's disease a week earlier felt overwhelmed and asked for help understanding it. The bot covered flares and remission, disease location, budesonide and what follows it, monitoring, organising information, trusted sources and diet. After the user said they are in India, the bot adjusted its advice on where to get care. The user ended feeling it was manageable and restated a plan to write down questions and ask about the plan after budesonide."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3586,
+    "output_tokens": 1251
+  },
+  "version": "sonnet"
+}

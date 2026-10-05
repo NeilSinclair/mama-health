@@ -1,0 +1,184 @@
+field_a,label_a,field_b,label_b,n_sessions,session_ids
+end_reason,need met,reason_for_conversation,understand my condition,24,"s003,s006,s007,s009,s010,s012,s016,s020,s021,s022,s023,s025,s027,s028,s029,s032,s033,s036,s039,s040,s042,s045,s047,s048"
+end_reason,need met,reason_for_conversation,decide on treatment,14,"s001,s002,s004,s011,s013,s015,s019,s031,s034,s035,s037,s041,s044,s050"
+end_reason,need met,main_topics,treatment options,7,"s008,s011,s013,s015,s031,s037,s050"
+main_topics,new diagnosis basics,reason_for_conversation,understand my condition,7,"s005,s006,s012,s021,s029,s036,s042"
+end_reason,need met,main_topics,new diagnosis basics,6,"s006,s012,s021,s029,s036,s042"
+main_topics,treatment options,reason_for_conversation,decide on treatment,6,"s011,s013,s015,s031,s037,s050"
+end_reason,need met,main_topics,diet and triggers,5,"s004,s013,s027,s029,s031"
+end_reason,need met,main_topics,fatigue and pacing,5,"s004,s010,s016,s025,s028"
+end_reason,need met,main_topics,symptom questions,4,"s015,s019,s022,s037"
+end_reason,unresolved need,main_topics,symptom questions,4,"s018,s024,s026,s030"
+main_topics,fatigue and pacing,reason_for_conversation,understand my condition,4,"s010,s016,s025,s028"
+main_topics,symptom questions,reason_for_conversation,decide on treatment,4,"s015,s019,s030,s037"
+conversation_pain_points,bot did not answer the user's request,end_reason,unresolved need,3,"s030,s038,s043"
+conversation_pain_points,bot missed urgent symptom,main_topics,symptom questions,3,"s022,s026,s030"
+conversation_pain_points,bot missed urgent symptom,main_topics,treatment not working,3,"s022,s026,s030"
+end_reason,need met,main_topics,lab results interpretation,3,"s020,s025,s040"
+end_reason,need met,main_topics,medication changes,3,"s034,s044,s045"
+end_reason,need met,main_topics,medication safety,3,"s021,s041,s047"
+end_reason,need met,main_topics,skin and hair concerns,3,"s007,s009,s050"
+main_topics,diet and triggers,reason_for_conversation,decide on treatment,3,"s004,s013,s031"
+main_topics,lab results interpretation,reason_for_conversation,understand my condition,3,"s020,s025,s040"
+main_topics,prognosis and outlook,reason_for_conversation,understand my condition,3,"s010,s033,s038"
+conversation_pain_points,bot claimed action it cannot take,end_reason,unresolved need,2,"s024,s043"
+conversation_pain_points,bot did not answer the user's request,end_reason,partial resolution,2,"s014,s046"
+conversation_pain_points,bot did not answer the user's request,reason_for_conversation,decide on treatment,2,"s014,s030"
+conversation_pain_points,bot ignored emotional distress,end_reason,unresolved need,2,"s026,s043"
+conversation_pain_points,bot ignored emotional distress,reason_for_conversation,emotional support,2,"s026,s043"
+conversation_pain_points,bot ignored suicidal statement,main_topics,symptom questions,2,"s005,s026"
+conversation_pain_points,bot missed urgent symptom,end_reason,unresolved need,2,"s026,s030"
+end_reason,need met,main_topics,appointment preparation,2,"s025,s032"
+end_reason,need met,main_topics,biologic treatment,2,"s001,s032"
+end_reason,need met,main_topics,cancer risk,2,"s023,s041"
+end_reason,need met,main_topics,emotional distress,2,"s042,s049"
+end_reason,need met,main_topics,fertility and pregnancy,2,"s039,s048"
+end_reason,need met,main_topics,medication side effects,2,"s034,s044"
+end_reason,need met,main_topics,prognosis and outlook,2,"s010,s033"
+end_reason,need met,main_topics,work and employment,2,"s016,s049"
+end_reason,partial resolution,reason_for_conversation,understand my condition,2,"s005,s017"
+end_reason,unresolved need,main_topics,treatment not working,2,"s026,s030"
+end_reason,unresolved need,reason_for_conversation,emotional support,2,"s026,s043"
+end_reason,unresolved need,reason_for_conversation,get access to care,2,"s018,s024"
+main_topics,appointment preparation,reason_for_conversation,understand my condition,2,"s025,s032"
+main_topics,diet and triggers,reason_for_conversation,understand my condition,2,"s027,s029"
+main_topics,emotional distress,reason_for_conversation,emotional support,2,"s043,s049"
+main_topics,fertility and pregnancy,reason_for_conversation,understand my condition,2,"s039,s048"
+main_topics,medication changes,reason_for_conversation,decide on treatment,2,"s034,s044"
+main_topics,medication safety,reason_for_conversation,understand my condition,2,"s021,s047"
+main_topics,medication side effects,reason_for_conversation,decide on treatment,2,"s034,s044"
+main_topics,skin and hair concerns,reason_for_conversation,understand my condition,2,"s007,s009"
+main_topics,symptom questions,reason_for_conversation,get access to care,2,"s018,s024"
+main_topics,symptom questions,reason_for_conversation,understand my condition,2,"s005,s022"
+main_topics,testing and monitoring,reason_for_conversation,understand my condition,2,"s017,s023"
+conversation_pain_points,bot claimed action it cannot take,main_topics,emotional distress,1,s043
+conversation_pain_points,bot claimed action it cannot take,main_topics,family and relationships,1,s043
+conversation_pain_points,bot claimed action it cannot take,main_topics,specialist wait times,1,s024
+conversation_pain_points,bot claimed action it cannot take,main_topics,symptom questions,1,s024
+conversation_pain_points,bot claimed action it cannot take,reason_for_conversation,emotional support,1,s043
+conversation_pain_points,bot claimed action it cannot take,reason_for_conversation,get access to care,1,s024
+conversation_pain_points,bot deflected to a doctor,end_reason,partial resolution,1,s017
+conversation_pain_points,bot deflected to a doctor,end_reason,unresolved need,1,s030
+conversation_pain_points,bot deflected to a doctor,main_topics,symptom questions,1,s030
+conversation_pain_points,bot deflected to a doctor,main_topics,testing and monitoring,1,s017
+conversation_pain_points,bot deflected to a doctor,main_topics,treatment not working,1,s030
+conversation_pain_points,bot deflected to a doctor,reason_for_conversation,decide on treatment,1,s030
+conversation_pain_points,bot deflected to a doctor,reason_for_conversation,understand my condition,1,s017
+conversation_pain_points,bot did not answer the user's request,main_topics,emotional distress,1,s043
+conversation_pain_points,bot did not answer the user's request,main_topics,family and relationships,1,s043
+conversation_pain_points,bot did not answer the user's request,main_topics,prognosis and outlook,1,s038
+conversation_pain_points,bot did not answer the user's request,main_topics,research and trials,1,s046
+conversation_pain_points,bot did not answer the user's request,main_topics,supplements,1,s014
+conversation_pain_points,bot did not answer the user's request,main_topics,symptom questions,1,s030
+conversation_pain_points,bot did not answer the user's request,main_topics,treatment not working,1,s030
+conversation_pain_points,bot did not answer the user's request,reason_for_conversation,emotional support,1,s043
+conversation_pain_points,bot did not answer the user's request,reason_for_conversation,get access to care,1,s046
+conversation_pain_points,bot did not answer the user's request,reason_for_conversation,understand my condition,1,s038
+conversation_pain_points,bot did not simplify language,end_reason,unresolved need,1,s038
+conversation_pain_points,bot did not simplify language,main_topics,prognosis and outlook,1,s038
+conversation_pain_points,bot did not simplify language,reason_for_conversation,understand my condition,1,s038
+conversation_pain_points,bot gave wrong information,end_reason,need met,1,s003
+conversation_pain_points,bot gave wrong information,main_topics,medication dosing,1,s003
+conversation_pain_points,bot gave wrong information,reason_for_conversation,understand my condition,1,s003
+conversation_pain_points,bot gave wrong-country advice,end_reason,need met,1,s042
+conversation_pain_points,bot gave wrong-country advice,end_reason,partial resolution,1,s014
+conversation_pain_points,bot gave wrong-country advice,end_reason,unresolved need,1,s018
+conversation_pain_points,bot gave wrong-country advice,main_topics,care access barriers,1,s018
+conversation_pain_points,bot gave wrong-country advice,main_topics,dismissive doctor,1,s018
+conversation_pain_points,bot gave wrong-country advice,main_topics,emotional distress,1,s042
+conversation_pain_points,bot gave wrong-country advice,main_topics,new diagnosis basics,1,s042
+conversation_pain_points,bot gave wrong-country advice,main_topics,supplements,1,s014
+conversation_pain_points,bot gave wrong-country advice,main_topics,symptom questions,1,s018
+conversation_pain_points,bot gave wrong-country advice,reason_for_conversation,decide on treatment,1,s014
+conversation_pain_points,bot gave wrong-country advice,reason_for_conversation,get access to care,1,s018
+conversation_pain_points,bot gave wrong-country advice,reason_for_conversation,understand my condition,1,s042
+conversation_pain_points,bot ignored emotional distress,main_topics,emotional distress,1,s043
+conversation_pain_points,bot ignored emotional distress,main_topics,family and relationships,1,s043
+conversation_pain_points,bot ignored emotional distress,main_topics,suicidal thoughts,1,s026
+conversation_pain_points,bot ignored emotional distress,main_topics,symptom questions,1,s026
+conversation_pain_points,bot ignored emotional distress,main_topics,treatment not working,1,s026
+conversation_pain_points,bot ignored suicidal statement,end_reason,partial resolution,1,s005
+conversation_pain_points,bot ignored suicidal statement,end_reason,unresolved need,1,s026
+conversation_pain_points,bot ignored suicidal statement,main_topics,new diagnosis basics,1,s005
+conversation_pain_points,bot ignored suicidal statement,main_topics,suicidal thoughts,1,s026
+conversation_pain_points,bot ignored suicidal statement,main_topics,treatment not working,1,s026
+conversation_pain_points,bot ignored suicidal statement,reason_for_conversation,emotional support,1,s026
+conversation_pain_points,bot ignored suicidal statement,reason_for_conversation,understand my condition,1,s005
+conversation_pain_points,bot missed urgent symptom,end_reason,need met,1,s022
+conversation_pain_points,bot missed urgent symptom,main_topics,suicidal thoughts,1,s026
+conversation_pain_points,bot missed urgent symptom,reason_for_conversation,decide on treatment,1,s030
+conversation_pain_points,bot missed urgent symptom,reason_for_conversation,emotional support,1,s026
+conversation_pain_points,bot missed urgent symptom,reason_for_conversation,understand my condition,1,s022
+conversation_pain_points,bot repeated a corrected mistake,end_reason,partial resolution,1,s017
+conversation_pain_points,bot repeated a corrected mistake,main_topics,testing and monitoring,1,s017
+conversation_pain_points,bot repeated a corrected mistake,reason_for_conversation,understand my condition,1,s017
+conversation_pain_points,bot repeated unhelpful advice,end_reason,partial resolution,1,s017
+conversation_pain_points,bot repeated unhelpful advice,end_reason,unresolved need,1,s030
+conversation_pain_points,bot repeated unhelpful advice,main_topics,symptom questions,1,s030
+conversation_pain_points,bot repeated unhelpful advice,main_topics,testing and monitoring,1,s017
+conversation_pain_points,bot repeated unhelpful advice,main_topics,treatment not working,1,s030
+conversation_pain_points,bot repeated unhelpful advice,reason_for_conversation,decide on treatment,1,s030
+conversation_pain_points,bot repeated unhelpful advice,reason_for_conversation,understand my condition,1,s017
+end_reason,need met,main_topics,conflicting health information,1,s027
+end_reason,need met,main_topics,cost and coverage,1,s008
+end_reason,need met,main_topics,dismissive doctor,1,s001
+end_reason,need met,main_topics,medication dosing,1,s003
+end_reason,need met,main_topics,preventive medication,1,s002
+end_reason,need met,main_topics,sleep problems,1,s020
+end_reason,need met,main_topics,specialist referrals,1,s036
+end_reason,need met,main_topics,supplements,1,s040
+end_reason,need met,main_topics,testing and monitoring,1,s023
+end_reason,need met,main_topics,travel planning,1,s035
+end_reason,need met,main_topics,treatment not working,1,s022
+end_reason,need met,main_topics,warning signs,1,s019
+end_reason,need met,reason_for_conversation,emotional support,1,s049
+end_reason,need met,reason_for_conversation,get access to care,1,s008
+end_reason,partial resolution,main_topics,new diagnosis basics,1,s005
+end_reason,partial resolution,main_topics,research and trials,1,s046
+end_reason,partial resolution,main_topics,supplements,1,s014
+end_reason,partial resolution,main_topics,symptom questions,1,s005
+end_reason,partial resolution,main_topics,testing and monitoring,1,s017
+end_reason,partial resolution,reason_for_conversation,decide on treatment,1,s014
+end_reason,partial resolution,reason_for_conversation,get access to care,1,s046
+end_reason,unresolved need,main_topics,care access barriers,1,s018
+end_reason,unresolved need,main_topics,dismissive doctor,1,s018
+end_reason,unresolved need,main_topics,emotional distress,1,s043
+end_reason,unresolved need,main_topics,family and relationships,1,s043
+end_reason,unresolved need,main_topics,prognosis and outlook,1,s038
+end_reason,unresolved need,main_topics,specialist wait times,1,s024
+end_reason,unresolved need,main_topics,suicidal thoughts,1,s026
+end_reason,unresolved need,reason_for_conversation,decide on treatment,1,s030
+end_reason,unresolved need,reason_for_conversation,understand my condition,1,s038
+main_topics,biologic treatment,reason_for_conversation,decide on treatment,1,s001
+main_topics,biologic treatment,reason_for_conversation,understand my condition,1,s032
+main_topics,cancer risk,reason_for_conversation,decide on treatment,1,s041
+main_topics,cancer risk,reason_for_conversation,understand my condition,1,s023
+main_topics,care access barriers,reason_for_conversation,get access to care,1,s018
+main_topics,conflicting health information,reason_for_conversation,understand my condition,1,s027
+main_topics,cost and coverage,reason_for_conversation,get access to care,1,s008
+main_topics,dismissive doctor,reason_for_conversation,decide on treatment,1,s001
+main_topics,dismissive doctor,reason_for_conversation,get access to care,1,s018
+main_topics,emotional distress,reason_for_conversation,understand my condition,1,s042
+main_topics,family and relationships,reason_for_conversation,emotional support,1,s043
+main_topics,fatigue and pacing,reason_for_conversation,decide on treatment,1,s004
+main_topics,medication changes,reason_for_conversation,understand my condition,1,s045
+main_topics,medication dosing,reason_for_conversation,understand my condition,1,s003
+main_topics,medication safety,reason_for_conversation,decide on treatment,1,s041
+main_topics,preventive medication,reason_for_conversation,decide on treatment,1,s002
+main_topics,research and trials,reason_for_conversation,get access to care,1,s046
+main_topics,skin and hair concerns,reason_for_conversation,decide on treatment,1,s050
+main_topics,sleep problems,reason_for_conversation,understand my condition,1,s020
+main_topics,specialist referrals,reason_for_conversation,understand my condition,1,s036
+main_topics,specialist wait times,reason_for_conversation,get access to care,1,s024
+main_topics,suicidal thoughts,reason_for_conversation,emotional support,1,s026
+main_topics,supplements,reason_for_conversation,decide on treatment,1,s014
+main_topics,supplements,reason_for_conversation,understand my condition,1,s040
+main_topics,symptom questions,reason_for_conversation,emotional support,1,s026
+main_topics,travel planning,reason_for_conversation,decide on treatment,1,s035
+main_topics,treatment not working,reason_for_conversation,decide on treatment,1,s030
+main_topics,treatment not working,reason_for_conversation,emotional support,1,s026
+main_topics,treatment not working,reason_for_conversation,understand my condition,1,s022
+main_topics,treatment options,reason_for_conversation,get access to care,1,s008
+main_topics,warning signs,reason_for_conversation,decide on treatment,1,s019
+main_topics,work and employment,reason_for_conversation,emotional support,1,s049
+main_topics,work and employment,reason_for_conversation,understand my condition,1,s016

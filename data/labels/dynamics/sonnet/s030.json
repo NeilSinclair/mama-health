@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-10-05T08:07:52+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "final_sentiment": "dissatisfied",
+    "final_sentiment_quote": "No. Forget it.",
+    "pushbacks": [
+      {
+        "bot_adapted": false,
+        "kind": "correction",
+        "quote": "I've kept a headache diary for years. I have years of data. That's not the issue.",
+        "reason": "The reply praises the tracking but still pushes revisiting the diary and asks about stress, without addressing the ongoing attack.",
+        "turn": 3
+      },
+      {
+        "bot_adapted": false,
+        "kind": "repeated question",
+        "quote": "I'm asking what to do when a migraine lasts four days and the triptans don't work.",
+        "reason": "The reply swaps in relaxation techniques and yoga, still not answering what to do for the attack.",
+        "turn": 5
+      },
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "I'm not asking about prevention right now. I physically cannot function. Deep breathing is not going to end a four-day attack.",
+        "reason": "The reply says 'I hear you' and then suggests acupuncture, another non-acute, non-answer.",
+        "turn": 7
+      },
+      {
+        "bot_adapted": true,
+        "kind": "repeated question",
+        "quote": "I need medical help, not yoga and acupuncture. Please. What do I actually do about an attack that won't break?",
+        "reason": "The reply drops the alternative therapies and points to the neurologist for medication adjustments, a change of direction though not a direct answer.",
+        "turn": 9
+      },
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "My neurologist is booked out six weeks. That's exactly why I'm here.",
+        "reason": "The reply offers hydration, a dark room and a cool compress, which does not address the lack of access or ask for urgent or bridge options.",
+        "turn": 11
+      },
+      {
+        "bot_adapted": false,
+        "kind": "correction",
+        "quote": "I've been in a dark room for three days. I've been hydrating. This is basic stuff I already know.",
+        "reason": "The reply affirms they are doing everything right and again says to follow up with their doctor, with no treatment information.",
+        "turn": 13
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "You keep saying that. Follow up with your doctor. I already told you I can't get in for weeks.",
+        "reason": "The reply moves to OTC combination painkillers, a new suggestion, but it ignores the status migrainosus question and the access problem.",
+        "turn": 15
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "You're not hearing me at all.",
+        "reason": "The reply acknowledges rebound risk but recommends a medication log, which ignores the stated concern and the unmet need.",
+        "turn": 17
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "Another diary suggestion. I've explained twice that I already track everything.",
+        "reason": "The reply apologises briefly then offers generic lifestyle adjustments, repeating the same kind of advice.",
+        "turn": 19
+      },
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "This isn't about lifestyle. I asked for help with an emergency-level attack",
+        "reason": "The reply says 'I understand' then repeats the neurologist referral and offers help with something else.",
+        "turn": 21
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 3628,
+    "cache_write_tokens": 0,
+    "input_tokens": 1417,
+    "output_tokens": 1028
+  },
+  "version": "sonnet"
+}

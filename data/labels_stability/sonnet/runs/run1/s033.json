@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-05T06:48:32+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether a drop from 20 to 15 migraine days counts as the treatment working, and the whole conversation revolves around this.",
+        "relevance": "strong",
+        "topic": "treatment response assessment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user logs daily in an app and the bot advised what else to track, such as severity and rescue medication response, over several turns.",
+        "relevance": "medium",
+        "topic": "migraine day tracking",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to raise with the neurologist and voiced worry about the treatment being stopped, spanning a few turns.",
+        "relevance": "medium",
+        "topic": "preparing for neurologist visit",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user wanted to feel encouraged but felt let down on learning the reduction was about 25%, and later felt better.",
+        "relevance": "medium",
+        "topic": "disappointment about partial response",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user noticed in one turn that attacks had become less severe, after the bot's prompt.",
+        "relevance": "low",
+        "topic": "reduced migraine severity",
+        "topic_group": "Physical symptoms"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user, three months into a preventive migraine injection with migraine days down from about 20 to 15 a month, asked whether this counts as the treatment working. The bot explained the 50% benchmark, said six months is a more definitive window, suggested tracking severity and rescue medication response, and listed points to raise with the neurologist. The user ended feeling reframed and encouraged, saying it is working but not finished."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1468,
+    "output_tokens": 591
+  },
+  "version": "sonnet"
+}

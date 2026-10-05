@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:48:13+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened asking whether it will get better and returned at t21 to ask what it means if they are in the group that does not recover.",
+        "relevance": "strong",
+        "topic": "long covid prognosis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user described being wiped out for three days after a food shop and asked whether crashes prolong the illness.",
+        "relevance": "medium",
+        "topic": "post-exertional crashes",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "Several turns covered what pacing is, how to find their energy limit and how to track it, and the user decided to start it.",
+        "relevance": "strong",
+        "topic": "pacing and energy management",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user said 12 to 18 months feels like forever and that false cheer from others makes them feel more alone.",
+        "relevance": "medium",
+        "topic": "fear and despair about timeline",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned the last GP appointment felt like pats on the head and asked what to flag at the next one.",
+        "relevance": "medium",
+        "topic": "dismissive doctor",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked for specific things to raise with the GP and left with a concrete list.",
+        "relevance": "medium",
+        "topic": "preparing for gp appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said having a job and household limits their ability to rest, and the manager does not grasp the condition is ongoing.",
+        "relevance": "medium",
+        "topic": "work and household demands",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The bot raised reasonable adjustments and occupational health, and the user said they might look into it, without further discussion.",
+        "relevance": "low",
+        "topic": "workplace adjustments",
+        "topic_group": "Work & life plans"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with long covid of about six months asked for an honest account of whether they will recover, and the bot gave a cautious, non-falsely-cheerful outlook. The conversation moved to post-exertional crashes, pacing and tracking, balancing rest with work and household, and what to raise with the GP. The user ended with a concrete plan and said it was the first conversation about it that had not made them feel worse. No safety-critical moments occurred."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2407,
+    "output_tokens": 813
+  },
+  "version": "sonnet"
+}

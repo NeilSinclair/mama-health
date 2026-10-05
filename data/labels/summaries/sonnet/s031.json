@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T08:04:49+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened by asking whether trying diet and exercise before starting metformin is wrong, and the bot's three-month trial plan answered that question.",
+        "relevance": "strong",
+        "topic": "delaying metformin for lifestyle trial",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "Several turns on rice portions, vegetarian protein, chapati and managing festival sweets.",
+        "relevance": "strong",
+        "topic": "diet changes for diabetes",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User explained knee problems, and the bot covered gentle exercise and the timing of post-meal walks over multiple turns.",
+        "relevance": "medium",
+        "topic": "walking with knee limitations",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "Husband's claim that delay damages eyes and kidneys left the user confused and prompted a dedicated exchange.",
+        "relevance": "medium",
+        "topic": "long-term complication risk from delay",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked what counts as success if HbA1c falls only a little, and the plan rested on a three-month recheck.",
+        "relevance": "medium",
+        "topic": "rechecking blood test after trial",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked once whether to use a home machine and mentioned an old meter their son has.",
+        "relevance": "low",
+        "topic": "home glucose monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "Husband's pressure caused confusion, and the user said they would talk it over with family.",
+        "relevance": "low",
+        "topic": "family disagreement about treatment",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "Mentioned once as the reason the doctor was concerned; not pursued.",
+        "relevance": "low",
+        "topic": "family history of diabetes",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User cited the sister's experience once to check whether avoiding medication is possible.",
+        "relevance": "low",
+        "topic": "sister's diabetes reversal",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user diagnosed with type 2 diabetes six months ago (HbA1c 6.9) asked whether it is wrong to try diet and exercise before starting metformin. The bot proposed a monitored three-month lifestyle trial with an A1c recheck, and covered knee-friendly walking, rice and sweets, and home glucose checks. The user found the plan balanced and manageable and said they would tell their doctor, but ended noncommittally with 'I will see'."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2808,
+    "output_tokens": 1447
+  },
+  "version": "sonnet"
+}

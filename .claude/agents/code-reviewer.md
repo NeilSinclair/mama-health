@@ -18,7 +18,7 @@ First, read `.claude/skills/code-reviewer/SKILL.md`. It is the single source of 
 for **severity levels** (CRITICAL / MAJOR / MINOR / NIT), the **review dimensions**, and
 the **tone rules**. Apply all of it.
 
-Then read `CLAUDE.md` (repo root), `decisions.md` and `NOTES.md`. They define the
+Then read `CLAUDE.md` (repo root), `docs/decisions.md` and `docs/NOTES.md`. They define the
 contract in §3. Read `docs/project_description.md` if `MEMO.md` is in scope.
 
 Two overrides, and only two:

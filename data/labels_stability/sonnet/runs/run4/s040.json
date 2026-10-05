@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T07:59:43+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The opening question and much of the conversation concern why TSH has crept up over three checks despite a stable dose.",
+        "relevance": "strong",
+        "topic": "rising thyroid hormone test trend",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user revealed a calcium supplement taken at breakfast and spent several turns on timing separation and what to do about it.",
+        "relevance": "strong",
+        "topic": "calcium supplement interaction",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what else could push TSH up and reflected that the dose is not fixed as the gland loses function.",
+        "relevance": "medium",
+        "topic": "causes of changing dose needs",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked whether to wait for the routine test or go in sooner, and the bot advised contacting the doctor now.",
+        "relevance": "medium",
+        "topic": "when to contact doctor",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user queried the six to eight week recheck interval and the bot explained it over two turns.",
+        "relevance": "medium",
+        "topic": "recheck interval for blood test",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user said they were worried the creeping number meant something bad and felt reassured, briefly.",
+        "relevance": "low",
+        "topic": "worry about deterioration",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned being a bit more tired once and could not tell if it was thyroid or ageing.",
+        "relevance": "low",
+        "topic": "increased tiredness",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user, on a long-stable levothyroxine dose with Hashimoto's, asked why their TSH has crept up over three checks. The conversation identified a calcium supplement taken at breakfast as a likely absorption factor, explained that dose needs change over time, and advised contacting the doctor and rechecking TSH after any change. The user said they had a real action plan and were satisfied."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3025,
+    "output_tokens": 724
+  },
+  "version": "sonnet"
+}

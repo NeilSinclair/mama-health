@@ -1,0 +1,95 @@
+{
+  "created_at": "2026-10-05T06:48:34+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to understand the landscape of biologics before their appointment, and most turns compare classes and fit.",
+        "relevance": "strong",
+        "topic": "biologic treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user wanted to avoid just nodding along and asked for questions to bring, which the bot supplied as a list.",
+        "relevance": "strong",
+        "topic": "preparing for rheumatology appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user called it the question that scares them most and asked for a straight answer, which took a full exchange.",
+        "relevance": "medium",
+        "topic": "long-term cancer risk",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user's prior shingles shaped JAK inhibitor suitability and led to several turns on Shingrix eligibility and timing.",
+        "relevance": "medium",
+        "topic": "shingles history and vaccination",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked how delivery routes differ for someone who travels for work and returned to it when discussing needle shyness.",
+        "relevance": "medium",
+        "topic": "injection versus infusion logistics",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked how long it takes to know if a biologic works and did not want to endure months of pain.",
+        "relevance": "medium",
+        "topic": "time to judge response",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user described persistent synovitis, long morning stiffness and raised CRP as background for the decision.",
+        "relevance": "low",
+        "topic": "active disease symptoms",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user raised it late and asked about interactions, which got a single exchange.",
+        "relevance": "low",
+        "topic": "perimenopause and hormone therapy",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user mentioned it once while considering self-injection.",
+        "relevance": "low",
+        "topic": "needle shyness",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user said at the end that the conversation lowered their anxiety.",
+        "relevance": "low",
+        "topic": "anxiety about treatment decision",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned it once as a relevant factor for immunosuppression.",
+        "relevance": "low",
+        "topic": "recurrent sinus infections",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user mentioned it in one line and it was not pursued.",
+        "relevance": "low",
+        "topic": "controlled hypertension",
+        "topic_group": "Taking medication safely"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with rheumatoid arthritis on methotrexate and sulfasalazine, whose rheumatologist wants to add a biologic, asked for an overview of options before their appointment. The bot covered drug classes, how their shingles and infection history, travel and needle shyness affect the choice, cancer risk, timelines and perimenopause, and produced a question list. The user said they felt prepared and less anxious. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 5046,
+    "output_tokens": 1055
+  },
+  "version": "sonnet"
+}

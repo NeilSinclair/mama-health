@@ -1,0 +1,7 @@
+field,sessions_unanimous,sessions_2_vs_1,sessions_3_way,fleiss_kappa,sessions_not_identical,mean_pairwise_jaccard,label_occurrences_3_of_3,label_occurrences_2_of_3,label_occurrences_1_of_3
+reason_for_conversation,47,3.0,0.0,0.931,,,,,
+issue_resolved,48,2.0,0.0,0.921,,,,,
+end_reason,47,3.0,0.0,0.888,,,,,
+strong_topics,38,,,,12.0,0.92,76.0,10.0,5.0
+strong_topic_groups,37,,,,13.0,0.893,76.0,14.0,7.0
+conversation_pain_points,42,,,,8.0,0.931,20.0,4.0,6.0

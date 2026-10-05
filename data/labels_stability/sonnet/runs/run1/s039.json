@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:48:39+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened asking which RA drugs are safe while trying and during pregnancy, and it drove most of the conversation.",
+        "relevance": "strong",
+        "topic": "pregnancy-compatible medications",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user disclosed being on methotrexate, asked if they should worry, and discussed contraception and washout.",
+        "relevance": "strong",
+        "topic": "methotrexate before conception",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked for the ideal sequence for trying in 18 months and for what to do if the new drugs control RA less well.",
+        "relevance": "strong",
+        "topic": "pregnancy planning timeline",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user asked whether pregnancy-safe meds are also okay with breastfeeding, for one exchange.",
+        "relevance": "medium",
+        "topic": "breastfeeding medication safety",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether RA changes in pregnancy and learned about postpartum flares.",
+        "relevance": "medium",
+        "topic": "RA course in pregnancy",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked who to coordinate with and whether to raise pregnancy plans with their rheumatologist now.",
+        "relevance": "medium",
+        "topic": "care team coordination",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they were scared of choosing between health and a baby and left feeling less anxious.",
+        "relevance": "medium",
+        "topic": "anxiety about medication and pregnancy",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked what happens if the new medication controls RA less well, a single exchange.",
+        "relevance": "low",
+        "topic": "treatment switch failing",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user two months into an RA diagnosis, planning a pregnancy in 1-2 years, asked which RA medications are safe around conception and pregnancy. They learned they are on methotrexate and need to stop it at least 3 months before trying, got a timeline, and heard about postpartum flares and breastfeeding. They planned to raise it with their rheumatologist and said they left feeling less anxious and with a handle on it."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 4021,
+    "output_tokens": 807
+  },
+  "version": "sonnet"
+}

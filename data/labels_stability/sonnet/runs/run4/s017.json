@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-10-05T07:59:25+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot repeated a corrected mistake",
+      "bot repeated advice already given",
+      "bot deflected to doctor despite request"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user opened with it and every turn concerns explaining and lowering fasting readings of 160-180.",
+        "relevance": "strong",
+        "topic": "high morning blood sugar",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user explicitly asked what they can do themselves and described walking and eating less rice.",
+        "relevance": "medium",
+        "topic": "self-management without doctor",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "Several turns covered when the user takes metformin, the dose, and whether it is XR.",
+        "relevance": "medium",
+        "topic": "metformin timing and formulation",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The bot suggested a 3am reading and the user asked how it works and what follows.",
+        "relevance": "medium",
+        "topic": "overnight glucose check",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The bot raised second agents and basal insulin; the user only reacted to the insulin mention.",
+        "relevance": "low",
+        "topic": "adding medication options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said 'same thing you say, go to doctor' and wanted non-doctor steps, but only briefly.",
+        "relevance": "low",
+        "topic": "repeated referral to doctor",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why their fasting sugar is always 160-180 despite taking metformin at night, walking daily and eating less rice. The bot explained dawn phenomenon and suggested a 3am check and a doctor review, but it assumed insulin use twice despite the user saying they take none, and it repeated the light-dinner and see-your-doctor advice. The user ended with 'I understand' and 'ok thanks', without clearly saying their need was met."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2121,
+    "output_tokens": 678
+  },
+  "version": "sonnet"
+}

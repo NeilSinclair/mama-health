@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:49:08+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened asking what else exists beyond the failing pill and spent most turns comparing progestin, coil and GnRH options.",
+        "relevance": "strong",
+        "topic": "alternative endometriosis treatments",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "Pain creeping back, worst in the pill-free week, is the trigger for the whole conversation.",
+        "relevance": "medium",
+        "topic": "returning endometriosis pain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked if there is anything besides hormones and engaged with pain service and pelvic floor physio.",
+        "relevance": "medium",
+        "topic": "non-hormonal pain management",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "After being discharged to the GP post-surgery, user learned to ask for gynaecology re-referral and physio access over a few turns.",
+        "relevance": "medium",
+        "topic": "specialist re-referral",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User asked if GnRH treatment is as bad as it sounds and was reassured.",
+        "relevance": "medium",
+        "topic": "fear of chemical menopause",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User wanted the whole picture before going back to the GP and summarised a list at the end.",
+        "relevance": "medium",
+        "topic": "preparing for gp appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User said in one turn that being discharged to the GP felt rubbish given where disease was found.",
+        "relevance": "low",
+        "topic": "discharge after surgery",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User briefly voiced being tired of everything being about hormones.",
+        "relevance": "low",
+        "topic": "weariness with hormonal treatments",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked once whether pelvic floor physio would need to be private.",
+        "relevance": "low",
+        "topic": "cost of private physio",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "User with endometriosis whose combined pill has stopped controlling pain asked about other options before returning to the GP. The bot suggested running the pill continuously, explained progestin, Mirena and GnRH options, noted the disease location near the bowel and ovary, and covered non-hormonal approaches, re-referral and pelvic floor physio. User ended with a clear list of things to raise and said they felt less stuck."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3798,
+    "output_tokens": 840
+  },
+  "version": "sonnet"
+}

@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:50:02+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user's 'big question' was cost and coverage, and they came back to it several times (t3, t5, t13).",
+        "relevance": "strong",
+        "topic": "medication reimbursement",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user came to ask about switching to or adding tirzepatide and how to bring it up with their doctor.",
+        "relevance": "strong",
+        "topic": "starting new diabetes injection",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked how to inject and said never having injected made them nervous (t9).",
+        "relevance": "medium",
+        "topic": "self-injection nervousness",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what to watch for and got a full answer (t11-t12).",
+        "relevance": "medium",
+        "topic": "medication side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether the drug helps with the eight kilos gained since diagnosis (t17).",
+        "relevance": "medium",
+        "topic": "weight gain and weight loss",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user mentioned a stressful year and fear of an unaffordable bill while seeking reassurance (t13).",
+        "relevance": "low",
+        "topic": "financial stress",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked once whether the drug is approved for type 2 diabetes in France (t3).",
+        "relevance": "low",
+        "topic": "drug approval status",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user mentioned their A1C was still high on metformin only as background (t1).",
+        "relevance": "low",
+        "topic": "elevated A1C",
+        "topic_group": "Tests & monitoring"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "A user with type 2 diabetes in France asked about tirzepatide, mainly whether it is approved and reimbursed, and also about how to inject it, side effects and weight effects. The bot said it was fully reimbursed and covered straight away, and repeated this firmly when the user asked again. The user ended relieved and planned to book with their doctor that week."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1851,
+    "output_tokens": 1544
+  },
+  "version": "sonnet"
+}

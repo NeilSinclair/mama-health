@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-05T06:49:22+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot missed urgent symptom"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with returning urgency and blood, gave duration and progression, and asked whether the blood was worrying.",
+        "relevance": "strong",
+        "topic": "rectal bleeding and urgency",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user's opening question was whether antibodies to the biologic could be the cause, and they asked how it works.",
+        "relevance": "strong",
+        "topic": "possible loss of response",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether this would be checked and put it first on the appointment list.",
+        "relevance": "medium",
+        "topic": "drug level and antibody testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked over two turns about dose increase versus switching and what alternatives exist.",
+        "relevance": "medium",
+        "topic": "next treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user built and checked a list of questions to bring to the gastro visit.",
+        "relevance": "medium",
+        "topic": "appointment preparation",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they were scared and spiralling, and later said they felt calmer.",
+        "relevance": "medium",
+        "topic": "fear of flare",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked once what helps with food when urgency is bad.",
+        "relevance": "low",
+        "topic": "diet during symptoms",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user mentioned the appointment is a few weeks away and asked if they could wait.",
+        "relevance": "low",
+        "topic": "wait for specialist appointment",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with Crohn's, stable on Humira for 8 months, reported 5-6 days of urgency and small, increasingly frequent blood that felt slowly worse each day. They asked about antibodies, next treatment steps, diet and whether they could wait weeks for their gastro appointment. The bot explained and helped build a question list, and told them to wait for the appointment unless things changed dramatically; it never suggested contacting their team sooner despite the worsening bleeding. The user ended calmer with a plan."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2427,
+    "output_tokens": 1594
+  },
+  "version": "sonnet"
+}

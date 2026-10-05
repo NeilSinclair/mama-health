@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-05T08:04:18+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The opening question and most turns concern why plaques itch at night and what helps.",
+        "relevance": "strong",
+        "topic": "night-time itch",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user raised waking up with raw skin from scratching and the bot gave several tips over a few turns.",
+        "relevance": "medium",
+        "topic": "scratching during sleep",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked in one turn whether greasy ointment is better than normal cream and got an answer.",
+        "relevance": "medium",
+        "topic": "ointment versus cream",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said they keep the room warm and the bot suggested cooling it, discussed over a couple of turns.",
+        "relevance": "medium",
+        "topic": "bedroom temperature",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "Waking up from itch and scratching is mentioned as background to the symptom questions.",
+        "relevance": "low",
+        "topic": "disturbed sleep",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked why psoriasis patches on the elbows and one knee itch more at night and what helps. The bot explained the reasons and suggested a cool bedroom, thick ointment before bed, short nails and a cotton layer over the knee. The user said it was what they needed and planned to try it."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1026,
+    "output_tokens": 518
+  },
+  "version": "sonnet"
+}

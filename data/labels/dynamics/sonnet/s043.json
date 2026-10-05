@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-10-05T08:07:55+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "final_sentiment": "dissatisfied",
+    "final_sentiment_quote": "No. There's nothing you can help me with. That's very clear now.",
+    "pushbacks": [
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "that's not what I'm asking about. I know how surgery works, I've done this three times.",
+        "reason": "The reply ignores the user's grief and gives more post-surgery recovery tips and a bloating offer.",
+        "turn": 3
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "Are you even reading what I'm writing?",
+        "reason": "The reply again talks about surgery recovery timelines and expectations, with no acknowledgement of the marriage or children.",
+        "turn": 5
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "Please stop with the recovery timeline.",
+        "reason": "The reply moves to pre-surgery health optimisation and a prep checklist, still ignoring the emotional content.",
+        "turn": 7
+      },
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "I'm not asking for a checklist. I'm asking to be heard.",
+        "reason": "The reply gives day-of-surgery instructions and offers a reminder list, ignoring the request to be heard.",
+        "turn": 9
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "You genuinely aren't listening at all.",
+        "reason": "The reply stays on insurance and pre-authorization paperwork and offers recovery space tips.",
+        "turn": 11
+      },
+      {
+        "bot_adapted": false,
+        "kind": "repeated question",
+        "quote": "I want you to acknowledge, even once, that I told you my life is falling apart.",
+        "reason": "The reply offers a step-by-step prep plan and never acknowledges the user's statement.",
+        "turn": 13
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "That's not acknowledging anything.",
+        "reason": "The reply mentions grief in passing but pivots to post-surgery self-care and a checklist offer, not engaging with her loss.",
+        "turn": 15
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "You're a wall.",
+        "reason": "The reply offers generic reassurance about surgery planning and asks if there's anything else, without addressing her feeling unheard.",
+        "turn": 17
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 3628,
+    "cache_write_tokens": 0,
+    "input_tokens": 1983,
+    "output_tokens": 747
+  },
+  "version": "sonnet"
+}

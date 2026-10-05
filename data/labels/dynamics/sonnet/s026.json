@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-05T08:07:52+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "final_sentiment": "dissatisfied",
+    "final_sentiment_quote": "no. i'm done for now",
+    "pushbacks": [
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "i've done all of this before",
+        "reason": "The next reply simply lists the biologic classes again, including vedolizumab, without acknowledging that the user has been through all this already.",
+        "turn": 9
+      },
+      {
+        "bot_adapted": true,
+        "kind": "correction",
+        "quote": "i've tried entyvio too. it did nothing.",
+        "reason": "The next reply drops vedolizumab and moves to Stelara, Skyrizi, upadacitinib and surgery as options for steroid-refractory disease after failed biologics.",
+        "turn": 11
+      },
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "a log. sure. that'll fix everything",
+        "reason": "The next reply defends the symptom log and moves to prednisone side-effect tips without engaging with the user's sarcasm or the despair they voiced.",
+        "turn": 15
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "i thought maybe talking would help but it's just the same stuff. logs and tips",
+        "reason": "The next reply offers another generic item, a list of warning signs to save, instead of acknowledging the complaint and changing approach.",
+        "turn": 21
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 3628,
+    "cache_write_tokens": 0,
+    "input_tokens": 1719,
+    "output_tokens": 1275
+  },
+  "version": "sonnet"
+}

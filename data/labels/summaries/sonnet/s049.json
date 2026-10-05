@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T08:05:08+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opens by saying they can't keep working, decides to resign, and the conversation centres on that decision.",
+        "relevance": "strong",
+        "topic": "leaving job due to illness",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user says they came just to talk to something that won't sigh, says they are tired of fighting for scraps, and tears up reading the letter.",
+        "relevance": "strong",
+        "topic": "emotional exhaustion and wanting support",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asks the bot to write the letter and then asks for a warmer version, which takes several turns.",
+        "relevance": "medium",
+        "topic": "resignation letter drafting",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user describes making mistakes by 11am and crashing for two days afterwards, which is the reason they can't work.",
+        "relevance": "medium",
+        "topic": "fatigue and brain fog",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asks what to do for their health after leaving and wants pacing explained properly; this is a clear turning point for them.",
+        "relevance": "medium",
+        "topic": "pacing for recovery",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The bot and user discuss concrete adjustments and the user admits they never asked HR for any, but they chose to resign instead.",
+        "relevance": "medium",
+        "topic": "workplace adjustments",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user learns they can ask for an occupational health referral, but doesn't take it further.",
+        "relevance": "low",
+        "topic": "occupational health referral",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user mentions in a line or two that HR only said to let them know if they need anything.",
+        "relevance": "low",
+        "topic": "vague HR support",
+        "topic_group": "Work & life plans"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "A user with long COVID for over two years came to talk after concluding they can't keep working because of fatigue, brain fog and post-exertional crashes. After a brief look at workplace adjustments and occupational health, the user confirmed their decision to resign, and the bot drafted and then warmed up a resignation letter. The user then asked about looking after their health and got an explanation of pacing, and said they felt calmer and that it had clicked. There was no suicidal intent: 'wants to be done' referred to resigning. No urgent symptoms or impossible bot actions came up."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2626,
+    "output_tokens": 1738
+  },
+  "version": "sonnet"
+}

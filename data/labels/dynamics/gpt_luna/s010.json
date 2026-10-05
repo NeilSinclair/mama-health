@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T13:52:22+00:00",
+  "created_at": "2026-10-05T07:54:09+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "final_sentiment": "satisfied",
@@ -8,15 +8,15 @@
       {
         "bot_adapted": true,
         "kind": "objection",
-        "quote": "I've heard the word but honestly I thought it was just a nice way of saying 'do less and stop complaining'.",
-        "reason": "The reply distinguishes pacing from simply doing less and explains how it aims to prevent crashes.",
-        "turn": 9
+        "quote": "But I don't want the falsely cheerful version.",
+        "reason": "The reply avoids reassurance alone and gives a more candid account that includes uncertainty and persistent symptoms.",
+        "turn": 3
       },
       {
         "bot_adapted": true,
         "kind": "objection",
         "quote": "Though a lot of this depends on being able to rest and I have a job and a household. Resting isn't always on the menu.",
-        "reason": "The reply acknowledges that rest is not always possible and suggests considering what can be delegated, spread out, or done differently.",
+        "reason": "The reply acknowledges that constraint and shifts to considering what could be delegated, spread out, or done differently.",
         "turn": 15
       }
     ]
@@ -25,10 +25,10 @@
   "prompt_version": "dynamics_v1",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2173,
+    "cache_read_tokens": 3791,
     "cache_write_tokens": 0,
     "input_tokens": 3794,
-    "output_tokens": 895
+    "output_tokens": 538
   },
   "version": "gpt_luna"
 }

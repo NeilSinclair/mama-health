@@ -1,0 +1,79 @@
+{
+  "created_at": "2026-10-05T06:50:07+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave wrong-country advice"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User opened with six months of severe pelvic pain that sometimes stops her working, and wanted it treated now.",
+        "relevance": "strong",
+        "topic": "chronic pelvic pain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User repeatedly said getting a specialist and an ultrasound through the public system is the core problem, with months of waiting.",
+        "relevance": "strong",
+        "topic": "access to endometriosis specialist",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User said the doctor calls it normal cramps and does not believe her, and asked how to get tests if he won't.",
+        "relevance": "strong",
+        "topic": "dismissive doctor",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User engaged with the continuous pill suggestion and said she could ask her doctor about it.",
+        "relevance": "medium",
+        "topic": "pain treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User mentioned that endometriosis was suggested as a possible cause, but did not ask about the condition itself.",
+        "relevance": "low",
+        "topic": "suspected endometriosis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User said once that she cannot work sometimes because of the pain.",
+        "relevance": "low",
+        "topic": "pain affecting work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User said she does not know what to do anymore and needs someone to believe her.",
+        "relevance": "medium",
+        "topic": "feeling not believed",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked how to get an ultrasound when her doctor does not believe her.",
+        "relevance": "low",
+        "topic": "imaging for diagnosis",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User explained she uses the public system and pays for private care only when she can, to correct the bot's insurance assumptions.",
+        "relevance": "low",
+        "topic": "public versus private care cost",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "A user in Brazil with six months of severe pelvic pain and a dismissive doctor asked for help getting believed and treated. The bot repeatedly advised insurance referrals, in-network directories and telehealth, which do not fit the public system, and the user corrected it several times. The user took away only the idea of asking about a continuous pill, then left frustrated saying the conversation was not helping."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2193,
+    "output_tokens": 843
+  },
+  "version": "sonnet"
+}

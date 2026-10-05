@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-05T06:48:31+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot missed urgent symptom"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with returning urgency and blood for several days, said it was slowly worsening, and asked whether the blood was worrying.",
+        "relevance": "strong",
+        "topic": "rectal bleeding and urgency",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user's central question was whether they are building antibodies to their biologic, and they asked how it works and what comes next.",
+        "relevance": "strong",
+        "topic": "biologic loss of response",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The bot explained these tests and the user planned to request them, over several turns.",
+        "relevance": "medium",
+        "topic": "drug level and antibody testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked whether the next step would be a higher dose or a different drug, and whether other options exist.",
+        "relevance": "medium",
+        "topic": "switching or adjusting biologic",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said they were scared this was the start of a flare, felt unsettled, and said they felt calmer at the end.",
+        "relevance": "medium",
+        "topic": "fear of flare",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user built and confirmed a list of questions and a symptom diary to take to the gastro visit.",
+        "relevance": "medium",
+        "topic": "appointment preparation",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user mentioned the appointment is a few weeks away and asked whether it is okay to wait.",
+        "relevance": "low",
+        "topic": "wait for gastro appointment",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked once about eating when urgency is bad, and the bot answered in one turn.",
+        "relevance": "low",
+        "topic": "diet during symptoms",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user stable on Humira for 8 months described 5-6 days of worsening urgency and small amounts of blood in the stool, and asked whether antibodies could be the cause. The bot explained anti-drug antibodies, drug-level testing, possible next treatments and diet, and helped build a question list for a gastro appointment weeks away. The bot did not suggest contacting the care team sooner despite the daily worsening and bleeding, and told the user it was reasonable to wait, advising care only if things changed dramatically. The user ended feeling calmer and clearer."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2427,
+    "output_tokens": 1616
+  },
+  "version": "sonnet"
+}

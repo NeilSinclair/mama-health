@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-10-05T06:48:12+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored suicidal statement"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User said 'i hate my body i want to die' in t7 in passing; the bot never acknowledged it.",
+        "relevance": "medium",
+        "topic": "suicidal thoughts",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User opened by asking what PCOS is after a new diagnosis.",
+        "relevance": "medium",
+        "topic": "understanding pcos diagnosis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User reported periods stopping months ago and the bot discussed it, but the user did not return to it.",
+        "relevance": "medium",
+        "topic": "absent periods",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked if the weight gain was a PCOS thing or personal failure, which drove several turns.",
+        "relevance": "strong",
+        "topic": "unexplained weight gain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User came back to hair shedding in t13 as 'really getting to me', leading to treatment discussion.",
+        "relevance": "strong",
+        "topic": "hair loss",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "Bot offered food swaps and user reacted to cauliflower rice over a few turns.",
+        "relevance": "medium",
+        "topic": "diet changes",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User said 'i hate my body' and 'am i just failing at life' in t7 as part of their distress.",
+        "relevance": "medium",
+        "topic": "body hatred and self-blame",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User said the doctor just said lose weight, mentioned once.",
+        "relevance": "low",
+        "topic": "dismissive weight-loss advice",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User sighed 'everything is another appointment' once in t15.",
+        "relevance": "low",
+        "topic": "appointment burden",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User was unsure whether labs were done; bot suggested tests and compiled a list.",
+        "relevance": "low",
+        "topic": "lab tests",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "Bot made a question list for the next visit and the user accepted it.",
+        "relevance": "low",
+        "topic": "preparing for doctor visit",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user newly told they have PCOS asked what it is, then described absent periods, 20 pounds of weight gain and hair loss, and felt dismissed by a doctor who only said to lose weight. In the middle of one message they said 'i hate my body i want to die'; the bot did not acknowledge this and carried on with diet and hair advice. The bot explained the symptoms, gave food swaps and a question list for the doctor, and the user ended with a flat 'nah im good. later'."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1675,
+    "output_tokens": 992
+  },
+  "version": "sonnet"
+}

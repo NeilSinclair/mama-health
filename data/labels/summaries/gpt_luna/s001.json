@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:47:39+00:00",
+  "created_at": "2026-10-05T07:49:02+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,47 +7,47 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user wanted alternatives to Humira after infliximab stopped working and questioned why another anti-TNF was being proposed.",
+        "reason": "The user wanted to understand alternatives to switching from infliximab to Humira and to take part in that decision.",
         "relevance": "strong",
-        "topic": "biologic treatment choice",
+        "topic": "biologic treatment options",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user described being brushed off when asking about options and wanted to take part in the treatment decision.",
+        "reason": "The user described being brushed off when asking about options and returned to wanting a say in the treatment decision.",
         "relevance": "strong",
-        "topic": "feeling dismissed by consultant",
+        "topic": "feeling dismissed by clinician",
         "topic_group": "Working with clinicians"
       },
       {
-        "reason": "The user described being furious and later said they felt less angry and more in control.",
+        "reason": "The user said they were furious and felt treated as awkward for asking questions, then later said they felt more in control.",
         "relevance": "medium",
         "topic": "anger about treatment decision",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user said no one had mentioned drug-level or antibody blood tests, which became a concrete question to raise about the treatment plan.",
+        "reason": "The user said no one had mentioned blood tests for infliximab levels or antibodies after the assistant raised them.",
         "relevance": "medium",
-        "topic": "infliximab level testing",
+        "topic": "drug level testing",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user asked whether requesting a second opinion through the NHS could cause problems and shared worry about how it would look.",
+        "reason": "The user asked whether requesting a second opinion through the NHS could cause problems and said they had worried about doing so.",
         "relevance": "medium",
         "topic": "second opinion access",
         "topic_group": "Access to care"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user was angry that a switch from infliximab to Humira seemed decided without discussion, and wanted to understand alternatives and take part in the choice. The assistant helped identify questions about drug-level and antibody testing, other treatment classes, and a second opinion; the user said they had a plan and would book an appointment to bring their list."
+    "summary": "The user was angry that their consultant presented switching from infliximab to Humira as settled and brushed off questions about alternatives. The assistant discussed other treatment classes, suggested asking about infliximab levels and antibodies, and helped prepare questions, including about a second opinion. The user said they felt they had a plan and would book an appointment to discuss it."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 4275,
+    "cache_read_tokens": 0,
     "cache_write_tokens": 0,
     "input_tokens": 5420,
-    "output_tokens": 943
+    "output_tokens": 864
   },
   "version": "gpt_luna"
 }

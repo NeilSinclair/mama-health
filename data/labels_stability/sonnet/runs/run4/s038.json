@@ -1,0 +1,75 @@
+{
+  "created_at": "2026-10-05T07:59:41+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot did not use plain language",
+      "bot did not answer prognosis question directly",
+      "bot overloaded user with medication names"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "Opening question and the repeated 'will I feel like this forever' return to prognosis drove the conversation.",
+        "relevance": "strong",
+        "topic": "whether fibromyalgia is treatable",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked what can be done and how to get medications, over many turns.",
+        "relevance": "strong",
+        "topic": "treatment options for fibromyalgia",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User described hurting all over, worst in mornings in hands, shoulders and hips.",
+        "relevance": "medium",
+        "topic": "widespread chronic pain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked in one turn whether tiredness after 9 hours of sleep is part of fibro.",
+        "relevance": "medium",
+        "topic": "persistent fatigue despite sleep",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User checked whether graded aerobic conditioning means walking, one short exchange.",
+        "relevance": "low",
+        "topic": "walking and exercise",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User said the doctor just gave a diagnosis and sent them home, then asked how to get medications.",
+        "relevance": "medium",
+        "topic": "doctor offered no treatment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User asked how to obtain the medicines and worried about saying the names to the doctor.",
+        "relevance": "medium",
+        "topic": "getting medications and referral",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User said they were more confused than when they started and their head was spinning.",
+        "relevance": "low",
+        "topic": "confusion from medical jargon",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A person told by their doctor that little can be done for fibromyalgia asked whether that is true, whether their morning pain and fatigue are part of it, and whether they will feel this way forever. Three times they asked for plain language, but the bot kept using terms like SNRI, central sensitization and graded aerobic conditioning. The user ended the chat confused and tired, with only a suggestion to ask their doctor about medication and a specialist referral."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2127,
+    "output_tokens": 819
+  },
+  "version": "sonnet"
+}

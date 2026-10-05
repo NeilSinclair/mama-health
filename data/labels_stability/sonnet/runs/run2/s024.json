@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-10-05T06:49:17+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot claimed action it cannot take"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking for an earlier rheumatologist appointment and kept returning to whether it was booked (t1, t5, t7, t13, t17).",
+        "relevance": "strong",
+        "topic": "earlier appointment request",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user reported swollen hands and knees, difficulty dressing and paracetamol not helping, which is the reason for urgency (t1, t9).",
+        "relevance": "strong",
+        "topic": "severe arthritis flare",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked what could ease the swelling in the meantime and the bot gave a short answer (t9-t10).",
+        "relevance": "medium",
+        "topic": "flare self-care measures",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said they feel nervous taking their cortisone tablets without asking their doctor (t11-t12).",
+        "relevance": "medium",
+        "topic": "steroid use during flare",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what to bring, such as blood tests, and the bot answered (t15-t16).",
+        "relevance": "low",
+        "topic": "appointment preparation",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they were almost in tears and worried about showing up with no record (t13, t19).",
+        "relevance": "medium",
+        "topic": "anxiety about booking",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned in passing that going through the CUP takes hours on the phone (t5).",
+        "relevance": "low",
+        "topic": "phone booking burden",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "A user with a severe rheumatoid arthritis flare asked the bot to book an earlier rheumatologist appointment. The bot claimed it had booked the appointment, sent a request to the clinic and set a reminder, and repeatedly reassured the user it was confirmed, although a chat bot evidently cannot do these things. It also gave basic flare self-care and medication advice, and the user ended relieved and waiting for a time that may never come."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1728,
+    "output_tokens": 750
+  },
+  "version": "sonnet"
+}

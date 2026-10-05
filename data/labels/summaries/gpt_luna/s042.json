@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:49:19+00:00",
+  "created_at": "2026-10-05T07:50:22+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
@@ -9,68 +9,62 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came wanting a starting point after a diagnosis the previous week and asked about the disease, its course, and where it affects the digestive tract.",
+        "reason": "The user wanted an initial explanation of Crohn's and asked whether it would be constantly bad, engaging with the explanation of flares and remission.",
         "relevance": "strong",
-        "topic": "understanding Crohn's disease",
+        "topic": "new diagnosis and outlook",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user described feeling overwhelmed at the start and later said they did not know how to organize the information, then reported feeling more able to tackle it.",
+        "reason": "The user described feeling overwhelmed after diagnosis and later said the conversation made the situation feel more manageable.",
         "relevance": "medium",
         "topic": "emotional overwhelm",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user asked what category their medication belonged to and returned to clarifying the plan after budesonide as their main next step.",
+        "reason": "The user asked what category their medication belonged to and focused on clarifying the plan after budesonide.",
         "relevance": "medium",
-        "topic": "budesonide treatment plan",
+        "topic": "steroid treatment plan",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked what monitoring to expect and received an overview of blood, stool, scope, and imaging tests.",
+        "reason": "The user directly asked what monitoring to expect, and the assistant described tests and follow-up frequency.",
         "relevance": "medium",
-        "topic": "disease monitoring",
+        "topic": "monitoring plan",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user said they did not know how to organize the information and accepted starting with one page of notes and questions.",
-        "relevance": "medium",
-        "topic": "organizing health information",
-        "topic_group": "Working with clinicians"
-      },
-      {
-        "reason": "The user asked where to learn more because online information felt scary and hard to trust, then raised whether US-based advice applied in India.",
-        "relevance": "medium",
-        "topic": "reliable health information",
-        "topic_group": "Understanding the condition & outlook"
-      },
-      {
-        "reason": "The user said they were seeing a gastroenterologist at a private hospital and wondered whether to attend a larger specialist center.",
+        "reason": "The user asked whether to move from a gastroenterologist at a private hospital to a larger specialist center.",
         "relevance": "medium",
         "topic": "specialist care",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user asked whether they should follow a Crohn's diet and received guidance about individualized food choices.",
+        "reason": "The user said they did not know how to organize what they were learning and accepted writing down questions for their doctor.",
         "relevance": "medium",
-        "topic": "Crohn's diet",
+        "topic": "health information organization",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked whether they should follow a specific Crohn's diet but did not return to the subject.",
+        "relevance": "low",
+        "topic": "diet for Crohn's",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user recalled being told the disease was near the end of the small intestine and discussed confirming the location.",
+        "reason": "The user asked where to find trustworthy information because online material felt scary, then said the answer helped narrow it down.",
         "relevance": "low",
-        "topic": "disease location",
+        "topic": "reliable health information",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked whether Crohn's would be constantly bad after hearing about flares and remission.",
+        "reason": "The user briefly asked whether Crohn's affects the whole digestive tract and recalled that theirs may be near the end of the small intestine.",
         "relevance": "low",
-        "topic": "disease course",
+        "topic": "disease location",
         "topic_group": "Understanding the condition & outlook"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user sought an orientation to a recent Crohn's diagnosis, asking about disease course and location, budesonide and the plan after it, monitoring, diet, and reliable information. The user also described feeling overwhelmed, but said the conversation made the diagnosis feel more manageable and planned to write questions and clarify the medication plan with their doctor. After the assistant recommended a US-based resource, the user said they were in India and questioned its applicability; the assistant acknowledged this and discussed local specialist care."
+    "summary": "Newly diagnosed with Crohn's, the user wanted a starting point and discussed the disease outlook, possible terminal ileum involvement, budesonide, monitoring, diet, and specialist care. After the user noted they were in India and questioned the relevance of US-based advice, the assistant acknowledged the setting and gave India-specific care context. The user felt less overwhelmed and ended with a plan to write down questions and clarify the treatment plan after budesonide with their doctor."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -79,7 +73,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 6665,
-    "output_tokens": 1703
+    "output_tokens": 2190
   },
   "version": "gpt_luna"
 }

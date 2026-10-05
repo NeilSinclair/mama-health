@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T13:52:48+00:00",
+  "created_at": "2026-10-05T07:54:36+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "final_sentiment": "dissatisfied",
@@ -9,63 +9,63 @@
         "bot_adapted": false,
         "kind": "objection",
         "quote": "that's not what I'm asking about. I know how surgery works, I've done this three times. I'm telling you that my whole life is falling apart.",
-        "reason": "The reply ignores the user's grief and returns to surgery recovery tips and another offer of procedural advice.",
+        "reason": "The reply ignores the user's distress and continues with surgery recovery tips.",
         "turn": 3
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
-        "quote": "Are you even reading what I'm writing?",
-        "reason": "The reply again overlooks the user's relationship and fertility grief and offers another recovery timeline.",
+        "quote": "Are you even reading what I'm writing? I said my marriage is falling apart. I said we can't have children. I'm not asking about bloating.",
+        "reason": "The reply again gives recovery information and offers a timeline instead of engaging with the user's grief.",
         "turn": 5
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
-        "quote": "Please stop with the recovery timeline. I have had this surgery THREE TIMES. I know the timeline.",
-        "reason": "The reply continues with pre-surgery preparation tips and offers a checklist instead of addressing the user's concerns.",
+        "quote": "Please stop with the recovery timeline. I have had this surgery THREE TIMES. I know the timeline. Did you hear the part where I said my husband and I are barely a couple anymore?",
+        "reason": "The reply repeats surgery preparation advice and offers another checklist without addressing the relationship and fertility concerns.",
         "turn": 7
       },
       {
         "bot_adapted": false,
         "kind": "objection",
-        "quote": "I'm not asking for a checklist. I'm asking to be heard.",
-        "reason": "The reply goes back to surgery logistics and offers another reminder list without responding to the request to be heard.",
+        "quote": "I just wanted somebody to hear that. I'm not asking for a checklist. I'm asking to be heard.",
+        "reason": "The reply continues with surgery-day logistics and offers another reminder list rather than hearing or acknowledging the user's losses.",
         "turn": 9
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
-        "quote": "You genuinely aren't listening at all. This is unbelievable.",
-        "reason": "The reply repeats advice about surgery paperwork and preparation, ignoring the user's complaint about not being heard.",
+        "quote": "You genuinely aren't listening at all. This is unbelievable. I pour my heart out about my marriage ending and losing my chance to be a mother and you keep telling me to bring my insurance card.",
+        "reason": "The reply continues with paperwork and surgery preparation rather than responding to the user's frustration or grief.",
         "turn": 11
       },
       {
         "bot_adapted": false,
         "kind": "repeated question",
         "quote": "I want you to acknowledge, even once, that I told you my life is falling apart. Can you do that? Just that?",
-        "reason": "The reply does not acknowledge the user's distress and instead offers another surgery-preparation plan.",
+        "reason": "The reply does not acknowledge that the user's life is falling apart and instead gives more preparation advice.",
         "turn": 13
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
-        "quote": "That's not acknowledging anything. That's still about surgery prep.",
-        "reason": "The reply briefly names grief but pivots back to recovery tips and a self-care checklist rather than engaging with what the user is grieving.",
+        "quote": "That's not acknowledging anything. That's still about surgery prep. I'm grieving. I'm grieving the kids I'll never have and the marriage I'm losing and the person I used to be. And you can't even say you heard me.",
+        "reason": "The reply briefly generalizes about grief but pivots back to recovery self-care without acknowledging the specific losses the user named.",
         "turn": 15
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
-        "quote": "You're a wall. I thought maybe typing it out somewhere, anywhere, would help but you don't even pretend to care.",
-        "reason": "The reply does not engage with the user's hurt and redirects to having a surgery plan and procedure-related help.",
+        "quote": "I can't do this. You're a wall. I thought maybe typing it out somewhere, anywhere, would help but you don't even pretend to care.",
+        "reason": "The reply offers generic reassurance and returns to surgery planning rather than engaging with the user's complaint that it has not listened.",
         "turn": 17
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
         "quote": "No. There's nothing you can help me with. That's very clear now.",
-        "reason": "The reply ignores the user's clear frustration and again offers surgery checklists, timelines, and preparation tips.",
+        "reason": "The reply repeats an offer of checklists and surgery tips despite the user's clear rejection and gives no acknowledgment of the failed interaction.",
         "turn": 19
       }
     ]
@@ -74,10 +74,10 @@
   "prompt_version": "dynamics_v1",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2173,
+    "cache_read_tokens": 3442,
     "cache_write_tokens": 0,
     "input_tokens": 3445,
-    "output_tokens": 1030
+    "output_tokens": 1288
   },
   "version": "gpt_luna"
 }

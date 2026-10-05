@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-05T06:49:06+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened asking whether it will get better and returned to what happens if they do not recover in the first 12 to 18 months.",
+        "relevance": "strong",
+        "topic": "long covid prognosis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "Several turns covered crashes after a food shop, what pacing means and how to find their energy limit.",
+        "relevance": "strong",
+        "topic": "post-exertional crashes and pacing",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user said 'it feels like forever' and that false reassurance makes them feel more alone, and was glad of honesty.",
+        "relevance": "medium",
+        "topic": "fear and loneliness about illness",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked what to raise with their GP to avoid another dismissive visit and left with concrete points.",
+        "relevance": "medium",
+        "topic": "preparing for gp appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said their last GP appointment was 'pats on the head' and referred back to it when asking for GP advice.",
+        "relevance": "low",
+        "topic": "dismissive gp",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said job and household make resting hard and their manager does not grasp it is ongoing; this took a few turns.",
+        "relevance": "medium",
+        "topic": "work adjustments and rest",
+        "topic_group": "Work & life plans"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user six months into long covid asked for an honest view on whether it will improve. The bot gave a candid outlook, explained post-exertional malaise and pacing, and covered workplace adjustments and what to raise with their GP. The user said they would start pacing and tracking and that this was the first conversation that did not make them feel worse."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2407,
+    "output_tokens": 641
+  },
+  "version": "sonnet"
+}

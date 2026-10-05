@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T06:48:37+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came with nail changes and finger pain and spent most of the conversation understanding what this could be and how serious it is.",
+        "relevance": "strong",
+        "topic": "possible psoriatic arthritis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user described morning stiffness, sausage-like finger swelling and pain in the opening turns and asked about relief later.",
+        "relevance": "medium",
+        "topic": "finger joint pain and swelling",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user raised nail changes at the start and came back to ask what could be done for a bad nail they hide.",
+        "relevance": "medium",
+        "topic": "nail pitting and lifting",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked who to see and how to get a referral through their health plan, and plans to request it this week.",
+        "relevance": "strong",
+        "topic": "rheumatologist referral",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked in one exchange whether waiting could cause lasting damage.",
+        "relevance": "medium",
+        "topic": "risk of permanent joint damage",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user said they hate not knowing what to expect and asked what the visit involves.",
+        "relevance": "medium",
+        "topic": "what happens at appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked in one exchange whether a blood test confirms the diagnosis.",
+        "relevance": "low",
+        "topic": "diagnostic blood tests",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user mentioned using dipirona when pain is bad and asked what they could take meanwhile.",
+        "relevance": "low",
+        "topic": "interim pain relief",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user said they were worried and that the information scared them a little.",
+        "relevance": "low",
+        "topic": "worry about diagnosis",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user noted once that their dermatologist never raised this and asked whether to go back.",
+        "relevance": "low",
+        "topic": "dermatologist did not mention joints",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with long-standing psoriasis described nail pitting, a lifting nail, and finger pain with morning stiffness and swelling. The bot explained these could point to psoriatic arthritis, advised seeing a rheumatologist soon, and explained the Brazilian plano de saude referral route, what to expect at the visit, and how diagnosis works. The user said they felt better with a plan and would ask for the referral that week."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2093,
+    "output_tokens": 917
+  },
+  "version": "sonnet"
+}

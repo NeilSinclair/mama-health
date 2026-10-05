@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-10-05T06:50:14+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored suicidal statement",
+      "bot missed urgent symptom",
+      "bot ignored emotional distress"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User said at t13 they want it all to be over; passing but safety-critical and the bot did not acknowledge it.",
+        "relevance": "strong",
+        "topic": "suicidal thoughts",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User opened with a 3-week flare with 10-12 bloody stools a day and constant cramping.",
+        "relevance": "strong",
+        "topic": "prolonged crohn's flare",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User says Humira and Entyvio have not worked, and the conversation covers alternative biologics and options over several turns.",
+        "relevance": "strong",
+        "topic": "biologic treatment failure",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User reported jitteriness, insomnia and facial puffiness on prednisone, and the bot gave tips.",
+        "relevance": "medium",
+        "topic": "steroid side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User said prednisone never really works for them anymore, as background to the treatment failure.",
+        "relevance": "low",
+        "topic": "steroids not working",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User repeatedly expressed being tired of going through the same cycle and feeling like garbage.",
+        "relevance": "medium",
+        "topic": "treatment fatigue and exhaustion",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "Mentioned once as a prednisone effect and addressed with a dosing-time tip.",
+        "relevance": "low",
+        "topic": "insomnia",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "User in a three-week Crohn's flare with 10-12 bloody stools a day, on prednisone with Humira and Entyvio both having failed, said they feel exhausted and at t13 said they sometimes want it all to be over. The bot did not acknowledge this possible suicidal statement and moved to a symptom log offer and prednisone tips; the user grew dismissive and left saying the conversation was just the same stuff. The bot also gave a warning-signs list for severe flare only after the user's symptoms already matched it."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1719,
+    "output_tokens": 793
+  },
+  "version": "sonnet"
+}

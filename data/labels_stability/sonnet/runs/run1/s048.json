@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T06:48:46+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came to learn what to expect when trying to conceive with PCOS, and this framed the whole conversation.",
+        "relevance": "strong",
+        "topic": "fertility with pcos",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User asked about the difference between Clomid and letrozole, whether to start medication or try naturally, and where metformin fits, over several turns.",
+        "relevance": "strong",
+        "topic": "ovulation induction options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User opened with being worked up by online horror stories and closed by asking how to stop obsessing, thanking the bot for taking the anxiety seriously.",
+        "relevance": "medium",
+        "topic": "fertility anxiety",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked the 'scary question' of how long conception usually takes, answered in one exchange.",
+        "relevance": "medium",
+        "topic": "time to conception",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked whether ovulation tests work with PCOS and how to know when to try.",
+        "relevance": "medium",
+        "topic": "ovulation timing and tracking",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked what to do now such as diet or supplements, and the bot covered prenatal vitamins and lifestyle.",
+        "relevance": "medium",
+        "topic": "preconception preparation",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked how 'a little high' insulin relates to fertility and got a full explanation.",
+        "relevance": "medium",
+        "topic": "insulin resistance and metformin",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User raised whether her husband needs checking after the bot mentioned male factors.",
+        "relevance": "medium",
+        "topic": "partner fertility testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked when to escalate from a regular OB to a fertility specialist, answered in one exchange.",
+        "relevance": "low",
+        "topic": "when to see specialist",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User built a list of questions to take back to the doctor and checked it for gaps.",
+        "relevance": "low",
+        "topic": "preparing for doctor visit",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with PCOS who is about to start trying for a baby wanted to know what to expect after reading frightening stories online. The bot explained ovulation problems, letrozole versus Clomid, metformin, ovulation tracking, partner testing, specialist referral timing and coping with anxiety, and the user built a list of questions for their doctor. The user said they felt much better and had a clear plan. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 4643,
+    "output_tokens": 952
+  },
+  "version": "sonnet"
+}

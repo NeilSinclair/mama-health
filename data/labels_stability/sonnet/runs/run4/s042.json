@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T07:59:45+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened asking to make sense of a diagnosis and much of the conversation covers flares, remission and disease location.",
+        "relevance": "strong",
+        "topic": "new diagnosis orientation",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User opened feeling overwhelmed and said at the end it felt less like a wall.",
+        "relevance": "medium",
+        "topic": "feeling overwhelmed",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User identified the steroid they were given and settled on asking what follows it, over several turns.",
+        "relevance": "medium",
+        "topic": "medication identification and plan",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked one question about what monitoring to expect and the bot answered it.",
+        "relevance": "low",
+        "topic": "monitoring schedule",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User said they did not know how to organise it all and accepted a one-page approach.",
+        "relevance": "medium",
+        "topic": "organising health information",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User asked where to learn reliably given scary online content, one exchange.",
+        "relevance": "low",
+        "topic": "reliable information sources",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User wondered whether to move to a bigger specialist centre and was reassured, one exchange.",
+        "relevance": "low",
+        "topic": "specialist centre choice",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User said they keep coming back to diet and asked about a Crohn's diet, one exchange.",
+        "relevance": "low",
+        "topic": "diet for crohn's",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user newly diagnosed with Crohn's a week earlier felt overwhelmed and asked for help understanding the condition. The bot explained flares and remission, disease location, their steroid medication, monitoring, organising information, reliable sources, care options in India and diet. The user ended feeling it was manageable and confirmed a plan to write down questions and ask their doctor about the plan after the steroid."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3586,
+    "output_tokens": 747
+  },
+  "version": "sonnet"
+}

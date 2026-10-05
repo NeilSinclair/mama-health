@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-10-05T08:07:36+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "final_sentiment": "satisfied",
+    "final_sentiment_quote": "Great. Thanks, this was actually helpful and not the usual runaround.",
+    "pushbacks": [
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "those sound like longer term. What do I do when it's Tuesday morning and I've got back to back meetings and my gut is exploding?",
+        "reason": "The bot's next reply drops the long-term therapies and gives immediate options for the acute moment: antispasmodics, peppermint oil and preemptive loperamide.",
+        "turn": 9
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 3628,
+    "cache_write_tokens": 0,
+    "input_tokens": 3283,
+    "output_tokens": 190
+  },
+  "version": "sonnet"
+}

@@ -1,0 +1,89 @@
+{
+  "created_at": "2026-10-05T07:59:51+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to learn what to expect when trying for a baby with PCOS, and every turn returns to this.",
+        "relevance": "strong",
+        "topic": "conceiving with pcos",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user opened by saying they were worked up by online horror stories, asked how to keep it from taking over, and thanked the bot for treating the anxiety as real.",
+        "relevance": "strong",
+        "topic": "fertility anxiety",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked about the difference between Clomid and letrozole and whether to start medication straight away.",
+        "relevance": "medium",
+        "topic": "ovulation induction options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked how long conception realistically takes and called it the scary question.",
+        "relevance": "medium",
+        "topic": "time to conceive",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked the bot to explain how high insulin relates to fertility and whether metformin might help.",
+        "relevance": "medium",
+        "topic": "metformin and insulin resistance",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether ovulation tests work with irregular cycles and when to try.",
+        "relevance": "medium",
+        "topic": "ovulation timing and tracking",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to do now, such as diet changes or supplements, and the bot suggested a prenatal vitamin and lifestyle steps.",
+        "relevance": "low",
+        "topic": "preconception diet and supplements",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked in one turn whether the husband needs checking, then added it to the list.",
+        "relevance": "low",
+        "topic": "partner fertility testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked in one turn when to move from a regular OB to a fertility specialist.",
+        "relevance": "low",
+        "topic": "when to see specialist",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user recapped a list of questions and steps to take back to the doctor.",
+        "relevance": "low",
+        "topic": "preparing for doctor visit",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user described cycles of 35 to 50+ days as background to the fertility question.",
+        "relevance": "low",
+        "topic": "irregular cycles",
+        "topic_group": "Physical symptoms"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with PCOS who is starting to try for a baby with her husband came in anxious about online horror stories. The bot explained how PCOS affects ovulation, covered letrozole, Clomid and metformin, ovulation tracking, timeline, partner testing and when to see a specialist, and helped the user build a list of next steps for her doctor. The user said she felt much better and thanked the bot for taking the anxiety seriously."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 4643,
+    "output_tokens": 1001
+  },
+  "version": "sonnet"
+}

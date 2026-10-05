@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-10-05T08:08:02+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "final_sentiment": "neutral",
+    "final_sentiment_quote": "Right. Okay. I think I have the general picture at least.",
+    "pushbacks": [
+      {
+        "bot_adapted": true,
+        "kind": "correction",
+        "quote": "I've done all of that. Salt loading, waist-high 30-40mmHg compression, ivabradine, midodrine, the recumbent rowing protocol.",
+        "reason": "The reply drops POTS management and moves to disease-modifying research such as BC 007, temelimab and antiviral trials.",
+        "turn": 3
+      },
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "Reading about BC 007 or temelimab doesn't help me if I can't get them.",
+        "reason": "The reply shifts from describing molecules to how to find and access trials, naming ClinicalTrials.gov and RECOVER.",
+        "turn": 7
+      },
+      {
+        "bot_adapted": true,
+        "kind": "correction",
+        "quote": "I've been on ClinicalTrials.gov. It's a mess.",
+        "reason": "The reply gives new, concrete filters (Recruiting, Interventional, location) and explains how to read eligibility criteria rather than just repeating the site name.",
+        "turn": 9
+      },
+      {
+        "bot_adapted": true,
+        "kind": "repeated question",
+        "quote": "Okay but 'reach out to the coordinator' — for which ones? That's what I keep getting stuck on.",
+        "reason": "The reply answers the narrower question by listing the screening criteria and how to match her profile to get a yes/maybe/no before contacting anyone.",
+        "turn": 11
+      },
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "I still have to do all that reading and matching myself, one trial at a time, while cognitively impaired. There's no shortcut? No service that matches you?",
+        "reason": "The reply offers different routes, such as the RECOVER interest pathway, curated patient-organization lists and clinic trial rosters, in place of more self-screening.",
+        "turn": 13
+      },
+      {
+        "bot_adapted": false,
+        "kind": "correction",
+        "quote": "I'm not at a dedicated clinic. My care is basically a cardiologist for the POTS and my PCP.",
+        "reason": "The reply acknowledges the waitlist problem but still recommends joining a clinic waitlist, adding only a referral from her PCP or cardiologist.",
+        "turn": 15
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "It just feels like the answer is always 'get into a clinic that won't see you' or 'read a thousand trial listings yourself.'",
+        "reason": "The reply says \"I hear that\" and then restates the same waitlist, referral and documentation advice.",
+        "turn": 17
+      },
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "So basically I still have to go do the searching myself.",
+        "reason": "The reply confirms that she does and re-summarizes the same clinic-plus-filtered-search path without offering a new option.",
+        "turn": 21
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 3628,
+    "cache_write_tokens": 0,
+    "input_tokens": 3225,
+    "output_tokens": 1722
+  },
+  "version": "sonnet"
+}

@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-10-05T07:59:19+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave wrong-country advice",
+      "bot did not answer the user's request",
+      "bot dismissed local pharmacy option"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User came to ask which supplements to try after their doctor suggested them, and the whole conversation revolves around it.",
+        "relevance": "strong",
+        "topic": "supplements for fibromyalgia pain",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked which brand to buy and whether Japanese pharmacy brands are acceptable, over several turns.",
+        "relevance": "medium",
+        "topic": "supplement brand quality",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked how much magnesium and CoQ10 to take, two turns.",
+        "relevance": "medium",
+        "topic": "supplement dosing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User said Whole Foods is unavailable, asked about local pharmacy brands and customs rules for imports.",
+        "relevance": "medium",
+        "topic": "sourcing supplements in japan",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User asked if the bot knows kampo, which is used locally and by their mother; the bot did not engage.",
+        "relevance": "medium",
+        "topic": "kampo herbal medicine",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user in Japan asked which supplements to try for fibromyalgia pain and got suggestions, doses for magnesium and CoQ10, and brand advice. The bot kept recommending US brands via iHerb, assumed Whole Foods was available, brushed off the user's question about local pharmacy brands and customs worries, and never addressed kampo. The user ended by saying they would ask their local pharmacist, with no sign their questions were answered."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1616,
+    "output_tokens": 616
+  },
+  "version": "sonnet"
+}

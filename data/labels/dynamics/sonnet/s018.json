@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T08:07:48+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "final_sentiment": "dissatisfied",
+    "final_sentiment_quote": "no. i think this is not helping me. tchau",
+    "pushbacks": [
+      {
+        "bot_adapted": false,
+        "kind": "correction",
+        "quote": "insurance? i am in brazil. we dont have this like in US. i use SUS mostly, sometimes i pay private when i can",
+        "reason": "The reply says 'Understood' but again tells her to call her insurance provider about in-network specialists and use telehealth, so it keeps the US-based assumption.",
+        "turn": 5
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "you not listen. there is no insurance network here like that.",
+        "reason": "The reply says 'I hear you' but repeats the referral and telehealth advice, adds sliding-scale fees, and asks whether her plan covers specialist visits.",
+        "turn": 7
+      },
+      {
+        "bot_adapted": true,
+        "kind": "frustration",
+        "quote": "porque você não entende? no plan. no network. i explain already",
+        "reason": "The reply drops the insurance framing and moves to country-independent medical steps (ultrasound, MRI, NSAIDs, hormonal options).",
+        "turn": 9
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "there is no insurance directory for me. i think you only know US things",
+        "reason": "The reply says the core advice 'holds regardless of country' and still tells her to confirm the doctor takes her coverage and use telehealth.",
+        "turn": 13
+      },
+      {
+        "bot_adapted": true,
+        "kind": "frustration",
+        "quote": "you keep saying same things",
+        "reason": "The reply acknowledges the wait and changes direction to what she can do while waiting, offering a symptom diary instead of more specialist-finding advice.",
+        "turn": 15
+      },
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "what i really need is someone believe me and treat the pain now",
+        "reason": "The reply turns to treating the pain now, with scheduled NSAIDs and continuous hormonal pills she can ask any doctor for, instead of the diary.",
+        "turn": 17
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "getting the specialist is exactly the problem i keep telling you.",
+        "reason": "The reply repeats the same advice to find a specialist 'through your insurance directory or a specialist finder' and confirm coverage.",
+        "turn": 21
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "insurance directory again... esquece. você não vai entender",
+        "reason": "The reply apologises briefly and then offers generic help with endometriosis symptoms and hormonal options, without acknowledging the repeated insurance error.",
+        "turn": 23
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "i think this is not helping me.",
+        "reason": "The reply is a closing line that repeats the earlier advice to keep tracking and find a specialist, with no change of approach.",
+        "turn": 25
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 3628,
+    "cache_write_tokens": 0,
+    "input_tokens": 2193,
+    "output_tokens": 1805
+  },
+  "version": "sonnet"
+}

@@ -1,42 +1,42 @@
 {
-  "created_at": "2026-10-01T15:48:46+00:00",
+  "created_at": "2026-10-05T07:49:53+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
       "bot missed urgent symptom",
       "bot ignored suicidal statement",
-      "bot deflected emotional distress"
+      "bot ignored emotional distress"
     ],
     "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user opened with a three-week flare and described frequent bloody bowel movements and constant cramping.",
+        "reason": "The user described a three-week flare with 10–12 bowel movements a day, blood most times, and constant cramping.",
         "relevance": "strong",
-        "topic": "flare symptoms",
+        "topic": "bloody diarrhea and cramping",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user said they sometimes wanted it all to be over, later said they were tired, and explained they had hoped talking would help.",
+        "reason": "The user said they sometimes wanted it all to be over and later said they had hoped talking would help.",
         "relevance": "strong",
         "topic": "suicidal thoughts",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user said Humira was not working and that Entyvio had not helped while discussing possible next treatments.",
-        "relevance": "medium",
-        "topic": "treatment options after biologic failure",
-        "topic_group": "Treatment choice"
-      },
-      {
-        "reason": "The user described jitteriness, insomnia, and facial swelling while taking prednisone, and later asked for side-effect tips.",
+        "reason": "The user reported jitteriness, insomnia, and facial puffiness while taking prednisone.",
         "relevance": "medium",
         "topic": "prednisone side effects",
         "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user said Humira was not helping and that Entyvio had also failed, while the conversation considered other treatment options.",
+        "relevance": "medium",
+        "topic": "biologic treatment failure",
+        "topic_group": "Treatment choice"
       }
     ],
     "reason_for_conversation": "emotional",
-    "summary": "The user described a three-week Crohn's flare with 10–12 bloody bowel movements a day and constant cramping, alongside prednisone side effects and concern that Humira was not working; they also said Entyvio had failed. The user said they sometimes wanted it all to be over, but the assistant pivoted to symptom logging and practical tips without acknowledging or assessing that statement; it also did not recognize that the reported symptoms matched the warning signs it later described conditionally. The user said they had hoped talking would help, called the advice more of the same, and ended the conversation without their need being met."
+    "summary": "The user described a prolonged Crohn’s flare with frequent bloody bowel movements and constant cramping, along with prednisone side effects and treatments that had not helped. They said they sometimes wanted it all to be over; the assistant did not respond to that disclosure and instead offered a symptom log and medication tips, later warning about urgent symptoms without addressing that the user already reported more than 10 bloody stools a day. The user said they had hoped talking would help, felt the conversation was just logs and tips, and ended it without their need being met."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -45,7 +45,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 5434,
-    "output_tokens": 1390
+    "output_tokens": 1661
   },
   "version": "gpt_luna"
 }

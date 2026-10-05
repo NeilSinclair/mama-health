@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:48:02+00:00",
+  "created_at": "2026-10-05T07:49:21+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,50 +7,44 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened by asking whether long COVID would improve and returned to ask what persistent symptoms could mean.",
+        "reason": "The user asked whether they would improve, returned to the timeline, and asked what persistent symptoms could mean.",
         "relevance": "strong",
         "topic": "long covid outlook",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked how to find an energy limit and ended by planning to try pacing and activity tracking.",
+        "reason": "The user discussed pacing, finding an energy limit, and tracking activity after food shopping led to prolonged crashes.",
         "relevance": "strong",
-        "topic": "pacing activity",
+        "topic": "pacing and activity",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user described being wiped out for days after a food shop and asked whether those crashes could affect recovery.",
+        "reason": "The user described being wiped out for days after an ordinary activity and asked whether those crashes could affect recovery.",
         "relevance": "medium",
         "topic": "post-exertional crashes",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user described the long timeline as feeling like forever and said false reassurance made them feel more alone.",
+        "reason": "The user said work and household demands limit opportunities to rest and that their manager does not understand the ongoing illness.",
         "relevance": "medium",
-        "topic": "emotional distress",
-        "topic_group": "Emotional wellbeing"
-      },
-      {
-        "reason": "The user said work and household demands limit rest and that their manager does not understand the illness is ongoing.",
-        "relevance": "medium",
-        "topic": "workplace adjustments",
+        "topic": "workplace impact",
         "topic_group": "Work & life plans"
       },
       {
-        "reason": "The user described a prior GP appointment as dismissive and asked what to raise at a future appointment.",
+        "reason": "The user described a prior GP appointment as dismissive and asked how to make the next conversation more concrete.",
         "relevance": "medium",
         "topic": "dismissive clinician",
         "topic_group": "Working with clinicians"
       },
       {
-        "reason": "The user asked what to flag to their GP, and the assistant suggested asking about referral to a long COVID service.",
-        "relevance": "low",
-        "topic": "long covid clinic referral",
-        "topic_group": "Access to care"
+        "reason": "The user said the uncertain timeline felt endless and that false reassurance made them feel more alone.",
+        "relevance": "medium",
+        "topic": "fear and loneliness",
+        "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user wanted an honest account of whether long COVID might improve, described delayed crashes after ordinary activity, and explored pacing around work and household demands. The assistant discussed uncertainty in recovery, ways to track activity, possible workplace adjustments, and points to raise with the GP; the user said the conversation helped and planned to try pacing and tracking."
+    "summary": "The user wanted an honest account of whether long covid might improve, and described crashes lasting days after ordinary activity. The conversation covered pacing and tracking despite work and household constraints, as well as preparing for a GP discussion; the user said the exchange did not make them feel worse. They planned to try pacing and tracking and felt they had something concrete to raise with their GP."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -59,7 +53,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 5896,
-    "output_tokens": 1062
+    "output_tokens": 1310
   },
   "version": "gpt_luna"
 }

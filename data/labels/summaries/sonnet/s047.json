@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T08:05:01+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The opening question and most of the follow-ups ask whether methotrexate is safe alongside long-term warfarin.",
+        "relevance": "strong",
+        "topic": "methotrexate and warfarin interaction",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked over several turns whether the routine blood tests would pick up warfarin problems and help set the dose.",
+        "relevance": "medium",
+        "topic": "blood test monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to watch for at home and the bot listed bleeding and methotrexate warning signs.",
+        "relevance": "medium",
+        "topic": "warning signs to watch at home",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked how the dose is set and confirmed the once-weekly schedule their GP had stressed.",
+        "relevance": "medium",
+        "topic": "weekly methotrexate dosing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user mentioned an earlier bad reaction to antibiotics and asked whether methotrexate would behave similarly.",
+        "relevance": "low",
+        "topic": "warfarin sensitivity to other medicines",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked near the end what to raise with the GP before starting, and got a short list.",
+        "relevance": "low",
+        "topic": "preparing questions for GP",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they were a bit worried at the start and felt better by the end, but this was not a focus.",
+        "relevance": "low",
+        "topic": "worry about starting treatment",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user prescribed methotrexate for rheumatoid arthritis asked whether it is safe alongside long-term warfarin. The bot gave general reassurance about monitoring, home warning signs, weekly dosing and questions for the GP, without a specific answer on how the two drugs interact. The user said they felt much better and ended satisfied."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1705,
+    "output_tokens": 1358
+  },
+  "version": "sonnet"
+}

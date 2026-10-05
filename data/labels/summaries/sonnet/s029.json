@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T08:04:41+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened overwhelmed by the new diagnosis and asked how it relates to PCOS and which came first, driving the early turns.",
+        "relevance": "strong",
+        "topic": "insulin resistance with pcos",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked about a PCOS diet and whether low glycemic means no carbs, over several turns.",
+        "relevance": "strong",
+        "topic": "diet for pcos",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked what exercise is best given they dislike the gym and chose after-dinner walks as a plan.",
+        "relevance": "medium",
+        "topic": "exercise preferences",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User was surprised the doctor suggested metformin without diabetes and decided to start it.",
+        "relevance": "medium",
+        "topic": "metformin for insulin resistance",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked about stomach upset in one exchange.",
+        "relevance": "low",
+        "topic": "metformin side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User asked whether there is anything besides a pill, which opened the lifestyle discussion.",
+        "relevance": "low",
+        "topic": "lifestyle versus medication",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User said hearing 'lose weight' is frustrating after many failed attempts, a brief but real emotional moment.",
+        "relevance": "medium",
+        "topic": "weight loss frustration",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User said at the start they felt overwhelmed and later said the breakdown helped.",
+        "relevance": "medium",
+        "topic": "feeling overwhelmed by diagnosis",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked whether a sensor would be useful, took two turns.",
+        "relevance": "low",
+        "topic": "continuous glucose monitor",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User mentioned doubting their health insurer would cover it, in one line.",
+        "relevance": "low",
+        "topic": "insurance coverage of monitor",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user newly told they have insulin resistance alongside PCOS felt overwhelmed and asked how the two relate, about metformin and its side effects, and about diet, exercise and a glucose monitor. The bot explained each point, addressed frustration over weight loss, and the user said the breakdown helped and chose to start metformin and walk after dinner. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2317,
+    "output_tokens": 913
+  },
+  "version": "sonnet"
+}

@@ -11,6 +11,10 @@ DEFAULT_LABELS_DIR = Path("data/labels")
 # Cap on output tokens per call. Generous because reasoning models count reasoning tokens here.
 MAX_OUTPUT_TOKENS = 16_000
 
+# Cap for streamed (Anthropic) calls, where a large cap cannot hit an HTTP timeout. Thinking
+# tokens count towards it, and the consolidation answer lists every raw label.
+MAX_STREAMED_OUTPUT_TOKENS = 64_000
+
 # Parallel calls after the cache warm-up call.
 CONCURRENCY = 8
 
@@ -28,11 +32,13 @@ class ModelSpec:
         label: Human-readable name for the explorer UI.
     """
 
-    provider: Literal["openai"]
+    provider: Literal["anthropic", "openai"]
     model_id: str
     label: str
 
 
+# The first version with complete cached labels feeds the memo (D-055).
 MODELS: dict[str, ModelSpec] = {
+    "sonnet": ModelSpec("anthropic", "claude-sonnet-5-5", "Sonnet 5.5"),
     "gpt_luna": ModelSpec("openai", "gpt-6-luna", "GPT Luna"),
 }

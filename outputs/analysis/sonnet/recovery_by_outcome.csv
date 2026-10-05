@@ -1,0 +1,4 @@
+end_reason,n_sessions,sessions_with_pushback,pushbacks,adapted,not_adapted,sessions_with_unadapted_pushback
+need met,40,8,9,6,3,3
+partial resolution,4,4,19,13,6,3
+unresolved need,6,5,38,9,29,5

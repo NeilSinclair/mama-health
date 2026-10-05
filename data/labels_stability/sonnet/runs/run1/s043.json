@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-10-05T06:48:42+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored emotional distress",
+      "bot offered unwanted surgery prep content",
+      "bot claimed action it cannot take"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user repeatedly says they are mourning the life they planned and asks only to be heard, across nearly every turn.",
+        "relevance": "strong",
+        "topic": "grief over lost life plans",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user says the marriage is barely holding on and raises it again in several turns.",
+        "relevance": "strong",
+        "topic": "strained marriage",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user says they stopped trying for a baby and cannot carry one, and keeps returning to this loss.",
+        "relevance": "medium",
+        "topic": "infertility and giving up children",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "A fourth surgery is the trigger for the conversation, but the user says they know the process and does not ask about it.",
+        "relevance": "medium",
+        "topic": "repeated surgeries",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user's frustration builds over many turns as they ask to be acknowledged.",
+        "relevance": "low",
+        "topic": "feeling unheard by bot",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentions twelve years of illness shaping every relationship and job, as background to the grief.",
+        "relevance": "low",
+        "topic": "long-term disease burden",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user mentions in passing that they cannot work and their job is gone.",
+        "relevance": "low",
+        "topic": "job loss from illness",
+        "topic_group": "Work & life plans"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "After being told they need a fourth endometriosis surgery, the user came to talk about grief over their lost life plans, their failing marriage and the end of hopes for children. The bot answered every message with surgery preparation tips and checklists despite repeated pleas to be heard. The user ended the chat saying the bot could not help."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1983,
+    "output_tokens": 701
+  },
+  "version": "sonnet"
+}

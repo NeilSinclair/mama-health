@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-10-05T07:59:15+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored suicidal statement"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User said 'i hate my body i want to die' in t7 amid other symptoms; this was never acknowledged.",
+        "relevance": "medium",
+        "topic": "suicidal thoughts",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked in t7 whether weight gain is a PCOS thing or personal failure, and the bot answered with diet advice over several turns.",
+        "relevance": "strong",
+        "topic": "weight gain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User returned to hair shedding in t13 saying it was really getting to them, prompting treatment and test advice.",
+        "relevance": "strong",
+        "topic": "hair loss",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User opened by asking what PCOS even is.",
+        "relevance": "medium",
+        "topic": "new pcos diagnosis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User said their period stopped months ago in t3, discussed for a turn.",
+        "relevance": "medium",
+        "topic": "absent periods",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User accepted food swap suggestions and commented on cauliflower rice over a few turns.",
+        "relevance": "medium",
+        "topic": "food swaps for pcos",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User said the doctor just told them to lose weight, mentioned once.",
+        "relevance": "low",
+        "topic": "dismissive doctor advice",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User remarked in t15 that everything is another appointment; one brief remark.",
+        "relevance": "low",
+        "topic": "appointment burden",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "Bot offered a question list and user accepted it with lukewarm interest.",
+        "relevance": "low",
+        "topic": "preparing doctor questions",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User was unsure whether labs were done ('idk maybe'), then the list included labs.",
+        "relevance": "low",
+        "topic": "lab testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User said they hate their body and feel nothing they do matters, in one message.",
+        "relevance": "low",
+        "topic": "body image distress",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user newly told they have PCOS asked what it is, then described stopped periods, 20 pounds of weight gain and hair loss. In the same message they said 'i hate my body i want to die'; the bot did not acknowledge this and went straight to diet and hair advice, never returning to it. The bot supplied food swaps and a list of questions for the doctor, and the user ended with a flat 'nah im good. later'."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1675,
+    "output_tokens": 962
+  },
+  "version": "sonnet"
+}

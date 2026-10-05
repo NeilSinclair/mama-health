@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:48:15+00:00",
+  "created_at": "2026-10-05T07:49:26+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,44 +7,56 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user described recurring diarrhea, cramping, and urgency during stressful work weeks and asked what could help.",
+        "reason": "The user opened by asking what they could do about flares that almost always occur during stressful work weeks.",
         "relevance": "strong",
         "topic": "stress-triggered IBS flares",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user focused on what to do during an immediate flare and asked about using loperamide before symptoms, then included acute treatments in their plan.",
+        "reason": "The user asked for immediate strategies for a morning of back-to-back meetings and later asked what a practical plan would look like.",
         "relevance": "strong",
-        "topic": "acute flare treatments",
+        "topic": "flare management options",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user explored hypnotherapy and CBT after learning they may help with the stress-symptom pattern, including where to find them.",
+        "reason": "The user described diarrhea, cramping, and repeated urgent trips to the bathroom that disrupt meetings.",
+        "relevance": "medium",
+        "topic": "diarrhea and urgency",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked about useful longer-term approaches, responded to the evidence for hypnotherapy, and included it in the plan they accepted.",
         "relevance": "medium",
         "topic": "gut-brain therapies",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user mentioned drinking several coffees on stressful days and considered cutting back as part of the plan.",
+        "reason": "The user mentioned drinking several coffees on stressful days and discussed whether cutting back could help their symptoms.",
         "relevance": "medium",
-        "topic": "caffeine and symptoms",
+        "topic": "caffeine use",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user said urgency and repeated bathroom trips disrupt meetings, though the conversation focused more on symptom management than workplace impact.",
-        "relevance": "low",
-        "topic": "work disruption",
-        "topic_group": "Work & life plans"
+        "reason": "The user asked whether to involve their doctor and mentioned prior advice to eat more fiber.",
+        "relevance": "medium",
+        "topic": "doctor involvement",
+        "topic_group": "Working with clinicians"
       },
       {
-        "reason": "The user compared the discussion with prior fiber advice and asked whether to involve their doctor in trying the options.",
-        "relevance": "medium",
-        "topic": "doctor guidance",
-        "topic_group": "Working with clinicians"
+        "reason": "The user asked where to find gut-directed hypnotherapy, though the conversation soon shifted to immediate flare management.",
+        "relevance": "low",
+        "topic": "finding hypnotherapy",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said urgent symptoms are disruptive during meetings, but did not explore the work impact separately.",
+        "relevance": "low",
+        "topic": "work meeting disruption",
+        "topic_group": "Work & life plans"
       }
     ],
-    "reason_for_conversation": "decisional",
-    "summary": "The user described stress-linked IBS flares with diarrhea, cramping, and urgency that disrupt meetings, and wanted practical ways to manage them. The assistant discussed longer-term gut-directed therapies, acute options, caffeine changes, and when to involve a doctor; the user said the advice was helpful and accepted a plan to try."
+    "reason_for_conversation": "informational",
+    "summary": "The user described stress-linked IBS flares with diarrhea, cramping, and urgency that disrupt work meetings, and asked for practical ways to manage them. The assistant discussed gut-directed therapies, acute symptom options, caffeine reduction, and when to involve the doctor; the user said the advice was helpful and accepted a plan to try."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -53,7 +65,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 6366,
-    "output_tokens": 1437
+    "output_tokens": 1377
   },
   "version": "gpt_luna"
 }

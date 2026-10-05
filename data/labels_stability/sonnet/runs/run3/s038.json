@@ -1,0 +1,74 @@
+{
+  "created_at": "2026-10-05T06:50:25+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored plain language requests",
+      "bot overloaded user with medication detail"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User opened by asking if nothing can be done and later restated wanting to know if she will feel this way forever.",
+        "relevance": "strong",
+        "topic": "fibromyalgia treatability and outlook",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "Much of the conversation was the bot listing medicines and exercise options, and the user asked how to get them.",
+        "relevance": "medium",
+        "topic": "treatment options for fibromyalgia",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User described pain in hands, shoulders and hips, worst in mornings, and asked if it is the fibro.",
+        "relevance": "medium",
+        "topic": "morning pain and stiffness",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User raised tiredness despite 9 hours of sleep in one turn and asked if it was fibro.",
+        "relevance": "medium",
+        "topic": "fatigue despite sleep",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked briefly whether the exercise advice meant walking.",
+        "relevance": "low",
+        "topic": "walking and gentle exercise",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User said the doctor diagnosed and sent her home without options, and asked how to get treatments.",
+        "relevance": "medium",
+        "topic": "doctor offered no treatment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User worried she cannot pronounce drug names to say to the doctor.",
+        "relevance": "low",
+        "topic": "how to ask doctor for medication",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User repeatedly said she was confused and her head was spinning, though this concerns the bot's wording.",
+        "relevance": "low",
+        "topic": "confusion from complex language",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A 71-year-old user with fibromyalgia asked whether anything can be done and whether she will feel this way forever. The bot repeatedly used technical terms and drug class names despite three requests for plain language, leaving her more confused. She ended the chat tired, thanking the bot, with only a plain-language takeaway to ask her doctor about medication and referral."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2127,
+    "output_tokens": 811
+  },
+  "version": "sonnet"
+}

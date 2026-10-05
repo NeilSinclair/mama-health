@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-05T08:04:39+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user's central question was how to reconcile 'exercise is key' with being flattened for days, and the whole conversation addressed it.",
+        "relevance": "strong",
+        "topic": "exercise causing delayed crashes",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user said they overdo it on good days and crash, and called the idea of capping good days the most useful thing they had heard.",
+        "relevance": "strong",
+        "topic": "pacing and boom-bust cycle",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked whether walking or yoga is better, which led to warm-water exercise at a community pool.",
+        "relevance": "medium",
+        "topic": "best type of exercise",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked how long before they would notice a difference, and the bot gave a realistic timeframe over one exchange.",
+        "relevance": "medium",
+        "topic": "time to see improvement",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user opened by saying they needed to vent and felt stuck and punished for trying, but the feeling was mostly framing for the practical question.",
+        "relevance": "low",
+        "topic": "frustration with conflicting advice",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user said doctors only say 'exercise' and that this conversation helped more than many appointments, mentioned briefly.",
+        "relevance": "low",
+        "topic": "unhelpful clinician advice",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with fibromyalgia vented about being told to exercise while crashing for days afterward. The bot explained graded exercise, starting very small, and capping activity on good days, and also suggested warm-water exercise and tracking progress. The user said it was the most useful advice they had received and planned to try the community pool."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3743,
+    "output_tokens": 674
+  },
+  "version": "sonnet"
+}

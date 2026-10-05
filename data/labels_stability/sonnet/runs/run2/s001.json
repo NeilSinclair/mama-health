@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-05T06:48:56+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came because infliximab stopped working and the consultant fixed on Humira, and asked about alternatives across many turns.",
+        "relevance": "strong",
+        "topic": "choice of next biologic",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User is furious at being brushed off and treated as awkward, and wants to be part of the decision.",
+        "relevance": "strong",
+        "topic": "dismissive consultant",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User opens furious and says later that they now feel a handle on things instead of anger.",
+        "relevance": "medium",
+        "topic": "anger and feeling unheard",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "Bot raised it, user said no one had mentioned it and took it as something to push back with.",
+        "relevance": "medium",
+        "topic": "drug level and antibody testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked about it and worried it would look like going behind the consultant's back, over a few turns.",
+        "relevance": "medium",
+        "topic": "second opinion on nhs",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "Stated as background to the treatment switch and not explored on its own.",
+        "relevance": "low",
+        "topic": "loss of response to infliximab",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "User on infliximab for four years that stopped working was angry that their consultant decided on Humira and brushed off questions about alternatives. The bot validated their feelings, explained other biologic classes, suggested asking about drug level and antibody testing, drafted questions for the appointment and covered second opinions on the NHS. The user ended feeling they had a plan and said they would book the appointment and bring the list. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1694,
+    "output_tokens": 629
+  },
+  "version": "sonnet"
+}

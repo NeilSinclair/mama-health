@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:49:29+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to work out how to handle an infusion that falls mid-trip and returned to timing and delay risk across many turns.",
+        "relevance": "strong",
+        "topic": "infusion timing around travel",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked what to do about travelling while immunosuppressed, which led to vaccine and infection precautions.",
+        "relevance": "medium",
+        "topic": "travel with immunosuppression",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user picked up on insurance coverage and said they always forget to check it, discussed over a couple of turns.",
+        "relevance": "medium",
+        "topic": "travel insurance for pre-existing condition",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said they should know where to go if they flare abroad, and the bot gave a short answer.",
+        "relevance": "medium",
+        "topic": "care abroad during flare",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked about paperwork and medication lists to carry, and discussed it for two turns.",
+        "relevance": "medium",
+        "topic": "travel medical documentation",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked how much delay is too much and the bot declined to give a number, so this fed into the main timing question.",
+        "relevance": "medium",
+        "topic": "risk of delaying infusion",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user mentioned usually feeling tired the day after an infusion, which shaped when to schedule it.",
+        "relevance": "low",
+        "topic": "post-infusion tiredness",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user described a stressful blob of worry in the closing message and did not raise it elsewhere.",
+        "relevance": "low",
+        "topic": "travel worry",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user wanted to understand options so they would not sound clueless when calling the team.",
+        "relevance": "low",
+        "topic": "preparing for infusion centre call",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user on infliximab for Crohn's, with an infusion due mid-way through a three-week trip abroad, wanted to understand how to handle the timing and travel prep. The bot explained that bringing the infusion forward is safer than delaying it, and covered vaccines, insurance, documentation and care abroad. The user summarised a clear action plan, said it turned worry into steps, and planned to call their team the next day. No safety-critical moments occurred."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2667,
+    "output_tokens": 881
+  },
+  "version": "sonnet"
+}

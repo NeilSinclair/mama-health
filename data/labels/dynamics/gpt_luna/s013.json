@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T13:52:21+00:00",
+  "created_at": "2026-10-05T07:54:11+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "final_sentiment": "satisfied",
@@ -9,7 +9,7 @@
         "bot_adapted": true,
         "kind": "objection",
         "quote": "Though I'll be honest I'm a bit skeptical of anything that sounds like 'just relax.'",
-        "reason": "The reply directly distinguishes the suggested therapies from generic relaxation advice and explains their targeted approach.",
+        "reason": "The reply distinguishes the therapies from generic relaxation advice and explains their specific approach.",
         "turn": 5
       }
     ]
@@ -18,10 +18,10 @@
   "prompt_version": "dynamics_v1",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2173,
+    "cache_read_tokens": 4261,
     "cache_write_tokens": 0,
     "input_tokens": 4264,
-    "output_tokens": 553
+    "output_tokens": 675
   },
   "version": "gpt_luna"
 }

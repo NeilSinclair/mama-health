@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:48:15+00:00",
+  "created_at": "2026-10-05T07:49:23+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,38 +7,50 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened with pain returning and said it was worst during the pill-free week.",
+        "reason": "The user opened by saying the pain was creeping back and described severe pain during the pill break.",
         "relevance": "strong",
         "topic": "returning endometriosis pain",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked for the full range of options, weighed hormonal and non-hormonal approaches, and asked what to try first.",
+        "reason": "The user asked for the full range of options and what to try first, then discussed several hormonal and non-hormonal approaches.",
         "relevance": "strong",
         "topic": "endometriosis treatment options",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user said they had been discharged to their GP after surgery and discussed seeking a specialist re-referral.",
+        "reason": "The user weighed concerns about irregular bleeding and asked whether GnRH treatment would be as difficult as it sounded.",
+        "relevance": "medium",
+        "topic": "treatment side effects",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said they had been discharged to the GP after surgery and engaged with the idea of seeking specialist re-referral.",
         "relevance": "medium",
         "topic": "specialist follow-up",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user asked whether physiotherapy would require private care after learning it was an option.",
+        "reason": "The user asked whether pelvic floor physiotherapy would require private care.",
         "relevance": "medium",
-        "topic": "pelvic floor physiotherapy access",
+        "topic": "pelvic health physiotherapy access",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user said they were tired of treatment always being about hormones and asked whether anything else was available.",
+        "reason": "The user said they were tired of treatments being about hormones and asked whether there was anything else.",
         "relevance": "medium",
-        "topic": "frustration with hormonal treatment",
+        "topic": "non-hormonal treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user expressed being tired of the repeated focus on hormonal treatments, but did not return to this feeling separately.",
+        "relevance": "low",
+        "topic": "treatment frustration",
         "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user described endometriosis pain returning on the combined pill, especially during the break week, and asked about alternatives, including non-hormonal options. The assistant discussed treatment choices and specialist follow-up; the user ended with a list of points for the GP and said they felt less stuck."
+    "summary": "The user described returning endometriosis pain, worst during the break week on the combined pill, and asked about alternatives, including non-hormonal options; they also noted disease found on the ovary and near the bowel. The assistant outlined treatment options and suggested discussing continuous pill use, specialist re-referral, and physiotherapy with the GP, and the user said they felt less stuck and had a useful list."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -47,7 +59,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 6816,
-    "output_tokens": 1044
+    "output_tokens": 1376
   },
   "version": "gpt_luna"
 }

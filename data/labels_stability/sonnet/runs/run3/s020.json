@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:50:16+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with an A1C rise from 6.8 to 7.4 and asked why; the whole conversation works through causes.",
+        "relevance": "strong",
+        "topic": "rising a1c",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user described six months of broken sleep and loud snoring and later said the sleep is probably a big piece.",
+        "relevance": "strong",
+        "topic": "poor sleep and snoring",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked what 'individualized' target means after a previous doctor only said 'under 7'.",
+        "relevance": "medium",
+        "topic": "a1c target",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user mentioned 5-6 pounds gained and asked whether it matters for blood sugar.",
+        "relevance": "medium",
+        "topic": "winter weight gain",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user said they have no meter, asked if they should get one, and asked why fasting versus after-meal readings matter.",
+        "relevance": "medium",
+        "topic": "home glucose monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to do so as not to get 'the same shrug' and summarised an agenda for the appointment.",
+        "relevance": "medium",
+        "topic": "preparing for doctor appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they worried the diabetes was suddenly getting much worse and felt better after the explanation.",
+        "relevance": "low",
+        "topic": "fear of worsening diabetes",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked in the first message whether the rise was just an age thing and said at the end they expected 'downhill' news.",
+        "relevance": "low",
+        "topic": "ageing and diabetes progression",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user whose A1C rose from 6.8 to 7.4 with no routine changes asked whether age was the cause. The bot went through possible contributors, picked up on poor sleep, snoring and winter weight gain, and explained individualized targets and home monitoring. The user ended with a clear appointment agenda (diary, target, snoring or sleep study, meter) and said the conversation was much more useful than expected."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2630,
+    "output_tokens": 827
+  },
+  "version": "sonnet"
+}

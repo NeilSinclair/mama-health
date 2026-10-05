@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T08:04:12+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came because infliximab stopped working and Humira was presented as the only option; most turns explore alternatives.",
+        "relevance": "strong",
+        "topic": "switching biologic treatment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User is furious at being brushed off and treated as awkward, and wants to be part of the decision.",
+        "relevance": "strong",
+        "topic": "dismissive consultant",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "Fury and frustration open the conversation and user later says they feel they have a handle on things instead of anger.",
+        "relevance": "medium",
+        "topic": "anger and feeling unheard",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "Raised by the bot and taken up by the user as a concrete point to push back with over a few turns.",
+        "relevance": "medium",
+        "topic": "drug level and antibody testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked directly about a second opinion and worried it would look like going behind the consultant's back.",
+        "relevance": "medium",
+        "topic": "second opinion on NHS",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User asked for a question list to bring to the next appointment and plans to book one.",
+        "relevance": "medium",
+        "topic": "preparing questions for appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "Stated as background that the drug stopped working after four years; not explored on its own.",
+        "relevance": "low",
+        "topic": "loss of response to infliximab",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "User on infliximab for four years, which has stopped working, was angry that their consultant presented a switch to Humira as decided and dismissed questions about alternatives. The bot acknowledged the frustration, explained other biologic classes, suggested asking about drug levels and antibodies, gave a question list and addressed second opinions on the NHS. User ended saying they had a plan instead of a grievance and would book an appointment and take their list."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1694,
+    "output_tokens": 707
+  },
+  "version": "sonnet"
+}

@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:49:25+00:00",
+  "created_at": "2026-10-05T07:50:17+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,50 +7,38 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened by asking whether a pharmacy substitution of the same medicine and dose was concerning and returned to what to do about it.",
+        "reason": "The user came to ask whether switching to a different maker of the same medicine and dose was something to worry about, and returned for practical guidance.",
         "relevance": "strong",
-        "topic": "levothyroxine brand switch",
+        "topic": "levothyroxine brand switch safety",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked why testing should wait, whether an earlier result counted, and confirmed when to schedule a new test.",
+        "reason": "The user asked why testing should wait six to eight weeks, whether a recent result counted, and confirmed when to test after the switch.",
         "relevance": "medium",
-        "topic": "tsh monitoring",
+        "topic": "TSH retesting",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user asked what signs to watch for and noted that they tend to notice coldness and tiredness quickly.",
+        "reason": "The user asked what to watch for before the test and said they tend to notice coldness and tiredness quickly.",
         "relevance": "medium",
-        "topic": "symptom monitoring",
+        "topic": "possible thyroid symptoms",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user directly asked whether to keep taking the medicine as before and accepted the guidance to keep the routine consistent.",
-        "relevance": "medium",
-        "topic": "consistent medication routine",
-        "topic_group": "Taking medication safely"
+        "reason": "The user said they were annoyed that the pharmacy switched the brand without explaining the implications.",
+        "relevance": "low",
+        "topic": "pharmacy substitution communication",
+        "topic_group": "Access to care"
       },
       {
         "reason": "The user said they would prefer to stay on one brand to avoid uncertainty with future switches.",
         "relevance": "medium",
         "topic": "brand consistency preference",
         "topic_group": "Treatment choice"
-      },
-      {
-        "reason": "The user said the pharmacy changed the brand without adequately explaining the change.",
-        "relevance": "low",
-        "topic": "pharmacy communication",
-        "topic_group": "Access to care"
-      },
-      {
-        "reason": "The user explicitly said they were annoyed that the pharmacy had switched the medicine without explaining it.",
-        "relevance": "low",
-        "topic": "frustration with pharmacy",
-        "topic_group": "Emotional wellbeing"
       }
     ],
-    "reason_for_conversation": "decisional",
-    "summary": "The user asked about a pharmacy switching their levothyroxine brand and received guidance to keep their routine consistent, watch for symptoms, and arrange a TSH test about six to eight weeks after the switch. They were annoyed that the pharmacy had not explained the substitution and preferred staying on one brand, but said the resulting plan was clear and exactly the kind of answer they wanted."
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether a pharmacy switch to a different maker of their usual levothyroxine was concerning and what to do. The assistant explained the proposed TSH retest timing, signs to monitor, and keeping the same routine; the user also raised frustration about the pharmacy's lack of explanation and a preference for brand consistency. The user said the plan was clear and the answer was exactly what they wanted."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -59,7 +47,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 5558,
-    "output_tokens": 1277
+    "output_tokens": 813
   },
   "version": "gpt_luna"
 }

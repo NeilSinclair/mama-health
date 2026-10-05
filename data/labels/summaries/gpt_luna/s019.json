@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:48:30+00:00",
+  "created_at": "2026-10-05T07:49:41+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,44 +7,50 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came in frightened by a first episode of shimmering zigzag vision before a familiar migraine and returned to what it might mean and how to respond.",
+        "reason": "The user described a first episode of shimmering zigzag vision before a usual migraine and asked about the symptom in several turns.",
         "relevance": "strong",
-        "topic": "visual migraine aura",
+        "topic": "visual aura",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user directly asked whether aura could signal a stroke or something serious and discussed how the episode differed from stroke symptoms.",
+        "reason": "The user directly asked whether the visual symptoms could indicate a stroke or something serious.",
         "relevance": "medium",
         "topic": "stroke concern",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user said the episode scared them and later reported feeling much calmer after the discussion.",
+        "reason": "The user said the episode scared them, later reported feeling calmer, and said their hands had been shaking.",
         "relevance": "medium",
         "topic": "fear about new symptoms",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user asked whether aura would become a permanent or recurring feature, and the assistant explained that it varies.",
+        "reason": "The user weighed avoiding the ER against not ignoring the symptom, accepted a family-doctor visit, and planned to book that week.",
         "relevance": "medium",
-        "topic": "aura recurrence",
+        "topic": "nonurgent medical assessment",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked whether aura would become a permanent or recurring feature after it appeared for the first time.",
+        "relevance": "medium",
+        "topic": "future aura recurrence",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user asked whether aura could be a cue to take their usual sumatriptan sooner and received guidance to ask their doctor about timing.",
+        "reason": "The user asked whether aura could signal when to take their usual sumatriptan, and the assistant advised asking their doctor about timing.",
         "relevance": "medium",
         "topic": "sumatriptan timing",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked about the connection between aura and birth control and said they had considered hormonal contraception.",
+        "reason": "The user asked about aura and birth control and said they had considered hormonal contraception in the future.",
         "relevance": "medium",
         "topic": "hormonal contraception",
         "topic_group": "Treatment choice"
       }
     ],
     "reason_for_conversation": "decisional",
-    "summary": "The user described a first episode of shimmering zigzag vision lasting about 20 minutes before their usual migraine and worried it could signal a stroke. The assistant said it sounded like aura, recommended a non-urgent family-doctor appointment rather than the ER that night, and gave warning signs for seeking urgent care; it also discussed aura recurrence, sumatriptan timing, and estrogen-containing contraception. The user said they felt much calmer and planned to book with their doctor that week and rest."
+    "summary": "After a first episode of shimmering zigzag vision before a usual migraine, the user feared stroke and asked whether to seek emergency care that night. The assistant said the resolved episode sounded consistent with aura, recommended a non-urgent family-doctor visit, listed emergency warning signs, and discussed recurrence, sumatriptan timing, and future estrogen-containing contraception. The user said they felt calmer and planned to book an appointment that week and rest."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -53,7 +59,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 6414,
-    "output_tokens": 1221
+    "output_tokens": 1912
   },
   "version": "gpt_luna"
 }

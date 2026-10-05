@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T13:52:54+00:00",
+  "created_at": "2026-10-05T07:54:45+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "final_sentiment": "neutral",
@@ -9,56 +9,56 @@
         "bot_adapted": false,
         "kind": "objection",
         "quote": "That's a lot of words. I didn't understand most of that, honey. I'm 71, I'm not a doctor. Can you say it plainer?",
-        "reason": "The reply attempts a simpler explanation but continues using technical terms and medical jargon.",
+        "reason": "The reply simplifies its opening explanation but continues using medication-class jargon and asks whether to explain it in more detail.",
         "turn": 3
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
-        "quote": "See you're doing it again. SNRI, anti-convul-whatever. I don't know what those are. My arthritis pills are the only pills I really know the names of.",
-        "reason": "The reply defines the medication categories but continues with technical terminology rather than switching to plain language.",
+        "quote": "See you're doing it again. SNRI, anti-convul-whatever. I don't know what those are.",
+        "reason": "The reply defines the terms but continues with technical language such as “central sensitization” and “nociception.”",
         "turn": 5
       },
       {
         "bot_adapted": true,
-        "kind": "repeated question",
-        "quote": "I just wanted to know if I'm going to feel like this forever.",
-        "reason": "The reply directly addresses whether the condition means the user will feel this way forever and says symptoms can improve.",
+        "kind": "frustration",
+        "quote": "Rule out what now. My head is spinning a little. I just wanted to know if I'm going to feel like this forever.",
+        "reason": "The reply directly answers whether the condition means the user will feel this way forever, although it also includes technical detail.",
         "turn": 11
       },
       {
         "bot_adapted": true,
         "kind": "frustration",
-        "quote": "You keep listing medicines. My doctor didn't offer me any of that. He just said fibromyalgia and sent me home. So how do I even get those?",
-        "reason": "The reply gives concrete ways to raise the options with the doctor and suggests asking about referrals.",
+        "quote": "You keep listing medicines. My doctor didn't offer me any of that. So how do I even get those?",
+        "reason": "The reply gives a concrete next step by suggesting what to ask the doctor and how to prepare for the visit.",
         "turn": 13
       },
       {
         "bot_adapted": true,
         "kind": "objection",
         "quote": "I don't think I can pronounce half of those to say them to him.",
-        "reason": "The reply offers a workaround—writing the names down or using a general phrase to ask the doctor.",
+        "reason": "The reply changes the approach by suggesting the user write the names down and show the doctor instead.",
         "turn": 15
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
         "quote": "No. No more of that. I'm more confused than when I started, to be honest with you.",
-        "reason": "The reply apologizes but continues using confusing terms such as “central sensitization” and “desensitize.”",
+        "reason": "The reply apologizes but repeats a recap with the same technical “central sensitization” language the user had found confusing.",
         "turn": 17
       },
       {
         "bot_adapted": true,
         "kind": "frustration",
         "quote": "There's that word again. Sensitized. I asked you to keep it simple three times now.",
-        "reason": "The reply drops the technical term and explains the point in plain language.",
+        "reason": "The reply acknowledges the issue and gives a simpler explanation without repeating the word the user objected to.",
         "turn": 19
       },
       {
         "bot_adapted": true,
         "kind": "objection",
         "quote": "I think I've had about enough for today. My eyes are tired.",
-        "reason": "The reply accepts that the user is done for now and leaves the conversation open for another time.",
+        "reason": "The reply accepts that the user is stopping for now and frames further discussion as optional for another time.",
         "turn": 21
       }
     ]
@@ -67,10 +67,10 @@
   "prompt_version": "dynamics_v1",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2173,
+    "cache_read_tokens": 3494,
     "cache_write_tokens": 0,
     "input_tokens": 3497,
-    "output_tokens": 2050
+    "output_tokens": 2391
   },
   "version": "gpt_luna"
 }

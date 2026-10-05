@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:48:43+00:00",
+  "created_at": "2026-10-05T07:49:49+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,32 +7,50 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user opened with constant exhaustion despite treatment and returned to how it had affected them since before diagnosis.",
+        "reason": "The user opened by asking whether ongoing exhaustion was normal and returned to how it had persisted despite treatment.",
         "relevance": "strong",
         "topic": "persistent fatigue",
-        "topic_group": "Physical symptoms"
+        "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user asked about TSH, Free T3 and Free T4, and ferritin, and discussed tests for other possible causes of fatigue.",
-        "relevance": "medium",
-        "topic": "thyroid and fatigue testing",
+        "reason": "The user asked what Free T3 and Free T4 show and whether to request them, then included them in the plan they summarized.",
+        "relevance": "strong",
+        "topic": "thyroid hormone testing",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user discussed a possible dose adjustment and asked whether to pursue T3 or desiccated thyroid.",
+        "reason": "The user asked about ferritin and engaged with testing for other possible contributors, including vitamins and celiac disease.",
         "relevance": "medium",
-        "topic": "thyroid medication options",
+        "topic": "fatigue workup testing",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user explored discussing a dose adjustment and asked about how long it might take to feel a difference.",
+        "relevance": "medium",
+        "topic": "levothyroxine dose adjustment",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user worried their doctor might write them off and described feeling gaslit about their fatigue.",
+        "reason": "The user asked whether to pursue desiccated thyroid or added T3 and accepted the suggestion to treat these as later options.",
         "relevance": "medium",
-        "topic": "feeling dismissed by clinicians",
+        "topic": "alternative thyroid treatments",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user worried about being written off by the doctor and later said they had felt gaslit about their fatigue.",
+        "relevance": "medium",
+        "topic": "doctor dismissal",
         "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said a symptom log could help because they forget how they felt week to week.",
+        "relevance": "low",
+        "topic": "symptom tracking",
+        "topic_group": "Fatigue, sleep, diet & activity"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user described ongoing exhaustion after six months on levothyroxine for Hashimoto's, despite a TSH of 3.8, and asked about thyroid and other fatigue testing and medication options. The assistant helped outline questions for the doctor and a symptom log; the user said they felt validated, restated the plan, and was looking forward to the appointment."
+    "summary": "The user described persistent exhaustion while taking levothyroxine for Hashimoto's, despite being told their TSH was 3.8. The assistant discussed possible tests, a dose conversation, and alternative treatments, then helped the user prepare questions for an appointment; the user summarized a plan and said they felt more prepared and looked forward to the visit."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -41,7 +59,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 6365,
-    "output_tokens": 1511
+    "output_tokens": 1580
   },
   "version": "gpt_luna"
 }

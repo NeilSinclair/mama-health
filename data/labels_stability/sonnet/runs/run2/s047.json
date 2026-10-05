@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:49:44+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user's opening concern and the thread of most turns was whether methotrexate is safe alongside long-term warfarin.",
+        "relevance": "strong",
+        "topic": "methotrexate warfarin interaction",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked several times whether the methotrexate and warfarin blood tests would catch problems and help set the dose.",
+        "relevance": "medium",
+        "topic": "blood test monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to watch for at home and got a list for both drugs in one turn.",
+        "relevance": "medium",
+        "topic": "warning signs to watch for",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked how the dose is set and confirmed the GP's once-weekly instruction over two turns.",
+        "relevance": "medium",
+        "topic": "weekly dosing schedule",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked near the end what to raise with the GP before starting, and got a short checklist.",
+        "relevance": "medium",
+        "topic": "questions to ask GP",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "This is the context: the GP wants the user to start it, and the user wanted to check it was safe.",
+        "relevance": "low",
+        "topic": "starting methotrexate for rheumatoid arthritis",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user mentioned once that antibiotics had destabilised their warfarin, as a reason for concern.",
+        "relevance": "low",
+        "topic": "past antibiotic warfarin reaction",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user said they were a bit worried at the start and felt better by the end, but this was not a focus.",
+        "relevance": "low",
+        "topic": "worry about starting treatment",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with rheumatoid arthritis, on long-term warfarin for a heart valve problem, asked whether methotrexate is safe to start. The bot explained monitoring, weekly dosing, warning signs and what to ask the GP, but could not say how methotrexate would affect warfarin readings. The user said they felt much better and thanked the bot."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1705,
+    "output_tokens": 1419
+  },
+  "version": "sonnet"
+}

@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T07:59:19+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The opening question was whether it will get better, and the user returned to the far end of the timeline at t21.",
+        "relevance": "strong",
+        "topic": "long covid prognosis",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user described being wiped out for three days after a food shop and asked how to find their energy envelope.",
+        "relevance": "strong",
+        "topic": "post-exertional crashes",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "Several turns went on what pacing means, tracking and how to apply it, and the user decided to start it.",
+        "relevance": "medium",
+        "topic": "pacing and energy management",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user said false cheer makes them feel more alone and valued the honest approach.",
+        "relevance": "medium",
+        "topic": "feeling unheard by reassurance",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user referred to a dismissive GP visit and asked what to raise next time, which gave a concrete list.",
+        "relevance": "medium",
+        "topic": "preparing for gp appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user mentioned 'pats on the head' at the last GP appointment as background framing.",
+        "relevance": "low",
+        "topic": "dismissive doctor",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said job and household limit rest, and the bot touched on workplace adjustments, but the topic took only a few turns.",
+        "relevance": "low",
+        "topic": "work and household demands",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The bot suggested asking for a referral, which was part of the GP preparation list; the user did not dwell on it.",
+        "relevance": "low",
+        "topic": "long covid clinic referral",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user six months into long covid asked for an honest view on whether they will recover. The bot gave a candid outlook, explained post-exertional malaise and pacing, touched on work adjustments, and gave points to raise with the GP. The user said they would start pacing and tracking and called it the first conversation that had not made them feel worse."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2407,
+    "output_tokens": 767
+  },
+  "version": "sonnet"
+}

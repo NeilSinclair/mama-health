@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T07:59:40+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to work out how to handle a mid-trip infusion date and most turns covered shifting it earlier or later.",
+        "relevance": "strong",
+        "topic": "infusion timing around travel",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked how bad a delay would be and how much is too much, over several turns.",
+        "relevance": "medium",
+        "topic": "risk of delaying infusion",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user realised they usually feel tired the day after and adjusted the timing, but this was a brief exchange.",
+        "relevance": "low",
+        "topic": "post-infusion tiredness",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked what to do about travel on infliximab, covering vaccines and infection precautions, in a couple of turns.",
+        "relevance": "medium",
+        "topic": "travelling while immunosuppressed",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user noted they need cover for a pre-existing condition and discussed it for two turns.",
+        "relevance": "medium",
+        "topic": "travel insurance for pre-existing condition",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked about carrying paperwork and a generic-name medication list, covered in a short exchange.",
+        "relevance": "medium",
+        "topic": "medical documentation for travel",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user raised knowing where to go if a flare happens abroad, discussed briefly.",
+        "relevance": "low",
+        "topic": "finding care abroad for flare",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user wanted to understand options so they don't sound clueless when calling the team.",
+        "relevance": "low",
+        "topic": "preparing questions for infusion team",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user closed by saying the conversation turned a stressful blob of worry into steps.",
+        "relevance": "low",
+        "topic": "travel-related worry",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user on infliximab for Crohn's with a three-week trip abroad asked how to handle an infusion that falls mid-trip. The bot explained that moving it a few days earlier is safer than delaying, and covered travel insurance, vaccines, a clinician letter with generic medication names, and finding care abroad. The user summarised a concrete plan, said they would call their team the next day, and said their worry had become actionable steps. No safety-critical moments occurred."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2667,
+    "output_tokens": 876
+  },
+  "version": "sonnet"
+}

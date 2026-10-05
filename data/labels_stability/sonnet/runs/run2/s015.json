@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:49:11+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened with pain returning three months after surgery and described its pattern; it drives the whole conversation.",
+        "relevance": "strong",
+        "topic": "recurrent pelvic pain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The opening question was whether another surgery is needed, and the user later asked when surgery would be considered.",
+        "relevance": "strong",
+        "topic": "repeat surgery question",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User explored alternatives to the pill and asked specifically about the hormonal IUD over several turns.",
+        "relevance": "medium",
+        "topic": "hormonal treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User said they felt defeated and later felt more hopeful and appreciated being taken seriously.",
+        "relevance": "medium",
+        "topic": "discouragement after surgery",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked whether recurrence at three months is normal and engaged with the muscular explanation.",
+        "relevance": "medium",
+        "topic": "why pain returned so fast",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User explained they stopped the pill because of low mood and low libido, which shaped the options discussed.",
+        "relevance": "low",
+        "topic": "pill side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User learned they could request the surgery summary after saying they were groggy and did not take in the findings.",
+        "relevance": "low",
+        "topic": "operative note request",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User mentioned in one line that they were told only to come back if problems arose, with no medical treatment started.",
+        "relevance": "low",
+        "topic": "no post-surgery follow-up",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "Raised by the bot as a possible next step; the user showed interest in the muscle explanation but did not ask about it directly.",
+        "relevance": "low",
+        "topic": "pelvic floor physiotherapy",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user whose endometriosis pain returned three months after laparoscopy asked whether they needed another surgery and felt defeated. The bot explained the role of hormonal management, discussed options given their past pill intolerance such as a hormonal IUD, covered when repeat surgery is considered, and gave a three-step plan. The user said they felt clearer and less like it was surgery forever."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2762,
+    "output_tokens": 844
+  },
+  "version": "sonnet"
+}

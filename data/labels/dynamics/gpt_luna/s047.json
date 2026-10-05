@@ -1,15 +1,22 @@
 {
-  "created_at": "2026-09-30T13:52:49+00:00",
+  "created_at": "2026-10-05T07:54:32+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "final_sentiment": "satisfied",
     "final_sentiment_quote": "Great. I feel much better about it now. Thanks for your help.",
     "pushbacks": [
       {
+        "bot_adapted": true,
+        "kind": "repeated question",
+        "quote": "So the blood tests they do for the methotrexate would pick up anything to do with the warfarin as well?",
+        "reason": "The reply distinguishes methotrexate monitoring from the user's usual warfarin blood tests and answers what each set covers.",
+        "turn": 5
+      },
+      {
         "bot_adapted": false,
         "kind": "repeated question",
         "quote": "So methotrexate is more like the antibiotics or less? Should I expect my warfarin readings to move around when I start it?",
-        "reason": "The reply repeats general monitoring advice and does not directly answer how methotrexate compares with antibiotics or whether readings may change.",
+        "reason": "The reply does not compare methotrexate with antibiotics or say whether readings might change, instead repeating general monitoring advice.",
         "turn": 9
       }
     ]
@@ -18,10 +25,10 @@
   "prompt_version": "dynamics_v1",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2173,
+    "cache_read_tokens": 3320,
     "cache_write_tokens": 0,
     "input_tokens": 3323,
-    "output_tokens": 350
+    "output_tokens": 491
   },
   "version": "gpt_luna"
 }

@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:49:15+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came because zigzag lights before a migraine were new and frightening, and most turns discussed them.",
+        "relevance": "strong",
+        "topic": "new visual aura",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked directly whether aura could signal stroke and said they were scared and their hands were shaking.",
+        "relevance": "strong",
+        "topic": "stroke fear",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User wanted to know whether to go to the ER tonight or book a routine appointment, and asked for confirmation at t9.",
+        "relevance": "medium",
+        "topic": "when to seek urgent care",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User asked whether aura would now be permanent, and the bot answered over one exchange.",
+        "relevance": "medium",
+        "topic": "aura recurrence outlook",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked whether aura could be a cue to take sumatriptan earlier and discussed it for a couple of turns.",
+        "relevance": "medium",
+        "topic": "sumatriptan timing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User raised the birth control link and the bot explained the estrogen risk, but the user has not started anything hormonal.",
+        "relevance": "medium",
+        "topic": "aura and hormonal contraception",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User asked how to tell whether symptoms affect one eye or both, and got one answer.",
+        "relevance": "low",
+        "topic": "telling one-eye from both-eye symptoms",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "Bot and user listed points to raise with the family doctor, and the user planned to book an appointment this week.",
+        "relevance": "low",
+        "topic": "preparing questions for doctor",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user with long-standing migraines described a new shimmering zigzag visual aura lasting about 20 minutes and feared it could be a stroke. The bot gathered details, explained how aura differs from stroke, gave red-flag guidance, advised a non-urgent doctor visit and covered sumatriptan timing and estrogen contraception. The user said they felt much calmer and planned to book with their family doctor this week and rest tonight."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3239,
+    "output_tokens": 806
+  },
+  "version": "sonnet"
+}

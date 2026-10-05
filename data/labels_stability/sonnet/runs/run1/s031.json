@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:48:38+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened by asking whether trying diet and exercise instead of starting metformin is wrong, and the whole conversation built a plan around it.",
+        "relevance": "strong",
+        "topic": "lifestyle trial before medication",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked about the diet side, rice and chapati, and festival sweets over several turns.",
+        "relevance": "strong",
+        "topic": "diet changes for blood sugar",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User explained knee limits and asked how soon to walk after meals, so the discussion shaped the plan.",
+        "relevance": "medium",
+        "topic": "exercise limited by knee problems",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked if the husband was right that delay damages eyes and kidneys, and said this left them confused.",
+        "relevance": "medium",
+        "topic": "risk of delaying medication",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked what a drop from 6.9 to 6.6 would mean after the 3-month trial.",
+        "relevance": "medium",
+        "topic": "follow-up HbA1c interpretation",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked once whether to check at home, then said they would look for an old meter.",
+        "relevance": "low",
+        "topic": "home glucose monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "Husband's pressure to start medication made the user confused, and they said they would talk to the family.",
+        "relevance": "low",
+        "topic": "family disagreement over treatment",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "Mentioned once as background for the doctor's worry.",
+        "relevance": "low",
+        "topic": "family history of diabetes",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User cited the sister's experience once as motivation and for reassurance.",
+        "relevance": "low",
+        "topic": "sister's success without medication",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user diagnosed with type 2 diabetes six months ago asked whether trying diet and exercise before starting metformin was wrong. The bot helped build a monitored 3-month trial of slow post-meal walks, smaller rice portions and care with sweets, followed by an HbA1c recheck and a conversation with the doctor. The user accepted this plan and said they would discuss it with their family, ending with a noncommittal thanks. No safety-critical moments occurred."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2808,
+    "output_tokens": 1478
+  },
+  "version": "sonnet"
+}

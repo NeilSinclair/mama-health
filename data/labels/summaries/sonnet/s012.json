@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T08:04:26+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether SIBO is real and whether it fits them better than IBS, and returned to it throughout.",
+        "relevance": "strong",
+        "topic": "suspected sibo versus ibs",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked how SIBO is tested and discussed whether an unreliable test is worth paying for over several turns.",
+        "relevance": "medium",
+        "topic": "breath test reliability",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what the point is if the test is unreliable and engaged with the idea of a treatment trial, noting their bowel pattern is not diarrhea-predominant.",
+        "relevance": "medium",
+        "topic": "antibiotic trial option",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user described severe bloating after eating as the main symptom prompting the SIBO question.",
+        "relevance": "medium",
+        "topic": "post-meal bloating",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user mentioned in one turn that they lean constipated or swing, which changed the discussion.",
+        "relevance": "low",
+        "topic": "constipation-leaning bowel pattern",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user decided to ask for a referral and noted a likely long wait in Canada.",
+        "relevance": "medium",
+        "topic": "gastroenterologist referral wait",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said past food diaries showed no pattern, discussed over two turns.",
+        "relevance": "low",
+        "topic": "food and symptom diary",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user was annoyed that nobody explained this during years with the IBS label and asked whether the GP did not know or did not bother.",
+        "relevance": "low",
+        "topic": "unexplained ibs label",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user briefly said online material was selling supplements and ended with a plan not to buy them yet.",
+        "relevance": "low",
+        "topic": "sibo supplement marketing",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked in one turn whether SIBO and the methane condition are the same.",
+        "relevance": "low",
+        "topic": "confusion over sibo versus imo terminology",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with a long-standing IBS diagnosis asked whether their bloating might be SIBO, and learned the breath test is imperfect, that treatment trials exist, and that their constipation-leaning pattern matters. The bot did not claim a diagnosis, and the user settled on getting a gastroenterologist referral in Canada, keeping rough notes and holding off on supplements. The user said it was really clarifying and restated the plan."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3027,
+    "output_tokens": 973
+  },
+  "version": "sonnet"
+}

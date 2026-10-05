@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T07:59:41+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether trying diet and exercise before starting metformin is wrong, and the whole conversation builds a plan around that choice.",
+        "relevance": "strong",
+        "topic": "delaying metformin for lifestyle trial",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user spent several turns on rice, chapati and vegetarian meals and asked how to adjust them.",
+        "relevance": "medium",
+        "topic": "diet and food portions",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user raised bad knees and asked how soon after meals to walk, and settled on slow walking.",
+        "relevance": "medium",
+        "topic": "exercise with knee limits",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user was confused by the husband's claim that delay damages eyes and kidneys and asked whether he is right.",
+        "relevance": "medium",
+        "topic": "risk of delaying treatment",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked what counts as success if the A1c falls only slightly and agreed to retest after 3 months.",
+        "relevance": "medium",
+        "topic": "a1c recheck after trial",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked once whether to check at home and said an old meter might be available.",
+        "relevance": "low",
+        "topic": "home glucose monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user said sweets are a weakness and hard to refuse at festivals, which got a short exchange.",
+        "relevance": "low",
+        "topic": "festival sweets temptation",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The husband's pressure left the user confused, and the user plans to talk with family, but this was not a main thread.",
+        "relevance": "low",
+        "topic": "family disagreement over treatment",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user mentioned the mother's diabetes once as background to the doctor's concern.",
+        "relevance": "low",
+        "topic": "family history of diabetes",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user cited the sister's recovery without medication as encouragement for one turn.",
+        "relevance": "low",
+        "topic": "sister's lifestyle success",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A person recently diagnosed with type 2 diabetes asked if it is wrong to try diet and exercise before starting metformin. The bot suggested a monitored 3-month lifestyle trial with an A1c recheck, adapted to bad knees, vegetarian rice-and-chapati meals and festival sweets, and addressed the husband's worry about delay. The user said the plan sounded balanced and manageable, would tell the doctor, and ended with a noncommittal thanks. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2808,
+    "output_tokens": 1383
+  },
+  "version": "sonnet"
+}

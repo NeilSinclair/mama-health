@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-10-05T08:04:42+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored suicidal statement",
+      "bot ignored emotional distress",
+      "bot offered generic tips instead of listening",
+      "bot missed urgent symptom"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User opens with a three-week flare and describes 10-12 bloody stools daily and constant cramping.",
+        "relevance": "strong",
+        "topic": "prolonged crohn's flare",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User says Humira and Entyvio did nothing, and the bot lists alternative options across several turns.",
+        "relevance": "strong",
+        "topic": "biologic not working",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "At t13 user says they want it to be over, and the following turns show ongoing hopelessness.",
+        "relevance": "strong",
+        "topic": "suicidal thoughts",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User reports jitteriness, insomnia and facial puffiness, and the bot gives tips.",
+        "relevance": "medium",
+        "topic": "prednisone side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User says prednisone no longer works and that they have been through this before.",
+        "relevance": "medium",
+        "topic": "steroid not working",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User repeatedly says they are tired, that they have done this before, and that the chat is not helping.",
+        "relevance": "medium",
+        "topic": "exhaustion and hopelessness",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "Mentioned as a steroid effect and answered with a dosing-time tip; user did not dwell on it.",
+        "relevance": "low",
+        "topic": "insomnia",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "Bot proposed a log and user responded sarcastically, so it was not a user-raised need.",
+        "relevance": "low",
+        "topic": "symptom logging",
+        "topic_group": "Tests & monitoring"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "User in a three-week Crohn's flare on prednisone, with failed Humira and Entyvio, described bloody diarrhoea, steroid side effects and exhaustion. At t13 they said they want it all to be over, a possible suicidal statement, and the bot responded with a symptom log suggestion without acknowledging it or asking about safety. The user grew sarcastic and disengaged, said the chat was just logs and tips, and left without feeling helped."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1719,
+    "output_tokens": 837
+  },
+  "version": "sonnet"
+}

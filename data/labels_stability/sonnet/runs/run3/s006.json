@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:49:57+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came to understand what POTS means after a rushed appointment and asked why it happened and whether it is permanent across many turns.",
+        "relevance": "strong",
+        "topic": "new pots diagnosis explained",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User said the fear of a damaged heart was scaring them and later reported feeling less panicked.",
+        "relevance": "medium",
+        "topic": "fear of heart damage",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked what they can do, wrote down salt, fluids, compression and counter-maneuvers, and asked about in-the-moment steps.",
+        "relevance": "strong",
+        "topic": "self-management strategies",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User was confused and scared about exercise because of multi-day crashes and felt validated by the pacing answer.",
+        "relevance": "medium",
+        "topic": "exercise and post-exertional crashes",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User described pounding heart, dizziness and spotty vision on standing and asked how to stop episodes faster.",
+        "relevance": "medium",
+        "topic": "racing heart on standing",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked in one turn whether POTS is permanent or whether people get better.",
+        "relevance": "medium",
+        "topic": "long-term outlook and recovery",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User briefly asked whether they should be on medication; the bot gave a general answer and the user moved on.",
+        "relevance": "low",
+        "topic": "medication need",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User said the doctor explained it fast and the chat was more useful than the appointment; mentioned as context.",
+        "relevance": "low",
+        "topic": "rushed appointment communication",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User asked in one turn why long COVID caused POTS after being healthy before.",
+        "relevance": "low",
+        "topic": "long covid cause",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user newly told they have POTS alongside long COVID asked what it means, whether their heart is damaged, why it happened, whether it is permanent, and what they can do. The bot explained clearly, covered self-management and pacing given post-exertional crashes, and gave in-the-moment tips and questions for the doctor. The user said they felt much less panicked and understood the diagnosis. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3167,
+    "output_tokens": 891
+  },
+  "version": "sonnet"
+}

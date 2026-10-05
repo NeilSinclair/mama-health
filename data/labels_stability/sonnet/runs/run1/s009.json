@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-05T06:48:07+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether itch is worse at night and asked why, then returned to it throughout.",
+        "relevance": "strong",
+        "topic": "night-time itch",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked what actually helps and followed up on cool bedroom, cotton cover and ointment versus cream over several turns.",
+        "relevance": "strong",
+        "topic": "itch relief measures",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user raised waking up with raw skin from scratching and the bot gave tips, which the user took up.",
+        "relevance": "medium",
+        "topic": "scratching during sleep",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked whether greasy ointment is better than normal cream, answered in one exchange.",
+        "relevance": "medium",
+        "topic": "moisturizer choice",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user mentioned elbows and one knee once as context.",
+        "relevance": "low",
+        "topic": "plaque locations",
+        "topic_group": "Physical symptoms"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether psoriasis itch is worse at night, why, and what helps, mentioning plaques on elbows and a knee and raw skin from scratching in sleep. The bot explained the causes and suggested a cooler bedroom, ointment before bed, short nails and cotton over the knee. The user said it was what they needed and planned to try it."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1026,
+    "output_tokens": 529
+  },
+  "version": "sonnet"
+}

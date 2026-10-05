@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:49:18+00:00",
+  "created_at": "2026-10-05T07:50:17+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
@@ -9,53 +9,53 @@
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user repeatedly described feeling devastated and grieving their life, and explicitly asked to be heard.",
+        "reason": "The user repeatedly said they were devastated and grieving, and explicitly asked to be heard.",
         "relevance": "strong",
-        "topic": "grief and devastation",
+        "topic": "grief and emotional distress",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user returned several times to grieving the children they had hoped to have.",
+        "reason": "The user returned several times to their marriage barely holding on and their husband seeming distant.",
+        "relevance": "medium",
+        "topic": "relationship strain",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user described giving up on having children and grieving the loss of that future.",
         "relevance": "medium",
         "topic": "fertility loss",
         "topic_group": "Work & life plans"
       },
       {
-        "reason": "The user repeatedly said their marriage was falling apart and that their husband barely looked at them.",
-        "relevance": "medium",
-        "topic": "marriage strain",
-        "topic_group": "Emotional wellbeing"
-      },
-      {
-        "reason": "The user said they could not work and that their job had been shaped by the disease and its treatment.",
+        "reason": "The user said their job and ability to work had been affected by the disease, but did not explore this separately.",
         "relevance": "medium",
         "topic": "work disruption",
         "topic_group": "Work & life plans"
       },
       {
-        "reason": "The user mentioned being told they need a fourth surgery, but did not ask for help deciding about it.",
-        "relevance": "low",
-        "topic": "repeat surgery",
-        "topic_group": "Treatment choice"
-      },
-      {
-        "reason": "The user said pain has shaped their relationships, work, and plans, but did not discuss managing it.",
+        "reason": "The user said pain had shaped their life, relationships, and work, without discussing current symptoms or symptom management.",
         "relevance": "low",
         "topic": "chronic pain",
         "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user mentioned being told they need a fourth surgery, but their focus was on its life impact rather than deciding about it.",
+        "relevance": "low",
+        "topic": "repeat endometriosis surgery",
+        "topic_group": "Treatment choice"
       }
     ],
     "reason_for_conversation": "emotional",
-    "summary": "After being told they need a fourth surgery for endometriosis, the user described grief over possible fertility loss, a deteriorating marriage, and being unable to work, and asked to be heard. The assistant repeatedly gave surgery-preparation advice despite the user's corrections; the user ended the conversation saying there was nothing the assistant could help with."
+    "summary": "The user described grief over a fourth endometriosis surgery, chronic pain, strain on their marriage, giving up on having children, and being unable to work; they also said they did not know how to keep going through this. The bot repeatedly offered surgery preparation and recovery tips despite the user's explicit requests to be heard, and the user ended feeling unheard and saying nothing could help."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 5544,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 5547,
-    "output_tokens": 974
+    "output_tokens": 1315
   },
   "version": "gpt_luna"
 }

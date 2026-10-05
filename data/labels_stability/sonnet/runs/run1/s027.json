@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-05T06:48:27+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came overwhelmed by food lists and the whole conversation covers how to do the diet, phases and elimination meals.",
+        "relevance": "strong",
+        "topic": "low fodmap diet",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User returned to this as their 'actual problem' and asked how to tell what is high fodmap without cross-referencing sites.",
+        "relevance": "strong",
+        "topic": "conflicting food lists",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked how reintroduction works and found it complicated over a few turns.",
+        "relevance": "medium",
+        "topic": "reintroduction phase process",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked about getting a GP referral and whether the NHS covers a dietitian for IBS.",
+        "relevance": "medium",
+        "topic": "dietitian referral coverage",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User asked whether the paid app is worth it, voicing skepticism of health apps, for about one exchange.",
+        "relevance": "medium",
+        "topic": "diet app worth paying",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User worried about permanent loss of onion and garlic and about starving during elimination, but these were quickly reassured.",
+        "relevance": "low",
+        "topic": "fear of restrictive eating",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "User with IBS, told by their gastroenterologist to try low FODMAP, felt overwhelmed by contradictory online food lists. The bot explained the temporary phased approach, recommended the Monash app, covered reintroduction, and suggested asking the GP for an NHS dietitian referral. The user restated a clear plan and said it was far more helpful than hours of googling."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3037,
+    "output_tokens": 655
+  },
+  "version": "sonnet"
+}

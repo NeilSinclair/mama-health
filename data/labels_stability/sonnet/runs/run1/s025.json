@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:48:26+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opens with exhaustion despite a normal TSH and the whole conversation works through why it persists.",
+        "relevance": "strong",
+        "topic": "persistent fatigue despite normal labs",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asks what free T4, free T3 and ferritin would show and spends many turns on which labs to request.",
+        "relevance": "strong",
+        "topic": "thyroid blood tests",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asks for a list of things to bring up and recaps the plan for the appointment at the end.",
+        "relevance": "strong",
+        "topic": "preparing for doctor appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asks whether a dose change toward a lower TSH is reasonable and how long it takes to take effect.",
+        "relevance": "medium",
+        "topic": "levothyroxine dose adjustment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asks whether fatigue is always thyroid and worries about blaming the wrong thing, which led to iron, B12 and vitamin D checks.",
+        "relevance": "medium",
+        "topic": "other causes of fatigue",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked in one turn whether to push for these options and then moved on after the answer.",
+        "relevance": "low",
+        "topic": "desiccated thyroid or added t3",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user says they feel gaslit about the fatigue and worries about being seen as an internet patient.",
+        "relevance": "medium",
+        "topic": "feeling dismissed by doctors",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user thanks the bot for validation and describes feeling told to suck it up, but this is brief.",
+        "relevance": "low",
+        "topic": "feeling gaslit and frustrated",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user agreed a log was a good idea in one turn because they forget how they felt week to week.",
+        "relevance": "low",
+        "topic": "symptom tracking",
+        "topic_group": "Tests & monitoring"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user on levothyroxine for Hashimoto's asked why they still feel exhausted with a TSH of 3.8 that their doctor calls normal. The bot explained free T4, free T3 and ferritin, other causes of fatigue and the 6-week timeline for dose changes, and gave a list of questions for the doctor. The user recapped the plan and said they now look forward to the appointment instead of dreading it."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3221,
+    "output_tokens": 902
+  },
+  "version": "sonnet"
+}

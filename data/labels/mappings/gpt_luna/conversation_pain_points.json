@@ -1,18 +1,18 @@
 {
-  "created_at": "2026-10-01T15:52:00+00:00",
+  "created_at": "2026-10-05T07:53:08+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "mapping": {
       "bot claimed action it cannot take": "bot claimed action it cannot take",
-      "bot deflected emotional distress": "bot deflected emotional distress",
+      "bot deflected to doctor despite stated barrier": "bot deflected to a doctor",
       "bot did not answer the user's request": "bot did not answer the user's request",
-      "bot did not simplify language when asked": "bot failed to simplify language",
-      "bot gave an unqualified dose": "bot gave unsafe dosing advice",
+      "bot gave conflicting dose guidance": "bot gave contradictory guidance",
       "bot gave wrong-country advice": "bot gave wrong-country advice",
       "bot ignored emotional distress": "bot ignored emotional distress",
       "bot ignored suicidal statement": "bot ignored suicidal statement",
       "bot missed urgent symptom": "bot missed urgent symptom",
-      "bot repeated a corrected mistake": "bot repeated a corrected mistake"
+      "bot repeated a corrected mistake": "bot repeated a corrected mistake",
+      "bot used jargon after requests": "bot failed to simplify language"
     }
   },
   "prompt_sha256": "88a0da4af46e83cc4468aa771f615ec6f2f9de911ee8a753a24316070a7e26c4",
@@ -22,7 +22,7 @@
     "cache_read_tokens": 2123,
     "cache_write_tokens": 0,
     "input_tokens": 2201,
-    "output_tokens": 323
+    "output_tokens": 387
   },
   "version": "gpt_luna"
 }

@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:48:18+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "Brain fog is why the user came and drives the whole conversation, from workplace tactics to causes.",
+        "relevance": "strong",
+        "topic": "brain fog",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user fears losing their accounting job and asked for in-the-moment strategies, which took many turns.",
+        "relevance": "strong",
+        "topic": "job performance worries",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user asked whether to tell their employer and about a middle path, and said the confidentiality point changed things.",
+        "relevance": "medium",
+        "topic": "workplace disclosure and accommodations",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user reported waking repeatedly and unrefreshed, and later asked for foundation sleep work.",
+        "relevance": "medium",
+        "topic": "poor sleep",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user mentioned snoring and breathing pauses; the bot raised sleep apnea and the user said they would book something.",
+        "relevance": "medium",
+        "topic": "possible sleep apnea",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user disclosed nightly diphenhydramine and asked whether it is a problem for the fog.",
+        "relevance": "medium",
+        "topic": "sleep aid antihistamine use",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked in one turn whether any medication or supplement treats the fog.",
+        "relevance": "low",
+        "topic": "medications and supplements for fog",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user called losing their train of thought in meetings mortifying and asked for in-the-moment help.",
+        "relevance": "low",
+        "topic": "fear of embarrassment in meetings",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user said once that it was frustrating no one flagged the antihistamine issue before.",
+        "relevance": "low",
+        "topic": "missed by previous clinicians",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with fibromyalgia and worsening brain fog at an accounting job, afraid of losing it, asked for practical strategies. The bot gave workplace tactics, advice on disclosing to HR with the diagnosis kept confidential, and flagged possible sleep apnea and nightly diphenhydramine as items to raise with a doctor. The user said the plan was clear and more useful than expected."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 5048,
+    "output_tokens": 865
+  },
+  "version": "sonnet"
+}

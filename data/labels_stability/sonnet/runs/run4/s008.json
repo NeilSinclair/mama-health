@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T07:59:18+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user's main worry; they raised it at the start, came back to it twice, and asked the bot to confirm it.",
+        "relevance": "strong",
+        "topic": "medication cost and reimbursement",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user came to ask about a newer injection to add to or replace metformin, and the plan is to raise it with their doctor.",
+        "relevance": "strong",
+        "topic": "starting new diabetes injection",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether the drug is approved in their country, answered over a couple of turns.",
+        "relevance": "medium",
+        "topic": "medication approval status",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked what to watch for and the bot gave a full answer.",
+        "relevance": "medium",
+        "topic": "side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user said they had never injected before, felt nervous, and asked how it works.",
+        "relevance": "medium",
+        "topic": "self-injection nervousness",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether the drug would help with the weight they gained since diagnosis, over one exchange.",
+        "relevance": "medium",
+        "topic": "weight loss effect",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said it had been a stressful year and that they feared a bill they could not pay.",
+        "relevance": "low",
+        "topic": "financial stress",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user gave a high A1C on metformin only as the background to the question.",
+        "relevance": "low",
+        "topic": "high blood sugar on metformin",
+        "topic_group": "Tests & monitoring"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "A user with type 2 diabetes in France asked about tirzepatide, mainly whether it is approved and reimbursed, and also how to inject it, its side effects and its weight effect. The bot said it is fully covered and the user, relieved, said they would book a visit with their doctor that week. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1851,
+    "output_tokens": 1468
+  },
+  "version": "sonnet"
+}

@@ -1,0 +1,85 @@
+{
+  "created_at": "2026-10-05T06:50:29+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot gave wrong-country advice"
+    ],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened asking to make sense of a new Crohn's diagnosis and the conversation was built around this.",
+        "relevance": "strong",
+        "topic": "new diagnosis orientation",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User opened overwhelmed and shocked, returned to it at t17, and said at t27 it felt less like a wall.",
+        "relevance": "strong",
+        "topic": "feeling overwhelmed",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User identified their steroid at t13 and took the question of what comes after it as their main next step.",
+        "relevance": "medium",
+        "topic": "medication identification and next steps",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked at t15 what monitoring to expect and the bot gave an overview.",
+        "relevance": "medium",
+        "topic": "monitoring schedule",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User said at t17 they did not know how to keep track of everything and accepted the one-page suggestion.",
+        "relevance": "medium",
+        "topic": "organising health information",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User asked at t19 where to find trustworthy resources, a single exchange.",
+        "relevance": "low",
+        "topic": "reliable online information",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked at t7 whether the whole tract is affected and recalled the terminal ileum at t9.",
+        "relevance": "low",
+        "topic": "disease location",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User raised diet at t25, got one answer, and did not return to it.",
+        "relevance": "low",
+        "topic": "diet for crohn's",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User mentioned in India at t21 and wondered about a bigger specialist centre at t23, one exchange.",
+        "relevance": "low",
+        "topic": "choosing specialist centre",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User asked at t5 whether it would be constantly bad, a brief exchange.",
+        "relevance": "low",
+        "topic": "prognosis flares and remission",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user newly diagnosed with Crohn's last week, overwhelmed and unsure where to start, asked for help making sense of it. The bot walked through the basics, disease location, their budesonide, monitoring, organising information, reliable sources, care options in India and diet. The user said it now felt like manageable pieces and restated a plan to write down questions and ask their doctor about the plan after budesonide. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3586,
+    "output_tokens": 937
+  },
+  "version": "sonnet"
+}

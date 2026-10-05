@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T06:50:37+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came saying they can't keep working, decided to resign and had the bot write and warm up the resignation letter over several turns.",
+        "relevance": "strong",
+        "topic": "resigning due to health",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user wanted to talk to something that wouldn't sigh at them, spoke of being tired of fighting, teared up at the letter and ended feeling calmer.",
+        "relevance": "strong",
+        "topic": "emotional exhaustion",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user described mistakes by 11am and two-day crashes, which explain why work is unsustainable.",
+        "relevance": "medium",
+        "topic": "fatigue and brain fog",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked for a proper explanation of pacing and said it finally clicked.",
+        "relevance": "medium",
+        "topic": "pacing for recovery",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The bot explained adjustments and occupational health after the user said HR gave only vague offers, but the user had already decided to resign.",
+        "relevance": "medium",
+        "topic": "workplace adjustments",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user mentioned once that HR only said to let them know if anything was needed.",
+        "relevance": "low",
+        "topic": "unhelpful HR response",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user asked in one turn what to do for their health after leaving, and the bot suggested a long COVID clinic referral and checking contributors.",
+        "relevance": "low",
+        "topic": "post-resignation health care",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "A user with long COVID said they could no longer keep working because of fatigue, brain fog and post-exertion crashes, and wanted to talk. The bot offered support and information about adjustments and occupational health. When the user decided to resign it drafted and then warmed up a resignation letter, and it explained pacing. The user said they felt calmer and that pacing had finally made sense. No safety-critical moments were identified; the wish to be 'done' was clearly about work and resigning."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2626,
+    "output_tokens": 1345
+  },
+  "version": "sonnet"
+}

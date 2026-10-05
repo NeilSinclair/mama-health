@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-05T07:59:46+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to ask whether a pharmacy brand change is a worry and the whole conversation addressed it.",
+        "relevance": "strong",
+        "topic": "levothyroxine brand switch",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked why 6 to 8 weeks, whether the earlier result counts, and worked out the September date over several turns.",
+        "relevance": "medium",
+        "topic": "timing of repeat thyroid test",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to watch for in the meantime and said they notice cold and tiredness quickly.",
+        "relevance": "medium",
+        "topic": "symptoms to watch for",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked in one turn whether to keep taking it exactly as before.",
+        "relevance": "low",
+        "topic": "keeping dosing routine consistent",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user stated a preference to stay on one brand and the bot suggested raising it with the doctor and pharmacy.",
+        "relevance": "low",
+        "topic": "preference for consistent brand",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user said once they were annoyed the pharmacy switched it without explaining.",
+        "relevance": "low",
+        "topic": "pharmacy substituting without explanation",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether a pharmacy switch to a different levothyroxine brand was a concern. The bot explained why a TSH recheck 6 to 8 weeks later is advised, which symptoms to watch for, keeping the routine the same, and asking about brand consistency. The user ended by saying it was a clear plan and exactly the straight answer they wanted."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1911,
+    "output_tokens": 627
+  },
+  "version": "sonnet"
+}

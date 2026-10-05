@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T13:52:24+00:00",
+  "created_at": "2026-10-05T07:54:14+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "final_sentiment": "satisfied",
@@ -10,10 +10,10 @@
   "prompt_version": "dynamics_v1",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2173,
+    "cache_read_tokens": 4122,
     "cache_write_tokens": 0,
     "input_tokens": 4125,
-    "output_tokens": 124
+    "output_tokens": 195
   },
   "version": "gpt_luna"
 }

@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:50:21+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "Opening problem and the focus of most turns: shifting an infusion that falls mid-trip, and how much delay is risky.",
+        "relevance": "strong",
+        "topic": "infusion timing around travel",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked what to do about being immunosuppressed while abroad, covering vaccines and infection precautions over a few turns.",
+        "relevance": "medium",
+        "topic": "travel with immunosuppression",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User raised insurance cover and the bot explained declaring the condition; a short exchange.",
+        "relevance": "medium",
+        "topic": "travel insurance for pre-existing condition",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User asked about paperwork and carrying medication information; discussed over a couple of turns.",
+        "relevance": "medium",
+        "topic": "travel medical documentation",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User noted needing to know where to go for a flare abroad; brief exchange.",
+        "relevance": "medium",
+        "topic": "care access while abroad",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User confirmed feeling tired the day after infusion, which affected timing; mentioned briefly.",
+        "relevance": "low",
+        "topic": "post-infusion tiredness",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User wanted to be informed before calling the infusion center so as not to sound clueless; stated once as context.",
+        "relevance": "low",
+        "topic": "preparing questions for clinicians",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User described the situation as a stressful blob of worry, mentioned at the end.",
+        "relevance": "low",
+        "topic": "travel-related worry",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user on infliximab for Crohn's, with an 8-weekly infusion falling mid-way through a three-week trip abroad, wanted to understand their options before calling their team. The bot explained that an earlier infusion is safer than a delay, and covered vaccines, insurance, documentation and finding care abroad. The user summarised a concrete plan, said it turned worry into actionable steps, and planned to call their team the next day. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2667,
+    "output_tokens": 800
+  },
+  "version": "sonnet"
+}

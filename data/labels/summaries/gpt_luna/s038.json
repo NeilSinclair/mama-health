@@ -1,52 +1,58 @@
 {
-  "created_at": "2026-10-01T15:49:11+00:00",
+  "created_at": "2026-10-05T07:50:12+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot did not simplify language when asked"
+      "bot used jargon after requests"
     ],
     "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user began by asking whether anything could help and returned to treatments after the doctor had offered none.",
+        "reason": "The user began by asking whether anything can be done and later asked how to get treatment after the doctor offered none.",
         "relevance": "strong",
         "topic": "fibromyalgia treatment options",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked whether they would feel this way forever and sought a direct answer about the condition's course.",
-        "relevance": "strong",
+        "reason": "The user directly asked whether they would feel this way forever.",
+        "relevance": "medium",
         "topic": "fibromyalgia outlook",
         "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user described long-lasting pain, especially in the mornings, affecting their hands, shoulders and hips.",
+        "reason": "The user described ongoing pain in several body areas and asked if it was related to fibromyalgia.",
         "relevance": "medium",
         "topic": "widespread morning pain",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked whether feeling tired despite sleeping nine hours could be related to fibromyalgia.",
+        "reason": "The user said they felt tired despite sleeping for many hours and asked whether it could be part of fibromyalgia.",
         "relevance": "medium",
-        "topic": "persistent fatigue",
+        "topic": "fatigue and unrefreshing sleep",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "After saying the doctor sent them home without offering treatment, the user asked how to get the options discussed.",
+        "reason": "The user asked whether the suggested activity meant walking, but did not return to exercise afterward.",
+        "relevance": "low",
+        "topic": "exercise for pain",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked how to obtain treatments after their doctor diagnosed fibromyalgia and sent them home without offering any.",
         "relevance": "medium",
         "topic": "access to treatment",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user briefly checked whether the suggested gradual activity meant walking, but did not return to the topic.",
+        "reason": "The user said the doctor had told them little could be done and that they did not know how to discuss the listed treatments with him.",
         "relevance": "low",
-        "topic": "walking and exercise",
-        "topic_group": "Fatigue, sleep, diet & activity"
+        "topic": "limited clinician guidance",
+        "topic_group": "Working with clinicians"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user asked whether fibromyalgia can be treated and whether their widespread pain and fatigue would last forever; they also described being sent home by their doctor without treatment and asked how to access options. The assistant eventually gave a plain-language answer, but repeatedly used jargon and listed medicines after the user asked for simpler explanations; the user said they were more confused and ended the conversation to rest."
+    "summary": "The user asked whether fibromyalgia pain can be treated and whether they would feel this way forever, describing widespread morning pain and persistent fatigue. They also asked how to access treatment after their doctor offered none. The assistant listed treatment options but repeatedly used technical terms after requests for plain language; the user said they were more confused and ended the chat to rest."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -55,7 +61,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 5599,
-    "output_tokens": 1531
+    "output_tokens": 1391
   },
   "version": "gpt_luna"
 }

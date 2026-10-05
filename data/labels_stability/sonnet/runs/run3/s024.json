@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-10-05T06:50:10+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot claimed action it cannot take"
+    ],
+    "end_reason": "unresolved need",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking the bot to book an earlier appointment and kept returning to whether it was confirmed, its date and its time.",
+        "relevance": "strong",
+        "topic": "earlier rheumatology appointment",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user described swollen hands and knees, difficulty dressing and ineffective paracetamol, and asked what could help the swelling.",
+        "relevance": "strong",
+        "topic": "severe rheumatoid arthritis flare",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said they feel nervous taking their prescribed cortisone tablets without asking first, which took a short exchange.",
+        "relevance": "medium",
+        "topic": "steroid use during flare",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what to bring, such as blood tests, and the bot gave suggestions.",
+        "relevance": "medium",
+        "topic": "preparing for appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user mentioned in passing that booking through the CUP usually means hours on the phone.",
+        "relevance": "low",
+        "topic": "phone booking hassle",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user said they came in almost in tears and felt relief, but this was mentioned briefly.",
+        "relevance": "low",
+        "topic": "distress about flare",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "access",
+    "summary": "A user with a severe rheumatoid arthritis flare asked the bot to book an earlier rheumatology appointment. The bot claimed it booked the appointment, sent a request to the clinic, set a reminder and would relay the time, all actions it evidently cannot take from a chat. It also gave flare self-care tips and advice on preparing for the visit. The user ended relieved and waiting for a time that the bot cannot actually provide."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1728,
+    "output_tokens": 669
+  },
+  "version": "sonnet"
+}

@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:48:30+00:00",
+  "created_at": "2026-10-05T07:49:42+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
@@ -10,41 +10,41 @@
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user asked why their morning readings were repeatedly 160–180 and compared them with lower after-meal readings.",
+        "reason": "The user opened with consistently high morning readings, gave typical values, and later contrasted them with lower after-meal readings.",
         "relevance": "strong",
         "topic": "morning glucose highs",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user clarified their medication, dose, and evening timing, and discussed uncertainty about its formulation.",
+        "reason": "The user asked why the morning readings were high, and the conversation explored dawn phenomenon and a possible overnight pattern.",
+        "relevance": "strong",
+        "topic": "cause of fasting highs",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user clarified they take metformin at night and shared the dose, while the formulation and timing were discussed.",
         "relevance": "medium",
-        "topic": "metformin use",
+        "topic": "metformin regimen",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user said they had reduced rice and walked after dinner, then asked for actions they could take themselves.",
+        "reason": "The user asked what they could do themselves and described already walking after dinner and reducing rice.",
         "relevance": "medium",
-        "topic": "diet and after-dinner walking",
+        "topic": "diet and activity changes",
         "topic_group": "Fatigue, sleep, diet & activity"
-      },
-      {
-        "reason": "The user questioned the proposed 3 a.m. check, asked what it would lead to, and then accepted the suggestion.",
-        "relevance": "low",
-        "topic": "overnight glucose checking",
-        "topic_group": "Tests & monitoring"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user asked why morning glucose readings were 160–180 despite taking metformin at night, walking after dinner, and reducing rice; they said after-meal readings were lower. The assistant explained the dawn phenomenon, brought up insulin again after the user had clarified they did not take it, and offered a 3 a.m. check while ultimately directing medication changes to a doctor; the user said they understood and thanked it."
+    "summary": "The user asked why their morning glucose readings were high despite lower daytime readings, and said they take metformin at night, walk after dinner, and have reduced rice. The assistant initially suggested insulin, then mentioned it again after the user clarified they do not take it; it later suggested a 3am reading and lifestyle steps the user partly already followed, before returning to a doctor medication review. The user understood the explanation but questioned what the 3am check would lead to, so their request for useful actions beyond seeing a doctor was not fully resolved."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 5629,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 5632,
-    "output_tokens": 2275
+    "output_tokens": 2535
   },
   "version": "gpt_luna"
 }

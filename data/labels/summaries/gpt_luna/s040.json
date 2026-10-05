@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:49:10+00:00",
+  "created_at": "2026-10-05T07:50:09+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,44 +7,50 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user described three successive increases and said the trend bothered them, making it the starting point for the conversation.",
+        "reason": "The user opened with a year-long rise across three checks and asked why it was happening despite a stable dose.",
         "relevance": "strong",
-        "topic": "rising TSH trend",
+        "topic": "rising tsh trend",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user repeatedly asked what could explain the rise and engaged with explanations about absorption, Hashimoto's progression, and changing dose needs.",
-        "relevance": "strong",
-        "topic": "causes of rising TSH",
-        "topic_group": "Understanding the condition & outlook"
-      },
-      {
-        "reason": "The user said they take calcium with breakfast, asked whether to move it later, and asked about other factors that could contribute.",
+        "reason": "The user identified a calcium supplement as a possible contributor and asked whether to move it later in the day.",
         "relevance": "medium",
         "topic": "calcium and levothyroxine timing",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked whether to wait for routine testing or contact their doctor sooner and discussed a plan for raising the trend and calcium timing.",
+        "reason": "The user said gradual loss of thyroid function made sense and asked whether treatment doses can change over time.",
         "relevance": "medium",
-        "topic": "when to contact a doctor",
+        "topic": "hashimoto's progression",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user questioned whether a dose stays fixed forever and discussed possible adjustment as a next step.",
+        "relevance": "medium",
+        "topic": "thyroid dose changes",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether to wait for routine testing or contact a clinician sooner and engaged with the proposed next step.",
+        "relevance": "medium",
+        "topic": "timing of follow-up care",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user mentioned being somewhat more tired and having poorer sleep, and said they would mention the tiredness at an appointment.",
+        "reason": "The user mentioned being somewhat more tired and uncertainty about whether this related to thyroid function or sleep and age.",
         "relevance": "low",
-        "topic": "fatigue and poor sleep",
+        "topic": "fatigue",
         "topic_group": "Fatigue, sleep, diet & activity"
       },
       {
-        "reason": "The user said they worried the rising number meant something was deteriorating, then said the explanation was reassuring.",
+        "reason": "The user said the rising number had made them worry that something was deteriorating, then said the explanation was reassuring.",
         "relevance": "low",
         "topic": "fear of deterioration",
         "topic_group": "Emotional wellbeing"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user asked why TSH had gradually risen despite taking the same levothyroxine dose, and mentioned starting calcium with breakfast and feeling somewhat more tired. The assistant discussed possible causes, including calcium timing and Hashimoto's progression, and suggested contacting a clinician about timing and follow-up testing; the user said the explanation was useful and that they had an action plan."
+    "summary": "The user asked why TSH had risen over three checks despite an unchanged levothyroxine dose and discussed calcium timing, possible Hashimoto's progression, and mild tiredness. The assistant explained possible contributors and suggested contacting the user's doctor or pharmacist about calcium timing, the trend, and a follow-up test; the user said the explanation and action plan were useful."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -53,7 +59,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 6292,
-    "output_tokens": 1112
+    "output_tokens": 1000
   },
   "version": "gpt_luna"
 }

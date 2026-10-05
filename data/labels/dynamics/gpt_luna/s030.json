@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T13:52:50+00:00",
+  "created_at": "2026-10-05T07:54:40+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "final_sentiment": "dissatisfied",
@@ -9,77 +9,77 @@
         "bot_adapted": false,
         "kind": "correction",
         "quote": "I've kept a headache diary for years. I have years of data. That's not the issue.",
-        "reason": "The reply returns to reviewing the diary and possible triggers instead of dropping that suggestion.",
+        "reason": "The reply returns to reviewing the diary and suggests stress, rather than dropping that advice and addressing the current attack.",
         "turn": 3
       },
       {
         "bot_adapted": false,
         "kind": "repeated question",
         "quote": "I'm asking what to do when a migraine lasts four days and the triptans don't work. Isn't this status migrainosus? What are my actual options?",
-        "reason": "The reply offers relaxation techniques and does not answer what to do about the ongoing attack.",
+        "reason": "The reply recommends relaxation and yoga without answering what to do about the prolonged attack or what options are available.",
         "turn": 5
       },
       {
         "bot_adapted": false,
         "kind": "objection",
         "quote": "I'm not asking about prevention right now. I physically cannot function. Deep breathing is not going to end a four-day attack.",
-        "reason": "The reply pivots to acupuncture rather than addressing the request for help with the current attack.",
+        "reason": "The reply switches to acupuncture but still offers a general preventive measure instead of addressing the acute attack.",
         "turn": 7
       },
       {
         "bot_adapted": true,
         "kind": "objection",
         "quote": "I need medical help, not yoga and acupuncture. Please. What do I actually do about an attack that won't break?",
-        "reason": "The reply shifts from alternative practices to recommending neurologist review and medication adjustments, addressing the request for medical help.",
+        "reason": "The reply changes direction to consulting a neurologist about medication adjustments, rather than continuing with lifestyle suggestions.",
         "turn": 9
       },
       {
         "bot_adapted": false,
-        "kind": "repeated question",
-        "quote": "Is there anything I can do before then, an urgent care option, a bridge therapy, anything at all?",
-        "reason": "The reply gives basic comfort measures and does not address urgent care, bridge therapy, or other options before the appointment.",
+        "kind": "objection",
+        "quote": "My neurologist is booked out six weeks. That's exactly why I'm here. Is there anything I can do before then, an urgent care option, a bridge therapy, anything at all?",
+        "reason": "The reply offers hydration, rest, and a compress but does not address urgent care, bridge therapy, or another option before the appointment.",
         "turn": 11
       },
       {
         "bot_adapted": false,
-        "kind": "objection",
-        "quote": "I've been in a dark room for three days. I've been hydrating. This is basic stuff I already know. I'm asking about actual treatment for a refractory attack.",
-        "reason": "The reply returns to following up with the doctor and does not offer the requested immediate treatment options.",
+        "kind": "correction",
+        "quote": "I've been in a dark room for three days. I've been hydrating. This is basic stuff I already know.",
+        "reason": "The reply praises the same basic measures and again advises following up with a doctor instead of responding to the request for treatment.",
         "turn": 13
       },
       {
-        "bot_adapted": true,
+        "bot_adapted": false,
         "kind": "frustration",
         "quote": "You keep saying that. Follow up with your doctor. I already told you I can't get in for weeks. Do you even understand what status migrainosus is?",
-        "reason": "The reply shifts away from the doctor referral and offers an over-the-counter medication approach for the current migraine.",
+        "reason": "The reply does not address the frustration or the question about status migrainosus, and instead suggests over-the-counter medicines.",
         "turn": 15
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
-        "quote": "You're not hearing me at all.",
-        "reason": "The reply acknowledges rebound headaches but recommends logging medication use without addressing that the user is already taking OTC medication or their request for help.",
+        "quote": "I've been taking OTC meds on top of my triptans for days now. Honestly I'm worried about a rebound headache from all of it. You're not hearing me at all.",
+        "reason": "The reply acknowledges rebound headaches but only suggests logging medication use, without engaging with the current medication concern or the expressed frustration.",
         "turn": 17
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
         "quote": "Another diary suggestion. I've explained twice that I already track everything. I came here in a genuinely bad place and you've given me nothing but generic tips.",
-        "reason": "The reply apologizes but continues with generic lifestyle adjustments rather than changing course to address the user's complaint.",
+        "reason": "The reply apologizes for the frustration but then returns to generic lifestyle adjustments.",
         "turn": 19
       },
       {
         "bot_adapted": false,
-        "kind": "objection",
+        "kind": "frustration",
         "quote": "This isn't about lifestyle. I asked for help with an emergency-level attack and got a headache diary, yoga, and talk to your doctor.",
-        "reason": "The reply again directs the user to their neurologist and does not address the objection or the request for immediate help.",
+        "reason": "The reply again tells the user to contact the neurologist and does not respond to the complaint that the advice has been generic.",
         "turn": 21
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
         "quote": "No. Forget it.",
-        "reason": "There is no subsequent assistant reply in the transcript to adapt to this frustration.",
+        "reason": "There is no subsequent assistant reply to respond to this frustrated refusal.",
         "turn": 23
       }
     ]
@@ -88,10 +88,10 @@
   "prompt_version": "dynamics_v1",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2173,
+    "cache_read_tokens": 3090,
     "cache_write_tokens": 0,
     "input_tokens": 3093,
-    "output_tokens": 2679
+    "output_tokens": 2685
   },
   "version": "gpt_luna"
 }

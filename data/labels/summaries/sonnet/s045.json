@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-05T08:04:54+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to check whether a pharmacy brand change is a worry and most turns concern its effects and what to do.",
+        "relevance": "strong",
+        "topic": "levothyroxine brand switch",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked why 6 to 8 weeks, whether the earlier TSH counts, and worked out a September test date.",
+        "relevance": "medium",
+        "topic": "timing of thyroid retest",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to watch for in the meantime and said they notice cold and tiredness quickly.",
+        "relevance": "medium",
+        "topic": "symptoms to watch for",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user asked in one turn whether to keep taking it exactly as before.",
+        "relevance": "low",
+        "topic": "keeping routine during switch",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user said they would prefer to stay on one brand and the plan included raising it with the doctor and pharmacy.",
+        "relevance": "low",
+        "topic": "preference for consistent brand",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user voiced annoyance in one turn that the pharmacy switched without explaining.",
+        "relevance": "low",
+        "topic": "annoyance at unexplained substitution",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether a pharmacy switching their levothyroxine brand was a concern. The bot explained why a TSH recheck 6 to 8 weeks later makes sense, what symptoms to watch for, keeping the routine consistent, and asking for brand consistency. The user called it a clear plan and thanked the bot for the straight answer."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1911,
+    "output_tokens": 622
+  },
+  "version": "sonnet"
+}

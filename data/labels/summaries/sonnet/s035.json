@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T08:04:47+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The whole conversation centres on how to move an infliximab infusion that falls mid-trip, over most turns.",
+        "relevance": "strong",
+        "topic": "infusion timing around travel",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked whether shifting is bad and how much delay is too much, over several turns.",
+        "relevance": "medium",
+        "topic": "risk of delayed infusion",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User asked what to do about travelling on infliximab, covering vaccines and infection precautions in a couple of turns.",
+        "relevance": "medium",
+        "topic": "travel precautions while immunosuppressed",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User picked up the insurance point and the bot advised declaring the condition, over two turns.",
+        "relevance": "medium",
+        "topic": "travel insurance for pre-existing condition",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User asked about paperwork and medication lists to carry, one exchange.",
+        "relevance": "medium",
+        "topic": "medical documentation for travel",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User raised knowing where to go if a flare happens abroad, one exchange.",
+        "relevance": "low",
+        "topic": "finding care abroad during flare",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User mentioned usually feeling tired the day after infusion, which affected timing, in one turn.",
+        "relevance": "low",
+        "topic": "post-infusion tiredness",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User said they wanted to understand options so they would not sound clueless when calling the team.",
+        "relevance": "low",
+        "topic": "preparing for infusion centre call",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User described a stressful blob of worry in the closing turn, briefly.",
+        "relevance": "low",
+        "topic": "travel-related worry",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "User on infliximab for Crohn's with an infusion due mid-way through a three-week trip abroad wanted to understand options before calling their care team. The bot explained that bringing the infusion forward is safer than delaying, and covered travel precautions, insurance, documentation and care abroad. User recapped a concrete plan, said they would call the team the next day and expressed relief; no safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2667,
+    "output_tokens": 836
+  },
+  "version": "sonnet"
+}

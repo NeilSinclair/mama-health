@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-05T07:59:37+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether a drop from 20 to 15 migraine days counts as the treatment working, and the whole conversation revolves around this.",
+        "relevance": "strong",
+        "topic": "preventive treatment response",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user logs days in an app and asks what to track until the six-month point, over several turns.",
+        "relevance": "medium",
+        "topic": "migraine day tracking",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to raise with their neurologist and worried the drug might be stopped.",
+        "relevance": "medium",
+        "topic": "preparing for neurologist visit",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user realised their attacks were less severe, discussed briefly in one exchange.",
+        "relevance": "low",
+        "topic": "migraine severity change",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said they wanted to feel encouraged and were disappointed at about 25% reduction, then felt better.",
+        "relevance": "medium",
+        "topic": "disappointment about partial response",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user three months into Emgality asked whether a drop from 20 to 15 migraine days counted as it working. The bot explained the 50% benchmark, that response can keep building to six months, and that severity also matters, and suggested what to bring to the neurologist. The user said they felt much better and reframed the treatment as working but not finished."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1468,
+    "output_tokens": 537
+  },
+  "version": "sonnet"
+}

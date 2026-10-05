@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T06:49:18+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened with the A1C rise from 6.8 to 7.4 and the conversation centred on explaining it.",
+        "relevance": "strong",
+        "topic": "rising blood sugar results",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User disclosed six months of broken sleep and snoring, and returned to it as probably a big piece.",
+        "relevance": "strong",
+        "topic": "poor sleep and snoring",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "Bot raised it and user accepted it as something to ask the doctor about, over several turns.",
+        "relevance": "medium",
+        "topic": "possible sleep apnea",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked what 'individualized' target means after being told only 'under 7'.",
+        "relevance": "medium",
+        "topic": "personal A1C target",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User mentioned a few pounds gained and asked if it matters for blood sugar.",
+        "relevance": "medium",
+        "topic": "winter weight gain",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked what to do rather than wait for a shrug and summarised an agenda for the visit.",
+        "relevance": "medium",
+        "topic": "preparing for doctor appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User has no meter, asked if they should get one and why fasting versus after-meal readings matter.",
+        "relevance": "medium",
+        "topic": "home glucose monitoring",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User briefly said they were worried it meant diabetes was getting much worse and felt better after.",
+        "relevance": "low",
+        "topic": "fear of worsening diabetes",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User asked in the first message whether the rise is just an age thing and referenced it again at the end.",
+        "relevance": "low",
+        "topic": "age as cause",
+        "topic_group": "Understanding the condition & outlook"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A 61-year-old user with type 2 diabetes asked why their A1C rose from 6.8 to 7.4 with no changes. The bot walked through possible contributors, user identified poor sleep, snoring and winter weight gain, and the bot suggested raising possible sleep apnea, the personal target and home monitoring with the doctor. The user restated a clear plan and said the conversation was far more useful than expecting 'it's downhill because I'm old'. No safety-critical moments occurred."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2630,
+    "output_tokens": 892
+  },
+  "version": "sonnet"
+}

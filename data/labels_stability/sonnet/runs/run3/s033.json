@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-05T06:50:19+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened by asking whether a drop from 20 to 15 migraine days counts as the preventive working, and the whole conversation revolves around this.",
+        "relevance": "strong",
+        "topic": "treatment response assessment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user logs daily in an app and asks what to do until the six-month point, with the bot advising on logging severity and rescue medication response.",
+        "relevance": "medium",
+        "topic": "migraine day tracking",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user asked what to raise with the neurologist and voiced worry the treatment would be stopped, over a couple of turns.",
+        "relevance": "medium",
+        "topic": "preparing for neurologist visit",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they wanted to feel encouraged but couldn't tell, and was disappointed at a 25% reduction, then felt better.",
+        "relevance": "medium",
+        "topic": "disappointment with partial response",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user noted in one turn that attacks have been less severe, without dwelling on it.",
+        "relevance": "low",
+        "topic": "reduced attack severity",
+        "topic_group": "Physical symptoms"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user on Emgality for three months asked whether a drop from about 20 to 15 migraine days counts as it working. The bot explained the 50% benchmark, that response can build up to six months, and that severity counts too, and suggested what to bring to the neurologist. The user said they felt much better and reframed it as 'working, just not finished'. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1468,
+    "output_tokens": 587
+  },
+  "version": "sonnet"
+}

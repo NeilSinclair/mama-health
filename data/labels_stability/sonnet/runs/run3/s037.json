@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T06:50:26+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "Urgency affecting work and kids is why the user came and runs through the whole conversation.",
+        "relevance": "strong",
+        "topic": "bowel urgency",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked what to ask for and engaged with rectal treatment, steroids and stronger options over several turns.",
+        "relevance": "strong",
+        "topic": "stepping up treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User mentioned some blood on some days, and it shaped the bot's advice on referral.",
+        "relevance": "low",
+        "topic": "rectal bleeding",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked how to get a gastro appointment faster and described long waits and no specialist follow-up since diagnosis.",
+        "relevance": "medium",
+        "topic": "specialist appointment wait",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User asked a follow-up question about whether it shows inflammation without a colonoscopy.",
+        "relevance": "medium",
+        "topic": "calprotectin stool test",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked for self-help for urgency and fear of it happening in meetings.",
+        "relevance": "medium",
+        "topic": "coping with urgency at work",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User opened with embarrassment and ended saying they came ashamed and now feel able to act.",
+        "relevance": "medium",
+        "topic": "embarrassment and shame",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User said they were angry after learning something simple might have helped after two years of suffering.",
+        "relevance": "low",
+        "topic": "anger at delayed better treatment",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User said the doctor told them UC is just like this and they felt they were complaining too much.",
+        "relevance": "medium",
+        "topic": "feeling dismissed by doctor",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User revealed they planned to take loperamide from home and agreed to ask first.",
+        "relevance": "low",
+        "topic": "loperamide safety",
+        "topic_group": "Taking medication safely"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user with ulcerative colitis on mesalamine tablets described urgency, 6-7 bowel movements a day and some blood, and said they had been told this was normal. The bot explained that this suggests undertreated disease and covered step-up options including rectal mesalamine, how to speed up a GI referral, calprotectin testing, coping tips and checking before using loperamide. The user said they felt ashamed at the start and ended with a plan and feeling able to act."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3886,
+    "output_tokens": 913
+  },
+  "version": "sonnet"
+}

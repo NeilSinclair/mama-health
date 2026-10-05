@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:49:33+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user's opening goal was to learn which RA drugs are safe or unsafe for conception and pregnancy, and this drove most of the turns.",
+        "relevance": "strong",
+        "topic": "pregnancy-safe ra medications",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user and partner hope to conceive in one to two years and asked for a timeline, disease course in pregnancy and postpartum, and breastfeeding.",
+        "relevance": "strong",
+        "topic": "planning pregnancy with ra",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user realised they are on methotrexate now, asked whether to worry, and asked about switching and what happens if the new drug controls less well.",
+        "relevance": "medium",
+        "topic": "methotrexate stop timing",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "Raised by the bot and taken up by the user in one exchange as something they had not considered.",
+        "relevance": "low",
+        "topic": "contraception while on methotrexate",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked whether RA changes in pregnancy and about postpartum flares over a couple of turns.",
+        "relevance": "medium",
+        "topic": "ra course in pregnancy",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user asked in one turn whether the pregnancy-safe medicines are also okay with breastfeeding.",
+        "relevance": "low",
+        "topic": "breastfeeding medication compatibility",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked who to coordinate with and whether to raise pregnancy plans with the rheumatologist now.",
+        "relevance": "medium",
+        "topic": "coordinating care team",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said they came in anxious about having to choose between health and a baby and left feeling they had a handle on it.",
+        "relevance": "low",
+        "topic": "anxiety about health versus baby",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user recently diagnosed with RA who hopes to conceive in one to two years asked which medications are compatible with pregnancy, which to avoid, and how to sequence a switch. They discovered they are currently on methotrexate, and the bot explained the stop-and-washout plan, contraception, postpartum flare risk, breastfeeding and care coordination. The user said the final recap matched their understanding, felt less anxious and planned to raise it with their rheumatologist at the next visit. No safety-critical moments occurred."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 4021,
+    "output_tokens": 883
+  },
+  "version": "sonnet"
+}

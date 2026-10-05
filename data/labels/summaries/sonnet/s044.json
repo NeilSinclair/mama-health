@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-05T08:04:57+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user opened with severe weekly nausea and the whole conversation was about reducing it.",
+        "relevance": "strong",
+        "topic": "methotrexate nausea",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked at the start whether they could quit and said they did not want to stop.",
+        "relevance": "strong",
+        "topic": "stopping methotrexate",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked which day to take it, admitted taking it on the methotrexate day, and agreed to move it to Sunday.",
+        "relevance": "medium",
+        "topic": "folic acid timing",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked how much difference the injection makes and said they were scared of self-injecting.",
+        "relevance": "medium",
+        "topic": "injectable methotrexate",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user asked whether anti-nausea medicine is safe with methotrexate, over a couple of turns.",
+        "relevance": "medium",
+        "topic": "anti-nausea medication",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what to say so they would not forget, and planned to write it down.",
+        "relevance": "medium",
+        "topic": "preparing for doctor visit",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user said in one line that they were a little scared of injecting.",
+        "relevance": "low",
+        "topic": "fear of self-injecting",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user asked whether to keep taking it as normal for the two weeks before the appointment.",
+        "relevance": "low",
+        "topic": "interim safety until appointment",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user mentioned that their hands are much better as background for wanting to continue.",
+        "relevance": "low",
+        "topic": "improved joint symptoms",
+        "topic_group": "Physical symptoms"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "A user with rheumatoid arthritis on weekly methotrexate asked whether to quit because of severe nausea. The bot advised against stopping on their own and explained options: folic acid timing, split dosing, injection and anti-nausea medicine. The user found a folic acid timing error, planned changes starting this weekend, got a script for their doctor visit, and said they felt much better."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3422,
+    "output_tokens": 804
+  },
+  "version": "sonnet"
+}

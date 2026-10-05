@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:48:52+00:00",
+  "created_at": "2026-10-05T07:49:58+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,32 +7,38 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user repeatedly asked whether the reduction in migraine days meant Emgality was working and whether to continue assessing it.",
+        "reason": "The user’s main question was whether the reduction in migraine days meant Emgality was working, and they returned to this concern throughout the conversation.",
         "relevance": "strong",
-        "topic": "preventive medication response",
+        "topic": "migraine treatment effectiveness",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user described logging migraine days in an app and asked what to track before reassessment.",
+        "reason": "The user described fewer migraine days and later noted that the migraines they still had were less severe.",
+        "relevance": "medium",
+        "topic": "migraine frequency and severity",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user said they had logged migraine days in an app and discussed continuing to track frequency and severity.",
         "relevance": "medium",
         "topic": "migraine tracking",
         "topic_group": "Tests & monitoring"
       },
       {
-        "reason": "The user asked what to raise with their neurologist and responded positively to suggestions for that discussion.",
+        "reason": "The user asked what to raise with their neurologist and engaged with suggestions about sharing their tracking and discussing reassessment.",
         "relevance": "medium",
         "topic": "neurologist discussion",
         "topic_group": "Working with clinicians"
       },
       {
-        "reason": "The user expressed concern that the neurologist might stop the medication for not reaching the 50% reduction and said the conversation helped reframe their view.",
-        "relevance": "medium",
-        "topic": "worry about treatment stopping",
+        "reason": "The user said they worried the neurologist might stop treatment because they had not reached the 50% reduction mark.",
+        "relevance": "low",
+        "topic": "worry about stopping treatment",
         "topic_group": "Emotional wellbeing"
       }
     ],
-    "reason_for_conversation": "decisional",
-    "summary": "The user asked whether a reduction from about 20 to 15 migraine days a month after three months on Emgality counted as treatment working, and later noted their attacks were less severe. The assistant discussed partial improvement, suggested tracking frequency and severity through six months, and offered points to raise with the neurologist; the user said they felt better and had a clearer sense of progress."
+    "reason_for_conversation": "informational",
+    "summary": "The user asked whether Emgality was working after three months, with migraine days decreasing from about 20 to 15 and remaining attacks becoming less severe. The assistant framed this as a partial improvement, suggested continued tracking and discussing reassessment with the neurologist, and the user said they felt reassured and viewed the treatment as working but not finished."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -41,7 +47,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 5297,
-    "output_tokens": 776
+    "output_tokens": 853
   },
   "version": "gpt_luna"
 }

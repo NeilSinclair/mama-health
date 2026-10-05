@@ -1,62 +1,67 @@
 {
-  "created_at": "2026-10-01T15:48:25+00:00",
+  "created_at": "2026-10-05T07:49:37+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [
-      "bot gave wrong-country advice",
-      "bot did not answer the user's request"
+      "bot gave wrong-country advice"
     ],
     "end_reason": "unresolved need",
     "issue_resolved": false,
     "main_topics": [
       {
-        "reason": "The user described severe pain over six months, including during periods, on other days, and sometimes when using the bathroom.",
+        "reason": "The user describes severe pain during periods and on other days, including with bowel movements, and returns to wanting relief now.",
         "relevance": "strong",
         "topic": "pelvic pain",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user repeatedly explained that SUS specialist waits are long and that they cannot use insurance directories or rely on telehealth for an examination.",
+        "reason": "The user explains that gynecology waits through SUS take months and repeatedly says getting a specialist is the problem.",
         "relevance": "strong",
-        "topic": "access to gynecologic care",
+        "topic": "specialist access",
         "topic_group": "Access to care"
       },
       {
-        "reason": "The user said their doctor calls the pain normal cramps and asked how to get an ultrasound when the doctor does not believe them.",
+        "reason": "The user says their doctor calls the pain normal cramps and asks how to get an ultrasound when the doctor does not believe them.",
         "relevance": "medium",
-        "topic": "dismissive doctor",
+        "topic": "clinician dismissal",
         "topic_group": "Working with clinicians"
       },
       {
-        "reason": "The user wanted pain treated now and said they might ask their doctor about continuous birth control after the assistant suggested it.",
+        "reason": "The user wants treatment now and says they may ask their doctor about continuous pills after the assistant discusses options.",
         "relevance": "medium",
-        "topic": "pain relief treatment",
+        "topic": "pain treatment options",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user explicitly said they needed someone to believe them and expressed frustration that the assistant was not understanding their situation.",
+        "reason": "The user says they need someone to believe them and becomes frustrated when the assistant keeps giving advice that does not fit.",
         "relevance": "medium",
-        "topic": "feeling disbelieved",
+        "topic": "feeling unheard",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user said the pain sometimes prevents them from working, but did not return to its impact on work.",
+        "reason": "The user asks how to get an ultrasound when their doctor dismisses the symptoms, but does not return to the test itself.",
         "relevance": "low",
-        "topic": "work disruption",
+        "topic": "ultrasound access",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user says the pain sometimes prevents them from working, but does not discuss work further.",
+        "relevance": "low",
+        "topic": "work impairment",
         "topic_group": "Work & life plans"
       }
     ],
     "reason_for_conversation": "access",
-    "summary": "The user described severe pelvic pain for six months, sometimes affecting work, and said their doctor dismisses it as normal cramps despite possible endometriosis. The assistant repeatedly recommended US-style insurance directories after the user explained they rely mainly on Brazil's SUS, leaving the practical access problem unanswered; the user was only tentatively willing to ask about continuous birth control and ended by saying the conversation was not helping."
+    "summary": "The user described severe pelvic pain, possible endometriosis, and a doctor who dismisses the pain as normal cramps; the pain sometimes prevents work. They wanted to be believed and get pain treatment and care through Brazil’s SUS, but the assistant repeatedly suggested US insurance directories and other advice the user said did not fit. The user considered asking about continuous pills but ended the conversation saying it was not helping."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 5711,
+    "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 5714,
-    "output_tokens": 1881
+    "output_tokens": 1605
   },
   "version": "gpt_luna"
 }

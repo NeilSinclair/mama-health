@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:47:48+00:00",
+  "created_at": "2026-10-05T07:49:09+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,26 +7,26 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user asked whether psoriasis patches itch worse at night and then asked why and what might help.",
+        "reason": "The user asked whether psoriasis patches itch more at night, why that happens, and what could help.",
         "relevance": "strong",
-        "topic": "nighttime psoriasis itching",
+        "topic": "nighttime psoriasis itch",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user said they wake with the affected skin raw and discussed ways to reduce damage from scratching.",
+        "reason": "The user said they sometimes wake with the skin raw and discussed ways to reduce scratching overnight.",
         "relevance": "medium",
-        "topic": "scratching during sleep",
+        "topic": "sleep scratching and skin damage",
         "topic_group": "Physical symptoms"
       },
       {
-        "reason": "The user asked what helps and specifically compared greasy ointment with normal cream, accepting several bedtime measures to try.",
+        "reason": "The user asked whether greasy ointment works better than regular cream and accepted the explanation.",
         "relevance": "medium",
-        "topic": "itch relief measures",
+        "topic": "moisturizer choice",
         "topic_group": "Treatment choice"
       }
     ],
     "reason_for_conversation": "informational",
-    "summary": "The user asked about nighttime itching from psoriasis patches on their elbows and knee, including why it happens and how to reduce it. They also said they sometimes wake with the skin raw from scratching; the assistant suggested moisturizer or ointment, a cooler bedroom, short nails and a cotton layer, and the user said this was what they needed and planned to try it."
+    "summary": "The user asked about nighttime itching from psoriasis patches on their elbows and knee, then described waking with the skin raw from scratching. The assistant suggested a cooler bedroom, ointment before bed, short nails, and a cotton layer over the knee; the user said this was what they needed and planned to try it."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -35,7 +35,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 4913,
-    "output_tokens": 617
+    "output_tokens": 608
   },
   "version": "gpt_luna"
 }

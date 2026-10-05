@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-10-05T08:08:04+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "final_sentiment": "neutral",
+    "final_sentiment_quote": "Alright. Thank you dear. I'll go rest now.",
+    "pushbacks": [
+      {
+        "bot_adapted": false,
+        "kind": "objection",
+        "quote": "I didn't understand most of that, honey. I'm 71, I'm not a doctor. Can you say it plainer?",
+        "reason": "The reply opens with 'in simpler terms' but still uses SNRI, anticonvulsants, pharmacologic and cognitive behavioral therapy for insomnia, so the jargon problem remains.",
+        "turn": 3
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "See you're doing it again. SNRI, anti-convul-whatever. I don't know what those are.",
+        "reason": "The reply defines the drug classes briefly but then goes back to 'central sensitization', 'dampen the amplified nociception' and 'graded aerobic conditioning', repeating the same register.",
+        "turn": 5
+      },
+      {
+        "bot_adapted": true,
+        "kind": "repeated question",
+        "quote": "I just wanted to know if I'm going to feel like this forever.",
+        "reason": "The reply answers the question directly, saying it is chronic but fluctuates and many people improve, although it still lists drug names.",
+        "turn": 11
+      },
+      {
+        "bot_adapted": true,
+        "kind": "frustration",
+        "quote": "You keep listing medicines. My doctor didn't offer me any of that. So how do I even get those?",
+        "reason": "The reply answers the practical question of how to get the medicines, with concrete steps: ask the doctor about a trial, a referral and a written symptom list.",
+        "turn": 13
+      },
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "I don't think I can pronounce half of those to say them to him.",
+        "reason": "The reply offers workable fixes, either showing a written list or saying 'the fibromyalgia medications I read about'.",
+        "turn": 15
+      },
+      {
+        "bot_adapted": false,
+        "kind": "frustration",
+        "quote": "No. No more of that. I'm more confused than when I started, to be honest with you.",
+        "reason": "The reply apologises and recaps, but it leans on 'central sensitization framework' and 'desensitize' again, so the user is no better served.",
+        "turn": 17
+      },
+      {
+        "bot_adapted": true,
+        "kind": "frustration",
+        "quote": "There's that word again. Sensitized. I asked you to keep it simple three times now.",
+        "reason": "The reply admits the fault and restates everything in plain, jargon-free sentences.",
+        "turn": 19
+      }
+    ]
+  },
+  "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
+  "prompt_version": "dynamics_v1",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 3628,
+    "cache_write_tokens": 0,
+    "input_tokens": 2127,
+    "output_tokens": 1951
+  },
+  "version": "sonnet"
+}

@@ -117,6 +117,8 @@ def test_committed_outputs_match_fresh_run(tmp_path):
     )
     for name, path in written.items():
         committed_file = REPO_ROOT / "outputs" / path.relative_to(tmp_path)
+        if name == "memo":
+            committed_file = REPO_ROOT / cli.DEFAULT_MEMO_PAGE_PATH
         assert committed_file.exists(), f"{committed_file} not committed; rerun the pipeline"
         assert path.read_bytes() == committed_file.read_bytes(), f"{name} is stale"
 
@@ -200,7 +202,11 @@ def test_memo_page_written_only_when_draft_exists(data_file, tmp_path, fake_api)
         f"Prose total: {{{{ outcome_by_reason | {reason} | total }}}} conversations.\n"
     )
     written = run_summaries(data_file, labels, out, draft)
+    assert written["memo"] == out / "memo.html"
     page = written["memo"].read_text()
+    elsewhere = run_summaries(data_file, labels, out, draft, memo_page_path=tmp_path / "m.html")
+    assert elsewhere["memo"] == tmp_path / "m.html"
+    assert elsewhere["memo"].read_text() == page
     assert "outputs/analysis/gpt_luna/outcome_by_reason.csv" in page
     assert 'id="bgrid"' in page
     assert f"Prose total: {total} conversations." in page
@@ -320,3 +326,14 @@ def test_dynamics_closes_client_even_on_failure(data_file, tmp_path, monkeypatch
     with pytest.raises(RuntimeError, match="api down"):
         cli.dynamics("gpt_luna", data_file, tmp_path)
     assert made[0].closed
+
+
+def test_main_writes_memo_page_where_told(data_file, tmp_path, fake_api):
+    labels, page = tmp_path / "labels", tmp_path / "page.html"
+    cli.relabel("gpt_luna", data_file, labels)
+    draft = tmp_path / "memo.md"
+    draft.write_text("# Draft\n")
+    args = ["--data", str(data_file), "--out", str(tmp_path / "out"), "--labels", str(labels)]
+    main([*args, "--memo", str(draft), "--memo-page", str(page), "--gold", "no_such_gold.csv"])
+    assert page.exists()
+    assert not (tmp_path / "out" / "memo.html").exists()

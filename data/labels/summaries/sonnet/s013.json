@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T08:04:28+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened with flares during stressful work weeks and described diarrhea, cramping and urgency across the conversation.",
+        "relevance": "strong",
+        "topic": "stress-triggered ibs flares",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User asked what can be done about the pattern and engaged for several turns on hypnotherapy and CBT and where to find them.",
+        "relevance": "strong",
+        "topic": "brain-gut therapies",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked what to do on a bad morning with meetings and followed up on taking Imodium preemptively.",
+        "relevance": "medium",
+        "topic": "acute flare relief options",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User asked for a plan and the bot laid out long-term and acute layers.",
+        "relevance": "medium",
+        "topic": "building a management plan",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User disclosed heavy coffee use on stressful days and reflected on it over a couple of turns.",
+        "relevance": "medium",
+        "topic": "caffeine intake",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User mentioned urgency disrupting meetings as context for the request.",
+        "relevance": "low",
+        "topic": "work disruption from urgency",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User said the doctor only advised more fiber, and asked whether to involve the doctor in the plan.",
+        "relevance": "low",
+        "topic": "dismissive doctor advice",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "User with IBS-D-type flares triggered by work stress asked what they can do. The bot explained the gut-brain link, suggested gut-directed hypnotherapy and CBT, covered acute options such as antispasmodics and preemptive loperamide, and discussed caffeine and a plan. User said it was more helpful than their doctor's advice and left with things to try and a plan to involve their doctor."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3283,
+    "output_tokens": 704
+  },
+  "version": "sonnet"
+}

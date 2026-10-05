@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-05T06:49:06+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to learn what preventatives exist and spent most turns comparing oral and injectable options.",
+        "relevance": "strong",
+        "topic": "migraine preventive treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The user's stated goal was to go in prepared, and they asked for a list of questions for the neurologist.",
+        "relevance": "strong",
+        "topic": "appointment preparation questions",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The user asked whether newer drugs require failing older ones first, and the bot explained step therapy and prior authorization over a couple of turns.",
+        "relevance": "medium",
+        "topic": "insurance step therapy",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The user asked about side effects and precautions for one oral option in a single exchange.",
+        "relevance": "medium",
+        "topic": "preventative side effects",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "The user asked what the traditional options are and whether they are tried first, which took one exchange.",
+        "relevance": "medium",
+        "topic": "older versus newer preventatives",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "The condition is mentioned only as background to the treatment question.",
+        "relevance": "low",
+        "topic": "chronic migraine",
+        "topic_group": "Physical symptoms"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "The user has chronic migraine and wanted to understand preventative options before a neurologist visit. The bot described injectable and oral CGRP drugs, older oral options, insurance step therapy and a list of questions to bring. The user said it was exactly what they needed and planned to ask about one specific oral drug."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2099,
+    "output_tokens": 994
+  },
+  "version": "sonnet"
+}

@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-05T07:59:32+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user's core question was how to reconcile exercise advice with being flattened for days, and nearly every turn dealt with it.",
+        "relevance": "strong",
+        "topic": "exercise causing delayed crashes",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user described overdoing it on good days and called capping good days the most useful idea, over several turns.",
+        "relevance": "strong",
+        "topic": "pacing and boom-bust cycle",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked whether walking or yoga is better and took up warm-water exercise in a few turns.",
+        "relevance": "medium",
+        "topic": "best type of exercise",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked once how long before a difference would show and accepted the realistic answer.",
+        "relevance": "low",
+        "topic": "time to see improvement",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "The user opened by venting about feeling stuck and punished, then the theme faded as the conversation went on.",
+        "relevance": "medium",
+        "topic": "frustration with conflicting advice",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user said doctors just say exercise is key and that this conversation helped more than many appointments, mentioned briefly.",
+        "relevance": "low",
+        "topic": "inadequate advice from doctors",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with fibromyalgia vented about being told to exercise but crashing for days afterward. The bot explained graded exercise, very small starting doses, and capping activity on good days, and suggested warm-water exercise at the user's community pool. The user said it was the most useful advice they had had and left with a plan. No safety-critical moments arose."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3743,
+    "output_tokens": 651
+  },
+  "version": "sonnet"
+}

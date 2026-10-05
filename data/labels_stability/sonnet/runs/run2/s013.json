@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T06:49:10+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "Opening question about the stress-flare pattern and what to do about it drives the whole conversation.",
+        "relevance": "strong",
+        "topic": "stress-triggered ibs flares",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked where to find hypnotherapy and CBT and engaged over several turns.",
+        "relevance": "strong",
+        "topic": "gut-directed therapies",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked what to do on a bad morning, and the bot covered antispasmodics and preemptive loperamide, which the user queried.",
+        "relevance": "strong",
+        "topic": "acute flare management",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User described urgency, cramping and repeated morning bowel trips in t3 as the symptom pattern.",
+        "relevance": "medium",
+        "topic": "diarrhea and cramping urgency",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User disclosed heavy coffee use under stress and reflected on it for a couple of turns.",
+        "relevance": "medium",
+        "topic": "caffeine intake",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked for a plan and the bot laid out long-term and acute layers.",
+        "relevance": "medium",
+        "topic": "self-management plan",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked whether to loop in their doctor, and the bot suggested how to raise the topic.",
+        "relevance": "medium",
+        "topic": "when to involve doctor",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User mentioned once that their doctor only said to eat more fiber.",
+        "relevance": "low",
+        "topic": "dismissive fiber advice",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "Meetings and deadlines frame the flare problem but were not explored as a topic in themselves.",
+        "relevance": "low",
+        "topic": "work stress disruption",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "User voiced doubt about 'just relax' advice once, and it shaped the bot's framing.",
+        "relevance": "low",
+        "topic": "skepticism about relaxation advice",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user with IBS asked what can be done about flares that hit during stressful work weeks. The bot explained the gut-brain link, suggested gut-directed hypnotherapy, IBS-focused CBT, antispasmodics, preemptive loperamide and cutting back on caffeine, and helped build a plan and advised how to approach their doctor. The user said it was helpful and not the usual runaround, and they have things to try."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3283,
+    "output_tokens": 935
+  },
+  "version": "sonnet"
+}

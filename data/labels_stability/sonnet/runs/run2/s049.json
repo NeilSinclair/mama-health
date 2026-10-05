@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-05T06:49:45+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "The user came to talk about being unable to keep working, decided to resign, and asked for a resignation letter, which took several turns.",
+        "relevance": "strong",
+        "topic": "resigning due to health",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user opened wanting to talk to something that would not sigh at them, was tearful at the letter, and ended feeling calmer.",
+        "relevance": "strong",
+        "topic": "emotional exhaustion and being heard",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "The user described mistakes by 11am and a two-day crash afterwards, which drove their decision to leave work.",
+        "relevance": "medium",
+        "topic": "fatigue and brain fog",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The user asked for health steps after leaving work and asked for a proper explanation of pacing, which the bot gave and the user said clicked.",
+        "relevance": "medium",
+        "topic": "pacing and energy management",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "The bot explained adjustments and occupational health over a couple of turns and the user was surprised, but the user had already decided to resign.",
+        "relevance": "medium",
+        "topic": "workplace adjustments and occupational health",
+        "topic_group": "Work & life plans"
+      },
+      {
+        "reason": "The user mentioned once that HR only said to let them know if they needed anything, and did not return to it.",
+        "relevance": "low",
+        "topic": "vague hr support",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "The bot mentioned a clinic referral and checking contributors in one turn, and the user did not take it up beyond asking about pacing.",
+        "relevance": "low",
+        "topic": "long covid follow-up care",
+        "topic_group": "Access to care"
+      }
+    ],
+    "reason_for_conversation": "emotional",
+    "summary": "A user with long COVID for over two years, struggling with fatigue, brain fog and post-exertion crashes, came to talk and decided to resign from an office job. The bot gave a supportive response, drafted and then warmed up a resignation letter, and explained pacing for post-resignation health. The user said the pacing explanation clicked, felt calmer than in ages, and planned to send the letter on Monday."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2626,
+    "output_tokens": 1365
+  },
+  "version": "sonnet"
+}

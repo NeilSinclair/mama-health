@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T06:50:01+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User opened by asking what else exists when the pill stopped working and spent most turns comparing progestin, coil and GnRH options.",
+        "relevance": "strong",
+        "topic": "alternative endometriosis treatment options",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "Pain creeping back and worst in the pill-free week is the trigger for the whole conversation.",
+        "relevance": "medium",
+        "topic": "returning pelvic pain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User described break-week pain and the bot suggested skipping the break, which the user had never heard of and put on their list.",
+        "relevance": "medium",
+        "topic": "continuous pill use",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User said they were discharged to the GP after the laparoscopy and the bot guided them toward asking for re-referral, which became a list item.",
+        "relevance": "medium",
+        "topic": "specialist re-referral after discharge",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User asked over a couple of turns whether they would have to go private for it.",
+        "relevance": "medium",
+        "topic": "pelvic floor physiotherapy access",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User said they were tired of everything being hormones and asked if there was anything else.",
+        "relevance": "medium",
+        "topic": "non-hormonal pain management",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked if GnRH treatment is as bad as it sounds and was reassured by the answer.",
+        "relevance": "low",
+        "topic": "fear of chemical menopause",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked whether disease on the ovary and near the bowel changes which treatment would work.",
+        "relevance": "low",
+        "topic": "laparoscopy findings and disease location",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User said discharge to the GP felt rubbish and mentioned feeling stuck and tired of hormones, but only briefly.",
+        "relevance": "low",
+        "topic": "feeling let down by discharge",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User wanted the whole picture before going back to the GP and ended with a list to take.",
+        "relevance": "low",
+        "topic": "preparing for gp appointment",
+        "topic_group": "Working with clinicians"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "User with endometriosis said the combined pill had stopped working and pain was returning, worst in the break week, and asked what other options exist. The bot covered continuous pill use, progestin options, the Mirena, GnRH drugs, non-hormonal approaches, re-referral to a specialist and pelvic floor physio. The user ended with a clear list to take to the GP and said they felt less stuck."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3798,
+    "output_tokens": 942
+  },
+  "version": "sonnet"
+}

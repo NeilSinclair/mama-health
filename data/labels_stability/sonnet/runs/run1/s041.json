@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T06:48:40+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "User came to talk through whether to start a biologic and spent the whole conversation weighing its risks against benefits.",
+        "relevance": "strong",
+        "topic": "biologic safety risks",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked how big the infection risk is and about TB, taking several turns.",
+        "relevance": "medium",
+        "topic": "serious infection risk",
+        "topic_group": "Taking medication safely"
+      },
+      {
+        "reason": "User said cancer is what sits with them most and discussed lymphoma family history and the drug-versus-disease question over several turns.",
+        "relevance": "medium",
+        "topic": "cancer risk",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked how classes differ in safety and engaged with the answer over a few turns.",
+        "relevance": "medium",
+        "topic": "biologic class differences",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User asked about skin cancer given easy burning and heavy past sun exposure, one exchange.",
+        "relevance": "low",
+        "topic": "skin cancer risk",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User asked what to bring to the appointment and liked the list, one exchange.",
+        "relevance": "low",
+        "topic": "preparing for dermatologist visit",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User said online risk stories were freaking them out, mainly as background framing for the informational questions.",
+        "relevance": "low",
+        "topic": "fear of treatment risks",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User briefly reacted to learning that TB and hepatitis testing happens before starting.",
+        "relevance": "low",
+        "topic": "pre-treatment screening",
+        "topic_group": "Tests & monitoring"
+      }
+    ],
+    "reason_for_conversation": "decisional",
+    "summary": "User with psoriasis, considering a biologic suggested by their dermatologist, wanted to understand infection and cancer risks after being alarmed by online stories. The bot explained relative versus absolute risk, differences between biologic classes, TB screening, and how family lymphoma history and sun exposure matter, and gave questions to take to the dermatologist. User ended saying the reframe of drug risk versus risk of doing nothing was helpful and felt prepared."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 2335,
+    "output_tokens": 781
+  },
+  "version": "sonnet"
+}

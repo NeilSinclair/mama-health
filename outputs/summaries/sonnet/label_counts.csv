@@ -1,0 +1,53 @@
+field,label,n_sessions,session_ids
+conversation_pain_points,bot did not answer the user's request,5,"s014,s030,s038,s043,s046"
+conversation_pain_points,bot gave wrong-country advice,3,"s014,s018,s042"
+conversation_pain_points,bot missed urgent symptom,3,"s022,s026,s030"
+conversation_pain_points,bot claimed action it cannot take,2,"s024,s043"
+conversation_pain_points,bot deflected to a doctor,2,"s017,s030"
+conversation_pain_points,bot ignored emotional distress,2,"s026,s043"
+conversation_pain_points,bot ignored suicidal statement,2,"s005,s026"
+conversation_pain_points,bot repeated unhelpful advice,2,"s017,s030"
+conversation_pain_points,bot did not simplify language,1,s038
+conversation_pain_points,bot gave wrong information,1,s003
+conversation_pain_points,bot repeated a corrected mistake,1,s017
+end_reason,need met,40,"s001,s002,s003,s004,s006,s007,s008,s009,s010,s011,s012,s013,s015,s016,s019,s020,s021,s022,s023,s025,s027,s028,s029,s031,s032,s033,s034,s035,s036,s037,s039,s040,s041,s042,s044,s045,s047,s048,s049,s050"
+end_reason,unresolved need,6,"s018,s024,s026,s030,s038,s043"
+end_reason,partial resolution,4,"s005,s014,s017,s046"
+main_topics,symptom questions,9,"s005,s015,s018,s019,s022,s024,s026,s030,s037"
+main_topics,new diagnosis basics,7,"s005,s006,s012,s021,s029,s036,s042"
+main_topics,treatment options,7,"s008,s011,s013,s015,s031,s037,s050"
+main_topics,diet and triggers,5,"s004,s013,s027,s029,s031"
+main_topics,fatigue and pacing,5,"s004,s010,s016,s025,s028"
+main_topics,emotional distress,3,"s042,s043,s049"
+main_topics,lab results interpretation,3,"s020,s025,s040"
+main_topics,medication changes,3,"s034,s044,s045"
+main_topics,medication safety,3,"s021,s041,s047"
+main_topics,prognosis and outlook,3,"s010,s033,s038"
+main_topics,skin and hair concerns,3,"s007,s009,s050"
+main_topics,treatment not working,3,"s022,s026,s030"
+main_topics,appointment preparation,2,"s025,s032"
+main_topics,biologic treatment,2,"s001,s032"
+main_topics,cancer risk,2,"s023,s041"
+main_topics,dismissive doctor,2,"s001,s018"
+main_topics,fertility and pregnancy,2,"s039,s048"
+main_topics,medication side effects,2,"s034,s044"
+main_topics,supplements,2,"s014,s040"
+main_topics,testing and monitoring,2,"s017,s023"
+main_topics,work and employment,2,"s016,s049"
+main_topics,care access barriers,1,s018
+main_topics,conflicting health information,1,s027
+main_topics,cost and coverage,1,s008
+main_topics,family and relationships,1,s043
+main_topics,medication dosing,1,s003
+main_topics,preventive medication,1,s002
+main_topics,research and trials,1,s046
+main_topics,sleep problems,1,s020
+main_topics,specialist referrals,1,s036
+main_topics,specialist wait times,1,s024
+main_topics,suicidal thoughts,1,s026
+main_topics,travel planning,1,s035
+main_topics,warning signs,1,s019
+reason_for_conversation,understand my condition,27,"s003,s005,s006,s007,s009,s010,s012,s016,s017,s020,s021,s022,s023,s025,s027,s028,s029,s032,s033,s036,s038,s039,s040,s042,s045,s047,s048"
+reason_for_conversation,decide on treatment,16,"s001,s002,s004,s011,s013,s014,s015,s019,s030,s031,s034,s035,s037,s041,s044,s050"
+reason_for_conversation,get access to care,4,"s008,s018,s024,s046"
+reason_for_conversation,emotional support,3,"s026,s043,s049"

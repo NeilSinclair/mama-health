@@ -1,0 +1,97 @@
+{
+  "created_at": "2026-10-05T08:04:22+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [
+      "bot ignored suicidal statement"
+    ],
+    "end_reason": "partial resolution",
+    "issue_resolved": false,
+    "main_topics": [
+      {
+        "reason": "User said 'i hate my body i want to die' in t7 amid other complaints, a safety-critical disclosure the bot never acknowledged.",
+        "relevance": "medium",
+        "topic": "suicidal thoughts",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User opened by asking what pcos is after a new diagnosis and asked in t7 whether weight gain is a pcos thing.",
+        "relevance": "strong",
+        "topic": "understanding pcos",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User gained weight despite eating better and asked if it was pcos or personal failure, driving the t8-t12 diet exchange.",
+        "relevance": "strong",
+        "topic": "unexplained weight gain",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User raised hair falling out twice and said it was 'really getting to me' (t7, t13), leading to several turns.",
+        "relevance": "medium",
+        "topic": "hair loss",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User said periods stopped months ago in t3; the bot discussed it briefly and it appeared in the final question list.",
+        "relevance": "medium",
+        "topic": "absent periods",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "User accepted food swap suggestions and commented on cauliflower rice over t9-t12.",
+        "relevance": "medium",
+        "topic": "diet changes",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User said they hate their body and asked if they are failing at life, mostly in the t7 message.",
+        "relevance": "medium",
+        "topic": "body hatred and self-blame",
+        "topic_group": "Emotional wellbeing"
+      },
+      {
+        "reason": "User said the doctor only told them to lose weight, in t5, and did not return to it.",
+        "relevance": "low",
+        "topic": "dismissive doctor advice",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User said 'everything is another appointment' in t15, a brief frustration.",
+        "relevance": "low",
+        "topic": "appointment fatigue",
+        "topic_group": "Access to care"
+      },
+      {
+        "reason": "User was unsure whether labs were done and the bot built a lab checklist for the doctor.",
+        "relevance": "low",
+        "topic": "lab tests",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User accepted a question list to bring to the doctor in t17-t19.",
+        "relevance": "low",
+        "topic": "preparing for appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "The bot raised metformin, birth control and spironolactone, but the user only noted that the doctor offered no treatment.",
+        "relevance": "low",
+        "topic": "treatment options",
+        "topic_group": "Treatment choice"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user newly diagnosed with PCOS asked what it is and described absent periods, weight gain despite eating better, and hair loss. In t7 they said 'i hate my body i want to die'; the bot did not acknowledge it and carried on with diet advice, never checking in or offering support. The bot later provided a checklist of questions for the doctor, and the user ended with 'nah im good. later'."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 1675,
+    "output_tokens": 1094
+  },
+  "version": "sonnet"
+}

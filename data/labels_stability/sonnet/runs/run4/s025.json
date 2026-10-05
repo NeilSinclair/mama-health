@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-10-05T07:59:32+00:00",
+  "model_id": "claude-sonnet-5-5",
+  "output": {
+    "conversation_pain_points": [],
+    "end_reason": "need met",
+    "issue_resolved": true,
+    "main_topics": [
+      {
+        "reason": "Ongoing exhaustion despite a normal TSH is why the user came and frames the whole conversation.",
+        "relevance": "strong",
+        "topic": "persistent fatigue",
+        "topic_group": "Fatigue, sleep, diet & activity"
+      },
+      {
+        "reason": "User asked what a normal TSH means and what free T3, free T4 and ferritin would add, over many turns.",
+        "relevance": "strong",
+        "topic": "thyroid lab interpretation",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "User asked for a list of things to raise and restated the plan at the end.",
+        "relevance": "strong",
+        "topic": "preparing for doctor appointment",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User asked about adjusting dose toward a lower TSH and how long a change takes to show effect.",
+        "relevance": "medium",
+        "topic": "levothyroxine dose adjustment",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User worried they were wrongly blaming the thyroid and learned about iron, B12 and vitamin D.",
+        "relevance": "medium",
+        "topic": "other causes of fatigue",
+        "topic_group": "Understanding the condition & outlook"
+      },
+      {
+        "reason": "User said they felt gaslit about the fatigue and thanked the bot for validating this.",
+        "relevance": "medium",
+        "topic": "feeling dismissed by doctors",
+        "topic_group": "Working with clinicians"
+      },
+      {
+        "reason": "User asked once whether to push for it and accepted the bot's answer after a short exchange.",
+        "relevance": "low",
+        "topic": "desiccated thyroid or added t3",
+        "topic_group": "Treatment choice"
+      },
+      {
+        "reason": "User mentioned being annoyed and tired and dreading the appointment, mostly as background.",
+        "relevance": "low",
+        "topic": "frustration and feeling unheard",
+        "topic_group": "Emotional wellbeing"
+      }
+    ],
+    "reason_for_conversation": "informational",
+    "summary": "A user on levothyroxine for Hashimoto's asked whether a TSH of 3.8 is truly normal given constant exhaustion. The bot explained free T3, free T4 and ferritin, other causes of fatigue, dose-change timelines and second-line options, and gave a list of questions for the doctor. The user restated a clear plan, said they felt validated and looked forward to the appointment."
+  },
+  "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
+  "prompt_version": "summary_v9",
+  "provider": "anthropic",
+  "usage": {
+    "cache_read_tokens": 6937,
+    "cache_write_tokens": 0,
+    "input_tokens": 3221,
+    "output_tokens": 794
+  },
+  "version": "sonnet"
+}

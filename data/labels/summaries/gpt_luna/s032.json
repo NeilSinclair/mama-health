@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-01T15:49:05+00:00",
+  "created_at": "2026-10-05T07:50:01+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "conversation_pain_points": [],
@@ -7,80 +7,62 @@
     "issue_resolved": true,
     "main_topics": [
       {
-        "reason": "The user came to understand the options and spent much of the conversation weighing how personal factors could affect the choice.",
+        "reason": "The user came to understand the options and repeatedly asked what might guide the choice of a biologic.",
         "relevance": "strong",
-        "topic": "biologic treatment choice",
+        "topic": "biologic treatment options",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user called long-term risk the issue that scared them most and discussed the risk-benefit tradeoff over several turns.",
+        "reason": "The user called long-term risk the question that scared them most and discussed the risk-benefit of treatment at length.",
         "relevance": "strong",
-        "topic": "cancer risk from treatment",
-        "topic_group": "Treatment choice"
+        "topic": "cancer risk",
+        "topic_group": "Understanding the condition & outlook"
       },
       {
-        "reason": "The user described persistent hand and wrist synovitis, elevated CRP, and returning morning stiffness as the reason treatment escalation was being considered.",
+        "reason": "The user raised recurrent sinus infections and prior shingles and asked whether these would steer treatment selection.",
         "relevance": "medium",
-        "topic": "active rheumatoid arthritis",
-        "topic_group": "Physical symptoms"
-      },
-      {
-        "reason": "The user asked whether frequent sinus infections and prior shingles should steer the treatment choice.",
-        "relevance": "medium",
-        "topic": "infection history",
-        "topic_group": "Treatment choice"
-      },
-      {
-        "reason": "The user asked whether Shingrix was suitable at their age and while immunosuppressed, and noted the advice for their appointment.",
-        "relevance": "medium",
-        "topic": "shingles vaccination",
+        "topic": "infection and shingles risk",
         "topic_group": "Taking medication safely"
       },
       {
-        "reason": "The user asked how injection and infusion logistics differ because they travel for work and said self-injection sounded appealing.",
+        "reason": "The user described persistent hand and wrist synovitis and prolonged morning stiffness as evidence of active disease.",
+        "relevance": "medium",
+        "topic": "active joint symptoms",
+        "topic_group": "Physical symptoms"
+      },
+      {
+        "reason": "The user reported CRP levels around 18–20 for months as part of the picture of ongoing disease activity.",
+        "relevance": "low",
+        "topic": "inflammatory markers",
+        "topic_group": "Tests & monitoring"
+      },
+      {
+        "reason": "The user compared home injections with infusions because frequent work travel affects which option seems practical.",
         "relevance": "medium",
         "topic": "travel and treatment logistics",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user asked how long it takes to know whether a biologic is working and said they did not want to endure ongoing pain without a checkpoint.",
+        "reason": "The user asked how long it takes to know whether a biologic is working and did not want to endure months without a checkpoint.",
         "relevance": "medium",
         "topic": "treatment response timeline",
-        "topic_group": "Tests & monitoring"
-      },
-      {
-        "reason": "The user said understanding that inflammation could cause damage changed how they viewed the treatment risk-benefit decision.",
-        "relevance": "medium",
-        "topic": "risk of ongoing inflammation",
-        "topic_group": "Understanding the condition & outlook"
-      },
-      {
-        "reason": "The user asked whether possible hormone therapy could interact with RA treatment and said they would coordinate with their clinicians.",
-        "relevance": "low",
-        "topic": "perimenopause and hormone therapy",
-        "topic_group": "Taking medication safely"
-      },
-      {
-        "reason": "The user briefly asked whether controlled mild hypertension might steer the treatment choice.",
-        "relevance": "low",
-        "topic": "hypertension and treatment choice",
         "topic_group": "Treatment choice"
       },
       {
-        "reason": "The user mentioned being needle-shy while considering self-injection and responded positively to reassurance about the injection process.",
+        "reason": "The user briefly mentioned being needle-shy while considering self-injection.",
         "relevance": "low",
         "topic": "needle anxiety",
         "topic_group": "Emotional wellbeing"
       },
       {
-        "reason": "The user said the decision scared them and later reported that the conversation lowered their anxiety.",
-        "relevance": "medium",
-        "topic": "treatment decision anxiety",
-        "topic_group": "Emotional wellbeing"
+        "reason": "The user asked whether possible hormone therapy could interact with RA treatment in one exchange.",
+        "relevance": "low",
+        "topic": "hormone therapy interactions",
+        "topic_group": "Taking medication safely"
       }
     ],
-    "reason_for_conversation": "decisional",
-    "summary": "The user wanted to prepare for a discussion about adding a biologic for active RA and explored treatment options, risks, logistics, and monitoring, including infection history, prior shingles, travel, and cancer concerns. They left with questions for their rheumatologist and said they felt ready for a real back-and-forth and that their anxiety had genuinely decreased."
+    "reason_for_conversation": "informational",
+    "summary": "The user wanted to understand biologic options before a rheumatology appointment, describing persistent synovitis and stiffness despite methotrexate and sulfasalazine. The assistant discussed treatment classes, infection and shingles considerations, travel logistics, long-term risks, response timelines, and questions to take to the clinician. The user said they felt prepared for a back-and-forth with the rheumatologist and that the conversation lowered their anxiety."
   },
   "prompt_sha256": "f4109867dff551bbb084be5eb0cfc16338f58d99a2c0a4bdb427fd8d1255545e",
   "prompt_version": "summary_v9",
@@ -89,7 +71,7 @@
     "cache_read_tokens": 4275,
     "cache_write_tokens": 0,
     "input_tokens": 7527,
-    "output_tokens": 2165
+    "output_tokens": 1688
   },
   "version": "gpt_luna"
 }

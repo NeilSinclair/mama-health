@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-09-30T13:52:39+00:00",
+  "created_at": "2026-10-05T07:54:25+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "final_sentiment": "dissatisfied",
@@ -8,29 +8,36 @@
       {
         "bot_adapted": false,
         "kind": "objection",
-        "quote": "i guess. honestly i don't even know why i'm asking. i've done all of this before",
-        "reason": "The reply gives the list of treatment options anyway and does not address the user's doubt that going through them again will help.",
+        "quote": "i've done all of this before",
+        "reason": "The reply lists the same kinds of biologic options rather than addressing that the user has already been through this process.",
         "turn": 9
       },
       {
         "bot_adapted": true,
         "kind": "correction",
         "quote": "i've tried entyvio too. it did nothing.",
-        "reason": "The reply acknowledges Entyvio failed and moves on to other options rather than suggesting it again.",
+        "reason": "The reply acknowledges the failed Entyvio trial and shifts to options the user may not have tried.",
         "turn": 11
       },
       {
         "bot_adapted": false,
         "kind": "objection",
         "quote": "a log. sure. that'll fix everything",
-        "reason": "The reply says the log will not fix the flare but continues to promote its usefulness and does not drop the suggestion.",
+        "reason": "The reply explains the log's value but continues to promote it rather than changing course in response to the user's rejection.",
         "turn": 15
+      },
+      {
+        "bot_adapted": true,
+        "kind": "objection",
+        "quote": "no",
+        "reason": "The reply accepts the refusal and moves on without continuing to push the reminders.",
+        "turn": 19
       },
       {
         "bot_adapted": false,
         "kind": "frustration",
         "quote": "i thought maybe talking would help but it's just the same stuff. logs and tips",
-        "reason": "The reply pivots to warning signs and offering to save them, without engaging with the user's frustration or wish to talk.",
+        "reason": "The reply does not address the complaint about repetitive, impersonal suggestions and instead gives warning signs and offers to save them.",
         "turn": 21
       }
     ]
@@ -39,10 +46,10 @@
   "prompt_version": "dynamics_v1",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 2173,
+    "cache_read_tokens": 3329,
     "cache_write_tokens": 0,
     "input_tokens": 3332,
-    "output_tokens": 1548
+    "output_tokens": 1018
   },
   "version": "gpt_luna"
 }

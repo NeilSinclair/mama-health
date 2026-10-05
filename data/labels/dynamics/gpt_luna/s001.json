@@ -1,27 +1,19 @@
 {
-  "created_at": "2026-09-30T13:52:11+00:00",
+  "created_at": "2026-10-05T07:54:01+00:00",
   "model_id": "gpt-6-luna",
   "output": {
     "final_sentiment": "satisfied",
     "final_sentiment_quote": "Thank you, genuinely. I feel like I've got a plan now instead of just a grievance. I'll book that appointment and take my list in with me.",
-    "pushbacks": [
-      {
-        "bot_adapted": true,
-        "kind": "objection",
-        "quote": "So why would he jump straight to another anti-TNF if the first one stopped working? That's the part that doesn't sit right with me.",
-        "reason": "The reply engages with the concern by explaining possible reasons for trying another anti-TNF and asking whether drug levels and antibodies were checked.",
-        "turn": 9
-      }
-    ]
+    "pushbacks": []
   },
   "prompt_sha256": "c2117c0339d218383cb7afc15da7bfacd75603dd966b04f013fe5e53a4a8f243",
   "prompt_version": "dynamics_v1",
   "provider": "openai",
   "usage": {
-    "cache_read_tokens": 0,
+    "cache_read_tokens": 3315,
     "cache_write_tokens": 0,
     "input_tokens": 3318,
-    "output_tokens": 325
+    "output_tokens": 338
   },
   "version": "gpt_luna"
 }
