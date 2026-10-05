@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<!-- data-theme="light" locks the page to the light palette whatever the reader's system setting. -->
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -151,6 +152,7 @@
 </li>
 <li><a href="#most-interesting-conversations">Most Interesting Conversations</a></li>
 <li><a href="#ai-usage">AI Usage</a></li>
+<li><a href="#time-spent">Time spent</a></li>
 <li><a href="#appendix">Appendix</a><ul>
 <li><a href="#overview-of-the-analysis-pipeline">Overview of the Analysis Pipeline</a></li>
 <li><a href="#choice-of-labelling-model">Choice of Labelling Model</a></li>
@@ -216,6 +218,8 @@
 <h2 id="ai-usage">AI Usage</h2>
 <p>All code for this case study was written with Opus 5.5 in Claude Code. Claude was instructed to create tests for all code that was written. This was incorporated into the GitHub workflows when pushing a branch and merging a PR. </p>
 <p>An initial planning document was created for the pipeline and Claude was instructed to use this. Results from the LLM pipeline were displayed in an interactive HTML file and the pipeline was improved iteratively. From there, the best tables and interactive widgets were moved into an interactive memo (this document). When the pipeline runs, this memo is updated. </p>
+<h2 id="time-spent">Time spent</h2>
+<p>I spent between 10 - 12 hours on this project. The additional time went into experimenting with ways to get the LLM pipeline to be more stable.</p>
 <h2 id="appendix">Appendix</h2>
 <h3 id="overview-of-the-analysis-pipeline">Overview of the Analysis Pipeline</h3>
 <p>The analysis pipeline uses an LLM (Claude Sonnet 5.5) with a structured output to extract the following features from each conversation:</p>

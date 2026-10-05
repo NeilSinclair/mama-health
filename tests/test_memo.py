@@ -244,3 +244,8 @@ def test_pain_points_html_rejects_malformed_where():
     )
     with pytest.raises(ValueError, match="unexpected 'where' item"):
         pain_points_html(pd.concat([df, bad]), "s")
+
+
+def test_page_is_locked_to_the_light_palette():
+    page = render_memo("# T\n", {}, {"rows": [], "fields": []})
+    assert '<html lang="en" data-theme="light">' in page

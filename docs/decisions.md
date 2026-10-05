@@ -522,3 +522,10 @@ Append-only. Each entry records the decision, its rationale, the alternatives co
 - **Rationale:** The human asked for it. The committed-outputs test then guards every PR against outputs or `memo.html` drifting from the pipeline.
 - **Caveats:** A change to `docs/memo.md` must be committed with a regenerated `memo.html`, or CI fails. Action versions are major tags and the uv version floats.
 - **What would change it:** Nothing planned.
+
+### D-059 — The memo page is locked to the light palette
+
+- **Date:** 2026-10-05
+- **Decision:** `templates/memo.html` sets `data-theme="light"` on the root element, so the page ignores the reader's dark-mode setting. The dark palette stays in the stylesheet, unused.
+- **Rationale:** The human saw the page in different colours on two laptops and wants every reviewer to see the same one. The explorer and the discussion documents still follow the system setting.
+- **What would change it:** A wish for the dark version back; removing the attribute restores it.
