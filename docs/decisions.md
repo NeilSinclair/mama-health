@@ -514,3 +514,11 @@ Append-only. Each entry records the decision, its rationale, the alternatives co
 - **Rationale:** The human asked for both. The memo page is the thing a reader opens first; the two logs are working documents the human does not plan to share, and the AI-usage note the brief asks for will go in the memo.
 - **Caveats:** `--out` no longer controls where the memo page goes, so a run with a different `--out` from the repo root still overwrites `memo.html` unless `--memo-page` is given.
 - **What would change it:** A top-level `MEMO.md` as the submitted memo, which the README still links to.
+
+### D-058 — Tests and lint run in GitHub Actions
+
+- **Date:** 2026-10-05
+- **Decision:** `.github/workflows/ci.yml` runs `uv sync --locked`, `ruff check`, `ruff format --check` and `pytest` on every pull request and on pushes to `main`. No secrets are set; the tests are offline and read the label cache.
+- **Rationale:** The human asked for it. The committed-outputs test then guards every PR against outputs or `memo.html` drifting from the pipeline.
+- **Caveats:** A change to `docs/memo.md` must be committed with a regenerated `memo.html`, or CI fails. Action versions are major tags and the uv version floats.
+- **What would change it:** Nothing planned.
